@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Novos Conhecimentos</title>
+<meta name="description" content="Sorteie um conceito, estude por um tempo determinado e teste o que você realmente aprendeu.">
+<meta name="theme-color" content="#FBF9F5">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<!-- ══ Barra superior (fora da leitura) ═══════════════════════════════ -->
+<header class="barra" id="barra">
+  <div class="barra-marca"><b>Novos Conhecimentos</b></div>
+  <button class="icone-btn" id="btn-catalogo" title="Catálogo" aria-label="Catálogo">☰</button>
+  <button class="icone-btn" id="btn-historico" title="Histórico" aria-label="Histórico">◷</button>
+  <button class="icone-btn" id="btn-tema" title="Alternar tema" aria-label="Alternar tema">◐</button>
+</header>
+
+<!-- ══ Cronômetro (só na leitura) ═════════════════════════════════════ -->
+<div class="crono-barra oculto" id="crono-barra">
+  <div class="crono-topo">
+    <span class="crono-num" id="crono-num">00:00</span>
+    <span class="crono-tema" id="crono-tema"></span>
+  </div>
+  <div class="progresso"><i id="progresso-i"></i></div>
+</div>
+
+<main>
+
+  <!-- ── Tela: início ─────────────────────────────────────────────── -->
+  <section class="tela ativa" id="tela-inicio">
+    <div class="envelope">
+      <div class="hero">
+        <p class="chapeu">Protótipo v1</p>
+        <h1>Um conceito por vez</h1>
+        <p class="subtitulo">Sorteie um assunto que você não escolheu, estude pelo tempo que você definir e descubra, na prova, quanto de fato ficou.</p>
+      </div>
+
+      <p class="rotulo-campo">Quanto tempo você tem</p>
+      <div class="tempos" id="tempos" role="group" aria-label="Duração da sessão">
+        <button class="tempo-op" data-min="15" aria-pressed="false"><b>15</b><span>NÚCLEO</span></button>
+        <button class="tempo-op" data-min="30" aria-pressed="true"><b>30</b><span>+ FORMALISMO</span></button>
+        <button class="tempo-op" data-min="60" aria-pressed="false"><b>60</b><span>COMPLETO</span></button>
+      </div>
+
+      <button class="btn primario btn-grande" id="btn-sortear">Sortear conhecimento</button>
+      <div class="btn-linha">
+        <button class="btn discreto" id="btn-ver-catalogo">Ver catálogo</button>
+        <button class="btn discreto" id="btn-ver-historico">Meu histórico</button>
+      </div>
+
+      <div class="painel" id="painel-estat">
+        <h3>Onde você está</h3>
+        <div class="estat">
+          <div><b id="e-sessoes">0</b><span>Sessões</span></div>
+          <div><b id="e-tempo">0h</b><span>Estudado</span></div>
+          <div><b id="e-media">—</b><span>Média</span></div>
+        </div>
+      </div>
+
+      <div class="painel" id="painel-revisao">
+        <h3>Revisão pendente</h3>
+        <div id="lista-revisao"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tela: sorteio ────────────────────────────────────────────── -->
+  <section class="tela" id="tela-sorteio">
+    <div class="envelope sorteio-palco">
+      <div id="roleta-caixa">
+        <p class="chapeu">Sorteando</p>
+        <div class="roleta" id="roleta">—</div>
+      </div>
+      <div class="sorteado oculto" id="sorteado">
+        <p class="chapeu" id="s-area">—</p>
+        <h1 id="s-termo">—</h1>
+        <p class="gancho" id="s-gancho">—</p>
+        <div class="pilulas" id="s-pilulas"></div>
+      </div>
+    </div>
+    <div class="rodape-acao oculto" id="rodape-sorteio">
+      <div class="envelope">
+        <button class="btn discreto" id="btn-resortear">Sortear outro</button>
+        <button class="btn primario" id="btn-comecar">Começar a estudar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tela: leitura ────────────────────────────────────────────── -->
+  <section class="tela" id="tela-leitura">
+    <div class="envelope" id="doc-envelope"></div>
+    <div class="rodape-acao" id="rodape-leitura">
+      <div class="envelope">
+        <button class="btn discreto" id="btn-abandonar">Encerrar</button>
+        <button class="btn primario" id="btn-ir-prova">Fazer a prova</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tela: tempo encerrado ────────────────────────────────────── -->
+  <section class="tela" id="tela-fim">
+    <div class="envelope fim-palco">
+      <div class="selo">⏱</div>
+      <p class="chapeu">Tempo encerrado</p>
+      <h1 id="fim-termo">—</h1>
+      <p class="subtitulo" style="text-align:center">A prova está liberada. Durante a prova o documento fica fechado — responda de memória. Depois ele volta, e você pode refazer a prova quantas vezes quiser.</p>
+      <button class="btn primario btn-grande" id="btn-fim-prova">Fazer a prova agora</button>
+      <div class="btn-linha">
+        <button class="btn discreto" id="btn-fim-mais5">Ler mais 5 minutos</button>
+        <button class="btn discreto" id="btn-fim-sair">Voltar ao início</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tela: prova ──────────────────────────────────────────────── -->
+  <section class="tela" id="tela-prova">
+    <div class="envelope">
+      <p class="chapeu">Prova</p>
+      <h1 id="prova-termo">—</h1>
+      <div class="aviso-prova">Sem consultar o documento. Responder errado aqui vale mais do que acertar com o texto aberto — o erro mostra exatamente onde a leitura não fixou.</div>
+      <div id="prova-questoes"></div>
+    </div>
+    <div class="rodape-acao">
+      <div class="envelope">
+        <button class="btn primario" id="btn-corrigir">Corrigir prova</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tela: resultado ──────────────────────────────────────────── -->
+  <section class="tela" id="tela-resultado">
+    <div class="envelope">
+      <div style="text-align:center;padding-top:1.6rem">
+        <p class="chapeu">Resultado</p>
+        <div class="nota-grande" id="r-nota">—</div>
+        <p class="nota-legenda" id="r-legenda">—</p>
+      </div>
+      <div id="r-tentativas" class="painel oculto">
+        <h3>Suas tentativas</h3>
+        <div id="r-tentativas-lista"></div>
+      </div>
+      <h2>Correção comentada</h2>
+      <div id="r-correcao"></div>
+
+      <h2>Flashcards para revisão</h2>
+      <p style="font-family:var(--sans);font-size:.88rem;color:var(--tinta-suave)">Toque para revelar. Exporte para o Anki e revise em 1, 7 e 30 dias — é a revisão espaçada que impede o esquecimento.</p>
+      <div id="r-flashcards"></div>
+      <button class="btn" id="btn-exportar-fc" style="margin-top:.8rem">Exportar flashcards (CSV para Anki)</button>
+    </div>
+    <div class="rodape-acao">
+      <div class="envelope">
+        <button class="btn discreto" id="btn-reler">Reler documento</button>
+        <button class="btn discreto" id="btn-refazer">Refazer prova</button>
+        <button class="btn primario" id="btn-encerrar">Concluir</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Tela: catálogo ───────────────────────────────────────────── -->
+  <section class="tela" id="tela-catalogo">
+    <div class="envelope-largo">
+      <h1>Catálogo</h1>
+      <p class="subtitulo" id="cat-resumo">—</p>
+      <input class="busca" id="cat-busca" type="search" placeholder="Buscar conceito ou área…" autocomplete="off">
+      <div id="cat-lista"></div>
+    </div>
+    <div class="rodape-acao">
+      <div class="envelope"><button class="btn" id="btn-cat-voltar">Voltar</button></div>
+    </div>
+  </section>
+
+  <!-- ── Tela: histórico ──────────────────────────────────────────── -->
+  <section class="tela" id="tela-historico">
+    <div class="envelope-largo">
+      <h1>Histórico</h1>
+      <p class="subtitulo">Tudo fica salvo apenas neste aparelho. Exporte de vez em quando para não perder.</p>
+      <div id="hist-lista"></div>
+      <div class="btn-linha" style="margin-top:1.6rem">
+        <button class="btn discreto" id="btn-exportar-prog">Exportar progresso</button>
+        <button class="btn discreto" id="btn-importar-prog">Importar progresso</button>
+      </div>
+      <button class="btn discreto" id="btn-limpar" style="margin-top:.6rem;color:#B4453A">Apagar todo o histórico</button>
+      <input type="file" id="arquivo-import" accept="application/json" class="oculto">
+    </div>
+    <div class="rodape-acao">
+      <div class="envelope"><button class="btn" id="btn-hist-voltar">Voltar</button></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/catalogo.js"></script>
+<script src="js/figuras.js"></script>
+<script src="js/conteudos.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
