@@ -1,7 +1,7 @@
 CONTEUDOS["vantagem-comparativa"] = {
 termo: "Vantagem comparativa",
 area: "Economia",
-subtitulo: "Uma demonstração de duas páginas, publicada em 1817, mostrando que dois países ganham comerciando mesmo quando um deles produz tudo melhor. É contraintuitiva, é logicamente correta — e é rotineiramente usada para justificar conclusões que ela não sustenta.",
+subtitulo: "Uma demonstração de duas páginas, publicada em 1817, mostrando que dois países ganham comerciando mesmo quando um deles produz tudo melhor. É contraintuitiva, é logicamente correta, e é rotineiramente usada para justificar conclusões que ela não sustenta.",
 prerequisitos: [
   "Saber o que é uma troca comercial. Nada mais é necessário para o núcleo.",
   "Para o aprofundamento: entender que produzir uma coisa significa deixar de produzir outra com os mesmos recursos."
@@ -40,7 +40,7 @@ nucleo: { minutos: 15, html: `
 
 <p>Portugal é melhor nos dois. Produz vinho com menos horas e tecido com menos horas. Pela intuição do parágrafo anterior, não haveria motivo para comerciar.</p>
 
-<p>Agora faça a pergunta certa. Em Portugal, produzir uma unidade de vinho custa 80 horas — que poderiam ter feito 80/90 ≈ 0,89 unidade de tecido. Na Inglaterra, uma unidade de vinho custa 120 horas, que fariam 120/100 = 1,2 unidade de tecido.</p>
+<p>Agora faça a pergunta certa. Em Portugal, produzir uma unidade de vinho custa 80 horas, que poderiam ter feito 80/90 ≈ 0,89 unidade de tecido. Na Inglaterra, uma unidade de vinho custa 120 horas, que fariam 120/100 = 1,2 unidade de tecido.</p>
 
 <p>Vinho é mais barato em Portugal e tecido é mais barato na Inglaterra, em termos do que cada um sacrifica. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido.</p>
 
@@ -174,14 +174,14 @@ extensao: { minutos: 30, html: `
 },
 
 flashcards: [
-  { f: "Qual é a diferença entre vantagem absoluta e vantagem comparativa?", v: "Vantagem absoluta é produzir com menos recursos em termos absolutos. Vantagem comparativa é ter menor custo de oportunidade — sacrificar menos de outro bem para produzir aquele. Só a segunda determina o padrão de comércio." },
+  { f: "Qual é a diferença entre vantagem absoluta e vantagem comparativa?", v: "Vantagem absoluta é produzir com menos recursos em termos absolutos. Vantagem comparativa é ter menor custo de oportunidade: sacrificar menos de outro bem para produzir aquele. Só a segunda determina o padrão de comércio." },
   { f: "No exemplo de Ricardo, por que Portugal comercia com a Inglaterra mesmo sendo melhor em tudo?", v: "Porque produzir vinho custa a Portugal ~0,89 tecido e à Inglaterra 1,2 tecido. Portugal sacrifica menos para fazer vinho; a Inglaterra sacrifica menos para fazer tecido. As inclinações diferem, e é isso que gera ganho." },
-  { f: "O que acontece com o padrão de comércio se um país fica dez vezes menos produtivo em tudo?", v: "Nada: as razões de custo interno não mudam, então a especialização é a mesma. O que muda é o nível de salários — produtividade absoluta determina remuneração, não padrão de comércio." },
+  { f: "O que acontece com o padrão de comércio se um país fica dez vezes menos produtivo em tudo?", v: "Nada: as razões de custo interno não mudam, então a especialização é a mesma. O que muda é o nível de salários: produtividade absoluta determina remuneração, não padrão de comércio." },
   { f: "O que diz o teorema de Stolper-Samuelson?", v: "Que a abertura comercial eleva a remuneração real do fator usado intensivamente no setor exportador e reduz a do fator usado intensivamente no setor que compete com importações. Perdedores são previstos pela própria teoria." },
   { f: "O que a literatura do 'China Shock' mostrou?", v: "Que os ganhos agregados do comércio são reais, mas os custos de ajuste foram subestimados: perda de emprego persistente, queda de salários e mobilidade dos trabalhadores muito menor do que os modelos supunham (Autor, Dorn e Hanson)." },
-  { f: "Qual ressalva Samuelson publicou em 2004?", v: "Que um ganho de produtividade do parceiro comercial justamente no setor em que o país tinha vantagem comparativa pode piorar seus termos de troca a ponto de deixá-lo permanentemente pior — sem que barreiras comerciais sejam a solução." },
+  { f: "Qual ressalva Samuelson publicou em 2004?", v: "Que um ganho de produtividade do parceiro comercial justamente no setor em que o país tinha vantagem comparativa pode piorar seus termos de troca a ponto de deixá-lo permanentemente pior, sem que barreiras comerciais sejam a solução." },
   { f: "Qual é o argumento da indústria nascente?", v: "Que a tecnologia não é fixa: especializar-se conforme a vantagem comparativa presente pode consolidar uma estrutura produtiva que impede o desenvolvimento de vantagens futuras, já que setores diferem em potencial de aprendizado." },
-  { f: "Por que países ricos e similares comerciam tanto entre si?", v: "Economias de escala e preferência por variedade (Krugman). Cada país se especializa em algumas variedades, produz em escala maior e ambos acessam mais opções — mesmo sem diferença de custos relativos." },
+  { f: "Por que países ricos e similares comerciam tanto entre si?", v: "Economias de escala e preferência por variedade (Krugman). Cada país se especializa em algumas variedades, produz em escala maior e ambos acessam mais opções, mesmo sem diferença de custos relativos." },
   { f: "Qual é a implicação mais forte da nova teoria do comércio?", v: "Que o padrão de especialização pode ser indeterminado: quem produz o quê pode resultar de acidente histórico consolidado por retornos crescentes. Vantagem comparativa passa a ser construída, não apenas descoberta." },
   { f: "O que o teorema da vantagem comparativa NÃO afirma?", v: "Não afirma que a distribuição dos ganhos beneficia todos, nem que o ajuste é rápido, nem que a especialização presente é ótima para o futuro, nem que qualquer acordo comercial concreto é bom." }
 ],
@@ -202,7 +202,7 @@ prova: [
     q: "Nos números de Ricardo (Portugal: 80h vinho, 90h tecido; Inglaterra: 120h vinho, 100h tecido), qual é o custo de oportunidade de uma unidade de vinho na Inglaterra?",
     alts: ["0,83 unidade de tecido", "1,2 unidade de tecido", "120 horas de trabalho", "0,89 unidade de tecido"],
     correta: 1,
-    porque: "As 120 horas gastas em vinho poderiam produzir 120/100 = 1,2 unidade de tecido. Em Portugal, o mesmo cálculo dá 80/90 ≈ 0,89. Como 0,89 < 1,2, Portugal tem vantagem comparativa no vinho. A resposta '120 horas' confunde custo absoluto com custo de oportunidade — exatamente o erro que o teorema corrige." },
+    porque: "As 120 horas gastas em vinho poderiam produzir 120/100 = 1,2 unidade de tecido. Em Portugal, o mesmo cálculo dá 80/90 ≈ 0,89. Como 0,89 < 1,2, Portugal tem vantagem comparativa no vinho. A resposta '120 horas' confunde custo absoluto com custo de oportunidade: exatamente o erro que o teorema corrige." },
 
   { camada: "nucleo",
     q: "Qual afirmação o teorema da vantagem comparativa efetivamente sustenta?",
@@ -213,7 +213,7 @@ prova: [
       "Que o ajuste dos trabalhadores deslocados ocorre rapidamente."
     ],
     correta: 1,
-    porque: "O teorema é sobre o agregado e sobre a existência de uma distribuição melhoradora — não sobre sua realização efetiva. Distribuição, velocidade de ajuste e desenho de política são questões separadas, e atribuí-las ao teorema é o uso indevido mais comum, praticado nos dois lados do debate." },
+    porque: "O teorema é sobre o agregado e sobre a existência de uma distribuição melhoradora, não sobre sua realização efetiva. Distribuição, velocidade de ajuste e desenho de política são questões separadas, e atribuí-las ao teorema é o uso indevido mais comum, praticado nos dois lados do debate." },
 
   { camada: "aprofundamento",
     q: "Se todos os custos de produção de Portugal fossem multiplicados por 10, o que aconteceria com o padrão de especialização?",
@@ -224,7 +224,7 @@ prova: [
       "Portugal só poderia comerciar mediante subsídios."
     ],
     correta: 1,
-    porque: "A condição de vantagem comparativa depende de a₁X/a₁Y comparado a a₂X/a₂Y — os níveis absolutos se cancelam. Produtividade absoluta determina o nível de salários, não o padrão de comércio. É a resposta padrão às objeções simétricas 'não podemos competir com mão de obra barata' e 'países pobres não têm o que oferecer'." },
+    porque: "A condição de vantagem comparativa depende de a₁X/a₁Y comparado a a₂X/a₂Y: os níveis absolutos se cancelam. Produtividade absoluta determina o nível de salários, não o padrão de comércio. É a resposta padrão às objeções simétricas 'não podemos competir com mão de obra barata' e 'países pobres não têm o que oferecer'." },
 
   { camada: "aprofundamento",
     q: "O teorema de Stolper-Samuelson é relevante porque:",
@@ -246,7 +246,7 @@ prova: [
       "Que trabalhadores deslocados migram rapidamente para regiões em expansão, confirmando os modelos."
     ],
     correta: 2,
-    porque: "Autor, Dorn e Hanson encontraram perda de emprego industrial persistente e maior dependência de benefícios em mercados locais expostos, com efeitos visíveis uma década depois. O resultado não refuta Ricardo — qualifica a hipótese de ajuste rápido, que era premissa auxiliar e não parte do teorema." },
+    porque: "Autor, Dorn e Hanson encontraram perda de emprego industrial persistente e maior dependência de benefícios em mercados locais expostos, com efeitos visíveis uma década depois. O resultado não refuta Ricardo. Qualifica a hipótese de ajuste rápido, que era premissa auxiliar e não parte do teorema." },
 
   { camada: "extensao",
     q: "Qual é o núcleo do argumento da indústria nascente?",
@@ -257,7 +257,7 @@ prova: [
       "Que tarifas aumentam a arrecadação e por isso devem ser mantidas."
     ],
     correta: 1,
-    porque: "O argumento ataca uma premissa específica do modelo — tecnologia dada — e não a lógica do teorema. A questão empírica que permanece aberta não é 'proteção funciona?', mas sob quais condições institucionais ela produz aprendizado em vez de captura de renda por setores permanentemente subsidiados." },
+    porque: "O argumento ataca uma premissa específica do modelo, a de que a tecnologia é dada, e não a lógica do teorema. A questão empírica que permanece aberta não é 'proteção funciona?', mas sob quais condições institucionais ela produz aprendizado em vez de captura de renda por setores permanentemente subsidiados." },
 
   { camada: "extensao",
     q: "Por que o modelo ricardiano tem dificuldade em explicar o comércio entre Alemanha e França?",
@@ -268,7 +268,7 @@ prova: [
       "Porque a distância geográfica curta invalida o cálculo de custos de oportunidade."
     ],
     correta: 1,
-    porque: "É a motivação da nova teoria do comércio de Krugman. Com economias de escala e preferência por variedade, dois países idênticos ainda ganham comerciando — cada um produzindo algumas variedades em escala maior. A implicação conceitual forte é que o padrão de especialização pode ser indeterminado e historicamente contingente." },
+    porque: "É a motivação da nova teoria do comércio de Krugman. Com economias de escala e preferência por variedade, dois países idênticos ainda ganham comerciando, cada um produzindo algumas variedades em escala maior. A implicação conceitual forte é que o padrão de especialização pode ser indeterminado e historicamente contingente." },
 
   { camada: "extensao",
     q: "Alguém argumenta: 'estudos mostram que o comércio com a China custou empregos industriais, logo o livre comércio é ruim'. Qual é a falha mais clara nesse raciocínio?",
@@ -279,15 +279,15 @@ prova: [
       "Ele ignora que empregos industriais não importam para o bem-estar."
     ],
     correta: 2,
-    porque: "A evidência sobre custos concentrados é sólida e relevante — mas não estabelece que o efeito agregado seja negativo, nem que a alternativa proposta produziria resultado melhor. Comparar uma política real com um ideal não especificado é o erro simétrico ao de tratar o teorema como aval automático de qualquer acordo comercial." }
+    porque: "A evidência sobre custos concentrados é sólida e relevante, mas não estabelece que o efeito agregado seja negativo, nem que a alternativa proposta produziria resultado melhor. Comparar uma política real com um ideal não especificado é o erro simétrico ao de tratar o teorema como aval automático de qualquer acordo comercial." }
 ],
 
 fontes: [
   { n: 1, tipo: "fonte primária", ref: "Ricardo, D. <em>On the Principles of Political Economy and Taxation</em>, cap. VII, 1817. O exemplo original de Portugal e Inglaterra.", url: "https://www.econlib.org/library/Ricardo/ricP.html" },
   { n: 2, tipo: "artigo", ref: "Samuelson, P. A. 'Where Ricardo and Mill rebut and confirm arguments of mainstream economists supporting globalization'. <em>Journal of Economic Perspectives</em> 18(3):135–146, 2004.", url: "https://www.aeaweb.org/articles?id=10.1257/0895330042162403" },
   { n: 3, tipo: "artigo", ref: "Autor, D., Dorn, D. &amp; Hanson, G. 'The China Shock: Learning from Labor-Market Adjustment to Large Changes in Trade'. <em>Annual Review of Economics</em> 8:205–240, 2016.", url: "https://www.nber.org/papers/w21906" },
-  { n: 4, tipo: "livro", ref: "Chang, H.-J. <em>Chutando a Escada: A Estratégia do Desenvolvimento em Perspectiva Histórica</em>. Editora Unesp, 2004 — defesa histórica do argumento da indústria nascente.", url: "" },
-  { n: 5, tipo: "artigo", ref: "Krugman, P. 'Ricardo's Difficult Idea', 1996 — ensaio sobre por que a vantagem comparativa é tão persistentemente mal compreendida, inclusive por intelectuais.", url: "https://web.mit.edu/krugman/www/ricardo.htm" },
-  { n: 6, tipo: "livro", ref: "Rodrik, D. <em>Straight Talk on Trade</em>. Princeton University Press, 2017 — avaliação crítica e interna à profissão sobre o que a teoria sustenta e o que não sustenta.", url: "" }
+  { n: 4, tipo: "livro", ref: "Chang, H.-J. <em>Chutando a Escada: A Estratégia do Desenvolvimento em Perspectiva Histórica</em>. Editora Unesp, 2004: defesa histórica do argumento da indústria nascente.", url: "" },
+  { n: 5, tipo: "artigo", ref: "Krugman, P. 'Ricardo's Difficult Idea', 1996: ensaio sobre por que a vantagem comparativa é tão persistentemente mal compreendida, inclusive por intelectuais.", url: "https://web.mit.edu/krugman/www/ricardo.htm" },
+  { n: 6, tipo: "livro", ref: "Rodrik, D. <em>Straight Talk on Trade</em>. Princeton University Press, 2017: avaliação crítica e interna à profissão sobre o que a teoria sustenta e o que não sustenta.", url: "" }
 ]
 };

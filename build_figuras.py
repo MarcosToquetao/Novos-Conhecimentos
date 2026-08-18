@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-build_figuras.py — gera js/figuras.js
+build_figuras.py: gera js/figuras.js
 
 Todos os diagramas quantitativos são CALCULADOS aqui, não desenhados à mão.
 Isso garante que a curva no gráfico corresponde de fato à matemática descrita
@@ -73,7 +73,7 @@ def fig_fourier_dominios():
     body = []
     # painel de cima: sinal no tempo
     x0, x1, y0, amp = 40, W - 24, 74, 44
-    body.append(txt(40, 26, "DOMÍNIO DO TEMPO — o que o microfone registra", "svg-rot-p"))
+    body.append(txt(40, 26, "DOMÍNIO DO TEMPO: o que o microfone registra", "svg-rot-p"))
     body.append(eixo(x0, y0, x1, y0))
     pts = []
     for i in range(321):
@@ -85,7 +85,7 @@ def fig_fourier_dominios():
 
     # painel de baixo: espectro
     yb, hb = 224, 84
-    body.append(txt(40, 160, "DOMÍNIO DA FREQUÊNCIA — a mesma informação, outra pergunta", "svg-rot-p"))
+    body.append(txt(40, 160, "DOMÍNIO DA FREQUÊNCIA: a mesma informação, outra pergunta", "svg-rot-p"))
     body.append(eixo(x0, yb, x1, yb))
     picos = [(1, 1.0), (4, 0.55), (9, 0.3)]
     for f, a in picos:
@@ -98,8 +98,8 @@ def fig_fourier_dominios():
 
 def fig_fourier_gibbs():
     """O sobressinal de Gibbs vale ~8,95% do TAMANHO DO SALTO. Como o salto
-       vai de -1 a +1 (tamanho 2), o pico da soma parcial fica em ~1,179 —
-       e não em 1,09. Confundir as duas leituras é o erro clássico aqui."""
+       vai de -1 a +1 (tamanho 2), o pico da soma parcial fica em ~1,179,
+       não em 1,09. Confundir as duas leituras é o erro clássico aqui."""
     h = 260
     body = []
     x0, x1 = 76, W - 150
@@ -109,7 +109,7 @@ def fig_fourier_gibbs():
     t0, t1 = 0.80, 0.9995            # fração de pi
     def X(f): return x0 + (x1 - x0) * (f - t0) / (t1 - t0)
 
-    body.append(txt(40, 24, "ZOOM NA REGIÃO DO SALTO — O SOBRESSINAL NÃO ENCOLHE", "svg-rot-p"))
+    body.append(txt(40, 24, "ZOOM NA REGIÃO DO SALTO: O SOBRESSINAL NÃO ENCOLHE", "svg-rot-p"))
     body.append(txt(40, 40, "Escala vertical ampliada. Tracejado = valor correto da onda quadrada.", "svg-rot-p"))
     for v in (1.0, 1.1, 1.2):
         body.append(eixo(x0, Y(v), x1, Y(v), "svg-l-linha", 0.6))
@@ -145,7 +145,7 @@ def fig_fourier_gibbs():
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# QUATRO FORÇAS — alcance em escala logarítmica
+# QUATRO FORÇAS: alcance em escala logarítmica
 # ═══════════════════════════════════════════════════════════════════════
 SOBRE = {"-": "\u207b", "0": "\u2070", "1": "\u00b9", "2": "\u00b2", "3": "\u00b3",
          "4": "\u2074", "5": "\u2075", "6": "\u2076", "7": "\u2077", "8": "\u2078", "9": "\u2079"}
@@ -164,8 +164,8 @@ def fig_forcas_alcance():
         body.append(eixo(X(e), 40, X(e), 200, "svg-l-linha", 0.6))
         body.append(txt(X(e), 220, f"10{sobrescrito(e)}", "svg-rot-p", "middle"))
     linhas = [
-        ("Forte", -18, -15, "~10⁻¹⁵ m — o tamanho de um núcleo"),
-        ("Fraca", -18, -17.7, "~10⁻¹⁸ m — menor que um próton"),
+        ("Forte", -18, -15, "~10⁻¹⁵ m, o tamanho de um núcleo"),
+        ("Fraca", -18, -17.7, "~10⁻¹⁸ m, menor que um próton"),
         ("Eletromagnética", -18, 26, "infinito (cai com 1/r²)"),
         ("Gravitacional", -18, 26, "infinito (cai com 1/r²)"),
     ]
@@ -181,11 +181,11 @@ def fig_forcas_alcance():
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# VANTAGEM COMPARATIVA — fronteiras de possibilidade de produção
+# VANTAGEM COMPARATIVA: fronteiras de possibilidade de produção
 # ═══════════════════════════════════════════════════════════════════════
 def fig_ricardo_ppf():
     """Portugal e Inglaterra, 100 horas de trabalho cada.
-       Horas por unidade — Portugal é melhor em ambos (vantagem absoluta)."""
+       Horas por unidade. Portugal é melhor em ambos (vantagem absoluta)."""
     h = 300
     body = []
     # horas por unidade
@@ -216,7 +216,7 @@ def fig_ricardo_ppf():
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# BAYES — frequências naturais
+# BAYES: frequências naturais
 # ═══════════════════════════════════════════════════════════════════════
 def fig_bayes_icones():
     """1000 mulheres · prevalência 1% · sensibilidade 90% · falso-positivo 9%."""
@@ -259,12 +259,12 @@ def fig_bayes_icones():
             body.append(f'<circle cx="{x0+4}" cy="{yy-4}" r="2.4" class="svg-suave" opacity="0.4"/>')
         body.append(txt(x0 + 16, yy, t, "svg-rot-p"))
     body.append(txt(x0, yb + 4*17 + 14, f"Positivos ao todo: {vp+fp}. Doentes entre eles: {vp}.", "svg-rot"))
-    body.append(txt(x0, yb + 4*17 + 32, f"P(doente | positivo) = {vp}/{vp+fp} ≈ {100*vp/(vp+fp):.0f}%  —  e não os 90% da sensibilidade.", "svg-rot"))
+    body.append(txt(x0, yb + 4*17 + 32, f"P(doente | positivo) = {vp}/{vp+fp} ≈ {100*vp/(vp+fp):.0f}%, e não os 90% da sensibilidade.", "svg-rot"))
     return svg(h, "".join(body), "Representacao em frequencias naturais do teorema de Bayes")
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# TEMPERAMENTO IGUAL — desvio em cents
+# TEMPERAMENTO IGUAL: desvio em cents
 # ═══════════════════════════════════════════════════════════════════════
 def cents(razao): return 1200 * math.log2(razao)
 
@@ -337,7 +337,7 @@ def fig_temperamento_comma():
     xi0 = x0 + 200
     body.append(txt(x0, yi + 4, "ampliação 40×:", "svg-rot-p"))
     body.append(f'<rect x="{xi0}" y="{yi-8}" width="{sobra*esc*amp:.1f}" height="16" class="svg-acento" opacity="0.85"/>')
-    body.append(txt(xi0 + sobra*esc*amp + 10, yi + 4, f"{sobra:.2f} cents ≈ um quarto de semitom — perfeitamente audível", "svg-rot-p"))
+    body.append(txt(xi0 + sobra*esc*amp + 10, yi + 4, f"{sobra:.2f} cents ≈ um quarto de semitom, perfeitamente audível", "svg-rot-p"))
     body.append(txt(40, 256, "Nenhum ajuste elimina essa sobra: nenhuma potência de 3/2 é igual a uma potência de 2.", "svg-rot-p"))
     return svg(h, "".join(body), "Comparacao entre doze quintas puras e sete oitavas e a coma pitagorica")
 
@@ -416,7 +416,7 @@ def fig_gi_dispersao():
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# GESTALT — painéis de demonstração
+# GESTALT: painéis de demonstração
 # ═══════════════════════════════════════════════════════════════════════
 def fig_gestalt_principios():
     h = 300
@@ -482,7 +482,7 @@ def fig_gestalt_principios():
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# HEGEL — movimento da consciência (determinate negation)
+# HEGEL: movimento da consciência (determinate negation)
 # ═══════════════════════════════════════════════════════════════════════
 def fig_hegel_movimento():
     h = 280
@@ -514,7 +514,7 @@ def fig_hegel_movimento():
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# COMUNS — matriz de payoff
+# COMUNS: matriz de payoff
 # ═══════════════════════════════════════════════════════════════════════
 def fig_comuns_matriz():
     h = 340
@@ -539,15 +539,15 @@ def fig_comuns_matriz():
             if destaque:
                 body.append(f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" class="svg-acento" opacity="0.12"/>')
             body.append(txt(x + cw/2, y + ch/2 + 5, celulas[i][j], "svg-rot", "middle"))
-    body.append(txt(x0, y0 + 22 + 2*ch + 26, "Explorar é a melhor resposta individual em qualquer cenário —", "svg-rot-p"))
+    body.append(txt(x0, y0 + 22 + 2*ch + 26, "Explorar é a melhor resposta individual em qualquer cenário,", "svg-rot-p"))
     body.append(txt(x0, y0 + 22 + 2*ch + 40, "e o resultado conjunto (+2, +2) é pior que a cooperação (+3, +3).", "svg-rot-p"))
     body.append(txt(x0 - 100, y0 + 22 + 2*ch + 62, "Ostrom: este é o modelo de um jogo sem comunicação", "svg-rot"))
-    body.append(txt(x0 - 100, y0 + 22 + 2*ch + 78, "e sem regras acordadas — não do mundo.", "svg-rot"))
+    body.append(txt(x0 - 100, y0 + 22 + 2*ch + 78, "e sem regras acordadas, não do mundo.", "svg-rot"))
     return svg(h, "".join(body), "Matriz de payoff do dilema dos comuns")
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# WHORF — percepção categórica
+# WHORF: percepção categórica
 # ═══════════════════════════════════════════════════════════════════════
 def fig_whorf_fronteira():
     h = 260
@@ -562,15 +562,15 @@ def fig_whorf_fronteira():
         body.append(f'<rect x="{x0 + i*24}" y="{y}" width="24" height="26" fill="rgb({r},{g},{b})"/>')
     body.append(f'<line x1="{x0+10*24}" y1="{y-8}" x2="{x0+10*24}" y2="{y+34}" class="svg-t-linha" stroke-width="2"/>')
     body.append(txt(x0 + 10*24, y - 14, "fronteira sinij / goluboj", "svg-rot-p", "middle"))
-    body.append(txt(x0, y + 48, "«sinij» — azul-escuro, palavra separada em russo", "svg-rot-p"))
-    body.append(txt(x0 + 250, y + 48, "«goluboj» — azul-claro, outra palavra", "svg-rot-p"))
+    body.append(txt(x0, y + 48, "«sinij»: azul-escuro, palavra separada em russo", "svg-rot-p"))
+    body.append(txt(x0 + 250, y + 48, "«goluboj»: azul-claro, outra palavra", "svg-rot-p"))
 
     body.append(txt(40, 154, "RESULTADO ORIGINAL (2007)", "svg-rot"))
     body.append(txt(40, 172, "Russos foram mais rápidos quando os dois tons caíam em categorias diferentes.", "svg-rot-p"))
-    body.append(txt(40, 186, "A vantagem desaparecia sob interferência verbal — sugerindo mediação linguística.", "svg-rot-p"))
+    body.append(txt(40, 186, "A vantagem desaparecia sob interferência verbal, sugerindo mediação linguística.", "svg-rot-p"))
     body.append(txt(40, 214, "REPLICAÇÃO (Cognition, 2020)", "svg-rot"))
     body.append(txt(40, 232, "Não encontrou a vantagem de tempo de reação. O efeito categórico só apareceu em tarefas", "svg-rot-p"))
-    body.append(txt(40, 246, "que exigiam categorização explícita — não em discriminação perceptiva pura.", "svg-rot-p"))
+    body.append(txt(40, 246, "que exigiam categorização explícita, não em discriminação perceptiva pura.", "svg-rot-p"))
     return svg(h, "".join(body), "Desenho e replicacao do experimento dos azuis russos")
 
 
@@ -592,7 +592,7 @@ FIG["whorf-fronteira"]    = fig_whorf_fronteira()
 
 destino = os.path.join(os.path.dirname(os.path.abspath(__file__)), "js", "figuras.js")
 with open(destino, "w", encoding="utf-8") as f:
-    f.write("/* figuras.js — GERADO por build_figuras.py. Não editar à mão. */\n")
+    f.write("/* figuras.js: GERADO por build_figuras.py. Não editar à mão. */\n")
     f.write("const FIGURAS = " + json.dumps(FIG, ensure_ascii=False, indent=0) + ";\n")
     f.write('if (typeof module !== "undefined") { module.exports = { FIGURAS }; }\n')
 

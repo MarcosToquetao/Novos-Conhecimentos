@@ -169,7 +169,7 @@ function htmlDocumento(c, camadas, comFontes) {
     }
     if (d.conexoes && d.conexoes.length) {
       h += `<h4 style="margin-top:.9rem">Onde isso se conecta</h4><ul>` +
-           d.conexoes.map(x => `<li><b>${x.termo}</b> — ${x.relacao}</li>`).join("") + `</ul>`;
+           d.conexoes.map(x => `<li><b>${x.termo}:</b> ${x.relacao}</li>`).join("") + `</ul>`;
     }
     h += `</div>`;
   }
@@ -183,10 +183,29 @@ function htmlDocumento(c, camadas, comFontes) {
           </section>`;
   });
 
-  h += `<div class="marca consenso" style="margin-top:2.2rem">
-          <span class="rot">Se sobrar tempo antes da prova</span>
-          <p>Não releia. Feche o documento e tente explicar o conceito em voz alta, com suas palavras, como se estivesse ensinando alguém. Onde a explicação travar é exatamente onde a leitura não fixou — e é isso que a prova vai encontrar de qualquer forma.</p>
-        </div>`;
+  /* Síntese final: o que precisa sobreviver à leitura. Fecha o documento
+     antes das fontes, porque é a última coisa que fica na cabeça. */
+  if (d.sintese) {
+    const s = d.sintese;
+    h += `<section class="sintese"><p class="sintese-rot">Síntese</p>`;
+    if (s.definicoes && s.definicoes.length) {
+      h += `<h3>Conceitos-chave</h3><dl class="sintese-defs">` +
+        s.definicoes.map(x => `<dt>${x.termo}</dt><dd>${x.def}</dd>`).join("") + `</dl>`;
+    }
+    if (s.lembrar && s.lembrar.length) {
+      h += `<h3>O que precisa ser lembrado</h3><ul class="sintese-lista">` +
+        s.lembrar.map(x => `<li>${x}</li>`).join("") + `</ul>`;
+    }
+    if (s.confusoes && s.confusoes.length) {
+      h += `<h3>Onde a intuição erra</h3><ul class="sintese-conf">` +
+        s.confusoes.map(x => `<li><b>${x.erro}</b><span>${x.correcao}</span></li>`).join("") + `</ul>`;
+    }
+    if (s.numeros && s.numeros.length) {
+      h += `<h3>Números e nomes que ancoram</h3><ul class="sintese-lista">` +
+        s.numeros.map(x => `<li>${x}</li>`).join("") + `</ul>`;
+    }
+    h += `</section>`;
+  }
 
   if (comFontes && d.fontes && d.fontes.length) {
     h += `<section class="camada"><p class="camada-rot"><span>◆</span> Fontes</p>
@@ -350,7 +369,7 @@ function corrigir() {
   if (tents.length > 1) {
     $("#r-tentativas").classList.remove("oculto");
     $("#r-tentativas-lista").innerHTML = tents.map((t, i) =>
-      `<div class="item-lista"><span class="termo">${i + 1}ª tentativa — ${t.acertos}/${t.total}</span>
+      `<div class="item-lista"><span class="termo">${i + 1}ª tentativa: ${t.acertos}/${t.total}</span>
        <div class="meta">${new Date(t.quando).toLocaleString("pt-BR")}</div></div>`).join("");
   } else { $("#r-tentativas").classList.add("oculto"); }
 

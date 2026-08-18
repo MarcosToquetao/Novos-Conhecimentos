@@ -1,13 +1,13 @@
 CONTEUDOS["tragedia-comuns"] = {
 termo: "Tragédia dos comuns e a crítica de Ostrom",
 area: "Economia",
-subtitulo: "Um artigo de 1968 previu que recursos compartilhados sempre colapsam, e que só o Estado ou a privatização poderiam evitá-lo. Uma cientista política passou vinte anos indo a campo verificar — e encontrou centenas de comunidades que resolveram o problema sozinhas.",
+subtitulo: "Um artigo de 1968 previu que recursos compartilhados sempre colapsam, e que só o Estado ou a privatização poderiam evitá-lo. Uma cientista política passou vinte anos indo a campo verificar, e encontrou centenas de comunidades que resolveram o problema sozinhas.",
 prerequisitos: [
   "Nenhum pré-requisito técnico. Basta entender que uma pessoa pode ganhar com uma ação que prejudica o grupo.",
   "Para o aprofundamento: noção de que numa interação estratégica cada um decide olhando o que o outro faria."
 ],
 conexoes: [
-  { termo: "Equilíbrio de Nash", relacao: "A tragédia dos comuns é um equilíbrio de Nash que não é ótimo de Pareto — o exemplo mais citado dessa divergência." },
+  { termo: "Equilíbrio de Nash", relacao: "A tragédia dos comuns é um equilíbrio de Nash que não é ótimo de Pareto. É o exemplo mais citado dessa divergência." },
   { termo: "Lógica da ação coletiva (Olson)", relacao: "Olson formulou o problema geral do carona; Hardin aplicou ao caso dos recursos naturais e Ostrom mostrou as saídas institucionais." },
   { termo: "Externalidades e o teorema de Coase", relacao: "Coase argumentou que a definição clara de direitos permite negociação eficiente; Ostrom documentou empiricamente que direitos coletivos funcionam tão bem quanto privados." },
   { termo: "Externalidades", relacao: "A tragédia é o caso em que o custo da própria ação recai sobre terceiros e o benefício fica com quem age." }
@@ -69,7 +69,7 @@ aprofundamento: { minutos: 15, html: `
 <li><strong>Fronteiras claras.</strong> Quem tem direito de uso e qual é o limite físico do recurso precisam estar definidos. Sem isso, o investimento em conservação beneficia quem não contribuiu.</li>
 <li><strong>Regras ajustadas às condições locais.</strong> As regras de apropriação e de provisão devem corresponder à ecologia, à economia e à cultura do lugar. Regras importadas de outro contexto tendem a falhar.</li>
 <li><strong>Arranjos de escolha coletiva.</strong> Quem é afetado pelas regras participa de sua modificação. Isso gera legitimidade e permite adaptação.</li>
-<li><strong>Monitoramento.</strong> Alguém observa o cumprimento — e, crucialmente, monitores são os próprios usuários ou respondem a eles, não a uma autoridade distante.</li>
+<li><strong>Monitoramento.</strong> Alguém observa o cumprimento. Crucialmente, monitores são os próprios usuários ou respondem a eles, não a uma autoridade distante.</li>
 <li><strong>Sanções graduadas.</strong> A primeira infração recebe punição leve. Punição severa imediata destrói a relação social sem melhorar a conformidade.</li>
 <li><strong>Mecanismos de resolução de conflitos.</strong> Rápidos, baratos e acessíveis localmente.</li>
 <li><strong>Reconhecimento do direito de se organizar.</strong> Autoridades externas não podem desautorizar as regras locais. Este princípio é frequentemente o que falha.</li>
@@ -165,11 +165,11 @@ flashcards: [
   { f: "Qual é a estrutura de incentivos da tragédia dos comuns?", v: "O benefício da ação individual é integralmente privado; o custo é dividido entre todos os usuários. Cada um ganha em explorar mais, mesmo sabendo que a exploração coletiva destrói o recurso." },
   { f: "Que distinção Hardin não fez, e que Ostrom mostrou ser decisiva?", v: "Entre acesso livre (sem regras, qualquer um usa) e propriedade comum (grupo definido, regras estabelecidas pelo grupo). A tragédia é severa no primeiro caso; frequentemente não ocorre no segundo." },
   { f: "Cite três dos princípios de desenho institucional de Ostrom.", v: "Fronteiras claras de quem pode usar; monitoramento feito pelos próprios usuários ou por quem responde a eles; sanções graduadas, começando leves. Também: regras adaptadas ao local, participação na definição das regras, resolução barata de conflitos, reconhecimento externo do direito de organizar e governança em camadas." },
-  { f: "Quais princípios de Ostrom são mais associados ao sucesso e por quê?", v: "Monitoramento e sanções graduadas — porque são exatamente os mecanismos que alteram a matriz de incentivos descrita por Hardin. Cooperação não emerge de virtude, mas de estrutura de recompensas modificada." },
+  { f: "Quais princípios de Ostrom são mais associados ao sucesso e por quê?", v: "Monitoramento e sanções graduadas, porque são exatamente os mecanismos que alteram a matriz de incentivos descrita por Hardin. Cooperação não emerge de virtude, mas de estrutura de recompensas modificada." },
   { f: "Por que a comunicação prévia é teoricamente desconcertante nos jogos de bens públicos?", v: "Porque na teoria dos jogos clássica comunicação sem compromisso vinculante é 'conversa barata' e não deveria alterar o equilíbrio. Empiricamente, ela eleva a cooperação de forma robusta e replicável." },
   { f: "Em que condições a autogestão comunitária tende a falhar?", v: "Grupos muito grandes, alta rotatividade de participantes, recursos muito móveis, forte heterogeneidade de interesses e ausência de reconhecimento externo do direito de se organizar." },
-  { f: "O que é governança policêntrica?", v: "A proposta de Ostrom de que a ação sobre problemas globais ocorra simultaneamente em múltiplos níveis — cidades, empresas, regiões, países — que se reforçam mutuamente, em vez de depender de um único acordo global." },
-  { f: "Qual foi a consequência prática de aplicar Hardin como política pública?", v: "Nacionalizações de florestas e pesqueiras que destruíram regras locais funcionais e converteram propriedade comum em acesso livre de fato, produzindo a degradação que se queria evitar — casos documentados no Nepal, Índia e África Oriental." },
+  { f: "O que é governança policêntrica?", v: "A proposta de Ostrom de que a ação sobre problemas globais ocorra simultaneamente em múltiplos níveis: cidades, empresas, regiões, países, que se reforçam mutuamente, em vez de depender de um único acordo global." },
+  { f: "Qual foi a consequência prática de aplicar Hardin como política pública?", v: "Nacionalizações de florestas e pesqueiras que destruíram regras locais funcionais e converteram propriedade comum em acesso livre de fato, produzindo a degradação que se queria evitar: casos documentados no Nepal, Índia e África Oriental." },
   { f: "Como se classifica um recurso comum nas duas dimensões de bens?", v: "Rival (o uso de um reduz o disponível para o outro) mas não excludente (é difícil impedir o acesso). Bem público é não rival e não excludente; bem de clube é não rival e excludente." },
   { f: "Qual é a lição metodológica do caso Hardin?", v: "Um modelo formalmente válido pode ser correto e mal aplicado ao mesmo tempo. Hardin não apresentou nenhum caso empírico, generalizou imediatamente para política, e o resultado teve consequências materiais destrutivas." }
 ],
@@ -184,14 +184,14 @@ prova: [
       "Porque o colapso do pasto ocorreria de qualquer forma, por causas naturais."
     ],
     correta: 1,
-    porque: "É justamente essa independência de motivação que dá força analítica ao argumento. Um agente perfeitamente racional e bem-intencionado, avaliando corretamente que arca com uma fração do custo e com a totalidade do benefício, chega à mesma decisão. Por isso persuasão moral não altera o resultado — só mudar a estrutura altera." },
+    porque: "É justamente essa independência de motivação que dá força analítica ao argumento. Um agente perfeitamente racional e bem-intencionado, avaliando corretamente que arca com uma fração do custo e com a totalidade do benefício, chega à mesma decisão. Por isso persuasão moral não altera o resultado. Só mudar a estrutura altera." },
 
   { camada: "nucleo",
     q: "Qual é a distinção central que Ostrom introduziu contra a formulação de Hardin?",
     alts: [
       "Entre recursos renováveis e não renováveis.",
       "Entre países ricos e pobres na gestão de recursos.",
-      "Entre acesso livre (sem regras) e propriedade comum (grupo definido com regras próprias) — que Hardin tratava como a mesma coisa.",
+      "Entre acesso livre (sem regras) e propriedade comum (grupo definido com regras próprias), que Hardin tratava como a mesma coisa.",
       "Entre recursos naturais e recursos produzidos."
     ],
     correta: 2,
@@ -206,7 +206,7 @@ prova: [
       "Que comunidades sempre resolvem o problema quando deixadas por conta própria."
     ],
     correta: 1,
-    porque: "A demonstração é empírica, não lógica: o modelo de Hardin está correto para as condições que supõe. Note também que a última alternativa é o erro simétrico — Ostrom identificou explicitamente condições em que a autogestão falha, e era mais cuidadosa que muitos de seus divulgadores." },
+    porque: "A demonstração é empírica, não lógica: o modelo de Hardin está correto para as condições que supõe. Note também que a última alternativa é o erro simétrico: Ostrom identificou explicitamente condições em que a autogestão falha, e era mais cuidadosa que muitos de seus divulgadores." },
 
   { camada: "aprofundamento",
     q: "Entre os oito princípios de Ostrom, quais são mais fortemente associados ao sucesso, e por quê?",
@@ -217,7 +217,7 @@ prova: [
       "Regras adaptadas ao local e escolha coletiva, porque aumentam a satisfação dos participantes."
     ],
     correta: 1,
-    porque: "Análises comparativas posteriores destacam monitoramento e sanções graduadas. A explicação teórica é direta: são justamente esses mecanismos que mudam o cálculo individual descrito por Hardin. A cooperação observada não decorre de virtude moral, mas de uma estrutura de recompensas modificada — o que é uma explicação mais robusta e mais generalizável." },
+    porque: "Análises comparativas posteriores destacam monitoramento e sanções graduadas. A explicação teórica é direta: são justamente esses mecanismos que mudam o cálculo individual descrito por Hardin. A cooperação observada não decorre de virtude moral, mas de uma estrutura de recompensas modificada, o que é uma explicação mais robusta e mais generalizável." },
 
   { camada: "aprofundamento",
     q: "Por que o efeito da comunicação prévia em jogos de bens públicos é teoricamente interessante?",
@@ -228,7 +228,7 @@ prova: [
       "Porque o efeito desaparece completamente quando o experimento é repetido."
     ],
     correta: 1,
-    porque: "É o problema da 'conversa barata': promessas não vinculantes não mudam a estrutura de payoffs e portanto não deveriam mudar o comportamento. Elas mudam. Isso pressiona o modelo do agente puramente egoísta — embora a interpretação exata continue disputada e os tamanhos de efeito tenham diminuído em replicações mais rigorosas." },
+    porque: "É o problema da 'conversa barata': promessas não vinculantes não mudam a estrutura de payoffs e portanto não deveriam mudar o comportamento. Elas mudam. Isso pressiona o modelo do agente puramente egoísta, embora a interpretação exata continue disputada e os tamanhos de efeito tenham diminuído em replicações mais rigorosas." },
 
   { camada: "aprofundamento",
     q: "Ostrom identificou condições em que a autogestão comunitária tende a falhar. Qual das seguintes NÃO é uma delas?",
@@ -239,7 +239,7 @@ prova: [
       "Alta rotatividade de participantes, impedindo construção de reputação."
     ],
     correta: 2,
-    porque: "O reconhecimento externo do direito de se organizar é justamente um dos princípios que favorecem o sucesso — e sua ausência é uma das causas de falha mais frequentes. As outras três alternativas são condições de falha corretamente identificadas por Ostrom." },
+    porque: "O reconhecimento externo do direito de se organizar é justamente um dos princípios que favorecem o sucesso, e sua ausência é uma das causas de falha mais frequentes. As outras três alternativas são condições de falha corretamente identificadas por Ostrom." },
 
   { camada: "extensao",
     q: "Por que o problema climático é especialmente difícil sob a ótica de Ostrom?",
@@ -250,7 +250,7 @@ prova: [
       "Porque a atmosfera é um bem privado disfarçado de bem público."
     ],
     correta: 1,
-    porque: "É o pior caso possível para autogestão: escala global, ausência de fronteiras coincidentes, sem sanção efetiva e com interesses profundamente divergentes. Daí a proposta de governança policêntrica — cuja eficácia é um teste empírico em curso, informando o desenho do Acordo de Paris, e não um resultado consolidado." },
+    porque: "É o pior caso possível para autogestão: escala global, ausência de fronteiras coincidentes, sem sanção efetiva e com interesses profundamente divergentes. Daí a proposta de governança policêntrica, cuja eficácia é um teste empírico em curso, informando o desenho do Acordo de Paris, e não um resultado consolidado." },
 
   { camada: "extensao",
     q: "Qual é a crítica metodológica mais forte ao artigo de Hardin de 1968?",
@@ -276,11 +276,11 @@ prova: [
 ],
 
 fontes: [
-  { n: 1, tipo: "fonte primária", ref: "Hardin, G. 'The Tragedy of the Commons'. <em>Science</em> 162(3859):1243–1248, 1968.", url: "https://doi.org/10.1126/science.162.3859.1243" },
+  { n: 1, tipo: "fonte primária", ref: "Hardin, G. 'The Tragedy of the Commons'. <em>Science</em> 162(3859):1243-1248, 1968.", url: "https://doi.org/10.1126/science.162.3859.1243" },
   { n: 2, tipo: "livro", ref: "Ostrom, E. <em>Governing the Commons: The Evolution of Institutions for Collective Action</em>. Cambridge University Press, 1990. Os oito princípios e os estudos de caso comparativos.", url: "https://doi.org/10.1017/CBO9780511807763" },
-  { n: 3, tipo: "artigo", ref: "Fehr, E. &amp; Gächter, S. 'Altruistic punishment in humans'. <em>Nature</em> 415:137–140, 2002.", url: "https://doi.org/10.1038/415137a" },
-  { n: 4, tipo: "artigo", ref: "Ostrom, E. 'Polycentric systems for coping with collective action and global environmental change'. <em>Global Environmental Change</em> 20(4):550–557, 2010.", url: "https://doi.org/10.1016/j.gloenvcha.2010.07.004" },
-  { n: 5, tipo: "artigo", ref: "Frischmann, B., Marciano, A. &amp; Ramello, G. 'Retrospectives: Tragedy of the Commons after 50 Years'. <em>Journal of Economic Perspectives</em> 33(4):211–228, 2019 — avaliação da recepção e dos usos indevidos do artigo de Hardin.", url: "https://doi.org/10.1257/jep.33.4.211" },
-  { n: 6, tipo: "artigo", ref: "Cox, M., Arnold, G. &amp; Villamayor-Tomás, S. 'A review of design principles for community-based natural resource management'. <em>Ecology and Society</em> 15(4):38, 2010 — teste empírico dos princípios de Ostrom em 91 estudos.", url: "https://doi.org/10.5751/ES-03704-150438" }
+  { n: 3, tipo: "artigo", ref: "Fehr, E. &amp; Gächter, S. 'Altruistic punishment in humans'. <em>Nature</em> 415:137-140, 2002.", url: "https://doi.org/10.1038/415137a" },
+  { n: 4, tipo: "artigo", ref: "Ostrom, E. 'Polycentric systems for coping with collective action and global environmental change'. <em>Global Environmental Change</em> 20(4):550-557, 2010.", url: "https://doi.org/10.1016/j.gloenvcha.2010.07.004" },
+  { n: 5, tipo: "artigo", ref: "Frischmann, B., Marciano, A. &amp; Ramello, G. 'Retrospectives: Tragedy of the Commons after 50 Years'. <em>Journal of Economic Perspectives</em> 33(4):211-228, 2019: avaliação da recepção e dos usos indevidos do artigo de Hardin.", url: "https://doi.org/10.1257/jep.33.4.211" },
+  { n: 6, tipo: "artigo", ref: "Cox, M., Arnold, G. &amp; Villamayor-Tomás, S. 'A review of design principles for community-based natural resource management'. <em>Ecology and Society</em> 15(4):38, 2010: teste empírico dos princípios de Ostrom em 91 estudos.", url: "https://doi.org/10.5751/ES-03704-150438" }
 ]
 };

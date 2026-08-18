@@ -1,7 +1,7 @@
 CONTEUDOS["fourier"] = {
 termo: "Transformada de Fourier",
 area: "Matemática",
-subtitulo: "A ideia de que qualquer coisa que oscila pode ser escrita como uma soma de coisas que oscilam de forma simples — e por que isso reorganizou a engenharia, a física e a biologia estrutural.",
+subtitulo: "A ideia de que qualquer coisa que oscila pode ser escrita como uma soma de coisas que oscilam de forma simples, e por que isso reorganizou a engenharia, a física e a biologia estrutural.",
 prerequisitos: [
   "Saber o que é uma função seno e que ela tem frequência e amplitude. Nada além disso é necessário no núcleo.",
   "Para o aprofundamento: noção de integral como 'área acumulada' e de número complexo como ponto no plano."
@@ -150,7 +150,7 @@ extensao: { minutos: 30, html: `
 <thead><tr><th>Método</th><th>Ideia</th><th>Limitação</th></tr></thead>
 <tbody>
 <tr><td>STFT / espectrograma</td><td>Aplicar Fourier em janelas curtas e deslizantes</td><td>Resolução fixa: janela curta perde precisão em frequência, janela longa perde no tempo</td></tr>
-<tr><td>Ondaletas (wavelets)</td><td>Base com resolução adaptativa — fina no tempo para altas frequências, fina em frequência para baixas</td><td>Escolha da ondaleta-mãe é arbitrária e afeta o resultado</td></tr>
+<tr><td>Ondaletas (wavelets)</td><td>Base com resolução adaptativa: fina no tempo para altas frequências, fina em frequência para baixas</td><td>Escolha da ondaleta-mãe é arbitrária e afeta o resultado</td></tr>
 <tr><td>Transformada de Hilbert-Huang</td><td>Decomposição empírica adaptada ao próprio sinal</td><td>Método sem fundamentação teórica completa; reprodutibilidade discutida</td></tr>
 </tbody>
 </table>
@@ -181,13 +181,13 @@ extensao: { minutos: 30, html: `
 },
 
 flashcards: [
-  { f: "Qual é a afirmação central da análise de Fourier?", v: "Que sinais bem-comportados podem ser escritos como soma de oscilações puras (senos e cossenos) de frequências diferentes, cada uma com amplitude e fase próprias — e que essa representação é inversível, sem perda de informação." },
+  { f: "Qual é a afirmação central da análise de Fourier?", v: "Que sinais bem-comportados podem ser escritos como soma de oscilações puras (senos e cossenos) de frequências diferentes, cada uma com amplitude e fase próprias, e que essa representação é inversível, sem perda de informação." },
   { f: "Por que passar para o domínio da frequência é útil na prática?", v: "Porque operações caras ou difíceis num domínio ficam baratas no outro: filtrar vira apagar colunas, convolução vira multiplicação ponto a ponto e derivar vira multiplicar por iω." },
   { f: "O que diz o teorema da convolução?", v: "Que a transformada de uma convolução é o produto das transformadas. É a base computacional de quase todo processamento de sinal e imagem." },
   { f: "Por que exponenciais complexas são a base 'certa' para sistemas físicos lineares?", v: "Porque são autofunções da derivada e do deslocamento: derivar e^(iωt) devolve a mesma função vezes iω. Isso converte equações diferenciais em equações algébricas." },
   { f: "O que é o princípio da incerteza na versão matemática?", v: "A impossibilidade de um sinal ser simultaneamente muito concentrado no tempo e muito concentrado em frequência. É um fato sobre pares de transformadas, do qual a versão quântica é um caso particular." },
   { f: "O que a FFT resolveu, e qual o ganho?", v: "Reduziu o custo da transformada discreta de N² para N·log N (Cooley e Tukey, 1965). Para 44.100 amostras, cerca de 2 bilhões de operações caem para ~700 mil." },
-  { f: "O que é o fenômeno de Gibbs?", v: "O sobressinal de cerca de 9% da altura do salto que aparece perto de descontinuidades e não desaparece por mais termos que se acrescente — só fica mais estreito." },
+  { f: "O que é o fenômeno de Gibbs?", v: "O sobressinal de cerca de 9% da altura do salto que aparece perto de descontinuidades e não desaparece por mais termos que se acrescente: só fica mais estreito." },
   { f: "Quando a transformada de Fourier clássica é a ferramenta errada?", v: "Quando o sinal é não estacionário, isto é, quando o conteúdo de frequência muda ao longo do tempo. Ela devolve um retrato global e perde o 'quando'. Alternativas: STFT/espectrograma e ondaletas." },
   { f: "Qual é o erro estatístico clássico ao usar FFT em séries temporais?", v: "Interpretar picos do periodograma como periodicidade real sem testar contra a hipótese nula de ruído e sem corrigir para múltiplas frequências testadas. Ruído gera picos aparentes." },
   { f: "Em uma frase de álgebra linear, o que é a transformada de Fourier?", v: "Uma mudança de base num espaço de funções: os senos e cossenos formam base ortonormal, e F(ξ) é a projeção do sinal sobre o elemento de frequência ξ." }
@@ -198,12 +198,12 @@ prova: [
     q: "Um colega afirma: 'a transformada de Fourier resume o sinal, ficando com o que é mais importante'. Qual é o problema dessa afirmação?",
     alts: [
       "Nenhum: é exatamente o que ela faz, descartando as frequências fracas.",
-      "A transformada não descarta nada — é uma representação equivalente e inversível do mesmo sinal; o descarte é uma decisão posterior e separada.",
+      "A transformada não descarta nada: é uma representação equivalente e inversível do mesmo sinal; o descarte é uma decisão posterior e separada.",
       "O problema é que ela guarda apenas as frequências, perdendo a informação de fase.",
       "O problema é que ela só funciona para sinais periódicos, então não 'resume' nada."
     ],
     correta: 1,
-    porque: "A transformada é uma mudança de coordenadas: nada é perdido nem criado, e a transformada inversa reconstrói o sinal exatamente. Compressão (MP3, JPEG) descarta informação — mas isso é um passo adicional tomado <em>depois</em> da transformada, não parte dela. A alternativa sobre fase é falsa: F(ξ) é complexo, e o ângulo carrega justamente a fase." },
+    porque: "A transformada é uma mudança de coordenadas: nada é perdido nem criado, e a transformada inversa reconstrói o sinal exatamente. Compressão (MP3, JPEG) descarta informação, mas isso é um passo adicional tomado <em>depois</em> da transformada, não parte dela. A alternativa sobre fase é falsa: F(ξ) é complexo, e o ângulo carrega justamente a fase." },
 
   { camada: "nucleo",
     q: "Por que a filtragem de ruído é mais simples no domínio da frequência?",
@@ -225,7 +225,7 @@ prova: [
       "Porque a difração produz o espectro de potência, que é mais informativo que a transformada completa."
     ],
     correta: 0,
-    porque: "O padrão de manchas é, com boa aproximação, a transformada de Fourier da densidade eletrônica do cristal. A alternativa sobre 'únicos objetos periódicos' é falsa, e a última inverte a realidade: a difração mede intensidades e <em>perde</em> a fase — o chamado problema da fase, que é justamente a maior dificuldade da cristalografia." },
+    porque: "O padrão de manchas é, com boa aproximação, a transformada de Fourier da densidade eletrônica do cristal. A alternativa sobre 'únicos objetos periódicos' é falsa, e a última inverte a realidade: a difração mede intensidades e <em>perde</em> a fase, o chamado problema da fase, que é justamente a maior dificuldade da cristalografia." },
 
   { camada: "aprofundamento",
     q: "Na expressão e^(−2πiξt), qual é o papel dessa exponencial complexa?",
@@ -236,7 +236,7 @@ prova: [
       "Converter o sinal do domínio contínuo para o discreto."
     ],
     correta: 1,
-    porque: "Pela identidade de Euler, ela equivale a cos − i·sen: um ponto girando no círculo unitário à frequência ξ. A integral do produto mede a correlação entre o sinal e essa onda de teste. O resultado, aliás, é complexo — não real positivo — e é justamente isso que permite carregar amplitude e fase simultaneamente." },
+    porque: "Pela identidade de Euler, ela equivale a cos − i·sen: um ponto girando no círculo unitário à frequência ξ. A integral do produto mede a correlação entre o sinal e essa onda de teste. O resultado, aliás, é complexo, não real positivo, e é justamente isso que permite carregar amplitude e fase simultaneamente." },
 
   { camada: "aprofundamento",
     q: "Qual é a consequência prática mais importante do teorema da convolução?",
@@ -247,7 +247,7 @@ prova: [
       "Permite calcular a transformada de sinais infinitos."
     ],
     correta: 2,
-    porque: "Convolução — o que acontece quando um sinal atravessa um sistema físico — é cara no domínio do tempo. O teorema permite transformar, multiplicar e voltar, o que junto com a FFT torna a operação viável em tempo real. A inversibilidade é um resultado separado, e a compressão sem perda não decorre daqui." },
+    porque: "Convolução, o que acontece quando um sinal atravessa um sistema físico, é cara no domínio do tempo. O teorema permite transformar, multiplicar e voltar, o que junto com a FFT torna a operação viável em tempo real. A inversibilidade é um resultado separado, e a compressão sem perda não decorre daqui." },
 
   { camada: "aprofundamento",
     q: "Um pesquisador amostra um sinal que contém componentes de até 30 kHz usando uma taxa de 40 mil amostras por segundo. O que acontece?",
@@ -258,7 +258,7 @@ prova: [
       "O sinal fica com ruído aleatório uniforme adicionado em todas as frequências."
     ],
     correta: 1,
-    porque: "É aliasing. A condição de amostragem exige mais de duas amostras por ciclo da frequência mais alta presente: 40 kHz cobre até 20 kHz. Acima disso, as componentes não desaparecem — elas se dobram sobre frequências baixas e se tornam indistinguíveis do conteúdo legítimo. Por isso filtros anti-aliasing analógicos vêm <em>antes</em> do conversor, não depois." },
+    porque: "É aliasing. A condição de amostragem exige mais de duas amostras por ciclo da frequência mais alta presente: 40 kHz cobre até 20 kHz. Acima disso, as componentes não desaparecem: elas se dobram sobre frequências baixas e se tornam indistinguíveis do conteúdo legítimo. Por isso filtros anti-aliasing analógicos vêm <em>antes</em> do conversor, não depois." },
 
   { camada: "aprofundamento",
     q: "Sobre o princípio da incerteza na forma Δt · Δξ ≥ 1/4π, qual afirmação é correta?",
@@ -269,7 +269,7 @@ prova: [
       "Só se aplica a sinais estacionários."
     ],
     correta: 2,
-    porque: "A relação é puramente matemática: qualquer par de funções relacionadas por transformada de Fourier obedece a ela. Em mecânica quântica, posição e momento são um par desses, e daí vem Heisenberg. Tratar a versão matemática como consequência da física inverte a dependência lógica — e sugerir que melhor tecnologia resolveria é um erro categorial." },
+    porque: "A relação é puramente matemática: qualquer par de funções relacionadas por transformada de Fourier obedece a ela. Em mecânica quântica, posição e momento são um par desses, e daí vem Heisenberg. Tratar a versão matemática como consequência da física inverte a dependência lógica, e sugerir que melhor tecnologia resolveria é um erro categorial." },
 
   { camada: "extensao",
     q: "Sobre o fenômeno de Gibbs, qual é a descrição correta?",
@@ -308,10 +308,10 @@ prova: [
 fontes: [
   { n: 1, tipo: "livro", ref: "Grattan-Guinness, I. &amp; Ravetz, J. R. <em>Joseph Fourier, 1768–1830</em>. MIT Press, 1972. Reconstrói a rejeição de 1807 e as objeções de Lagrange a partir dos documentos da Academia.", url: "" },
   { n: 2, tipo: "fonte primária", ref: "Fourier, J. <em>Théorie analytique de la chaleur</em>. Paris, 1822. Texto integral digitalizado.", url: "https://archive.org/details/thorieanalytiq00four" },
-  { n: 3, tipo: "livro", ref: "Rupp, B. <em>Biomolecular Crystallography: Principles, Practice, and Application to Structural Biology</em>. Garland Science, 2009 — capítulos sobre a relação de Fourier entre densidade eletrônica e padrão de difração.", url: "" },
+  { n: 3, tipo: "livro", ref: "Rupp, B. <em>Biomolecular Crystallography: Principles, Practice, and Application to Structural Biology</em>. Garland Science, 2009. Capítulos sobre a relação de Fourier entre densidade eletrônica e padrão de difração.", url: "" },
   { n: 4, tipo: "vídeo", ref: "Sanderson, G. (3Blue1Brown). <em>But what is the Fourier Transform? A visual introduction</em>. A intuição do 'enrolamento' e do centro de massa vem desta exposição.", url: "https://www.3blue1brown.com/lessons/fourier-transforms" },
   { n: 5, tipo: "artigo", ref: "Cooley, J. W. &amp; Tukey, J. W. 'An algorithm for the machine calculation of complex Fourier series'. <em>Mathematics of Computation</em> 19(90):297–301, 1965.", url: "https://doi.org/10.1090/S0025-5718-1965-0178586-1" },
-  { n: 6, tipo: "curso", ref: "Osgood, B. <em>The Fourier Transform and its Applications</em> (EE261), Stanford University — notas de aula completas, incluindo tratamento do fenômeno de Gibbs e da amostragem.", url: "https://see.stanford.edu/Course/EE261" },
+  { n: 6, tipo: "curso", ref: "Osgood, B. <em>The Fourier Transform and its Applications</em> (EE261), Stanford University. Notas de aula completas, incluindo tratamento do fenômeno de Gibbs e da amostragem.", url: "https://see.stanford.edu/Course/EE261" },
   { n: 7, tipo: "livro", ref: "Bracewell, R. <em>The Fourier Transform and Its Applications</em>. 3ª ed., McGraw-Hill, 2000. Referência padrão em engenharia, com tratamento cuidadoso de convolução e amostragem.", url: "" }
 ]
 };

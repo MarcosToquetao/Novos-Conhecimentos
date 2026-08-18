@@ -1,7 +1,7 @@
 CONTEUDOS["gestalt-design"] = {
 termo: "Princípios da Gestalt no design visual",
 area: "Design",
-subtitulo: "Regras de percepção descritas por psicólogos alemães nos anos 1920 governam, sem você notar, toda interface que você usa. Elas explicam por que um espaçamento de oito pixels comunica mais que uma borda — e por que a maior parte do que se ensina sobre elas é imprecisa.",
+subtitulo: "Regras de percepção descritas por psicólogos alemães nos anos 1920 governam, sem você notar, toda interface que você usa. Elas explicam por que um espaçamento de oito pixels comunica mais que uma borda, e por que a maior parte do que se ensina sobre elas é imprecisa.",
 prerequisitos: [
   "Nenhum. O texto usa demonstrações visuais, não teoria prévia.",
   "Ajuda ter olhado para qualquer formulário, planilha ou aplicativo nas últimas 24 horas."
@@ -165,14 +165,14 @@ extensao: { minutos: 30, html: `
 },
 
 flashcards: [
-  { f: "Qual foi a observação de Wertheimer em 1912 e o que ela mostrou?", v: "Duas luzes piscando em alternância são vistas como uma luz em movimento. Não há movimento no estímulo — ele é produzido pelo sistema visual, o que indica que a percepção organiza em vez de somar sensações elementares." },
+  { f: "Qual foi a observação de Wertheimer em 1912 e o que ela mostrou?", v: "Duas luzes piscando em alternância são vistas como uma luz em movimento. Não há movimento no estímulo: ele é produzido pelo sistema visual, o que indica que a percepção organiza em vez de somar sensações elementares." },
   { f: "Qual princípio de agrupamento é o mais forte, e qual é o mais subutilizado em design?", v: "Conexão física (uma linha ligando elementos) é o mais forte de todos. Proximidade é o mais subutilizado: boa parte das bordas em interfaces existe apenas para compensar espaçamentos mal resolvidos." },
   { f: "Por que região comum é especialmente perigosa em design de interface?", v: "Porque ela supera a proximidade: uma moldura reagrupa elementos mesmo contra a distância entre eles. Um card mal desenhado é pior que nenhum card, pois impõe um agrupamento errado com força." },
   { f: "O que aconteceu com a explicação neurofisiológica original da Gestalt?", v: "Köhler propôs campos elétricos corticais contínuos. Lashley e Sperry inseriram condutores no córtex visual para curto-circuitá-los nos anos 1950 e a percepção permaneceu intacta. A hipótese foi refutada." },
-  { f: "Qual é o problema lógico do princípio da Prägnanz (boa forma)?", v: "Circularidade: 'simples' nunca foi definido independentemente do que se percebe. Sem métrica fixada antes da observação, o princípio não faz previsão falseável — explica qualquer resultado e portanto nenhum." },
+  { f: "Qual é o problema lógico do princípio da Prägnanz (boa forma)?", v: "Circularidade: 'simples' nunca foi definido independentemente do que se percebe. Sem métrica fixada antes da observação, o princípio não faz previsão falseável: explica qualquer resultado e portanto nenhum." },
   { f: "Quais são as três explicações concorrentes atuais para o agrupamento perceptivo?", v: "Estatística ecológica (o sistema aprendeu regularidades de imagens naturais), codificação preditiva (percepção como hipótese que melhor explica a entrada) e simplicidade/mínima descrição. Nenhuma venceu." },
   { f: "Como diagnosticar rapidamente problemas de agrupamento numa tela?", v: "Desfoque a visão até restar só a estrutura: os blocos que aparecem são o que o usuário vê no primeiro instante. Depois meça as distâncias entre elementos relacionados e não relacionados. Depois remova todas as bordas e veja se a estrutura sobrevive." },
-  { f: "O que os princípios da Gestalt NÃO resolvem?", v: "Significado (agrupar não é compreender), prioridade dentro do grupo (isso é hierarquia visual), validação com usuários e acessibilidade — agrupamento visual não chega a leitores de tela sem estrutura semântica correspondente." },
+  { f: "O que os princípios da Gestalt NÃO resolvem?", v: "Significado (agrupar não é compreender), prioridade dentro do grupo (isso é hierarquia visual), validação com usuários e acessibilidade. Agrupamento visual não chega a leitores de tela sem estrutura semântica correspondente." },
   { f: "Qual é o estado da literatura sobre percepção holística versus analítica entre culturas?", v: "Efeitos originais grandes, replicações posteriores com efeitos menores ou ausentes. O fenômeno provavelmente existe, mas com magnitude bem menor e mais dependente de tarefa do que os primeiros estudos indicavam." },
   { f: "Qual distinção metodológica o caso da Gestalt ilustra bem?", v: "Que descrições fenomenológicas podem sobreviver enquanto a teoria explicativa proposta é refutada. Kepler descreveu órbitas elípticas corretamente com causa errada. 'O fenômeno é real' e 'a explicação está correta' são afirmações independentes." }
 ],
@@ -187,7 +187,7 @@ prova: [
       "Faltam bordas separando cada linha do formulário."
     ],
     correta: 1,
-    porque: "O agrupamento por proximidade é pré-atencional: acontece antes de qualquer leitura do texto. Se as distâncias não desambiguam, o usuário hesita mesmo com rótulos perfeitos. E acrescentar bordas é a solução errada — trata o sintoma sem corrigir a causa, que é o espaçamento." },
+    porque: "O agrupamento por proximidade é pré-atencional: acontece antes de qualquer leitura do texto. Se as distâncias não desambiguam, o usuário hesita mesmo com rótulos perfeitos. E acrescentar bordas é a solução errada: trata o sintoma sem corrigir a causa, que é o espaçamento." },
 
   { camada: "nucleo",
     q: "Qual princípio explica que três formas recortadas produzam a percepção de um triângulo que não está desenhado?",
@@ -204,7 +204,7 @@ prova: [
       "Porque os princípios foram demonstrados matematicamente."
     ],
     correta: 1,
-    porque: "É a característica que dá poder prático aos princípios: eles operam cedo no processamento visual, antes de decisão consciente. Isso significa que nenhuma instrução textual corrige um agrupamento espacial errado — a única correção possível é mudar o próprio arranjo." },
+    porque: "É a característica que dá poder prático aos princípios: eles operam cedo no processamento visual, antes de decisão consciente. Isso significa que nenhuma instrução textual corrige um agrupamento espacial errado. A única correção possível é mudar o próprio arranjo." },
 
   { camada: "aprofundamento",
     q: "Segundo a evidência experimental sobre competição entre princípios, o que acontece quando uma moldura agrupa elementos que estão espacialmente distantes entre si?",
@@ -215,7 +215,7 @@ prova: [
       "O resultado depende inteiramente da cultura do observador."
     ],
     correta: 1,
-    porque: "Região comum supera proximidade. Isso tem consequência de projeto direta: cards e caixas são ferramentas potentes e por isso perigosas — se agruparem a coisa errada, impõem essa leitura com mais força do que o espaçamento consegue desfazer." },
+    porque: "Região comum supera proximidade. Isso tem consequência de projeto direta: cards e caixas são ferramentas potentes e por isso perigosas. Se agruparem a coisa errada, impõem essa leitura com mais força do que o espaçamento consegue desfazer." },
 
   { camada: "aprofundamento",
     q: "O experimento de Lashley e Sperry nos anos 1950 é relevante porque:",
@@ -226,7 +226,7 @@ prova: [
       "Mostrou que o agrupamento ocorre na retina, não no córtex."
     ],
     correta: 1,
-    porque: "A explicação teórica original da Gestalt foi refutada experimentalmente, enquanto as descrições fenomenológicas permaneceram válidas. Essa dissociação — fenômeno real, explicação errada — é o ponto metodológico mais transferível do documento, e a maior parte da literatura de design a ignora." },
+    porque: "A explicação teórica original da Gestalt foi refutada experimentalmente, enquanto as descrições fenomenológicas permaneceram válidas. Essa dissociação entre fenômeno real e explicação errada é o ponto metodológico mais transferível do documento, e a maior parte da literatura de design a ignora." },
 
   { camada: "aprofundamento",
     q: "Você precisa avaliar rapidamente se o layout de uma tela comunica a estrutura correta. Qual é o primeiro teste mais informativo?",
@@ -237,7 +237,7 @@ prova: [
       "Medir o contraste de cada elemento contra o fundo."
     ],
     correta: 1,
-    porque: "Desfocar remove o detalhe e revela o que o sistema visual entrega no primeiro instante, antes de leitura. Se os blocos que sobram não correspondem à estrutura lógica, o problema é de agrupamento — e nenhuma melhoria de texto, cor ou contraste vai corrigi-lo." },
+    porque: "Desfocar remove o detalhe e revela o que o sistema visual entrega no primeiro instante, antes de leitura. Se os blocos que sobram não correspondem à estrutura lógica, o problema é de agrupamento, e nenhuma melhoria de texto, cor ou contraste vai corrigi-lo." },
 
   { camada: "extensao",
     q: "Qual é a objeção mais forte ao princípio da Prägnanz como formulado classicamente?",
@@ -248,7 +248,7 @@ prova: [
       "Ele contradiz o princípio da proximidade."
     ],
     correta: 1,
-    porque: "Sem métrica de simplicidade fixada antes da observação, o princípio acomoda qualquer resultado — e um princípio que explica tudo não explica nada. Formalizações posteriores (comprimento mínimo de descrição) resolvem isso em domínios restritos, mas a versão que circula em livros de design permanece vazia." },
+    porque: "Sem métrica de simplicidade fixada antes da observação, o princípio acomoda qualquer resultado, e um princípio que explica tudo não explica nada. Formalizações posteriores (comprimento mínimo de descrição) resolvem isso em domínios restritos, mas a versão que circula em livros de design permanece vazia." },
 
   { camada: "extensao",
     q: "Um livro de design afirma: 'o cérebro forma campos elétricos que organizam a percepção em boas formas'. Qual é a avaliação correta?",
@@ -259,7 +259,7 @@ prova: [
       "Está correto, mas aplica-se apenas à visão periférica."
     ],
     correta: 1,
-    porque: "Os fenômenos de agrupamento são sólidos; a teoria dos campos corticais foi testada e falhou. Repetir a explicação obsoleta como se fosse consenso é o erro mais comum na literatura popular de design — e ilustra por que vale distinguir sempre o achado da explicação proposta para ele." },
+    porque: "Os fenômenos de agrupamento são sólidos; a teoria dos campos corticais foi testada e falhou. Repetir a explicação obsoleta como se fosse consenso é o erro mais comum na literatura popular de design, e ilustra por que vale distinguir sempre o achado da explicação proposta para ele." },
 
   { camada: "extensao",
     q: "Qual das limitações abaixo é uma restrição real dos princípios da Gestalt para o trabalho de design?",

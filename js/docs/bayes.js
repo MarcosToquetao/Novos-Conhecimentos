@@ -1,7 +1,7 @@
 CONTEUDOS["bayes"] = {
 termo: "Teorema de Bayes",
 area: "Matemática",
-subtitulo: "Uma identidade algébrica de uma linha que descreve como uma crença deveria mudar diante de evidência — e por que quase todo mundo, inclusive médicos e juízes, erra sistematicamente ao aplicá-la.",
+subtitulo: "Uma identidade algébrica de uma linha que descreve como uma crença deveria mudar diante de evidência, e por que quase todo mundo, inclusive médicos e juízes, erra sistematicamente ao aplicá-la.",
 prerequisitos: [
   "Saber o que é uma porcentagem e o que significa 'a probabilidade de A dado B'. Nada mais.",
   "Para o aprofundamento: familiaridade com a ideia de que probabilidades de eventos mutuamente exclusivos somam."
@@ -9,7 +9,7 @@ prerequisitos: [
 conexoes: [
   { termo: "Falácia do promotor", relacao: "É o erro de inversão bayesiana aplicado em tribunal: confundir P(evidência | inocente) com P(inocente | evidência)." },
   { termo: "Heurísticas e vieses", relacao: "A negligência da taxa-base é o achado empírico que mostra que a intuição humana não é bayesiana por padrão." },
-  { termo: "Rastreamento e sobrediagnóstico", relacao: "O valor preditivo positivo de qualquer exame de rastreio depende da prevalência — que é exatamente o termo que a intuição ignora." },
+  { termo: "Rastreamento e sobrediagnóstico", relacao: "O valor preditivo positivo de qualquer exame de rastreio depende da prevalência, que é exatamente o termo que a intuição ignora." },
   { termo: "Inferência causal e a escada de Pearl", relacao: "Bayes atualiza crenças sobre associações; a escada de Pearl mostra por que isso não basta para afirmações causais." }
 ],
 
@@ -66,10 +66,10 @@ P(H | E) = P(E | H) · P(H) / P(E)
 </div>
 
 <ul>
-<li><strong>P(H)</strong> — o <em>prior</em>: quanto você acreditava em H antes de olhar a evidência. No exemplo da mamografia, a prevalência de 1%.</li>
-<li><strong>P(E | H)</strong> — a <em>verossimilhança</em>: quão provável seria observar essa evidência se H fosse verdadeira. É a sensibilidade do exame.</li>
-<li><strong>P(E)</strong> — a probabilidade total da evidência, sob todas as hipóteses. É o termo que a intuição esquece, e o que garante que o resultado seja uma probabilidade legítima.</li>
-<li><strong>P(H | E)</strong> — o <em>posterior</em>: sua crença atualizada.</li>
+<li><strong>P(H)</strong> é o <em>prior</em>: quanto você acreditava em H antes de olhar a evidência. No exemplo da mamografia, a prevalência de 1%.</li>
+<li><strong>P(E | H)</strong> é a <em>verossimilhança</em>: quão provável seria observar essa evidência se H fosse verdadeira. É a sensibilidade do exame.</li>
+<li><strong>P(E)</strong> é a probabilidade total da evidência, sob todas as hipóteses. É o termo que a intuição esquece, e o que garante que o resultado seja uma probabilidade legítima.</li>
+<li><strong>P(H | E)</strong> é o <em>posterior</em>: sua crença atualizada.</li>
 </ul>
 
 <p>O denominador é onde mora a taxa-base. Ele se expande assim:</p>
@@ -183,7 +183,7 @@ flashcards: [
   { f: "O que são frequências naturais e qual seu efeito?", v: "Apresentar o problema em contagens de pessoas ('10 em 1.000') em vez de probabilidades condicionais ('1%'). Eleva substancialmente a taxa de acerto, inclusive entre médicos (Gigerenzer)." },
   { f: "O que é a falácia do promotor?", v: "Confundir P(evidência | inocente) com P(inocente | evidência) em contexto forense. 'A chance de coincidir por acaso é 1 em 10 milhões' não implica que a chance de inocência seja 1 em 10 milhões." },
   { f: "Qual é a relação entre valor-p e inversão condicional?", v: "O valor-p é P(dados tão extremos | H₀ verdadeira) e é rotineiramente lido como P(H₀ | dados). É o mesmo erro do exemplo da mamografia, aplicado à literatura científica." },
-  { f: "Qual é a limitação fundamental de Bayes quanto a causalidade?", v: "Bayes atualiza crenças sobre associações — responde 'vendo X, o que espero de Y'. Não responde 'se eu intervier em X, o que acontece com Y'. Subir esse degrau exige suposições causais externas aos dados (Pearl)." },
+  { f: "Qual é a limitação fundamental de Bayes quanto a causalidade?", v: "Bayes atualiza crenças sobre associações: responde 'vendo X, o que espero de Y'. Não responde 'se eu intervier em X, o que acontece com Y'. Subir esse degrau exige suposições causais externas aos dados (Pearl)." },
   { f: "Qual a diferença central entre a visão frequentista e a bayesiana?", v: "Frequentista: probabilidade é frequência limite, e um parâmetro é um valor fixo sem distribuição. Bayesiana: probabilidade é grau de crença, e o parâmetro tem distribuição que expressa incerteza." }
 ],
 
@@ -203,7 +203,7 @@ prova: [
       "Qual a chance de o exame errar em qualquer direção?"
     ],
     correta: 1,
-    porque: "Sensibilidade é P(positivo | doente) — uma propriedade do exame, medida em pessoas sabidamente doentes. A primeira alternativa é o valor preditivo positivo, que é uma grandeza diferente e depende da prevalência. Trocar as duas é exatamente o erro que os médicos de Harvard cometeram em 1978." },
+    porque: "Sensibilidade é P(positivo | doente), uma propriedade do exame, medida em pessoas sabidamente doentes. A primeira alternativa é o valor preditivo positivo, que é uma grandeza diferente e depende da prevalência. Trocar as duas é exatamente o erro que os médicos de Harvard cometeram em 1978." },
 
   { camada: "nucleo",
     q: "Por que o resultado de um mesmo exame deve ser interpretado de forma diferente num rastreamento populacional e num paciente com sintomas típicos?",
@@ -225,7 +225,7 @@ prova: [
       "Faltam dados: é preciso conhecer o prior para avaliar o teste."
     ],
     correta: 1,
-    porque: "LR = 0,60/0,60 = 1, e chance posterior = chance prior × 1 = chance prior. A evidência é igualmente provável sob as duas hipóteses, portanto não discrimina entre elas. Note que o LR é independente do prior — é justamente essa separação que torna a formulação em razão de chances tão esclarecedora." },
+    porque: "LR = 0,60/0,60 = 1, e chance posterior = chance prior × 1 = chance prior. A evidência é igualmente provável sob as duas hipóteses, portanto não discrimina entre elas. Note que o LR é independente do prior: é justamente essa separação que torna a formulação em razão de chances tão esclarecedora." },
 
   { camada: "aprofundamento",
     q: "No denominador P(E) = P(E|H)·P(H) + P(E|não-H)·P(não-H), qual é o papel do segundo termo?",
@@ -236,7 +236,7 @@ prova: [
       "Ajustar para o tamanho da amostra."
     ],
     correta: 1,
-    porque: "É exatamente o termo dos falsos positivos, e é ele que carrega a taxa-base através de P(não-H). Quando a condição é rara, P(não-H) é próximo de 1 e esse termo domina o denominador — o que empurra o posterior para baixo mesmo com boa sensibilidade. Ignorar esse termo é a forma algébrica de negligenciar a taxa-base." },
+    porque: "É exatamente o termo dos falsos positivos, e é ele que carrega a taxa-base através de P(não-H). Quando a condição é rara, P(não-H) é próximo de 1 e esse termo domina o denominador, o que empurra o posterior para baixo mesmo com boa sensibilidade. Ignorar esse termo é a forma algébrica de negligenciar a taxa-base." },
 
   { camada: "aprofundamento",
     q: "Sobre o debate entre Kahneman/Tversky e Gigerenzer a respeito da negligência da taxa-base, qual afirmação é mais precisa?",
@@ -247,7 +247,7 @@ prova: [
       "O debate foi encerrado por meta-análises que confirmaram a posição de Kahneman."
     ],
     correta: 1,
-    porque: "O efeito do formato é robusto e replicável, inclusive com médicos — isso é consenso. A interpretação continua aberta: a explicação evolutiva de Gigerenzer é mais ambiciosa e mais difícil de testar do que a explicação por carga cognitiva, que é mais parcimoniosa. Dizer que o viés 'não existe' extrapola o que os dados sustentam." },
+    porque: "O efeito do formato é robusto e replicável, inclusive com médicos: isso é consenso. A interpretação continua aberta: a explicação evolutiva de Gigerenzer é mais ambiciosa e mais difícil de testar do que a explicação por carga cognitiva, que é mais parcimoniosa. Dizer que o viés 'não existe' extrapola o que os dados sustentam." },
 
   { camada: "extensao",
     q: "Um perito declara em juízo: 'a probabilidade de este perfil de DNA coincidir por acaso é de 1 em 10 milhões'. O promotor conclui: 'logo, a probabilidade de o réu ser inocente é de 1 em 10 milhões'. Qual é o erro?",
@@ -258,13 +258,13 @@ prova: [
       "O erro é usar DNA como prova única, que é proibido."
     ],
     correta: 2,
-    porque: "É a falácia do promotor. Se a busca foi feita numa base de milhões de perfis, coincidências raras tornam-se esperadas, e o prior de culpa daquele indivíduo específico pode ser baixíssimo. A magnitude do erro depende inteiramente do tamanho da população de suspeitos plausíveis — um número que a afirmação do perito não contém." },
+    porque: "É a falácia do promotor. Se a busca foi feita numa base de milhões de perfis, coincidências raras tornam-se esperadas, e o prior de culpa daquele indivíduo específico pode ser baixíssimo. A magnitude do erro depende inteiramente do tamanho da população de suspeitos plausíveis, um número que a afirmação do perito não contém." },
 
   { camada: "extensao",
     q: "Considere estudos com poder de 80% e nível de significância de 5%, num campo onde apenas 10% das hipóteses testadas são verdadeiras. Entre os resultados estatisticamente significativos, a proporção de falsos positivos é aproximadamente:",
     alts: ["5%", "20%", "36%", "80%"],
     correta: 2,
-    porque: "Em 1.000 hipóteses: 100 verdadeiras, das quais 80 são detectadas; 900 falsas, das quais 45 (5%) dão significativas. Total de significativos = 125, dos quais 45 são falsos: cerca de 36%. É o argumento central de Ioannidis, e é estruturalmente idêntico ao problema da mamografia — apenas com 'hipótese verdadeira' no lugar de 'doente'." },
+    porque: "Em 1.000 hipóteses: 100 verdadeiras, das quais 80 são detectadas; 900 falsas, das quais 45 (5%) dão significativas. Total de significativos = 125, dos quais 45 são falsos: cerca de 36%. É o argumento central de Ioannidis, e é estruturalmente idêntico ao problema da mamografia, apenas com 'hipótese verdadeira' no lugar de 'doente'." },
 
   { camada: "extensao",
     q: "Qual é a limitação de Bayes apontada por Judea Pearl?",
@@ -275,15 +275,15 @@ prova: [
       "Que a fórmula não funciona quando há mais de duas hipóteses."
     ],
     correta: 1,
-    porque: "Pearl separa três níveis: associação (ver), intervenção (fazer) e contrafactual (imaginar). Bayes é uma máquina completa para o primeiro. Subir para o segundo exige um modelo causal explícito — um grafo, suposições de não-confundimento — que não está contido nos dados. As outras alternativas descrevem críticas diferentes (algumas falsas: a fórmula vale para qualquer número de hipóteses)." }
+    porque: "Pearl separa três níveis: associação (ver), intervenção (fazer) e contrafactual (imaginar). Bayes é uma máquina completa para o primeiro. Subir para o segundo exige um modelo causal explícito (um grafo, suposições de não-confundimento) que não está contido nos dados. As outras alternativas descrevem críticas diferentes (algumas falsas: a fórmula vale para qualquer número de hipóteses)." }
 ],
 
 fontes: [
   { n: 1, tipo: "artigo", ref: "Casscells, W., Schoenberger, A. &amp; Graboys, T. B. 'Interpretation by physicians of clinical laboratory results'. <em>New England Journal of Medicine</em> 299:999–1001, 1978.", url: "https://doi.org/10.1056/NEJM197811022991808" },
   { n: 2, tipo: "artigo", ref: "Gigerenzer, G. &amp; Hoffrage, U. 'How to improve Bayesian reasoning without instruction: frequency formats'. <em>Psychological Review</em> 102(4):684–704, 1995.", url: "https://doi.org/10.1037/0033-295X.102.4.684" },
-  { n: 3, tipo: "livro", ref: "Kahneman, D. <em>Rápido e Devagar: Duas Formas de Pensar</em>. Objetiva, 2012 — capítulos sobre representatividade e negligência da taxa-base.", url: "" },
+  { n: 3, tipo: "livro", ref: "Kahneman, D. <em>Rápido e Devagar: Duas Formas de Pensar</em>. Objetiva, 2012. Capítulos sobre representatividade e negligência da taxa-base.", url: "" },
   { n: 4, tipo: "artigo", ref: "Ioannidis, J. P. A. 'Why most published research findings are false'. <em>PLoS Medicine</em> 2(8):e124, 2005.", url: "https://doi.org/10.1371/journal.pmed.0020124" },
-  { n: 5, tipo: "livro", ref: "Pearl, J. &amp; Mackenzie, D. <em>The Book of Why: The New Science of Cause and Effect</em>. Basic Books, 2018 — a escada da causalidade e os limites da inferência associativa.", url: "" },
-  { n: 6, tipo: "livro", ref: "McGrayne, S. B. <em>The Theory That Would Not Die</em>. Yale University Press, 2011 — história do teorema, de Bayes e Laplace a Turing e à estatística contemporânea.", url: "" }
+  { n: 5, tipo: "livro", ref: "Pearl, J. &amp; Mackenzie, D. <em>The Book of Why: The New Science of Cause and Effect</em>. Basic Books, 2018. A escada da causalidade e os limites da inferência associativa.", url: "" },
+  { n: 6, tipo: "livro", ref: "McGrayne, S. B. <em>The Theory That Would Not Die</em>. Yale University Press, 2011. História do teorema, de Bayes e Laplace a Turing e à estatística contemporânea.", url: "" }
 ]
 };

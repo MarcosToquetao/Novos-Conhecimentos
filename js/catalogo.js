@@ -328,13 +328,117 @@ const CATALOGO = [
   { id:"correntes-oceanicas", termo:"Correntes oceânicas e a circulação termohalina", area:"Geografia", dificuldade:3, gancho:"Um sistema de correntes que redistribui calor pelo planeta e explica por que Lisboa é mais quente que Nova York na mesma latitude." },
   { id:"biomas-terrestres", termo:"Biomas terrestres: o que define cada um", area:"Geografia", dificuldade:1, gancho:"Temperatura e precipitação, sozinhas, já predizem se um lugar vira floresta, savana ou deserto." },
   { id:"demografia-transicao", termo:"Transição demográfica", area:"Geografia", dificuldade:2, gancho:"Todo país que industrializa passa pela mesma sequência: mortalidade cai, depois natalidade cai atrás." },
-  { id:"geografia-eleitoral", termo:"Gerrymandering e geografia eleitoral", area:"Geografia", dificuldade:3, gancho:"Desenhar o formato de um distrito já decide parte do resultado da eleição, antes de um voto ser contado." },
+  { id:"escalas-mapa-modificavel", termo:"Problema da unidade de área modificável", area:"Geografia", dificuldade:3, gancho:"O mesmo dado espacial muda de conclusão conforme o tamanho e o recorte das áreas usadas para agregá-lo." },
   { id:"rios-internacionais-hidropolitica", termo:"Rios internacionais e hidropolítica", area:"Geografia", dificuldade:3, gancho:"Uma barragem rio acima pode ser, na prática, uma arma contra quem está rio abaixo." },
   { id:"ilhas-calor-urbanas", termo:"Ilhas de calor urbanas", area:"Geografia", dificuldade:1, gancho:"Asfalto e concreto guardam calor à noite. O centro da cidade pode ficar vários graus mais quente que o campo vizinho." },
   { id:"monções", termo:"Monções", area:"Geografia", dificuldade:2, gancho:"Um vento sazonal que inverte de direção duas vezes por ano e sustenta a agricultura de metade da Ásia." },
   { id:"cartografia-projecoes", termo:"Projeções cartográficas e suas distorções", area:"Geografia", dificuldade:2, gancho:"Nenhum mapa plano representa a Terra sem mentir em algo: área, forma, distância ou direção." },
   { id:"migracao-push-pull", termo:"Modelo push-pull de migração", area:"Geografia", dificuldade:1, gancho:"Toda migração humana em massa combina um empurrão de origem com uma atração de destino." },
-  { id:"geografia-recursos-minerais", termo:"Maldição dos recursos naturais", area:"Geografia", dificuldade:3, gancho:"Países ricos em petróleo ou minério frequentemente crescem menos que vizinhos sem esses recursos. Por quê?" }
+  { id:"geografia-recursos-minerais", termo:"Maldição dos recursos naturais", area:"Geografia", dificuldade:3, gancho:"Países ricos em petróleo ou minério frequentemente crescem menos que vizinhos sem esses recursos. Por quê?" },
+  { id:"el-nino", termo:"El Niño e a Oscilação Sul", area:"Geografia", dificuldade:2, gancho:"Uma mudança de temperatura no Pacífico equatorial reorganiza chuva e seca em quatro continentes." },
+
+  /* ── Astronomia (área nova) ───────────────────────────────────────── */
+  { id:"paradoxo-fermi", termo:"Paradoxo de Fermi e o Grande Filtro", area:"Astronomia", dificuldade:3, gancho:"Se a vida inteligente fosse comum, já teríamos visto sinal. As explicações propostas são muitas e nenhuma é testável hoje." },
+  { id:"lentes-gravitacionais", termo:"Lentes gravitacionais", area:"Astronomia", dificuldade:3, gancho:"Massa entorta a trajetória da luz, e isso virou instrumento: dá para pesar aglomerados de galáxias com a distorção que produzem." },
+  { id:"estrelas-neutrons", termo:"Estrelas de nêutrons", area:"Astronomia", dificuldade:4, gancho:"Um objeto com massa solar comprimido em 20 km de diâmetro, onde a matéria assume estados que nenhum laboratório reproduz." },
+  { id:"radiacao-hawking", termo:"Radiação Hawking", area:"Astronomia", dificuldade:5, gancho:"Buracos negros evaporam devagar. A previsão é teórica: nunca foi observada, e o paradoxo da informação que ela abre segue aberto." },
+  { id:"energia-escura", termo:"Energia escura e a expansão acelerada", area:"Astronomia", dificuldade:4, gancho:"A expansão do universo está acelerando. O nome que damos à causa disfarça o fato de que ninguém sabe o que ela é." },
+  { id:"escada-distancias", termo:"Escada de distâncias cósmicas", area:"Astronomia", dificuldade:3, gancho:"Como se mede a distância de algo a bilhões de anos-luz: métodos encaixados, cada um calibrando o seguinte, cada um com erro próprio." },
+
+  /* ── Psicologia (complemento) ─────────────────────────────────────── */
+  { id:"dunning-kruger", termo:"Efeito Dunning-Kruger: o que sobra depois da crítica", area:"Psicologia", dificuldade:3, gancho:"O gráfico que circula na internet é em boa parte artefato estatístico. O que resta do efeito original é bem mais modesto." },
+  { id:"memoria-falsa", termo:"Memória falsa e o paradigma DRM", area:"Psicologia", dificuldade:2, gancho:"Dá para implantar em laboratório a lembrança confiante de algo que nunca aconteceu. Isso já mudou decisões judiciais." },
+  { id:"custo-afundado", termo:"Falácia do custo afundado", area:"Psicologia", dificuldade:1, gancho:"O que já foi gasto é irrecuperável e deveria ser irrelevante para a próxima decisão. Quase ninguém consegue tratá-lo assim." },
+  { id:"teoria-da-mente", termo:"Teoria da mente", area:"Psicologia", dificuldade:2, gancho:"Atribuir estados mentais a outros parece trivial até você tentar especificar quando isso aparece no desenvolvimento e em quais espécies." },
+
+  /* ── Filosofia e lógica (complemento) ─────────────────────────────── */
+  { id:"problema-bonde", termo:"Problema do bonde", area:"Filosofia", dificuldade:2, gancho:"Um dilema construído para separar intuições morais incompatíveis. O que ele realmente mede é objeto de disputa." },
+  { id:"absurdismo", termo:"Absurdismo (Camus)", area:"Filosofia", dificuldade:2, gancho:"O choque entre a busca humana por sentido e um universo que não responde, e por que Camus recusa tanto o suicídio quanto a fé." },
+  { id:"cerebro-cuba", termo:"Cérebro numa cuba e ceticismo externo", area:"Filosofia", dificuldade:3, gancho:"Como você provaria que não está sendo enganado sobre tudo? A resposta de Putnam vem da filosofia da linguagem, não da física." },
+  { id:"paradoxo-mentiroso", termo:"Paradoxo do mentiroso", area:"Filosofia", dificuldade:3, gancho:"'Esta frase é falsa.' Uma sentença de quatro palavras que forçou a lógica formal a se reorganizar no século XX." },
+  { id:"navalha-ockham", termo:"Navalha de Ockham e seus limites", area:"Filosofia", dificuldade:2, gancho:"Preferir a explicação mais simples é heurística útil e péssimo critério de verdade. A diferença importa e costuma ser ignorada." },
+  { id:"demonio-laplace", termo:"Demônio de Laplace e determinismo", area:"Filosofia", dificuldade:3, gancho:"Se um intelecto conhecesse posição e velocidade de tudo, preveria o futuro inteiro. Caos e quântica atacam essa ideia por vias diferentes." },
+
+  /* ── Física (complemento) ─────────────────────────────────────────── */
+  { id:"tunelamento-quantico", termo:"Tunelamento quântico", area:"Física", dificuldade:3, gancho:"Partículas atravessam barreiras que classicamente não poderiam vencer. É o que faz o Sol brilhar e o que limita o tamanho de um transistor." },
+  { id:"paradoxo-gemeos", termo:"Paradoxo dos gêmeos", area:"Física", dificuldade:3, gancho:"Não é paradoxo: a simetria se quebra porque só um dos dois acelera. Entender onde ela quebra é o exercício." },
+  { id:"gato-schrodinger", termo:"Gato de Schrödinger e o problema da medição", area:"Física", dificuldade:3, gancho:"Schrödinger criou o exemplo para ridicularizar uma interpretação, não para ilustrá-la. O problema que ele apontou continua sem solução consensual." },
+  { id:"demonio-maxwell", termo:"Demônio de Maxwell e o custo da informação", area:"Física", dificuldade:4, gancho:"Um ser que separa moléculas rápidas das lentas violaria a segunda lei. A saída levou um século e passa pelo custo de apagar memória." },
+
+  /* ── Química (complemento) ────────────────────────────────────────── */
+  { id:"efeito-hidrofobico", termo:"Efeito hidrofóbico", area:"Química", dificuldade:3, gancho:"Óleo e água não se separam porque 'se repelem': separam porque a água ganha entropia ao expulsar o óleo. A explicação comum está errada." },
+  { id:"le-chatelier", termo:"Princípio de Le Chatelier e suas exceções", area:"Química", dificuldade:2, gancho:"Uma regra prática que funciona quase sempre, é ensinada como lei, e tem contraexemplos conhecidos há décadas." },
+  { id:"quimica-prebiotica", termo:"Química prebiótica e a origem da vida", area:"Química", dificuldade:4, gancho:"Rotas plausíveis existem em bancada. Qual delas ocorreu na Terra primitiva, e se alguma ocorreu, segue em aberto." },
+
+  /* ── Biologia (complemento) ───────────────────────────────────────── */
+  { id:"evo-devo", termo:"Evo-devo: evolução e desenvolvimento", area:"Biologia", dificuldade:3, gancho:"Mudanças em quando e onde um gene é ligado explicam mais diferenças entre espécies do que mudanças no próprio gene." },
+  { id:"quorum-sensing", termo:"Quorum sensing", area:"Biologia", dificuldade:2, gancho:"Bactérias medem a própria densidade populacional por sinal químico e só agem quando são muitas. Coordenação sem sistema nervoso." },
+  { id:"plasticidade-fenotipica", termo:"Plasticidade fenotípica", area:"Biologia", dificuldade:3, gancho:"O mesmo genótipo produz corpos diferentes em ambientes diferentes, o que embaralha a leitura simples de 'gene para X'." },
+  { id:"transferencia-horizontal", termo:"Transferência horizontal de genes", area:"Biologia", dificuldade:3, gancho:"Genes passam entre espécies sem descendência. Isso complica a árvore da vida e explica a velocidade da resistência a antibióticos." },
+  { id:"bacteriofagos", termo:"Bacteriófagos e terapia fágica", area:"Biologia", dificuldade:3, gancho:"Vírus que matam bactérias, usados como tratamento no Leste Europeu por décadas e só agora em ensaios clínicos ocidentais." },
+  { id:"biofilmes", termo:"Biofilmes", area:"Biologia", dificuldade:2, gancho:"Bactérias organizadas em matriz aderida resistem a antibióticos em concentrações centenas de vezes maiores que as isoladas." },
+  { id:"tardigrados", termo:"Tardígrados e criptobiose", area:"Biologia", dificuldade:2, gancho:"Sobrevivem ao vácuo e à dessecação num estado suspenso. A lista do que eles não sobrevivem é maior do que a divulgação sugere." },
+  { id:"ophiocordyceps", termo:"Fungos que manipulam comportamento de insetos", area:"Biologia", dificuldade:2, gancho:"Ophiocordyceps leva a formiga a morder uma folha na altura e umidade ideais para o fungo esporular. O mecanismo não envolve invadir o cérebro." },
+  { id:"senescencia-negligenciavel", termo:"Senescência negligenciável", area:"Biologia", dificuldade:3, gancho:"Algumas espécies não mostram aumento de mortalidade com a idade. Se isso é 'não envelhecer' depende inteiramente da definição usada." },
+  { id:"regeneracao-animal", termo:"Regeneração de órgãos e membros", area:"Biologia", dificuldade:3, gancho:"Axolotes reconstroem uma perna inteira. Mamíferos têm quase toda a maquinaria e mesmo assim formam cicatriz." },
+
+  /* ── Neurociência (complemento) ───────────────────────────────────── */
+  { id:"split-brain", termo:"Cérebro dividido: o experimento e a releitura", area:"Neurociência", dificuldade:3, gancho:"A leitura clássica de 'duas consciências num crânio' foi contestada em 2017 com os mesmos pacientes." },
+  { id:"homunculo-cortical", termo:"Homúnculo cortical", area:"Neurociência", dificuldade:2, gancho:"O mapa do corpo no córtex é real, mas bem menos ordenado e bem mais móvel do que a figura clássica de Penfield sugere." },
+  { id:"reconsolidacao", termo:"Reconsolidação da memória", area:"Neurociência", dificuldade:3, gancho:"Lembrar deixa a memória temporariamente instável. Isso abre uma janela para modificá-la, e uma discussão clínica sobre trauma." },
+
+  /* ── Economia (complemento) ───────────────────────────────────────── */
+  { id:"selecao-adversa", termo:"Seleção adversa e o mercado de limões", area:"Economia", dificuldade:3, gancho:"Quando o vendedor sabe mais que o comprador, o mercado pode encolher até sumir. Akerlof mostrou isso com carros usados." },
+  { id:"agente-principal", termo:"Problema agente-principal", area:"Economia", dificuldade:3, gancho:"Quem decide raramente é quem arca com a consequência. Metade dos desenhos institucionais existe para lidar com isso." },
+  { id:"doenca-holandesa", termo:"Doença holandesa", area:"Economia", dificuldade:3, gancho:"Exportar muita commodity valoriza a moeda e sufoca a indústria. Diagnóstico recorrente no Brasil e disputado em cada aplicação." },
+  { id:"armadilha-liquidez", termo:"Armadilha da liquidez", area:"Economia", dificuldade:4, gancho:"Quando o juro chega perto de zero, a política monetária perde tração. O que fazer então divide macroeconomistas até hoje." },
+  { id:"efeito-cantillon", termo:"Efeito Cantillon", area:"Economia", dificuldade:3, gancho:"Dinheiro novo não chega a todos ao mesmo tempo, e quem recebe primeiro compra a preços velhos. A tese é antiga e a evidência, disputada." },
+
+  /* ── Computação (complemento) ─────────────────────────────────────── */
+  { id:"maquina-turing", termo:"Máquina de Turing", area:"Computação", dificuldade:3, gancho:"Uma fita e algumas regras bastam para definir o que 'computável' significa. Toda a teoria da computação parte daí." },
+  { id:"zero-knowledge", termo:"Provas de conhecimento zero", area:"Computação", dificuldade:4, gancho:"Convencer alguém de que você sabe um segredo sem revelar nada sobre ele. Parece impossível e tem construção formal." },
+  { id:"teorema-cap", termo:"Teorema CAP", area:"Computação", dificuldade:3, gancho:"Sistemas distribuídos escolhem entre consistência e disponibilidade quando a rede falha. O enunciado popular do teorema é impreciso." },
+
+  /* ── Linguística (complemento) ────────────────────────────────────── */
+  { id:"gramaticalizacao", termo:"Gramaticalização", area:"Linguística", dificuldade:3, gancho:"Palavras plenas viram partículas gramaticais ao longo de séculos, por um caminho que se repete em línguas sem contato." },
+  { id:"linguas-de-sinais", termo:"Línguas de sinais", area:"Linguística", dificuldade:2, gancho:"Não são mímica nem versão gestual da língua falada: têm fonologia, sintaxe própria e variação regional." },
+  { id:"diglossia", termo:"Diglossia", area:"Linguística", dificuldade:2, gancho:"Duas variedades da mesma língua com funções sociais rigidamente separadas. O caso brasileiro é debatido justamente aqui." },
+
+  /* ── Artes (complemento) ──────────────────────────────────────────── */
+  { id:"chiaroscuro", termo:"Chiaroscuro", area:"Artes", dificuldade:2, gancho:"Modelar volume por contraste extremo de luz e sombra, e o que Caravaggio fez com isso além de técnica." },
+  { id:"dada-surrealismo", termo:"Dadaísmo e surrealismo", area:"Artes", dificuldade:2, gancho:"Dois movimentos vizinhos com programas opostos: um quer destruir o sentido, o outro quer chegar a um sentido mais fundo." },
+  { id:"trompe-loeil", termo:"Trompe-l'œil e a ilusão pictórica", area:"Artes", dificuldade:2, gancho:"Pintar para enganar o olho exige entender como o sistema visual infere profundidade a partir de uma superfície plana." },
+
+  /* ── Arquitetura (complemento) ────────────────────────────────────── */
+  { id:"brutalismo", termo:"Brutalismo", area:"Arquitetura", dificuldade:2, gancho:"Concreto aparente como posição ética antes de ser estética, e uma reputação que oscilou duas vezes em cinquenta anos." },
+  { id:"cidade-jardim", termo:"Cidade-jardim (Howard)", area:"Arquitetura", dificuldade:2, gancho:"Uma proposta de 1898 para combinar campo e cidade que virou subúrbio dormitório, quase o oposto do que pretendia." },
+  { id:"arquitetura-vernacular", termo:"Arquitetura vernacular", area:"Arquitetura", dificuldade:2, gancho:"Construções sem arquiteto que resolvem clima e material local com soluções que o projeto moderno redescobre com dificuldade." },
+  { id:"metabolismo-japones", termo:"Metabolismo japonês", area:"Arquitetura", dificuldade:3, gancho:"Prédios pensados como organismos, com partes substituíveis. Quase nada foi construído e a Nakagin foi demolida em 2022." },
+
+  /* ── Ciência Política (complemento) ───────────────────────────────── */
+  { id:"eleitor-mediano", termo:"Teorema do eleitor mediano", area:"Ciência Política", dificuldade:3, gancho:"Sob certas condições, dois candidatos convergem para o centro. As condições quase nunca se aplicam, o que também explica muita coisa." },
+  { id:"soft-power", termo:"Soft power", area:"Ciência Política", dificuldade:2, gancho:"Influência por atração em vez de coerção. Conceito muito citado e notoriamente difícil de medir." },
+  { id:"tirania-maioria", termo:"Tirania da maioria", area:"Ciência Política", dificuldade:2, gancho:"A preocupação de Tocqueville e Mill: decisão majoritária pode oprimir de forma mais estável que um déspota." },
+
+  /* ── Ecologia (dentro de Sustentabilidade) ────────────────────────── */
+  { id:"cascata-trofica", termo:"Cascata trófica", area:"Sustentabilidade", dificuldade:3, gancho:"A história dos lobos que teriam mudado os rios de Yellowstone é o exemplo mais citado e um dos mais contestados da ecologia." },
+  { id:"micorrizas", termo:"Micorrizas e a 'wood wide web'", area:"Sustentabilidade", dificuldade:3, gancho:"A simbiose entre fungo e raiz é consenso. A ideia de árvores conversando por uma rede subterrânea foi revisada com dureza em 2023." },
+  { id:"biomagnificacao", termo:"Bioacumulação e biomagnificação", area:"Sustentabilidade", dificuldade:2, gancho:"Por que o mercúrio se concentra no atum e não na água: cada nível da cadeia alimentar multiplica a dose." },
+
+  /* ── Antropologia: conceitos culturais ────────────────────────────── */
+  { id:"ikigai", termo:"Ikigai: o conceito e o diagrama que o substituiu", area:"Antropologia", dificuldade:2, gancho:"O diagrama de quatro círculos que circula no Ocidente não é japonês nem corresponde ao conceito de Kamiya. Caso limpo de invenção atribuída a outra cultura." },
+  { id:"wabi-sabi", termo:"Wabi-sabi", area:"Antropologia", dificuldade:2, gancho:"Uma estética da imperfeição e da impermanência, ligada ao budismo e à cerimônia do chá, difícil de traduzir sem achatar." },
+  { id:"ubuntu", termo:"Ubuntu", area:"Antropologia", dificuldade:2, gancho:"Uma concepção de pessoa constituída pela relação com os outros, e o uso político que ela teve na África do Sul pós-apartheid." },
+  { id:"wu-wei", termo:"Wu wei", area:"Antropologia", dificuldade:3, gancho:"'Não-ação' no taoismo não é passividade: é agir sem forçar contra a tendência das coisas." },
+
+  /* ── Matemática (complemento) ─────────────────────────────────────── */
+  { id:"banach-tarski", termo:"Paradoxo de Banach-Tarski", area:"Matemática", dificuldade:5, gancho:"Uma esfera pode ser dividida e remontada em duas idênticas à original. O resultado é teorema, e o preço é o axioma da escolha." },
+
+  /* ── História (segundo complemento) ───────────────────────────────── */
+  { id:"revolucao-haitiana", termo:"Revolução Haitiana", area:"História", dificuldade:3, gancho:"A única revolta de escravizados que fundou um Estado. O isolamento e a indenização cobrada pela França moldaram os dois séculos seguintes." },
+  { id:"liga-hanseatica", termo:"Liga Hanseática", area:"História", dificuldade:2, gancho:"Uma federação de cidades mercantes que controlou o comércio do Báltico por 300 anos sem ser um Estado nem ter exército permanente." },
+  { id:"crise-seculo-iii", termo:"Crise do século III em Roma", area:"História", dificuldade:3, gancho:"Cinquenta anos de imperadores em série, moeda desvalorizada e fronteiras rompidas. Roma sobreviveu, mas saiu outra coisa." },
+  { id:"imperio-mali", termo:"Império do Mali e o comércio transaariano", area:"História", dificuldade:2, gancho:"Uma potência do ouro e do sal na África Ocidental, com Timbuktu como centro de erudição enquanto a Europa saía da Idade Média." }
 
 ];
 

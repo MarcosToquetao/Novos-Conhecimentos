@@ -209,12 +209,15 @@ h3 { font-size: 1.15rem; margin: 1.9rem 0 .5rem; font-weight: 700; letter-spacin
 .leitura a { color: var(--acento); text-underline-offset: 2px; }
 .leitura code { font-family: var(--mono); font-size: .88em; background: var(--papel-3); padding: .1em .35em; border-radius: 4px; }
 
+/* Fórmula como destaque de página impressa: fios finos acima e abaixo,
+   sem moldura nem canto. */
 .formula {
-  font-family: var(--serif); font-size: 1.12rem; text-align: center;
-  background: var(--papel-2); border: 1px solid var(--linha); border-radius: var(--raio);
-  padding: 1.15rem .9rem; margin: 1.5rem 0; overflow-x: auto; line-height: 1.75;
+  font-family: var(--serif); font-size: 1.14rem; text-align: center;
+  background: none; border: none; border-radius: 0;
+  border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha);
+  padding: 1.2rem .4rem; margin: 1.7rem 0; overflow-x: auto; line-height: 1.75;
 }
-.formula .leg { display: block; font-family: var(--sans); font-size: .78rem; color: var(--tinta-suave); margin-top: .55rem; }
+.formula .leg { display: block; font-family: var(--sans); font-size: .77rem; color: var(--tinta-suave); margin-top: .6rem; }
 
 blockquote {
   margin: 1.4rem 0; padding: .2rem 0 .2rem 1.1rem;
@@ -229,31 +232,38 @@ sup.cit a { color: var(--acento); text-decoration: none; padding: 0 .12em; }
 sup.cit a:hover { text-decoration: underline; }
 
 /* ── Marcadores epistêmicos ─────────────────────────────────────────── */
+/* Duas linguagens deliberadamente distintas: a interface usa azulejo de
+   canto generoso; a página de leitura é tipografia plana, com fio e
+   rótulo suspenso, como um boxe de revista. Caixa arredondada com fundo
+   em cima de texto corrido achata a hierarquia e é o padrão que todo
+   gerador de conteúdo produz por omissão. */
 .marca {
-  border: 1px solid var(--linha); border-left-width: 4px;
-  background: var(--papel-2); border-radius: var(--raio);
-  padding: 1rem 1.15rem; margin: 1.5rem 0;
-  font-family: var(--sans); font-size: .92rem; line-height: 1.6;
+  border: none; border-top: 2px solid currentColor;
+  background: none; border-radius: 0;
+  padding: .7rem 0 .2rem; margin: 1.9rem 0;
+  font-family: var(--sans); font-size: .91rem; line-height: 1.62;
+  color: var(--tinta-media);
 }
 .marca > .rot {
-  display: block; font-size: .64rem; font-weight: 700; letter-spacing: .13em;
-  text-transform: uppercase; margin-bottom: .45rem;
+  display: block; font-size: .63rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; margin-bottom: .5rem;
 }
+.marca p { color: var(--tinta-media); }
 .marca p { margin: 0 0 .6rem; }
 .marca p:last-child { margin-bottom: 0; }
-.marca.consenso     { border-left-color: var(--consenso); }
-.marca.consenso .rot     { color: var(--consenso); }
-.marca.emergente    { border-left-color: var(--emergente); }
-.marca.emergente .rot    { color: var(--emergente); }
-.marca.controverso  { border-left-color: var(--controverso); }
-.marca.controverso .rot  { color: var(--controverso); }
-.marca.especulacao  { border-left-color: var(--especulacao); }
-.marca.especulacao .rot  { color: var(--especulacao); }
+/* O fio superior herda currentColor, então basta trocar a cor do bloco. */
+.marca.consenso     { color: var(--consenso); }
+.marca.emergente    { color: var(--emergente); }
+.marca.controverso  { color: var(--controverso); }
+.marca.especulacao  { color: var(--especulacao); }
 
 /* ── Diagramas ──────────────────────────────────────────────────────── */
-.figura { margin: 1.9rem 0; }
-.figura svg { width: 100%; height: auto; display: block; background: var(--papel-2); border: 1px solid var(--linha); border-radius: var(--raio); }
-.figura figcaption { font-family: var(--sans); font-size: .79rem; color: var(--tinta-suave); margin-top: .6rem; line-height: 1.55; }
+.figura { margin: 2rem 0; }
+.figura svg { width: 100%; height: auto; display: block; background: none; border: none; border-radius: 0; }
+.figura figcaption {
+  font-family: var(--sans); font-size: .78rem; color: var(--tinta-suave);
+  margin-top: .7rem; padding-top: .55rem; border-top: 1px solid var(--linha); line-height: 1.55;
+}
 .svg-tinta   { fill: var(--tinta); }
 .svg-suave   { fill: var(--tinta-suave); }
 .svg-acento  { fill: var(--acento); }
@@ -387,10 +397,48 @@ th { font-weight: 600; font-size: .74rem; letter-spacing: .06em; text-transform:
 }
 .camada-rot span { color: var(--acento); }
 
-.bloco-meta { border: 1px solid var(--linha); border-radius: var(--raio); padding: 1.1rem 1.2rem; background: var(--papel-2); margin: 1.7rem 0; font-family: var(--sans); font-size: .89rem; }
-.bloco-meta h4 { font-family: var(--sans); font-size: .64rem; letter-spacing: .13em; text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .6rem; font-weight: 700; }
+/* Cabeça do documento: fios em cima e embaixo, sem caixa. */
+.bloco-meta {
+  border: none; border-top: 1px solid var(--tinta); border-bottom: 1px solid var(--linha);
+  border-radius: 0; padding: 1rem 0 1.1rem; background: none; margin: 1.8rem 0;
+  font-family: var(--sans); font-size: .89rem;
+}
+.bloco-meta h4 { font-family: var(--sans); font-size: .63rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .6rem; font-weight: 700; }
 .bloco-meta ul { margin: 0; padding-left: 1.05rem; }
-.bloco-meta li { margin-bottom: .35rem; }
+.bloco-meta li { margin-bottom: .4rem; color: var(--tinta-media); }
+
+/* ── Síntese de fim de documento ────────────────────────────────────── */
+/* Fecha a leitura com o que precisa sobreviver a ela. Fio grosso em cima
+   para marcar que a exposição terminou; sem caixa, sem canto arredondado. */
+.sintese {
+  border-top: 3px solid var(--tinta); margin-top: 3rem; padding-top: 1.1rem;
+  font-family: var(--sans);
+}
+.sintese-rot {
+  font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--tinta); margin: 0 0 1.4rem;
+}
+.sintese h3 {
+  font-family: var(--sans); font-size: .68rem; font-weight: 700; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--tinta-suave);
+  margin: 1.8rem 0 .75rem; padding-bottom: .4rem; border-bottom: 1px solid var(--linha);
+}
+.sintese h3:first-of-type { margin-top: 0; }
+
+.sintese-defs { margin: 0; font-size: .91rem; line-height: 1.6; }
+.sintese-defs dt { font-family: var(--serif); font-weight: 700; font-size: 1rem; letter-spacing: -.012em; margin-top: .85rem; }
+.sintese-defs dt:first-child { margin-top: 0; }
+.sintese-defs dd { margin: .15rem 0 0; color: var(--tinta-media); }
+
+.sintese-lista { margin: 0; padding-left: 1.1rem; font-size: .91rem; line-height: 1.6; }
+.sintese-lista li { margin-bottom: .6rem; color: var(--tinta-media); }
+
+/* Erro comum e correção, em duas linhas contrastadas: o engano tachado
+   pela cor de controvérsia, a correção em tinta cheia. */
+.sintese-conf { list-style: none; margin: 0; padding: 0; font-size: .91rem; line-height: 1.58; }
+.sintese-conf li { margin-bottom: .95rem; padding-left: .9rem; border-left: 2px solid var(--controverso); }
+.sintese-conf b { display: block; font-weight: 600; color: var(--controverso); }
+.sintese-conf span { display: block; color: var(--tinta); margin-top: .2rem; }
 
 /* ── Fontes ─────────────────────────────────────────────────────────── */
 .fontes { font-family: var(--sans); font-size: .84rem; line-height: 1.55; }

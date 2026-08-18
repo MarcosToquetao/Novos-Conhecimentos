@@ -1,7 +1,7 @@
 CONTEUDOS["quatro-forcas"] = {
 termo: "As quatro interações fundamentais",
 area: "Física",
-subtitulo: "Tudo que acontece no universo — de uma reação química ao colapso de uma estrela — é mediado por quatro tipos de interação. Três delas foram unificadas numa mesma descrição matemática. A quarta resiste há cem anos.",
+subtitulo: "Tudo que acontece no universo, de uma reação química ao colapso de uma estrela, é mediado por quatro tipos de interação. Três delas foram unificadas numa mesma descrição matemática. A quarta resiste há cem anos.",
 prerequisitos: [
   "Saber que a matéria é feita de átomos, e átomos de núcleo e elétrons. Nada além disso no núcleo do texto.",
   "Para o aprofundamento: noção de que forças caem com a distância e de que energia e massa se relacionam."
@@ -9,7 +9,7 @@ prerequisitos: [
 conexoes: [
   { termo: "Supercondutividade", relacao: "O mecanismo que dá massa aos bósons W e Z é matematicamente o mesmo que expulsa o campo magnético de um supercondutor." },
   { termo: "Termodinâmica de buracos negros", relacao: "É o ponto exato onde gravidade e mecânica quântica precisam ser conciliadas e não são." },
-  { termo: "Matéria escura", relacao: "Se existe, interage gravitacionalmente e talvez pela força fraca — mas não eletromagneticamente, o que é o motivo de ser invisível." },
+  { termo: "Matéria escura", relacao: "Se existe, interage gravitacionalmente e talvez pela força fraca, mas não eletromagneticamente, o que é o motivo de ser invisível." },
   { termo: "Leis de escala e alometria", relacao: "A hierarquia de intensidade entre as forças define quais delas dominam em cada escala de tamanho." }
 ],
 
@@ -109,8 +109,8 @@ extensao: { minutos: 30, html: `
 <p>Mas GUTs fazem uma previsão indireta e testável: se quarks e léptons pertencem a uma mesma família, deve existir um processo que converta um no outro. Isso implica que o <strong>próton decai</strong>.</p>
 
 <div class="marca controverso">
-<span class="rot">Onde a previsão foi testada — e falhou</span>
-<p>O modelo GUT mais simples, o SU(5) mínimo de Georgi e Glashow (1974), previa um tempo de vida do próton em torno de 10³¹ anos. O detector Super-Kamiokande buscou o canal dominante previsto (próton → pósitron + píon neutro) e não observou nenhum evento, estabelecendo um limite inferior superior a 10³³ anos.<sup class="cit"><a href="#f2">2</a></sup> O SU(5) mínimo está <strong>experimentalmente excluído</strong>. Versões supersimétricas e outras variantes preveem tempos de vida mais longos e permanecem em aberto — mas décadas de busca sem detecção positiva enfraqueceram consideravelmente o entusiasmo original.</p>
+<span class="rot">Onde a previsão foi testada e falhou</span>
+<p>O modelo GUT mais simples, o SU(5) mínimo de Georgi e Glashow (1974), previa um tempo de vida do próton em torno de 10³¹ anos. O detector Super-Kamiokande buscou o canal dominante previsto (próton → pósitron + píon neutro) e não observou nenhum evento, estabelecendo um limite inferior superior a 10³³ anos.<sup class="cit"><a href="#f2">2</a></sup> O SU(5) mínimo está <strong>experimentalmente excluído</strong>. Versões supersimétricas e outras variantes preveem tempos de vida mais longos e permanecem em aberto, mas décadas de busca sem detecção positiva enfraqueceram consideravelmente o entusiasmo original.</p>
 </div>
 
 <p>É um exemplo do funcionamento normal da ciência: uma teoria motivada por razões estéticas e estruturais fortes fez uma previsão arriscada e específica. A previsão foi testada. Falhou. A teoria foi descartada: não reinterpretada até caber nos dados.</p>
@@ -184,12 +184,12 @@ prova: [
     q: "Por que a interação eletromagnética, sendo cerca de 10³⁶ vezes mais intensa que a gravitacional, não domina em escala astronômica?",
     alts: [
       "Porque o alcance dela é finito, ao contrário da gravidade.",
-      "Porque existem cargas positivas e negativas que se cancelam, tornando corpos grandes praticamente neutros — enquanto massa apenas acumula.",
+      "Porque existem cargas positivas e negativas que se cancelam, tornando corpos grandes praticamente neutros, enquanto massa apenas acumula.",
       "Porque ela deixa de operar acima de certa distância crítica.",
       "Porque no vácuo do espaço não há meio para propagar campos elétricos."
     ],
     correta: 1,
-    porque: "Ambas têm alcance infinito e caem com 1/r². A diferença decisiva é o cancelamento: a matéria comum é eletricamente neutra em larga escala, então a força intensíssima se anula. A gravidade, sem massa negativa, sempre soma — e vence pela acumulação, não pela intensidade." },
+    porque: "Ambas têm alcance infinito e caem com 1/r². A diferença decisiva é o cancelamento: a matéria comum é eletricamente neutra em larga escala, então a força intensíssima se anula. A gravidade, sem massa negativa, sempre soma e vence pela acumulação, não pela intensidade." },
 
   { camada: "nucleo",
     q: "A interação fraca é descrita no texto como a menos intuitiva. Por quê?",
@@ -200,7 +200,7 @@ prova: [
       "Porque seu mediador ainda não foi detectado."
     ],
     correta: 2,
-    porque: "A fraca muda o sabor de partículas — permite a um nêutron virar próton, o que produz decaimento beta e viabiliza a fusão solar. Não é a mais fraca (a gravidade é), não atua só em estrelas, e seus mediadores W e Z foram detectados em 1983." },
+    porque: "A fraca muda o sabor de partículas: permite a um nêutron virar próton, o que produz decaimento beta e viabiliza a fusão solar. Não é a mais fraca (a gravidade é), não atua só em estrelas, e seus mediadores W e Z foram detectados em 1983." },
 
   { camada: "nucleo",
     q: "Qual é a relação entre a massa do mediador e o alcance de uma interação?",
@@ -211,13 +211,13 @@ prova: [
       "Não há relação: o alcance depende apenas da carga envolvida."
     ],
     correta: 1,
-    porque: "É a relação central da tabela: fóton e glúon não têm massa; W e Z têm cerca de 80 a 91 GeV/c², e a força fraca tem alcance de ~10⁻¹⁸ m. O glúon é o caso curioso — sem massa, mas confinado, o que limita o alcance efetivo da força forte por outro mecanismo." },
+    porque: "É a relação central da tabela: fóton e glúon não têm massa; W e Z têm cerca de 80 a 91 GeV/c², e a força fraca tem alcance de ~10⁻¹⁸ m. O glúon é o caso curioso: sem massa, mas confinado, o que limita o alcance efetivo da força forte por outro mecanismo." },
 
   { camada: "aprofundamento",
     q: "O que significa dizer que a simetria eletrofraca é 'quebrada' no universo atual?",
     alts: [
       "Que a teoria eletrofraca foi refutada por experimentos.",
-      "Que em energias baixas o campo de Higgs assume valor não nulo, dando massa a três mediadores e deixando o fóton sem massa — o que faz duas forças parecerem distintas.",
+      "Que em energias baixas o campo de Higgs assume valor não nulo, dando massa a três mediadores e deixando o fóton sem massa, o que faz duas forças parecerem distintas.",
       "Que a força fraca deixou de existir depois do Big Bang.",
       "Que eletromagnetismo e força fraca nunca foram realmente unificados, apenas descritos com a mesma notação."
     ],
@@ -255,7 +255,7 @@ prova: [
       "Que o próton é definitivamente estável."
     ],
     correta: 1,
-    porque: "O limite experimental está duas ordens de grandeza acima da previsão do modelo, o que o exclui. Isso não elimina o programa GUT inteiro: versões supersimétricas preveem vidas mais longas e seguem testáveis. E 'estável' não foi demonstrado — apenas que a vida média excede 10³³ anos." },
+    porque: "O limite experimental está duas ordens de grandeza acima da previsão do modelo, o que o exclui. Isso não elimina o programa GUT inteiro: versões supersimétricas preveem vidas mais longas e seguem testáveis. E 'estável' não foi demonstrado: apenas que a vida média excede 10³³ anos." },
 
   { camada: "extensao",
     q: "Qual é a única contradição experimental direta entre observação e o Modelo Padrão em sua formulação original?",
@@ -266,7 +266,7 @@ prova: [
       "A ausência de supersimetria no LHC."
     ],
     correta: 2,
-    porque: "O Modelo Padrão original previa neutrinos sem massa; a oscilação observada (Nobel de 2015) exige massa não nula. Matéria escura e energia escura são lacunas — fenômenos que o modelo não cobre — e não contradições internas. A ausência de supersimetria contraria uma extensão proposta, não o Modelo Padrão." },
+    porque: "O Modelo Padrão original previa neutrinos sem massa; a oscilação observada (Nobel de 2015) exige massa não nula. Matéria escura e energia escura são lacunas, fenômenos que o modelo não cobre, e não contradições internas. A ausência de supersimetria contraria uma extensão proposta, não o Modelo Padrão." },
 
   { camada: "extensao",
     q: "Sobre o problema da hierarquia, qual descrição é mais precisa?",
@@ -277,15 +277,15 @@ prova: [
       "É a incompatibilidade entre relatividade geral e mecânica quântica."
     ],
     correta: 1,
-    porque: "O problema é de ajuste fino: manter o Higgs leve exige cancelamentos com dezenas de casas decimais de precisão, o que parece um acidente improvável. A supersimetria era a solução preferida e não apareceu no LHC. A incompatibilidade entre RG e MQ é um problema distinto — o da gravidade quântica." }
+    porque: "O problema é de ajuste fino: manter o Higgs leve exige cancelamentos com dezenas de casas decimais de precisão, o que parece um acidente improvável. A supersimetria era a solução preferida e não apareceu no LHC. A incompatibilidade entre RG e MQ é um problema distinto: o da gravidade quântica." }
 ],
 
 fontes: [
-  { n: 1, tipo: "instituição", ref: "CERN — <em>The Standard Model</em> e <em>Unified forces</em>: exposição oficial sobre as interações fundamentais e o estado do programa de unificação.", url: "https://home.cern/science/physics/standard-model" },
-  { n: 2, tipo: "experimento", ref: "Super-Kamiokande Collaboration — busca por decaimento do próton no canal p → e⁺π⁰; limites de vida média e implicações para GUTs.", url: "http://hep.bu.edu/~superk/pdk.html" },
+  { n: 1, tipo: "instituição", ref: "CERN, <em>The Standard Model</em> e <em>Unified forces</em>: exposição oficial sobre as interações fundamentais e o estado do programa de unificação.", url: "https://home.cern/science/physics/standard-model" },
+  { n: 2, tipo: "experimento", ref: "Super-Kamiokande Collaboration: busca por decaimento do próton no canal p → e⁺π⁰; limites de vida média e implicações para GUTs.", url: "http://hep.bu.edu/~superk/pdk.html" },
   { n: 3, tipo: "referência", ref: "Particle Data Group. <em>Review of Particle Physics</em>. Compilação de referência com massas, acoplamentos e limites experimentais atualizados.", url: "https://pdg.lbl.gov/" },
-  { n: 4, tipo: "livro", ref: "Griffiths, D. <em>Introduction to Elementary Particles</em>. 2ª ed., Wiley-VCH, 2008 — tratamento didático da unificação eletrofraca e da cromodinâmica quântica.", url: "" },
-  { n: 5, tipo: "livro", ref: "Wilczek, F. <em>The Lightness of Being: Mass, Ether, and the Unification of Forces</em>. Basic Books, 2008 — sobre a origem da massa dos hádrons, por um dos autores da liberdade assintótica.", url: "" },
-  { n: 6, tipo: "divulgação", ref: "Carroll, S. <em>The Particle at the End of the Universe</em>. Dutton, 2012 — mecanismo de Higgs e quebra de simetria em linguagem acessível, com honestidade sobre o que segue em aberto.", url: "" }
+  { n: 4, tipo: "livro", ref: "Griffiths, D. <em>Introduction to Elementary Particles</em>. 2ª ed., Wiley-VCH, 2008. Tratamento didático da unificação eletrofraca e da cromodinâmica quântica.", url: "" },
+  { n: 5, tipo: "livro", ref: "Wilczek, F. <em>The Lightness of Being: Mass, Ether, and the Unification of Forces</em>. Basic Books, 2008. Sobre a origem da massa dos hádrons, por um dos autores da liberdade assintótica.", url: "" },
+  { n: 6, tipo: "divulgação", ref: "Carroll, S. <em>The Particle at the End of the Universe</em>. Dutton, 2012. Mecanismo de Higgs e quebra de simetria em linguagem acessível, com honestidade sobre o que segue em aberto.", url: "" }
 ]
 };

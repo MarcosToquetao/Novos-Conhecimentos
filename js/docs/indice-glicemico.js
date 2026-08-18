@@ -9,7 +9,7 @@ prerequisitos: [
 conexoes: [
   { termo: "Por que estudos de nutrição se contradizem", relacao: "O índice glicêmico é um caso concreto das limitações metodológicas gerais da epidemiologia nutricional." },
   { termo: "NNT e risco relativo versus absoluto", relacao: "Reduções de HbA1c precisam ser lidas em magnitude absoluta e relevância clínica, não apenas em significância estatística." },
-  { termo: "Teorema de Bayes", relacao: "Um teste com alta variabilidade intraindividual tem baixo poder informativo — o mesmo raciocínio de razão de verossimilhança se aplica a biomarcadores." },
+  { termo: "Teorema de Bayes", relacao: "Um teste com alta variabilidade intraindividual tem baixo poder informativo. O mesmo raciocínio de razão de verossimilhança se aplica a biomarcadores." },
   { termo: "Alimentos ultraprocessados e a classificação NOVA", relacao: "Duas tentativas concorrentes de reduzir a complexidade alimentar a uma classificação operacional, com forças e fraquezas diferentes." }
 ],
 
@@ -23,16 +23,16 @@ nucleo: { minutos: 15, html: `
 <p>O protocolo é rigoroso, e vale conhecê-lo porque quase todas as limitações vêm dele.</p>
 
 <ul>
-<li>Voluntários em jejum consomem uma porção do alimento contendo <strong>50 gramas de carboidrato disponível</strong> — não 50 g do alimento.</li>
+<li>Voluntários em jejum consomem uma porção do alimento contendo <strong>50 gramas de carboidrato disponível</strong>, não 50 g do alimento.</li>
 <li>Mede-se a glicemia em intervalos ao longo de duas horas.</li>
-<li>Calcula-se a <strong>área incremental sob a curva</strong> — o acúmulo de glicose acima do valor de jejum.</li>
+<li>Calcula-se a <strong>área incremental sob a curva</strong>: o acúmulo de glicose acima do valor de jejum.</li>
 <li>Divide-se pela área obtida com um alimento de referência (glicose pura, valor 100) na mesma pessoa.</li>
 <li>Repete-se com dez ou mais pessoas e toma-se a média.</li>
 </ul>
 
 <figure class="figura">[[FIG:gi-curvas]]<figcaption>O índice glicêmico é a razão entre áreas, não entre picos. Dois alimentos com picos muito diferentes podem ter o mesmo índice se as curvas acumularem a mesma área em duas horas.</figcaption></figure>
 
-<p>Convencionou-se classificar em baixo (≤55), médio (56–69) e alto (≥70).</p>
+<p>Convencionou-se classificar em baixo (≤55), médio (56 a 69) e alto (≥70).</p>
 
 <h3>O primeiro problema: 50 g de carboidrato não é uma porção</h3>
 
@@ -42,7 +42,7 @@ nucleo: { minutos: 15, html: `
 
 <div class="formula">
 CG = IG × (gramas de carboidrato na porção) ÷ 100
-<span class="leg">melancia: 72 × 11 ÷ 100 ≈ 8 — carga baixa, apesar do índice alto</span>
+<span class="leg">melancia: 72 × 11 ÷ 100 ≈ 8, carga baixa, apesar do índice alto</span>
 </div>
 
 <p>Já aqui aparece uma lição: o índice glicêmico sozinho, sem a carga, produz recomendações erradas com regularidade. E é o índice, não a carga, que aparece em aplicativos e listas.</p>
@@ -51,7 +51,7 @@ CG = IG × (gramas de carboidrato na porção) ÷ 100
 
 <p>Em 2016, Nirupa Matthan e colaboradores fizeram algo que a literatura anterior não tinha feito com esse rigor: mediram o índice glicêmico do mesmo pão branco, sob protocolo padronizado, em 63 adultos saudáveis, com repetições na mesma pessoa.<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<figure class="figura">[[FIG:gi-dispersao]]<figcaption>Cada ponto é uma pessoa. A média oficial — 62, classificação "médio" — descreve razoavelmente bem uma minoria dos participantes. O mesmo alimento foi simultaneamente de baixo, médio e alto índice glicêmico, dependendo de quem comeu.</figcaption></figure>
+<figure class="figura">[[FIG:gi-dispersao]]<figcaption>Cada ponto é uma pessoa. A média oficial, 62, classificação "médio", descreve razoavelmente bem uma minoria dos participantes. O mesmo alimento foi simultaneamente de baixo, médio e alto índice glicêmico, dependendo de quem comeu.</figcaption></figure>
 
 <p>Os resultados:</p>
 
@@ -59,7 +59,7 @@ CG = IG × (gramas de carboidrato na porção) ÷ 100
 <li>Média de 62, que corresponde à classificação "médio".</li>
 <li>Variação <strong>dentro da mesma pessoa</strong> em repetições: cerca de 20%.</li>
 <li>Variação <strong>entre pessoas</strong>: cerca de 25%.</li>
-<li>Valores individuais indo de 35 a 103 — cobrindo as três categorias inteiras.</li>
+<li>Valores individuais indo de 35 a 103, cobrindo as três categorias inteiras.</li>
 <li>22 participantes seriam classificados como "baixo", 23 como "intermediário" e 18 como "alto" para o mesmo pão.</li>
 </ul>
 
@@ -67,7 +67,7 @@ CG = IG × (gramas de carboidrato na porção) ÷ 100
 
 <div class="marca controverso">
 <span class="rot">Como ler esse resultado com precisão</span>
-<p>Isso não significa que o índice glicêmico seja uma invenção sem base. O conceito subjacente — alimentos diferem na velocidade de digestão e absorção — é fisiologicamente correto e bem estabelecido. O que o estudo mostra é que a <em>medida</em> tem ruído da mesma ordem de grandeza que o <em>sinal</em> que se quer detectar. Uma quantidade com essa relação sinal-ruído pode ser útil para comparar categorias amplas de alimentos e é inadequada para decidir entre dois itens específicos.</p>
+<p>Isso não significa que o índice glicêmico seja uma invenção sem base. O conceito subjacente, segundo o qual alimentos diferem na velocidade de digestão e absorção, é fisiologicamente correto e bem estabelecido. O que o estudo mostra é que a <em>medida</em> tem ruído da mesma ordem de grandeza que o <em>sinal</em> que se quer detectar. Uma quantidade com essa relação sinal-ruído pode ser útil para comparar categorias amplas de alimentos e é inadequada para decidir entre dois itens específicos.</p>
 </div>
 ` },
 
@@ -98,11 +98,11 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Se a resposta varia tanto entre pessoas, a saída óbvia seria personalizar. Em 2015, Zeevi e colaboradores publicaram na <em>Cell</em> um estudo com cerca de 800 participantes, monitoramento contínuo de glicose e um modelo de aprendizado de máquina que incorporava dados clínicos, antropométricos e de microbiota.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<p>O modelo previa respostas glicêmicas individuais melhor que a contagem de carboidratos, e uma intervenção-piloto com dietas personalizadas mostrou melhora em relação a dietas convencionais. O trabalho é frequentemente citado como fundação da nutrição de precisão — e deu origem a uma indústria de serviços comerciais baseados em sensores contínuos de glicose.</p>
+<p>O modelo previa respostas glicêmicas individuais melhor que a contagem de carboidratos, e uma intervenção-piloto com dietas personalizadas mostrou melhora em relação a dietas convencionais. O trabalho é frequentemente citado como fundação da nutrição de precisão. Deu origem, ainda, a uma indústria de serviços comerciais baseados em sensores contínuos de glicose.</p>
 
 <div class="marca controverso">
 <span class="rot">A crítica metodológica é séria</span>
-<p>Uma crítica publicada no <em>AJCN</em> em 2024, sob o título "garbage in → garbage out", questiona a base do empreendimento a partir de um achado específico: Hengist e colaboradores mostraram que sensores contínuos de glicose fornecem respostas <strong>não confiáveis a refeições idênticas apresentadas em duplicata</strong> em adultos sem diabetes.<sup class="cit"><a href="#f4">4</a></sup> Se o instrumento de medida não reproduz o próprio resultado com a mesma refeição na mesma pessoa, um modelo treinado sobre esses dados está aprendendo, em parte, ruído. O argumento não refuta a ideia de personalização — mas coloca um ônus de prova sobre quem vende produtos baseados nela.</p>
+<p>Uma crítica publicada no <em>AJCN</em> em 2024, sob o título "garbage in → garbage out", questiona a base do empreendimento a partir de um achado específico: Hengist e colaboradores mostraram que sensores contínuos de glicose fornecem respostas <strong>não confiáveis a refeições idênticas apresentadas em duplicata</strong> em adultos sem diabetes.<sup class="cit"><a href="#f4">4</a></sup> Se o instrumento de medida não reproduz o próprio resultado com a mesma refeição na mesma pessoa, um modelo treinado sobre esses dados está aprendendo, em parte, ruído. O argumento não refuta a ideia de personalização, mas coloca um ônus de prova sobre quem vende produtos baseados nela.</p>
 </div>
 
 <h3>O que os ensaios clínicos mostram</h3>
@@ -115,14 +115,14 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="marca consenso">
 <span class="rot">Consenso razoável</span>
-<p>Que dietas de baixo índice glicêmico produzem melhora modesta do controle glicêmico em pessoas com diabetes tipo 2 é aceito por diretrizes de várias sociedades. Que o índice glicêmico deva ser a base da orientação alimentar para a população geral não é aceito, e várias diretrizes optaram explicitamente por não usá-lo como critério central — justamente pela variabilidade da medida e pela confusão com outros atributos dos alimentos.</p>
+<p>Que dietas de baixo índice glicêmico produzem melhora modesta do controle glicêmico em pessoas com diabetes tipo 2 é aceito por diretrizes de várias sociedades. Que o índice glicêmico deva ser a base da orientação alimentar para a população geral não é aceito, e várias diretrizes optaram explicitamente por não usá-lo como critério central, justamente pela variabilidade da medida e pela confusão com outros atributos dos alimentos.</p>
 </div>
 
 <h3>O confundimento que quase invalida a interpretação causal</h3>
 
 <p>Este é o ponto que um revisor levantaria primeiro. Alimentos de baixo índice glicêmico são, em larguíssima maioria, também alimentos ricos em fibras, minimamente processados, mais saciantes e com maior densidade de micronutrientes. Leguminosas, verduras, grãos integrais e frutas inteiras.</p>
 
-<p>Quando um estudo observa melhor desfecho em quem come alimentos de baixo índice glicêmico, existem pelo menos quatro explicações concorrentes: a resposta glicêmica mais lenta, o teor de fibra, o menor grau de processamento, ou a saciedade maior que reduz a ingestão total. Essas variáveis andam juntas, e separá-las exige desenhos experimentais que raramente são executados — dietas isocalóricas com fibra controlada e diferença isolada de índice glicêmico.</p>
+<p>Quando um estudo observa melhor desfecho em quem come alimentos de baixo índice glicêmico, existem pelo menos quatro explicações concorrentes: a resposta glicêmica mais lenta, o teor de fibra, o menor grau de processamento, ou a saciedade maior que reduz a ingestão total. Essas variáveis andam juntas, e separá-las exige desenhos experimentais que raramente são executados: dietas isocalóricas com fibra controlada e diferença isolada de índice glicêmico.</p>
 ` },
 
 extensao: { minutos: 30, html: `
@@ -178,7 +178,7 @@ extensao: { minutos: 30, html: `
 
 <p>Segunda: o efeito clínico documentado é modesto e concentrado em diabetes tipo 2, com confundimento substancial por fibra e processamento.</p>
 
-<p>Terceira, e a mais transferível: <strong>a pergunta decisiva sobre qualquer medida não é se ela é precisa, mas se a variabilidade dela é menor que a diferença que se quer detectar</strong>. Um instrumento com coeficiente de variação de 20% não consegue distinguir dois alimentos que diferem 15% — por mais rigoroso que seja o protocolo, por mais bem publicada que esteja a tabela, e por mais plausível que seja o mecanismo. Essa pergunta se aplica igualmente a biomarcadores, a escalas psicométricas, a métricas de desempenho e a qualquer indicador que alguém proponha usar para decidir alguma coisa.</p>
+<p>Terceira, e a mais transferível: <strong>a pergunta decisiva sobre qualquer medida não é se ela é precisa, mas se a variabilidade dela é menor que a diferença que se quer detectar</strong>. Um instrumento com coeficiente de variação de 20% não consegue distinguir dois alimentos que diferem 15%, por mais rigoroso que seja o protocolo, por mais bem publicada que esteja a tabela, e por mais plausível que seja o mecanismo. Essa pergunta se aplica igualmente a biomarcadores, a escalas psicométricas, a métricas de desempenho e a qualquer indicador que alguém proponha usar para decidir alguma coisa.</p>
 ` }
 },
 
@@ -188,10 +188,10 @@ flashcards: [
   { f: "O que Matthan et al. (2016) encontraram ao medir o IG do mesmo pão branco em 63 pessoas?", v: "Média 62, mas variação de ~20% dentro da mesma pessoa e ~25% entre pessoas, com valores individuais de 35 a 103. O mesmo pão foi classificado como baixo para 22, intermediário para 23 e alto para 18 participantes." },
   { f: "Por que a variabilidade do IG é tão grande?", v: "Composição da refeição, cocção, amido resistente após resfriamento, efeito da refeição anterior, hora do dia, exercício recente, sono, estresse e microbiota. Quase nenhuma dessas variáveis é controlada na vida real." },
   { f: "Qual é a crítica central à nutrição personalizada baseada em sensores contínuos de glicose?", v: "Que os sensores fornecem respostas não reprodutíveis a refeições idênticas apresentadas em duplicata em adultos sem diabetes (Hengist et al.). Modelos treinados sobre dados assim aprendem, em parte, ruído." },
-  { f: "Qual é o efeito clínico documentado de dietas de baixo IG?", v: "Redução de HbA1c da ordem de 0,3 a 0,5 ponto percentual em diabetes tipo 2 — real, consistente e modesto. Em prevenção cardiovascular e controle de peso na população geral, a evidência é fraca e inconsistente." },
+  { f: "Qual é o efeito clínico documentado de dietas de baixo IG?", v: "Redução de HbA1c da ordem de 0,3 a 0,5 ponto percentual em diabetes tipo 2: um efeito real, consistente e modesto. Em prevenção cardiovascular e controle de peso na população geral, a evidência é fraca e inconsistente." },
   { f: "Qual é o principal confundimento na interpretação causal do IG?", v: "Alimentos de baixo IG são também ricos em fibra, minimamente processados e mais saciantes. Melhores desfechos podem vir de qualquer um desses atributos, e separá-los exige dietas isocalóricas com fibra controlada." },
-  { f: "Por que 'mecanismo plausível + marcador que melhora' não basta?", v: "Porque há casos célebres em que o marcador melhorou e o desfecho piorou — antiarrítmicos no ensaio CAST, terapia hormonal e perfil lipídico. Plausibilidade mecanística justifica investigar, não concluir." },
-  { f: "Em que situações o índice glicêmico continua útil?", v: "Comparação entre categorias amplas de alimentos, uso educacional para mostrar que 'carboidrato' não é categoria útil, e manejo individual com medição própria — caso em que o valor de tabela é irrelevante." },
+  { f: "Por que 'mecanismo plausível + marcador que melhora' não basta?", v: "Porque há casos célebres em que o marcador melhorou e o desfecho piorou: antiarrítmicos no ensaio CAST, terapia hormonal e perfil lipídico. Plausibilidade mecanística justifica investigar, não concluir." },
+  { f: "Em que situações o índice glicêmico continua útil?", v: "Comparação entre categorias amplas de alimentos, uso educacional para mostrar que 'carboidrato' não é categoria útil, e manejo individual com medição própria, caso em que o valor de tabela é irrelevante." },
   { f: "Qual é a pergunta decisiva sobre qualquer medida, ilustrada por este caso?", v: "Não se ela é precisa, mas se sua variabilidade é menor que a diferença que se quer detectar. Um instrumento com CV de 20% não distingue alimentos que diferem 15%, por melhor que seja o protocolo." }
 ],
 
@@ -205,7 +205,7 @@ prova: [
       "Que o índice glicêmico da melancia foi medido com metodologia inadequada."
     ],
     correta: 1,
-    porque: "O IG usa uma porção fixa de 50 g de carboidrato, o que exigiria cerca de 700 g de polpa. A carga corrige pela quantidade real da porção. É o exemplo canônico de por que usar o índice sem a carga gera recomendações erradas — e é justamente o índice, não a carga, que aparece em aplicativos." },
+    porque: "O IG usa uma porção fixa de 50 g de carboidrato, o que exigiria cerca de 700 g de polpa. A carga corrige pela quantidade real da porção. É o exemplo canônico de por que usar o índice sem a carga gera recomendações erradas, e é justamente o índice, não a carga, que aparece em aplicativos." },
 
   { camada: "nucleo",
     q: "No estudo de Matthan et al. (2016), o índice glicêmico do mesmo pão branco medido em 63 pessoas variou de 35 a 103. Qual é a implicação mais precisa?",
@@ -216,7 +216,7 @@ prova: [
       "Pessoas diferentes digerem pão branco de formas fundamentalmente distintas por causa da genética."
     ],
     correta: 2,
-    porque: "A distinção importa: o conceito subjacente é fisiologicamente correto. O que falha é a medida como instrumento de decisão individual, porque a variabilidade cobre as três categorias de classificação. Atribuir a variação exclusivamente à genética também extrapola — o estudo mostra variação alta dentro da mesma pessoa, não apenas entre pessoas." },
+    porque: "A distinção importa: o conceito subjacente é fisiologicamente correto. O que falha é a medida como instrumento de decisão individual, porque a variabilidade cobre as três categorias de classificação. Atribuir a variação exclusivamente à genética também extrapola: o estudo mostra variação alta dentro da mesma pessoa, não apenas entre pessoas." },
 
   { camada: "nucleo",
     q: "O índice glicêmico é calculado a partir de qual grandeza?",
@@ -227,7 +227,7 @@ prova: [
       "A quantidade de insulina liberada após a refeição."
     ],
     correta: 1,
-    porque: "É razão entre áreas, não entre picos. Dois alimentos com picos bem diferentes podem ter índices iguais se acumularem a mesma área em duas horas. A resposta insulínica é uma grandeza relacionada mas distinta — o índice insulinêmico é outra medida, que não coincide sempre com o glicêmico." },
+    porque: "É razão entre áreas, não entre picos. Dois alimentos com picos bem diferentes podem ter índices iguais se acumularem a mesma área em duas horas. A resposta insulínica é uma grandeza relacionada mas distinta: o índice insulinêmico é outra medida, que não coincide sempre com o glicêmico." },
 
   { camada: "aprofundamento",
     q: "Arroz cozido e depois resfriado produz resposta glicêmica menor que arroz recém-cozido. Por quê?",
@@ -249,40 +249,40 @@ prova: [
       "Que os estudos não incluíram participantes com diabetes."
     ],
     correta: 1,
-    porque: "É uma crítica sobre a qualidade dos dados de entrada, e por isso mais fundamental do que uma crítica ao modelo. Se o instrumento não reproduz o próprio resultado sob a mesma condição, o teto de desempenho de qualquer modelo treinado sobre ele fica limitado. Isso não refuta a personalização — desloca o ônus da prova." },
+    porque: "É uma crítica sobre a qualidade dos dados de entrada, e por isso mais fundamental do que uma crítica ao modelo. Se o instrumento não reproduz o próprio resultado sob a mesma condição, o teto de desempenho de qualquer modelo treinado sobre ele fica limitado. Isso não refuta a personalização, mas desloca o ônus da prova." },
 
   { camada: "aprofundamento",
     q: "Um estudo observacional encontra menor risco cardiovascular em pessoas que consomem mais alimentos de baixo índice glicêmico. Qual é o confundimento mais forte?",
     alts: [
       "Essas pessoas podem ter maior renda.",
-      "Alimentos de baixo IG são também ricos em fibra, minimamente processados e mais saciantes — qualquer um desses atributos pode explicar o desfecho.",
+      "Alimentos de baixo IG são também ricos em fibra, minimamente processados e mais saciantes. Qualquer um desses atributos pode explicar o desfecho.",
       "O índice glicêmico não foi medido nos próprios participantes.",
       "A glicemia pós-prandial não foi aferida."
     ],
     correta: 1,
-    porque: "As variáveis andam juntas quase perfeitamente: leguminosas, verduras, grãos integrais e frutas inteiras são simultaneamente de baixo IG, ricas em fibra e pouco processadas. Separar as explicações exige ensaios isocalóricos com fibra controlada e diferença isolada de IG — desenho raramente executado. Renda é confundimento real, porém menos específico." },
+    porque: "As variáveis andam juntas quase perfeitamente: leguminosas, verduras, grãos integrais e frutas inteiras são simultaneamente de baixo IG, ricas em fibra e pouco processadas. Separar as explicações exige ensaios isocalóricos com fibra controlada e diferença isolada de IG, desenho raramente executado. Renda é confundimento real, porém menos específico." },
 
   { camada: "extensao",
     q: "Por que a sequência 'mecanismo plausível → marcador melhora → conclusão sobre saúde' é perigosa?",
     alts: [
       "Porque mecanismos fisiológicos raramente são compreendidos corretamente.",
-      "Porque há casos documentados em que o marcador melhorou e o desfecho clínico piorou — antiarrítmicos no ensaio CAST, por exemplo.",
+      "Porque há casos documentados em que o marcador melhorou e o desfecho clínico piorou: antiarrítmicos no ensaio CAST, por exemplo.",
       "Porque marcadores intermediários não podem ser medidos com precisão.",
       "Porque a plausibilidade mecanística é sempre construída depois dos dados."
     ],
     correta: 1,
-    porque: "O ensaio CAST é o caso clássico: os fármacos suprimiam arritmias, o marcador escolhido, e aumentaram a mortalidade. A lição é geral e vale muito além da nutrição — plausibilidade mecanística é condição para investigar, nunca substituto de desfecho medido em ensaio adequado." },
+    porque: "O ensaio CAST é o caso clássico: os fármacos suprimiam arritmias, o marcador escolhido, e aumentaram a mortalidade. A lição é geral e vale muito além da nutrição: plausibilidade mecanística é condição para investigar, nunca substituto de desfecho medido em ensaio adequado." },
 
   { camada: "extensao",
     q: "Qual das orientações abaixo é mais sustentada pela evidência atual, segundo a convergência de diretrizes?",
     alts: [
       "Escolher alimentos consultando o índice glicêmico de tabelas.",
-      "Priorizar padrão alimentar completo, forma física do alimento e ingestão de fibras — critérios com evidência mais consistente e medidas mais estáveis que o índice glicêmico.",
+      "Priorizar padrão alimentar completo, forma física do alimento e ingestão de fibras, critérios com evidência mais consistente e medidas mais estáveis que o índice glicêmico.",
       "Usar sensor contínuo de glicose para otimizar cada refeição, mesmo sem diabetes.",
       "Eliminar todos os carboidratos de alto índice glicêmico da dieta."
     ],
     correta: 1,
-    porque: "A unidade de evidência mais robusta em nutrição é o padrão alimentar, não o índice de um alimento isolado — e a relação entre fibra e desfechos cardiometabólicos é mais consistente e baseada em medida muito mais estável. Sensores em pessoas sem diabetes não têm ensaio com desfecho duro que os sustente." },
+    porque: "A unidade de evidência mais robusta em nutrição é o padrão alimentar, não o índice de um alimento isolado, e a relação entre fibra e desfechos cardiometabólicos é mais consistente e baseada em medida muito mais estável. Sensores em pessoas sem diabetes não têm ensaio com desfecho duro que os sustente." },
 
   { camada: "extensao",
     q: "Qual é a pergunta metodológica mais transferível que este caso ensina sobre qualquer medida?",
@@ -297,11 +297,11 @@ prova: [
 ],
 
 fontes: [
-  { n: 1, tipo: "fonte primária", ref: "Jenkins, D. J. A. et al. 'Glycemic index of foods: a physiological basis for carbohydrate exchange'. <em>American Journal of Clinical Nutrition</em> 34(3):362–366, 1981.", url: "https://doi.org/10.1093/ajcn/34.3.362" },
-  { n: 2, tipo: "artigo", ref: "Matthan, N. R. et al. 'Estimating the reliability of glycemic index values and potential sources of methodological and biological variability'. <em>American Journal of Clinical Nutrition</em> 104(4):1004–1013, 2016.", url: "https://pubmed.ncbi.nlm.nih.gov/27604773/" },
-  { n: 3, tipo: "artigo", ref: "Zeevi, D. et al. 'Personalized Nutrition by Prediction of Glycemic Responses'. <em>Cell</em> 163(5):1079–1094, 2015.", url: "https://www.cell.com/fulltext/S0092-8674(15)01481-6" },
-  { n: 4, tipo: "artigo", ref: "'Personalized nutrition by prediction of glycemic responses: garbage in → garbage out'. <em>American Journal of Clinical Nutrition</em>, 2024 — crítica baseada na baixa reprodutibilidade de sensores contínuos em refeições duplicadas (Hengist et al.).", url: "https://pubmed.ncbi.nlm.nih.gov/39755431/" },
+  { n: 1, tipo: "fonte primária", ref: "Jenkins, D. J. A. et al. 'Glycemic index of foods: a physiological basis for carbohydrate exchange'. <em>American Journal of Clinical Nutrition</em> 34(3):362-366, 1981.", url: "https://doi.org/10.1093/ajcn/34.3.362" },
+  { n: 2, tipo: "artigo", ref: "Matthan, N. R. et al. 'Estimating the reliability of glycemic index values and potential sources of methodological and biological variability'. <em>American Journal of Clinical Nutrition</em> 104(4):1004-1013, 2016.", url: "https://pubmed.ncbi.nlm.nih.gov/27604773/" },
+  { n: 3, tipo: "artigo", ref: "Zeevi, D. et al. 'Personalized Nutrition by Prediction of Glycemic Responses'. <em>Cell</em> 163(5):1079-1094, 2015.", url: "https://www.cell.com/fulltext/S0092-8674(15)01481-6" },
+  { n: 4, tipo: "artigo", ref: "'Personalized nutrition by prediction of glycemic responses: garbage in → garbage out'. <em>American Journal of Clinical Nutrition</em>, 2024, crítica baseada na baixa reprodutibilidade de sensores contínuos em refeições duplicadas (Hengist et al.).", url: "https://pubmed.ncbi.nlm.nih.gov/39755431/" },
   { n: 5, tipo: "artigo", ref: "Hengist, A. et al. 'Imprecision nutrition? Intraindividual variability of glucose responses to duplicate presented meals in adults without diabetes'. <em>American Journal of Clinical Nutrition</em>, 2024.", url: "https://ajcn.nutrition.org/article/S0002-9165(24)00814-1/abstract" },
-  { n: 6, tipo: "crítica", ref: "Wolever, T. M. S. 'Personalized nutrition by prediction of glycaemic responses: fact or fantasy?'. <em>European Journal of Clinical Nutrition</em> 70:411–413, 2016.", url: "https://www.nature.com/articles/ejcn201631" }
+  { n: 6, tipo: "crítica", ref: "Wolever, T. M. S. 'Personalized nutrition by prediction of glycaemic responses: fact or fantasy?'. <em>European Journal of Clinical Nutrition</em> 70:411-413, 2016.", url: "https://www.nature.com/articles/ejcn201631" }
 ]
 };

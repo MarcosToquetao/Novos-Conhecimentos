@@ -9,7 +9,7 @@ prerequisitos: [
 conexoes: [
   { termo: "Timbre e série harmônica", relacao: "As razões simples que definem consonância vêm dos harmônicos naturais presentes em qualquer som de altura definida." },
   { termo: "Transformada de Fourier", relacao: "Decompor um som em suas frequências componentes é exatamente o que permite medir batimentos e verificar afinação objetivamente." },
-  { termo: "Harmonia funcional e tensão-resolução", relacao: "O temperamento igual é o que torna possível modular livremente entre tonalidades — condição para a harmonia dos séculos XIX e XX." },
+  { termo: "Harmonia funcional e tensão-resolução", relacao: "O temperamento igual é o que torna possível modular livremente entre tonalidades, condição para a harmonia dos séculos XIX e XX." },
   { termo: "Razão áurea: matemática e mito", relacao: "Outro caso em que uma relação matemática real na natureza convive com um conjunto de afirmações estéticas frágeis." }
 ],
 
@@ -45,7 +45,7 @@ nucleo: { minutos: 15, html: `
 
 <div class="formula">
 (3/2)<sup>12</sup> = 129,746…&nbsp;&nbsp;&nbsp;&nbsp; 2<sup>7</sup> = 128
-<span class="leg">a razão entre os dois é 1,01364 — cerca de 23,46 cents de excesso</span>
+<span class="leg">a razão entre os dois é 1,01364, cerca de 23,46 cents de excesso</span>
 </div>
 
 <p>A diferença chama-se <strong>coma pitagórica</strong>. Ela é pequena, mas perfeitamente audível: cerca de um quarto de semitom, muito acima do limiar de percepção humana para notas sustentadas.</p>
@@ -66,7 +66,7 @@ nucleo: { minutos: 15, html: `
 
 <div class="formula">
 razão de um semitom = <sup>12</sup>√2 ≈ 1,059463
-<span class="leg">um número irracional — nenhum intervalo, exceto a oitava, é uma razão de inteiros</span>
+<span class="leg">um número irracional: nenhum intervalo, exceto a oitava, é uma razão de inteiros</span>
 </div>
 
 <p>O erro fica espalhado igualmente por todos os intervalos. Nenhum fica puro, nenhum fica intolerável, e todas as vinte e quatro tonalidades soam idênticas em qualidade. Essa uniformidade tornou possível modular livremente entre tonalidades. Sem modulação livre, a música do século XIX não existiria na forma que existe.</p>
@@ -195,14 +195,14 @@ extensao: { minutos: 30, html: `
 
 flashcards: [
   { f: "Por que consonâncias correspondem a razões de inteiros pequenos?", v: "Porque sons de altura definida contêm harmônicos em múltiplos inteiros da fundamental. Quando a razão entre duas frequências é simples, muitos harmônicos coincidem e não há batimentos." },
-  { f: "O que é a coma pitagórica e quanto vale?", v: "A diferença entre doze quintas puras (3/2)¹² = 129,746 e sete oitavas 2⁷ = 128. Equivale a cerca de 23,46 cents — aproximadamente um quarto de semitom, claramente audível." },
+  { f: "O que é a coma pitagórica e quanto vale?", v: "A diferença entre doze quintas puras (3/2)¹² = 129,746 e sete oitavas 2⁷ = 128. Equivale a cerca de 23,46 cents, aproximadamente um quarto de semitom, claramente audível." },
   { f: "Por que o problema da afinação não tem solução?", v: "Porque 3 e 2 são primos entre si: nenhuma potência de 3/2 é igual a uma potência de 2. É impossibilidade aritmética, não limitação técnica." },
   { f: "Qual é a razão de frequência de um semitom no temperamento igual?", v: "A raiz duodécima de 2, aproximadamente 1,059463. É irracional, o que significa que nenhum intervalo além da oitava é uma razão de inteiros." },
   { f: "Quanto o temperamento igual erra na quinta e na terça maior?", v: "A quinta erra apenas −1,96 cents (praticamente inaudível). A terça maior erra +13,69 cents, claramente audível em acordes sustentados. O sistema sacrifica a terça para preservar a quinta." },
-  { f: "O que é um cent e por que a escala é logarítmica?", v: "Um centésimo de semitom temperado, ou 1/1200 de oitava: cents = 1200·log₂(f₂/f₁). É logarítmica porque a percepção de altura o é — distâncias iguais correspondem a razões iguais, não a diferenças iguais de frequência." },
+  { f: "O que é um cent e por que a escala é logarítmica?", v: "Um centésimo de semitom temperado, ou 1/1200 de oitava: cents = 1200·log₂(f₂/f₁). É logarítmica porque a percepção de altura também é logarítmica: distâncias iguais correspondem a razões iguais, não a diferenças iguais de frequência." },
   { f: "O que se ganhou e o que se perdeu com o temperamento igual?", v: "Ganhou-se modulação irrestrita entre as 24 tonalidades, condição para o cromatismo do século XIX. Perdeu-se o caráter sonoro distinto de cada tonalidade, que existia nos temperamentos desiguais." },
   { f: "'O Cravo Bem Temperado' foi escrito para o temperamento igual?", v: "Não há evidência disso. 'Wohltemperiert' designa temperamentos desiguais em que todas as tonalidades são utilizáveis; temperamento igual era 'gleichschwebend'. Qual afinação Bach usava permanece sem consenso musicológico." },
-  { f: "Por que pianos não são afinados em temperamento igual exato?", v: "Por causa da inarmonicidade: cordas reais têm rigidez e seus harmônicos não caem em múltiplos exatos. Afinadores esticam a escala — graves mais graves, agudos mais agudos — chegando a mais de 30 cents de desvio nos extremos." },
+  { f: "Por que pianos não são afinados em temperamento igual exato?", v: "Por causa da inarmonicidade: cordas reais têm rigidez e seus harmônicos não caem em múltiplos exatos. Afinadores esticam a escala, tornando os graves mais graves e os agudos mais agudos, chegando a mais de 30 cents de desvio nos extremos." },
   { f: "Que conjuntos musicais não usam temperamento igual na prática?", v: "Coros a cappella, quartetos de cordas e naipes de metais ajustam continuamente para entonação justa. O temperamento igual é uma necessidade de instrumentos de afinação fixa: piano, órgão, harpa, trastes." }
 ],
 
@@ -216,7 +216,7 @@ prova: [
       "Porque a escala ocidental tem sete notas e não doze."
     ],
     correta: 1,
-    porque: "É impossibilidade aritmética. (3/2)¹² = 129,746 enquanto 2⁷ = 128. A discrepância — a coma pitagórica — não decorre de imprecisão de instrumento nem de percepção: decorre de 3 e 2 serem primos entre si, e nenhum refinamento técnico a elimina." },
+    porque: "É impossibilidade aritmética. (3/2)¹² = 129,746 enquanto 2⁷ = 128. A discrepância, chamada coma pitagórica, não decorre de imprecisão de instrumento nem de percepção: decorre de 3 e 2 serem primos entre si, e nenhum refinamento técnico a elimina." },
 
   { camada: "nucleo",
     q: "O que caracteriza o temperamento igual em relação aos sistemas anteriores?",
@@ -227,7 +227,7 @@ prova: [
       "Ele varia a afinação conforme a tonalidade da peça."
     ],
     correta: 1,
-    porque: "Nenhum sistema elimina o erro — a impossibilidade é matemática. O temperamento igual escolhe distribuí-lo igualmente, de modo que nenhum intervalo fica puro (exceto a oitava) e nenhum fica intolerável. A última alternativa descreve os temperamentos desiguais, que é justamente o que ele substituiu." },
+    porque: "Nenhum sistema elimina o erro: a impossibilidade é matemática. O temperamento igual escolhe distribuí-lo igualmente, de modo que nenhum intervalo fica puro (exceto a oitava) e nenhum fica intolerável. A última alternativa descreve os temperamentos desiguais, que é justamente o que ele substituiu." },
 
   { camada: "nucleo",
     q: "Qual foi a principal consequência musical da adoção do temperamento igual?",
@@ -238,7 +238,7 @@ prova: [
       "A afinação deixou de precisar de manutenção periódica."
     ],
     correta: 1,
-    porque: "É a troca central. Nos temperamentos desiguais, cada tonalidade tinha sonoridade própria porque o erro se distribuía de forma diferente. Uniformizar apagou essa diferença e liberou a modulação irrestrita — sem a qual o cromatismo de Chopin e Wagner seria impraticável." },
+    porque: "É a troca central. Nos temperamentos desiguais, cada tonalidade tinha sonoridade própria porque o erro se distribuía de forma diferente. Uniformizar apagou essa diferença e liberou a modulação irrestrita, sem a qual o cromatismo de Chopin e Wagner seria impraticável." },
 
   { camada: "aprofundamento",
     q: "Um cent é definido como:",
@@ -249,7 +249,7 @@ prova: [
       "A menor diferença de altura perceptível pelo ouvido humano."
     ],
     correta: 1,
-    porque: "A definição é logarítmica: cents = 1200·log₂(f₂/f₁). Isso é necessário porque a percepção de altura é aproximadamente logarítmica — 100 Hz de diferença são enormes no grave e imperceptíveis no agudo. O limiar de discriminação (5 a 6 cents em notas sustentadas para ouvintes treinados) é outra grandeza." },
+    porque: "A definição é logarítmica: cents = 1200·log₂(f₂/f₁). Isso é necessário porque a percepção de altura é aproximadamente logarítmica: 100 Hz de diferença são enormes no grave e imperceptíveis no agudo. O limiar de discriminação (5 a 6 cents em notas sustentadas para ouvintes treinados) é outra grandeza." },
 
   { camada: "aprofundamento",
     q: "No temperamento igual, qual intervalo apresenta o maior desvio em relação à entonação justa, e por que isso importa?",
@@ -282,7 +282,7 @@ prova: [
       "O manuscrito original foi perdido, impedindo qualquer análise."
     ],
     correta: 1,
-    porque: "'Wohltemperiert' e 'gleichschwebend' são termos distintos para coisas distintas. Escrever nas 24 tonalidades demonstra que todas eram tocáveis — compatível tanto com temperamento igual quanto com vários desiguais. As propostas de Lehman, O'Donnell e Francis, todas baseadas no mesmo ornamento da folha de rosto, chegam a resultados diferentes." },
+    porque: "'Wohltemperiert' e 'gleichschwebend' são termos distintos para coisas distintas. Escrever nas 24 tonalidades demonstra que todas eram tocáveis, compatível tanto com temperamento igual quanto com vários desiguais. As propostas de Lehman, O'Donnell e Francis, todas baseadas no mesmo ornamento da folha de rosto, chegam a resultados diferentes." },
 
   { camada: "extensao",
     q: "Por que pianos são afinados com 'stretch' nas oitavas?",
@@ -293,24 +293,24 @@ prova: [
       "Para que o instrumento soe mais alto em salas grandes."
     ],
     correta: 2,
-    porque: "É um efeito físico das cordas reais. Para que os harmônicos das notas graves batam com as fundamentais das agudas, os extremos são esticados — mais de 30 cents num piano de cauda. Consequência interessante: a afinação correta depende do instrumento específico, medido pelo afinador, e não de uma tabela universal." },
+    porque: "É um efeito físico das cordas reais. Para que os harmônicos das notas graves batam com as fundamentais das agudas, os extremos são esticados, mais de 30 cents num piano de cauda. Consequência interessante: a afinação correta depende do instrumento específico, medido pelo afinador, e não de uma tabela universal." },
 
   { camada: "extensao",
     q: "Sobre o estudo com os Tsimane' e a universalidade da preferência por consonância, qual é a leitura mais defensável?",
     alts: [
       "Prova definitivamente que a preferência por consonância é inteiramente cultural.",
       "Prova que a preferência é biológica, já que os participantes distinguiram os estímulos.",
-      "Sugere que a preferência é modulada por exposição, enquanto a capacidade de discriminar razões simples parece ter base perceptiva — com ressalvas de amostra e metodologia ainda em discussão.",
+      "Sugere que a preferência é modulada por exposição, enquanto a capacidade de discriminar razões simples parece ter base perceptiva, com ressalvas de amostra e metodologia ainda em discussão.",
       "É irrelevante porque foi conduzido fora de laboratório."
     ],
     correta: 2,
-    porque: "Distinguir 'discriminar' de 'preferir' é o ponto. Os participantes ouviram a diferença sem manifestar preferência, o que aponta para modulação cultural da valoração e não da percepção. A amostra pequena e as dificuldades de tradução de tarefas justificam cautela — descartar o estudo ou tratá-lo como prova definitiva são os dois erros simétricos." }
+    porque: "Distinguir 'discriminar' de 'preferir' é o ponto. Os participantes ouviram a diferença sem manifestar preferência, o que aponta para modulação cultural da valoração e não da percepção. A amostra pequena e as dificuldades de tradução de tarefas justificam cautela: descartar o estudo ou tratá-lo como prova definitiva são os dois erros simétricos." }
 ],
 
 fontes: [
   { n: 1, tipo: "livro", ref: "Barbour, J. M. <em>Tuning and Temperament: A Historical Survey</em>. Michigan State College Press, 1951 (reed. Dover). Levantamento histórico de referência sobre sistemas de afinação.", url: "" },
   { n: 2, tipo: "livro", ref: "Duffin, R. W. <em>How Equal Temperament Ruined Harmony (and Why You Should Care)</em>. W. W. Norton, 2007.", url: "" },
-  { n: 3, tipo: "artigo", ref: "'The Ongoing Quest for Bach's Temperament'. <em>The Juilliard Journal</em> — panorama das propostas de Lehman (2005), O'Donnell (2006) e Francis (2007) e do estado não consensual da questão.", url: "https://journal.juilliard.edu/journal/ongoing-quest-bachs-temperament" },
+  { n: 3, tipo: "artigo", ref: "'The Ongoing Quest for Bach's Temperament'. <em>The Juilliard Journal</em>: panorama das propostas de Lehman (2005), O'Donnell (2006) e Francis (2007) e do estado não consensual da questão.", url: "https://journal.juilliard.edu/journal/ongoing-quest-bachs-temperament" },
   { n: 4, tipo: "livro", ref: "Sethares, W. A. <em>Tuning, Timbre, Spectrum, Scale</em>. 2ª ed., Springer, 2005. Relação formal entre espectro do instrumento e escala consonante, incluindo tradições não ocidentais.", url: "" },
   { n: 5, tipo: "artigo", ref: "McDermott, J. H., Schultz, A. F., Undurraga, E. A. &amp; Godoy, R. A. 'Indifference to dissonance in native Amazonians reveals cultural variation in music perception'. <em>Nature</em> 535:547–550, 2016.", url: "https://doi.org/10.1038/nature18635" },
   { n: 6, tipo: "livro", ref: "Isacoff, S. <em>Temperamento: Como a Música se Tornou um Campo de Batalha</em>. Record, 2001. História acessível da disputa sobre afinação, com viés declaradamente favorável ao temperamento igual.", url: "" }

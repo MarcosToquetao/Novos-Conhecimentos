@@ -26,7 +26,7 @@ nucleo: { minutos: 15, html: `
 
 <p><strong>Relatividade linguística (versão fraca):</strong> a língua influencia certos processos cognitivos, em particular categorização, memória e atenção, tornando mais fáceis ou mais habituais certas discriminações.</p>
 
-<p>A versão forte está morta, e por razões simples. Falantes aprendem conceitos que sua língua não codifica, o tempo todo. Línguas incorporam palavras novas quando precisam. Bebês categorizam antes de falar. E a própria formulação é autorrefutante: se a língua determinasse os limites do pensável, seria impossível descrever, em português, um conceito que o português não tem — coisa que este parágrafo acabou de fazer.</p>
+<p>A versão forte está morta, e por razões simples. Falantes aprendem conceitos que sua língua não codifica, o tempo todo. Línguas incorporam palavras novas quando precisam. Bebês categorizam antes de falar. E a própria formulação é autorrefutante: se a língua determinasse os limites do pensável, seria impossível descrever, em português, um conceito que o português não tem. E é exatamente isso que este parágrafo acabou de fazer.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -165,15 +165,15 @@ extensao: { minutos: 30, html: `
 
 flashcards: [
   { f: "Sapir e Whorf formularam a 'hipótese Sapir-Whorf'?", v: "Não. Nunca coescreveram sobre o tema; o rótulo e a divisão em versões forte e fraca foram criados por comentadores nos anos 1950. A hipótese entrou na cultura já como caricatura." },
-  { f: "Por que o determinismo linguístico forte é insustentável?", v: "Falantes aprendem conceitos que a língua não codifica, línguas incorporam palavras novas, bebês categorizam antes de falar — e a formulação é autorrefutante, já que se pode descrever numa língua um conceito que ela não tem." },
+  { f: "Por que o determinismo linguístico forte é insustentável?", v: "Falantes aprendem conceitos que a língua não codifica, línguas incorporam palavras novas, bebês categorizam antes de falar. Além disso, a formulação é autorrefutante, já que se pode descrever numa língua um conceito que ela não tem." },
   { f: "Qual é o problema com o mito das palavras inuítes para neve?", v: "O número cresceu por recontagem sem fonte nova (Martin, Pullum). Línguas polissintéticas tornam a contagem de palavras mal definida. E mesmo se fosse alto, mostraria apenas que se desenvolve vocabulário para o que é relevante." },
   { f: "O que o estudo dos 'azuis russos' de 2007 encontrou?", v: "Falantes de russo, que distinguem obrigatoriamente sinij de goluboj, foram mais rápidos em discriminar tons que cruzavam essa fronteira. A vantagem desaparecia sob interferência verbal." },
   { f: "O que a replicação de 2020 mostrou sobre os 'azuis russos'?", v: "Não encontrou a vantagem de tempo de reação, nem em monolíngues nem em bilíngues. A fronteira sinij/goluboj mostrou-se instável, e o efeito categórico apareceu apenas em tarefas de categorização explícita." },
-  { f: "Qual é o caso mais robusto de efeito linguístico, e por quê?", v: "Referência espacial absoluta (Guugu Yimithirr e outras). O efeito aparece em tarefas não verbais, tem tamanho grande e foi replicado em populações independentes — três virtudes que o caso da cor não tem." },
-  { f: "Qual é a objeção causal que persiste mesmo no caso espacial?", v: "Que a língua pode ser consequência da prática de navegação e do ambiente, não causa do modo de pensar. Comunidades com referencial absoluto vivem em terreno aberto onde navegar é rotina — língua e ecologia variam juntas." },
+  { f: "Qual é o caso mais robusto de efeito linguístico, e por quê?", v: "Referência espacial absoluta (Guugu Yimithirr e outras). O efeito aparece em tarefas não verbais, tem tamanho grande e foi replicado em populações independentes: três virtudes que o caso da cor não tem." },
+  { f: "Qual é a objeção causal que persiste mesmo no caso espacial?", v: "Que a língua pode ser consequência da prática de navegação e do ambiente, não causa do modo de pensar. Comunidades com referencial absoluto vivem em terreno aberto onde navegar é rotina, e língua e ecologia acabam variando juntas." },
   { f: "O que os estudos sobre número em pirahã realmente mostram?", v: "Que falta capacidade de memorizar cardinalidades exatas sem rótulos, não capacidade de pensar quantidade (Frank et al., 2008). E a documentação depende quase inteiramente de um único pesquisador contestado." },
   { f: "O que é o problema de Galton, e como ele afeta correlações transculturais?", v: "Línguas e culturas não são observações independentes: agrupam-se por família e proximidade geográfica. Correlações entre traço linguístico e comportamento agregado enfraquecem muito quando se corrige a estrutura filogenética." },
-  { f: "Qual é a formulação mais defensável da relatividade linguística (Jakobson)?", v: "Línguas diferem menos no que podem expressar do que no que devem expressar. Distinções obrigatórias exigem atenção habitual, e essa atenção pode afetar memória e julgamento — com efeitos modestos e reversíveis." }
+  { f: "Qual é a formulação mais defensável da relatividade linguística (Jakobson)?", v: "Línguas diferem menos no que podem expressar do que no que devem expressar. Distinções obrigatórias exigem atenção habitual, e essa atenção pode afetar memória e julgamento, com efeitos modestos e reversíveis." }
 ],
 
 prova: [
@@ -186,18 +186,18 @@ prova: [
       "Porque só se aplica a línguas europeias."
     ],
     correta: 1,
-    porque: "As objeções são conceituais e empíricas ao mesmo tempo. A autorrefutação é a mais elegante: se a língua limitasse o pensável, seria impossível descrever nela um conceito que ela não codifica — o que fazemos rotineiramente ao explicar termos estrangeiros." },
+    porque: "As objeções são conceituais e empíricas ao mesmo tempo. A autorrefutação é a mais elegante: se a língua limitasse o pensável, seria impossível descrever nela um conceito que ela não codifica. Mas é isso que fazemos rotineiramente ao explicar termos estrangeiros." },
 
   { camada: "nucleo",
     q: "Qual é o principal problema com o argumento das 'muitas palavras para neve'?",
     alts: [
       "O número correto é dezoito, não quatrocentas.",
-      "Línguas polissintéticas tornam a contagem mal definida, o número cresceu por recontagem sem fonte, e vocabulário especializado só indica relevância prática — não modo de pensar.",
+      "Línguas polissintéticas tornam a contagem mal definida, o número cresceu por recontagem sem fonte, e vocabulário especializado só indica relevância prática, não modo de pensar.",
       "Os inuítes na verdade não têm nenhuma palavra específica para neve.",
       "A pesquisa original de Boas foi fraudulenta."
     ],
     correta: 1,
-    porque: "São três problemas empilhados: contagem sem critério, inflação por repetição não verificada e inferência inválida. Mesmo se o número fosse alto, concluir algo sobre cognição a partir dele seria um salto — profissionais de qualquer área desenvolvem vocabulário fino para o que manejam." },
+    porque: "São três problemas empilhados: contagem sem critério, inflação por repetição não verificada e inferência inválida. Mesmo se o número fosse alto, concluir algo sobre cognição a partir dele seria um salto. Profissionais de qualquer área desenvolvem vocabulário fino para o que manejam." },
 
   { camada: "nucleo",
     q: "O que aconteceu com o experimento dos 'azuis russos' de Winawer et al. (2007)?",
@@ -208,7 +208,7 @@ prova: [
       "Foi confirmado, mas apenas em bilíngues."
     ],
     correta: 1,
-    porque: "A replicação falhou tanto em monolíngues quanto em bilíngues, e a fronteira sinij/goluboj mostrou-se instável sob manipulação de frequência — ao contrário da fronteira azul/verde. Não houve acusação de fraude: é o padrão comum de um efeito real porém frágil que não sobrevive a testes mais rigorosos." },
+    porque: "A replicação falhou tanto em monolíngues quanto em bilíngues, e a fronteira sinij/goluboj mostrou-se instável sob manipulação de frequência, ao contrário da fronteira azul/verde. Não houve acusação de fraude: é o padrão comum de um efeito real porém frágil que não sobrevive a testes mais rigorosos." },
 
   { camada: "aprofundamento",
     q: "Por que a evidência sobre referência espacial é considerada mais forte que a evidência sobre cor?",
@@ -225,19 +225,19 @@ prova: [
     q: "Qual é a objeção causal que persiste mesmo nos estudos sobre referência espacial absoluta?",
     alts: [
       "Que os participantes podem estar respondendo ao acaso.",
-      "Que a língua pode ser consequência da prática de navegação e da ecologia, e não causa do hábito cognitivo — as duas variam juntas.",
+      "Que a língua pode ser consequência da prática de navegação e da ecologia, e não causa do hábito cognitivo. As duas variam juntas.",
       "Que os pesquisadores não falavam a língua estudada.",
       "Que pontos cardeais são uma imposição de categorias ocidentais."
     ],
     correta: 1,
-    porque: "É o problema de confundimento estrutural: comunidades com referencial absoluto tipicamente vivem em terreno aberto onde navegar é parte da vida diária. Separar língua de ecologia exigiria variação natural entre as duas, que quase nunca existe. Isso não invalida o achado — torna a inferência causal genuinamente difícil." },
+    porque: "É o problema de confundimento estrutural: comunidades com referencial absoluto tipicamente vivem em terreno aberto onde navegar é parte da vida diária. Separar língua de ecologia exigiria variação natural entre as duas, que quase nunca existe. Isso não invalida o achado, mas torna a inferência causal genuinamente difícil." },
 
   { camada: "aprofundamento",
     q: "Um estudo relata que falantes de língua X são 40 ms mais rápidos numa tarefa perceptiva que falantes de língua Y. Qual é a interpretação mais cuidadosa?",
     alts: [
       "Falantes de Y são incapazes de fazer a discriminação.",
       "A língua determina os limites da percepção nesses grupos.",
-      "Há um efeito de desempenho, possivelmente mediado por rotulação verbal, que não indica limite de capacidade — e o próximo teste deveria ser sob interferência verbal.",
+      "Há um efeito de desempenho, possivelmente mediado por rotulação verbal, que não indica limite de capacidade. O próximo teste deveria ser sob interferência verbal.",
       "O resultado é irrelevante por ser pequeno demais."
     ],
     correta: 2,
@@ -269,16 +269,16 @@ prova: [
     q: "Segundo a reformulação de Slobin ('pensar para falar'), por que os efeitos linguísticos aparecem em algumas tarefas e não em outras?",
     alts: [
       "Porque só afetam falantes bilíngues.",
-      "Porque a língua organiza a atenção no momento em que se prepara um enunciado, e não o pensamento em geral — daí sumirem em tarefas sem componente verbal.",
+      "Porque a língua organiza a atenção no momento em que se prepara um enunciado, e não o pensamento em geral, por isso os efeitos somem em tarefas sem componente verbal.",
       "Porque tarefas visuais são intrinsecamente insensíveis a efeitos linguísticos.",
       "Porque os efeitos existem apenas na infância."
     ],
     correta: 1,
-    porque: "A reformulação é mais modesta e mais testável — o que é uma virtude epistêmica, não uma concessão. Ela prevê exatamente o padrão observado: efeito presente quando há preparação de fala ou categorização explícita, ausente quando não há. Vem acumulando suporte, mas ainda não é consenso." }
+    porque: "A reformulação é mais modesta e mais testável: uma virtude epistêmica, não uma concessão. Ela prevê exatamente o padrão observado: efeito presente quando há preparação de fala ou categorização explícita, ausente quando não há. Vem acumulando suporte, mas ainda não é consenso." }
 ],
 
 fontes: [
-  { n: 1, tipo: "artigo", ref: "Pullum, G. K. <em>The Great Eskimo Vocabulary Hoax and Other Irreverent Essays on the Study of Language</em>. University of Chicago Press, 1991 — baseado no rastreamento de Laura Martin (1986).", url: "" },
+  { n: 1, tipo: "artigo", ref: "Pullum, G. K. <em>The Great Eskimo Vocabulary Hoax and Other Irreverent Essays on the Study of Language</em>. University of Chicago Press, 1991, baseado no rastreamento de Laura Martin (1986).", url: "" },
   { n: 2, tipo: "artigo", ref: "Winawer, J. et al. 'Russian blues reveal effects of language on color discrimination'. <em>PNAS</em> 104(19):7780–7785, 2007.", url: "https://www.pnas.org/doi/10.1073/pnas.0701644104" },
   { n: 3, tipo: "artigo", ref: "Martinović, J., Paramei, G. V. &amp; MacInnes, W. J. 'Russian blues reveal the limits of language influencing colour discrimination'. <em>Cognition</em> 201:104281, 2020. Replicação que não encontrou o efeito de tempo de reação.", url: "https://pubmed.ncbi.nlm.nih.gov/32276236/" },
   { n: 4, tipo: "livro", ref: "Levinson, S. C. <em>Space in Language and Cognition: Explorations in Cognitive Diversity</em>. Cambridge University Press, 2003. Referência sobre referenciais espaciais absolutos e tarefas não verbais.", url: "" },

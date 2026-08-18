@@ -1,15 +1,15 @@
 CONTEUDOS["hegel-fenomenologia"] = {
 termo: "Fenomenologia do espírito e dialética em Hegel",
 area: "Filosofia",
-subtitulo: "O livro mais difícil da filosofia moderna propõe algo simples de enunciar e desconcertante de aceitar: que a verdade tem história, e que o erro é parte do caminho até ela — não um desvio dele.",
+subtitulo: "O livro mais difícil da filosofia moderna propõe algo simples de enunciar e desconcertante de aceitar: que a verdade tem história, e que o erro é parte do caminho até ela, não um desvio dele.",
 prerequisitos: [
   "Saber, em linhas gerais, que Kant afirmou haver limites ao que podemos conhecer: as coisas 'em si' seriam inacessíveis.",
   "Nenhum conhecimento prévio de Hegel. O texto começa desfazendo a versão popular dele, que provavelmente é a que você já ouviu."
 ],
 conexoes: [
-  { termo: "Paradigmas e revoluções científicas", relacao: "Kuhn descreve a ciência mudando por rupturas internas às próprias práticas — uma estrutura formalmente próxima da dialética, embora Kuhn não a reconhecesse como dívida." },
+  { termo: "Paradigmas e revoluções científicas", relacao: "Kuhn descreve a ciência mudando por rupturas internas às próprias práticas, uma estrutura formalmente próxima da dialética, embora Kuhn não a reconhecesse como dívida." },
   { termo: "Indústria cultural e a Escola de Frankfurt", relacao: "Adorno e Horkheimer são herdeiros diretos do método hegeliano, aplicado como crítica imanente da cultura." },
-  { termo: "O problema difícil da consciência", relacao: "Hegel trata a consciência como processo histórico e social, não como propriedade de um cérebro individual — um contraponto radical à formulação contemporânea." },
+  { termo: "O problema difícil da consciência", relacao: "Hegel trata a consciência como processo histórico e social, não como propriedade de um cérebro individual: um contraponto radical à formulação contemporânea." },
   { termo: "Existência precede a essência (Sartre)", relacao: "Sartre reescreve a dialética hegeliana em chave individual e ateia; a dívida é explícita e a divergência também." }
 ],
 
@@ -108,7 +108,7 @@ aprofundamento: { minutos: 15, html: `
 <li><strong>Sem metalinguagem.</strong> Hegel se recusa a descrever de fora o que está fazendo, porque isso pressuporia um ponto de vista externo ao processo, exatamente o que ele nega existir. O leitor precisa acompanhar o movimento em vez de receber um mapa.</li>
 <li><strong>Termos que mudam de sentido.</strong> Conceitos como "ser", "essência" e "conceito" adquirem significados sucessivamente mais determinados ao longo do texto. Fixar uma definição no capítulo 2 e carregá-la até o fim leva a contradições aparentes.</li>
 <li><strong>Condições de escrita.</strong> Hegel entregou o manuscrito em partes ao editor enquanto ainda escrevia, sob pressão financeira e com Napoleão tomando Jena. A estrutura da segunda metade é notoriamente menos controlada que a da primeira, e isso é reconhecido inclusive por seus defensores.</li>
-<li><strong>Densidade referencial.</strong> Boa parte das figuras alude a posições filosóficas, religiosas e literárias específicas do período — estoicismo, ceticismo, Iluminismo francês, Antígona, o Terror jacobino — quase nunca nomeadas.</li>
+<li><strong>Densidade referencial.</strong> Boa parte das figuras alude a posições filosóficas, religiosas e literárias específicas do período: estoicismo, ceticismo, Iluminismo francês, Antígona, o Terror jacobino, quase nunca nomeadas.</li>
 </ul>
 ` },
 
@@ -134,9 +134,9 @@ extensao: { minutos: 30, html: `
 
 <h3>As três grandes críticas, e o que sobrevive delas</h3>
 
-<p><strong>Kierkegaard: o indivíduo não cabe no sistema.</strong> A objeção mais afiada. O sistema hegeliano subsume o particular no universal, mas a existência concreta — esta angústia, esta escolha, esta morte — não é um caso de nada. Kierkegaard acusa Hegel de construir um palácio conceitual e viver num barraco ao lado. A crítica atinge menos o método e mais a pretensão de completude.</p>
+<p><strong>Kierkegaard: o indivíduo não cabe no sistema.</strong> A objeção mais afiada. O sistema hegeliano subsume o particular no universal, mas a existência concreta, isto é, esta angústia, esta escolha, esta morte, não é um caso de nada. Kierkegaard acusa Hegel de construir um palácio conceitual e viver num barraco ao lado. A crítica atinge menos o método e mais a pretensão de completude.</p>
 
-<p><strong>Marx: a dialética está de cabeça para baixo.</strong> Marx mantém a estrutura — contradição interna gerando transformação — e troca o motor: não são figuras da consciência que se contradizem, são relações materiais de produção. A crítica é interna e produtiva, e gerou uma tradição de pesquisa inteira. Vale notar, porém, que a leitura de Marx sobre Hegel é ela mesma uma interpretação disputada.</p>
+<p><strong>Marx: a dialética está de cabeça para baixo.</strong> Marx mantém a estrutura, contradição interna gerando transformação, e troca o motor: não são figuras da consciência que se contradizem, são relações materiais de produção. A crítica é interna e produtiva, e gerou uma tradição de pesquisa inteira. Vale notar, porém, que a leitura de Marx sobre Hegel é ela mesma uma interpretação disputada.</p>
 
 <p><strong>Popper: historicismo e irracionalismo.</strong> Em <em>A Sociedade Aberta e seus Inimigos</em>, Popper acusa Hegel de rejeitar a lógica formal, de justificar o Estado prussiano e de fundar o totalitarismo moderno. É a crítica mais influente no mundo anglófono e a menos bem sustentada textualmente.</p>
 
@@ -149,7 +149,7 @@ extensao: { minutos: 30, html: `
 
 <p>Três contribuições que sobreviveram independentemente do sistema:</p>
 
-<p><strong>Reconhecimento como estrutura social básica.</strong> A tese de que a identidade se constitui por reconhecimento mútuo, e não por introspecção solitária, é hoje central em teoria social — Honneth, Taylor, Fraser — e em discussões sobre políticas de identidade, dignidade e direitos. É provavelmente a herança mais viva.</p>
+<p><strong>Reconhecimento como estrutura social básica.</strong> A tese de que a identidade se constitui por reconhecimento mútuo, e não por introspecção solitária, é hoje central em teoria social, de Honneth a Taylor e Fraser, e em discussões sobre políticas de identidade, dignidade e direitos. É provavelmente a herança mais viva.</p>
 
 <p><strong>Crítica imanente como método.</strong> Avaliar uma prática pelos padrões que ela mesma declara, em vez de aplicar um critério externo, é o procedimento padrão da teoria crítica e reaparece em análise institucional, crítica de ideologia e até em auditoria de coerência de programas de pesquisa. É uma ferramenta metodológica destacável do sistema.</p>
 
@@ -169,15 +169,15 @@ extensao: { minutos: 30, html: `
 },
 
 flashcards: [
-  { f: "Hegel usa a fórmula 'tese, antítese, síntese'?", v: "Não. A fórmula vem de Fichte e foi popularizada por Chalybäus e comentadores do século XIX. Hegel não a adota para descrever a própria filosofia — embora a use ao expor Kant em aulas." },
+  { f: "Hegel usa a fórmula 'tese, antítese, síntese'?", v: "Não. A fórmula vem de Fichte e foi popularizada por Chalybäus e comentadores do século XIX. Hegel não a adota para descrever a própria filosofia, embora a use ao expor Kant em aulas." },
   { f: "Qual é a objeção de Hegel ao limite kantiano do conhecimento?", v: "Que traçar uma fronteira do conhecimento já é um ato de conhecimento: para saber que há um limite, é preciso saber algo do outro lado. Um limite absoluto seria, por isso, incognoscível como limite." },
-  { f: "O que é negação determinada?", v: "Negar uma posição de modo específico, de forma que do fracasso reste um conteúdo positivo — não o nada. É o que permite ao processo avançar em vez de recomeçar do zero." },
+  { f: "O que é negação determinada?", v: "Negar uma posição de modo específico, de forma que do fracasso reste um conteúdo positivo, não o nada. É o que permite ao processo avançar em vez de recomeçar do zero." },
   { f: "O que significa Aufhebung?", v: "Cancelar, preservar e elevar simultaneamente. A figura seguinte suprime a anterior mantendo o que ela tinha de correto, num nível mais abrangente. Nenhuma tradução única em português carrega os três sentidos." },
   { f: "Por que a crítica hegeliana é chamada de imanente?", v: "Porque cada figura é avaliada pelo critério que ela própria estabelece, não por um padrão externo. É isso que impede o método de ser aplicado mecanicamente a qualquer conteúdo." },
-  { f: "Qual é a inversão na dialética do senhor e do servo?", v: "O senhor obtém reconhecimento de alguém que ele não reconhece como igual — reconhecimento sem valor. O servo, pelo trabalho que transforma a matéria, desenvolve autoconsciência efetiva, e a dependência se inverte." },
+  { f: "Qual é a inversão na dialética do senhor e do servo?", v: "O senhor obtém reconhecimento de alguém que ele não reconhece como igual: reconhecimento sem valor. O servo, pelo trabalho que transforma a matéria, desenvolve autoconsciência efetiva, e a dependência se inverte." },
   { f: "Como a 'certeza sensível' fracassa?", v: "Ela pretende conhecer o puramente particular e imediato, mas ao tentar dizer o que sabe ('agora', 'aqui', 'isto') só consegue enunciar universais que valem para qualquer instante e lugar. Fracassa pelo próprio padrão." },
-  { f: "O que Hegel entende por 'espírito' (Geist)?", v: "Na leitura hoje dominante (Pippin, Pinkard, Brandom), o espaço de normas e práticas de reconhecimento mútuo constituído coletivamente — não alma individual nem entidade sobrenatural. Essa leitura é contestada por quem sustenta um Hegel metafísico." },
-  { f: "O que significa 'saber absoluto'?", v: "Não onisciência, mas o ponto em que a consciência compreende que o próprio processo de formação era o objeto — que não havia um 'em si' escondido atrás do percurso. É reflexivo, não enciclopédico." },
+  { f: "O que Hegel entende por 'espírito' (Geist)?", v: "Na leitura hoje dominante (Pippin, Pinkard, Brandom), o espaço de normas e práticas de reconhecimento mútuo constituído coletivamente, não alma individual nem entidade sobrenatural. Essa leitura é contestada por quem sustenta um Hegel metafísico." },
+  { f: "O que significa 'saber absoluto'?", v: "Não onisciência, mas o ponto em que a consciência compreende que o próprio processo de formação era o objeto: que não havia um 'em si' escondido atrás do percurso. É reflexivo, não enciclopédico." },
   { f: "Qual é o problema central da crítica de Popper a Hegel?", v: "Ela se apoia em citações truncadas e atribui a Hegel posições de discípulos. A acusação de rejeição da não contradição é insustentável: a contradição hegeliana é inadequação performativa, não conjunção de A e não-A." }
 ],
 
@@ -191,7 +191,7 @@ prova: [
       "A fórmula está correta para a Lógica, mas não para a Fenomenologia."
     ],
     correta: 1,
-    porque: "Além de não ser de Hegel, a fórmula distorce o método: ela sugere que se pega uma ideia, se inventa o oposto e se combina. O movimento real é imanente — a contradição emerge de dentro da posição, quando ela aplica seu próprio critério ao objeto que ela mesma constituiu." },
+    porque: "Além de não ser de Hegel, a fórmula distorce o método: ela sugere que se pega uma ideia, se inventa o oposto e se combina. O movimento real é imanente: a contradição emerge de dentro da posição, quando ela aplica seu próprio critério ao objeto que ela mesma constituiu." },
 
   { camada: "nucleo",
     q: "Por que Hegel considera insustentável a afirmação kantiana de que as coisas em si são inacessíveis?",
@@ -202,7 +202,7 @@ prova: [
       "Porque a distinção entre fenômeno e coisa em si é uma invenção posterior dos comentadores."
     ],
     correta: 1,
-    porque: "É um argumento estrutural, não empírico. Se a barreira fosse verdadeiramente absoluta, seria impossível saber que ela existe — e o próprio ato de demarcá-la mostra que o pensamento já a transcendeu de algum modo. Daí a mudança de estratégia: acompanhar o conhecimento em ação em vez de investigar previamente seus limites." },
+    porque: "É um argumento estrutural, não empírico. Se a barreira fosse verdadeiramente absoluta, seria impossível saber que ela existe, e o próprio ato de demarcá-la mostra que o pensamento já a transcendeu de algum modo. Daí a mudança de estratégia: acompanhar o conhecimento em ação em vez de investigar previamente seus limites." },
 
   { camada: "nucleo",
     q: "Na dialética do senhor e do servo, por que a posição do senhor fracassa?",
@@ -213,18 +213,18 @@ prova: [
       "Porque a relação senhor-servo é economicamente insustentável a longo prazo."
     ],
     correta: 2,
-    porque: "É a estrutura da negação determinada: a posição contém, desde o início, a condição do próprio fracasso. Nenhum agente externo é necessário. O senhor conquista exatamente aquilo que anula o que ele buscava — e o servo, pelo trabalho, desenvolve a autoconsciência que o senhor não alcança." },
+    porque: "É a estrutura da negação determinada: a posição contém, desde o início, a condição do próprio fracasso. Nenhum agente externo é necessário. O senhor conquista exatamente aquilo que anula o que ele buscava, e o servo, pelo trabalho, desenvolve a autoconsciência que o senhor não alcança." },
 
   { camada: "aprofundamento",
     q: "Como Hegel resolve o problema do critério (a impossibilidade de comparar o conhecimento com o objeto de fora do conhecimento)?",
     alts: [
       "Postulando que existe uma intuição intelectual capaz de acessar o objeto diretamente.",
-      "Mostrando que a consciência já contém os dois lados — a noção do objeto e a noção do seu saber sobre ele — de modo que a comparação é interna.",
+      "Mostrando que a consciência já contém os dois lados, a noção do objeto e a noção do seu saber sobre ele, de modo que a comparação é interna.",
       "Recorrendo à verificação experimental como árbitro externo.",
       "Concluindo que o conhecimento objetivo é impossível e que resta apenas a coerência interna."
     ],
     correta: 1,
-    porque: "A comparação acontece entre dois momentos da própria consciência, sem necessidade de um ponto de vista externo. E a consequência que Hegel destaca é decisiva: quando a comparação falha, muda também o objeto — porque o objeto era constituído pelo critério que acabou de cair." },
+    porque: "A comparação acontece entre dois momentos da própria consciência, sem necessidade de um ponto de vista externo. E a consequência que Hegel destaca é decisiva: quando a comparação falha, muda também o objeto, porque o objeto era constituído pelo critério que acabou de cair." },
 
   { camada: "aprofundamento",
     q: "A 'certeza sensível' fracassa porque:",
@@ -235,7 +235,7 @@ prova: [
       "Ela pressupõe a existência de um sujeito transcendental que Hegel rejeita."
     ],
     correta: 1,
-    porque: "O argumento não é sobre ilusão de sentidos — é performativo. Escreva 'agora é noite', leia ao meio-dia: a proposição é falsa, mas a palavra 'agora' segue funcionando, o que revela que ela nomeia um universal. A figura falha pelo padrão que ela mesma adotou." },
+    porque: "O argumento não é sobre ilusão de sentidos: é performativo. Escreva 'agora é noite', leia ao meio-dia: a proposição é falsa, mas a palavra 'agora' segue funcionando, o que revela que ela nomeia um universal. A figura falha pelo padrão que ela mesma adotou." },
 
   { camada: "aprofundamento",
     q: "Sobre a 'contradição' na dialética hegeliana, qual afirmação é correta?",
@@ -257,18 +257,18 @@ prova: [
       "O acesso direto às coisas em si, contra Kant."
     ],
     correta: 1,
-    porque: "É um resultado reflexivo, não enciclopédico. A expressão soa a onisciência e não é isso. Interpretá-la como acúmulo total de conhecimento produz a caricatura de um sistema fechado que 'explica tudo' — leitura que a literatura especializada contemporânea rejeita." },
+    porque: "É um resultado reflexivo, não enciclopédico. A expressão soa a onisciência e não é isso. Interpretá-la como acúmulo total de conhecimento produz a caricatura de um sistema fechado que 'explica tudo', leitura que a literatura especializada contemporânea rejeita." },
 
   { camada: "extensao",
     q: "Qual é a avaliação mais defensável da crítica de Popper a Hegel?",
     alts: [
       "É a análise definitiva, e por isso Hegel deixou de ser levado a sério na filosofia.",
-      "É textualmente problemática — citações truncadas, atribuição de posições de discípulos, leitura equivocada da noção de contradição — o que não isenta Hegel de crítica política séria por outras vias.",
+      "É textualmente problemática: citações truncadas, atribuição de posições de discípulos, leitura equivocada da noção de contradição. Isso não isenta Hegel de crítica política séria por outras vias.",
       "É irrelevante porque Popper não era filósofo político.",
       "É correta quanto à lógica, mas equivocada quanto à política."
     ],
     correta: 1,
-    porque: "Historiadores da filosofia, inclusive não hegelianos, documentaram os problemas de método de Popper nesse ponto específico. Mas a resposta correta não é apologética: há passagens genuinamente problemáticas na filosofia política de Hegel, e a discussão sobre elas é legítima — apenas não é a que Popper fez." },
+    porque: "Historiadores da filosofia, inclusive não hegelianos, documentaram os problemas de método de Popper nesse ponto específico. Mas a resposta correta não é apologética: há passagens genuinamente problemáticas na filosofia política de Hegel, e a discussão sobre elas é legítima. Apenas não é a que Popper fez." },
 
   { camada: "extensao",
     q: "Qual das contribuições hegelianas abaixo é hoje mais claramente destacável do sistema e ativa em teoria social contemporânea?",
