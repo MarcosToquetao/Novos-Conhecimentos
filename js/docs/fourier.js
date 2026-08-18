@@ -16,21 +16,21 @@ conexoes: [
 camadas: {
 
 nucleo: { minutos: 15, html: `
-<p class="abre">Em 1807, Joseph Fourier entregou à Academia de Ciências de Paris um trabalho sobre um problema mundano: como o calor se espalha dentro de uma barra de metal. O trabalho foi rejeitado. Lagrange, Laplace e Legendre — três dos maiores matemáticos vivos — estavam na banca, e Lagrange objetou a uma afirmação que Fourier fazia de passagem e que parecia absurda: que <em>qualquer</em> função, inclusive uma com quinas e saltos, pode ser escrita como uma soma de senos e cossenos, que são as curvas mais suaves que existem.<sup class="cit"><a href="#f1">1</a></sup></p>
+<p class="abre">Em 1807, Joseph Fourier entregou à Academia de Ciências de Paris um trabalho sobre um problema mundano: como o calor se espalha dentro de uma barra de metal. O trabalho foi rejeitado. Lagrange, Laplace e Legendre, três dos maiores matemáticos da época, estavam na banca. Lagrange objetou a uma afirmação que Fourier fazia de passagem e que parecia absurda: que <em>qualquer</em> função, inclusive uma com quinas e saltos, pode ser escrita como uma soma de senos e cossenos, que são as curvas mais suaves que existem.<sup class="cit"><a href="#f1">1</a></sup></p>
 
-<p>Fourier estava errado na formulação exata (o "qualquer" precisava de condições) e certo no que importava. Quinze anos depois publicou o resultado como livro,<sup class="cit"><a href="#f2">2</a></sup> e a ideia acabou se tornando uma das ferramentas mais utilizadas da ciência aplicada. Vale a pena entender por quê — e o motivo não é matemático, é conceitual.</p>
+<p>Fourier estava errado na formulação exata (o "qualquer" precisava de condições) e certo no que importava. Quinze anos depois publicou o resultado como livro,<sup class="cit"><a href="#f2">2</a></sup> e a ideia se tornou uma das ferramentas mais usadas da ciência aplicada. Vale a pena entender por quê, e o motivo não é matemático: é conceitual.</p>
 
 <h3>A ideia central em uma frase</h3>
 
 <p>Um som complicado, uma imagem, um sinal de rádio, a vibração de uma ponte: todos podem ser reconstruídos somando oscilações puras de frequências diferentes, cada uma com sua intensidade e seu atraso. A transformada de Fourier é o procedimento que descobre <em>quais</em> oscilações puras estão lá dentro e <em>com que peso</em>.</p>
 
-<figure class="figura">[[FIG:fourier-decomp]]<figcaption>Uma onda quadrada — pura quina, nada de suave — sendo construída a partir de senos. Com 1 termo você tem só uma ondulação. Com 3, algo já parece um degrau. Com 9, o degrau está quase lá. Essas curvas foram calculadas, não desenhadas: são as somas parciais reais da série.</figcaption></figure>
+<figure class="figura">[[FIG:fourier-decomp]]<figcaption>Uma onda quadrada, toda quina e nada de suave, sendo construída a partir de senos. Com 1 termo você tem só uma ondulação. Com 3, algo já parece um degrau. Com 9, o degrau está quase lá. Essas curvas foram calculadas, não desenhadas: são as somas parciais reais da série.</figcaption></figure>
 
 <p>A metáfora que costuma ser usada é o prisma. Luz branca entra, e do outro lado saem as cores separadas. O prisma não <em>acrescenta</em> as cores: elas já estavam lá, misturadas, e o prisma apenas as organizou por frequência. A transformada de Fourier faz o mesmo com qualquer sinal.</p>
 
 <div class="marca controverso">
 <span class="rot">Onde a metáfora do prisma engana</span>
-<p>O prisma sugere que a decomposição é um fato físico sobre a luz. Não é o caso da transformada. Decompor em senos é uma <em>escolha</em> de sistema de coordenadas, não uma descoberta sobre a natureza do sinal. Você poderia decompor o mesmo sinal em ondaletas (wavelets), em polinômios de Chebyshev ou em qualquer outra base. Senos venceram porque têm uma propriedade especial que veremos adiante — não porque são "o que o sinal realmente é".</p>
+<p>O prisma sugere que a decomposição é um fato físico sobre a luz. Não é o caso da transformada. Decompor em senos é uma <em>escolha</em> de sistema de coordenadas, não uma descoberta sobre a natureza do sinal. Você poderia decompor o mesmo sinal em ondaletas (wavelets), em polinômios de Chebyshev ou em qualquer outra base. Senos venceram porque têm uma propriedade especial que a próxima seção explica, não porque são "o que o sinal realmente é".</p>
 </div>
 
 <h3>Dois retratos do mesmo objeto</h3>
@@ -39,22 +39,15 @@ nucleo: { minutos: 15, html: `
 
 <figure class="figura">[[FIG:fourier-dominios]]<figcaption>Em cima, o sinal como o tempo o entrega. Embaixo, o mesmo sinal como frequências. Nenhuma informação foi perdida nem criada: são duas coordenadas do mesmo ponto. A transformada inversa reconstrói o de cima a partir do de baixo, exatamente.</figcaption></figure>
 
-<p>O ponto que costuma passar despercebido é este: <strong>não há perda</strong>. As duas representações são equivalentes. Você pode ir e voltar quantas vezes quiser. Não é um resumo do sinal — é o sinal, escrito noutra língua.</p>
+<p>O ponto que costuma passar despercebido é este: <strong>não há perda</strong>. As duas representações são equivalentes, e você pode ir e voltar entre elas quantas vezes quiser. É o mesmo sinal, escrito em outra língua, não um resumo dele.</p>
 
 <h3>Por que isso é útil, e não apenas elegante</h3>
 
-<p>A utilidade vem de um padrão que se repete em toda a ciência aplicada: <strong>operações difíceis num domínio ficam triviais no outro</strong>.</p>
-
-<ul>
-<li><strong>Filtrar ruído.</strong> No domínio do tempo, separar o chiado de 8 kHz da voz é um problema espinhoso. No domínio da frequência é uma tesoura: apague a coluna de 8 kHz e volte.</li>
-<li><strong>Comprimir.</strong> O ouvido humano não distingue certos detalhes de alta frequência, e o olho ainda menos. MP3 e JPEG transformam, descartam o que a percepção não usa, e guardam o resto. A compressão não acontece no sinal original; acontece no espectro.</li>
-<li><strong>Resolver equações diferenciais.</strong> Derivar, no domínio da frequência, vira multiplicar por um número. Foi exatamente por isso que Fourier chegou a tudo isso: ele queria resolver a equação do calor, e a transformada converteu uma equação diferencial numa conta de multiplicação.</li>
-<li><strong>Enxergar estrutura invisível.</strong> Um sinal biológico que parece ruído pode revelar um pico limpo em 1 ciclo por 24 horas — e você acabou de detectar um ritmo circadiano sem saber que estava procurando por ele.</li>
-</ul>
+<p>A utilidade vem de um padrão que se repete em toda a ciência aplicada: <strong>operações difíceis num domínio ficam triviais no outro</strong>. Filtrar ruído é o exemplo mais direto: no domínio do tempo, separar o chiado de 8 kHz da voz é um problema espinhoso, mas no domínio da frequência é uma tesoura, basta apagar a coluna de 8 kHz e voltar. Comprimir funciona pelo mesmo caminho: o ouvido humano não distingue certos detalhes de alta frequência, e o olho ainda menos, então MP3 e JPEG transformam, descartam o que a percepção não usa e guardam o resto; a compressão não acontece no sinal original, acontece no espectro. Resolver equações diferenciais também muda de categoria: derivar, no domínio da frequência, vira multiplicar por um número. Foi por isso que Fourier chegou a tudo isso: ele queria resolver a equação do calor, e a transformada converteu uma equação diferencial numa conta de multiplicação. E há a estrutura que fica invisível no domínio original: um sinal biológico que parece ruído pode revelar um pico limpo em 1 ciclo por 24 horas, o que equivale a detectar um ritmo circadiano sem saber que se estava procurando por ele.</p>
 
 <h3>O caso mais bonito: você já viu uma transformada de Fourier</h3>
 
-<p>Quando raios X atravessam um cristal, o padrão de manchas que aparece no detector <em>é</em>, com boa aproximação, a transformada de Fourier da distribuição de densidade eletrônica do cristal.<sup class="cit"><a href="#f3">3</a></sup> A natureza faz a transformada; o cristalógrafo precisa apenas fazer a inversa para recuperar a estrutura da molécula. A imagem 51 de Rosalind Franklin, que mostrou a hélice do DNA, é literalmente um espectro de Fourier — o padrão em X é a assinatura de uma hélice no domínio da frequência espacial.</p>
+<p>Quando raios X atravessam um cristal, o padrão de manchas que aparece no detector <em>é</em>, com boa aproximação, a transformada de Fourier da distribuição de densidade eletrônica do cristal.<sup class="cit"><a href="#f3">3</a></sup> A natureza faz a transformada; o cristalógrafo precisa apenas fazer a inversa para recuperar a estrutura da molécula. A imagem 51 de Rosalind Franklin, que mostrou a hélice do DNA, é literalmente um espectro de Fourier: o padrão em X é a assinatura de uma hélice no domínio da frequência espacial.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -63,7 +56,7 @@ nucleo: { minutos: 15, html: `
 
 <h3>O que segurar antes de seguir</h3>
 
-<p>Se você fechar o texto aqui, três coisas bastam. Primeira: transformar é mudar de coordenadas, não resumir. Segunda: a utilidade nasce de que multiplicar, filtrar e derivar mudam de dificuldade conforme o domínio. Terceira: senos não são a única base possível — e a próxima camada mostra por que eles ganharam.</p>
+<p>Se você fechar o texto aqui, o essencial é isto: transformar é mudar de coordenadas, não resumir. A utilidade vem de multiplicar, filtrar e derivar mudarem de dificuldade conforme o domínio. E senos não são a única base possível; a próxima camada mostra por que eles ganharam.</p>
 ` },
 
 aprofundamento: { minutos: 15, html: `
@@ -92,7 +85,7 @@ F(ξ) = ∫ f(t) · e<sup>−2πiξt</sup> dt
 
 <p>Quando a velocidade de enrolamento é qualquer uma, os picos do sinal caem espalhados pelo círculo, e o centro de massa fica perto da origem: resultado próximo de zero. Mas quando a velocidade de enrolamento coincide com uma frequência que existe no sinal, todos os picos caem alinhados do mesmo lado, e o centro de massa dispara para longe da origem. A transformada é exatamente esse centro de massa em função da velocidade de enrolamento.<sup class="cit"><a href="#f4">4</a></sup></p>
 
-<p>Isso explica por que senos e exponenciais complexas venceram como base: elas são as <strong>autofunções da derivada</strong> e das operações de deslocamento. Derivar e<sup>iωt</sup> devolve o mesmo e<sup>iωt</sup> multiplicado por iω. Nenhuma outra família de funções tem essa propriedade tão limpa — é isso que converte cálculo em aritmética.</p>
+<p>Isso explica por que senos e exponenciais complexas venceram como base: elas são as <strong>autofunções da derivada</strong> e das operações de deslocamento. Derivar e<sup>iωt</sup> devolve o mesmo e<sup>iωt</sup> multiplicado por iω. Nenhuma outra família de funções tem essa propriedade tão limpa: é isso que converte cálculo em aritmética.</p>
 
 <h3>A regra de ouro: convolução vira multiplicação</h3>
 
@@ -105,7 +98,7 @@ F{ f ∗ g } = F{f} · F{g}
 
 <h3>O preço: você não pode ter as duas coisas</h3>
 
-<p>Há um limite que não é técnico, é matemático. Um sinal muito localizado no tempo tem espectro necessariamente espalhado, e vice-versa. Uma nota tocada por um instante muito curto não tem altura bem definida — e isso não é limitação do equipamento, é uma propriedade da representação.</p>
+<p>Há um limite que não é técnico, é matemático. Um sinal muito localizado no tempo tem espectro necessariamente espalhado, e vice-versa. Uma nota tocada por um instante muito curto não tem altura bem definida, e isso não é limitação do equipamento: é uma propriedade da representação.</p>
 
 <div class="formula">
 Δt · Δξ ≥ 1 / 4π
@@ -121,15 +114,15 @@ F{ f ∗ g } = F{f} · F{g}
 
 <p>Um computador não vê funções contínuas: vê listas de números amostrados. A versão discreta, a DFT, calcula o mesmo conceito para N amostras. O problema é o custo: feita ingenuamente, ela exige da ordem de N² operações. Para um segundo de áudio a 44,1 kHz, isso é cerca de 2 bilhões de operações.</p>
 
-<p>Em 1965, Cooley e Tukey publicaram um algoritmo que reduz isso a N·log N — de 2 bilhões para cerca de 700 mil.<sup class="cit"><a href="#f5">5</a></sup> É a FFT. Sem ela, praticamente nada do processamento digital de sinais existiria na forma atual. (O algoritmo já havia sido descoberto por Gauss em 1805 e esquecido por 160 anos, o que é um bom lembrete sobre como o conhecimento se perde.)</p>
+<p>Em 1965, Cooley e Tukey publicaram um algoritmo que reduz isso a N·log N (de 2 bilhões para cerca de 700 mil operações).<sup class="cit"><a href="#f5">5</a></sup> É a FFT. Sem ela, praticamente nada do processamento digital de sinais existiria na forma atual. O algoritmo já havia sido descoberto por Gauss em 1805 e ficou esquecido por 160 anos, o que é um bom lembrete de como o conhecimento se perde.</p>
 
-<p>Amostrar tem uma condição: se você medir menos que duas vezes por ciclo da frequência mais alta presente, frequências altas se disfarçam de baixas irreversivelmente. É o <em>aliasing</em> — a razão pela qual rodas de carroça giram para trás no cinema e pela qual áudio digital de qualidade usa 44,1 kHz para representar até 22 kHz.</p>
+<p>Amostrar tem uma condição: se você medir menos que duas vezes por ciclo da frequência mais alta presente, frequências altas se disfarçam de baixas irreversivelmente. É o <em>aliasing</em>, a razão pela qual rodas de carroça giram para trás no cinema e pela qual áudio digital de qualidade usa 44,1 kHz para representar até 22 kHz.</p>
 ` },
 
 extensao: { minutos: 30, html: `
 <h3>A objeção de Lagrange estava certa</h3>
 
-<p>Vale voltar ao ponto de partida, porque a história raramente é contada com honestidade. Lagrange não era um velho teimoso: ele identificou um problema real. Somar infinitas funções contínuas e obter uma função descontínua exige definir com precisão o que "somar infinitas coisas" significa, e essa definição não existia em 1807. Levou o século XIX inteiro — Dirichlet, Riemann, Lebesgue — para tornar rigoroso o que Fourier havia afirmado por intuição física.</p>
+<p>Vale voltar ao ponto de partida, porque a história raramente é contada com honestidade. Lagrange não era um velho teimoso: ele identificou um problema real. Somar infinitas funções contínuas e obter uma função descontínua exige definir com precisão o que "somar infinitas coisas" significa, e essa definição não existia em 1807. Levou o século XIX inteiro, com Dirichlet, Riemann e Lebesgue, para tornar rigoroso o que Fourier havia afirmado por intuição física.</p>
 
 <p>Dirichlet, em 1829, deu as primeiras condições suficientes para a convergência. A teoria moderna reformula tudo em termos de espaços L²: a série converge <em>em média quadrática</em>, o que é mais fraco do que convergir ponto a ponto, mas é exatamente o que engenharia e física precisam.</p>
 
@@ -139,7 +132,7 @@ extensao: { minutos: 30, html: `
 
 <p>Perto de uma descontinuidade, as somas parciais sempre ultrapassam o valor correto. Aumentar o número de termos estreita a região do erro, mas não reduz a altura do sobressinal, que converge para aproximadamente 8,95% da altura do salto.<sup class="cit"><a href="#f6">6</a></sup></p>
 
-<p>Isso tem consequência prática direta: filtros aplicados de forma abrupta no domínio da frequência produzem oscilações em torno de bordas na imagem reconstruída — o que em ressonância magnética aparece como <em>ringing artifact</em> e em áudio como um "pré-eco". É por isso que na prática se usam janelas suaves em vez de cortes retos.</p>
+<p>Isso tem consequência prática direta: filtros aplicados de forma abrupta no domínio da frequência produzem oscilações em torno de bordas na imagem reconstruída. Em ressonância magnética isso aparece como <em>ringing artifact</em>; em áudio, como um "pré-eco". Por isso, na prática, se usam janelas suaves em vez de cortes retos.</p>
 
 <div class="marca controverso">
 <span class="rot">Ponto frequentemente mal compreendido</span>
@@ -165,25 +158,25 @@ extensao: { minutos: 30, html: `
 
 <div class="marca emergente">
 <span class="rot">Abordagem emergente</span>
-<p>Redes neurais que aprendem a base de decomposição diretamente dos dados (em vez de assumir senos) têm superado métodos clássicos em algumas tarefas de áudio e imagem. O ganho é real e mensurável; o custo é a perda de interpretabilidade — a base aprendida raramente tem significado físico, e isso importa quando o objetivo é entender um sistema, não apenas prever sua saída.</p>
+<p>Redes neurais que aprendem a base de decomposição diretamente dos dados (em vez de assumir senos) têm superado métodos clássicos em algumas tarefas de áudio e imagem. O ganho é real e mensurável; o custo é a perda de interpretabilidade: a base aprendida raramente tem significado físico, e isso importa quando o objetivo é entender um sistema, não apenas prever sua saída.</p>
 </div>
 
 <h3>Uma armadilha estatística: espectros de ruído</h3>
 
-<p>Aplicar uma FFT a qualquer série temporal sempre produz picos. Ruído branco gera um espectro plano <em>em média</em>, mas qualquer realização finita apresenta flutuações que parecem picos. Interpretar um pico do periodograma como "periodicidade descoberta" sem teste estatístico é um erro clássico.</p>
+<p>Aplicar uma FFT a qualquer série temporal sempre produz picos. Ruído branco gera um espectro plano <em>em média</em>, mas qualquer realização finita tem flutuações que parecem picos. Interpretar um pico do periodograma como "periodicidade descoberta" sem teste estatístico é um erro clássico.</p>
 
 <p>Historicamente isso produziu literatura inteira sobre ciclos econômicos, climáticos e biológicos que não sobreviveram a testes de significância adequados. Duas salvaguardas mínimas: comparar o pico contra a distribuição esperada sob a hipótese nula de ruído (frequentemente ruído vermelho, não branco, em séries naturais) e corrigir para o fato de que você está testando muitas frequências simultaneamente.</p>
 
 <div class="marca controverso">
 <span class="rot">Controvérsia metodológica real</span>
-<p>Em análise de séries temporais biológicas — expressão gênica circadiana, por exemplo — há disputa ativa sobre quais métodos de detecção de periodicidade controlam adequadamente o erro tipo I. Estudos comparativos mostram que diferentes algoritmos aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. O problema não é a transformada: é o teste de significância construído em cima dela.</p>
+<p>Em análise de séries temporais biológicas, como expressão gênica circadiana, há disputa ativa sobre quais métodos de detecção de periodicidade controlam adequadamente o erro tipo I. Estudos comparativos mostram que diferentes algoritmos aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. O problema não é a transformada: é o teste de significância construído em cima dela.</p>
 </div>
 
 <h3>Fechando o círculo: o que a transformada realmente é</h3>
 
 <p>Em linguagem de álgebra linear, a transformada de Fourier é uma <strong>mudança de base num espaço vetorial de funções</strong>. Os senos e cossenos formam uma base ortonormal; o valor F(ξ) é a projeção do sinal sobre o elemento de base de frequência ξ. Ir e voltar entre domínios é trocar de sistema de coordenadas, do mesmo modo que descrever um ponto por coordenadas cartesianas ou polares.</p>
 
-<p>Essa formulação torna óbvio o que a intuição do prisma esconde: <strong>não existe base privilegiada</strong>. A base de Fourier é ótima para sistemas invariantes no tempo — e é isso que sistemas físicos lineares em geral são, o que explica seu domínio. Quando essa hipótese cai, a base perde sua vantagem e outra representação passa a fazer mais sentido. Saber identificar em qual dos dois regimes você está é a diferença entre usar a ferramenta e ser usado por ela.</p>
+<p>Essa formulação torna óbvio o que a intuição do prisma esconde: <strong>não existe base privilegiada</strong>. A base de Fourier é ótima para sistemas invariantes no tempo, e sistemas físicos lineares em geral são assim, o que explica seu domínio. Quando essa hipótese cai, a base perde sua vantagem e outra representação passa a fazer mais sentido. Antes de aplicar a transformada, vale checar se o sistema em questão é de fato invariante no tempo: essa checagem decide se o resultado tem interpretação física ou não.</p>
 ` }
 },
 

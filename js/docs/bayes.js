@@ -18,41 +18,41 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1978, pesquisadores de Harvard fizeram uma pergunta a 60 médicos e estudantes de medicina do próprio hospital. Um exame detecta uma doença que atinge 1 em cada 1.000 pessoas. O exame nunca deixa de detectar quem tem a doença, mas dá positivo em 5% de quem não tem. Uma pessoa escolhida ao acaso testa positivo. Qual a chance de ela ter a doença?</p>
 
-<p>A resposta mais comum foi 95%. A resposta correta é aproximadamente 2%.<sup class="cit"><a href="#f1">1</a></sup> Quase todos erraram, e erraram na mesma direção, com um fator de quase cinquenta. O erro não vem de dificuldade aritmética — vem de uma confusão conceitual específica, e é dela que este documento trata.</p>
+<p>A resposta mais comum foi 95%. A resposta correta é aproximadamente 2%.<sup class="cit"><a href="#f1">1</a></sup> Quase todos erraram, e erraram na mesma direção, com um fator de quase cinquenta. O erro não vem de dificuldade aritmética: vem de uma confusão conceitual específica, e é dela que este documento trata.</p>
 
 <h3>A pergunta que não é a mesma pergunta</h3>
 
 <p>Existem duas perguntas parecidas e completamente diferentes:</p>
 
 <ul>
-<li><strong>Qual a chance de o exame dar positivo, se a pessoa está doente?</strong> — isso é uma propriedade do exame. Chama-se sensibilidade.</li>
-<li><strong>Qual a chance de a pessoa estar doente, se o exame deu positivo?</strong> — isso é uma propriedade da <em>pessoa dentro de uma população</em>. Chama-se valor preditivo positivo.</li>
+<li><strong>Qual a chance de o exame dar positivo, se a pessoa está doente?</strong> Isso é uma propriedade do exame. Chama-se sensibilidade.</li>
+<li><strong>Qual a chance de a pessoa estar doente, se o exame deu positivo?</strong> Isso é uma propriedade da <em>pessoa dentro de uma população</em>. Chama-se valor preditivo positivo.</li>
 </ul>
 
-<p>São grandezas distintas, e a segunda depende de algo que a primeira ignora: quantas pessoas naquela população têm a doença. Trocar uma pela outra é o erro. Ele tem nome — <em>inversão condicional</em> — e é tão frequente que aparece em manuais de erro médico, em decisões judiciais anuladas e em manchetes sobre testes de covid.</p>
+<p>São grandezas distintas, e a segunda depende de algo que a primeira ignora: quantas pessoas naquela população têm a doença. Trocar uma pela outra é o erro. Ele tem nome (<em>inversão condicional</em>) e é tão frequente que aparece em manuais de erro médico, em decisões judiciais anuladas e em manchetes sobre testes de covid.</p>
 
 <h3>Por que a intuição falha: o exemplo em pessoas, não em porcentagens</h3>
 
-<p>Porcentagens condicionais são péssimas para a cognição humana. Trocar por contagens de pessoas resolve boa parte do problema — este é o achado central da linha de pesquisa sobre "frequências naturais".<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Porcentagens condicionais são péssimas para a cognição humana. Trocar por contagens de pessoas resolve boa parte do problema: este é o achado central da linha de pesquisa sobre "frequências naturais".<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <p>Considere um rastreamento de mamografia com números realistas: 1% das mulheres na faixa etária tem câncer de mama; o exame detecta 90% dos casos reais; e dá positivo em 9% das mulheres saudáveis.</p>
 
-<figure class="figura">[[FIG:bayes-icones]]<figcaption>Mil mulheres. Dez têm câncer; nove delas testam positivo. Das 990 saudáveis, cerca de 89 também testam positivo. Ao todo, 98 resultados positivos — e apenas 9 correspondem a doença. Os números foram calculados a partir das taxas indicadas.</figcaption></figure>
+<figure class="figura">[[FIG:bayes-icones]]<figcaption>Mil mulheres. Dez têm câncer; nove delas testam positivo. Das 990 saudáveis, cerca de 89 também testam positivo. Ao todo, 98 resultados positivos, e apenas 9 correspondem a doença. Os números foram calculados a partir das taxas indicadas.</figcaption></figure>
 
-<p>Nove em noventa e oito. Aproximadamente <strong>9%</strong>. Um resultado positivo, num contexto de rastreamento populacional, deixa a mulher ainda com mais de 90% de chance de não ter a doença. Isso não significa que o exame é ruim — significa que o número que importa não é a sensibilidade do exame, é a proporção de doentes na população testada.</p>
+<p>Nove em noventa e oito. Aproximadamente <strong>9%</strong>. Um resultado positivo, num contexto de rastreamento populacional, deixa a mulher ainda com mais de 90% de chance de não ter a doença. Isso não significa que o exame é ruim: significa que o número que importa não é a sensibilidade do exame, é a proporção de doentes na população testada.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
-<p>O teorema de Bayes é uma identidade algébrica derivada diretamente da definição de probabilidade condicional. Não há nada a disputar sobre sua validade matemática. O que é intensamente debatido é outra coisa: se probabilidades devem ser interpretadas como graus de crença (visão bayesiana) ou como frequências de longo prazo (visão frequentista) — e essa disputa é filosófica e metodológica, não matemática.</p>
+<p>O teorema de Bayes é uma identidade algébrica derivada diretamente da definição de probabilidade condicional. Não há nada a disputar sobre sua validade matemática. O que é intensamente debatido é outra coisa: se probabilidades devem ser interpretadas como graus de crença (visão bayesiana) ou como frequências de longo prazo (visão frequentista), e essa disputa é filosófica e metodológica, não matemática.</p>
 </div>
 
 <h3>O que muda quando você entende isso</h3>
 
 <p>Três consequências práticas, todas com efeito imediato sobre como se lê uma informação:</p>
 
-<p><strong>Um teste raramente é conclusivo sozinho.</strong> Quanto mais rara a condição procurada, mais os falsos positivos dominam os positivos totais. Por isso testes de rastreio em população geral se comportam de maneira muito diferente do mesmo teste aplicado a quem já tem sintomas — mesma tecnologia, taxa-base diferente, conclusão diferente.</p>
+<p><strong>Um teste raramente é conclusivo sozinho.</strong> Quanto mais rara a condição procurada, mais os falsos positivos dominam os positivos totais. Por isso testes de rastreio em população geral se comportam de maneira muito diferente do mesmo teste aplicado a quem já tem sintomas: mesma tecnologia, taxa-base diferente, conclusão diferente.</p>
 
-<p><strong>A evidência move a crença, não a determina.</strong> Bayes não diz o que acreditar: diz quanto atualizar. Você entra com uma crença anterior, a evidência a multiplica por um fator, e você sai com uma crença posterior. Se sua crença anterior for extrema, uma evidência moderada quase não a move — o que é razoável, e explica por que "extraordinary claims require extraordinary evidence" é uma afirmação matematicamente precisa, não retórica.</p>
+<p><strong>A evidência move a crença, não a determina.</strong> Bayes não diz o que acreditar: diz quanto atualizar. Você entra com uma crença anterior, a evidência a multiplica por um fator, e você sai com uma crença posterior. Se sua crença anterior for extrema, uma evidência moderada quase não a move, o que é razoável e explica por que "extraordinary claims require extraordinary evidence" é uma afirmação matematicamente precisa, não retórica.</p>
 
 <p><strong>Ignorar a taxa-base é o erro mais barato de evitar.</strong> Diante de qualquer afirmação da forma "o teste/algoritmo/indício aponta X", a pergunta produtiva é sempre: <em>quantos X existem na população que está sendo examinada?</em></p>
 ` },
@@ -90,22 +90,22 @@ chance posterior = chance prior × razão de verossimilhança
 <span class="leg">LR = P(E | H) / P(E | não-H)</span>
 </div>
 
-<p>Isso separa limpamente <strong>o que você já sabia</strong> (chance prior) de <strong>o que a evidência acrescentou</strong> (razão de verossimilhança, ou LR). O LR é a medida honesta do poder informativo de um teste — e não depende da prevalência.</p>
+<p>Isso separa limpamente <strong>o que você já sabia</strong> (chance prior) de <strong>o que a evidência acrescentou</strong> (razão de verossimilhança, ou LR). O LR é a medida honesta do poder informativo de um teste, e não depende da prevalência.</p>
 
-<p>Na mamografia: LR = 0,90 / 0,09 = 10. Chance prior = 1:99. Chance posterior = 10:99, ou seja, cerca de 9%. Repare que o teste multiplicou suas chances por dez — o que é substancial. O resultado ainda é baixo porque o ponto de partida era muito baixo.</p>
+<p>Na mamografia: LR = 0,90 / 0,09 = 10. Chance prior = 1:99. Chance posterior = 10:99, ou seja, cerca de 9%. Repare que o teste multiplicou suas chances por dez, o que é substancial. O resultado ainda é baixo porque o ponto de partida era muito baixo.</p>
 
 <div class="marca consenso">
 <span class="rot">Regra prática defensável</span>
-<p>Em medicina baseada em evidências, valores de LR são usados como referência grosseira: LR acima de 10 ou abaixo de 0,1 muda decisões clínicas de forma relevante; entre 0,5 e 2, quase nunca muda. Um teste com LR próximo de 1 é, do ponto de vista informacional, equivalente a não ter feito teste algum — independentemente de quão sofisticada seja a tecnologia envolvida.</p>
+<p>Em medicina baseada em evidências, valores de LR são usados como referência grosseira: LR acima de 10 ou abaixo de 0,1 muda decisões clínicas de forma relevante; entre 0,5 e 2, quase nunca muda. Um teste com LR próximo de 1 é, do ponto de vista informacional, equivalente a não ter feito teste algum, independentemente de quão sofisticada seja a tecnologia envolvida.</p>
 </div>
 
 <h3>Por que a intuição falha: duas explicações concorrentes</h3>
 
 <p>Há uma disputa empírica real sobre a origem do erro, e as duas posições têm evidência.</p>
 
-<p><strong>Posição 1 — a mente não é bayesiana.</strong> Kahneman e Tversky mostraram que as pessoas julgam por representatividade: avaliam quanto a evidência "parece" com a hipótese, ignorando a frequência de base. O erro seria um viés cognitivo estrutural.<sup class="cit"><a href="#f3">3</a></sup></p>
+<p><strong>Posição 1: a mente não é bayesiana.</strong> Kahneman e Tversky mostraram que as pessoas julgam por representatividade: avaliam quanto a evidência "parece" com a hipótese, ignorando a frequência de base. O erro seria um viés cognitivo estrutural.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<p><strong>Posição 2 — o formato é que é ruim.</strong> Gigerenzer e colaboradores mostraram que apresentar o mesmo problema em frequências naturais ("10 em 1.000") em vez de probabilidades condicionais ("1%") eleva drasticamente a taxa de acerto, inclusive entre médicos. O erro seria um artefato de representação, não da cognição.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p><strong>Posição 2: o formato é que é ruim.</strong> Gigerenzer e colaboradores mostraram que apresentar o mesmo problema em frequências naturais ("10 em 1.000") em vez de probabilidades condicionais ("1%") eleva drasticamente a taxa de acerto, inclusive entre médicos. O erro seria um artefato de representação, não da cognição.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <div class="marca controverso">
 <span class="rot">Ponto controverso</span>
@@ -116,7 +116,7 @@ chance posterior = chance prior × razão de verossimilhança
 
 <p><strong>Tribunais.</strong> A "falácia do promotor" é a inversão condicional aplicada a evidência forense. Um perito afirma que a chance de o perfil de DNA coincidir por acaso é 1 em 10 milhões. Concluir daí que a chance de o réu ser inocente é 1 em 10 milhões é logicamente inválido: depende de quantas pessoas poderiam plausivelmente ser o autor. Em bases de dados grandes, coincidências raras tornam-se esperadas.</p>
 
-<p><strong>Segurança e triagem.</strong> Qualquer sistema que procura eventos raros — fraude, ameaça, doença — em populações grandes produz um número de falsos positivos que supera os verdadeiros, mesmo com especificidade altíssima. Isso não é falha de implementação: é uma consequência aritmética que precisa ser projetada, não descoberta depois.</p>
+<p><strong>Segurança e triagem.</strong> Qualquer sistema que procura eventos raros (fraude, ameaça, doença) em populações grandes produz um número de falsos positivos que supera os verdadeiros, mesmo com especificidade altíssima. Isso não é falha de implementação: é uma consequência aritmética que precisa ser projetada, não descoberta depois.</p>
 ` },
 
 extensao: { minutos: 30, html: `
@@ -137,7 +137,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>A crítica frequentista tem um alvo legítimo: se o prior é escolhido pelo pesquisador, dois analistas com os mesmos dados podem chegar a conclusões diferentes. A resposta bayesiana é que o conhecimento prévio existe de qualquer forma — a diferença é que ele fica explícito e auditável, em vez de escondido no desenho do estudo e nas escolhas de análise.</p>
+<p>A crítica frequentista tem um alvo legítimo: se o prior é escolhido pelo pesquisador, dois analistas com os mesmos dados podem chegar a conclusões diferentes. A resposta bayesiana é que o conhecimento prévio existe de qualquer forma: a diferença é que ele fica explícito e auditável, em vez de escondido no desenho do estudo e nas escolhas de análise.</p>
 
 <div class="marca emergente">
 <span class="rot">Prática crescente e defensável</span>
@@ -148,17 +148,17 @@ extensao: { minutos: 30, html: `
 
 <p>Um valor-p responde: <em>se a hipótese nula fosse verdadeira, qual a chance de eu ver dados tão extremos quanto estes?</em> Isso é P(dados | H₀). Quase todo mundo o lê como P(H₀ | dados). É a mesma inversão condicional do exemplo da mamografia, e é o erro mais consequente da estatística aplicada.</p>
 
-<p>O ponto quantitativo: para um estudo com poder de 80% e nível de 5%, testando hipóteses das quais apenas 10% são verdadeiras a priori, entre os resultados "significativos" cerca de 36% são falsos positivos.<sup class="cit"><a href="#f4">4</a></sup> Não por fraude, nem por má execução — apenas por aritmética bayesiana aplicada a uma taxa-base baixa de hipóteses verdadeiras. Este é o argumento central de Ioannidis em "Why most published research findings are false", e é essencialmente o problema da mamografia transposto para a literatura científica.</p>
+<p>O ponto quantitativo: para um estudo com poder de 80% e nível de 5%, testando hipóteses das quais apenas 10% são verdadeiras a priori, entre os resultados "significativos" cerca de 36% são falsos positivos.<sup class="cit"><a href="#f4">4</a></sup> Não por fraude, nem por má execução: apenas por aritmética bayesiana aplicada a uma taxa-base baixa de hipóteses verdadeiras. Este é o argumento central de Ioannidis em "Why most published research findings are false", e é essencialmente o problema da mamografia transposto para a literatura científica.</p>
 
 <h3>Uma limitação séria: Bayes não sabe nada sobre causa</h3>
 
-<p>Atualização bayesiana opera sobre associações estatísticas. Ela responde perfeitamente a "vendo isto, o que devo esperar daquilo?" e não responde a "se eu <em>intervier</em> aqui, o que acontece ali?". Judea Pearl formalizou essa distinção em três níveis — associação, intervenção e contrafactual — e mostrou que subir de nível exige suposições causais que nenhuma quantidade de dados observacionais fornece.<sup class="cit"><a href="#f5">5</a></sup></p>
+<p>Atualização bayesiana opera sobre associações estatísticas. Ela responde perfeitamente a "vendo isto, o que devo esperar daquilo?" e não responde a "se eu <em>intervier</em> aqui, o que acontece ali?". Judea Pearl formalizou essa distinção em três níveis (associação, intervenção e contrafactual) e mostrou que subir de nível exige suposições causais que nenhuma quantidade de dados observacionais fornece.<sup class="cit"><a href="#f5">5</a></sup></p>
 
 <p>Um exemplo do próprio Pearl: observar que pessoas que tomam certo remédio se recuperam mais não permite concluir que o remédio funciona, porque quem toma pode ser sistematicamente diferente de quem não toma. Bayes atualiza corretamente a crença sobre o que você <em>verá</em>; não atualiza a crença sobre o que aconteceria se você <em>mudasse</em> quem toma. Confundir os dois é a raiz de boa parte das controvérsias em epidemiologia observacional.</p>
 
 <div class="marca controverso">
 <span class="rot">Onde o entusiasmo bayesiano exagera</span>
-<p>Há uma literatura crescente descrevendo o cérebro como um "motor de inferência bayesiana". As versões fortes dessa tese — de que o córtex implementa literalmente atualização bayesiana ótima — são difíceis de falsear: com liberdade suficiente na escolha do prior e da função de custo, quase qualquer comportamento pode ser reescrito como "bayesiano ótimo em relação a algum prior". Uma teoria que acomoda qualquer observação não está fazendo previsões arriscadas. As versões fracas (o cérebro combina expectativa e evidência de forma sensível à confiabilidade de cada uma) têm apoio experimental sólido em integração multissensorial.</p>
+<p>Há uma literatura crescente descrevendo o cérebro como um "motor de inferência bayesiana". As versões fortes dessa tese (de que o córtex implementa literalmente atualização bayesiana ótima) são difíceis de falsear: com liberdade suficiente na escolha do prior e da função de custo, quase qualquer comportamento pode ser reescrito como "bayesiano ótimo em relação a algum prior". Uma teoria que acomoda qualquer observação não está fazendo previsões arriscadas. As versões fracas (o cérebro combina expectativa e evidência de forma sensível à confiabilidade de cada uma) têm apoio experimental sólido em integração multissensorial.</p>
 </div>
 
 <h3>Como usar isso na prática, sem fórmula</h3>
@@ -167,7 +167,7 @@ extensao: { minutos: 30, html: `
 
 <ol>
 <li><strong>Qual é a taxa-base?</strong> Antes de avaliar qualquer indício, pergunte quantos casos existem na população examinada. Sem esse número, um resultado positivo é ininterpretável.</li>
-<li><strong>Quão surpreendente seria essa evidência se a hipótese fosse falsa?</strong> Essa é a pergunta que produz a razão de verossimilhança. Se a evidência seria igualmente provável nos dois cenários, ela não é evidência de nada — por mais impressionante que pareça.</li>
+<li><strong>Quão surpreendente seria essa evidência se a hipótese fosse falsa?</strong> Essa é a pergunta que produz a razão de verossimilhança. Se a evidência seria igualmente provável nos dois cenários, ela não é evidência de nada, por mais impressionante que pareça.</li>
 <li><strong>Estou invertendo a condicional?</strong> Sempre que ler "a chance disso acontecer por acaso é 1 em X", verifique se a conclusão apresentada é sobre a hipótese ou sobre os dados. Quase sempre, o texto desliza de uma para a outra.</li>
 </ol>
 

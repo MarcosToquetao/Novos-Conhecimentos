@@ -20,7 +20,7 @@ nucleo: { minutos: 15, html: `
 
 <h3>De onde vêm as consonâncias</h3>
 
-<p>Qualquer corda ou coluna de ar vibrando produz, além da frequência fundamental, uma série de harmônicos em múltiplos inteiros dela: 2×, 3×, 4×, 5×, e assim por diante. Dois sons soam consonantes quando seus harmônicos coincidem em boa medida — e isso acontece quando a razão entre suas frequências é dada por números inteiros pequenos.</p>
+<p>Qualquer corda ou coluna de ar vibrando produz, além da frequência fundamental, uma série de harmônicos em múltiplos inteiros dela: 2×, 3×, 4×, 5×, e assim por diante. Dois sons soam consonantes quando seus harmônicos coincidem em boa medida, e isso acontece quando a razão entre suas frequências é dada por números inteiros pequenos.</p>
 
 <div class="tabela-env">
 <table>
@@ -35,7 +35,7 @@ nucleo: { minutos: 15, html: `
 </table>
 </div>
 
-<p>Isso não é convenção cultural — é acústica. Quando duas notas estão em razão 3:2, muitos de seus harmônicos coincidem exatamente, e o resultado não produz batimentos. Quando a razão se afasta um pouco, aparecem pulsações lentas: aquele "uau-uau-uau" que denuncia afinação errada.</p>
+<p>A explicação é acústica, não convenção cultural. Quando duas notas estão em razão 3:2, muitos de seus harmônicos coincidem exatamente, e o resultado não produz batimentos. Quando a razão se afasta um pouco, aparecem pulsações lentas: aquele "uau-uau-uau" que denuncia afinação errada.</p>
 
 <h3>O problema: as escadas não se encontram</h3>
 
@@ -48,28 +48,28 @@ nucleo: { minutos: 15, html: `
 <span class="leg">a razão entre os dois é 1,01364 — cerca de 23,46 cents de excesso</span>
 </div>
 
-<p>A diferença chama-se <strong>coma pitagórica</strong>. Ela é pequena mas perfeitamente audível: cerca de um quarto de semitom, muito acima do limiar de percepção humana para notas sustentadas.</p>
+<p>A diferença chama-se <strong>coma pitagórica</strong>. Ela é pequena, mas perfeitamente audível: cerca de um quarto de semitom, muito acima do limiar de percepção humana para notas sustentadas.</p>
 
 <figure class="figura">[[FIG:temperamento-comma]]<figcaption>Empilhando quintas puras, a trajetória é uma espiral, não um círculo. Ela passa do ponto de partida por 23,46 cents. Nenhum ajuste esperto resolve isso: é consequência de 3 e 2 serem primos entre si.</figcaption></figure>
 
-<p>E o problema não para aí. Quatro quintas puras deveriam dar uma terça maior pura, e também não dão: a diferença é a <strong>coma sintônica</strong>, de cerca de 21,5 cents. Os erros não se cancelam entre si; eles se acumulam de formas diferentes conforme o caminho.</p>
+<p>O problema não para aí. Quatro quintas puras deveriam dar uma terça maior pura, e também não dão: a diferença é a <strong>coma sintônica</strong>, de cerca de 21,5 cents. Os erros não se cancelam entre si; eles se acumulam de formas diferentes conforme o caminho.</p>
 
 <h3>A escolha: onde esconder o erro</h3>
 
-<p>Como o erro não pode ser eliminado, todo sistema de afinação é uma decisão sobre <em>onde colocá-lo</em>. Três estratégias históricas:</p>
+<p>Como o erro não pode ser eliminado, todo sistema de afinação decide <em>onde colocá-lo</em>. Três estratégias marcaram a história:</p>
 
-<p><strong>Entonação justa.</strong> Deixe alguns intervalos perfeitamente puros. Consequência: outros ficam horrendos. Existe um intervalo, o "lobo", tão desafinado que é inutilizável. Funciona se você tocar sempre na mesma tonalidade.</p>
+<p>Entonação justa: deixa alguns intervalos perfeitamente puros, e por isso outros ficam horrendos. Existe um intervalo, o "lobo", tão desafinado que é inutilizável. Funciona se você tocar sempre na mesma tonalidade.</p>
 
-<p><strong>Temperamentos desiguais.</strong> Distribua o erro de forma desigual, deixando as tonalidades mais usadas quase puras e empurrando o erro para as raras. Cada tonalidade adquire um caráter sonoro distinto. Dominou os séculos XVII e XVIII.</p>
+<p>Temperamentos desiguais: distribuem o erro de forma desigual, deixando as tonalidades mais usadas quase puras e empurrando o erro para as raras. Cada tonalidade ganha um caráter sonoro distinto. Dominaram os séculos XVII e XVIII.</p>
 
-<p><strong>Temperamento igual.</strong> Divida a oitava em doze partes exatamente iguais. Cada semitom passa a ser a raiz duodécima de 2:</p>
+<p>Temperamento igual: divide a oitava em doze partes exatamente iguais. Cada semitom passa a ser a raiz duodécima de 2:</p>
 
 <div class="formula">
 razão de um semitom = <sup>12</sup>√2 ≈ 1,059463
 <span class="leg">um número irracional — nenhum intervalo, exceto a oitava, é uma razão de inteiros</span>
 </div>
 
-<p>O erro fica espalhado igualmente por todos os intervalos. Nenhum fica puro, nenhum fica intolerável, e todas as vinte e quatro tonalidades soam idênticas em qualidade. Foi essa uniformidade que tornou possível modular livremente — e sem modulação livre, a música do século XIX simplesmente não existiria na forma que existe.</p>
+<p>O erro fica espalhado igualmente por todos os intervalos. Nenhum fica puro, nenhum fica intolerável, e todas as vinte e quatro tonalidades soam idênticas em qualidade. Essa uniformidade tornou possível modular livremente entre tonalidades. Sem modulação livre, a música do século XIX não existiria na forma que existe.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -107,18 +107,18 @@ cents = 1200 · log<sub>2</sub>(f<sub>2</sub> / f<sub>1</sub>)
 </table>
 </div>
 
-<p>A quinta erra por menos de 2 cents — praticamente inaudível. A terça maior erra por quase 14 cents, o que é claramente audível em acordes sustentados. Como a terça é a nota que define se o acorde é maior ou menor, o temperamento igual sacrifica justamente o intervalo de maior carga expressiva para preservar a quinta.</p>
+<p>A quinta erra por menos de 2 cents, praticamente inaudível. A terça maior erra por quase 14 cents, o que é claramente audível em acordes sustentados. Como a terça define se o acorde é maior ou menor, o temperamento igual sacrifica o intervalo de maior carga expressiva para preservar a quinta.</p>
 
 <div class="marca consenso">
 <span class="rot">Limiares perceptivos</span>
-<p>Ouvintes treinados detectam diferenças de altura da ordem de 5 a 6 cents em notas sustentadas puras. Em contexto musical real — com vibrato, ataque, timbre complexo e mascaramento — o limiar sobe consideravelmente. Isso explica por que a maioria dos ouvintes não percebe conscientemente os 14 cents da terça temperada, mas músicos frequentemente relatam que acordes de piano soam "mais tensos" que os mesmos acordes num coro — que ajusta a afinação em tempo real e canta terças puras naturalmente.</p>
+<p>Ouvintes treinados detectam diferenças de altura da ordem de 5 a 6 cents em notas sustentadas puras. Em contexto musical real (com vibrato, ataque, timbre complexo e mascaramento), o limiar sobe consideravelmente. Isso explica por que a maioria dos ouvintes não percebe conscientemente os 14 cents da terça temperada, mas músicos frequentemente relatam que acordes de piano soam "mais tensos" que os mesmos acordes num coro, que ajusta a afinação em tempo real e canta terças puras naturalmente.</p>
 </div>
 
 <h3>O que se perdeu: caráter de tonalidade</h3>
 
 <p>Nos temperamentos desiguais, cada tonalidade tinha uma sonoridade própria e reconhecível, porque a distribuição do erro variava entre elas. Ré maior era brilhante; lá bemol maior, sombrio e tenso. Compositores dos séculos XVII e XVIII escolhiam tonalidades por essa razão, e tratados da época descrevem os afetos associados a cada uma.</p>
 
-<p>No temperamento igual, todas as tonalidades são transposições exatas umas das outras. A diferença de caráter que ouvintes ainda relatam entre tonalidades tem outras causas — registro dos instrumentos, ressonância de cordas soltas, tessitura vocal — e não mais a estrutura interválica.</p>
+<p>No temperamento igual, todas as tonalidades são transposições exatas umas das outras. A diferença de caráter que ouvintes ainda relatam entre tonalidades tem outras causas: registro dos instrumentos, ressonância de cordas soltas, tessitura vocal. Não é mais a estrutura interválica.</p>
 
 <h3>A crítica de Duffin, e o que responder a ela</h3>
 
@@ -126,27 +126,27 @@ cents = 1200 · log<sub>2</sub>(f<sub>2</sub> / f<sub>1</sub>)
 
 <div class="marca controverso">
 <span class="rot">Ponto controverso</span>
-<p>A parte histórica do argumento — que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada — é bem documentada e amplamente aceita. A parte estética — que a harmonia foi "arruinada" — é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois. Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>
+<p>A parte histórica do argumento, que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada, é bem documentada e amplamente aceita. A parte estética, que a harmonia foi "arruinada", é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois. Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>
 </div>
 ` },
 
 extensao: { minutos: 30, html: `
 <h3>O caso Bach: um mito persistente</h3>
 
-<p>Quase todo programa de concerto afirma que <em>O Cravo Bem Temperado</em> foi escrito para demonstrar o temperamento igual. Essa afirmação não se sustenta.</p>
+<p>Quase todo programa de concerto afirma que <em>O Cravo Bem Temperado</em> foi escrito para demonstrar o temperamento igual. A afirmação não se sustenta.</p>
 
-<p>Em alemão, <em>wohltemperiert</em> — "bem temperado" — designava uma família de temperamentos <strong>desiguais</strong> nos quais todas as vinte e quatro tonalidades são utilizáveis, ainda que com caracteres distintos. O temperamento igual era chamado de <em>gleichschwebend</em>, "de batimento igual". São termos diferentes para coisas diferentes, e Bach usou o primeiro.</p>
+<p>Em alemão, <em>wohltemperiert</em> ("bem temperado") designava uma família de temperamentos <strong>desiguais</strong> nos quais todas as vinte e quatro tonalidades são utilizáveis, ainda que com caracteres distintos. O temperamento igual era chamado de <em>gleichschwebend</em>, "de batimento igual". São termos diferentes para coisas diferentes, e Bach usou o primeiro.</p>
 
-<p>O que Bach demonstrava com as 24 tonalidades era que <em>todas eram tocáveis</em> — o que temperamentos anteriores não permitiam. Isso é compatível com temperamento igual e também com vários temperamentos desiguais.</p>
+<p>O que Bach demonstrava com as 24 tonalidades era que <em>todas eram tocáveis</em>, o que temperamentos anteriores não permitiam. Isso é compatível com temperamento igual e também com vários temperamentos desiguais.</p>
 
 <div class="marca controverso">
 <span class="rot">Estado atual da questão</span>
-<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class="cit"><a href="#f3">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa. A honestidade exige dizer: não sabemos, e a divergência entre especialistas é grande.</p>
+<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class="cit"><a href="#f3">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa. Não sabemos, e a divergência entre especialistas é grande.</p>
 </div>
 
 <h3>Quem realmente toca em temperamento igual</h3>
 
-<p>Menos gente do que se imagina. O temperamento igual é uma necessidade de <strong>instrumentos de afinação fixa</strong> — piano, órgão, harpa, trastes de violão. Instrumentos de afinação contínua e vozes não estão presos a ele.</p>
+<p>Menos gente do que se imagina. O temperamento igual é uma necessidade de instrumentos de afinação fixa: piano, órgão, harpa, trastes de violão. Instrumentos de afinação contínua e vozes não estão presos a ele.</p>
 
 <div class="tabela-env">
 <table>
@@ -161,7 +161,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>Um detalhe técnico que quase ninguém sabe: <strong>pianos não são afinados em temperamento igual exato</strong>. Cordas reais têm rigidez, e por isso seus harmônicos não caem em múltiplos exatos da fundamental — fenômeno chamado inarmonicidade. Para que os harmônicos das notas graves batam com as fundamentais das agudas, afinadores esticam a escala: graves ficam um pouco mais graves e agudos um pouco mais agudos que o cálculo teórico. Num piano de cauda esse desvio chega a mais de 30 cents nos extremos.</p>
+<p>Pianos não são afinados em temperamento igual exato. Cordas reais têm rigidez, e por isso seus harmônicos não caem em múltiplos exatos da fundamental (fenômeno chamado inarmonicidade). Para que os harmônicos das notas graves batam com as fundamentais das agudas, afinadores esticam a escala: graves ficam um pouco mais graves e agudos um pouco mais agudos que o cálculo teórico. Num piano de cauda esse desvio chega a mais de 30 cents nos extremos.</p>
 
 <div class="marca consenso">
 <span class="rot">Uma implicação interessante</span>
@@ -170,11 +170,11 @@ extensao: { minutos: 30, html: `
 
 <h3>O sistema não é universal</h3>
 
-<p>Dividir a oitava em doze partes iguais é uma solução, não <em>a</em> solução. Outras tradições fizeram escolhas diferentes com bases igualmente coerentes:</p>
+<p>Dividir a oitava em doze partes iguais é uma solução, não <em>a</em> solução. Outras tradições fizeram escolhas diferentes, com bases igualmente coerentes:</p>
 
 <ul>
-<li><strong>Música árabe e turca</strong> usa intervalos menores que o semitom — os <em>maqamat</em> incluem graus que caem entre as teclas do piano, e sistemas teóricos dividem a oitava em 24 ou 53 partes.</li>
-<li><strong>Gamelão indonésio</strong> usa as escalas <em>slendro</em> e <em>pelog</em>, cujos intervalos não correspondem a razões simples nem ao temperamento igual, e variam de conjunto para conjunto — cada gamelão é afinado como uma unidade e instrumentos não são intercambiáveis entre grupos.</li>
+<li><strong>Música árabe e turca</strong> usa intervalos menores que o semitom: os <em>maqamat</em> incluem graus que caem entre as teclas do piano, e sistemas teóricos dividem a oitava em 24 ou 53 partes.</li>
+<li><strong>Gamelão indonésio</strong> usa as escalas <em>slendro</em> e <em>pelog</em>, cujos intervalos não correspondem a razões simples nem ao temperamento igual e variam de conjunto para conjunto (cada gamelão é afinado como uma unidade, e instrumentos não são intercambiáveis entre grupos).</li>
 <li><strong>Música clássica indiana</strong> teoriza 22 <em>shrutis</em> por oitava, com entonação ajustada ao contexto do raga.</li>
 </ul>
 
@@ -189,7 +189,7 @@ extensao: { minutos: 30, html: `
 
 <p>Primeiro fato: potências de 3 nunca coincidem com potências de 2, e por isso quintas puras e oitavas puras são incompatíveis. Segundo: todo sistema de afinação decide onde colocar um erro que não pode ser eliminado. Terceiro: o temperamento igual distribui o erro uniformemente, sacrificando as terças (~14 cents) para preservar as quintas (~2 cents), e paga com a perda do caráter de tonalidade o preço da modulação irrestrita.</p>
 
-<p>A lição transferível: quando uma restrição é matemática e não técnica, a pergunta produtiva deixa de ser "como eliminar o erro" e passa a ser "onde é menos custoso concentrá-lo". Trocar um problema de otimização impossível por um problema de alocação de erro é um movimento que aparece em compressão de dados, em projeto estrutural, em amostragem estatística e em política pública — e reconhecê-lo como o mesmo movimento é boa parte do valor de estudar este assunto.</p>
+<p>A lição transferível: quando uma restrição é matemática, não técnica, a pergunta produtiva deixa de ser "como eliminar o erro" e passa a ser "onde é menos custoso concentrá-lo". Trocar um problema de otimização impossível por um problema de alocação de erro aparece em compressão de dados, em projeto estrutural, em amostragem estatística e em política pública. Reconhecer isso como o mesmo movimento é boa parte do valor de estudar este assunto.</p>
 ` }
 },
 

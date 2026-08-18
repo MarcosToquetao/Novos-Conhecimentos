@@ -18,19 +18,19 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1912, Max Wertheimer observou algo aparentemente banal num brinquedo óptico: duas luzes piscando em alternância, na cadência certa, não são vistas como duas luzes. São vistas como <em>uma luz que se move</em>. Não há movimento algum no estímulo. O movimento é produzido pelo sistema visual.</p>
 
-<p>A conclusão que a escola da Gestalt tirou disso foi radical para a psicologia da época: a percepção não monta o mundo somando sensações elementares. Ela organiza, agrupa e impõe estrutura <strong>antes</strong> que você tenha qualquer chance de intervir conscientemente. O todo tem propriedades que as partes não têm.</p>
+<p>A conclusão que a escola da Gestalt tirou disso foi radical para a psicologia da época: a percepção não monta o mundo somando sensações elementares. Ela organiza, agrupa e impõe estrutura antes que você tenha qualquer chance de intervir conscientemente. O todo tem propriedades que as partes não têm.</p>
 
 <h3>Por que isso interessa a quem projeta qualquer coisa</h3>
 
-<p>Porque significa que você não escolhe se o usuário vai agrupar elementos. Ele vai. A única escolha é se o agrupamento que o sistema visual dele produzir corresponde ao agrupamento lógico da informação — ou se contradiz.</p>
+<p>Porque significa que você não escolhe se o usuário vai agrupar elementos. Ele vai. A única escolha é se o agrupamento que o sistema visual dele produzir corresponde ao agrupamento lógico da informação, ou se contradiz.</p>
 
 <p>Quando um rótulo está a doze pixels do campo de cima e a quatro do campo de baixo, nenhuma quantidade de instrução escrita corrige a leitura: o rótulo pertence ao campo de baixo, e ponto. A percepção não negocia.</p>
 
-<figure class="figura">[[FIG:gestalt-principios]]<figcaption>Seis princípios de agrupamento. Em cada painel, os elementos são idênticos — o que muda é apenas a relação espacial ou de forma entre eles. Repare que você não consegue "desver" os agrupamentos, mesmo sabendo que são arbitrários.</figcaption></figure>
+<figure class="figura">[[FIG:gestalt-principios]]<figcaption>Seis princípios de agrupamento. Em cada painel, os elementos são idênticos: o que muda é apenas a relação espacial ou de forma entre eles. Repare que você não consegue "desver" os agrupamentos, mesmo sabendo que são arbitrários.</figcaption></figure>
 
 <h3>Os princípios, e o que cada um faz de fato</h3>
 
-<p><strong>Proximidade.</strong> Elementos próximos são vistos como um grupo. É o mais forte de todos, e o mais subutilizado. Boa parte das bordas, caixas e linhas divisórias em interfaces existe apenas para consertar espaçamentos mal resolvidos — remova o ruído e ajuste as distâncias, e a estrutura aparece sozinha.</p>
+<p><strong>Proximidade.</strong> Elementos próximos são vistos como um grupo. É o mais forte de todos, e o mais subutilizado. Boa parte das bordas, caixas e linhas divisórias em interfaces existe apenas para consertar espaçamentos mal resolvidos. Remova o ruído, ajuste as distâncias, e a estrutura aparece sozinha.</p>
 
 <p><strong>Similaridade.</strong> Elementos que compartilham forma, cor, tamanho ou orientação são vistos como pertencentes à mesma categoria. É o que permite ao usuário aprender uma vez que "azul sublinhado é link" e aplicar essa regra ao produto inteiro.</p>
 
@@ -40,17 +40,17 @@ nucleo: { minutos: 15, html: `
 
 <p><strong>Região comum.</strong> Elementos dentro de uma mesma fronteira fechada formam grupo, e este princípio <em>sobrepõe-se à proximidade</em>. É a razão de existirem cards: uma moldura pode reagrupar elementos contra a distância entre eles.</p>
 
-<p><strong>Destino comum.</strong> Elementos que se movem juntos são agrupados. Só passou a importar de fato com interfaces animadas — e é o princípio que faz uma transição bem feita explicar de onde um painel veio.</p>
+<p><strong>Destino comum.</strong> Elementos que se movem juntos são agrupados. Só passou a importar de fato com interfaces animadas. É o princípio que faz uma transição bem feita explicar de onde um painel veio.</p>
 
 <h3>Figura e fundo</h3>
 
-<p>Antes de agrupar, o sistema visual decide o que é objeto e o que é espaço vazio. Essa decisão é involuntária, quase sempre inequívoca e ocasionalmente ambígua — o vaso de Rubin, que alterna entre taça e dois perfis, é o exemplo clássico.</p>
+<p>Antes de agrupar, o sistema visual decide o que é objeto e o que é espaço vazio. Essa decisão é involuntária, quase sempre inequívoca e ocasionalmente ambígua: o vaso de Rubin, que alterna entre taça e dois perfis, é o exemplo clássico.</p>
 
 <p>Em interface, o que determina a leitura de figura é sobretudo: área menor tende a virar figura; região cercada tende a virar figura; e a parte que aparenta estar à frente ganha. Sombra, elevação e contraste são as ferramentas com que se manipula isso.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
-<p>Que os fenômenos de agrupamento existem, são robustos e ocorrem cedo no processamento visual é consenso amplo, sustentado por um século de psicofísica e confirmado por neuroimagem e registro eletrofisiológico. Você pode contar com eles. O que <em>não</em> é consenso é a explicação teórica de por que ocorrem — e disso trata a próxima camada.</p>
+<p>Que os fenômenos de agrupamento existem, são robustos e ocorrem cedo no processamento visual é consenso amplo, sustentado por um século de psicofísica e confirmado por neuroimagem e registro eletrofisiológico. Você pode contar com eles. O que <em>não</em> é consenso é a explicação teórica de por que ocorrem. Disso trata a próxima camada.</p>
 </div>
 ` },
 
@@ -69,17 +69,17 @@ aprofundamento: { minutos: 15, html: `
 <li><strong>Conexão física é o mais forte de todos.</strong> Uma linha ligando dois elementos vence proximidade, similaridade e até região comum. É por isso que fluxogramas funcionam.</li>
 </ul>
 
-<p>Além disso, os princípios operam simultaneamente sobre <em>níveis diferentes</em> de organização. A mesma tela pode ter proximidade agrupando campos dentro de uma seção e região comum separando seções — e é justamente a hierarquia entre esses níveis que produz a sensação de layout "limpo" ou "confuso".</p>
+<p>Além disso, os princípios operam simultaneamente sobre <em>níveis diferentes</em> de organização. A mesma tela pode ter proximidade agrupando campos dentro de uma seção e região comum separando seções. É justamente a hierarquia entre esses níveis que produz a sensação de layout "limpo" ou "confuso".</p>
 
 <h3>A teoria original está morta</h3>
 
 <p>Os gestaltistas não pararam na descrição. Wolfgang Köhler propôs uma explicação neurofisiológica: campos elétricos contínuos no córtex que se organizariam por dinâmica de campo, produzindo isomorfismo entre a estrutura da experiência e a estrutura da atividade cerebral.</p>
 
-<p>Essa hipótese foi <strong>experimentalmente refutada</strong> nos anos 1950. Lashley, Sperry e colaboradores inseriram lâminas metálicas e fios condutores no córtex visual de animais para curto-circuitar os campos hipotéticos. A percepção permaneceu intacta.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Essa hipótese foi refutada experimentalmente nos anos 1950. Lashley, Sperry e colaboradores inseriram lâminas metálicas e fios condutores no córtex visual de animais para curto-circuitar os campos hipotéticos. A percepção permaneceu intacta.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <div class="marca consenso">
 <span class="rot">Uma distinção que vale carregar para outros temas</span>
-<p>As descrições fenomenológicas da Gestalt sobreviveram; a teoria explicativa não. Isso é comum na história da ciência e não desqualifica o programa: Kepler descreveu órbitas elípticas corretamente com uma explicação causal errada. Distinguir "o fenômeno é real" de "a explicação proposta é correta" é uma das operações de leitura crítica mais úteis que existem — e a maioria dos textos de design sobre Gestalt não a faz, apresentando a teoria dos campos como se ainda estivesse de pé.</p>
+<p>As descrições fenomenológicas da Gestalt sobreviveram; a teoria explicativa não. Isso é comum na história da ciência e não desqualifica o programa: Kepler descreveu órbitas elípticas corretamente com uma explicação causal errada. Distinguir "o fenômeno é real" de "a explicação proposta é correta" é uma das operações de leitura crítica mais úteis que existem, e a maioria dos textos de design sobre Gestalt não a faz: trata a teoria dos campos como se ainda estivesse de pé.</p>
 </div>
 
 <h3>O que substituiu a explicação</h3>
@@ -99,7 +99,7 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="marca controverso">
 <span class="rot">Ponto controverso</span>
-<p>A disputa entre simplicidade e probabilidade tem mais de setenta anos e não foi resolvida. Há argumentos formais de que, sob certas condições, as duas fazem previsões equivalentes — o que sugere que a pergunta pode estar mal colocada. Para quem projeta interfaces isso não muda nada de prático; mas importa para não repetir como fato explicações que são hipóteses em disputa.</p>
+<p>A disputa entre simplicidade e probabilidade tem mais de setenta anos e não foi resolvida. Há argumentos formais de que, sob certas condições, as duas fazem previsões equivalentes, o que sugere que a pergunta pode estar mal colocada. Para quem projeta interfaces isso não muda nada de prático; mas importa para não repetir como fato explicações que são hipóteses em disputa.</p>
 </div>
 
 <h3>Aplicação: diagnosticar uma tela em três passos</h3>
@@ -114,11 +114,11 @@ aprofundamento: { minutos: 15, html: `
 extensao: { minutos: 30, html: `
 <h3>O que não sobreviveu: a "boa forma"</h3>
 
-<p>O princípio da <em>Prägnanz</em> — que a percepção tende à organização mais simples, regular e estável possível — era a lei suprema da Gestalt, a que supostamente unificava todas as outras. É também a mais problemática.</p>
+<p>O princípio da <em>Prägnanz</em> (que a percepção tende à organização mais simples, regular e estável possível) era a lei suprema da Gestalt, a que supostamente unificava todas as outras. É também a mais problemática.</p>
 
 <p>O problema é a circularidade. "Simples" nunca foi definido independentemente do resultado percebido. Se percebemos X, diz-se que X era a organização mais simples; se percebêssemos Y, Y seria declarada a mais simples. Sem uma métrica de simplicidade fixada antes da observação, o princípio não faz previsão alguma e não pode ser falseado.</p>
 
-<p>Tentativas formais de resolver isso existem — teoria da codificação estrutural, comprimento mínimo de descrição — e produzem previsões testáveis em domínios restritos. Mas a versão que circula em livros de design, "o cérebro prefere a forma mais simples", permanece vazia como enunciada.</p>
+<p>Tentativas formais de resolver isso existem (teoria da codificação estrutural, comprimento mínimo de descrição) e produzem previsões testáveis em domínios restritos. Mas a versão que circula em livros de design, "o cérebro prefere a forma mais simples", permanece vazia como enunciada.</p>
 
 <div class="marca controverso">
 <span class="rot">Uma crítica que vale generalizar</span>
@@ -131,7 +131,7 @@ extensao: { minutos: 30, html: `
 
 <p><strong>O que parece robusto entre culturas:</strong> proximidade, similaridade e fechamento aparecem em populações muito diversas, incluindo grupos com pouca exposição a mídia visual ocidental. São bons candidatos a mecanismos perceptivos básicos.</p>
 
-<p><strong>O que varia:</strong> a direção da leitura molda expectativas de sequência e de progressão temporal. Interfaces desenhadas para leitura da esquerda para a direita exigem mais que espelhamento quando adaptadas para árabe ou hebraico — a hierarquia de leitura, o sentido de "avançar" e a ancoragem visual mudam junto.</p>
+<p><strong>O que varia:</strong> a direção da leitura molda expectativas de sequência e de progressão temporal. Interfaces desenhadas para leitura da esquerda para a direita exigem mais que espelhamento quando adaptadas para árabe ou hebraico: a hierarquia de leitura, o sentido de "avançar" e a ancoragem visual mudam junto.</p>
 
 <p><strong>O que varia mais ainda:</strong> a chamada percepção holística versus analítica. Uma literatura influente sugeria que participantes do Leste Asiático processam cenas de forma mais contextual e ocidentais de forma mais focada no objeto.</p>
 
@@ -146,19 +146,19 @@ extensao: { minutos: 30, html: `
 
 <ul>
 <li><strong>Ela é sobre organização, não sobre significado.</strong> Agrupar corretamente não faz o usuário entender o que o grupo significa. Um formulário perfeitamente agrupado com rótulos incompreensíveis continua incompreensível.</li>
-<li><strong>Ela não diz nada sobre prioridade.</strong> Saber que quatro botões formam um grupo não indica qual deles é a ação principal. Isso é hierarquia visual — contraste, tamanho, posição — que é outro conjunto de mecanismos.</li>
+<li><strong>Ela não diz nada sobre prioridade.</strong> Saber que quatro botões formam um grupo não indica qual deles é a ação principal. Isso é hierarquia visual (contraste, tamanho, posição), outro conjunto de mecanismos.</li>
 <li><strong>Ela não substitui teste com usuários.</strong> Os princípios preveem agrupamento perceptivo. Não preveem compreensão, memória, motivação ou conclusão da tarefa, que são o que geralmente se quer medir.</li>
 <li><strong>Ela não resolve acessibilidade.</strong> Agrupamento visual não é transmitido a leitores de tela. Um layout gestalticamente impecável pode ser completamente inutilizável se a estrutura semântica do documento não replicar o agrupamento visual.</li>
 </ul>
 
 <div class="marca emergente">
 <span class="rot">Um desdobramento contemporâneo</span>
-<p>Modelos computacionais de visão hoje reproduzem vários efeitos de agrupamento gestáltico sem terem sido programados para isso — o agrupamento emerge do treinamento em imagens naturais. Isso é evidência indireta interessante para a hipótese da estatística ecológica: se regularidades do mundo bastam para produzir os efeitos, talvez não seja preciso postular princípios inatos. A ressalva é séria: redes também apresentam falhas de agrupamento que humanos não cometem, e semelhança de comportamento não demonstra semelhança de mecanismo.</p>
+<p>Modelos computacionais de visão hoje reproduzem vários efeitos de agrupamento gestáltico sem terem sido programados para isso: o agrupamento emerge do treinamento em imagens naturais. Isso é evidência indireta interessante para a hipótese da estatística ecológica: se regularidades do mundo bastam para produzir os efeitos, talvez não seja preciso postular princípios inatos. A ressalva é séria: redes também apresentam falhas de agrupamento que humanos não cometem, e semelhança de comportamento não demonstra semelhança de mecanismo.</p>
 </div>
 
 <h3>O resumo operacional</h3>
 
-<p>Se for guardar uma frase: <strong>o espaço em branco é o instrumento de agrupamento mais forte, mais barato e mais ignorado do design</strong>. Antes de acrescentar uma borda, uma cor de fundo, um separador ou um ícone, verifique se o problema não se resolve mudando distâncias. Quase sempre se resolve — e o resultado é mais limpo, mais rápido de renderizar e mais robusto a mudanças de conteúdo.</p>
+<p>Se for guardar uma frase: <strong>o espaço em branco é o instrumento de agrupamento mais forte, mais barato e mais ignorado do design</strong>. Antes de acrescentar uma borda, uma cor de fundo, um separador ou um ícone, verifique se o problema não se resolve mudando distâncias. Quase sempre se resolve, e o resultado é mais limpo, mais rápido de renderizar e mais robusto a mudanças de conteúdo.</p>
 
 <p>E, se for guardar uma segunda: os princípios são descrições confiáveis de <em>o que acontece</em> e explicações contestadas de <em>por que acontece</em>. Use-os como ferramenta de projeto com confiança. Cite-os como teoria da mente com cautela.</p>
 ` }

@@ -18,13 +18,13 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Comecemos por desfazer o que você provavelmente já ouviu. Se alguém lhe disse que Hegel pensa em "tese, antítese e síntese", essa pessoa lhe passou uma informação que Hegel não escreveu. A fórmula vem de Fichte, foi popularizada por Chalybäus e por comentadores do século XIX, e não aparece na descrição que Hegel faz da própria filosofia.<sup class="cit"><a href="#f1">1</a></sup></p>
 
-<p>Isso não é preciosismo acadêmico. A fórmula tríade sugere um esquema mecânico, aplicável de fora a qualquer conteúdo: pegue uma ideia, invente o oposto, combine. O procedimento real de Hegel é quase o inverso — e é a diferença entre entendê-lo e repetir um slogan.</p>
+<p>Isso não é preciosismo acadêmico. A fórmula tríade sugere um esquema mecânico, aplicável de fora a qualquer conteúdo: pegue uma ideia, invente o oposto, combine. O procedimento real de Hegel é quase o inverso, e é essa diferença que separa entender Hegel de repetir um slogan sobre ele.</p>
 
 <h3>O problema que Hegel herdou de Kant</h3>
 
 <p>Kant havia estabelecido algo perturbador: nós conhecemos os fenômenos, o modo como as coisas nos aparecem, moldado pelas estruturas da nossa própria mente. As coisas <em>em si</em>, independentes de nós, seriam inacessíveis por princípio. Há uma barreira, e ela é intransponível.</p>
 
-<p>A objeção de Hegel é elegante. Para afirmar que existe um limite, você precisa de algum modo já estar do outro lado dele — ou pelo menos saber o suficiente sobre o outro lado para reconhecê-lo como outro lado. Traçar uma fronteira do conhecimento é um ato de conhecimento. Se a barreira fosse absoluta, seria impossível saber que ela existe.</p>
+<p>A objeção de Hegel é elegante. Para afirmar que existe um limite, você precisa de algum modo já estar do outro lado dele, ou pelo menos saber o suficiente sobre o outro lado para reconhecê-lo como outro lado. Traçar uma fronteira do conhecimento é um ato de conhecimento. Se a barreira fosse absoluta, seria impossível saber que ela existe.</p>
 
 <p>A saída de Hegel: em vez de investigar previamente <em>se</em> podemos conhecer, acompanhar o conhecimento em ação e observar como ele corrige a si mesmo. É isso que a <em>Fenomenologia do Espírito</em> (1807) faz. Ela não é um sistema de conclusões: é a narrativa de uma sequência de tentativas fracassadas de conhecer, cada uma fracassando de um modo específico que gera a tentativa seguinte.</p>
 
@@ -42,18 +42,18 @@ nucleo: { minutos: 15, html: `
 
 <p>É a diferença entre um experimento que não funcionou e um experimento que revelou por que a hipótese estava errada. O segundo não devolve você ao ponto de partida: devolve você a um ponto mais informado. Hegel generaliza isso e transforma em motor do pensamento.</p>
 
-<p>O termo alemão para o resultado é <em>Aufhebung</em> — uma palavra que, no uso comum, significa simultaneamente cancelar, preservar e elevar. Hegel explora deliberadamente essa ambiguidade. A figura seguinte cancela a anterior enquanto conserva o que ela tinha de correto, num nível mais abrangente.</p>
+<p>O termo alemão para o resultado é <em>Aufhebung</em>: uma palavra que, no uso comum, significa simultaneamente cancelar, preservar e elevar. Hegel explora deliberadamente essa ambiguidade. A figura seguinte cancela a anterior enquanto conserva o que ela tinha de correto, num nível mais abrangente.</p>
 
 <div class="marca controverso">
 <span class="rot">Onde as traduções atrapalham</span>
-<p><em>Aufhebung</em> é traduzida em português por "suprassunção", "superação" e "supressão", e nenhuma carrega os três sentidos simultaneamente. "Superação" perde o cancelamento; "supressão" perde a conservação. Ao ler comentários sobre Hegel, vale sempre checar qual sentido o autor está privilegiando — muitas divergências interpretativas se dissolvem quando se percebe que os intérpretes traduziram a palavra de modos diferentes.</p>
+<p><em>Aufhebung</em> é traduzida em português por "suprassunção", "superação" e "supressão", e nenhuma carrega os três sentidos simultaneamente. "Superação" perde o cancelamento; "supressão" perde a conservação. Ao ler comentários sobre Hegel, vale sempre checar qual sentido o autor está privilegiando. Muitas divergências interpretativas se dissolvem quando se percebe que os intérpretes traduziram a palavra de modos diferentes.</p>
 </div>
 
 <h3>Um exemplo que você conhece: senhor e escravo</h3>
 
 <p>A passagem mais lida do livro. Duas autoconsciências se encontram e cada uma quer ser reconhecida pela outra. Segue um confronto; uma cede por medo da morte, e se estabelece a relação senhor-servo.</p>
 
-<p>Aí o movimento se inverte, e a inversão é o ponto. O senhor obtém reconhecimento — mas de alguém que ele mesmo reduziu à condição de não-plenamente-humano. Reconhecimento vindo de quem você não reconhece não vale nada. O senhor conquistou exatamente o que não queria.</p>
+<p>Aí o movimento se inverte, e a inversão é o ponto. O senhor obtém reconhecimento, mas de alguém que ele mesmo tratou como não plenamente humano. Reconhecimento vindo de quem você não reconhece não vale nada. O senhor conquistou exatamente o que não queria.</p>
 
 <p>O servo, enquanto isso, trabalha. Ao transformar a matéria, imprime nela sua própria forma, vê-se objetivado no mundo e desenvolve autoconsciência efetiva. A dependência se inverte: o senhor depende do servo para tudo, inclusive para a própria identidade.</p>
 
@@ -70,30 +70,30 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Há uma dificuldade lógica que Hegel enfrenta na Introdução da Fenomenologia e que vale acompanhar de perto, porque é a peça técnica do livro.</p>
 
-<p>Para saber se um conhecimento é verdadeiro, você precisa compará-lo com o objeto. Mas você só tem acesso ao objeto <em>como ele aparece para você</em> — ou seja, já dentro do conhecimento. Comparar o conhecimento com o objeto parece exigir sair do conhecimento, o que é impossível. Este é o problema do critério, e ele é genuinamente sério.</p>
+<p>Para saber se um conhecimento é verdadeiro, você precisa compará-lo com o objeto. Mas você só tem acesso ao objeto <em>como ele aparece para você</em>, ou seja, já dentro do conhecimento. Comparar o conhecimento com o objeto parece exigir sair do conhecimento, o que é impossível. Este é o problema do critério, e ele é genuinamente sério.</p>
 
-<p>A solução de Hegel é que a consciência já carrega <strong>os dois lados dentro de si</strong>. Ela tem uma noção do objeto (o "em si") e uma noção do seu saber sobre o objeto (o "para ela"). A comparação não precisa de nada externo: acontece entre dois momentos da própria consciência.</p>
+<p>A solução de Hegel é que a consciência já carrega os dois lados dentro de si. Ela tem uma noção do objeto (o "em si") e uma noção do seu saber sobre o objeto (o "para ela"). A comparação não precisa de nada externo: acontece entre dois momentos da própria consciência.</p>
 
-<p>E há uma consequência que Hegel sublinha: quando a comparação falha, não muda apenas o saber — <strong>muda também o objeto</strong>. Porque o que a consciência tomava como objeto era, o tempo todo, um objeto constituído pelo seu próprio critério. Mudou o critério, mudou o que conta como objeto. Por isso cada figura não é apenas uma opinião diferente sobre a mesma coisa: é um mundo diferente.</p>
+<p>E há uma consequência que Hegel sublinha: quando a comparação falha, não muda apenas o saber, muda também o objeto. Porque o que a consciência tomava como objeto era, o tempo todo, um objeto constituído pelo seu próprio critério. Mudou o critério, mudou o que conta como objeto. Por isso cada figura não é apenas uma opinião diferente sobre a mesma coisa: é um mundo diferente.</p>
 
 <h3>A abertura do livro: a certeza sensível</h3>
 
 <p>Vale ver o método em operação no caso mais simples. A primeira figura é a "certeza sensível": a convicção de que o conhecimento mais imediato e mais rico é o que aponta diretamente para o aqui e agora, sem conceitos intermediários. Parece inatacável.</p>
 
-<p>Hegel pede que ela se expresse. Escreva: "agora é noite". Guarde o papel. Ao meio-dia, leia. A proposição está falsa — mas a palavra "agora" continua funcionando perfeitamente. Ou seja: o que o "agora" preserva não é o instante particular, mas algo <em>universal</em>, que vale para qualquer instante. O mesmo vale para "aqui" e "isto".</p>
+<p>Hegel pede que ela se expresse. Escreva: "agora é noite". Guarde o papel. Ao meio-dia, leia. A proposição está falsa, mas a palavra "agora" continua funcionando perfeitamente. Ou seja: o que o "agora" preserva não é o instante particular, mas algo <em>universal</em>, que vale para qualquer instante. O mesmo vale para "aqui" e "isto".</p>
 
-<p>Conclusão: a certeza sensível pretendia ser o saber do puramente particular e, ao tentar dizer o que sabe, só consegue enunciar universais. Ela fracassa pelo seu próprio padrão. E note o que resta: não o nada, mas a descoberta de que percepção envolve mediação por universais — o que é exatamente a figura seguinte.</p>
+<p>Conclusão: a certeza sensível pretendia ser o saber do puramente particular e, ao tentar dizer o que sabe, só consegue enunciar universais. Ela fracassa pelo seu próprio padrão. E note o que resta: não o nada, mas a descoberta de que percepção envolve mediação por universais, o que é exatamente a figura seguinte.</p>
 
 <div class="marca consenso">
 <span class="rot">Por que este exemplo é importante</span>
 <p>Ele mostra que a "contradição" hegeliana não é violação da lógica formal. Ninguém está afirmando A e não-A simultaneamente no mesmo sentido. É uma inadequação performativa: uma posição que não consegue sustentar, ao ser articulada, aquilo que ela pretende ser. Confundir isso com rejeição do princípio de não contradição é o mal-entendido mais comum sobre Hegel entre leitores de formação analítica.</p>
 </div>
 
-<h3>O que "espírito" significa — e o que não significa</h3>
+<h3>O que "espírito" significa, e o que não significa</h3>
 
 <p><em>Geist</em> é o termo mais mal compreendido do vocabulário hegeliano. Não é fantasma, não é alma individual, não é entidade sobrenatural. A leitura hoje dominante entre comentadores anglófonos, associada a Pippin, Pinkard e Brandom, é que <em>Geist</em> designa o espaço de normas, práticas e reconhecimento mútuo constituído coletivamente por sujeitos.<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<p>Nesta leitura, dizer que o espírito se realiza na história é dizer que as normas pelas quais os humanos se avaliam mutuamente são produto histórico e se transformam quando entram em contradição com a prática efetiva. Nada de metafísica pesada — é uma tese sobre a estrutura social da racionalidade.</p>
+<p>Nesta leitura, dizer que o espírito se realiza na história é dizer que as normas pelas quais os humanos se avaliam mutuamente são produto histórico e se transformam quando entram em contradição com a prática efetiva. Não é uma tese de metafísica pesada. É uma tese sobre a estrutura social da racionalidade.</p>
 
 <div class="marca controverso">
 <span class="rot">Disputa interpretativa em curso</span>
@@ -105,7 +105,7 @@ aprofundamento: { minutos: 15, html: `
 <p>Quatro razões, e nenhuma delas é obscurantismo deliberado:</p>
 
 <ul>
-<li><strong>Sem metalinguagem.</strong> Hegel se recusa a descrever de fora o que está fazendo, porque isso pressuporia um ponto de vista externo ao processo — exatamente o que ele nega existir. O leitor precisa acompanhar o movimento em vez de receber um mapa.</li>
+<li><strong>Sem metalinguagem.</strong> Hegel se recusa a descrever de fora o que está fazendo, porque isso pressuporia um ponto de vista externo ao processo, exatamente o que ele nega existir. O leitor precisa acompanhar o movimento em vez de receber um mapa.</li>
 <li><strong>Termos que mudam de sentido.</strong> Conceitos como "ser", "essência" e "conceito" adquirem significados sucessivamente mais determinados ao longo do texto. Fixar uma definição no capítulo 2 e carregá-la até o fim leva a contradições aparentes.</li>
 <li><strong>Condições de escrita.</strong> Hegel entregou o manuscrito em partes ao editor enquanto ainda escrevia, sob pressão financeira e com Napoleão tomando Jena. A estrutura da segunda metade é notoriamente menos controlada que a da primeira, e isso é reconhecido inclusive por seus defensores.</li>
 <li><strong>Densidade referencial.</strong> Boa parte das figuras alude a posições filosóficas, religiosas e literárias específicas do período — estoicismo, ceticismo, Iluminismo francês, Antígona, o Terror jacobino — quase nunca nomeadas.</li>
@@ -130,7 +130,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>"Saber absoluto" é outro termo que engana. Não significa onisciência, nem posse de todas as verdades. Significa o ponto em que a consciência compreende que o próprio processo de formação era o objeto — que não havia um "em si" atrás do percurso, esperando ser alcançado. É reflexivo, não enciclopédico.</p>
+<p>"Saber absoluto" é outro termo que engana. Não significa onisciência, nem posse de todas as verdades. Significa o ponto em que a consciência compreende que o próprio processo de formação era o objeto: não havia um "em si" atrás do percurso, esperando ser alcançado. É reflexivo, não enciclopédico.</p>
 
 <h3>As três grandes críticas, e o que sobrevive delas</h3>
 
@@ -142,7 +142,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca controverso">
 <span class="rot">Sobre a crítica de Popper</span>
-<p>Historiadores da filosofia, inclusive não hegelianos, documentaram que Popper trabalhou com citações truncadas, atribuiu a Hegel posições de discípulos e ignorou o contexto de passagens políticas. A acusação de que Hegel rejeita o princípio de não contradição é insustentável: a "contradição" hegeliana é inadequação performativa, não conjunção de A e não-A. Isso não significa que Hegel esteja livre de crítica política — sua filosofia do direito tem passagens genuinamente problemáticas, e há debate sério sobre elas. Significa apenas que a versão de Popper não é uma boa fonte para saber o que Hegel disse.</p>
+<p>Historiadores da filosofia, inclusive não hegelianos, documentaram que Popper trabalhou com citações truncadas, atribuiu a Hegel posições de discípulos e ignorou o contexto de passagens políticas. A acusação de que Hegel rejeita o princípio de não contradição é insustentável: a "contradição" hegeliana é inadequação performativa, não conjunção de A e não-A. Isso não significa que Hegel esteja livre de crítica política: sua filosofia do direito tem passagens genuinamente problemáticas, e há debate sério sobre elas. Significa apenas que a versão de Popper não é uma boa fonte para saber o que Hegel disse.</p>
 </div>
 
 <h3>Por que ainda se lê isso</h3>
@@ -153,17 +153,17 @@ extensao: { minutos: 30, html: `
 
 <p><strong>Crítica imanente como método.</strong> Avaliar uma prática pelos padrões que ela mesma declara, em vez de aplicar um critério externo, é o procedimento padrão da teoria crítica e reaparece em análise institucional, crítica de ideologia e até em auditoria de coerência de programas de pesquisa. É uma ferramenta metodológica destacável do sistema.</p>
 
-<p><strong>Historicidade das categorias.</strong> A ideia de que os próprios conceitos com que pensamos têm história, e que isso não os torna arbitrários, atravessa Kuhn, Foucault, Koselleck e a história conceitual. É a resposta hegeliana ao dilema entre absolutismo e relativismo — e continua sendo uma das poucas tentativas sérias de escapar dos dois.</p>
+<p><strong>Historicidade das categorias.</strong> A ideia de que os próprios conceitos com que pensamos têm história, e que isso não os torna arbitrários, atravessa Kuhn, Foucault, Koselleck e a história conceitual. É a resposta hegeliana ao dilema entre absolutismo e relativismo, e continua sendo uma das poucas tentativas sérias de escapar dos dois.</p>
 
 <h3>Como ler, se você decidir tentar</h3>
 
-<p>Um conselho prático que quase todos os especialistas repetem: <strong>não comece pelo Prefácio</strong>. Ele foi escrito por último, é um dos textos mais densos da filosofia ocidental e pressupõe o livro inteiro. Comece pela Introdução, que apresenta o método, e depois pela Certeza Sensível, onde o método aparece funcionando num caso simples.</p>
+<p>Um conselho prático e recorrente em introduções ao livro, como a de Houlgate:<sup class="cit"><a href="#f6">6</a></sup> <strong>não comece pelo Prefácio</strong>. Ele foi escrito por último, é um dos textos mais densos da filosofia ocidental e pressupõe o livro inteiro. Comece pela Introdução, que apresenta o método, e depois pela Certeza Sensível, onde o método aparece funcionando num caso simples.</p>
 
-<p>O segundo conselho: leia com um comentário ao lado desde o início. Isso não é fraqueza — a densidade referencial do texto torna a leitura solitária improdutiva para quem não conhece o contexto de 1807. Terceiro: aceite não entender partes inteiras na primeira passagem. O próprio movimento do livro pressupõe que o leitor refaça o percurso.</p>
+<p>O segundo conselho: leia com um comentário ao lado desde o início. Isso não é fraqueza: a densidade referencial do texto torna a leitura solitária improdutiva para quem não conhece o contexto de 1807. Terceiro: aceite não entender partes inteiras na primeira passagem. O próprio movimento do livro pressupõe que o leitor refaça o percurso.</p>
 
 <div class="marca especulacao">
 <span class="rot">Uma observação especulativa, marcada como tal</span>
-<p>Existe uma literatura recente que aproxima a dialética hegeliana de processos de aprendizado por correção de erro, incluindo em sistemas artificiais: um modelo com um critério interno que gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso. A analogia estrutural é sugestiva e ocasionalmente iluminadora. Mas é analogia, não continuidade histórica nem tese demonstrada — e Hegel insiste que o processo é normativo e social, não algorítmico, o que é precisamente o ponto em que a comparação se rompe.</p>
+<p>Existe uma literatura recente que aproxima a dialética hegeliana de processos de aprendizado por correção de erro, incluindo em sistemas artificiais: um modelo com um critério interno que gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso. A analogia estrutural é sugestiva e ocasionalmente iluminadora. Mas é analogia, não continuidade histórica nem tese demonstrada. Hegel insiste que o processo é normativo e social, não algorítmico, e é precisamente aí que a comparação se rompe.</p>
 </div>
 ` }
 },

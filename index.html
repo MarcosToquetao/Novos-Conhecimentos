@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Novos Conhecimentos</title>
 <meta name="description" content="Sorteie um conceito, estude por um tempo determinado e teste o que você realmente aprendeu.">
-<meta name="theme-color" content="#FBF9F5">
+<meta name="theme-color" content="#F0EBE1">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -17,11 +17,23 @@
 
 <!-- ══ Barra superior (fora da leitura) ═══════════════════════════════ -->
 <header class="barra" id="barra">
-  <div class="marca-selo" aria-hidden="true">NC</div>
+  <div class="marca-selo" aria-hidden="true">N</div>
   <div class="barra-marca"><b>Novos Conhecimentos</b></div>
-  <button class="icone-btn" id="btn-catalogo" title="Catálogo" aria-label="Catálogo">☰</button>
-  <button class="icone-btn" id="btn-historico" title="Histórico" aria-label="Histórico">◷</button>
-  <button class="icone-btn" id="btn-tema" title="Alternar tema" aria-label="Alternar tema">◐</button>
+  <button class="icone-btn" id="btn-catalogo" title="Catálogo" aria-label="Catálogo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
+      <path d="M4 6h16M4 12h16M4 18h10"/>
+    </svg>
+  </button>
+  <button class="icone-btn" id="btn-historico" title="Histórico" aria-label="Histórico">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.2 2"/>
+    </svg>
+  </button>
+  <button class="icone-btn" id="btn-tema" title="Alternar tema" aria-label="Alternar tema">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M20 13.4A8.2 8.2 0 1 1 10.6 4a6.6 6.6 0 0 0 9.4 9.4Z"/>
+    </svg>
+  </button>
 </header>
 
 <!-- ══ Cronômetro (só na leitura) ═════════════════════════════════════ -->
@@ -37,9 +49,10 @@
 
   <!-- ── Tela: início ─────────────────────────────────────────────── -->
   <section class="tela ativa" id="tela-inicio">
+    <div class="fundo-cartoes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <div class="envelope">
       <div class="hero">
-        <p class="chapeu">Protótipo v1</p>
+        <p class="chapeu">Protótipo</p>
         <h1>Um conceito por vez</h1>
         <p class="subtitulo">Sorteie um assunto que você não escolheu, estude pelo tempo que você definir e descubra, na prova, quanto de fato ficou.</p>
       </div>

@@ -68,6 +68,7 @@ Antes de publicar, suba o número da versão em `sw.js` (`const VERSAO = "nc-v2"
 ```
 index.html            estrutura das telas
 css/estilo.css        toda a aparência (temas claro e escuro)
+fonts/*.woff2         Noticia Text e Inter, embutidas para funcionar offline
 js/catalogo.js        202 conceitos — só os termos
 js/docs/*.js          um arquivo por documento de estudo (fonte)
 js/conteudos.js       GERADO — não editar à mão

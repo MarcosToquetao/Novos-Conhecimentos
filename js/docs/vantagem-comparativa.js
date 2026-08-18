@@ -22,7 +22,7 @@ nucleo: { minutos: 15, html: `
 
 <p>A intuição natural diz: se o país A produz tudo mais barato que o país B, então A não tem o que ganhar comerciando com B. B seria apenas um parceiro inferior.</p>
 
-<p>Essa intuição está errada, e o motivo é que ela compara a coisa errada. O que decide a especialização não é quanto custa produzir algo <em>em termos absolutos</em>, e sim quanto você <strong>deixa de produzir de outra coisa</strong> ao produzi-la. Custo de oportunidade, não custo absoluto.</p>
+<p>Essa intuição está errada, e o motivo é que ela compara a coisa errada. O que decide a especialização não é quanto custa produzir algo <em>em termos absolutos</em>, e sim quanto você deixa de produzir de outra coisa ao produzi-la. Custo de oportunidade, não custo absoluto.</p>
 
 <h3>O exemplo de Ricardo, com os números originais</h3>
 
@@ -42,9 +42,9 @@ nucleo: { minutos: 15, html: `
 
 <p>Agora faça a pergunta certa. Em Portugal, produzir uma unidade de vinho custa 80 horas — que poderiam ter feito 80/90 ≈ 0,89 unidade de tecido. Na Inglaterra, uma unidade de vinho custa 120 horas, que fariam 120/100 = 1,2 unidade de tecido.</p>
 
-<p><strong>Vinho é mais barato em Portugal e tecido é mais barato na Inglaterra</strong> — em termos do que cada um sacrifica. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido.</p>
+<p>Vinho é mais barato em Portugal e tecido é mais barato na Inglaterra, em termos do que cada um sacrifica. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido.</p>
 
-<figure class="figura">[[FIG:ricardo-ppf]]<figcaption>O que cada país consegue produzir com 100 horas. A reta de Portugal está inteiramente acima e à direita — ele é melhor nos dois. Mas as inclinações são diferentes, e é a inclinação, não a altura, que determina quem deve se especializar em quê.</figcaption></figure>
+<figure class="figura">[[FIG:ricardo-ppf]]<figcaption>O que cada país consegue produzir com 100 horas. A reta de Portugal está inteiramente acima e à direita: ele é melhor nos dois. Mas as inclinações são diferentes, e é a inclinação, não a altura, que determina quem deve se especializar em quê.</figcaption></figure>
 
 <h3>A conta que mostra o ganho</h3>
 
@@ -54,7 +54,7 @@ nucleo: { minutos: 15, html: `
 
 <p><strong>Com especialização completa:</strong> Portugal dedica as 200 horas ao vinho: 2,5 unidades. A Inglaterra dedica as 200 ao tecido: 2 unidades. <em>Total mundial: 2,5 vinho e 2 tecido.</em></p>
 
-<p>Comparando: o mundo ganhou 0,42 unidade de vinho e perdeu 0,11 de tecido. A qualquer taxa de troca entre 0,89 e 1,2 tecido por vinho, existe um acordo que deixa <strong>os dois países</strong> com mais dos dois produtos do que teriam sozinhos. O ganho não veio de trabalhar mais nem de tecnologia nova — veio apenas de reorganizar quem faz o quê.</p>
+<p>Comparando: o mundo ganhou 0,42 unidade de vinho e perdeu 0,11 de tecido. A qualquer taxa de troca entre 0,89 e 1,2 tecido por vinho, existe um acordo que deixa os dois países com mais dos dois produtos do que teriam sozinhos. O ganho não veio de trabalhar mais nem de tecnologia nova; veio apenas de reorganizar quem faz o quê.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -63,7 +63,7 @@ nucleo: { minutos: 15, html: `
 
 <div class="marca controverso">
 <span class="rot">E onde a controvérsia realmente está</span>
-<p>Quase toda a disputa sobre comércio internacional é sobre as <em>premissas</em>, não sobre a lógica. O modelo de Ricardo supõe pleno emprego, trabalho que se realoca sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. Cada uma dessas suposições falha em algum grau no mundo real, e a magnitude dessas falhas é uma questão empírica — não ideológica.</p>
+<p>Quase toda a disputa sobre comércio internacional é sobre as <em>premissas</em>, não sobre a lógica. O modelo de Ricardo supõe pleno emprego, trabalho que se realoca sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. Cada uma dessas suposições falha em algum grau no mundo real, e a magnitude dessas falhas é uma questão empírica, não ideológica.</p>
 </div>
 
 <h3>O que o teorema realmente afirma</h3>
@@ -80,12 +80,12 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="formula">
 a<sub>1X</sub> / a<sub>1Y</sub> &lt; a<sub>2X</sub> / a<sub>2Y</sub>
-<span class="leg">a razão entre os custos internos — não os custos em si</span>
+<span class="leg">a razão entre os custos internos, não os custos em si</span>
 </div>
 
-<p>Repare que os níveis absolutos desaparecem completamente. Multiplique todos os custos de Portugal por dez, tornando-o dez vezes menos produtivo em tudo: a desigualdade não muda, e o padrão de especialização também não. Isso captura formalmente a ideia central — <strong>produtividade absoluta é irrelevante para o padrão de comércio</strong>.</p>
+<p>Repare que os níveis absolutos desaparecem completamente. Multiplique todos os custos de Portugal por dez, tornando-o dez vezes menos produtivo em tudo: a desigualdade não muda, e o padrão de especialização também não. Isso captura formalmente a ideia central: produtividade absoluta é irrelevante para o padrão de comércio.</p>
 
-<p>Produtividade absoluta determina outra coisa, e é importante não confundir: ela determina o <strong>nível de salários</strong>. Um país menos produtivo em tudo não fica sem comércio — ele comercia com salários mais baixos. Essa é a resposta padrão a duas objeções simétricas e ambas equivocadas: "não podemos competir com países de mão de obra barata" e "países pobres não têm o que oferecer".</p>
+<p>Produtividade absoluta determina outra coisa, e é importante não confundir: ela determina o <strong>nível de salários</strong>. Um país menos produtivo em tudo não fica sem comércio: ele comercia com salários mais baixos. Essa é a resposta padrão a duas objeções simétricas e ambas equivocadas: "não podemos competir com países de mão de obra barata" e "países pobres não têm o que oferecer".</p>
 
 <h3>Quem ganha e quem perde dentro do país</h3>
 
@@ -95,25 +95,25 @@ a<sub>1X</sub> / a<sub>1Y</sub> &lt; a<sub>2X</sub> / a<sub>2Y</sub>
 
 <div class="marca consenso">
 <span class="rot">Consenso técnico frequentemente omitido no debate público</span>
-<p>Que o comércio produz perdedores concentrados e ganhadores difusos não é uma crítica heterodoxa ao modelo: é um resultado do próprio arcabouço padrão, demonstrado há mais de oitenta anos. A defesa habitual — "os ganhadores poderiam compensar os perdedores" — é logicamente correta e empiricamente frágil: a compensação raramente é implementada em escala suficiente, e o teorema não oferece nenhum mecanismo que a garanta.</p>
+<p>Que o comércio produz perdedores concentrados e ganhadores difusos não é uma crítica heterodoxa ao modelo: é um resultado do próprio arcabouço padrão, demonstrado há mais de oitenta anos. A defesa habitual ("os ganhadores poderiam compensar os perdedores") é logicamente correta e empiricamente frágil: a compensação raramente é implementada em escala suficiente, e o teorema não oferece nenhum mecanismo que a garanta.</p>
 </div>
 
 <h3>O que os dados mostraram: o "China Shock"</h3>
 
 <p>Durante décadas, a economia do comércio operou com um pressuposto de ajuste relativamente rápido: trabalhadores deslocados encontrariam emprego em setores em expansão dentro de poucos anos. Autor, Dorn e Hanson testaram isso empiricamente para o caso da entrada da China no comércio mundial a partir dos anos 1990.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<p>Os achados centrais, medidos em mercados de trabalho locais dos Estados Unidos mais expostos à concorrência chinesa: perda de emprego industrial persistente, queda de salários, aumento de dependência de benefícios e — o ponto crítico — <strong>ajuste muito mais lento do que os modelos supunham</strong>, com efeitos ainda visíveis uma década depois. A mobilidade geográfica dos trabalhadores afetados foi menor do que a teoria previa.</p>
+<p>Os achados centrais, medidos em mercados de trabalho locais dos Estados Unidos mais expostos à concorrência chinesa: perda de emprego industrial persistente, queda de salários, aumento de dependência de benefícios e, o ponto crítico, ajuste muito mais lento do que os modelos supunham, com efeitos ainda visíveis uma década depois. A mobilidade geográfica dos trabalhadores afetados foi menor do que a teoria previa.</p>
 
 <div class="marca emergente">
 <span class="rot">Como o campo respondeu</span>
-<p>Esta literatura reorientou o debate. O consenso atual entre economistas do comércio não é que Ricardo esteja errado, e sim que os ganhos agregados são reais mas os custos de ajuste foram sistematicamente subestimados, e que sua concentração geográfica e setorial tem consequências políticas que os modelos não capturavam. Vale registrar o que isso demonstra sobre a disciplina: um consenso teórico de décadas foi qualificado por evidência empírica cuidadosa, o que é exatamente o que se espera de uma ciência funcionando.</p>
+<p>Esta literatura reorientou o debate. O consenso atual entre economistas do comércio não é que Ricardo esteja errado, e sim que os ganhos agregados são reais mas os custos de ajuste foram sistematicamente subestimados, e que sua concentração geográfica e setorial tem consequências políticas que os modelos não capturavam. Um consenso teórico de décadas foi qualificado por evidência empírica cuidadosa: é o que se espera de uma ciência funcionando.</p>
 </div>
 
 <h3>A ressalva do próprio Samuelson</h3>
 
-<p>Em 2004, Samuelson — que havia dedicado a carreira a defender o livre comércio — publicou um artigo mostrando que existe um caso em que um país pode ficar <strong>permanentemente pior</strong> com o comércio.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Em 2004, Samuelson, que havia dedicado a carreira a defender o livre comércio, publicou um artigo mostrando que existe um caso em que um país pode ficar <strong>permanentemente pior</strong> com o comércio.<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<p>O mecanismo: se o país B tem um ganho de produtividade justamente no setor em que o país A tinha vantagem comparativa, os termos de troca de A pioram. A perde mais com a deterioração dos preços relativos do que ganha com os produtos mais baratos. Não é um argumento protecionista — Samuelson observa que barreiras comerciais tornariam a situação ainda pior. É um argumento sobre os limites de uma afirmação que vinha sendo feita de forma incondicional.</p>
+<p>O mecanismo: se o país B tem um ganho de produtividade justamente no setor em que o país A tinha vantagem comparativa, os termos de troca de A pioram. A perde mais com a deterioração dos preços relativos do que ganha com os produtos mais baratos. Não é um argumento protecionista: Samuelson observa que barreiras comerciais tornariam a situação ainda pior. É um argumento sobre os limites de uma afirmação que vinha sendo feita de forma incondicional.</p>
 ` },
 
 extensao: { minutos: 30, html: `
@@ -143,16 +143,16 @@ extensao: { minutos: 30, html: `
 
 <div class="marca controverso">
 <span class="rot">Controvérsia empírica genuína, ainda aberta</span>
-<p>Os defensores do argumento apontam que Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul industrializaram-se sob proteção substancial, e só depois adotaram o livre comércio. Os críticos apontam viés de seleção: para cada Coreia do Sul há vários casos de substituição de importações que produziram indústrias ineficientes e permanentemente dependentes de subsídio. A questão empírica real não é "proteção funciona?", mas "sob quais condições institucionais a proteção produz aprendizado em vez de captura de renda?" — e essa pergunta não tem resposta consensual.</p>
+<p>Os defensores do argumento apontam que Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul industrializaram-se sob proteção substancial, e só depois adotaram o livre comércio. Os críticos apontam viés de seleção: para cada Coreia do Sul há vários casos de substituição de importações que produziram indústrias ineficientes e permanentemente dependentes de subsídio. A questão empírica real não é "proteção funciona?", mas "sob quais condições institucionais a proteção produz aprendizado em vez de captura de renda?" Essa pergunta não tem resposta consensual.</p>
 </div>
 
 <h3>Nova teoria do comércio: por que países parecidos comerciam tanto</h3>
 
-<p>O modelo ricardiano prevê que o comércio ocorre entre países <em>diferentes</em>: quanto maior a diferença de custos relativos, maior o ganho. Mas o maior volume de comércio mundial acontece entre países ricos e similares — Alemanha e França trocam carros por carros.</p>
+<p>O modelo ricardiano prevê que o comércio ocorre entre países <em>diferentes</em>: quanto maior a diferença de custos relativos, maior o ganho. Mas o maior volume de comércio mundial acontece entre países ricos e similares: Alemanha e França trocam carros por carros.</p>
 
 <p>Paul Krugman formalizou a explicação nos anos 1980, o que lhe rendeu o Nobel de 2008. Com <strong>economias de escala</strong> e <strong>preferência por variedade</strong>, dois países idênticos ainda ganham comerciando: cada um se especializa em algumas variedades, produz em escala maior com custo unitário menor, e ambos os consumidores acessam mais variedades.</p>
 
-<p>A implicação conceitual é forte: neste modelo, o padrão de especialização é <strong>indeterminado</strong>. Quem produz o quê pode ser resultado de acidente histórico, e depois se consolida por retornos crescentes. Vantagem comparativa deixa de ser algo que se descobre e passa a ser algo que se constrói — o que muda inteiramente as implicações de política.</p>
+<p>A implicação conceitual é forte: neste modelo, o padrão de especialização é <strong>indeterminado</strong>. Quem produz o quê pode ser resultado de acidente histórico, e depois se consolida por retornos crescentes. Vantagem comparativa deixa de ser algo que se descobre e passa a ser algo que se constrói. Isso muda inteiramente as implicações de política.</p>
 
 <h3>Como avaliar um argumento sobre comércio</h3>
 
@@ -160,7 +160,7 @@ extensao: { minutos: 30, html: `
 
 <ol>
 <li><strong>Agregado ou distributivo?</strong> Ganho agregado e distribuição do ganho são afirmações distintas. Um argumento que responde à segunda pergunta com evidência sobre a primeira está mudando de assunto.</li>
-<li><strong>Qual horizonte temporal?</strong> Ganhos de comércio são difusos e permanentes; custos de ajuste são concentrados e temporários — mas "temporário" pode significar uma década, o que é boa parte de uma carreira.</li>
+<li><strong>Qual horizonte temporal?</strong> Ganhos de comércio são difusos e permanentes; custos de ajuste são concentrados e temporários, mas "temporário" pode significar uma década, o que é boa parte de uma carreira.</li>
 <li><strong>Estático ou dinâmico?</strong> A análise considera apenas a alocação atual de recursos, ou também o efeito sobre a capacidade produtiva futura?</li>
 <li><strong>O que está fora da contabilidade?</strong> Custos ambientais, condições de trabalho e transferência de tecnologia raramente entram no cálculo de ganhos.</li>
 <li><strong>Qual é a alternativa concreta?</strong> Mostrar que o livre comércio tem custos não estabelece que a política proposta em seu lugar tenha custos menores. Comparar uma política real com um ideal é o erro simétrico mais comum.</li>
@@ -168,7 +168,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
-<p>A vantagem comparativa é um teorema correto sobre custos de oportunidade, não uma doutrina política. Ela estabelece que existem ganhos agregados do comércio e que produtividade absoluta não determina o padrão de especialização. Ela não estabelece que o comércio beneficia todos, que o ajuste é rápido, que a especialização atual é a melhor para o futuro, nem que qualquer acordo comercial concreto é bom. Confundir o teorema com essas conclusões adicionais é o uso indevido mais frequente — e ele acontece, com igual frequência, dos dois lados do debate.</p>
+<p>A vantagem comparativa é um teorema correto sobre custos de oportunidade, não uma doutrina política. Ela estabelece que existem ganhos agregados do comércio e que produtividade absoluta não determina o padrão de especialização. Ela não estabelece que o comércio beneficia todos, que o ajuste é rápido, que a especialização atual é a melhor para o futuro, nem que qualquer acordo comercial concreto é bom. Confundir o teorema com essas conclusões adicionais é o uso indevido mais frequente. Isso acontece, com igual frequência, dos dois lados do debate.</p>
 </div>
 ` }
 },

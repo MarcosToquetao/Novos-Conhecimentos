@@ -18,29 +18,29 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Garrett Hardin publicou na <em>Science</em>, em 1968, um artigo que se tornou um dos textos mais citados das ciências sociais.<sup class="cit"><a href="#f1">1</a></sup> A imagem é simples: um pasto aberto a todos os pastores de uma vila. Cada pastor, agindo racionalmente, decide acrescentar mais um animal ao rebanho.</p>
 
-<p>A conta que ele faz é a seguinte. O benefício do animal adicional — sua carne, seu leite — é <strong>inteiramente dele</strong>. O custo — um pouco mais de pasto degradado — é <strong>dividido entre todos</strong>. Se há vinte pastores, ele arca com um vinte avos do prejuízo e fica com a totalidade do lucro. A decisão racional é clara: acrescentar o animal.</p>
+<p>A conta que ele faz é a seguinte: o benefício do animal adicional (sua carne, seu leite) é inteiramente dele. O custo, um pouco mais de pasto degradado, é dividido entre todos. Se há vinte pastores, ele arca com um vinte avos do prejuízo e fica com a totalidade do lucro. A decisão racional é clara: acrescentar o animal.</p>
 
 <p>E é clara para todos os pastores, simultaneamente. Cada um acrescenta. O pasto colapsa. Hardin: "A ruína é o destino para o qual todos os homens correm, cada um perseguindo seu próprio interesse numa sociedade que acredita na liberdade dos bens comuns. A liberdade num bem comum traz a ruína para todos."</p>
 
-<figure class="figura">[[FIG:comuns-matriz]]<figcaption>A estrutura de incentivos em sua forma mais simples. Explorar é a melhor resposta individual qualquer que seja a escolha do outro — e o resultado conjunto é pior para ambos do que a cooperação que nenhum dos dois consegue escolher sozinho.</figcaption></figure>
+<figure class="figura">[[FIG:comuns-matriz]]<figcaption>A estrutura de incentivos em sua forma mais simples. Explorar é a melhor resposta individual qualquer que seja a escolha do outro, e o resultado conjunto é pior para ambos do que a cooperação que nenhum dos dois consegue escolher sozinho.</figcaption></figure>
 
 <h3>Por que o argumento é tão convincente</h3>
 
-<p>Porque não depende de ninguém ser ganancioso, mal-intencionado ou estúpido. Ele funciona com agentes perfeitamente racionais e até com agentes de boa-fé. Basta que o benefício seja privado e o custo, socializado. É essa robustez que faz do argumento um instrumento analítico poderoso — e o que o tornou aplicável a pesca, desmatamento, aquíferos, resistência a antibióticos, congestionamento urbano e emissões de carbono.</p>
+<p>Porque não depende de ninguém ser ganancioso, mal-intencionado ou estúpido. Ele funciona com agentes perfeitamente racionais e até com agentes de boa-fé. Basta que o benefício seja privado e o custo, socializado. Essa robustez explica por que o argumento se aplica a pesca, desmatamento, aquíferos, resistência a antibióticos, congestionamento urbano e emissões de carbono.</p>
 
-<p>Hardin extraiu daí uma conclusão política forte: como a persuasão moral não altera a estrutura de incentivos, a única saída seria a <strong>coerção mútua mutuamente acordada</strong> — regulação estatal — ou a <strong>privatização</strong>, que internaliza o custo em quem toma a decisão. Estado ou mercado. Não haveria terceira via.</p>
+<p>Hardin extraiu daí uma conclusão política forte: como a persuasão moral não altera a estrutura de incentivos, a única saída seria a coerção mútua mutuamente acordada (regulação estatal) ou a privatização, que internaliza o custo em quem toma a decisão. Estado ou mercado, sem terceira via.</p>
 
 <h3>O que Elinor Ostrom encontrou</h3>
 
-<p>Ostrom fez algo que o debate teórico não estava fazendo: foi verificar. Ao longo de décadas, ela e colaboradores documentaram e compararam centenas de sistemas reais de recursos compartilhados — sistemas de irrigação nas Filipinas e na Espanha, pastagens comunais na Suíça, florestas no Japão e no Nepal, pesqueiras na Turquia e no Sri Lanka.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Ostrom fez algo que o debate teórico não estava fazendo: foi verificar. Ao longo de décadas, ela e colaboradores documentaram e compararam centenas de sistemas reais de recursos compartilhados: sistemas de irrigação nas Filipinas e na Espanha, pastagens comunais na Suíça, florestas no Japão e no Nepal, pesqueiras na Turquia e no Sri Lanka.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <p>O achado central: <strong>muitos desses sistemas funcionaram de forma sustentável por séculos</strong>, sem privatização e sem controle estatal. Os pastos comunais de Törbel, nos Alpes suíços, são geridos coletivamente com regras documentadas desde 1224. As <em>huertas</em> de Valência distribuem água por regras comunitárias que atravessaram mais de quinhentos anos e três regimes políticos.</p>
 
-<p>Ostrom recebeu o Nobel de Economia em 2009 — a primeira mulher a recebê-lo, e uma cientista política num prêmio de economia.</p>
+<p>Ostrom recebeu o Nobel de Economia em 2009, a primeira mulher a recebê-lo, e uma cientista política num prêmio de economia.</p>
 
 <div class="marca consenso">
 <span class="rot">O que o achado significa, com precisão</span>
-<p>Ostrom não mostrou que Hardin estava logicamente errado. O modelo dele está correto <em>para as condições que ele supõe</em>. O que ela mostrou é que essas condições — ausência de comunicação, ausência de regras acordadas, ausência de monitoramento e de sanções — descrevem um caso particular e não muito comum. Hardin modelou um <strong>recurso de acesso livre</strong> (open access) e chamou isso de "bem comum". Bens comuns reais quase sempre têm regras de acesso, e essa diferença é o que decide o resultado.</p>
+<p>Ostrom não mostrou que Hardin estava logicamente errado. O modelo dele está correto <em>para as condições que ele supõe</em>. O que ela mostrou é que essas condições (ausência de comunicação, ausência de regras acordadas, ausência de monitoramento e de sanções) descrevem um caso particular e não muito comum. Hardin modelou um recurso de acesso livre (open access) e chamou isso de "bem comum". Bens comuns reais quase sempre têm regras de acesso, e essa diferença é o que decide o resultado.</p>
 </div>
 
 <h3>A distinção que resolve metade da confusão</h3>
@@ -57,7 +57,7 @@ nucleo: { minutos: 15, html: `
 </table>
 </div>
 
-<p>Hardin colapsou as duas primeiras linhas numa só. A tragédia é real e severa em acesso livre. Em propriedade comum bem governada, ela frequentemente não ocorre. Confundir as duas leva a recomendações de política que destroem instituições que estavam funcionando — e isso aconteceu, repetidamente, em programas de nacionalização de florestas e pesqueiras no século XX.</p>
+<p>Hardin colapsou as duas primeiras linhas numa só. A tragédia é real e severa em acesso livre. Em propriedade comum bem governada, ela frequentemente não ocorre. Confundir as duas leva a recomendações de política que destroem instituições que estavam funcionando, e isso aconteceu, repetidamente, em programas de nacionalização de florestas e pesqueiras no século XX.</p>
 ` },
 
 aprofundamento: { minutos: 15, html: `
@@ -78,20 +78,20 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="marca consenso">
 <span class="rot">Os dois princípios que mais importam</span>
-<p>Análises posteriores sugerem que monitoramento e sanções graduadas — os itens 4 e 5 — são os mais fortemente associados ao sucesso. Isso é teoricamente coerente: eles são justamente o que altera a matriz de incentivos que Hardin descreveu. Cooperação não emerge por virtude; emerge porque a estrutura de recompensas mudou.</p>
+<p>Análises posteriores sugerem que monitoramento e sanções graduadas (os itens 4 e 5) são os mais fortemente associados ao sucesso. Isso é teoricamente coerente: eles são justamente o que altera a matriz de incentivos que Hardin descreveu. Cooperação não emerge por virtude; emerge porque a estrutura de recompensas mudou.</p>
 </div>
 
 <h3>Por que a comunicação muda tudo</h3>
 
-<p>O resultado experimental mais robusto da economia comportamental sobre esse tema: em jogos de bens públicos de laboratório, permitir que os participantes <strong>conversem antes de decidir</strong> eleva substancialmente a cooperação. Mesmo sem qualquer mecanismo de execução — conversa sem contrato, sem punição, sem obrigação.</p>
+<p>O resultado experimental mais robusto da economia comportamental sobre esse tema: em jogos de bens públicos de laboratório, permitir que os participantes <strong>conversem antes de decidir</strong> eleva substancialmente a cooperação. Mesmo sem qualquer mecanismo de execução: conversa sem contrato, sem punição, sem obrigação.</p>
 
 <p>Isso é teoricamente desconcertante, porque na teoria dos jogos clássica a comunicação sem compromisso vinculante é "conversa barata" e não deveria alterar o equilíbrio. Alterar ela altera, e de forma replicável.</p>
 
-<p>Acrescentar a possibilidade de <strong>punir</strong> quem não coopera — mesmo a custo para quem pune — eleva a cooperação ainda mais e a torna estável ao longo de muitas rodadas. Este é o achado de Fehr e Gächter sobre punição altruísta.<sup class="cit"><a href="#f3">3</a></sup></p>
+<p>Acrescentar a possibilidade de punir quem não coopera, mesmo a custo para quem pune, eleva a cooperação ainda mais e a torna estável ao longo de muitas rodadas. Este é o achado de Fehr e Gächter sobre punição altruísta.<sup class="cit"><a href="#f3">3</a></sup></p>
 
 <div class="marca controverso">
 <span class="rot">Ponto em disputa</span>
-<p>A interpretação desses resultados é debatida. Uma leitura: humanos têm preferências sociais genuínas — reciprocidade, aversão à desigualdade — que não estão no modelo do agente puramente egoísta. Outra leitura: os efeitos são fortemente dependentes de contexto experimental e demanda característica, e diminuem com repetição, anonimato e valores monetários altos. Meta-análises confirmam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam — um padrão comum na literatura pós-crise de replicação.</p>
+<p>A interpretação desses resultados é debatida. Uma leitura: humanos têm preferências sociais genuínas (reciprocidade, aversão à desigualdade) que não estão no modelo do agente puramente egoísta. Outra leitura: os efeitos são fortemente dependentes de contexto experimental e demanda característica, e diminuem com repetição, anonimato e valores monetários altos. Meta-análises confirmam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam, um padrão comum na literatura pós-crise de replicação.</p>
 </div>
 
 <h3>Onde a solução comunitária não funciona</h3>
@@ -101,7 +101,7 @@ aprofundamento: { minutos: 15, html: `
 <ul>
 <li><strong>Grupos muito grandes</strong>, em que o monitoramento mútuo se torna inviável e o anonimato protege quem burla.</li>
 <li><strong>Alta rotatividade</strong> de participantes, que impede a construção de reputação e de expectativa de interação futura.</li>
-<li><strong>Recursos muito móveis</strong> — peixes migratórios, aquíferos transfronteiriços — em que as fronteiras do recurso não coincidem com as fronteiras da comunidade.</li>
+<li><strong>Recursos muito móveis</strong> (peixes migratórios, aquíferos transfronteiriços) em que as fronteiras do recurso não coincidem com as fronteiras da comunidade.</li>
 <li><strong>Heterogeneidade forte de interesses</strong> entre os usuários, que dificulta acordo sobre regras.</li>
 <li><strong>Ausência de reconhecimento externo</strong>, quando um Estado ou empresa pode simplesmente ignorar as regras locais.</li>
 </ul>
@@ -112,7 +112,7 @@ aprofundamento: { minutos: 15, html: `
 extensao: { minutos: 30, html: `
 <h3>O clima é o caso difícil</h3>
 
-<p>A atmosfera parece o exemplo definitivo da tragédia: benefício privado da emissão, custo distribuído globalmente. E quase todas as condições que Ostrom identificou como favoráveis estão ausentes — o grupo tem bilhões de pessoas e quase duzentos Estados, as fronteiras do recurso não coincidem com nenhuma jurisdição, não há autoridade com poder de sanção, e os interesses são profundamente heterogêneos.</p>
+<p>A atmosfera parece o exemplo definitivo da tragédia: benefício privado da emissão, custo distribuído globalmente. E quase todas as condições que Ostrom identificou como favoráveis estão ausentes: o grupo tem bilhões de pessoas e quase duzentos Estados, as fronteiras do recurso não coincidem com nenhuma jurisdição, não há autoridade com poder de sanção, e os interesses são profundamente heterogêneos.</p>
 
 <p>Ostrom, num de seus últimos trabalhos, propôs uma resposta que ela chamou de <strong>governança policêntrica</strong>: em vez de esperar um acordo global único, reconhecer que ação climática ocorre simultaneamente em cidades, empresas, regiões, países e blocos, e que esses níveis podem se reforçar mutuamente.<sup class="cit"><a href="#f4">4</a></sup></p>
 
@@ -123,17 +123,17 @@ extensao: { minutos: 30, html: `
 
 <h3>O que a história de Hardin ensina sobre uso de modelos</h3>
 
-<p>Este caso é um estudo exemplar de como um modelo pode ser correto e mal aplicado ao mesmo tempo — e vale extrair a lição metodológica, que transcende o tema.</p>
+<p>Este caso mostra como um modelo pode ser correto e mal aplicado ao mesmo tempo. A lição metodológica vale para além do tema.</p>
 
-<p><strong>Hardin não coletou dados.</strong> O artigo de 1968 não apresenta um único caso empírico de bem comum que tenha colapsado do modo descrito. A parábola do pasto é hipotética, adaptada de um panfleto de 1833 de William Forster Lloyd. Um modelo formalmente válido foi tratado como descrição do mundo sem que a correspondência fosse verificada.</p>
+<p>Hardin não coletou dados. O artigo de 1968 não apresenta um único caso empírico de bem comum que tenha colapsado do modo descrito. A parábola do pasto é hipotética, adaptada de um panfleto de 1833 de William Forster Lloyd. Um modelo formalmente válido foi tratado como descrição do mundo sem que a correspondência fosse verificada.</p>
 
-<p><strong>A generalização foi imediata e política.</strong> O artigo salta do pasto hipotético para conclusões sobre população mundial, propriedade e coerção. Hardin foi explícito em defender restrições coercitivas à reprodução e restrições à imigração, e escreveu posteriormente sobre "ética do bote salva-vidas" em termos que o Southern Poverty Law Center posteriormente classificou como nacionalismo branco.<sup class="cit"><a href="#f5">5</a></sup></p>
+<p>A generalização foi imediata e política. O artigo salta do pasto hipotético para conclusões sobre população mundial, propriedade e coerção. Hardin foi explícito em defender restrições coercitivas à reprodução e restrições à imigração, e escreveu posteriormente sobre "ética do bote salva-vidas" em termos que o Southern Poverty Law Center classificou como nacionalismo branco.<sup class="cit"><a href="#f5">5</a></sup></p>
 
-<p><strong>O modelo teve consequências materiais.</strong> Governos usaram o argumento para nacionalizar florestas e pesqueiras geridas comunalmente, em nome da conservação. Em vários casos documentados — Nepal, Índia, África Oriental —, a nacionalização destruiu regras locais de manejo funcionais e converteu propriedade comum em acesso livre <em>de facto</em>, produzindo exatamente a degradação que se queria evitar.</p>
+<p>O modelo teve consequências materiais. Governos usaram o argumento para nacionalizar florestas e pesqueiras geridas comunalmente, em nome da conservação. Em vários casos documentados no Nepal, na Índia e na África Oriental, a nacionalização destruiu regras locais de manejo funcionais e converteu propriedade comum em acesso livre <em>de facto</em>, produzindo exatamente a degradação que se queria evitar.</p>
 
 <div class="marca controverso">
 <span class="rot">Uma qualificação necessária</span>
-<p>Nada disso significa que o mecanismo de Hardin seja irreal. Colapso de pesqueiras por sobrepesca é bem documentado — o caso do bacalhau do Grand Banks, no Canadá, levou ao fim de uma indústria de quinhentos anos e ao desemprego de dezenas de milhares de pessoas em 1992, e o estoque não se recuperou plenamente. O ponto não é que Hardin errou sobre o mecanismo. É que ele errou ao tratar um caso particular como lei geral, e ao concluir que só existiam dois remédios possíveis.</p>
+<p>Nada disso significa que o mecanismo de Hardin seja irreal. Colapso de pesqueiras por sobrepesca é bem documentado: o caso do bacalhau do Grand Banks, no Canadá, levou ao fim de uma indústria de quinhentos anos e ao desemprego de dezenas de milhares de pessoas em 1992, e o estoque não se recuperou plenamente. O ponto não é que Hardin errou sobre o mecanismo. É que ele errou ao tratar um caso particular como lei geral, e ao concluir que só existiam dois remédios possíveis.</p>
 </div>
 
 <h3>Um vocabulário mais útil</h3>
@@ -156,7 +156,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
-<p>O mecanismo de Hardin é real e explica colapsos reais em regime de acesso livre. A conclusão de que só Estado ou privatização resolvem é empiricamente falsa: Ostrom documentou centenas de arranjos comunitários duradouros e identificou os princípios que os distinguem dos que falharam. O erro metodológico a evitar é o de Hardin — tomar um modelo formalmente válido como descrição do mundo sem ir verificar.</p>
+<p>O mecanismo de Hardin é real e explica colapsos reais em regime de acesso livre. A conclusão de que só Estado ou privatização resolvem é empiricamente falsa: Ostrom documentou centenas de arranjos comunitários duradouros e identificou os princípios que os distinguem dos que falharam. O erro metodológico a evitar é o de Hardin: tomar um modelo formalmente válido como descrição do mundo sem ir verificar.</p>
 </div>
 ` }
 },

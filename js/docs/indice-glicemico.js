@@ -109,9 +109,9 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Deixando de lado a medida e olhando o desfecho: dietas de baixo índice glicêmico melhoram algum resultado clínico?</p>
 
-<p><strong>Em diabetes tipo 2:</strong> revisões sistemáticas com meta-análise indicam redução de hemoglobina glicada da ordem de 0,3 a 0,5 ponto percentual em comparação com dietas de alto índice glicêmico. É um efeito real, estatisticamente consistente e clinicamente modesto — menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.</p>
+<p>Em diabetes tipo 2, revisões sistemáticas com meta-análise indicam redução de hemoglobina glicada da ordem de 0,3 a 0,5 ponto percentual em comparação com dietas de alto índice glicêmico. É um efeito real, estatisticamente consistente e clinicamente modesto: menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.</p>
 
-<p><strong>Em prevenção de doença cardiovascular e em controle de peso na população geral:</strong> a evidência é mais fraca e menos consistente. Estudos observacionais mostram associações; ensaios randomizados mostram efeitos pequenos e frequentemente não significativos.</p>
+<p>Em prevenção de doença cardiovascular e em controle de peso na população geral, a evidência é mais fraca e menos consistente. Estudos observacionais mostram associações; ensaios randomizados mostram efeitos pequenos e frequentemente não significativos.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso razoável</span>
@@ -130,13 +130,13 @@ extensao: { minutos: 30, html: `
 
 <p>Vale usar este caso como treino, porque a estrutura do problema se repete em quase toda a nutrição.</p>
 
-<p><strong>O conceito é fisiologicamente plausível?</strong> Sim. Velocidade de digestão e absorção varia entre alimentos, e picos glicêmicos maiores exigem resposta insulínica maior. Plausibilidade mecanística é o ponto mais forte do índice glicêmico.</p>
+<p>O conceito é fisiologicamente plausível? Sim: a velocidade de digestão e absorção varia entre alimentos, e picos glicêmicos maiores exigem resposta insulínica maior. Essa plausibilidade mecanística é o ponto mais forte do índice glicêmico.</p>
 
-<p><strong>A medida é confiável?</strong> Parcialmente. Coeficientes de variação de 20% dentro da mesma pessoa e 25% entre pessoas significam que o valor de tabela carrega incerteza comparável à diferença entre as categorias que ele define.</p>
+<p>A medida é confiável? Parcialmente. Coeficientes de variação de 20% dentro da mesma pessoa e 25% entre pessoas significam que o valor de tabela carrega incerteza comparável à diferença entre as categorias que ele define.</p>
 
-<p><strong>A medida prevê o desfecho que importa?</strong> Modestamente, e num subgrupo específico. Glicemia pós-prandial é um marcador intermediário; o que interessa clinicamente são eventos, mortalidade e qualidade de vida. Marcadores intermediários frequentemente respondem sem que os desfechos duros acompanhem.</p>
+<p>A medida prevê o desfecho que importa? Modestamente, e num subgrupo específico. Glicemia pós-prandial é um marcador intermediário; o que interessa clinicamente são eventos, mortalidade e qualidade de vida, e marcadores intermediários frequentemente respondem sem que os desfechos duros acompanhem.</p>
 
-<p><strong>O efeito é atribuível ao mecanismo proposto?</strong> Difícil de afirmar, pelo confundimento com fibra, processamento e saciedade.</p>
+<p>O efeito é atribuível ao mecanismo proposto? Difícil de afirmar, pelo confundimento com fibra, processamento e saciedade.</p>
 
 <div class="marca consenso">
 <span class="rot">Uma armadilha geral</span>
@@ -148,10 +148,10 @@ extensao: { minutos: 30, html: `
 <p>Rejeitá-lo por completo seria o erro simétrico. Usos defensáveis:</p>
 
 <ul>
-<li><strong>Comparação entre categorias amplas.</strong> Que leguminosas produzem resposta mais lenta que pão branco é verdadeiro, replicável e maior que o ruído da medida.</li>
-<li><strong>Ferramenta educacional.</strong> Explica de forma tangível por que "carboidrato" não é uma categoria útil, e por que a forma física do alimento importa — suco de laranja e laranja inteira não são equivalentes.</li>
-<li><strong>Manejo individual com medição própria.</strong> Uma pessoa com diabetes que mede a própria glicemia pode identificar suas respostas particulares. Aqui o valor de tabela é irrelevante e a medição individual é o que conta.</li>
-<li><strong>Contextos específicos.</strong> Ajuste fino de carboidrato em esporte e em diabetes tipo 1 com contagem, onde a resposta é monitorada de perto.</li>
+<li>Para comparar categorias amplas de alimentos: que leguminosas produzem resposta mais lenta que pão branco é verdadeiro, replicável e maior que o ruído da medida.</li>
+<li>Como ferramenta educacional, explica de forma tangível por que "carboidrato" não é uma categoria útil e por que a forma física do alimento importa (suco de laranja e laranja inteira não são equivalentes).</li>
+<li>No manejo individual com medição própria: uma pessoa com diabetes que mede a própria glicemia identifica suas respostas particulares. Aqui o valor de tabela é irrelevante; o que conta é a medição individual.</li>
+<li>Em contextos específicos, como ajuste fino de carboidrato em esporte e em diabetes tipo 1 com contagem, onde a resposta é monitorada de perto.</li>
 </ul>
 
 <h3>O que a evidência sustenta como orientação prática</h3>
@@ -159,10 +159,10 @@ extensao: { minutos: 30, html: `
 <p>A convergência de diretrizes de diferentes países aponta para recomendações que são, notavelmente, independentes do índice glicêmico:</p>
 
 <ol>
-<li><strong>Padrão alimentar, não nutriente isolado.</strong> A unidade de evidência mais robusta em nutrição é o padrão alimentar completo, não um índice de alimento individual.</li>
-<li><strong>Forma física importa.</strong> Grão inteiro versus farinha, fruta inteira versus suco. A estrutura da matriz alimentar altera a resposta metabólica de forma consistente e maior que a variabilidade do índice.</li>
-<li><strong>Fibra tem evidência mais sólida que índice glicêmico.</strong> A relação entre ingestão de fibras e desfechos cardiometabólicos é mais consistente entre estudos, e a medida é muito mais estável.</li>
-<li><strong>Contexto da refeição altera tudo.</strong> Combinar carboidrato com proteína, gordura ou fibra achata a curva de forma previsível — o que torna o índice de um alimento isolado ainda menos informativo sobre o que acontece numa refeição real.</li>
+<li>A unidade de evidência mais robusta em nutrição é o padrão alimentar completo, não o índice de um alimento isolado.</li>
+<li>A forma física do alimento importa: grão inteiro versus farinha, fruta inteira versus suco. A estrutura da matriz alimentar altera a resposta metabólica de forma consistente, mais que a variabilidade do índice.</li>
+<li>A fibra tem evidência mais sólida que o índice glicêmico: a relação entre ingestão de fibras e desfechos cardiometabólicos é mais consistente entre estudos, e a medida é muito mais estável.</li>
+<li>O contexto da refeição altera tudo. Combinar carboidrato com proteína, gordura ou fibra achata a curva de forma previsível, o que torna o índice de um alimento isolado ainda menos informativo sobre o que acontece numa refeição real.</li>
 </ol>
 
 <div class="marca emergente">

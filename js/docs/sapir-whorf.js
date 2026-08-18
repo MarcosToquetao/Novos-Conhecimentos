@@ -18,13 +18,13 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Comecemos pelo problema de atribuição. Nem Edward Sapir nem Benjamin Lee Whorf formularam algo que eles chamassem de "hipótese Sapir-Whorf". Os dois nunca coescreveram sobre o tema. O rótulo foi cunhado por terceiros nos anos 1950, e a formulação nítida em "versão forte" e "versão fraca" também é obra de comentadores posteriores.</p>
 
-<p>Isso não é detalhe bibliográfico. A hipótese entrou na cultura já como uma caricatura, e é essa caricatura que a maioria das pessoas conhece — inclusive muitos dos que a defendem.</p>
+<p>Isso não é detalhe bibliográfico. A hipótese entrou na cultura já como uma caricatura, e é essa caricatura que a maioria das pessoas conhece, inclusive muitos dos que a defendem.</p>
 
 <h3>As duas versões</h3>
 
 <p><strong>Determinismo linguístico (versão forte):</strong> a língua determina o pensamento; o que sua língua não codifica, você não pode pensar. Categorias linguísticas seriam prisões cognitivas.</p>
 
-<p><strong>Relatividade linguística (versão fraca):</strong> a língua influencia certos processos cognitivos — em particular categorização, memória e atenção — tornando mais fáceis ou mais habituais certas discriminações.</p>
+<p><strong>Relatividade linguística (versão fraca):</strong> a língua influencia certos processos cognitivos, em particular categorização, memória e atenção, tornando mais fáceis ou mais habituais certas discriminações.</p>
 
 <p>A versão forte está morta, e por razões simples. Falantes aprendem conceitos que sua língua não codifica, o tempo todo. Línguas incorporam palavras novas quando precisam. Bebês categorizam antes de falar. E a própria formulação é autorrefutante: se a língua determinasse os limites do pensável, seria impossível descrever, em português, um conceito que o português não tem — coisa que este parágrafo acabou de fazer.</p>
 
@@ -39,7 +39,7 @@ nucleo: { minutos: 15, html: `
 
 <p>A história foi rastreada por Laura Martin e popularizada por Geoffrey Pullum em <em>The Great Eskimo Vocabulary Hoax</em>.<sup class="cit"><a href="#f1">1</a></sup> Boas menciona quatro raízes em 1911; a cada recontagem o número cresceu, chegando a "quatrocentas" em jornais dos anos 1980, sem nenhuma fonte nova. Ninguém foi conferir.</p>
 
-<p>Há dois problemas adicionais. Línguas inuítes são polissintéticas: formam palavras longas por aglutinação, de modo que "contar palavras" é uma operação sem significado claro — em português também podemos dizer neve fresca, neve compactada, neve granulada. E mesmo que o número fosse alto, isso mostraria apenas que pessoas desenvolvem vocabulário para o que lhes é relevante, o que é trivial e não diz nada sobre pensamento.</p>
+<p>Há dois problemas adicionais. Línguas inuítes são polissintéticas: formam palavras longas por aglutinação, de modo que "contar palavras" é uma operação sem significado claro: em português também dizemos neve fresca, neve compactada, neve granulada. E mesmo que o número fosse alto, isso mostraria apenas que pessoas desenvolvem vocabulário para o que lhes é relevante, o que é trivial e não diz nada sobre pensamento.</p>
 
 <h3>O experimento que virou emblema</h3>
 
@@ -54,7 +54,7 @@ nucleo: { minutos: 15, html: `
 <p>Um estudo publicado na <em>Cognition</em> em 2020 tentou reproduzir o efeito e <strong>não encontrou a vantagem de tempo de reação</strong> na fronteira sinij/goluboj, nem em monolíngues nem em bilíngues.<sup class="cit"><a href="#f3">3</a></sup> Os autores concluem que os "azuis russos" são menos bem estruturados do que se supunha: a fronteira mostrou-se instável e sensível a manipulações de frequência, ao contrário da fronteira azul/verde. O efeito categórico apareceu em tarefas que exigiam categorização explícita, e não em discriminação perceptiva pura.</p>
 </div>
 
-<p>Vale reter a formulação dos próprios autores: os efeitos da língua sobre a percepção "são mais fortes em tarefas que promovem categorização e mais fracos ou inexistentes em tarefas que não a exigem explicitamente". Isso não elimina a relatividade linguística — mas desloca substancialmente o que ela afirma.</p>
+<p>Vale reter a formulação dos próprios autores: os efeitos da língua sobre a percepção "são mais fortes em tarefas que promovem categorização e mais fracos ou inexistentes em tarefas que não a exigem explicitamente". Isso não elimina a relatividade linguística, mas desloca substancialmente o que ela afirma.</p>
 ` },
 
 aprofundamento: { minutos: 15, html: `
@@ -62,29 +62,29 @@ aprofundamento: { minutos: 15, html: `
 
 <p>O caso mais robusto em favor de efeitos linguísticos reais não é cor: é referência espacial.</p>
 
-<p>A maioria das línguas usa referenciais <strong>relativos</strong> — esquerda, direita, à frente, atrás — que dependem da orientação do corpo do falante. Algumas línguas usam referenciais <strong>absolutos</strong>: pontos cardeais, ou eixos geográficos como "montanha acima" e "rio abaixo". Em Guugu Yimithirr, falado no norte da Austrália, não existem palavras para esquerda e direita: uma xícara está a nordeste da colher, e o falante diz isso naturalmente.</p>
+<p>A maioria das línguas usa referenciais <strong>relativos</strong> (esquerda, direita, à frente, atrás) que dependem da orientação do corpo do falante. Algumas línguas usam referenciais <strong>absolutos</strong>: pontos cardeais, ou eixos geográficos como "montanha acima" e "rio abaixo". Em Guugu Yimithirr, falado no norte da Austrália, não existem palavras para esquerda e direita: uma xícara está a nordeste da colher, e o falante diz isso naturalmente.</p>
 
 <p>Stephen Levinson e colaboradores documentaram que falantes dessas línguas mantêm orientação absoluta permanente e precisa, mesmo em ambientes fechados, em veículos e após deslocamentos complexos.<sup class="cit"><a href="#f4">4</a></sup> E o efeito não fica na fala: em tarefas <strong>não verbais</strong> de rotação e reconstrução de arranjos, esses falantes resolvem o problema em coordenadas absolutas, enquanto falantes de línguas relativas usam coordenadas centradas no corpo.</p>
 
 <div class="marca consenso">
 <span class="rot">Por que este caso é mais convincente</span>
-<p>Três razões metodológicas. Primeira: o efeito aparece em tarefas não linguísticas, o que enfraquece a explicação de que é apenas estratégia verbal. Segunda: os tamanhos de efeito são grandes e comportamentalmente visíveis, não diferenças de dezenas de milissegundos. Terceira: foi replicado em populações independentes em vários continentes. Compare com o caso da cor — efeitos pequenos, dependentes de tarefa e de replicação instável — e a diferença de qualidade de evidência fica clara.</p>
+<p>Três razões metodológicas. Primeira: o efeito aparece em tarefas não linguísticas, o que enfraquece a explicação de que é apenas estratégia verbal. Segunda: os tamanhos de efeito são grandes e comportamentalmente visíveis, não diferenças de dezenas de milissegundos. Terceira: foi replicado em populações independentes em vários continentes. Compare com o caso da cor (efeitos pequenos, dependentes de tarefa, com replicação instável) e a diferença de qualidade de evidência fica clara.</p>
 </div>
 
 <div class="marca controverso">
 <span class="rot">A objeção da direção causal</span>
-<p>Mesmo aqui, resta uma dúvida séria: a língua causa o hábito cognitivo, ou ambos derivam do ambiente e da prática cultural? Comunidades com referencial absoluto vivem tipicamente em terreno aberto com marcos geográficos estáveis, e a navegação é parte da vida diária. A língua pode ser consequência da prática, não causa do modo de pensar. Separar essas hipóteses exigiria variação natural entre língua e ecologia que raramente existe — o que torna a inferência causal genuinamente difícil, não apenas incerta.</p>
+<p>Mesmo aqui, resta uma dúvida séria: a língua causa o hábito cognitivo, ou ambos derivam do ambiente e da prática cultural? Comunidades com referencial absoluto vivem tipicamente em terreno aberto com marcos geográficos estáveis, e a navegação é parte da vida diária. A língua pode ser consequência da prática, não causa do modo de pensar. Separar essas hipóteses exigiria variação natural entre língua e ecologia que raramente existe. Isso torna a inferência causal genuinamente difícil, não apenas incerta.</p>
 </div>
 
 <h3>Um efeito robusto e um caso mal contado</h3>
 
-<p><strong>Gênero gramatical.</strong> Falantes de línguas com gênero atribuem adjetivos correlacionados ao gênero da palavra: "ponte" é feminina em alemão e masculina em espanhol, e falantes descrevem pontes com adjetivos estereotipicamente correspondentes. O efeito é replicável, mas há discussão sobre quanto depende de a tarefa ser conduzida em inglês, forçando tradução — o que introduz ativação linguística explícita.</p>
+<p><strong>Gênero gramatical.</strong> Falantes de línguas com gênero atribuem adjetivos correlacionados ao gênero da palavra: "ponte" é feminina em alemão e masculina em espanhol, e falantes descrevem pontes com adjetivos estereotipicamente correspondentes. O efeito é replicável, mas há discussão sobre quanto depende de a tarefa ser conduzida em inglês, forçando tradução, o que introduz ativação linguística explícita.</p>
 
-<p><strong>Números em pirahã.</strong> A língua pirahã, na Amazônia, teria apenas termos para "um", "dois" e "muitos" — ou, segundo análise posterior, apenas termos relativos de quantidade. Peter Gordon relatou em 2004 que falantes falhavam em tarefas de correspondência exata acima de três, e o caso foi amplamente divulgado como demonstração de determinismo linguístico.</p>
+<p><strong>Números em pirahã.</strong> A língua pirahã, na Amazônia, teria apenas termos para "um", "dois" e "muitos", ou, segundo análise posterior, apenas termos relativos de quantidade. Peter Gordon relatou em 2004 que falantes falhavam em tarefas de correspondência exata acima de três, e o caso foi amplamente divulgado como demonstração de determinismo linguístico.</p>
 
 <div class="marca controverso">
 <span class="rot">O que esse caso realmente mostra</span>
-<p>Trabalhos posteriores complicam a leitura simples. Frank e colaboradores (2008) mostraram que os pirahã executam bem tarefas de correspondência um-a-um; o que falta é a capacidade de <em>memorizar</em> cardinalidades exatas sem rótulos — o que é uma tese sobre ferramentas de memória, não sobre limites do pensamento. Some-se a isso que praticamente toda a documentação da língua vem de um único pesquisador, cujas afirmações teóricas mais amplas são contestadas por outros linguistas de campo. É um caso em que a base empírica é fina demais para sustentar o peso que lhe foi atribuído.</p>
+<p>Trabalhos posteriores complicam a leitura simples. Frank e colaboradores (2008) mostraram que os pirahã executam bem tarefas de correspondência um-a-um; o que falta é a capacidade de <em>memorizar</em> cardinalidades exatas sem rótulos: é uma tese sobre ferramentas de memória, não sobre limites do pensamento. Some-se a isso que praticamente toda a documentação da língua vem de um único pesquisador, cujas afirmações teóricas mais amplas são contestadas por outros linguistas de campo. É um caso em que a base empírica é fina demais para sustentar o peso que lhe foi atribuído.</p>
 </div>
 
 <h3>Os quatro problemas metodológicos recorrentes</h3>
@@ -92,7 +92,7 @@ aprofundamento: { minutos: 15, html: `
 <ol>
 <li><strong>Confundir competência e desempenho.</strong> Uma tarefa mais lenta não é uma tarefa impossível. Efeitos de 30 milissegundos são interessantes e não indicam limite cognitivo.</li>
 <li><strong>Confundir língua e cultura.</strong> Grupos que falam línguas diferentes também diferem em escolaridade, prática, ambiente e economia. Isolar o efeito da língua exige controles que raramente existem.</li>
-<li><strong>Direção causal indeterminada.</strong> Falantes de línguas com muitos termos para neve podem tê-los porque neve importa — não pensar diferente por tê-los.</li>
+<li><strong>Direção causal indeterminada.</strong> Falantes de línguas com muitos termos para neve podem tê-los porque neve importa, não porque pensam de modo diferente por causa deles.</li>
 <li><strong>Codificação verbal durante a tarefa.</strong> Se o participante nomeia mentalmente os estímulos, o efeito pode refletir estratégia momentânea, não estrutura cognitiva. Testes com interferência verbal existem justamente para isolar isso, e nem sempre são aplicados.</li>
 </ol>
 ` },
@@ -116,7 +116,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca controverso">
 <span class="rot">Um caso instrutivo de correlação transcultural</span>
-<p>Um estudo de 2013 relatou que falantes de línguas que não marcam gramaticalmente o futuro poupam mais e cuidam melhor da saúde, e o resultado teve enorme repercussão. Reanálises posteriores mostraram que línguas não são observações independentes: elas se agrupam por famílias e por proximidade geográfica, e quando se corrige a estrutura filogenética e o parentesco cultural, a associação enfraquece drasticamente ou desaparece. É o problema de Galton, formulado na antropologia no século XIX e redescoberto periodicamente — e vale como alerta geral para qualquer correlação entre traço linguístico e comportamento agregado.</p>
+<p>Um estudo de 2013 relatou que falantes de línguas que não marcam gramaticalmente o futuro poupam mais e cuidam melhor da saúde, e o resultado teve enorme repercussão. Reanálises posteriores mostraram que línguas não são observações independentes: elas se agrupam por famílias e por proximidade geográfica, e quando se corrige a estrutura filogenética e o parentesco cultural, a associação enfraquece drasticamente ou desaparece. É o problema de Galton, formulado na antropologia no século XIX e redescoberto periodicamente. Vale como alerta geral para qualquer correlação entre traço linguístico e comportamento agregado.</p>
 </div>
 
 <h3>Por que a hipótese é tão atraente</h3>
@@ -125,7 +125,7 @@ extensao: { minutos: 30, html: `
 
 <p>Ela promete explicar diferenças culturais por um mecanismo único e elegante. Cria a impressão gratificante de que aprender uma língua abre um modo de pensar inacessível de outra forma. E é praticamente inverificável em conversa: qualquer exemplo pontual parece confirmá-la, porque o interlocutor raramente tem em mãos o contraexemplo.</p>
 
-<p>Esse é o perfil típico de uma ideia que se propaga bem independentemente de sua base empírica: alto valor narrativo, baixo custo de verificação, e confirmação aparente disponível em qualquer conversa. Reconhecer esse perfil é uma habilidade transferível — ele aparece igualmente em neurociência popular, em nutrição e em teorias de gestão.</p>
+<p>Esse é o perfil típico de uma ideia que se propaga bem independentemente de sua base empírica: alto valor narrativo, baixo custo de verificação, e confirmação aparente disponível em qualquer conversa. Reconhecer esse perfil é uma habilidade transferível: aparece igualmente em neurociência popular, em nutrição e em teorias de gestão.</p>
 
 <h3>A posição defensável hoje</h3>
 
@@ -133,7 +133,7 @@ extensao: { minutos: 30, html: `
 
 <p><strong>A língua não determina o pensamento.</strong> Nenhum conceito é impensável por falta de palavra; conceitos novos são aprendidos e nomeados quando necessário.</p>
 
-<p><strong>A língua torna certas distinções obrigatórias.</strong> Esta é provavelmente a formulação mais precisa, e vem de Roman Jakobson: línguas diferem menos no que <em>podem</em> expressar do que no que <em>devem</em> expressar. Em português você não pode dizer "eu fui" sem marcar tempo; em mandarim, pode. Se você é obrigado a codificar algo toda vez que fala, é plausível que preste mais atenção nisso — e há evidência de que essa atenção habitual afeta memória e julgamento.</p>
+<p><strong>A língua torna certas distinções obrigatórias.</strong> Esta é provavelmente a formulação mais precisa, e vem de Roman Jakobson: línguas diferem menos no que <em>podem</em> expressar do que no que <em>devem</em> expressar. Em português você não pode dizer "eu fui" sem marcar tempo; em mandarim, pode. Se você é obrigado a codificar algo toda vez que fala, é plausível que preste mais atenção nisso, e há evidência de que essa atenção habitual afeta memória e julgamento.</p>
 
 <p><strong>Os efeitos são modestos, dependentes de tarefa e reversíveis.</strong> Aparecem em tempos de reação e em vieses de julgamento, não em capacidades. Somem sob interferência verbal em vários casos. Mudam quando a pessoa muda de língua ou de contexto.</p>
 
@@ -141,7 +141,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca emergente">
 <span class="rot">Um desenvolvimento recente</span>
-<p>Uma linha crescente de trabalho reformula a questão em termos de <em>pensar para falar</em> (Slobin): a língua não molda o pensamento em geral, mas organiza a atenção no momento em que se prepara um enunciado. Isso explicaria por que os efeitos aparecem em tarefas com componente verbal e somem sem ele. É uma reformulação mais modesta e mais testável — o que é uma virtude — e vem acumulando suporte. Ainda não é consenso.</p>
+<p>Uma linha crescente de trabalho reformula a questão em termos de <em>pensar para falar</em> (Slobin): a língua não molda o pensamento em geral, mas organiza a atenção no momento em que se prepara um enunciado. Isso explicaria por que os efeitos aparecem em tarefas com componente verbal e somem sem ele. É uma reformulação mais modesta e mais testável (uma virtude) e vem acumulando suporte. Ainda não é consenso.</p>
 </div>
 
 <h3>Como avaliar qualquer afirmação whorfiana</h3>
@@ -153,12 +153,12 @@ extensao: { minutos: 30, html: `
 <li><strong>O efeito sobrevive à interferência verbal?</strong> Se ocupar a linguagem interna do participante elimina o efeito, ele era mediado por rótulos.</li>
 <li><strong>Cultura e ambiente foram controlados?</strong> Ou os grupos diferem em tudo, e a língua é apenas a diferença mais visível?</li>
 <li><strong>Qual é o tamanho do efeito?</strong> Dezenas de milissegundos são um achado. Não são uma prisão conceitual.</li>
-<li><strong>Foi replicado por um grupo independente?</strong> Depois de 2020, esta pergunta deixou de ser opcional em qualquer área da psicologia — e no caso mais famoso desta literatura, a resposta foi negativa.</li>
+<li><strong>Foi replicado por um grupo independente?</strong> Depois de 2020, esta pergunta deixou de ser opcional em qualquer área da psicologia. No caso mais famoso desta literatura, a resposta foi negativa.</li>
 </ol>
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
-<p>A versão forte está morta e a versão fraca sobrevive com efeitos reais, modestos e desiguais entre domínios: sólidos em referência espacial, frágeis em cor. A formulação mais precisa não é que a língua limita o que se pode pensar, e sim que ela torna obrigatório prestar atenção a certas distinções toda vez que se fala. E o caso serve como exemplar de algo mais geral: uma ideia com alto valor narrativo pode sobreviver décadas à erosão da evidência que originalmente a sustentava.</p>
+<p>A versão forte está morta e a versão fraca sobrevive com efeitos reais, modestos e desiguais entre domínios: sólidos em referência espacial, frágeis em cor. A formulação mais precisa não é que a língua limita o que se pode pensar, e sim que ela torna obrigatório prestar atenção a certas distinções toda vez que se fala. E o caso é um exemplo de algo mais geral: uma ideia com alto valor narrativo pode sobreviver décadas à erosão da evidência que originalmente a sustentava.</p>
 </div>
 ` }
 },
