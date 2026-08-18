@@ -575,6 +575,164 @@ def fig_whorf_fronteira():
 
 
 # ═══════════════════════════════════════════════════════════════════════
+# EFEITO HIDROFÓBICO: decomposição entálpica/entrópica da energia livre
+# ═══════════════════════════════════════════════════════════════════════
+def fig_hidrofobico_termo():
+    """Transferência gás→água a 25 °C (tabela do documento). ΔG é calculado
+       aqui como ΔH + (−TΔS) para cada soluto, não copiado à mão."""
+    h = 290
+    body = []
+    dados = [
+        ("Metano",  -11.5, 19.8),
+        ("Etano",   -17.5, 25.1),
+        ("Butano",  -23.7, 32.3),
+        ("Benzeno", -29.6, 26.0),
+    ]  # (nome, ΔH, −TΔS) em kJ/mol
+    lo, hi = -35.0, 35.0
+    x0, x1 = 132, W - 30
+    def X(v): return x0 + (x1 - x0) * (v - lo) / (hi - lo)
+    body.append(txt(40, 24, "DECOMPOSIÇÃO DA ENERGIA LIVRE DE HIDRATAÇÃO (kJ/mol, 25 °C)", "svg-rot-p"))
+    body.append(txt(40, 40, "ΔG = ΔH + (−TΔS). Barra escura = entalpia. Barra clara = termo entrópico.", "svg-rot-p"))
+    for v in range(-30, 31, 10):
+        body.append(eixo(X(v), 56, X(v), 234, "svg-l-linha", 0.5))
+        body.append(txt(X(v), 248, str(v), "svg-rot-p", "middle"))
+    body.append(eixo(X(0), 52, X(0), 238, "svg-l-linha", 1.1))
+    for i, (nome, dh, mtds) in enumerate(dados):
+        y = 78 + i * 46
+        dg = dh + mtds
+        body.append(txt(x0 - 12, y + 4, nome, "svg-rot", "end"))
+        xh0, xh1 = X(0), X(dh)
+        body.append(f'<rect x="{min(xh0,xh1):.1f}" y="{y-8:.1f}" width="{abs(xh1-xh0):.1f}" height="16" class="svg-tinta" opacity="0.7"/>')
+        xs0, xs1 = X(dh), X(dg)
+        body.append(f'<rect x="{min(xs0,xs1):.1f}" y="{y-8:.1f}" width="{abs(xs1-xs0):.1f}" height="16" class="svg-acento" opacity="0.85"/>')
+        body.append(eixo(X(dg), y - 13, X(dg), y + 13, "svg-t-linha", 1.4))
+        body.append(txt(X(dg) + (6 if dg >= 0 else -6), y - 16, f"ΔG = {dg:+.1f}", "svg-rot", "start" if dg >= 0 else "end"))
+    yl = 78 + len(dados) * 46 + 6
+    body.append(f'<rect x="{x0}" y="{yl-8}" width="14" height="10" class="svg-tinta" opacity="0.7"/>')
+    body.append(txt(x0 + 20, yl, "ΔH (entalpia, favorável)", "svg-rot-p"))
+    body.append(f'<rect x="{x0+190}" y="{yl-8}" width="14" height="10" class="svg-acento" opacity="0.85"/>')
+    body.append(txt(x0 + 210, yl, "−TΔS (entropia, desfavorável)", "svg-rot-p"))
+    return svg(h, "".join(body), "Decomposicao entalpica e entropica da energia livre de hidratacao de quatro hidrocarbonetos")
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# CÉREBRO DIVIDIDO: cruzamento dos campos visuais
+# ═══════════════════════════════════════════════════════════════════════
+def fig_split_brain_campos():
+    h = 310
+    body = []
+    seta = ('<defs><marker id="sb-seta" markerWidth="7" markerHeight="7" refX="6" refY="3.5" '
+            'orient="auto"><path d="M0,0 L7,3.5 L0,7 z" class="svg-acento"/></marker></defs>')
+    body.append(seta)
+    body.append(txt(40, 24, "PARA ONDE VAI CADA METADE DO CAMPO VISUAL", "svg-rot-p"))
+    body.append(txt(40, 40, "Olhar fixo no ponto central. O que aparece à esquerda cruza para o hemisfério direito, e vice-versa.", "svg-rot-p"))
+
+    paineis = [(20, "CÉREBRO INTACTO", True), (320, "CORPO CALOSO SECCIONADO", False)]
+    for ox, titulo, intacto in paineis:
+        body.append(txt(ox + 130, 66, titulo, "svg-rot", "middle"))
+        body.append(f'<circle cx="{ox+130}" cy="86" r="3" class="svg-tinta"/>')
+        body.append(txt(ox + 130, 100, "olhar fixo", "svg-rot-p", "middle"))
+        body.append(f'<rect x="{ox+16}" y="112" width="92" height="34" rx="4" fill="none" class="svg-l-linha" stroke-width="1"/>')
+        body.append(f'<rect x="{ox+152}" y="112" width="92" height="34" rx="4" fill="none" class="svg-l-linha" stroke-width="1"/>')
+        body.append(txt(ox + 62, 132, "campo esquerdo", "svg-rot-p", "middle"))
+        body.append(txt(ox + 198, 132, "campo direito", "svg-rot-p", "middle"))
+        yh = 246
+        body.append(f'<circle cx="{ox+80}" cy="{yh}" r="26" fill="none" class="svg-a-linha" stroke-width="1.4"/>')
+        body.append(f'<circle cx="{ox+180}" cy="{yh}" r="26" fill="none" class="svg-a-linha" stroke-width="1.4"/>')
+        body.append(txt(ox + 80, yh - 2, "HE", "svg-rot", "middle"))
+        body.append(txt(ox + 80, yh + 12, "fala", "svg-rot-p", "middle"))
+        body.append(txt(ox + 180, yh - 2, "HD", "svg-rot", "middle"))
+        body.append(txt(ox + 180, yh + 12, "muda", "svg-rot-p", "middle"))
+        body.append(f'<path d="M{ox+62},146 L{ox+178},{yh-27}" fill="none" class="svg-a-linha" stroke-width="1.3" marker-end="url(#sb-seta)"/>')
+        body.append(f'<path d="M{ox+198},146 L{ox+82},{yh-27}" fill="none" class="svg-a-linha" stroke-width="1.3" marker-end="url(#sb-seta)"/>')
+        if intacto:
+            body.append(eixo(ox + 106, yh, ox + 154, yh, "svg-t-linha", 3))
+            body.append(txt(ox + 130, yh + 40, "corpo caloso intacto", "svg-rot-p", "middle"))
+            body.append(txt(ox + 130, yh + 54, "as duas metades trocam informação", "svg-rot-p", "middle"))
+        else:
+            body.append(eixo(ox + 106, yh, ox + 122, yh, "svg-t-linha", 3))
+            body.append(eixo(ox + 138, yh, ox + 154, yh, "svg-t-linha", 3))
+            body.append(txt(ox + 130, yh + 40, "corpo caloso seccionado", "svg-rot-p", "middle"))
+            body.append(txt(ox + 130, yh + 54, "nenhuma transferência direta entre as metades", "svg-rot-p", "middle"))
+    return svg(h, "".join(body), "Cruzamento dos campos visuais para os hemisferios em cerebro intacto e calosotomizado")
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# SELEÇÃO ADVERSA: espiral de colapso do mercado de limões
+# ═══════════════════════════════════════════════════════════════════════
+def fig_mercado_limoes():
+    """Modelo simplificado sob qualidade uniforme em [0, 100]: compradores
+       pagam a média do que resta à venda, vendedores acima do preço saem.
+       Sob distribuição uniforme isso é auto-similar: cada corte é metade
+       do anterior. A sequência é calculada aqui, não estimada visualmente."""
+    h = 290
+    body = []
+    rodadas = 6
+    cortes = [100.0]
+    for _ in range(rodadas):
+        cortes.append(cortes[-1] / 2)
+    x0, x1 = 150, W - 30
+    def X(v): return x0 + (x1 - x0) * v / 100.0
+    body.append(txt(40, 24, "A ESPIRAL DE AKERLOF, EM VERSÃO SIMPLIFICADA", "svg-rot-p"))
+    body.append(txt(40, 40, "Qualidade uniforme entre 0 e 100. A cada rodada, o preço vira a média do que ainda resta à venda.", "svg-rot-p"))
+    y0, passo = 62, 27
+    for v in range(0, 101, 20):
+        body.append(eixo(X(v), y0 - 8, X(v), y0 + rodadas * passo, "svg-l-linha", 0.5))
+        body.append(txt(X(v), y0 + rodadas * passo + 16, str(v), "svg-rot-p", "middle"))
+    body.append(txt(x1, y0 + rodadas * passo + 32, "qualidade / preço →", "svg-rot-p", "end"))
+    for i in range(rodadas):
+        y = y0 + i * passo
+        corte, preco = cortes[i], cortes[i] / 2
+        body.append(txt(x0 - 12, y + 4, f"Rodada {i+1}", "svg-rot", "end"))
+        body.append(f'<rect x="{X(0):.1f}" y="{y-8:.1f}" width="{X(corte)-X(0):.1f}" height="16" class="svg-suave" opacity="0.35"/>')
+        body.append(eixo(X(preco), y - 11, X(preco), y + 11, "svg-a-linha", 1.6))
+        body.append(txt(X(preco) + 6, y - 13, f"preço ≈ {preco:.1f}", "svg-rot-p"))
+    body.append(txt(40, y0 + rodadas * passo + 50, "O corte tende a zero a cada rodada: só sobra o pior carro possível, ou nenhuma venda.", "svg-rot"))
+    return svg(h, "".join(body), "Simulacao da espiral de selecao adversa sob distribuicao uniforme de qualidade")
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# LÍNGUAS DE SINAIS: parâmetros formacionais simultâneos
+# ═══════════════════════════════════════════════════════════════════════
+def fig_sinais_parametros():
+    h = 270
+    body = []
+    body.append(txt(40, 24, "SEQUÊNCIA NA FALA, SIMULTANEIDADE NO SINAL", "svg-rot-p"))
+    body.append(txt(40, 40, "Os parâmetros de um sinal não se sucedem no tempo como os fonemas de uma palavra falada: ocorrem todos ao mesmo tempo.", "svg-rot-p"))
+
+    y1 = 68
+    body.append(txt(40, y1 - 10, 'LÍNGUA FALADA · "gato", fonema após fonema', "svg-rot"))
+    fonemas = ["g", "a", "t", "o"]
+    fw, gap = 68, 12
+    x0f = 60
+    for i, f in enumerate(fonemas):
+        x = x0f + i * (fw + gap)
+        body.append(f'<rect x="{x}" y="{y1}" width="{fw}" height="38" rx="6" fill="none" class="svg-l-linha" stroke-width="1.2"/>')
+        body.append(txt(x + fw/2, y1 + 24, f, "svg-rot", "middle"))
+    xend = x0f + len(fonemas) * (fw + gap) - gap
+    body.append(eixo(x0f, y1 + 54, xend, y1 + 54, "svg-s-linha", 1))
+    body.append(txt(xend, y1 + 68, "tempo →", "svg-rot-p", "end"))
+
+    y2 = 168
+    body.append(txt(40, y2 - 10, "LÍNGUA DE SINAIS · um sinal, cinco parâmetros ao mesmo tempo", "svg-rot"))
+    params = ["Configuração de mão", "Ponto de articulação", "Movimento", "Orientação da palma", "Expressão não manual"]
+    sx0, sx1 = 220, 480
+    linha_h = 15
+    for i, p in enumerate(params):
+        yy = y2 + i * linha_h
+        cls = "svg-acento" if i < 4 else "svg-suave"
+        op = 0.85 if i < 4 else 0.5
+        body.append(f'<rect x="{sx0}" y="{yy}" width="{sx1-sx0}" height="{linha_h-2}" class="{cls}" opacity="{op}"/>')
+        body.append(txt(sx0 - 10, yy + linha_h - 4, p, "svg-rot-p", "end"))
+    ytopo = y2
+    ybase = y2 + len(params) * linha_h - 4
+    body.append(eixo(sx0, ytopo, sx0, ybase, "svg-l-linha", 1))
+    body.append(eixo(sx1, ytopo, sx1, ybase, "svg-l-linha", 1))
+    body.append(txt((sx0 + sx1) / 2, ybase + 14, "mesmo instante", "svg-rot-p", "middle"))
+    return svg(h, "".join(body), "Contraste entre parametros sequenciais na fala e simultaneos na lingua de sinais")
+
+
+# ═══════════════════════════════════════════════════════════════════════
 FIG["fourier-decomp"]     = fig_fourier_decomp()
 FIG["fourier-dominios"]   = fig_fourier_dominios()
 FIG["fourier-gibbs"]      = fig_fourier_gibbs()
@@ -589,6 +747,10 @@ FIG["gestalt-principios"] = fig_gestalt_principios()
 FIG["hegel-movimento"]    = fig_hegel_movimento()
 FIG["comuns-matriz"]      = fig_comuns_matriz()
 FIG["whorf-fronteira"]    = fig_whorf_fronteira()
+FIG["hidrofobico-termo"]  = fig_hidrofobico_termo()
+FIG["split-brain-campos"] = fig_split_brain_campos()
+FIG["mercado-limoes"]     = fig_mercado_limoes()
+FIG["sinais-parametros"]  = fig_sinais_parametros()
 
 destino = os.path.join(os.path.dirname(os.path.abspath(__file__)), "js", "figuras.js")
 with open(destino, "w", encoding="utf-8") as f:
