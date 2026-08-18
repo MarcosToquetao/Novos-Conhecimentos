@@ -33,41 +33,41 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1978, pesquisadores de Harvard fizeram uma pergunta a 60 médicos e estudantes de medicina do próprio hospital. Um exame detecta uma doença que atinge 1 em cada 1.000 pessoas. O exame nunca deixa de detectar quem tem a doença, mas dá positivo em 5% de quem não tem. Uma pessoa escolhida ao acaso testa positivo. Qual a chance de ela ter a doença?</p>
 
-<p>A resposta mais comum foi 95%. A resposta correta é aproximadamente 2%.<sup class="cit"><a href="#f1">1</a></sup> Quase todos erraram, e erraram na mesma direção, com um fator de quase cinquenta. O erro não vem de dificuldade aritmética — vem de uma confusão conceitual específica, e é dela que este documento trata.</p>
+<p>A resposta mais comum foi 95%. A resposta correta é aproximadamente 2%.<sup class="cit"><a href="#f1">1</a></sup> Quase todos erraram, e erraram na mesma direção, com um fator de quase cinquenta. O erro não vem de dificuldade aritmética: vem de uma confusão conceitual específica, e é dela que este documento trata.</p>
 
 <h3>A pergunta que não é a mesma pergunta</h3>
 
 <p>Existem duas perguntas parecidas e completamente diferentes:</p>
 
 <ul>
-<li><strong>Qual a chance de o exame dar positivo, se a pessoa está doente?</strong> — isso é uma propriedade do exame. Chama-se sensibilidade.</li>
-<li><strong>Qual a chance de a pessoa estar doente, se o exame deu positivo?</strong> — isso é uma propriedade da <em>pessoa dentro de uma população</em>. Chama-se valor preditivo positivo.</li>
+<li><strong>Qual a chance de o exame dar positivo, se a pessoa está doente?</strong> Isso é uma propriedade do exame. Chama-se sensibilidade.</li>
+<li><strong>Qual a chance de a pessoa estar doente, se o exame deu positivo?</strong> Isso é uma propriedade da <em>pessoa dentro de uma população</em>. Chama-se valor preditivo positivo.</li>
 </ul>
 
-<p>São grandezas distintas, e a segunda depende de algo que a primeira ignora: quantas pessoas naquela população têm a doença. Trocar uma pela outra é o erro. Ele tem nome — <em>inversão condicional</em> — e é tão frequente que aparece em manuais de erro médico, em decisões judiciais anuladas e em manchetes sobre testes de covid.</p>
+<p>São grandezas distintas, e a segunda depende de algo que a primeira ignora: quantas pessoas naquela população têm a doença. Trocar uma pela outra é o erro. Ele tem nome (<em>inversão condicional</em>) e é tão frequente que aparece em manuais de erro médico, em decisões judiciais anuladas e em manchetes sobre testes de covid.</p>
 
 <h3>Por que a intuição falha: o exemplo em pessoas, não em porcentagens</h3>
 
-<p>Porcentagens condicionais são péssimas para a cognição humana. Trocar por contagens de pessoas resolve boa parte do problema — este é o achado central da linha de pesquisa sobre "frequências naturais".<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Porcentagens condicionais são péssimas para a cognição humana. Trocar por contagens de pessoas resolve boa parte do problema: este é o achado central da linha de pesquisa sobre "frequências naturais".<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <p>Considere um rastreamento de mamografia com números realistas: 1% das mulheres na faixa etária tem câncer de mama; o exame detecta 90% dos casos reais; e dá positivo em 9% das mulheres saudáveis.</p>
 
-<figure class="figura">[[FIG:bayes-icones]]<figcaption>Mil mulheres. Dez têm câncer; nove delas testam positivo. Das 990 saudáveis, cerca de 89 também testam positivo. Ao todo, 98 resultados positivos — e apenas 9 correspondem a doença. Os números foram calculados a partir das taxas indicadas.</figcaption></figure>
+<figure class="figura">[[FIG:bayes-icones]]<figcaption>Mil mulheres. Dez têm câncer; nove delas testam positivo. Das 990 saudáveis, cerca de 89 também testam positivo. Ao todo, 98 resultados positivos, e apenas 9 correspondem a doença. Os números foram calculados a partir das taxas indicadas.</figcaption></figure>
 
-<p>Nove em noventa e oito. Aproximadamente <strong>9%</strong>. Um resultado positivo, num contexto de rastreamento populacional, deixa a mulher ainda com mais de 90% de chance de não ter a doença. Isso não significa que o exame é ruim — significa que o número que importa não é a sensibilidade do exame, é a proporção de doentes na população testada.</p>
+<p>Nove em noventa e oito. Aproximadamente <strong>9%</strong>. Um resultado positivo, num contexto de rastreamento populacional, deixa a mulher ainda com mais de 90% de chance de não ter a doença. Isso não significa que o exame é ruim: significa que o número que importa não é a sensibilidade do exame, é a proporção de doentes na população testada.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
-<p>O teorema de Bayes é uma identidade algébrica derivada diretamente da definição de probabilidade condicional. Não há nada a disputar sobre sua validade matemática. O que é intensamente debatido é outra coisa: se probabilidades devem ser interpretadas como graus de crença (visão bayesiana) ou como frequências de longo prazo (visão frequentista) — e essa disputa é filosófica e metodológica, não matemática.</p>
+<p>O teorema de Bayes é uma identidade algébrica derivada diretamente da definição de probabilidade condicional. Não há nada a disputar sobre sua validade matemática. O que é intensamente debatido é outra coisa: se probabilidades devem ser interpretadas como graus de crença (visão bayesiana) ou como frequências de longo prazo (visão frequentista), e essa disputa é filosófica e metodológica, não matemática.</p>
 </div>
 
 <h3>O que muda quando você entende isso</h3>
 
 <p>Três consequências práticas, todas com efeito imediato sobre como se lê uma informação:</p>
 
-<p><strong>Um teste raramente é conclusivo sozinho.</strong> Quanto mais rara a condição procurada, mais os falsos positivos dominam os positivos totais. Por isso testes de rastreio em população geral se comportam de maneira muito diferente do mesmo teste aplicado a quem já tem sintomas — mesma tecnologia, taxa-base diferente, conclusão diferente.</p>
+<p><strong>Um teste raramente é conclusivo sozinho.</strong> Quanto mais rara a condição procurada, mais os falsos positivos dominam os positivos totais. Por isso testes de rastreio em população geral se comportam de maneira muito diferente do mesmo teste aplicado a quem já tem sintomas: mesma tecnologia, taxa-base diferente, conclusão diferente.</p>
 
-<p><strong>A evidência move a crença, não a determina.</strong> Bayes não diz o que acreditar: diz quanto atualizar. Você entra com uma crença anterior, a evidência a multiplica por um fator, e você sai com uma crença posterior. Se sua crença anterior for extrema, uma evidência moderada quase não a move — o que é razoável, e explica por que "extraordinary claims require extraordinary evidence" é uma afirmação matematicamente precisa, não retórica.</p>
+<p><strong>A evidência move a crença, não a determina.</strong> Bayes não diz o que acreditar: diz quanto atualizar. Você entra com uma crença anterior, a evidência a multiplica por um fator, e você sai com uma crença posterior. Se sua crença anterior for extrema, uma evidência moderada quase não a move, o que é razoável e explica por que "extraordinary claims require extraordinary evidence" é uma afirmação matematicamente precisa, não retórica.</p>
 
 <p><strong>Ignorar a taxa-base é o erro mais barato de evitar.</strong> Diante de qualquer afirmação da forma "o teste/algoritmo/indício aponta X", a pergunta produtiva é sempre: <em>quantos X existem na população que está sendo examinada?</em></p>
 ` },
@@ -105,22 +105,22 @@ chance posterior = chance prior × razão de verossimilhança
 <span class="leg">LR = P(E | H) / P(E | não-H)</span>
 </div>
 
-<p>Isso separa limpamente <strong>o que você já sabia</strong> (chance prior) de <strong>o que a evidência acrescentou</strong> (razão de verossimilhança, ou LR). O LR é a medida honesta do poder informativo de um teste — e não depende da prevalência.</p>
+<p>Isso separa limpamente <strong>o que você já sabia</strong> (chance prior) de <strong>o que a evidência acrescentou</strong> (razão de verossimilhança, ou LR). O LR é a medida honesta do poder informativo de um teste, e não depende da prevalência.</p>
 
-<p>Na mamografia: LR = 0,90 / 0,09 = 10. Chance prior = 1:99. Chance posterior = 10:99, ou seja, cerca de 9%. Repare que o teste multiplicou suas chances por dez — o que é substancial. O resultado ainda é baixo porque o ponto de partida era muito baixo.</p>
+<p>Na mamografia: LR = 0,90 / 0,09 = 10. Chance prior = 1:99. Chance posterior = 10:99, ou seja, cerca de 9%. Repare que o teste multiplicou suas chances por dez, o que é substancial. O resultado ainda é baixo porque o ponto de partida era muito baixo.</p>
 
 <div class="marca consenso">
 <span class="rot">Regra prática defensável</span>
-<p>Em medicina baseada em evidências, valores de LR são usados como referência grosseira: LR acima de 10 ou abaixo de 0,1 muda decisões clínicas de forma relevante; entre 0,5 e 2, quase nunca muda. Um teste com LR próximo de 1 é, do ponto de vista informacional, equivalente a não ter feito teste algum — independentemente de quão sofisticada seja a tecnologia envolvida.</p>
+<p>Em medicina baseada em evidências, valores de LR são usados como referência grosseira: LR acima de 10 ou abaixo de 0,1 muda decisões clínicas de forma relevante; entre 0,5 e 2, quase nunca muda. Um teste com LR próximo de 1 é, do ponto de vista informacional, equivalente a não ter feito teste algum, independentemente de quão sofisticada seja a tecnologia envolvida.</p>
 </div>
 
 <h3>Por que a intuição falha: duas explicações concorrentes</h3>
 
 <p>Há uma disputa empírica real sobre a origem do erro, e as duas posições têm evidência.</p>
 
-<p><strong>Posição 1 — a mente não é bayesiana.</strong> Kahneman e Tversky mostraram que as pessoas julgam por representatividade: avaliam quanto a evidência "parece" com a hipótese, ignorando a frequência de base. O erro seria um viés cognitivo estrutural.<sup class="cit"><a href="#f3">3</a></sup></p>
+<p><strong>Posição 1: a mente não é bayesiana.</strong> Kahneman e Tversky mostraram que as pessoas julgam por representatividade: avaliam quanto a evidência "parece" com a hipótese, ignorando a frequência de base. O erro seria um viés cognitivo estrutural.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<p><strong>Posição 2 — o formato é que é ruim.</strong> Gigerenzer e colaboradores mostraram que apresentar o mesmo problema em frequências naturais ("10 em 1.000") em vez de probabilidades condicionais ("1%") eleva drasticamente a taxa de acerto, inclusive entre médicos. O erro seria um artefato de representação, não da cognição.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p><strong>Posição 2: o formato é que é ruim.</strong> Gigerenzer e colaboradores mostraram que apresentar o mesmo problema em frequências naturais ("10 em 1.000") em vez de probabilidades condicionais ("1%") eleva drasticamente a taxa de acerto, inclusive entre médicos. O erro seria um artefato de representação, não da cognição.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <div class="marca controverso">
 <span class="rot">Ponto controverso</span>
@@ -131,7 +131,7 @@ chance posterior = chance prior × razão de verossimilhança
 
 <p><strong>Tribunais.</strong> A "falácia do promotor" é a inversão condicional aplicada a evidência forense. Um perito afirma que a chance de o perfil de DNA coincidir por acaso é 1 em 10 milhões. Concluir daí que a chance de o réu ser inocente é 1 em 10 milhões é logicamente inválido: depende de quantas pessoas poderiam plausivelmente ser o autor. Em bases de dados grandes, coincidências raras tornam-se esperadas.</p>
 
-<p><strong>Segurança e triagem.</strong> Qualquer sistema que procura eventos raros — fraude, ameaça, doença — em populações grandes produz um número de falsos positivos que supera os verdadeiros, mesmo com especificidade altíssima. Isso não é falha de implementação: é uma consequência aritmética que precisa ser projetada, não descoberta depois.</p>
+<p><strong>Segurança e triagem.</strong> Qualquer sistema que procura eventos raros (fraude, ameaça, doença) em populações grandes produz um número de falsos positivos que supera os verdadeiros, mesmo com especificidade altíssima. Isso não é falha de implementação: é uma consequência aritmética que precisa ser projetada, não descoberta depois.</p>
 ` },
 
 extensao: { minutos: 30, html: `
@@ -152,7 +152,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>A crítica frequentista tem um alvo legítimo: se o prior é escolhido pelo pesquisador, dois analistas com os mesmos dados podem chegar a conclusões diferentes. A resposta bayesiana é que o conhecimento prévio existe de qualquer forma — a diferença é que ele fica explícito e auditável, em vez de escondido no desenho do estudo e nas escolhas de análise.</p>
+<p>A crítica frequentista tem um alvo legítimo: se o prior é escolhido pelo pesquisador, dois analistas com os mesmos dados podem chegar a conclusões diferentes. A resposta bayesiana é que o conhecimento prévio existe de qualquer forma: a diferença é que ele fica explícito e auditável, em vez de escondido no desenho do estudo e nas escolhas de análise.</p>
 
 <div class="marca emergente">
 <span class="rot">Prática crescente e defensável</span>
@@ -163,17 +163,17 @@ extensao: { minutos: 30, html: `
 
 <p>Um valor-p responde: <em>se a hipótese nula fosse verdadeira, qual a chance de eu ver dados tão extremos quanto estes?</em> Isso é P(dados | H₀). Quase todo mundo o lê como P(H₀ | dados). É a mesma inversão condicional do exemplo da mamografia, e é o erro mais consequente da estatística aplicada.</p>
 
-<p>O ponto quantitativo: para um estudo com poder de 80% e nível de 5%, testando hipóteses das quais apenas 10% são verdadeiras a priori, entre os resultados "significativos" cerca de 36% são falsos positivos.<sup class="cit"><a href="#f4">4</a></sup> Não por fraude, nem por má execução — apenas por aritmética bayesiana aplicada a uma taxa-base baixa de hipóteses verdadeiras. Este é o argumento central de Ioannidis em "Why most published research findings are false", e é essencialmente o problema da mamografia transposto para a literatura científica.</p>
+<p>O ponto quantitativo: para um estudo com poder de 80% e nível de 5%, testando hipóteses das quais apenas 10% são verdadeiras a priori, entre os resultados "significativos" cerca de 36% são falsos positivos.<sup class="cit"><a href="#f4">4</a></sup> Não por fraude, nem por má execução: apenas por aritmética bayesiana aplicada a uma taxa-base baixa de hipóteses verdadeiras. Este é o argumento central de Ioannidis em "Why most published research findings are false", e é essencialmente o problema da mamografia transposto para a literatura científica.</p>
 
 <h3>Uma limitação séria: Bayes não sabe nada sobre causa</h3>
 
-<p>Atualização bayesiana opera sobre associações estatísticas. Ela responde perfeitamente a "vendo isto, o que devo esperar daquilo?" e não responde a "se eu <em>intervier</em> aqui, o que acontece ali?". Judea Pearl formalizou essa distinção em três níveis — associação, intervenção e contrafactual — e mostrou que subir de nível exige suposições causais que nenhuma quantidade de dados observacionais fornece.<sup class="cit"><a href="#f5">5</a></sup></p>
+<p>Atualização bayesiana opera sobre associações estatísticas. Ela responde perfeitamente a "vendo isto, o que devo esperar daquilo?" e não responde a "se eu <em>intervier</em> aqui, o que acontece ali?". Judea Pearl formalizou essa distinção em três níveis (associação, intervenção e contrafactual) e mostrou que subir de nível exige suposições causais que nenhuma quantidade de dados observacionais fornece.<sup class="cit"><a href="#f5">5</a></sup></p>
 
 <p>Um exemplo do próprio Pearl: observar que pessoas que tomam certo remédio se recuperam mais não permite concluir que o remédio funciona, porque quem toma pode ser sistematicamente diferente de quem não toma. Bayes atualiza corretamente a crença sobre o que você <em>verá</em>; não atualiza a crença sobre o que aconteceria se você <em>mudasse</em> quem toma. Confundir os dois é a raiz de boa parte das controvérsias em epidemiologia observacional.</p>
 
 <div class="marca controverso">
 <span class="rot">Onde o entusiasmo bayesiano exagera</span>
-<p>Há uma literatura crescente descrevendo o cérebro como um "motor de inferência bayesiana". As versões fortes dessa tese — de que o córtex implementa literalmente atualização bayesiana ótima — são difíceis de falsear: com liberdade suficiente na escolha do prior e da função de custo, quase qualquer comportamento pode ser reescrito como "bayesiano ótimo em relação a algum prior". Uma teoria que acomoda qualquer observação não está fazendo previsões arriscadas. As versões fracas (o cérebro combina expectativa e evidência de forma sensível à confiabilidade de cada uma) têm apoio experimental sólido em integração multissensorial.</p>
+<p>Há uma literatura crescente descrevendo o cérebro como um "motor de inferência bayesiana". As versões fortes dessa tese (de que o córtex implementa literalmente atualização bayesiana ótima) são difíceis de falsear: com liberdade suficiente na escolha do prior e da função de custo, quase qualquer comportamento pode ser reescrito como "bayesiano ótimo em relação a algum prior". Uma teoria que acomoda qualquer observação não está fazendo previsões arriscadas. As versões fracas (o cérebro combina expectativa e evidência de forma sensível à confiabilidade de cada uma) têm apoio experimental sólido em integração multissensorial.</p>
 </div>
 
 <h3>Como usar isso na prática, sem fórmula</h3>
@@ -182,7 +182,7 @@ extensao: { minutos: 30, html: `
 
 <ol>
 <li><strong>Qual é a taxa-base?</strong> Antes de avaliar qualquer indício, pergunte quantos casos existem na população examinada. Sem esse número, um resultado positivo é ininterpretável.</li>
-<li><strong>Quão surpreendente seria essa evidência se a hipótese fosse falsa?</strong> Essa é a pergunta que produz a razão de verossimilhança. Se a evidência seria igualmente provável nos dois cenários, ela não é evidência de nada — por mais impressionante que pareça.</li>
+<li><strong>Quão surpreendente seria essa evidência se a hipótese fosse falsa?</strong> Essa é a pergunta que produz a razão de verossimilhança. Se a evidência seria igualmente provável nos dois cenários, ela não é evidência de nada, por mais impressionante que pareça.</li>
 <li><strong>Estou invertendo a condicional?</strong> Sempre que ler "a chance disso acontecer por acaso é 1 em X", verifique se a conclusão apresentada é sobre a hipótese ou sobre os dados. Quase sempre, o texto desliza de uma para a outra.</li>
 </ol>
 
@@ -322,21 +322,21 @@ conexoes: [
 camadas: {
 
 nucleo: { minutos: 15, html: `
-<p class="abre">Em 1807, Joseph Fourier entregou à Academia de Ciências de Paris um trabalho sobre um problema mundano: como o calor se espalha dentro de uma barra de metal. O trabalho foi rejeitado. Lagrange, Laplace e Legendre — três dos maiores matemáticos vivos — estavam na banca, e Lagrange objetou a uma afirmação que Fourier fazia de passagem e que parecia absurda: que <em>qualquer</em> função, inclusive uma com quinas e saltos, pode ser escrita como uma soma de senos e cossenos, que são as curvas mais suaves que existem.<sup class="cit"><a href="#f1">1</a></sup></p>
+<p class="abre">Em 1807, Joseph Fourier entregou à Academia de Ciências de Paris um trabalho sobre um problema mundano: como o calor se espalha dentro de uma barra de metal. O trabalho foi rejeitado. Lagrange, Laplace e Legendre, três dos maiores matemáticos da época, estavam na banca. Lagrange objetou a uma afirmação que Fourier fazia de passagem e que parecia absurda: que <em>qualquer</em> função, inclusive uma com quinas e saltos, pode ser escrita como uma soma de senos e cossenos, que são as curvas mais suaves que existem.<sup class="cit"><a href="#f1">1</a></sup></p>
 
-<p>Fourier estava errado na formulação exata (o "qualquer" precisava de condições) e certo no que importava. Quinze anos depois publicou o resultado como livro,<sup class="cit"><a href="#f2">2</a></sup> e a ideia acabou se tornando uma das ferramentas mais utilizadas da ciência aplicada. Vale a pena entender por quê — e o motivo não é matemático, é conceitual.</p>
+<p>Fourier estava errado na formulação exata (o "qualquer" precisava de condições) e certo no que importava. Quinze anos depois publicou o resultado como livro,<sup class="cit"><a href="#f2">2</a></sup> e a ideia se tornou uma das ferramentas mais usadas da ciência aplicada. Vale a pena entender por quê, e o motivo não é matemático: é conceitual.</p>
 
 <h3>A ideia central em uma frase</h3>
 
 <p>Um som complicado, uma imagem, um sinal de rádio, a vibração de uma ponte: todos podem ser reconstruídos somando oscilações puras de frequências diferentes, cada uma com sua intensidade e seu atraso. A transformada de Fourier é o procedimento que descobre <em>quais</em> oscilações puras estão lá dentro e <em>com que peso</em>.</p>
 
-<figure class="figura">[[FIG:fourier-decomp]]<figcaption>Uma onda quadrada — pura quina, nada de suave — sendo construída a partir de senos. Com 1 termo você tem só uma ondulação. Com 3, algo já parece um degrau. Com 9, o degrau está quase lá. Essas curvas foram calculadas, não desenhadas: são as somas parciais reais da série.</figcaption></figure>
+<figure class="figura">[[FIG:fourier-decomp]]<figcaption>Uma onda quadrada, toda quina e nada de suave, sendo construída a partir de senos. Com 1 termo você tem só uma ondulação. Com 3, algo já parece um degrau. Com 9, o degrau está quase lá. Essas curvas foram calculadas, não desenhadas: são as somas parciais reais da série.</figcaption></figure>
 
 <p>A metáfora que costuma ser usada é o prisma. Luz branca entra, e do outro lado saem as cores separadas. O prisma não <em>acrescenta</em> as cores: elas já estavam lá, misturadas, e o prisma apenas as organizou por frequência. A transformada de Fourier faz o mesmo com qualquer sinal.</p>
 
 <div class="marca controverso">
 <span class="rot">Onde a metáfora do prisma engana</span>
-<p>O prisma sugere que a decomposição é um fato físico sobre a luz. Não é o caso da transformada. Decompor em senos é uma <em>escolha</em> de sistema de coordenadas, não uma descoberta sobre a natureza do sinal. Você poderia decompor o mesmo sinal em ondaletas (wavelets), em polinômios de Chebyshev ou em qualquer outra base. Senos venceram porque têm uma propriedade especial que veremos adiante — não porque são "o que o sinal realmente é".</p>
+<p>O prisma sugere que a decomposição é um fato físico sobre a luz. Não é o caso da transformada. Decompor em senos é uma <em>escolha</em> de sistema de coordenadas, não uma descoberta sobre a natureza do sinal. Você poderia decompor o mesmo sinal em ondaletas (wavelets), em polinômios de Chebyshev ou em qualquer outra base. Senos venceram porque têm uma propriedade especial que a próxima seção explica, não porque são "o que o sinal realmente é".</p>
 </div>
 
 <h3>Dois retratos do mesmo objeto</h3>
@@ -345,22 +345,15 @@ nucleo: { minutos: 15, html: `
 
 <figure class="figura">[[FIG:fourier-dominios]]<figcaption>Em cima, o sinal como o tempo o entrega. Embaixo, o mesmo sinal como frequências. Nenhuma informação foi perdida nem criada: são duas coordenadas do mesmo ponto. A transformada inversa reconstrói o de cima a partir do de baixo, exatamente.</figcaption></figure>
 
-<p>O ponto que costuma passar despercebido é este: <strong>não há perda</strong>. As duas representações são equivalentes. Você pode ir e voltar quantas vezes quiser. Não é um resumo do sinal — é o sinal, escrito noutra língua.</p>
+<p>O ponto que costuma passar despercebido é este: <strong>não há perda</strong>. As duas representações são equivalentes, e você pode ir e voltar entre elas quantas vezes quiser. É o mesmo sinal, escrito em outra língua, não um resumo dele.</p>
 
 <h3>Por que isso é útil, e não apenas elegante</h3>
 
-<p>A utilidade vem de um padrão que se repete em toda a ciência aplicada: <strong>operações difíceis num domínio ficam triviais no outro</strong>.</p>
-
-<ul>
-<li><strong>Filtrar ruído.</strong> No domínio do tempo, separar o chiado de 8 kHz da voz é um problema espinhoso. No domínio da frequência é uma tesoura: apague a coluna de 8 kHz e volte.</li>
-<li><strong>Comprimir.</strong> O ouvido humano não distingue certos detalhes de alta frequência, e o olho ainda menos. MP3 e JPEG transformam, descartam o que a percepção não usa, e guardam o resto. A compressão não acontece no sinal original; acontece no espectro.</li>
-<li><strong>Resolver equações diferenciais.</strong> Derivar, no domínio da frequência, vira multiplicar por um número. Foi exatamente por isso que Fourier chegou a tudo isso: ele queria resolver a equação do calor, e a transformada converteu uma equação diferencial numa conta de multiplicação.</li>
-<li><strong>Enxergar estrutura invisível.</strong> Um sinal biológico que parece ruído pode revelar um pico limpo em 1 ciclo por 24 horas — e você acabou de detectar um ritmo circadiano sem saber que estava procurando por ele.</li>
-</ul>
+<p>A utilidade vem de um padrão que se repete em toda a ciência aplicada: <strong>operações difíceis num domínio ficam triviais no outro</strong>. Filtrar ruído é o exemplo mais direto: no domínio do tempo, separar o chiado de 8 kHz da voz é um problema espinhoso, mas no domínio da frequência é uma tesoura, basta apagar a coluna de 8 kHz e voltar. Comprimir funciona pelo mesmo caminho: o ouvido humano não distingue certos detalhes de alta frequência, e o olho ainda menos, então MP3 e JPEG transformam, descartam o que a percepção não usa e guardam o resto; a compressão não acontece no sinal original, acontece no espectro. Resolver equações diferenciais também muda de categoria: derivar, no domínio da frequência, vira multiplicar por um número. Foi por isso que Fourier chegou a tudo isso: ele queria resolver a equação do calor, e a transformada converteu uma equação diferencial numa conta de multiplicação. E há a estrutura que fica invisível no domínio original: um sinal biológico que parece ruído pode revelar um pico limpo em 1 ciclo por 24 horas, o que equivale a detectar um ritmo circadiano sem saber que se estava procurando por ele.</p>
 
 <h3>O caso mais bonito: você já viu uma transformada de Fourier</h3>
 
-<p>Quando raios X atravessam um cristal, o padrão de manchas que aparece no detector <em>é</em>, com boa aproximação, a transformada de Fourier da distribuição de densidade eletrônica do cristal.<sup class="cit"><a href="#f3">3</a></sup> A natureza faz a transformada; o cristalógrafo precisa apenas fazer a inversa para recuperar a estrutura da molécula. A imagem 51 de Rosalind Franklin, que mostrou a hélice do DNA, é literalmente um espectro de Fourier — o padrão em X é a assinatura de uma hélice no domínio da frequência espacial.</p>
+<p>Quando raios X atravessam um cristal, o padrão de manchas que aparece no detector <em>é</em>, com boa aproximação, a transformada de Fourier da distribuição de densidade eletrônica do cristal.<sup class="cit"><a href="#f3">3</a></sup> A natureza faz a transformada; o cristalógrafo precisa apenas fazer a inversa para recuperar a estrutura da molécula. A imagem 51 de Rosalind Franklin, que mostrou a hélice do DNA, é literalmente um espectro de Fourier: o padrão em X é a assinatura de uma hélice no domínio da frequência espacial.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -369,7 +362,7 @@ nucleo: { minutos: 15, html: `
 
 <h3>O que segurar antes de seguir</h3>
 
-<p>Se você fechar o texto aqui, três coisas bastam. Primeira: transformar é mudar de coordenadas, não resumir. Segunda: a utilidade nasce de que multiplicar, filtrar e derivar mudam de dificuldade conforme o domínio. Terceira: senos não são a única base possível — e a próxima camada mostra por que eles ganharam.</p>
+<p>Se você fechar o texto aqui, o essencial é isto: transformar é mudar de coordenadas, não resumir. A utilidade vem de multiplicar, filtrar e derivar mudarem de dificuldade conforme o domínio. E senos não são a única base possível; a próxima camada mostra por que eles ganharam.</p>
 ` },
 
 aprofundamento: { minutos: 15, html: `
@@ -398,7 +391,7 @@ F(ξ) = ∫ f(t) · e<sup>−2πiξt</sup> dt
 
 <p>Quando a velocidade de enrolamento é qualquer uma, os picos do sinal caem espalhados pelo círculo, e o centro de massa fica perto da origem: resultado próximo de zero. Mas quando a velocidade de enrolamento coincide com uma frequência que existe no sinal, todos os picos caem alinhados do mesmo lado, e o centro de massa dispara para longe da origem. A transformada é exatamente esse centro de massa em função da velocidade de enrolamento.<sup class="cit"><a href="#f4">4</a></sup></p>
 
-<p>Isso explica por que senos e exponenciais complexas venceram como base: elas são as <strong>autofunções da derivada</strong> e das operações de deslocamento. Derivar e<sup>iωt</sup> devolve o mesmo e<sup>iωt</sup> multiplicado por iω. Nenhuma outra família de funções tem essa propriedade tão limpa — é isso que converte cálculo em aritmética.</p>
+<p>Isso explica por que senos e exponenciais complexas venceram como base: elas são as <strong>autofunções da derivada</strong> e das operações de deslocamento. Derivar e<sup>iωt</sup> devolve o mesmo e<sup>iωt</sup> multiplicado por iω. Nenhuma outra família de funções tem essa propriedade tão limpa: é isso que converte cálculo em aritmética.</p>
 
 <h3>A regra de ouro: convolução vira multiplicação</h3>
 
@@ -411,7 +404,7 @@ F{ f ∗ g } = F{f} · F{g}
 
 <h3>O preço: você não pode ter as duas coisas</h3>
 
-<p>Há um limite que não é técnico, é matemático. Um sinal muito localizado no tempo tem espectro necessariamente espalhado, e vice-versa. Uma nota tocada por um instante muito curto não tem altura bem definida — e isso não é limitação do equipamento, é uma propriedade da representação.</p>
+<p>Há um limite que não é técnico, é matemático. Um sinal muito localizado no tempo tem espectro necessariamente espalhado, e vice-versa. Uma nota tocada por um instante muito curto não tem altura bem definida, e isso não é limitação do equipamento: é uma propriedade da representação.</p>
 
 <div class="formula">
 Δt · Δξ ≥ 1 / 4π
@@ -427,15 +420,15 @@ F{ f ∗ g } = F{f} · F{g}
 
 <p>Um computador não vê funções contínuas: vê listas de números amostrados. A versão discreta, a DFT, calcula o mesmo conceito para N amostras. O problema é o custo: feita ingenuamente, ela exige da ordem de N² operações. Para um segundo de áudio a 44,1 kHz, isso é cerca de 2 bilhões de operações.</p>
 
-<p>Em 1965, Cooley e Tukey publicaram um algoritmo que reduz isso a N·log N — de 2 bilhões para cerca de 700 mil.<sup class="cit"><a href="#f5">5</a></sup> É a FFT. Sem ela, praticamente nada do processamento digital de sinais existiria na forma atual. (O algoritmo já havia sido descoberto por Gauss em 1805 e esquecido por 160 anos, o que é um bom lembrete sobre como o conhecimento se perde.)</p>
+<p>Em 1965, Cooley e Tukey publicaram um algoritmo que reduz isso a N·log N (de 2 bilhões para cerca de 700 mil operações).<sup class="cit"><a href="#f5">5</a></sup> É a FFT. Sem ela, praticamente nada do processamento digital de sinais existiria na forma atual. O algoritmo já havia sido descoberto por Gauss em 1805 e ficou esquecido por 160 anos, o que é um bom lembrete de como o conhecimento se perde.</p>
 
-<p>Amostrar tem uma condição: se você medir menos que duas vezes por ciclo da frequência mais alta presente, frequências altas se disfarçam de baixas irreversivelmente. É o <em>aliasing</em> — a razão pela qual rodas de carroça giram para trás no cinema e pela qual áudio digital de qualidade usa 44,1 kHz para representar até 22 kHz.</p>
+<p>Amostrar tem uma condição: se você medir menos que duas vezes por ciclo da frequência mais alta presente, frequências altas se disfarçam de baixas irreversivelmente. É o <em>aliasing</em>, a razão pela qual rodas de carroça giram para trás no cinema e pela qual áudio digital de qualidade usa 44,1 kHz para representar até 22 kHz.</p>
 ` },
 
 extensao: { minutos: 30, html: `
 <h3>A objeção de Lagrange estava certa</h3>
 
-<p>Vale voltar ao ponto de partida, porque a história raramente é contada com honestidade. Lagrange não era um velho teimoso: ele identificou um problema real. Somar infinitas funções contínuas e obter uma função descontínua exige definir com precisão o que "somar infinitas coisas" significa, e essa definição não existia em 1807. Levou o século XIX inteiro — Dirichlet, Riemann, Lebesgue — para tornar rigoroso o que Fourier havia afirmado por intuição física.</p>
+<p>Vale voltar ao ponto de partida, porque a história raramente é contada com honestidade. Lagrange não era um velho teimoso: ele identificou um problema real. Somar infinitas funções contínuas e obter uma função descontínua exige definir com precisão o que "somar infinitas coisas" significa, e essa definição não existia em 1807. Levou o século XIX inteiro, com Dirichlet, Riemann e Lebesgue, para tornar rigoroso o que Fourier havia afirmado por intuição física.</p>
 
 <p>Dirichlet, em 1829, deu as primeiras condições suficientes para a convergência. A teoria moderna reformula tudo em termos de espaços L²: a série converge <em>em média quadrática</em>, o que é mais fraco do que convergir ponto a ponto, mas é exatamente o que engenharia e física precisam.</p>
 
@@ -445,7 +438,7 @@ extensao: { minutos: 30, html: `
 
 <p>Perto de uma descontinuidade, as somas parciais sempre ultrapassam o valor correto. Aumentar o número de termos estreita a região do erro, mas não reduz a altura do sobressinal, que converge para aproximadamente 8,95% da altura do salto.<sup class="cit"><a href="#f6">6</a></sup></p>
 
-<p>Isso tem consequência prática direta: filtros aplicados de forma abrupta no domínio da frequência produzem oscilações em torno de bordas na imagem reconstruída — o que em ressonância magnética aparece como <em>ringing artifact</em> e em áudio como um "pré-eco". É por isso que na prática se usam janelas suaves em vez de cortes retos.</p>
+<p>Isso tem consequência prática direta: filtros aplicados de forma abrupta no domínio da frequência produzem oscilações em torno de bordas na imagem reconstruída. Em ressonância magnética isso aparece como <em>ringing artifact</em>; em áudio, como um "pré-eco". Por isso, na prática, se usam janelas suaves em vez de cortes retos.</p>
 
 <div class="marca controverso">
 <span class="rot">Ponto frequentemente mal compreendido</span>
@@ -471,25 +464,25 @@ extensao: { minutos: 30, html: `
 
 <div class="marca emergente">
 <span class="rot">Abordagem emergente</span>
-<p>Redes neurais que aprendem a base de decomposição diretamente dos dados (em vez de assumir senos) têm superado métodos clássicos em algumas tarefas de áudio e imagem. O ganho é real e mensurável; o custo é a perda de interpretabilidade — a base aprendida raramente tem significado físico, e isso importa quando o objetivo é entender um sistema, não apenas prever sua saída.</p>
+<p>Redes neurais que aprendem a base de decomposição diretamente dos dados (em vez de assumir senos) têm superado métodos clássicos em algumas tarefas de áudio e imagem. O ganho é real e mensurável; o custo é a perda de interpretabilidade: a base aprendida raramente tem significado físico, e isso importa quando o objetivo é entender um sistema, não apenas prever sua saída.</p>
 </div>
 
 <h3>Uma armadilha estatística: espectros de ruído</h3>
 
-<p>Aplicar uma FFT a qualquer série temporal sempre produz picos. Ruído branco gera um espectro plano <em>em média</em>, mas qualquer realização finita apresenta flutuações que parecem picos. Interpretar um pico do periodograma como "periodicidade descoberta" sem teste estatístico é um erro clássico.</p>
+<p>Aplicar uma FFT a qualquer série temporal sempre produz picos. Ruído branco gera um espectro plano <em>em média</em>, mas qualquer realização finita tem flutuações que parecem picos. Interpretar um pico do periodograma como "periodicidade descoberta" sem teste estatístico é um erro clássico.</p>
 
 <p>Historicamente isso produziu literatura inteira sobre ciclos econômicos, climáticos e biológicos que não sobreviveram a testes de significância adequados. Duas salvaguardas mínimas: comparar o pico contra a distribuição esperada sob a hipótese nula de ruído (frequentemente ruído vermelho, não branco, em séries naturais) e corrigir para o fato de que você está testando muitas frequências simultaneamente.</p>
 
 <div class="marca controverso">
 <span class="rot">Controvérsia metodológica real</span>
-<p>Em análise de séries temporais biológicas — expressão gênica circadiana, por exemplo — há disputa ativa sobre quais métodos de detecção de periodicidade controlam adequadamente o erro tipo I. Estudos comparativos mostram que diferentes algoritmos aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. O problema não é a transformada: é o teste de significância construído em cima dela.</p>
+<p>Em análise de séries temporais biológicas, como expressão gênica circadiana, há disputa ativa sobre quais métodos de detecção de periodicidade controlam adequadamente o erro tipo I. Estudos comparativos mostram que diferentes algoritmos aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. O problema não é a transformada: é o teste de significância construído em cima dela.</p>
 </div>
 
 <h3>Fechando o círculo: o que a transformada realmente é</h3>
 
 <p>Em linguagem de álgebra linear, a transformada de Fourier é uma <strong>mudança de base num espaço vetorial de funções</strong>. Os senos e cossenos formam uma base ortonormal; o valor F(ξ) é a projeção do sinal sobre o elemento de base de frequência ξ. Ir e voltar entre domínios é trocar de sistema de coordenadas, do mesmo modo que descrever um ponto por coordenadas cartesianas ou polares.</p>
 
-<p>Essa formulação torna óbvio o que a intuição do prisma esconde: <strong>não existe base privilegiada</strong>. A base de Fourier é ótima para sistemas invariantes no tempo — e é isso que sistemas físicos lineares em geral são, o que explica seu domínio. Quando essa hipótese cai, a base perde sua vantagem e outra representação passa a fazer mais sentido. Saber identificar em qual dos dois regimes você está é a diferença entre usar a ferramenta e ser usado por ela.</p>
+<p>Essa formulação torna óbvio o que a intuição do prisma esconde: <strong>não existe base privilegiada</strong>. A base de Fourier é ótima para sistemas invariantes no tempo, e sistemas físicos lineares em geral são assim, o que explica seu domínio. Quando essa hipótese cai, a base perde sua vantagem e outra representação passa a fazer mais sentido. Antes de aplicar a transformada, vale checar se o sistema em questão é de fato invariante no tempo: essa checagem decide se o resultado tem interpretação física ou não.</p>
 ` }
 },
 
@@ -650,19 +643,19 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1912, Max Wertheimer observou algo aparentemente banal num brinquedo óptico: duas luzes piscando em alternância, na cadência certa, não são vistas como duas luzes. São vistas como <em>uma luz que se move</em>. Não há movimento algum no estímulo. O movimento é produzido pelo sistema visual.</p>
 
-<p>A conclusão que a escola da Gestalt tirou disso foi radical para a psicologia da época: a percepção não monta o mundo somando sensações elementares. Ela organiza, agrupa e impõe estrutura <strong>antes</strong> que você tenha qualquer chance de intervir conscientemente. O todo tem propriedades que as partes não têm.</p>
+<p>A conclusão que a escola da Gestalt tirou disso foi radical para a psicologia da época: a percepção não monta o mundo somando sensações elementares. Ela organiza, agrupa e impõe estrutura antes que você tenha qualquer chance de intervir conscientemente. O todo tem propriedades que as partes não têm.</p>
 
 <h3>Por que isso interessa a quem projeta qualquer coisa</h3>
 
-<p>Porque significa que você não escolhe se o usuário vai agrupar elementos. Ele vai. A única escolha é se o agrupamento que o sistema visual dele produzir corresponde ao agrupamento lógico da informação — ou se contradiz.</p>
+<p>Porque significa que você não escolhe se o usuário vai agrupar elementos. Ele vai. A única escolha é se o agrupamento que o sistema visual dele produzir corresponde ao agrupamento lógico da informação, ou se contradiz.</p>
 
 <p>Quando um rótulo está a doze pixels do campo de cima e a quatro do campo de baixo, nenhuma quantidade de instrução escrita corrige a leitura: o rótulo pertence ao campo de baixo, e ponto. A percepção não negocia.</p>
 
-<figure class="figura">[[FIG:gestalt-principios]]<figcaption>Seis princípios de agrupamento. Em cada painel, os elementos são idênticos — o que muda é apenas a relação espacial ou de forma entre eles. Repare que você não consegue "desver" os agrupamentos, mesmo sabendo que são arbitrários.</figcaption></figure>
+<figure class="figura">[[FIG:gestalt-principios]]<figcaption>Seis princípios de agrupamento. Em cada painel, os elementos são idênticos: o que muda é apenas a relação espacial ou de forma entre eles. Repare que você não consegue "desver" os agrupamentos, mesmo sabendo que são arbitrários.</figcaption></figure>
 
 <h3>Os princípios, e o que cada um faz de fato</h3>
 
-<p><strong>Proximidade.</strong> Elementos próximos são vistos como um grupo. É o mais forte de todos, e o mais subutilizado. Boa parte das bordas, caixas e linhas divisórias em interfaces existe apenas para consertar espaçamentos mal resolvidos — remova o ruído e ajuste as distâncias, e a estrutura aparece sozinha.</p>
+<p><strong>Proximidade.</strong> Elementos próximos são vistos como um grupo. É o mais forte de todos, e o mais subutilizado. Boa parte das bordas, caixas e linhas divisórias em interfaces existe apenas para consertar espaçamentos mal resolvidos. Remova o ruído, ajuste as distâncias, e a estrutura aparece sozinha.</p>
 
 <p><strong>Similaridade.</strong> Elementos que compartilham forma, cor, tamanho ou orientação são vistos como pertencentes à mesma categoria. É o que permite ao usuário aprender uma vez que "azul sublinhado é link" e aplicar essa regra ao produto inteiro.</p>
 
@@ -672,17 +665,17 @@ nucleo: { minutos: 15, html: `
 
 <p><strong>Região comum.</strong> Elementos dentro de uma mesma fronteira fechada formam grupo, e este princípio <em>sobrepõe-se à proximidade</em>. É a razão de existirem cards: uma moldura pode reagrupar elementos contra a distância entre eles.</p>
 
-<p><strong>Destino comum.</strong> Elementos que se movem juntos são agrupados. Só passou a importar de fato com interfaces animadas — e é o princípio que faz uma transição bem feita explicar de onde um painel veio.</p>
+<p><strong>Destino comum.</strong> Elementos que se movem juntos são agrupados. Só passou a importar de fato com interfaces animadas. É o princípio que faz uma transição bem feita explicar de onde um painel veio.</p>
 
 <h3>Figura e fundo</h3>
 
-<p>Antes de agrupar, o sistema visual decide o que é objeto e o que é espaço vazio. Essa decisão é involuntária, quase sempre inequívoca e ocasionalmente ambígua — o vaso de Rubin, que alterna entre taça e dois perfis, é o exemplo clássico.</p>
+<p>Antes de agrupar, o sistema visual decide o que é objeto e o que é espaço vazio. Essa decisão é involuntária, quase sempre inequívoca e ocasionalmente ambígua: o vaso de Rubin, que alterna entre taça e dois perfis, é o exemplo clássico.</p>
 
 <p>Em interface, o que determina a leitura de figura é sobretudo: área menor tende a virar figura; região cercada tende a virar figura; e a parte que aparenta estar à frente ganha. Sombra, elevação e contraste são as ferramentas com que se manipula isso.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
-<p>Que os fenômenos de agrupamento existem, são robustos e ocorrem cedo no processamento visual é consenso amplo, sustentado por um século de psicofísica e confirmado por neuroimagem e registro eletrofisiológico. Você pode contar com eles. O que <em>não</em> é consenso é a explicação teórica de por que ocorrem — e disso trata a próxima camada.</p>
+<p>Que os fenômenos de agrupamento existem, são robustos e ocorrem cedo no processamento visual é consenso amplo, sustentado por um século de psicofísica e confirmado por neuroimagem e registro eletrofisiológico. Você pode contar com eles. O que <em>não</em> é consenso é a explicação teórica de por que ocorrem. Disso trata a próxima camada.</p>
 </div>
 ` },
 
@@ -701,17 +694,17 @@ aprofundamento: { minutos: 15, html: `
 <li><strong>Conexão física é o mais forte de todos.</strong> Uma linha ligando dois elementos vence proximidade, similaridade e até região comum. É por isso que fluxogramas funcionam.</li>
 </ul>
 
-<p>Além disso, os princípios operam simultaneamente sobre <em>níveis diferentes</em> de organização. A mesma tela pode ter proximidade agrupando campos dentro de uma seção e região comum separando seções — e é justamente a hierarquia entre esses níveis que produz a sensação de layout "limpo" ou "confuso".</p>
+<p>Além disso, os princípios operam simultaneamente sobre <em>níveis diferentes</em> de organização. A mesma tela pode ter proximidade agrupando campos dentro de uma seção e região comum separando seções. É justamente a hierarquia entre esses níveis que produz a sensação de layout "limpo" ou "confuso".</p>
 
 <h3>A teoria original está morta</h3>
 
 <p>Os gestaltistas não pararam na descrição. Wolfgang Köhler propôs uma explicação neurofisiológica: campos elétricos contínuos no córtex que se organizariam por dinâmica de campo, produzindo isomorfismo entre a estrutura da experiência e a estrutura da atividade cerebral.</p>
 
-<p>Essa hipótese foi <strong>experimentalmente refutada</strong> nos anos 1950. Lashley, Sperry e colaboradores inseriram lâminas metálicas e fios condutores no córtex visual de animais para curto-circuitar os campos hipotéticos. A percepção permaneceu intacta.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Essa hipótese foi refutada experimentalmente nos anos 1950. Lashley, Sperry e colaboradores inseriram lâminas metálicas e fios condutores no córtex visual de animais para curto-circuitar os campos hipotéticos. A percepção permaneceu intacta.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <div class="marca consenso">
 <span class="rot">Uma distinção que vale carregar para outros temas</span>
-<p>As descrições fenomenológicas da Gestalt sobreviveram; a teoria explicativa não. Isso é comum na história da ciência e não desqualifica o programa: Kepler descreveu órbitas elípticas corretamente com uma explicação causal errada. Distinguir "o fenômeno é real" de "a explicação proposta é correta" é uma das operações de leitura crítica mais úteis que existem — e a maioria dos textos de design sobre Gestalt não a faz, apresentando a teoria dos campos como se ainda estivesse de pé.</p>
+<p>As descrições fenomenológicas da Gestalt sobreviveram; a teoria explicativa não. Isso é comum na história da ciência e não desqualifica o programa: Kepler descreveu órbitas elípticas corretamente com uma explicação causal errada. Distinguir "o fenômeno é real" de "a explicação proposta é correta" é uma das operações de leitura crítica mais úteis que existem, e a maioria dos textos de design sobre Gestalt não a faz: trata a teoria dos campos como se ainda estivesse de pé.</p>
 </div>
 
 <h3>O que substituiu a explicação</h3>
@@ -731,7 +724,7 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="marca controverso">
 <span class="rot">Ponto controverso</span>
-<p>A disputa entre simplicidade e probabilidade tem mais de setenta anos e não foi resolvida. Há argumentos formais de que, sob certas condições, as duas fazem previsões equivalentes — o que sugere que a pergunta pode estar mal colocada. Para quem projeta interfaces isso não muda nada de prático; mas importa para não repetir como fato explicações que são hipóteses em disputa.</p>
+<p>A disputa entre simplicidade e probabilidade tem mais de setenta anos e não foi resolvida. Há argumentos formais de que, sob certas condições, as duas fazem previsões equivalentes, o que sugere que a pergunta pode estar mal colocada. Para quem projeta interfaces isso não muda nada de prático; mas importa para não repetir como fato explicações que são hipóteses em disputa.</p>
 </div>
 
 <h3>Aplicação: diagnosticar uma tela em três passos</h3>
@@ -746,11 +739,11 @@ aprofundamento: { minutos: 15, html: `
 extensao: { minutos: 30, html: `
 <h3>O que não sobreviveu: a "boa forma"</h3>
 
-<p>O princípio da <em>Prägnanz</em> — que a percepção tende à organização mais simples, regular e estável possível — era a lei suprema da Gestalt, a que supostamente unificava todas as outras. É também a mais problemática.</p>
+<p>O princípio da <em>Prägnanz</em> (que a percepção tende à organização mais simples, regular e estável possível) era a lei suprema da Gestalt, a que supostamente unificava todas as outras. É também a mais problemática.</p>
 
 <p>O problema é a circularidade. "Simples" nunca foi definido independentemente do resultado percebido. Se percebemos X, diz-se que X era a organização mais simples; se percebêssemos Y, Y seria declarada a mais simples. Sem uma métrica de simplicidade fixada antes da observação, o princípio não faz previsão alguma e não pode ser falseado.</p>
 
-<p>Tentativas formais de resolver isso existem — teoria da codificação estrutural, comprimento mínimo de descrição — e produzem previsões testáveis em domínios restritos. Mas a versão que circula em livros de design, "o cérebro prefere a forma mais simples", permanece vazia como enunciada.</p>
+<p>Tentativas formais de resolver isso existem (teoria da codificação estrutural, comprimento mínimo de descrição) e produzem previsões testáveis em domínios restritos. Mas a versão que circula em livros de design, "o cérebro prefere a forma mais simples", permanece vazia como enunciada.</p>
 
 <div class="marca controverso">
 <span class="rot">Uma crítica que vale generalizar</span>
@@ -763,7 +756,7 @@ extensao: { minutos: 30, html: `
 
 <p><strong>O que parece robusto entre culturas:</strong> proximidade, similaridade e fechamento aparecem em populações muito diversas, incluindo grupos com pouca exposição a mídia visual ocidental. São bons candidatos a mecanismos perceptivos básicos.</p>
 
-<p><strong>O que varia:</strong> a direção da leitura molda expectativas de sequência e de progressão temporal. Interfaces desenhadas para leitura da esquerda para a direita exigem mais que espelhamento quando adaptadas para árabe ou hebraico — a hierarquia de leitura, o sentido de "avançar" e a ancoragem visual mudam junto.</p>
+<p><strong>O que varia:</strong> a direção da leitura molda expectativas de sequência e de progressão temporal. Interfaces desenhadas para leitura da esquerda para a direita exigem mais que espelhamento quando adaptadas para árabe ou hebraico: a hierarquia de leitura, o sentido de "avançar" e a ancoragem visual mudam junto.</p>
 
 <p><strong>O que varia mais ainda:</strong> a chamada percepção holística versus analítica. Uma literatura influente sugeria que participantes do Leste Asiático processam cenas de forma mais contextual e ocidentais de forma mais focada no objeto.</p>
 
@@ -778,19 +771,19 @@ extensao: { minutos: 30, html: `
 
 <ul>
 <li><strong>Ela é sobre organização, não sobre significado.</strong> Agrupar corretamente não faz o usuário entender o que o grupo significa. Um formulário perfeitamente agrupado com rótulos incompreensíveis continua incompreensível.</li>
-<li><strong>Ela não diz nada sobre prioridade.</strong> Saber que quatro botões formam um grupo não indica qual deles é a ação principal. Isso é hierarquia visual — contraste, tamanho, posição — que é outro conjunto de mecanismos.</li>
+<li><strong>Ela não diz nada sobre prioridade.</strong> Saber que quatro botões formam um grupo não indica qual deles é a ação principal. Isso é hierarquia visual (contraste, tamanho, posição), outro conjunto de mecanismos.</li>
 <li><strong>Ela não substitui teste com usuários.</strong> Os princípios preveem agrupamento perceptivo. Não preveem compreensão, memória, motivação ou conclusão da tarefa, que são o que geralmente se quer medir.</li>
 <li><strong>Ela não resolve acessibilidade.</strong> Agrupamento visual não é transmitido a leitores de tela. Um layout gestalticamente impecável pode ser completamente inutilizável se a estrutura semântica do documento não replicar o agrupamento visual.</li>
 </ul>
 
 <div class="marca emergente">
 <span class="rot">Um desdobramento contemporâneo</span>
-<p>Modelos computacionais de visão hoje reproduzem vários efeitos de agrupamento gestáltico sem terem sido programados para isso — o agrupamento emerge do treinamento em imagens naturais. Isso é evidência indireta interessante para a hipótese da estatística ecológica: se regularidades do mundo bastam para produzir os efeitos, talvez não seja preciso postular princípios inatos. A ressalva é séria: redes também apresentam falhas de agrupamento que humanos não cometem, e semelhança de comportamento não demonstra semelhança de mecanismo.</p>
+<p>Modelos computacionais de visão hoje reproduzem vários efeitos de agrupamento gestáltico sem terem sido programados para isso: o agrupamento emerge do treinamento em imagens naturais. Isso é evidência indireta interessante para a hipótese da estatística ecológica: se regularidades do mundo bastam para produzir os efeitos, talvez não seja preciso postular princípios inatos. A ressalva é séria: redes também apresentam falhas de agrupamento que humanos não cometem, e semelhança de comportamento não demonstra semelhança de mecanismo.</p>
 </div>
 
 <h3>O resumo operacional</h3>
 
-<p>Se for guardar uma frase: <strong>o espaço em branco é o instrumento de agrupamento mais forte, mais barato e mais ignorado do design</strong>. Antes de acrescentar uma borda, uma cor de fundo, um separador ou um ícone, verifique se o problema não se resolve mudando distâncias. Quase sempre se resolve — e o resultado é mais limpo, mais rápido de renderizar e mais robusto a mudanças de conteúdo.</p>
+<p>Se for guardar uma frase: <strong>o espaço em branco é o instrumento de agrupamento mais forte, mais barato e mais ignorado do design</strong>. Antes de acrescentar uma borda, uma cor de fundo, um separador ou um ícone, verifique se o problema não se resolve mudando distâncias. Quase sempre se resolve, e o resultado é mais limpo, mais rápido de renderizar e mais robusto a mudanças de conteúdo.</p>
 
 <p>E, se for guardar uma segunda: os princípios são descrições confiáveis de <em>o que acontece</em> e explicações contestadas de <em>por que acontece</em>. Use-os como ferramenta de projeto com confiança. Cite-os como teoria da mente com cautela.</p>
 ` }
@@ -936,13 +929,13 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Comecemos por desfazer o que você provavelmente já ouviu. Se alguém lhe disse que Hegel pensa em "tese, antítese e síntese", essa pessoa lhe passou uma informação que Hegel não escreveu. A fórmula vem de Fichte, foi popularizada por Chalybäus e por comentadores do século XIX, e não aparece na descrição que Hegel faz da própria filosofia.<sup class="cit"><a href="#f1">1</a></sup></p>
 
-<p>Isso não é preciosismo acadêmico. A fórmula tríade sugere um esquema mecânico, aplicável de fora a qualquer conteúdo: pegue uma ideia, invente o oposto, combine. O procedimento real de Hegel é quase o inverso — e é a diferença entre entendê-lo e repetir um slogan.</p>
+<p>Isso não é preciosismo acadêmico. A fórmula tríade sugere um esquema mecânico, aplicável de fora a qualquer conteúdo: pegue uma ideia, invente o oposto, combine. O procedimento real de Hegel é quase o inverso, e é essa diferença que separa entender Hegel de repetir um slogan sobre ele.</p>
 
 <h3>O problema que Hegel herdou de Kant</h3>
 
 <p>Kant havia estabelecido algo perturbador: nós conhecemos os fenômenos, o modo como as coisas nos aparecem, moldado pelas estruturas da nossa própria mente. As coisas <em>em si</em>, independentes de nós, seriam inacessíveis por princípio. Há uma barreira, e ela é intransponível.</p>
 
-<p>A objeção de Hegel é elegante. Para afirmar que existe um limite, você precisa de algum modo já estar do outro lado dele — ou pelo menos saber o suficiente sobre o outro lado para reconhecê-lo como outro lado. Traçar uma fronteira do conhecimento é um ato de conhecimento. Se a barreira fosse absoluta, seria impossível saber que ela existe.</p>
+<p>A objeção de Hegel é elegante. Para afirmar que existe um limite, você precisa de algum modo já estar do outro lado dele, ou pelo menos saber o suficiente sobre o outro lado para reconhecê-lo como outro lado. Traçar uma fronteira do conhecimento é um ato de conhecimento. Se a barreira fosse absoluta, seria impossível saber que ela existe.</p>
 
 <p>A saída de Hegel: em vez de investigar previamente <em>se</em> podemos conhecer, acompanhar o conhecimento em ação e observar como ele corrige a si mesmo. É isso que a <em>Fenomenologia do Espírito</em> (1807) faz. Ela não é um sistema de conclusões: é a narrativa de uma sequência de tentativas fracassadas de conhecer, cada uma fracassando de um modo específico que gera a tentativa seguinte.</p>
 
@@ -960,18 +953,18 @@ nucleo: { minutos: 15, html: `
 
 <p>É a diferença entre um experimento que não funcionou e um experimento que revelou por que a hipótese estava errada. O segundo não devolve você ao ponto de partida: devolve você a um ponto mais informado. Hegel generaliza isso e transforma em motor do pensamento.</p>
 
-<p>O termo alemão para o resultado é <em>Aufhebung</em> — uma palavra que, no uso comum, significa simultaneamente cancelar, preservar e elevar. Hegel explora deliberadamente essa ambiguidade. A figura seguinte cancela a anterior enquanto conserva o que ela tinha de correto, num nível mais abrangente.</p>
+<p>O termo alemão para o resultado é <em>Aufhebung</em>: uma palavra que, no uso comum, significa simultaneamente cancelar, preservar e elevar. Hegel explora deliberadamente essa ambiguidade. A figura seguinte cancela a anterior enquanto conserva o que ela tinha de correto, num nível mais abrangente.</p>
 
 <div class="marca controverso">
 <span class="rot">Onde as traduções atrapalham</span>
-<p><em>Aufhebung</em> é traduzida em português por "suprassunção", "superação" e "supressão", e nenhuma carrega os três sentidos simultaneamente. "Superação" perde o cancelamento; "supressão" perde a conservação. Ao ler comentários sobre Hegel, vale sempre checar qual sentido o autor está privilegiando — muitas divergências interpretativas se dissolvem quando se percebe que os intérpretes traduziram a palavra de modos diferentes.</p>
+<p><em>Aufhebung</em> é traduzida em português por "suprassunção", "superação" e "supressão", e nenhuma carrega os três sentidos simultaneamente. "Superação" perde o cancelamento; "supressão" perde a conservação. Ao ler comentários sobre Hegel, vale sempre checar qual sentido o autor está privilegiando. Muitas divergências interpretativas se dissolvem quando se percebe que os intérpretes traduziram a palavra de modos diferentes.</p>
 </div>
 
 <h3>Um exemplo que você conhece: senhor e escravo</h3>
 
 <p>A passagem mais lida do livro. Duas autoconsciências se encontram e cada uma quer ser reconhecida pela outra. Segue um confronto; uma cede por medo da morte, e se estabelece a relação senhor-servo.</p>
 
-<p>Aí o movimento se inverte, e a inversão é o ponto. O senhor obtém reconhecimento — mas de alguém que ele mesmo reduziu à condição de não-plenamente-humano. Reconhecimento vindo de quem você não reconhece não vale nada. O senhor conquistou exatamente o que não queria.</p>
+<p>Aí o movimento se inverte, e a inversão é o ponto. O senhor obtém reconhecimento, mas de alguém que ele mesmo tratou como não plenamente humano. Reconhecimento vindo de quem você não reconhece não vale nada. O senhor conquistou exatamente o que não queria.</p>
 
 <p>O servo, enquanto isso, trabalha. Ao transformar a matéria, imprime nela sua própria forma, vê-se objetivado no mundo e desenvolve autoconsciência efetiva. A dependência se inverte: o senhor depende do servo para tudo, inclusive para a própria identidade.</p>
 
@@ -988,30 +981,30 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Há uma dificuldade lógica que Hegel enfrenta na Introdução da Fenomenologia e que vale acompanhar de perto, porque é a peça técnica do livro.</p>
 
-<p>Para saber se um conhecimento é verdadeiro, você precisa compará-lo com o objeto. Mas você só tem acesso ao objeto <em>como ele aparece para você</em> — ou seja, já dentro do conhecimento. Comparar o conhecimento com o objeto parece exigir sair do conhecimento, o que é impossível. Este é o problema do critério, e ele é genuinamente sério.</p>
+<p>Para saber se um conhecimento é verdadeiro, você precisa compará-lo com o objeto. Mas você só tem acesso ao objeto <em>como ele aparece para você</em>, ou seja, já dentro do conhecimento. Comparar o conhecimento com o objeto parece exigir sair do conhecimento, o que é impossível. Este é o problema do critério, e ele é genuinamente sério.</p>
 
-<p>A solução de Hegel é que a consciência já carrega <strong>os dois lados dentro de si</strong>. Ela tem uma noção do objeto (o "em si") e uma noção do seu saber sobre o objeto (o "para ela"). A comparação não precisa de nada externo: acontece entre dois momentos da própria consciência.</p>
+<p>A solução de Hegel é que a consciência já carrega os dois lados dentro de si. Ela tem uma noção do objeto (o "em si") e uma noção do seu saber sobre o objeto (o "para ela"). A comparação não precisa de nada externo: acontece entre dois momentos da própria consciência.</p>
 
-<p>E há uma consequência que Hegel sublinha: quando a comparação falha, não muda apenas o saber — <strong>muda também o objeto</strong>. Porque o que a consciência tomava como objeto era, o tempo todo, um objeto constituído pelo seu próprio critério. Mudou o critério, mudou o que conta como objeto. Por isso cada figura não é apenas uma opinião diferente sobre a mesma coisa: é um mundo diferente.</p>
+<p>E há uma consequência que Hegel sublinha: quando a comparação falha, não muda apenas o saber, muda também o objeto. Porque o que a consciência tomava como objeto era, o tempo todo, um objeto constituído pelo seu próprio critério. Mudou o critério, mudou o que conta como objeto. Por isso cada figura não é apenas uma opinião diferente sobre a mesma coisa: é um mundo diferente.</p>
 
 <h3>A abertura do livro: a certeza sensível</h3>
 
 <p>Vale ver o método em operação no caso mais simples. A primeira figura é a "certeza sensível": a convicção de que o conhecimento mais imediato e mais rico é o que aponta diretamente para o aqui e agora, sem conceitos intermediários. Parece inatacável.</p>
 
-<p>Hegel pede que ela se expresse. Escreva: "agora é noite". Guarde o papel. Ao meio-dia, leia. A proposição está falsa — mas a palavra "agora" continua funcionando perfeitamente. Ou seja: o que o "agora" preserva não é o instante particular, mas algo <em>universal</em>, que vale para qualquer instante. O mesmo vale para "aqui" e "isto".</p>
+<p>Hegel pede que ela se expresse. Escreva: "agora é noite". Guarde o papel. Ao meio-dia, leia. A proposição está falsa, mas a palavra "agora" continua funcionando perfeitamente. Ou seja: o que o "agora" preserva não é o instante particular, mas algo <em>universal</em>, que vale para qualquer instante. O mesmo vale para "aqui" e "isto".</p>
 
-<p>Conclusão: a certeza sensível pretendia ser o saber do puramente particular e, ao tentar dizer o que sabe, só consegue enunciar universais. Ela fracassa pelo seu próprio padrão. E note o que resta: não o nada, mas a descoberta de que percepção envolve mediação por universais — o que é exatamente a figura seguinte.</p>
+<p>Conclusão: a certeza sensível pretendia ser o saber do puramente particular e, ao tentar dizer o que sabe, só consegue enunciar universais. Ela fracassa pelo seu próprio padrão. E note o que resta: não o nada, mas a descoberta de que percepção envolve mediação por universais, o que é exatamente a figura seguinte.</p>
 
 <div class="marca consenso">
 <span class="rot">Por que este exemplo é importante</span>
 <p>Ele mostra que a "contradição" hegeliana não é violação da lógica formal. Ninguém está afirmando A e não-A simultaneamente no mesmo sentido. É uma inadequação performativa: uma posição que não consegue sustentar, ao ser articulada, aquilo que ela pretende ser. Confundir isso com rejeição do princípio de não contradição é o mal-entendido mais comum sobre Hegel entre leitores de formação analítica.</p>
 </div>
 
-<h3>O que "espírito" significa — e o que não significa</h3>
+<h3>O que "espírito" significa, e o que não significa</h3>
 
 <p><em>Geist</em> é o termo mais mal compreendido do vocabulário hegeliano. Não é fantasma, não é alma individual, não é entidade sobrenatural. A leitura hoje dominante entre comentadores anglófonos, associada a Pippin, Pinkard e Brandom, é que <em>Geist</em> designa o espaço de normas, práticas e reconhecimento mútuo constituído coletivamente por sujeitos.<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<p>Nesta leitura, dizer que o espírito se realiza na história é dizer que as normas pelas quais os humanos se avaliam mutuamente são produto histórico e se transformam quando entram em contradição com a prática efetiva. Nada de metafísica pesada — é uma tese sobre a estrutura social da racionalidade.</p>
+<p>Nesta leitura, dizer que o espírito se realiza na história é dizer que as normas pelas quais os humanos se avaliam mutuamente são produto histórico e se transformam quando entram em contradição com a prática efetiva. Não é uma tese de metafísica pesada. É uma tese sobre a estrutura social da racionalidade.</p>
 
 <div class="marca controverso">
 <span class="rot">Disputa interpretativa em curso</span>
@@ -1023,7 +1016,7 @@ aprofundamento: { minutos: 15, html: `
 <p>Quatro razões, e nenhuma delas é obscurantismo deliberado:</p>
 
 <ul>
-<li><strong>Sem metalinguagem.</strong> Hegel se recusa a descrever de fora o que está fazendo, porque isso pressuporia um ponto de vista externo ao processo — exatamente o que ele nega existir. O leitor precisa acompanhar o movimento em vez de receber um mapa.</li>
+<li><strong>Sem metalinguagem.</strong> Hegel se recusa a descrever de fora o que está fazendo, porque isso pressuporia um ponto de vista externo ao processo, exatamente o que ele nega existir. O leitor precisa acompanhar o movimento em vez de receber um mapa.</li>
 <li><strong>Termos que mudam de sentido.</strong> Conceitos como "ser", "essência" e "conceito" adquirem significados sucessivamente mais determinados ao longo do texto. Fixar uma definição no capítulo 2 e carregá-la até o fim leva a contradições aparentes.</li>
 <li><strong>Condições de escrita.</strong> Hegel entregou o manuscrito em partes ao editor enquanto ainda escrevia, sob pressão financeira e com Napoleão tomando Jena. A estrutura da segunda metade é notoriamente menos controlada que a da primeira, e isso é reconhecido inclusive por seus defensores.</li>
 <li><strong>Densidade referencial.</strong> Boa parte das figuras alude a posições filosóficas, religiosas e literárias específicas do período — estoicismo, ceticismo, Iluminismo francês, Antígona, o Terror jacobino — quase nunca nomeadas.</li>
@@ -1048,7 +1041,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>"Saber absoluto" é outro termo que engana. Não significa onisciência, nem posse de todas as verdades. Significa o ponto em que a consciência compreende que o próprio processo de formação era o objeto — que não havia um "em si" atrás do percurso, esperando ser alcançado. É reflexivo, não enciclopédico.</p>
+<p>"Saber absoluto" é outro termo que engana. Não significa onisciência, nem posse de todas as verdades. Significa o ponto em que a consciência compreende que o próprio processo de formação era o objeto: não havia um "em si" atrás do percurso, esperando ser alcançado. É reflexivo, não enciclopédico.</p>
 
 <h3>As três grandes críticas, e o que sobrevive delas</h3>
 
@@ -1060,7 +1053,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca controverso">
 <span class="rot">Sobre a crítica de Popper</span>
-<p>Historiadores da filosofia, inclusive não hegelianos, documentaram que Popper trabalhou com citações truncadas, atribuiu a Hegel posições de discípulos e ignorou o contexto de passagens políticas. A acusação de que Hegel rejeita o princípio de não contradição é insustentável: a "contradição" hegeliana é inadequação performativa, não conjunção de A e não-A. Isso não significa que Hegel esteja livre de crítica política — sua filosofia do direito tem passagens genuinamente problemáticas, e há debate sério sobre elas. Significa apenas que a versão de Popper não é uma boa fonte para saber o que Hegel disse.</p>
+<p>Historiadores da filosofia, inclusive não hegelianos, documentaram que Popper trabalhou com citações truncadas, atribuiu a Hegel posições de discípulos e ignorou o contexto de passagens políticas. A acusação de que Hegel rejeita o princípio de não contradição é insustentável: a "contradição" hegeliana é inadequação performativa, não conjunção de A e não-A. Isso não significa que Hegel esteja livre de crítica política: sua filosofia do direito tem passagens genuinamente problemáticas, e há debate sério sobre elas. Significa apenas que a versão de Popper não é uma boa fonte para saber o que Hegel disse.</p>
 </div>
 
 <h3>Por que ainda se lê isso</h3>
@@ -1071,17 +1064,17 @@ extensao: { minutos: 30, html: `
 
 <p><strong>Crítica imanente como método.</strong> Avaliar uma prática pelos padrões que ela mesma declara, em vez de aplicar um critério externo, é o procedimento padrão da teoria crítica e reaparece em análise institucional, crítica de ideologia e até em auditoria de coerência de programas de pesquisa. É uma ferramenta metodológica destacável do sistema.</p>
 
-<p><strong>Historicidade das categorias.</strong> A ideia de que os próprios conceitos com que pensamos têm história, e que isso não os torna arbitrários, atravessa Kuhn, Foucault, Koselleck e a história conceitual. É a resposta hegeliana ao dilema entre absolutismo e relativismo — e continua sendo uma das poucas tentativas sérias de escapar dos dois.</p>
+<p><strong>Historicidade das categorias.</strong> A ideia de que os próprios conceitos com que pensamos têm história, e que isso não os torna arbitrários, atravessa Kuhn, Foucault, Koselleck e a história conceitual. É a resposta hegeliana ao dilema entre absolutismo e relativismo, e continua sendo uma das poucas tentativas sérias de escapar dos dois.</p>
 
 <h3>Como ler, se você decidir tentar</h3>
 
-<p>Um conselho prático que quase todos os especialistas repetem: <strong>não comece pelo Prefácio</strong>. Ele foi escrito por último, é um dos textos mais densos da filosofia ocidental e pressupõe o livro inteiro. Comece pela Introdução, que apresenta o método, e depois pela Certeza Sensível, onde o método aparece funcionando num caso simples.</p>
+<p>Um conselho prático e recorrente em introduções ao livro, como a de Houlgate:<sup class="cit"><a href="#f6">6</a></sup> <strong>não comece pelo Prefácio</strong>. Ele foi escrito por último, é um dos textos mais densos da filosofia ocidental e pressupõe o livro inteiro. Comece pela Introdução, que apresenta o método, e depois pela Certeza Sensível, onde o método aparece funcionando num caso simples.</p>
 
-<p>O segundo conselho: leia com um comentário ao lado desde o início. Isso não é fraqueza — a densidade referencial do texto torna a leitura solitária improdutiva para quem não conhece o contexto de 1807. Terceiro: aceite não entender partes inteiras na primeira passagem. O próprio movimento do livro pressupõe que o leitor refaça o percurso.</p>
+<p>O segundo conselho: leia com um comentário ao lado desde o início. Isso não é fraqueza: a densidade referencial do texto torna a leitura solitária improdutiva para quem não conhece o contexto de 1807. Terceiro: aceite não entender partes inteiras na primeira passagem. O próprio movimento do livro pressupõe que o leitor refaça o percurso.</p>
 
 <div class="marca especulacao">
 <span class="rot">Uma observação especulativa, marcada como tal</span>
-<p>Existe uma literatura recente que aproxima a dialética hegeliana de processos de aprendizado por correção de erro, incluindo em sistemas artificiais: um modelo com um critério interno que gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso. A analogia estrutural é sugestiva e ocasionalmente iluminadora. Mas é analogia, não continuidade histórica nem tese demonstrada — e Hegel insiste que o processo é normativo e social, não algorítmico, o que é precisamente o ponto em que a comparação se rompe.</p>
+<p>Existe uma literatura recente que aproxima a dialética hegeliana de processos de aprendizado por correção de erro, incluindo em sistemas artificiais: um modelo com um critério interno que gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso. A analogia estrutural é sugestiva e ocasionalmente iluminadora. Mas é analogia, não continuidade histórica nem tese demonstrada. Hegel insiste que o processo é normativo e social, não algorítmico, e é precisamente aí que a comparação se rompe.</p>
 </div>
 ` }
 },
@@ -1322,9 +1315,9 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Deixando de lado a medida e olhando o desfecho: dietas de baixo índice glicêmico melhoram algum resultado clínico?</p>
 
-<p><strong>Em diabetes tipo 2:</strong> revisões sistemáticas com meta-análise indicam redução de hemoglobina glicada da ordem de 0,3 a 0,5 ponto percentual em comparação com dietas de alto índice glicêmico. É um efeito real, estatisticamente consistente e clinicamente modesto — menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.</p>
+<p>Em diabetes tipo 2, revisões sistemáticas com meta-análise indicam redução de hemoglobina glicada da ordem de 0,3 a 0,5 ponto percentual em comparação com dietas de alto índice glicêmico. É um efeito real, estatisticamente consistente e clinicamente modesto: menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.</p>
 
-<p><strong>Em prevenção de doença cardiovascular e em controle de peso na população geral:</strong> a evidência é mais fraca e menos consistente. Estudos observacionais mostram associações; ensaios randomizados mostram efeitos pequenos e frequentemente não significativos.</p>
+<p>Em prevenção de doença cardiovascular e em controle de peso na população geral, a evidência é mais fraca e menos consistente. Estudos observacionais mostram associações; ensaios randomizados mostram efeitos pequenos e frequentemente não significativos.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso razoável</span>
@@ -1343,13 +1336,13 @@ extensao: { minutos: 30, html: `
 
 <p>Vale usar este caso como treino, porque a estrutura do problema se repete em quase toda a nutrição.</p>
 
-<p><strong>O conceito é fisiologicamente plausível?</strong> Sim. Velocidade de digestão e absorção varia entre alimentos, e picos glicêmicos maiores exigem resposta insulínica maior. Plausibilidade mecanística é o ponto mais forte do índice glicêmico.</p>
+<p>O conceito é fisiologicamente plausível? Sim: a velocidade de digestão e absorção varia entre alimentos, e picos glicêmicos maiores exigem resposta insulínica maior. Essa plausibilidade mecanística é o ponto mais forte do índice glicêmico.</p>
 
-<p><strong>A medida é confiável?</strong> Parcialmente. Coeficientes de variação de 20% dentro da mesma pessoa e 25% entre pessoas significam que o valor de tabela carrega incerteza comparável à diferença entre as categorias que ele define.</p>
+<p>A medida é confiável? Parcialmente. Coeficientes de variação de 20% dentro da mesma pessoa e 25% entre pessoas significam que o valor de tabela carrega incerteza comparável à diferença entre as categorias que ele define.</p>
 
-<p><strong>A medida prevê o desfecho que importa?</strong> Modestamente, e num subgrupo específico. Glicemia pós-prandial é um marcador intermediário; o que interessa clinicamente são eventos, mortalidade e qualidade de vida. Marcadores intermediários frequentemente respondem sem que os desfechos duros acompanhem.</p>
+<p>A medida prevê o desfecho que importa? Modestamente, e num subgrupo específico. Glicemia pós-prandial é um marcador intermediário; o que interessa clinicamente são eventos, mortalidade e qualidade de vida, e marcadores intermediários frequentemente respondem sem que os desfechos duros acompanhem.</p>
 
-<p><strong>O efeito é atribuível ao mecanismo proposto?</strong> Difícil de afirmar, pelo confundimento com fibra, processamento e saciedade.</p>
+<p>O efeito é atribuível ao mecanismo proposto? Difícil de afirmar, pelo confundimento com fibra, processamento e saciedade.</p>
 
 <div class="marca consenso">
 <span class="rot">Uma armadilha geral</span>
@@ -1361,10 +1354,10 @@ extensao: { minutos: 30, html: `
 <p>Rejeitá-lo por completo seria o erro simétrico. Usos defensáveis:</p>
 
 <ul>
-<li><strong>Comparação entre categorias amplas.</strong> Que leguminosas produzem resposta mais lenta que pão branco é verdadeiro, replicável e maior que o ruído da medida.</li>
-<li><strong>Ferramenta educacional.</strong> Explica de forma tangível por que "carboidrato" não é uma categoria útil, e por que a forma física do alimento importa — suco de laranja e laranja inteira não são equivalentes.</li>
-<li><strong>Manejo individual com medição própria.</strong> Uma pessoa com diabetes que mede a própria glicemia pode identificar suas respostas particulares. Aqui o valor de tabela é irrelevante e a medição individual é o que conta.</li>
-<li><strong>Contextos específicos.</strong> Ajuste fino de carboidrato em esporte e em diabetes tipo 1 com contagem, onde a resposta é monitorada de perto.</li>
+<li>Para comparar categorias amplas de alimentos: que leguminosas produzem resposta mais lenta que pão branco é verdadeiro, replicável e maior que o ruído da medida.</li>
+<li>Como ferramenta educacional, explica de forma tangível por que "carboidrato" não é uma categoria útil e por que a forma física do alimento importa (suco de laranja e laranja inteira não são equivalentes).</li>
+<li>No manejo individual com medição própria: uma pessoa com diabetes que mede a própria glicemia identifica suas respostas particulares. Aqui o valor de tabela é irrelevante; o que conta é a medição individual.</li>
+<li>Em contextos específicos, como ajuste fino de carboidrato em esporte e em diabetes tipo 1 com contagem, onde a resposta é monitorada de perto.</li>
 </ul>
 
 <h3>O que a evidência sustenta como orientação prática</h3>
@@ -1372,10 +1365,10 @@ extensao: { minutos: 30, html: `
 <p>A convergência de diretrizes de diferentes países aponta para recomendações que são, notavelmente, independentes do índice glicêmico:</p>
 
 <ol>
-<li><strong>Padrão alimentar, não nutriente isolado.</strong> A unidade de evidência mais robusta em nutrição é o padrão alimentar completo, não um índice de alimento individual.</li>
-<li><strong>Forma física importa.</strong> Grão inteiro versus farinha, fruta inteira versus suco. A estrutura da matriz alimentar altera a resposta metabólica de forma consistente e maior que a variabilidade do índice.</li>
-<li><strong>Fibra tem evidência mais sólida que índice glicêmico.</strong> A relação entre ingestão de fibras e desfechos cardiometabólicos é mais consistente entre estudos, e a medida é muito mais estável.</li>
-<li><strong>Contexto da refeição altera tudo.</strong> Combinar carboidrato com proteína, gordura ou fibra achata a curva de forma previsível — o que torna o índice de um alimento isolado ainda menos informativo sobre o que acontece numa refeição real.</li>
+<li>A unidade de evidência mais robusta em nutrição é o padrão alimentar completo, não o índice de um alimento isolado.</li>
+<li>A forma física do alimento importa: grão inteiro versus farinha, fruta inteira versus suco. A estrutura da matriz alimentar altera a resposta metabólica de forma consistente, mais que a variabilidade do índice.</li>
+<li>A fibra tem evidência mais sólida que o índice glicêmico: a relação entre ingestão de fibras e desfechos cardiometabólicos é mais consistente entre estudos, e a medida é muito mais estável.</li>
+<li>O contexto da refeição altera tudo. Combinar carboidrato com proteína, gordura ou fibra achata a curva de forma previsível, o que torna o índice de um alimento isolado ainda menos informativo sobre o que acontece numa refeição real.</li>
 </ol>
 
 <div class="marca emergente">
@@ -1538,19 +1531,19 @@ conexoes: [
 camadas: {
 
 nucleo: { minutos: 15, html: `
-<p class="abre">Você está sentado. Não afunda no chão. O motivo mais imediato não é a solidez da cadeira — é que os elétrons das moléculas do seu corpo repelem eletricamente os elétrons das moléculas da cadeira. Sólidos são, em volume, quase inteiramente vazios. O que impede a matéria de atravessar a matéria é uma interação, não uma substância.</p>
+<p class="abre">Você está sentado. Não afunda no chão. O motivo mais imediato não é a solidez da cadeira: é que os elétrons das moléculas do seu corpo repelem eletricamente os elétrons das moléculas da cadeira. Sólidos são, em volume, quase inteiramente vazios. O que impede a matéria de atravessar a matéria é uma interação, não uma substância.</p>
 
 <p>A física do século XX chegou a um inventário notavelmente curto: <strong>quatro</strong> tipos de interação dão conta de tudo o que já foi observado. Não quatro mil, não quarenta. Quatro.</p>
 
 <h3>O inventário</h3>
 
-<p><strong>Interação forte.</strong> Mantém quarks unidos dentro de prótons e nêutrons, e prótons e nêutrons unidos dentro do núcleo. É a mais intensa das quatro, mas tem alcance minúsculo: pouco mais que o diâmetro de um núcleo atômico. Como prótons têm carga positiva e se repelem furiosamente a essa distância, sem a força forte nenhum núcleo com mais de um próton existiria — e o universo seria feito só de hidrogênio.</p>
+<p><strong>Interação forte.</strong> Mantém quarks unidos dentro de prótons e nêutrons, e prótons e nêutrons unidos dentro do núcleo. É a mais intensa das quatro, mas tem alcance minúsculo: pouco mais que o diâmetro de um núcleo atômico. Como prótons têm carga positiva e se repelem furiosamente a essa distância, sem a força forte nenhum núcleo com mais de um próton existiria, e o universo seria feito só de hidrogênio.</p>
 
 <p><strong>Interação eletromagnética.</strong> Responde por toda a química, por toda a biologia, pela luz, pela eletricidade, pelo atrito, pelo som e pela solidez da cadeira. Tem alcance infinito, mas com uma peculiaridade decisiva: existem duas cargas, positiva e negativa, e elas se cancelam. Objetos grandes são eletricamente neutros, e por isso a eletromagnética não domina em escala astronômica apesar de ser bilhões de bilhões de vezes mais forte que a gravidade.</p>
 
 <p><strong>Interação fraca.</strong> A menos intuitiva. Ela não "empurra" nem "puxa" de forma perceptível: ela <em>transforma</em> um tipo de partícula em outro. É o que permite a um nêutron virar próton, e é por isso que existe decaimento radioativo beta. Sem ela, o Sol não brilharia: o primeiro passo da fusão do hidrogênio depende de converter um próton em nêutron, e só a força fraca faz isso.</p>
 
-<p><strong>Gravidade.</strong> A mais familiar e, de longe, a mais fraca — por cerca de 10³⁸ vezes em relação à forte. Domina o cosmo por dois motivos: alcance infinito e ausência de cancelamento. Não existe massa negativa, então gravidade só acumula. Some um número grande o suficiente de átomos e ela vence todas as outras.</p>
+<p><strong>Gravidade.</strong> A mais familiar e, de longe, a mais fraca (cerca de 10³⁸ vezes menos intensa que a forte). Domina o cosmo por dois motivos: alcance infinito e ausência de cancelamento. Não existe massa negativa, então gravidade só acumula. Some um número grande o suficiente de átomos e ela vence todas as outras.</p>
 
 <figure class="figura">[[FIG:forcas-alcance]]<figcaption>Alcance de cada interação em escala logarítmica. Cada divisão vale um fator de dez mil. A diferença entre 10⁻¹⁸ metros e o infinito é o que determina qual força governa qual escala do universo.</figcaption></figure>
 
@@ -1570,11 +1563,11 @@ nucleo: { minutos: 15, html: `
 </table>
 </div>
 
-<p>E aqui aparece uma conexão elegante: <strong>o alcance de uma força é determinado pela massa do seu mediador</strong>. Mediadores sem massa — fóton, glúon — permitem alcance infinito em princípio. Mediadores pesados produzem alcance curtíssimo. Os bósons W e Z são cerca de 80 a 90 vezes mais pesados que um próton, e é exatamente por isso que a força fraca é fraca e curta: não porque a interação seja intrinsecamente débil, mas porque criar o mediador é caro.</p>
+<p><strong>O alcance de uma força é determinado pela massa do seu mediador.</strong> Mediadores sem massa (fóton, glúon) permitem alcance infinito em princípio. Mediadores pesados produzem alcance curtíssimo. Os bósons W e Z são cerca de 80 a 90 vezes mais pesados que um próton, e é exatamente por isso que a força fraca é fraca e curta: não porque a interação seja intrinsecamente débil, mas porque criar o mediador é caro.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
-<p>As três primeiras interações estão descritas pelo Modelo Padrão da física de partículas, testado com precisão extraordinária — algumas previsões conferidas até a décima segunda casa decimal. Os bósons W e Z foram detectados em 1983, e o bóson de Higgs em 2012, ambos com massas próximas do previsto. Não há resultado experimental sólido que contradiga o Modelo Padrão dentro de seu domínio de aplicação.</p>
+<p>As três primeiras interações estão descritas pelo Modelo Padrão da física de partículas, testado com precisão extraordinária: algumas previsões conferidas até a décima segunda casa decimal. Os bósons W e Z foram detectados em 1983, e o bóson de Higgs em 2012, ambos com massas próximas do previsto. Não há resultado experimental sólido que contradiga o Modelo Padrão dentro de seu domínio de aplicação.</p>
 </div>
 
 <div class="marca controverso">
@@ -1586,9 +1579,9 @@ nucleo: { minutos: 15, html: `
 aprofundamento: { minutos: 15, html: `
 <h3>A grande vitória: a unificação eletrofraca</h3>
 
-<p>Nos anos 1960, Glashow, Weinberg e Salam mostraram algo inesperado: eletromagnetismo e força fraca não são duas interações, são <strong>duas faces da mesma</strong>. Acima de uma certa energia — cerca de 100 GeV, correspondente a temperaturas que o universo teve nos primeiros 10⁻¹² segundos — elas se comportam como uma única interação eletrofraca, com quatro mediadores sem massa e simétricos entre si.</p>
+<p>Nos anos 1960, Glashow, Weinberg e Salam mostraram algo inesperado: eletromagnetismo e força fraca não são duas interações, são <strong>duas faces da mesma</strong>. Acima de uma certa energia (cerca de 100 GeV, correspondente a temperaturas que o universo teve nos primeiros 10⁻¹² segundos), elas se comportam como uma única interação eletrofraca, com quatro mediadores sem massa e simétricos entre si.</p>
 
-<p>Abaixo dessa energia, a simetria "quebra". O campo de Higgs assume um valor não nulo em todo o espaço, três dos quatro mediadores adquirem massa (tornando-se W⁺, W⁻ e Z⁰) e um permanece sem massa (o fóton). O resultado é que, no universo frio de hoje, vemos duas forças com propriedades radicalmente diferentes — e a diferença é um acidente de temperatura, não uma distinção fundamental.</p>
+<p>Abaixo dessa energia, a simetria "quebra". O campo de Higgs assume um valor não nulo em todo o espaço, três dos quatro mediadores adquirem massa (tornando-se W⁺, W⁻ e Z⁰) e um permanece sem massa (o fóton). O resultado é que, no universo frio de hoje, vemos duas forças com propriedades radicalmente diferentes, e a diferença é um acidente de temperatura, não uma distinção fundamental.</p>
 
 <div class="marca consenso">
 <span class="rot">Confirmação experimental</span>
@@ -1597,11 +1590,11 @@ aprofundamento: { minutos: 15, html: `
 
 <h3>Por que a força forte se comporta ao contrário de tudo</h3>
 
-<p>A força forte tem uma propriedade que inverte a intuição construída com gravidade e eletromagnetismo: ela <strong>aumenta com a distância</strong>. Quarks muito próximos quase não interagem — fenômeno chamado <em>liberdade assintótica</em>, descoberto por Gross, Politzer e Wilczek em 1973. À medida que se afastam, a atração cresce.</p>
+<p>A força forte tem uma propriedade que inverte a intuição construída com gravidade e eletromagnetismo: ela <strong>aumenta com a distância</strong>. Quarks muito próximos quase não interagem: é o fenômeno chamado <em>liberdade assintótica</em>, descoberto por Gross, Politzer e Wilczek em 1973. À medida que se afastam, a atração cresce.</p>
 
 <p>A consequência é que quarks não podem ser isolados. Ao tentar separar dois quarks, você bombeia energia no campo entre eles; quando essa energia atinge o equivalente à massa de um par quark-antiquark, o par se materializa e você acaba com dois pares ligados em vez de dois quarks livres. É o <em>confinamento</em>: nenhum quark livre jamais foi observado, e a teoria diz que nenhum será.</p>
 
-<p>Isso tem uma consequência que costuma surpreender. A massa de um próton é cerca de 938 MeV/c². A soma das massas dos três quarks que o compõem é cerca de 9 MeV/c² — aproximadamente 1%. Os outros 99% são <strong>energia do campo forte</strong>, convertida em massa por E = mc². Praticamente toda a massa do seu corpo não vem de "matéria" no sentido intuitivo: vem de energia de ligação.</p>
+<p>Isso tem uma consequência que costuma surpreender. A massa de um próton é cerca de 938 MeV/c². A soma das massas dos três quarks que o compõem é cerca de 9 MeV/c² (aproximadamente 1%). Os outros 99% são <strong>energia do campo forte</strong>, convertida em massa por E = mc². Praticamente toda a massa do seu corpo não vem de "matéria" no sentido intuitivo: vem de energia de ligação.</p>
 
 <h3>A gravidade e o abismo</h3>
 
@@ -1626,7 +1619,7 @@ extensao: { minutos: 30, html: `
 
 <p>A unificação eletrofraca criou uma expectativa razoável: se duas forças se revelaram uma só em alta energia, talvez as três do Modelo Padrão também sejam. Essa é a ideia das <strong>Teorias de Grande Unificação</strong> (GUTs), propostas a partir dos anos 1970.</p>
 
-<p>A intensidade das três interações não é constante: varia com a energia da interação. Extrapolando as medições, as três curvas se aproximam em torno de 10¹⁶ GeV — uma energia treze ordens de grandeza acima do que o LHC alcança, o que torna o teste direto inviável por qualquer tecnologia concebível.</p>
+<p>A intensidade das três interações não é constante: varia com a energia da interação. Extrapolando as medições, as três curvas se aproximam em torno de 10¹⁶ GeV, uma energia treze ordens de grandeza acima do que o LHC alcança, o que torna o teste direto inviável por qualquer tecnologia concebível.</p>
 
 <p>Mas GUTs fazem uma previsão indireta e testável: se quarks e léptons pertencem a uma mesma família, deve existir um processo que converta um no outro. Isso implica que o <strong>próton decai</strong>.</p>
 
@@ -1635,7 +1628,7 @@ extensao: { minutos: 30, html: `
 <p>O modelo GUT mais simples, o SU(5) mínimo de Georgi e Glashow (1974), previa um tempo de vida do próton em torno de 10³¹ anos. O detector Super-Kamiokande buscou o canal dominante previsto (próton → pósitron + píon neutro) e não observou nenhum evento, estabelecendo um limite inferior superior a 10³³ anos.<sup class="cit"><a href="#f2">2</a></sup> O SU(5) mínimo está <strong>experimentalmente excluído</strong>. Versões supersimétricas e outras variantes preveem tempos de vida mais longos e permanecem em aberto — mas décadas de busca sem detecção positiva enfraqueceram consideravelmente o entusiasmo original.</p>
 </div>
 
-<p>Este é um caso instrutivo de como a ciência funciona quando funciona bem: uma teoria elegante, motivada por razões estéticas e estruturais fortes, fez uma previsão arriscada e específica. A previsão foi testada. Falhou. A teoria foi descartada — não reinterpretada até caber nos dados.</p>
+<p>É um exemplo do funcionamento normal da ciência: uma teoria motivada por razões estéticas e estruturais fortes fez uma previsão arriscada e específica. A previsão foi testada. Falhou. A teoria foi descartada: não reinterpretada até caber nos dados.</p>
 
 <h3>As perguntas que o Modelo Padrão não responde</h3>
 
@@ -1643,9 +1636,9 @@ extensao: { minutos: 30, html: `
 
 <ul>
 <li><strong>Gravidade não está incluída.</strong> A mais óbvia e a mais difícil.</li>
-<li><strong>Matéria escura.</strong> Evidência gravitacional independente e convergente — curvas de rotação de galáxias, lentes gravitacionais, radiação cósmica de fundo — indica cerca de cinco vezes mais matéria do que a visível. Nenhuma partícula do Modelo Padrão serve como candidata.</li>
+<li><strong>Matéria escura.</strong> Evidência gravitacional independente e convergente (curvas de rotação de galáxias, lentes gravitacionais, radiação cósmica de fundo) indica cerca de cinco vezes mais matéria do que a visível. Nenhuma partícula do Modelo Padrão é candidata a explicá-la.</li>
 <li><strong>Energia escura.</strong> A expansão do universo acelera, e nada no Modelo Padrão explica isso de forma satisfatória.</li>
-<li><strong>Massa dos neutrinos.</strong> O Modelo Padrão original os previa sem massa. A observação de oscilação de neutrinos (Nobel de 2015) mostrou que têm massa, pequena mas não nula. É a única contradição experimental direta, e foi acomodada com extensões — ao custo de novos parâmetros livres.</li>
+<li><strong>Massa dos neutrinos.</strong> O Modelo Padrão original os previa sem massa. A observação de oscilação de neutrinos (Nobel de 2015) mostrou que têm massa, pequena mas não nula. É a única contradição experimental direta, e foi acomodada com extensões, ao custo de novos parâmetros livres.</li>
 <li><strong>Assimetria matéria-antimatéria.</strong> O Big Bang deveria ter produzido quantidades iguais. A violação de simetria CP presente no Modelo Padrão é ordens de grandeza pequena demais para explicar o desequilíbrio observado.</li>
 <li><strong>Dezenove parâmetros livres.</strong> Massas, ângulos de mistura e constantes de acoplamento são medidos, não derivados. Uma teoria fundamental idealmente derivaria alguns deles.</li>
 </ul>
@@ -1654,13 +1647,13 @@ extensao: { minutos: 30, html: `
 
 <p>Por que a gravidade é 10³⁸ vezes mais fraca? Ou, na formulação técnica: por que a massa do Higgs é tão pequena comparada à escala de Planck, quando correções quânticas deveriam empurrá-la para cima?</p>
 
-<p>Manter o Higgs leve exige que parâmetros distintos se cancelem com precisão de dezenas de casas decimais. Isso é possível, mas parece um acidente extraordinário — e físicos desconfiam de coincidências assim.</p>
+<p>Manter o Higgs leve exige que parâmetros distintos se cancelem com precisão de dezenas de casas decimais. Isso é possível, mas parece um acidente extraordinário, e físicos desconfiam de coincidências assim.</p>
 
 <p>A supersimetria foi a resposta favorita por três décadas: novas partículas cancelariam as correções automaticamente, sem ajuste fino. O LHC procurou essas partículas nas faixas de massa previstas e não as encontrou.</p>
 
 <div class="marca especulacao">
 <span class="rot">Especulação, explicitamente</span>
-<p>A ausência de supersimetria no LHC reabriu argumentos antrópicos: talvez existam muitos universos com valores diferentes de parâmetros, e observadores só possam existir naqueles em que os valores permitem química e estrutura. O problema epistemológico é sério — se a teoria não faz previsões testáveis distintivas, resta discutir se ela é ciência ou metafísica. Esse debate está ativo e não resolvido, e envolve gente séria dos dois lados.</p>
+<p>A ausência de supersimetria no LHC reabriu argumentos antrópicos: talvez existam muitos universos com valores diferentes de parâmetros, e observadores só possam existir naqueles em que os valores permitem química e estrutura. O problema epistemológico é sério: se a teoria não faz previsões testáveis distintivas, resta discutir se ela é ciência ou metafísica. Esse debate está ativo e não resolvido, e envolve gente séria dos dois lados.</p>
 </div>
 
 <h3>Onde as quatro forças aparecem na sua escala</h3>
@@ -1679,7 +1672,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>Note que a vida ocupa quase inteiramente a faixa eletromagnética. Toda a bioquímica — ligações covalentes, pontes de hidrogênio, interações hidrofóbicas, dobramento de proteínas, pareamento de bases — é eletromagnetismo em regimes diferentes. As outras três aparecem indiretamente: a forte porque forneceu os núcleos, a fraca porque acende as estrelas, a gravidade porque manteve a atmosfera e a água na superfície do planeta.</p>
+<p>Note que a vida ocupa quase inteiramente a faixa eletromagnética. Toda a bioquímica (ligações covalentes, pontes de hidrogênio, interações hidrofóbicas, dobramento de proteínas, pareamento de bases) é eletromagnetismo em regimes diferentes. As outras três aparecem indiretamente: a forte porque forneceu os núcleos, a fraca porque acende as estrelas, a gravidade porque manteve a atmosfera e a água na superfície do planeta.</p>
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
@@ -1833,13 +1826,13 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Comecemos pelo problema de atribuição. Nem Edward Sapir nem Benjamin Lee Whorf formularam algo que eles chamassem de "hipótese Sapir-Whorf". Os dois nunca coescreveram sobre o tema. O rótulo foi cunhado por terceiros nos anos 1950, e a formulação nítida em "versão forte" e "versão fraca" também é obra de comentadores posteriores.</p>
 
-<p>Isso não é detalhe bibliográfico. A hipótese entrou na cultura já como uma caricatura, e é essa caricatura que a maioria das pessoas conhece — inclusive muitos dos que a defendem.</p>
+<p>Isso não é detalhe bibliográfico. A hipótese entrou na cultura já como uma caricatura, e é essa caricatura que a maioria das pessoas conhece, inclusive muitos dos que a defendem.</p>
 
 <h3>As duas versões</h3>
 
 <p><strong>Determinismo linguístico (versão forte):</strong> a língua determina o pensamento; o que sua língua não codifica, você não pode pensar. Categorias linguísticas seriam prisões cognitivas.</p>
 
-<p><strong>Relatividade linguística (versão fraca):</strong> a língua influencia certos processos cognitivos — em particular categorização, memória e atenção — tornando mais fáceis ou mais habituais certas discriminações.</p>
+<p><strong>Relatividade linguística (versão fraca):</strong> a língua influencia certos processos cognitivos, em particular categorização, memória e atenção, tornando mais fáceis ou mais habituais certas discriminações.</p>
 
 <p>A versão forte está morta, e por razões simples. Falantes aprendem conceitos que sua língua não codifica, o tempo todo. Línguas incorporam palavras novas quando precisam. Bebês categorizam antes de falar. E a própria formulação é autorrefutante: se a língua determinasse os limites do pensável, seria impossível descrever, em português, um conceito que o português não tem — coisa que este parágrafo acabou de fazer.</p>
 
@@ -1854,7 +1847,7 @@ nucleo: { minutos: 15, html: `
 
 <p>A história foi rastreada por Laura Martin e popularizada por Geoffrey Pullum em <em>The Great Eskimo Vocabulary Hoax</em>.<sup class="cit"><a href="#f1">1</a></sup> Boas menciona quatro raízes em 1911; a cada recontagem o número cresceu, chegando a "quatrocentas" em jornais dos anos 1980, sem nenhuma fonte nova. Ninguém foi conferir.</p>
 
-<p>Há dois problemas adicionais. Línguas inuítes são polissintéticas: formam palavras longas por aglutinação, de modo que "contar palavras" é uma operação sem significado claro — em português também podemos dizer neve fresca, neve compactada, neve granulada. E mesmo que o número fosse alto, isso mostraria apenas que pessoas desenvolvem vocabulário para o que lhes é relevante, o que é trivial e não diz nada sobre pensamento.</p>
+<p>Há dois problemas adicionais. Línguas inuítes são polissintéticas: formam palavras longas por aglutinação, de modo que "contar palavras" é uma operação sem significado claro: em português também dizemos neve fresca, neve compactada, neve granulada. E mesmo que o número fosse alto, isso mostraria apenas que pessoas desenvolvem vocabulário para o que lhes é relevante, o que é trivial e não diz nada sobre pensamento.</p>
 
 <h3>O experimento que virou emblema</h3>
 
@@ -1869,7 +1862,7 @@ nucleo: { minutos: 15, html: `
 <p>Um estudo publicado na <em>Cognition</em> em 2020 tentou reproduzir o efeito e <strong>não encontrou a vantagem de tempo de reação</strong> na fronteira sinij/goluboj, nem em monolíngues nem em bilíngues.<sup class="cit"><a href="#f3">3</a></sup> Os autores concluem que os "azuis russos" são menos bem estruturados do que se supunha: a fronteira mostrou-se instável e sensível a manipulações de frequência, ao contrário da fronteira azul/verde. O efeito categórico apareceu em tarefas que exigiam categorização explícita, e não em discriminação perceptiva pura.</p>
 </div>
 
-<p>Vale reter a formulação dos próprios autores: os efeitos da língua sobre a percepção "são mais fortes em tarefas que promovem categorização e mais fracos ou inexistentes em tarefas que não a exigem explicitamente". Isso não elimina a relatividade linguística — mas desloca substancialmente o que ela afirma.</p>
+<p>Vale reter a formulação dos próprios autores: os efeitos da língua sobre a percepção "são mais fortes em tarefas que promovem categorização e mais fracos ou inexistentes em tarefas que não a exigem explicitamente". Isso não elimina a relatividade linguística, mas desloca substancialmente o que ela afirma.</p>
 ` },
 
 aprofundamento: { minutos: 15, html: `
@@ -1877,29 +1870,29 @@ aprofundamento: { minutos: 15, html: `
 
 <p>O caso mais robusto em favor de efeitos linguísticos reais não é cor: é referência espacial.</p>
 
-<p>A maioria das línguas usa referenciais <strong>relativos</strong> — esquerda, direita, à frente, atrás — que dependem da orientação do corpo do falante. Algumas línguas usam referenciais <strong>absolutos</strong>: pontos cardeais, ou eixos geográficos como "montanha acima" e "rio abaixo". Em Guugu Yimithirr, falado no norte da Austrália, não existem palavras para esquerda e direita: uma xícara está a nordeste da colher, e o falante diz isso naturalmente.</p>
+<p>A maioria das línguas usa referenciais <strong>relativos</strong> (esquerda, direita, à frente, atrás) que dependem da orientação do corpo do falante. Algumas línguas usam referenciais <strong>absolutos</strong>: pontos cardeais, ou eixos geográficos como "montanha acima" e "rio abaixo". Em Guugu Yimithirr, falado no norte da Austrália, não existem palavras para esquerda e direita: uma xícara está a nordeste da colher, e o falante diz isso naturalmente.</p>
 
 <p>Stephen Levinson e colaboradores documentaram que falantes dessas línguas mantêm orientação absoluta permanente e precisa, mesmo em ambientes fechados, em veículos e após deslocamentos complexos.<sup class="cit"><a href="#f4">4</a></sup> E o efeito não fica na fala: em tarefas <strong>não verbais</strong> de rotação e reconstrução de arranjos, esses falantes resolvem o problema em coordenadas absolutas, enquanto falantes de línguas relativas usam coordenadas centradas no corpo.</p>
 
 <div class="marca consenso">
 <span class="rot">Por que este caso é mais convincente</span>
-<p>Três razões metodológicas. Primeira: o efeito aparece em tarefas não linguísticas, o que enfraquece a explicação de que é apenas estratégia verbal. Segunda: os tamanhos de efeito são grandes e comportamentalmente visíveis, não diferenças de dezenas de milissegundos. Terceira: foi replicado em populações independentes em vários continentes. Compare com o caso da cor — efeitos pequenos, dependentes de tarefa e de replicação instável — e a diferença de qualidade de evidência fica clara.</p>
+<p>Três razões metodológicas. Primeira: o efeito aparece em tarefas não linguísticas, o que enfraquece a explicação de que é apenas estratégia verbal. Segunda: os tamanhos de efeito são grandes e comportamentalmente visíveis, não diferenças de dezenas de milissegundos. Terceira: foi replicado em populações independentes em vários continentes. Compare com o caso da cor (efeitos pequenos, dependentes de tarefa, com replicação instável) e a diferença de qualidade de evidência fica clara.</p>
 </div>
 
 <div class="marca controverso">
 <span class="rot">A objeção da direção causal</span>
-<p>Mesmo aqui, resta uma dúvida séria: a língua causa o hábito cognitivo, ou ambos derivam do ambiente e da prática cultural? Comunidades com referencial absoluto vivem tipicamente em terreno aberto com marcos geográficos estáveis, e a navegação é parte da vida diária. A língua pode ser consequência da prática, não causa do modo de pensar. Separar essas hipóteses exigiria variação natural entre língua e ecologia que raramente existe — o que torna a inferência causal genuinamente difícil, não apenas incerta.</p>
+<p>Mesmo aqui, resta uma dúvida séria: a língua causa o hábito cognitivo, ou ambos derivam do ambiente e da prática cultural? Comunidades com referencial absoluto vivem tipicamente em terreno aberto com marcos geográficos estáveis, e a navegação é parte da vida diária. A língua pode ser consequência da prática, não causa do modo de pensar. Separar essas hipóteses exigiria variação natural entre língua e ecologia que raramente existe. Isso torna a inferência causal genuinamente difícil, não apenas incerta.</p>
 </div>
 
 <h3>Um efeito robusto e um caso mal contado</h3>
 
-<p><strong>Gênero gramatical.</strong> Falantes de línguas com gênero atribuem adjetivos correlacionados ao gênero da palavra: "ponte" é feminina em alemão e masculina em espanhol, e falantes descrevem pontes com adjetivos estereotipicamente correspondentes. O efeito é replicável, mas há discussão sobre quanto depende de a tarefa ser conduzida em inglês, forçando tradução — o que introduz ativação linguística explícita.</p>
+<p><strong>Gênero gramatical.</strong> Falantes de línguas com gênero atribuem adjetivos correlacionados ao gênero da palavra: "ponte" é feminina em alemão e masculina em espanhol, e falantes descrevem pontes com adjetivos estereotipicamente correspondentes. O efeito é replicável, mas há discussão sobre quanto depende de a tarefa ser conduzida em inglês, forçando tradução, o que introduz ativação linguística explícita.</p>
 
-<p><strong>Números em pirahã.</strong> A língua pirahã, na Amazônia, teria apenas termos para "um", "dois" e "muitos" — ou, segundo análise posterior, apenas termos relativos de quantidade. Peter Gordon relatou em 2004 que falantes falhavam em tarefas de correspondência exata acima de três, e o caso foi amplamente divulgado como demonstração de determinismo linguístico.</p>
+<p><strong>Números em pirahã.</strong> A língua pirahã, na Amazônia, teria apenas termos para "um", "dois" e "muitos", ou, segundo análise posterior, apenas termos relativos de quantidade. Peter Gordon relatou em 2004 que falantes falhavam em tarefas de correspondência exata acima de três, e o caso foi amplamente divulgado como demonstração de determinismo linguístico.</p>
 
 <div class="marca controverso">
 <span class="rot">O que esse caso realmente mostra</span>
-<p>Trabalhos posteriores complicam a leitura simples. Frank e colaboradores (2008) mostraram que os pirahã executam bem tarefas de correspondência um-a-um; o que falta é a capacidade de <em>memorizar</em> cardinalidades exatas sem rótulos — o que é uma tese sobre ferramentas de memória, não sobre limites do pensamento. Some-se a isso que praticamente toda a documentação da língua vem de um único pesquisador, cujas afirmações teóricas mais amplas são contestadas por outros linguistas de campo. É um caso em que a base empírica é fina demais para sustentar o peso que lhe foi atribuído.</p>
+<p>Trabalhos posteriores complicam a leitura simples. Frank e colaboradores (2008) mostraram que os pirahã executam bem tarefas de correspondência um-a-um; o que falta é a capacidade de <em>memorizar</em> cardinalidades exatas sem rótulos: é uma tese sobre ferramentas de memória, não sobre limites do pensamento. Some-se a isso que praticamente toda a documentação da língua vem de um único pesquisador, cujas afirmações teóricas mais amplas são contestadas por outros linguistas de campo. É um caso em que a base empírica é fina demais para sustentar o peso que lhe foi atribuído.</p>
 </div>
 
 <h3>Os quatro problemas metodológicos recorrentes</h3>
@@ -1907,7 +1900,7 @@ aprofundamento: { minutos: 15, html: `
 <ol>
 <li><strong>Confundir competência e desempenho.</strong> Uma tarefa mais lenta não é uma tarefa impossível. Efeitos de 30 milissegundos são interessantes e não indicam limite cognitivo.</li>
 <li><strong>Confundir língua e cultura.</strong> Grupos que falam línguas diferentes também diferem em escolaridade, prática, ambiente e economia. Isolar o efeito da língua exige controles que raramente existem.</li>
-<li><strong>Direção causal indeterminada.</strong> Falantes de línguas com muitos termos para neve podem tê-los porque neve importa — não pensar diferente por tê-los.</li>
+<li><strong>Direção causal indeterminada.</strong> Falantes de línguas com muitos termos para neve podem tê-los porque neve importa, não porque pensam de modo diferente por causa deles.</li>
 <li><strong>Codificação verbal durante a tarefa.</strong> Se o participante nomeia mentalmente os estímulos, o efeito pode refletir estratégia momentânea, não estrutura cognitiva. Testes com interferência verbal existem justamente para isolar isso, e nem sempre são aplicados.</li>
 </ol>
 ` },
@@ -1931,7 +1924,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca controverso">
 <span class="rot">Um caso instrutivo de correlação transcultural</span>
-<p>Um estudo de 2013 relatou que falantes de línguas que não marcam gramaticalmente o futuro poupam mais e cuidam melhor da saúde, e o resultado teve enorme repercussão. Reanálises posteriores mostraram que línguas não são observações independentes: elas se agrupam por famílias e por proximidade geográfica, e quando se corrige a estrutura filogenética e o parentesco cultural, a associação enfraquece drasticamente ou desaparece. É o problema de Galton, formulado na antropologia no século XIX e redescoberto periodicamente — e vale como alerta geral para qualquer correlação entre traço linguístico e comportamento agregado.</p>
+<p>Um estudo de 2013 relatou que falantes de línguas que não marcam gramaticalmente o futuro poupam mais e cuidam melhor da saúde, e o resultado teve enorme repercussão. Reanálises posteriores mostraram que línguas não são observações independentes: elas se agrupam por famílias e por proximidade geográfica, e quando se corrige a estrutura filogenética e o parentesco cultural, a associação enfraquece drasticamente ou desaparece. É o problema de Galton, formulado na antropologia no século XIX e redescoberto periodicamente. Vale como alerta geral para qualquer correlação entre traço linguístico e comportamento agregado.</p>
 </div>
 
 <h3>Por que a hipótese é tão atraente</h3>
@@ -1940,7 +1933,7 @@ extensao: { minutos: 30, html: `
 
 <p>Ela promete explicar diferenças culturais por um mecanismo único e elegante. Cria a impressão gratificante de que aprender uma língua abre um modo de pensar inacessível de outra forma. E é praticamente inverificável em conversa: qualquer exemplo pontual parece confirmá-la, porque o interlocutor raramente tem em mãos o contraexemplo.</p>
 
-<p>Esse é o perfil típico de uma ideia que se propaga bem independentemente de sua base empírica: alto valor narrativo, baixo custo de verificação, e confirmação aparente disponível em qualquer conversa. Reconhecer esse perfil é uma habilidade transferível — ele aparece igualmente em neurociência popular, em nutrição e em teorias de gestão.</p>
+<p>Esse é o perfil típico de uma ideia que se propaga bem independentemente de sua base empírica: alto valor narrativo, baixo custo de verificação, e confirmação aparente disponível em qualquer conversa. Reconhecer esse perfil é uma habilidade transferível: aparece igualmente em neurociência popular, em nutrição e em teorias de gestão.</p>
 
 <h3>A posição defensável hoje</h3>
 
@@ -1948,7 +1941,7 @@ extensao: { minutos: 30, html: `
 
 <p><strong>A língua não determina o pensamento.</strong> Nenhum conceito é impensável por falta de palavra; conceitos novos são aprendidos e nomeados quando necessário.</p>
 
-<p><strong>A língua torna certas distinções obrigatórias.</strong> Esta é provavelmente a formulação mais precisa, e vem de Roman Jakobson: línguas diferem menos no que <em>podem</em> expressar do que no que <em>devem</em> expressar. Em português você não pode dizer "eu fui" sem marcar tempo; em mandarim, pode. Se você é obrigado a codificar algo toda vez que fala, é plausível que preste mais atenção nisso — e há evidência de que essa atenção habitual afeta memória e julgamento.</p>
+<p><strong>A língua torna certas distinções obrigatórias.</strong> Esta é provavelmente a formulação mais precisa, e vem de Roman Jakobson: línguas diferem menos no que <em>podem</em> expressar do que no que <em>devem</em> expressar. Em português você não pode dizer "eu fui" sem marcar tempo; em mandarim, pode. Se você é obrigado a codificar algo toda vez que fala, é plausível que preste mais atenção nisso, e há evidência de que essa atenção habitual afeta memória e julgamento.</p>
 
 <p><strong>Os efeitos são modestos, dependentes de tarefa e reversíveis.</strong> Aparecem em tempos de reação e em vieses de julgamento, não em capacidades. Somem sob interferência verbal em vários casos. Mudam quando a pessoa muda de língua ou de contexto.</p>
 
@@ -1956,7 +1949,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca emergente">
 <span class="rot">Um desenvolvimento recente</span>
-<p>Uma linha crescente de trabalho reformula a questão em termos de <em>pensar para falar</em> (Slobin): a língua não molda o pensamento em geral, mas organiza a atenção no momento em que se prepara um enunciado. Isso explicaria por que os efeitos aparecem em tarefas com componente verbal e somem sem ele. É uma reformulação mais modesta e mais testável — o que é uma virtude — e vem acumulando suporte. Ainda não é consenso.</p>
+<p>Uma linha crescente de trabalho reformula a questão em termos de <em>pensar para falar</em> (Slobin): a língua não molda o pensamento em geral, mas organiza a atenção no momento em que se prepara um enunciado. Isso explicaria por que os efeitos aparecem em tarefas com componente verbal e somem sem ele. É uma reformulação mais modesta e mais testável (uma virtude) e vem acumulando suporte. Ainda não é consenso.</p>
 </div>
 
 <h3>Como avaliar qualquer afirmação whorfiana</h3>
@@ -1968,12 +1961,12 @@ extensao: { minutos: 30, html: `
 <li><strong>O efeito sobrevive à interferência verbal?</strong> Se ocupar a linguagem interna do participante elimina o efeito, ele era mediado por rótulos.</li>
 <li><strong>Cultura e ambiente foram controlados?</strong> Ou os grupos diferem em tudo, e a língua é apenas a diferença mais visível?</li>
 <li><strong>Qual é o tamanho do efeito?</strong> Dezenas de milissegundos são um achado. Não são uma prisão conceitual.</li>
-<li><strong>Foi replicado por um grupo independente?</strong> Depois de 2020, esta pergunta deixou de ser opcional em qualquer área da psicologia — e no caso mais famoso desta literatura, a resposta foi negativa.</li>
+<li><strong>Foi replicado por um grupo independente?</strong> Depois de 2020, esta pergunta deixou de ser opcional em qualquer área da psicologia. No caso mais famoso desta literatura, a resposta foi negativa.</li>
 </ol>
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
-<p>A versão forte está morta e a versão fraca sobrevive com efeitos reais, modestos e desiguais entre domínios: sólidos em referência espacial, frágeis em cor. A formulação mais precisa não é que a língua limita o que se pode pensar, e sim que ela torna obrigatório prestar atenção a certas distinções toda vez que se fala. E o caso serve como exemplar de algo mais geral: uma ideia com alto valor narrativo pode sobreviver décadas à erosão da evidência que originalmente a sustentava.</p>
+<p>A versão forte está morta e a versão fraca sobrevive com efeitos reais, modestos e desiguais entre domínios: sólidos em referência espacial, frágeis em cor. A formulação mais precisa não é que a língua limita o que se pode pensar, e sim que ela torna obrigatório prestar atenção a certas distinções toda vez que se fala. E o caso é um exemplo de algo mais geral: uma ideia com alto valor narrativo pode sobreviver décadas à erosão da evidência que originalmente a sustentava.</p>
 </div>
 ` }
 },
@@ -2126,7 +2119,7 @@ nucleo: { minutos: 15, html: `
 
 <h3>De onde vêm as consonâncias</h3>
 
-<p>Qualquer corda ou coluna de ar vibrando produz, além da frequência fundamental, uma série de harmônicos em múltiplos inteiros dela: 2×, 3×, 4×, 5×, e assim por diante. Dois sons soam consonantes quando seus harmônicos coincidem em boa medida — e isso acontece quando a razão entre suas frequências é dada por números inteiros pequenos.</p>
+<p>Qualquer corda ou coluna de ar vibrando produz, além da frequência fundamental, uma série de harmônicos em múltiplos inteiros dela: 2×, 3×, 4×, 5×, e assim por diante. Dois sons soam consonantes quando seus harmônicos coincidem em boa medida, e isso acontece quando a razão entre suas frequências é dada por números inteiros pequenos.</p>
 
 <div class="tabela-env">
 <table>
@@ -2141,7 +2134,7 @@ nucleo: { minutos: 15, html: `
 </table>
 </div>
 
-<p>Isso não é convenção cultural — é acústica. Quando duas notas estão em razão 3:2, muitos de seus harmônicos coincidem exatamente, e o resultado não produz batimentos. Quando a razão se afasta um pouco, aparecem pulsações lentas: aquele "uau-uau-uau" que denuncia afinação errada.</p>
+<p>A explicação é acústica, não convenção cultural. Quando duas notas estão em razão 3:2, muitos de seus harmônicos coincidem exatamente, e o resultado não produz batimentos. Quando a razão se afasta um pouco, aparecem pulsações lentas: aquele "uau-uau-uau" que denuncia afinação errada.</p>
 
 <h3>O problema: as escadas não se encontram</h3>
 
@@ -2154,28 +2147,28 @@ nucleo: { minutos: 15, html: `
 <span class="leg">a razão entre os dois é 1,01364 — cerca de 23,46 cents de excesso</span>
 </div>
 
-<p>A diferença chama-se <strong>coma pitagórica</strong>. Ela é pequena mas perfeitamente audível: cerca de um quarto de semitom, muito acima do limiar de percepção humana para notas sustentadas.</p>
+<p>A diferença chama-se <strong>coma pitagórica</strong>. Ela é pequena, mas perfeitamente audível: cerca de um quarto de semitom, muito acima do limiar de percepção humana para notas sustentadas.</p>
 
 <figure class="figura">[[FIG:temperamento-comma]]<figcaption>Empilhando quintas puras, a trajetória é uma espiral, não um círculo. Ela passa do ponto de partida por 23,46 cents. Nenhum ajuste esperto resolve isso: é consequência de 3 e 2 serem primos entre si.</figcaption></figure>
 
-<p>E o problema não para aí. Quatro quintas puras deveriam dar uma terça maior pura, e também não dão: a diferença é a <strong>coma sintônica</strong>, de cerca de 21,5 cents. Os erros não se cancelam entre si; eles se acumulam de formas diferentes conforme o caminho.</p>
+<p>O problema não para aí. Quatro quintas puras deveriam dar uma terça maior pura, e também não dão: a diferença é a <strong>coma sintônica</strong>, de cerca de 21,5 cents. Os erros não se cancelam entre si; eles se acumulam de formas diferentes conforme o caminho.</p>
 
 <h3>A escolha: onde esconder o erro</h3>
 
-<p>Como o erro não pode ser eliminado, todo sistema de afinação é uma decisão sobre <em>onde colocá-lo</em>. Três estratégias históricas:</p>
+<p>Como o erro não pode ser eliminado, todo sistema de afinação decide <em>onde colocá-lo</em>. Três estratégias marcaram a história:</p>
 
-<p><strong>Entonação justa.</strong> Deixe alguns intervalos perfeitamente puros. Consequência: outros ficam horrendos. Existe um intervalo, o "lobo", tão desafinado que é inutilizável. Funciona se você tocar sempre na mesma tonalidade.</p>
+<p>Entonação justa: deixa alguns intervalos perfeitamente puros, e por isso outros ficam horrendos. Existe um intervalo, o "lobo", tão desafinado que é inutilizável. Funciona se você tocar sempre na mesma tonalidade.</p>
 
-<p><strong>Temperamentos desiguais.</strong> Distribua o erro de forma desigual, deixando as tonalidades mais usadas quase puras e empurrando o erro para as raras. Cada tonalidade adquire um caráter sonoro distinto. Dominou os séculos XVII e XVIII.</p>
+<p>Temperamentos desiguais: distribuem o erro de forma desigual, deixando as tonalidades mais usadas quase puras e empurrando o erro para as raras. Cada tonalidade ganha um caráter sonoro distinto. Dominaram os séculos XVII e XVIII.</p>
 
-<p><strong>Temperamento igual.</strong> Divida a oitava em doze partes exatamente iguais. Cada semitom passa a ser a raiz duodécima de 2:</p>
+<p>Temperamento igual: divide a oitava em doze partes exatamente iguais. Cada semitom passa a ser a raiz duodécima de 2:</p>
 
 <div class="formula">
 razão de um semitom = <sup>12</sup>√2 ≈ 1,059463
 <span class="leg">um número irracional — nenhum intervalo, exceto a oitava, é uma razão de inteiros</span>
 </div>
 
-<p>O erro fica espalhado igualmente por todos os intervalos. Nenhum fica puro, nenhum fica intolerável, e todas as vinte e quatro tonalidades soam idênticas em qualidade. Foi essa uniformidade que tornou possível modular livremente — e sem modulação livre, a música do século XIX simplesmente não existiria na forma que existe.</p>
+<p>O erro fica espalhado igualmente por todos os intervalos. Nenhum fica puro, nenhum fica intolerável, e todas as vinte e quatro tonalidades soam idênticas em qualidade. Essa uniformidade tornou possível modular livremente entre tonalidades. Sem modulação livre, a música do século XIX não existiria na forma que existe.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -2213,18 +2206,18 @@ cents = 1200 · log<sub>2</sub>(f<sub>2</sub> / f<sub>1</sub>)
 </table>
 </div>
 
-<p>A quinta erra por menos de 2 cents — praticamente inaudível. A terça maior erra por quase 14 cents, o que é claramente audível em acordes sustentados. Como a terça é a nota que define se o acorde é maior ou menor, o temperamento igual sacrifica justamente o intervalo de maior carga expressiva para preservar a quinta.</p>
+<p>A quinta erra por menos de 2 cents, praticamente inaudível. A terça maior erra por quase 14 cents, o que é claramente audível em acordes sustentados. Como a terça define se o acorde é maior ou menor, o temperamento igual sacrifica o intervalo de maior carga expressiva para preservar a quinta.</p>
 
 <div class="marca consenso">
 <span class="rot">Limiares perceptivos</span>
-<p>Ouvintes treinados detectam diferenças de altura da ordem de 5 a 6 cents em notas sustentadas puras. Em contexto musical real — com vibrato, ataque, timbre complexo e mascaramento — o limiar sobe consideravelmente. Isso explica por que a maioria dos ouvintes não percebe conscientemente os 14 cents da terça temperada, mas músicos frequentemente relatam que acordes de piano soam "mais tensos" que os mesmos acordes num coro — que ajusta a afinação em tempo real e canta terças puras naturalmente.</p>
+<p>Ouvintes treinados detectam diferenças de altura da ordem de 5 a 6 cents em notas sustentadas puras. Em contexto musical real (com vibrato, ataque, timbre complexo e mascaramento), o limiar sobe consideravelmente. Isso explica por que a maioria dos ouvintes não percebe conscientemente os 14 cents da terça temperada, mas músicos frequentemente relatam que acordes de piano soam "mais tensos" que os mesmos acordes num coro, que ajusta a afinação em tempo real e canta terças puras naturalmente.</p>
 </div>
 
 <h3>O que se perdeu: caráter de tonalidade</h3>
 
 <p>Nos temperamentos desiguais, cada tonalidade tinha uma sonoridade própria e reconhecível, porque a distribuição do erro variava entre elas. Ré maior era brilhante; lá bemol maior, sombrio e tenso. Compositores dos séculos XVII e XVIII escolhiam tonalidades por essa razão, e tratados da época descrevem os afetos associados a cada uma.</p>
 
-<p>No temperamento igual, todas as tonalidades são transposições exatas umas das outras. A diferença de caráter que ouvintes ainda relatam entre tonalidades tem outras causas — registro dos instrumentos, ressonância de cordas soltas, tessitura vocal — e não mais a estrutura interválica.</p>
+<p>No temperamento igual, todas as tonalidades são transposições exatas umas das outras. A diferença de caráter que ouvintes ainda relatam entre tonalidades tem outras causas: registro dos instrumentos, ressonância de cordas soltas, tessitura vocal. Não é mais a estrutura interválica.</p>
 
 <h3>A crítica de Duffin, e o que responder a ela</h3>
 
@@ -2232,27 +2225,27 @@ cents = 1200 · log<sub>2</sub>(f<sub>2</sub> / f<sub>1</sub>)
 
 <div class="marca controverso">
 <span class="rot">Ponto controverso</span>
-<p>A parte histórica do argumento — que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada — é bem documentada e amplamente aceita. A parte estética — que a harmonia foi "arruinada" — é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois. Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>
+<p>A parte histórica do argumento, que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada, é bem documentada e amplamente aceita. A parte estética, que a harmonia foi "arruinada", é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois. Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>
 </div>
 ` },
 
 extensao: { minutos: 30, html: `
 <h3>O caso Bach: um mito persistente</h3>
 
-<p>Quase todo programa de concerto afirma que <em>O Cravo Bem Temperado</em> foi escrito para demonstrar o temperamento igual. Essa afirmação não se sustenta.</p>
+<p>Quase todo programa de concerto afirma que <em>O Cravo Bem Temperado</em> foi escrito para demonstrar o temperamento igual. A afirmação não se sustenta.</p>
 
-<p>Em alemão, <em>wohltemperiert</em> — "bem temperado" — designava uma família de temperamentos <strong>desiguais</strong> nos quais todas as vinte e quatro tonalidades são utilizáveis, ainda que com caracteres distintos. O temperamento igual era chamado de <em>gleichschwebend</em>, "de batimento igual". São termos diferentes para coisas diferentes, e Bach usou o primeiro.</p>
+<p>Em alemão, <em>wohltemperiert</em> ("bem temperado") designava uma família de temperamentos <strong>desiguais</strong> nos quais todas as vinte e quatro tonalidades são utilizáveis, ainda que com caracteres distintos. O temperamento igual era chamado de <em>gleichschwebend</em>, "de batimento igual". São termos diferentes para coisas diferentes, e Bach usou o primeiro.</p>
 
-<p>O que Bach demonstrava com as 24 tonalidades era que <em>todas eram tocáveis</em> — o que temperamentos anteriores não permitiam. Isso é compatível com temperamento igual e também com vários temperamentos desiguais.</p>
+<p>O que Bach demonstrava com as 24 tonalidades era que <em>todas eram tocáveis</em>, o que temperamentos anteriores não permitiam. Isso é compatível com temperamento igual e também com vários temperamentos desiguais.</p>
 
 <div class="marca controverso">
 <span class="rot">Estado atual da questão</span>
-<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class="cit"><a href="#f3">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa. A honestidade exige dizer: não sabemos, e a divergência entre especialistas é grande.</p>
+<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class="cit"><a href="#f3">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa. Não sabemos, e a divergência entre especialistas é grande.</p>
 </div>
 
 <h3>Quem realmente toca em temperamento igual</h3>
 
-<p>Menos gente do que se imagina. O temperamento igual é uma necessidade de <strong>instrumentos de afinação fixa</strong> — piano, órgão, harpa, trastes de violão. Instrumentos de afinação contínua e vozes não estão presos a ele.</p>
+<p>Menos gente do que se imagina. O temperamento igual é uma necessidade de instrumentos de afinação fixa: piano, órgão, harpa, trastes de violão. Instrumentos de afinação contínua e vozes não estão presos a ele.</p>
 
 <div class="tabela-env">
 <table>
@@ -2267,7 +2260,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<p>Um detalhe técnico que quase ninguém sabe: <strong>pianos não são afinados em temperamento igual exato</strong>. Cordas reais têm rigidez, e por isso seus harmônicos não caem em múltiplos exatos da fundamental — fenômeno chamado inarmonicidade. Para que os harmônicos das notas graves batam com as fundamentais das agudas, afinadores esticam a escala: graves ficam um pouco mais graves e agudos um pouco mais agudos que o cálculo teórico. Num piano de cauda esse desvio chega a mais de 30 cents nos extremos.</p>
+<p>Pianos não são afinados em temperamento igual exato. Cordas reais têm rigidez, e por isso seus harmônicos não caem em múltiplos exatos da fundamental (fenômeno chamado inarmonicidade). Para que os harmônicos das notas graves batam com as fundamentais das agudas, afinadores esticam a escala: graves ficam um pouco mais graves e agudos um pouco mais agudos que o cálculo teórico. Num piano de cauda esse desvio chega a mais de 30 cents nos extremos.</p>
 
 <div class="marca consenso">
 <span class="rot">Uma implicação interessante</span>
@@ -2276,11 +2269,11 @@ extensao: { minutos: 30, html: `
 
 <h3>O sistema não é universal</h3>
 
-<p>Dividir a oitava em doze partes iguais é uma solução, não <em>a</em> solução. Outras tradições fizeram escolhas diferentes com bases igualmente coerentes:</p>
+<p>Dividir a oitava em doze partes iguais é uma solução, não <em>a</em> solução. Outras tradições fizeram escolhas diferentes, com bases igualmente coerentes:</p>
 
 <ul>
-<li><strong>Música árabe e turca</strong> usa intervalos menores que o semitom — os <em>maqamat</em> incluem graus que caem entre as teclas do piano, e sistemas teóricos dividem a oitava em 24 ou 53 partes.</li>
-<li><strong>Gamelão indonésio</strong> usa as escalas <em>slendro</em> e <em>pelog</em>, cujos intervalos não correspondem a razões simples nem ao temperamento igual, e variam de conjunto para conjunto — cada gamelão é afinado como uma unidade e instrumentos não são intercambiáveis entre grupos.</li>
+<li><strong>Música árabe e turca</strong> usa intervalos menores que o semitom: os <em>maqamat</em> incluem graus que caem entre as teclas do piano, e sistemas teóricos dividem a oitava em 24 ou 53 partes.</li>
+<li><strong>Gamelão indonésio</strong> usa as escalas <em>slendro</em> e <em>pelog</em>, cujos intervalos não correspondem a razões simples nem ao temperamento igual e variam de conjunto para conjunto (cada gamelão é afinado como uma unidade, e instrumentos não são intercambiáveis entre grupos).</li>
 <li><strong>Música clássica indiana</strong> teoriza 22 <em>shrutis</em> por oitava, com entonação ajustada ao contexto do raga.</li>
 </ul>
 
@@ -2295,7 +2288,7 @@ extensao: { minutos: 30, html: `
 
 <p>Primeiro fato: potências de 3 nunca coincidem com potências de 2, e por isso quintas puras e oitavas puras são incompatíveis. Segundo: todo sistema de afinação decide onde colocar um erro que não pode ser eliminado. Terceiro: o temperamento igual distribui o erro uniformemente, sacrificando as terças (~14 cents) para preservar as quintas (~2 cents), e paga com a perda do caráter de tonalidade o preço da modulação irrestrita.</p>
 
-<p>A lição transferível: quando uma restrição é matemática e não técnica, a pergunta produtiva deixa de ser "como eliminar o erro" e passa a ser "onde é menos custoso concentrá-lo". Trocar um problema de otimização impossível por um problema de alocação de erro é um movimento que aparece em compressão de dados, em projeto estrutural, em amostragem estatística e em política pública — e reconhecê-lo como o mesmo movimento é boa parte do valor de estudar este assunto.</p>
+<p>A lição transferível: quando uma restrição é matemática, não técnica, a pergunta produtiva deixa de ser "como eliminar o erro" e passa a ser "onde é menos custoso concentrá-lo". Trocar um problema de otimização impossível por um problema de alocação de erro aparece em compressão de dados, em projeto estrutural, em amostragem estatística e em política pública. Reconhecer isso como o mesmo movimento é boa parte do valor de estudar este assunto.</p>
 ` }
 },
 
@@ -2444,29 +2437,29 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Garrett Hardin publicou na <em>Science</em>, em 1968, um artigo que se tornou um dos textos mais citados das ciências sociais.<sup class="cit"><a href="#f1">1</a></sup> A imagem é simples: um pasto aberto a todos os pastores de uma vila. Cada pastor, agindo racionalmente, decide acrescentar mais um animal ao rebanho.</p>
 
-<p>A conta que ele faz é a seguinte. O benefício do animal adicional — sua carne, seu leite — é <strong>inteiramente dele</strong>. O custo — um pouco mais de pasto degradado — é <strong>dividido entre todos</strong>. Se há vinte pastores, ele arca com um vinte avos do prejuízo e fica com a totalidade do lucro. A decisão racional é clara: acrescentar o animal.</p>
+<p>A conta que ele faz é a seguinte: o benefício do animal adicional (sua carne, seu leite) é inteiramente dele. O custo, um pouco mais de pasto degradado, é dividido entre todos. Se há vinte pastores, ele arca com um vinte avos do prejuízo e fica com a totalidade do lucro. A decisão racional é clara: acrescentar o animal.</p>
 
 <p>E é clara para todos os pastores, simultaneamente. Cada um acrescenta. O pasto colapsa. Hardin: "A ruína é o destino para o qual todos os homens correm, cada um perseguindo seu próprio interesse numa sociedade que acredita na liberdade dos bens comuns. A liberdade num bem comum traz a ruína para todos."</p>
 
-<figure class="figura">[[FIG:comuns-matriz]]<figcaption>A estrutura de incentivos em sua forma mais simples. Explorar é a melhor resposta individual qualquer que seja a escolha do outro — e o resultado conjunto é pior para ambos do que a cooperação que nenhum dos dois consegue escolher sozinho.</figcaption></figure>
+<figure class="figura">[[FIG:comuns-matriz]]<figcaption>A estrutura de incentivos em sua forma mais simples. Explorar é a melhor resposta individual qualquer que seja a escolha do outro, e o resultado conjunto é pior para ambos do que a cooperação que nenhum dos dois consegue escolher sozinho.</figcaption></figure>
 
 <h3>Por que o argumento é tão convincente</h3>
 
-<p>Porque não depende de ninguém ser ganancioso, mal-intencionado ou estúpido. Ele funciona com agentes perfeitamente racionais e até com agentes de boa-fé. Basta que o benefício seja privado e o custo, socializado. É essa robustez que faz do argumento um instrumento analítico poderoso — e o que o tornou aplicável a pesca, desmatamento, aquíferos, resistência a antibióticos, congestionamento urbano e emissões de carbono.</p>
+<p>Porque não depende de ninguém ser ganancioso, mal-intencionado ou estúpido. Ele funciona com agentes perfeitamente racionais e até com agentes de boa-fé. Basta que o benefício seja privado e o custo, socializado. Essa robustez explica por que o argumento se aplica a pesca, desmatamento, aquíferos, resistência a antibióticos, congestionamento urbano e emissões de carbono.</p>
 
-<p>Hardin extraiu daí uma conclusão política forte: como a persuasão moral não altera a estrutura de incentivos, a única saída seria a <strong>coerção mútua mutuamente acordada</strong> — regulação estatal — ou a <strong>privatização</strong>, que internaliza o custo em quem toma a decisão. Estado ou mercado. Não haveria terceira via.</p>
+<p>Hardin extraiu daí uma conclusão política forte: como a persuasão moral não altera a estrutura de incentivos, a única saída seria a coerção mútua mutuamente acordada (regulação estatal) ou a privatização, que internaliza o custo em quem toma a decisão. Estado ou mercado, sem terceira via.</p>
 
 <h3>O que Elinor Ostrom encontrou</h3>
 
-<p>Ostrom fez algo que o debate teórico não estava fazendo: foi verificar. Ao longo de décadas, ela e colaboradores documentaram e compararam centenas de sistemas reais de recursos compartilhados — sistemas de irrigação nas Filipinas e na Espanha, pastagens comunais na Suíça, florestas no Japão e no Nepal, pesqueiras na Turquia e no Sri Lanka.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Ostrom fez algo que o debate teórico não estava fazendo: foi verificar. Ao longo de décadas, ela e colaboradores documentaram e compararam centenas de sistemas reais de recursos compartilhados: sistemas de irrigação nas Filipinas e na Espanha, pastagens comunais na Suíça, florestas no Japão e no Nepal, pesqueiras na Turquia e no Sri Lanka.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <p>O achado central: <strong>muitos desses sistemas funcionaram de forma sustentável por séculos</strong>, sem privatização e sem controle estatal. Os pastos comunais de Törbel, nos Alpes suíços, são geridos coletivamente com regras documentadas desde 1224. As <em>huertas</em> de Valência distribuem água por regras comunitárias que atravessaram mais de quinhentos anos e três regimes políticos.</p>
 
-<p>Ostrom recebeu o Nobel de Economia em 2009 — a primeira mulher a recebê-lo, e uma cientista política num prêmio de economia.</p>
+<p>Ostrom recebeu o Nobel de Economia em 2009, a primeira mulher a recebê-lo, e uma cientista política num prêmio de economia.</p>
 
 <div class="marca consenso">
 <span class="rot">O que o achado significa, com precisão</span>
-<p>Ostrom não mostrou que Hardin estava logicamente errado. O modelo dele está correto <em>para as condições que ele supõe</em>. O que ela mostrou é que essas condições — ausência de comunicação, ausência de regras acordadas, ausência de monitoramento e de sanções — descrevem um caso particular e não muito comum. Hardin modelou um <strong>recurso de acesso livre</strong> (open access) e chamou isso de "bem comum". Bens comuns reais quase sempre têm regras de acesso, e essa diferença é o que decide o resultado.</p>
+<p>Ostrom não mostrou que Hardin estava logicamente errado. O modelo dele está correto <em>para as condições que ele supõe</em>. O que ela mostrou é que essas condições (ausência de comunicação, ausência de regras acordadas, ausência de monitoramento e de sanções) descrevem um caso particular e não muito comum. Hardin modelou um recurso de acesso livre (open access) e chamou isso de "bem comum". Bens comuns reais quase sempre têm regras de acesso, e essa diferença é o que decide o resultado.</p>
 </div>
 
 <h3>A distinção que resolve metade da confusão</h3>
@@ -2483,7 +2476,7 @@ nucleo: { minutos: 15, html: `
 </table>
 </div>
 
-<p>Hardin colapsou as duas primeiras linhas numa só. A tragédia é real e severa em acesso livre. Em propriedade comum bem governada, ela frequentemente não ocorre. Confundir as duas leva a recomendações de política que destroem instituições que estavam funcionando — e isso aconteceu, repetidamente, em programas de nacionalização de florestas e pesqueiras no século XX.</p>
+<p>Hardin colapsou as duas primeiras linhas numa só. A tragédia é real e severa em acesso livre. Em propriedade comum bem governada, ela frequentemente não ocorre. Confundir as duas leva a recomendações de política que destroem instituições que estavam funcionando, e isso aconteceu, repetidamente, em programas de nacionalização de florestas e pesqueiras no século XX.</p>
 ` },
 
 aprofundamento: { minutos: 15, html: `
@@ -2504,20 +2497,20 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="marca consenso">
 <span class="rot">Os dois princípios que mais importam</span>
-<p>Análises posteriores sugerem que monitoramento e sanções graduadas — os itens 4 e 5 — são os mais fortemente associados ao sucesso. Isso é teoricamente coerente: eles são justamente o que altera a matriz de incentivos que Hardin descreveu. Cooperação não emerge por virtude; emerge porque a estrutura de recompensas mudou.</p>
+<p>Análises posteriores sugerem que monitoramento e sanções graduadas (os itens 4 e 5) são os mais fortemente associados ao sucesso. Isso é teoricamente coerente: eles são justamente o que altera a matriz de incentivos que Hardin descreveu. Cooperação não emerge por virtude; emerge porque a estrutura de recompensas mudou.</p>
 </div>
 
 <h3>Por que a comunicação muda tudo</h3>
 
-<p>O resultado experimental mais robusto da economia comportamental sobre esse tema: em jogos de bens públicos de laboratório, permitir que os participantes <strong>conversem antes de decidir</strong> eleva substancialmente a cooperação. Mesmo sem qualquer mecanismo de execução — conversa sem contrato, sem punição, sem obrigação.</p>
+<p>O resultado experimental mais robusto da economia comportamental sobre esse tema: em jogos de bens públicos de laboratório, permitir que os participantes <strong>conversem antes de decidir</strong> eleva substancialmente a cooperação. Mesmo sem qualquer mecanismo de execução: conversa sem contrato, sem punição, sem obrigação.</p>
 
 <p>Isso é teoricamente desconcertante, porque na teoria dos jogos clássica a comunicação sem compromisso vinculante é "conversa barata" e não deveria alterar o equilíbrio. Alterar ela altera, e de forma replicável.</p>
 
-<p>Acrescentar a possibilidade de <strong>punir</strong> quem não coopera — mesmo a custo para quem pune — eleva a cooperação ainda mais e a torna estável ao longo de muitas rodadas. Este é o achado de Fehr e Gächter sobre punição altruísta.<sup class="cit"><a href="#f3">3</a></sup></p>
+<p>Acrescentar a possibilidade de punir quem não coopera, mesmo a custo para quem pune, eleva a cooperação ainda mais e a torna estável ao longo de muitas rodadas. Este é o achado de Fehr e Gächter sobre punição altruísta.<sup class="cit"><a href="#f3">3</a></sup></p>
 
 <div class="marca controverso">
 <span class="rot">Ponto em disputa</span>
-<p>A interpretação desses resultados é debatida. Uma leitura: humanos têm preferências sociais genuínas — reciprocidade, aversão à desigualdade — que não estão no modelo do agente puramente egoísta. Outra leitura: os efeitos são fortemente dependentes de contexto experimental e demanda característica, e diminuem com repetição, anonimato e valores monetários altos. Meta-análises confirmam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam — um padrão comum na literatura pós-crise de replicação.</p>
+<p>A interpretação desses resultados é debatida. Uma leitura: humanos têm preferências sociais genuínas (reciprocidade, aversão à desigualdade) que não estão no modelo do agente puramente egoísta. Outra leitura: os efeitos são fortemente dependentes de contexto experimental e demanda característica, e diminuem com repetição, anonimato e valores monetários altos. Meta-análises confirmam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam, um padrão comum na literatura pós-crise de replicação.</p>
 </div>
 
 <h3>Onde a solução comunitária não funciona</h3>
@@ -2527,7 +2520,7 @@ aprofundamento: { minutos: 15, html: `
 <ul>
 <li><strong>Grupos muito grandes</strong>, em que o monitoramento mútuo se torna inviável e o anonimato protege quem burla.</li>
 <li><strong>Alta rotatividade</strong> de participantes, que impede a construção de reputação e de expectativa de interação futura.</li>
-<li><strong>Recursos muito móveis</strong> — peixes migratórios, aquíferos transfronteiriços — em que as fronteiras do recurso não coincidem com as fronteiras da comunidade.</li>
+<li><strong>Recursos muito móveis</strong> (peixes migratórios, aquíferos transfronteiriços) em que as fronteiras do recurso não coincidem com as fronteiras da comunidade.</li>
 <li><strong>Heterogeneidade forte de interesses</strong> entre os usuários, que dificulta acordo sobre regras.</li>
 <li><strong>Ausência de reconhecimento externo</strong>, quando um Estado ou empresa pode simplesmente ignorar as regras locais.</li>
 </ul>
@@ -2538,7 +2531,7 @@ aprofundamento: { minutos: 15, html: `
 extensao: { minutos: 30, html: `
 <h3>O clima é o caso difícil</h3>
 
-<p>A atmosfera parece o exemplo definitivo da tragédia: benefício privado da emissão, custo distribuído globalmente. E quase todas as condições que Ostrom identificou como favoráveis estão ausentes — o grupo tem bilhões de pessoas e quase duzentos Estados, as fronteiras do recurso não coincidem com nenhuma jurisdição, não há autoridade com poder de sanção, e os interesses são profundamente heterogêneos.</p>
+<p>A atmosfera parece o exemplo definitivo da tragédia: benefício privado da emissão, custo distribuído globalmente. E quase todas as condições que Ostrom identificou como favoráveis estão ausentes: o grupo tem bilhões de pessoas e quase duzentos Estados, as fronteiras do recurso não coincidem com nenhuma jurisdição, não há autoridade com poder de sanção, e os interesses são profundamente heterogêneos.</p>
 
 <p>Ostrom, num de seus últimos trabalhos, propôs uma resposta que ela chamou de <strong>governança policêntrica</strong>: em vez de esperar um acordo global único, reconhecer que ação climática ocorre simultaneamente em cidades, empresas, regiões, países e blocos, e que esses níveis podem se reforçar mutuamente.<sup class="cit"><a href="#f4">4</a></sup></p>
 
@@ -2549,17 +2542,17 @@ extensao: { minutos: 30, html: `
 
 <h3>O que a história de Hardin ensina sobre uso de modelos</h3>
 
-<p>Este caso é um estudo exemplar de como um modelo pode ser correto e mal aplicado ao mesmo tempo — e vale extrair a lição metodológica, que transcende o tema.</p>
+<p>Este caso mostra como um modelo pode ser correto e mal aplicado ao mesmo tempo. A lição metodológica vale para além do tema.</p>
 
-<p><strong>Hardin não coletou dados.</strong> O artigo de 1968 não apresenta um único caso empírico de bem comum que tenha colapsado do modo descrito. A parábola do pasto é hipotética, adaptada de um panfleto de 1833 de William Forster Lloyd. Um modelo formalmente válido foi tratado como descrição do mundo sem que a correspondência fosse verificada.</p>
+<p>Hardin não coletou dados. O artigo de 1968 não apresenta um único caso empírico de bem comum que tenha colapsado do modo descrito. A parábola do pasto é hipotética, adaptada de um panfleto de 1833 de William Forster Lloyd. Um modelo formalmente válido foi tratado como descrição do mundo sem que a correspondência fosse verificada.</p>
 
-<p><strong>A generalização foi imediata e política.</strong> O artigo salta do pasto hipotético para conclusões sobre população mundial, propriedade e coerção. Hardin foi explícito em defender restrições coercitivas à reprodução e restrições à imigração, e escreveu posteriormente sobre "ética do bote salva-vidas" em termos que o Southern Poverty Law Center posteriormente classificou como nacionalismo branco.<sup class="cit"><a href="#f5">5</a></sup></p>
+<p>A generalização foi imediata e política. O artigo salta do pasto hipotético para conclusões sobre população mundial, propriedade e coerção. Hardin foi explícito em defender restrições coercitivas à reprodução e restrições à imigração, e escreveu posteriormente sobre "ética do bote salva-vidas" em termos que o Southern Poverty Law Center classificou como nacionalismo branco.<sup class="cit"><a href="#f5">5</a></sup></p>
 
-<p><strong>O modelo teve consequências materiais.</strong> Governos usaram o argumento para nacionalizar florestas e pesqueiras geridas comunalmente, em nome da conservação. Em vários casos documentados — Nepal, Índia, África Oriental —, a nacionalização destruiu regras locais de manejo funcionais e converteu propriedade comum em acesso livre <em>de facto</em>, produzindo exatamente a degradação que se queria evitar.</p>
+<p>O modelo teve consequências materiais. Governos usaram o argumento para nacionalizar florestas e pesqueiras geridas comunalmente, em nome da conservação. Em vários casos documentados no Nepal, na Índia e na África Oriental, a nacionalização destruiu regras locais de manejo funcionais e converteu propriedade comum em acesso livre <em>de facto</em>, produzindo exatamente a degradação que se queria evitar.</p>
 
 <div class="marca controverso">
 <span class="rot">Uma qualificação necessária</span>
-<p>Nada disso significa que o mecanismo de Hardin seja irreal. Colapso de pesqueiras por sobrepesca é bem documentado — o caso do bacalhau do Grand Banks, no Canadá, levou ao fim de uma indústria de quinhentos anos e ao desemprego de dezenas de milhares de pessoas em 1992, e o estoque não se recuperou plenamente. O ponto não é que Hardin errou sobre o mecanismo. É que ele errou ao tratar um caso particular como lei geral, e ao concluir que só existiam dois remédios possíveis.</p>
+<p>Nada disso significa que o mecanismo de Hardin seja irreal. Colapso de pesqueiras por sobrepesca é bem documentado: o caso do bacalhau do Grand Banks, no Canadá, levou ao fim de uma indústria de quinhentos anos e ao desemprego de dezenas de milhares de pessoas em 1992, e o estoque não se recuperou plenamente. O ponto não é que Hardin errou sobre o mecanismo. É que ele errou ao tratar um caso particular como lei geral, e ao concluir que só existiam dois remédios possíveis.</p>
 </div>
 
 <h3>Um vocabulário mais útil</h3>
@@ -2582,7 +2575,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
-<p>O mecanismo de Hardin é real e explica colapsos reais em regime de acesso livre. A conclusão de que só Estado ou privatização resolvem é empiricamente falsa: Ostrom documentou centenas de arranjos comunitários duradouros e identificou os princípios que os distinguem dos que falharam. O erro metodológico a evitar é o de Hardin — tomar um modelo formalmente válido como descrição do mundo sem ir verificar.</p>
+<p>O mecanismo de Hardin é real e explica colapsos reais em regime de acesso livre. A conclusão de que só Estado ou privatização resolvem é empiricamente falsa: Ostrom documentou centenas de arranjos comunitários duradouros e identificou os princípios que os distinguem dos que falharam. O erro metodológico a evitar é o de Hardin: tomar um modelo formalmente válido como descrição do mundo sem ir verificar.</p>
 </div>
 ` }
 },
@@ -2736,7 +2729,7 @@ nucleo: { minutos: 15, html: `
 
 <p>A intuição natural diz: se o país A produz tudo mais barato que o país B, então A não tem o que ganhar comerciando com B. B seria apenas um parceiro inferior.</p>
 
-<p>Essa intuição está errada, e o motivo é que ela compara a coisa errada. O que decide a especialização não é quanto custa produzir algo <em>em termos absolutos</em>, e sim quanto você <strong>deixa de produzir de outra coisa</strong> ao produzi-la. Custo de oportunidade, não custo absoluto.</p>
+<p>Essa intuição está errada, e o motivo é que ela compara a coisa errada. O que decide a especialização não é quanto custa produzir algo <em>em termos absolutos</em>, e sim quanto você deixa de produzir de outra coisa ao produzi-la. Custo de oportunidade, não custo absoluto.</p>
 
 <h3>O exemplo de Ricardo, com os números originais</h3>
 
@@ -2756,9 +2749,9 @@ nucleo: { minutos: 15, html: `
 
 <p>Agora faça a pergunta certa. Em Portugal, produzir uma unidade de vinho custa 80 horas — que poderiam ter feito 80/90 ≈ 0,89 unidade de tecido. Na Inglaterra, uma unidade de vinho custa 120 horas, que fariam 120/100 = 1,2 unidade de tecido.</p>
 
-<p><strong>Vinho é mais barato em Portugal e tecido é mais barato na Inglaterra</strong> — em termos do que cada um sacrifica. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido.</p>
+<p>Vinho é mais barato em Portugal e tecido é mais barato na Inglaterra, em termos do que cada um sacrifica. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido.</p>
 
-<figure class="figura">[[FIG:ricardo-ppf]]<figcaption>O que cada país consegue produzir com 100 horas. A reta de Portugal está inteiramente acima e à direita — ele é melhor nos dois. Mas as inclinações são diferentes, e é a inclinação, não a altura, que determina quem deve se especializar em quê.</figcaption></figure>
+<figure class="figura">[[FIG:ricardo-ppf]]<figcaption>O que cada país consegue produzir com 100 horas. A reta de Portugal está inteiramente acima e à direita: ele é melhor nos dois. Mas as inclinações são diferentes, e é a inclinação, não a altura, que determina quem deve se especializar em quê.</figcaption></figure>
 
 <h3>A conta que mostra o ganho</h3>
 
@@ -2768,7 +2761,7 @@ nucleo: { minutos: 15, html: `
 
 <p><strong>Com especialização completa:</strong> Portugal dedica as 200 horas ao vinho: 2,5 unidades. A Inglaterra dedica as 200 ao tecido: 2 unidades. <em>Total mundial: 2,5 vinho e 2 tecido.</em></p>
 
-<p>Comparando: o mundo ganhou 0,42 unidade de vinho e perdeu 0,11 de tecido. A qualquer taxa de troca entre 0,89 e 1,2 tecido por vinho, existe um acordo que deixa <strong>os dois países</strong> com mais dos dois produtos do que teriam sozinhos. O ganho não veio de trabalhar mais nem de tecnologia nova — veio apenas de reorganizar quem faz o quê.</p>
+<p>Comparando: o mundo ganhou 0,42 unidade de vinho e perdeu 0,11 de tecido. A qualquer taxa de troca entre 0,89 e 1,2 tecido por vinho, existe um acordo que deixa os dois países com mais dos dois produtos do que teriam sozinhos. O ganho não veio de trabalhar mais nem de tecnologia nova; veio apenas de reorganizar quem faz o quê.</p>
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -2777,7 +2770,7 @@ nucleo: { minutos: 15, html: `
 
 <div class="marca controverso">
 <span class="rot">E onde a controvérsia realmente está</span>
-<p>Quase toda a disputa sobre comércio internacional é sobre as <em>premissas</em>, não sobre a lógica. O modelo de Ricardo supõe pleno emprego, trabalho que se realoca sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. Cada uma dessas suposições falha em algum grau no mundo real, e a magnitude dessas falhas é uma questão empírica — não ideológica.</p>
+<p>Quase toda a disputa sobre comércio internacional é sobre as <em>premissas</em>, não sobre a lógica. O modelo de Ricardo supõe pleno emprego, trabalho que se realoca sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. Cada uma dessas suposições falha em algum grau no mundo real, e a magnitude dessas falhas é uma questão empírica, não ideológica.</p>
 </div>
 
 <h3>O que o teorema realmente afirma</h3>
@@ -2794,12 +2787,12 @@ aprofundamento: { minutos: 15, html: `
 
 <div class="formula">
 a<sub>1X</sub> / a<sub>1Y</sub> &lt; a<sub>2X</sub> / a<sub>2Y</sub>
-<span class="leg">a razão entre os custos internos — não os custos em si</span>
+<span class="leg">a razão entre os custos internos, não os custos em si</span>
 </div>
 
-<p>Repare que os níveis absolutos desaparecem completamente. Multiplique todos os custos de Portugal por dez, tornando-o dez vezes menos produtivo em tudo: a desigualdade não muda, e o padrão de especialização também não. Isso captura formalmente a ideia central — <strong>produtividade absoluta é irrelevante para o padrão de comércio</strong>.</p>
+<p>Repare que os níveis absolutos desaparecem completamente. Multiplique todos os custos de Portugal por dez, tornando-o dez vezes menos produtivo em tudo: a desigualdade não muda, e o padrão de especialização também não. Isso captura formalmente a ideia central: produtividade absoluta é irrelevante para o padrão de comércio.</p>
 
-<p>Produtividade absoluta determina outra coisa, e é importante não confundir: ela determina o <strong>nível de salários</strong>. Um país menos produtivo em tudo não fica sem comércio — ele comercia com salários mais baixos. Essa é a resposta padrão a duas objeções simétricas e ambas equivocadas: "não podemos competir com países de mão de obra barata" e "países pobres não têm o que oferecer".</p>
+<p>Produtividade absoluta determina outra coisa, e é importante não confundir: ela determina o <strong>nível de salários</strong>. Um país menos produtivo em tudo não fica sem comércio: ele comercia com salários mais baixos. Essa é a resposta padrão a duas objeções simétricas e ambas equivocadas: "não podemos competir com países de mão de obra barata" e "países pobres não têm o que oferecer".</p>
 
 <h3>Quem ganha e quem perde dentro do país</h3>
 
@@ -2809,25 +2802,25 @@ a<sub>1X</sub> / a<sub>1Y</sub> &lt; a<sub>2X</sub> / a<sub>2Y</sub>
 
 <div class="marca consenso">
 <span class="rot">Consenso técnico frequentemente omitido no debate público</span>
-<p>Que o comércio produz perdedores concentrados e ganhadores difusos não é uma crítica heterodoxa ao modelo: é um resultado do próprio arcabouço padrão, demonstrado há mais de oitenta anos. A defesa habitual — "os ganhadores poderiam compensar os perdedores" — é logicamente correta e empiricamente frágil: a compensação raramente é implementada em escala suficiente, e o teorema não oferece nenhum mecanismo que a garanta.</p>
+<p>Que o comércio produz perdedores concentrados e ganhadores difusos não é uma crítica heterodoxa ao modelo: é um resultado do próprio arcabouço padrão, demonstrado há mais de oitenta anos. A defesa habitual ("os ganhadores poderiam compensar os perdedores") é logicamente correta e empiricamente frágil: a compensação raramente é implementada em escala suficiente, e o teorema não oferece nenhum mecanismo que a garanta.</p>
 </div>
 
 <h3>O que os dados mostraram: o "China Shock"</h3>
 
 <p>Durante décadas, a economia do comércio operou com um pressuposto de ajuste relativamente rápido: trabalhadores deslocados encontrariam emprego em setores em expansão dentro de poucos anos. Autor, Dorn e Hanson testaram isso empiricamente para o caso da entrada da China no comércio mundial a partir dos anos 1990.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<p>Os achados centrais, medidos em mercados de trabalho locais dos Estados Unidos mais expostos à concorrência chinesa: perda de emprego industrial persistente, queda de salários, aumento de dependência de benefícios e — o ponto crítico — <strong>ajuste muito mais lento do que os modelos supunham</strong>, com efeitos ainda visíveis uma década depois. A mobilidade geográfica dos trabalhadores afetados foi menor do que a teoria previa.</p>
+<p>Os achados centrais, medidos em mercados de trabalho locais dos Estados Unidos mais expostos à concorrência chinesa: perda de emprego industrial persistente, queda de salários, aumento de dependência de benefícios e, o ponto crítico, ajuste muito mais lento do que os modelos supunham, com efeitos ainda visíveis uma década depois. A mobilidade geográfica dos trabalhadores afetados foi menor do que a teoria previa.</p>
 
 <div class="marca emergente">
 <span class="rot">Como o campo respondeu</span>
-<p>Esta literatura reorientou o debate. O consenso atual entre economistas do comércio não é que Ricardo esteja errado, e sim que os ganhos agregados são reais mas os custos de ajuste foram sistematicamente subestimados, e que sua concentração geográfica e setorial tem consequências políticas que os modelos não capturavam. Vale registrar o que isso demonstra sobre a disciplina: um consenso teórico de décadas foi qualificado por evidência empírica cuidadosa, o que é exatamente o que se espera de uma ciência funcionando.</p>
+<p>Esta literatura reorientou o debate. O consenso atual entre economistas do comércio não é que Ricardo esteja errado, e sim que os ganhos agregados são reais mas os custos de ajuste foram sistematicamente subestimados, e que sua concentração geográfica e setorial tem consequências políticas que os modelos não capturavam. Um consenso teórico de décadas foi qualificado por evidência empírica cuidadosa: é o que se espera de uma ciência funcionando.</p>
 </div>
 
 <h3>A ressalva do próprio Samuelson</h3>
 
-<p>Em 2004, Samuelson — que havia dedicado a carreira a defender o livre comércio — publicou um artigo mostrando que existe um caso em que um país pode ficar <strong>permanentemente pior</strong> com o comércio.<sup class="cit"><a href="#f2">2</a></sup></p>
+<p>Em 2004, Samuelson, que havia dedicado a carreira a defender o livre comércio, publicou um artigo mostrando que existe um caso em que um país pode ficar <strong>permanentemente pior</strong> com o comércio.<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<p>O mecanismo: se o país B tem um ganho de produtividade justamente no setor em que o país A tinha vantagem comparativa, os termos de troca de A pioram. A perde mais com a deterioração dos preços relativos do que ganha com os produtos mais baratos. Não é um argumento protecionista — Samuelson observa que barreiras comerciais tornariam a situação ainda pior. É um argumento sobre os limites de uma afirmação que vinha sendo feita de forma incondicional.</p>
+<p>O mecanismo: se o país B tem um ganho de produtividade justamente no setor em que o país A tinha vantagem comparativa, os termos de troca de A pioram. A perde mais com a deterioração dos preços relativos do que ganha com os produtos mais baratos. Não é um argumento protecionista: Samuelson observa que barreiras comerciais tornariam a situação ainda pior. É um argumento sobre os limites de uma afirmação que vinha sendo feita de forma incondicional.</p>
 ` },
 
 extensao: { minutos: 30, html: `
@@ -2857,16 +2850,16 @@ extensao: { minutos: 30, html: `
 
 <div class="marca controverso">
 <span class="rot">Controvérsia empírica genuína, ainda aberta</span>
-<p>Os defensores do argumento apontam que Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul industrializaram-se sob proteção substancial, e só depois adotaram o livre comércio. Os críticos apontam viés de seleção: para cada Coreia do Sul há vários casos de substituição de importações que produziram indústrias ineficientes e permanentemente dependentes de subsídio. A questão empírica real não é "proteção funciona?", mas "sob quais condições institucionais a proteção produz aprendizado em vez de captura de renda?" — e essa pergunta não tem resposta consensual.</p>
+<p>Os defensores do argumento apontam que Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul industrializaram-se sob proteção substancial, e só depois adotaram o livre comércio. Os críticos apontam viés de seleção: para cada Coreia do Sul há vários casos de substituição de importações que produziram indústrias ineficientes e permanentemente dependentes de subsídio. A questão empírica real não é "proteção funciona?", mas "sob quais condições institucionais a proteção produz aprendizado em vez de captura de renda?" Essa pergunta não tem resposta consensual.</p>
 </div>
 
 <h3>Nova teoria do comércio: por que países parecidos comerciam tanto</h3>
 
-<p>O modelo ricardiano prevê que o comércio ocorre entre países <em>diferentes</em>: quanto maior a diferença de custos relativos, maior o ganho. Mas o maior volume de comércio mundial acontece entre países ricos e similares — Alemanha e França trocam carros por carros.</p>
+<p>O modelo ricardiano prevê que o comércio ocorre entre países <em>diferentes</em>: quanto maior a diferença de custos relativos, maior o ganho. Mas o maior volume de comércio mundial acontece entre países ricos e similares: Alemanha e França trocam carros por carros.</p>
 
 <p>Paul Krugman formalizou a explicação nos anos 1980, o que lhe rendeu o Nobel de 2008. Com <strong>economias de escala</strong> e <strong>preferência por variedade</strong>, dois países idênticos ainda ganham comerciando: cada um se especializa em algumas variedades, produz em escala maior com custo unitário menor, e ambos os consumidores acessam mais variedades.</p>
 
-<p>A implicação conceitual é forte: neste modelo, o padrão de especialização é <strong>indeterminado</strong>. Quem produz o quê pode ser resultado de acidente histórico, e depois se consolida por retornos crescentes. Vantagem comparativa deixa de ser algo que se descobre e passa a ser algo que se constrói — o que muda inteiramente as implicações de política.</p>
+<p>A implicação conceitual é forte: neste modelo, o padrão de especialização é <strong>indeterminado</strong>. Quem produz o quê pode ser resultado de acidente histórico, e depois se consolida por retornos crescentes. Vantagem comparativa deixa de ser algo que se descobre e passa a ser algo que se constrói. Isso muda inteiramente as implicações de política.</p>
 
 <h3>Como avaliar um argumento sobre comércio</h3>
 
@@ -2874,7 +2867,7 @@ extensao: { minutos: 30, html: `
 
 <ol>
 <li><strong>Agregado ou distributivo?</strong> Ganho agregado e distribuição do ganho são afirmações distintas. Um argumento que responde à segunda pergunta com evidência sobre a primeira está mudando de assunto.</li>
-<li><strong>Qual horizonte temporal?</strong> Ganhos de comércio são difusos e permanentes; custos de ajuste são concentrados e temporários — mas "temporário" pode significar uma década, o que é boa parte de uma carreira.</li>
+<li><strong>Qual horizonte temporal?</strong> Ganhos de comércio são difusos e permanentes; custos de ajuste são concentrados e temporários, mas "temporário" pode significar uma década, o que é boa parte de uma carreira.</li>
 <li><strong>Estático ou dinâmico?</strong> A análise considera apenas a alocação atual de recursos, ou também o efeito sobre a capacidade produtiva futura?</li>
 <li><strong>O que está fora da contabilidade?</strong> Custos ambientais, condições de trabalho e transferência de tecnologia raramente entram no cálculo de ganhos.</li>
 <li><strong>Qual é a alternativa concreta?</strong> Mostrar que o livre comércio tem custos não estabelece que a política proposta em seu lugar tenha custos menores. Comparar uma política real com um ideal é o erro simétrico mais comum.</li>
@@ -2882,7 +2875,7 @@ extensao: { minutos: 30, html: `
 
 <div class="marca consenso">
 <span class="rot">O que segurar</span>
-<p>A vantagem comparativa é um teorema correto sobre custos de oportunidade, não uma doutrina política. Ela estabelece que existem ganhos agregados do comércio e que produtividade absoluta não determina o padrão de especialização. Ela não estabelece que o comércio beneficia todos, que o ajuste é rápido, que a especialização atual é a melhor para o futuro, nem que qualquer acordo comercial concreto é bom. Confundir o teorema com essas conclusões adicionais é o uso indevido mais frequente — e ele acontece, com igual frequência, dos dois lados do debate.</p>
+<p>A vantagem comparativa é um teorema correto sobre custos de oportunidade, não uma doutrina política. Ela estabelece que existem ganhos agregados do comércio e que produtividade absoluta não determina o padrão de especialização. Ela não estabelece que o comércio beneficia todos, que o ajuste é rápido, que a especialização atual é a melhor para o futuro, nem que qualquer acordo comercial concreto é bom. Confundir o teorema com essas conclusões adicionais é o uso indevido mais frequente. Isso acontece, com igual frequência, dos dois lados do debate.</p>
 </div>
 ` }
 },
