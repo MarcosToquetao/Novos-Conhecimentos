@@ -1,5 +1,5 @@
 /* =========================================================================
-   catalogo.js — Banco de conceitos do Novos Conhecimentos
+   catalogo.js: Banco de conceitos do Novos Conhecimentos
    -------------------------------------------------------------------------
    Este arquivo contém APENAS os termos: é o reservatório de onde os
    documentos de estudo são produzidos. O app só sorteia entre conceitos
@@ -9,39 +9,39 @@
      id           slug estável (não renomear depois de publicado)
      termo        nome do conceito como aparece na tela
      area         grande área do conhecimento
-     dificuldade  1 a 5 — carga de pré-requisitos, não "importância"
+     dificuldade  1 a 5: carga de pré-requisitos, não "importância"
      gancho       uma linha sobre por que vale a pena
    ========================================================================= */
 
 const CATALOGO = [
 
   /* ── Matemática ───────────────────────────────────────────────────── */
-  { id:"fourier", termo:"Transformada de Fourier", area:"Matemática", dificuldade:4, gancho:"Qualquer sinal complicado é uma soma de ondas simples — a ideia que sustenta MP3, MRI e Wi-Fi." },
+  { id:"fourier", termo:"Transformada de Fourier", area:"Matemática", dificuldade:4, gancho:"Qualquer sinal complicado é uma soma de ondas simples: a ideia que sustenta MP3, MRI e Wi-Fi." },
   { id:"bayes", termo:"Teorema de Bayes", area:"Matemática", dificuldade:3, gancho:"Uma fórmula de uma linha que descreve como uma crença deveria mudar diante de evidência." },
   { id:"cantor-infinitos", termo:"Cardinalidade e os infinitos de Cantor", area:"Matemática", dificuldade:3, gancho:"Existem infinitos maiores que outros infinitos, e dá para provar isso em meia página." },
   { id:"godel", termo:"Teoremas da incompletude de Gödel", area:"Matemática", dificuldade:4, gancho:"Todo sistema formal suficientemente rico contém verdades que ele não consegue provar." },
-  { id:"topologia-basica", termo:"Topologia e invariantes", area:"Matemática", dificuldade:4, gancho:"Por que a xícara e a rosquinha são o mesmo objeto — e por que isso é útil." },
+  { id:"topologia-basica", termo:"Topologia e invariantes", area:"Matemática", dificuldade:4, gancho:"Por que a xícara e a rosquinha são o mesmo objeto, e por que isso é útil." },
   { id:"caos-deterministico", termo:"Caos determinístico", area:"Matemática", dificuldade:3, gancho:"Sistemas totalmente previsíveis em princípio e absolutamente imprevisíveis na prática." },
   { id:"fractais", termo:"Dimensão fractal", area:"Matemática", dificuldade:3, gancho:"Quanto mede a costa da Grã-Bretanha? Depende do tamanho da sua régua." },
-  { id:"teoria-jogos", termo:"Equilíbrio de Nash", area:"Matemática", dificuldade:3, gancho:"O ponto em que ninguém melhora mudando sozinho — e por que isso pode ser péssimo para todos." },
+  { id:"teoria-jogos", termo:"Equilíbrio de Nash", area:"Matemática", dificuldade:3, gancho:"O ponto em que ninguém melhora mudando sozinho, e por que isso pode ser péssimo para todos." },
   { id:"grafos", termo:"Teoria dos grafos e as pontes de Königsberg", area:"Matemática", dificuldade:2, gancho:"Um passeio impossível numa cidade prussiana fundou a matemática das redes." },
   { id:"numeros-complexos", termo:"Números complexos e a identidade de Euler", area:"Matemática", dificuldade:3, gancho:"A raiz de menos um deixou de ser truque e virou a linguagem natural da rotação." },
   { id:"prob-condicional", termo:"Falácia do promotor e probabilidade condicional", area:"Matemática", dificuldade:2, gancho:"Um erro de inversão de probabilidades já condenou pessoas inocentes em tribunais reais." },
   { id:"otimizacao-convexa", termo:"Convexidade e otimização", area:"Matemática", dificuldade:4, gancho:"A fronteira real entre problemas que sabemos resolver e os que só sabemos aproximar." },
   { id:"algebra-linear-svd", termo:"Decomposição em valores singulares", area:"Matemática", dificuldade:4, gancho:"O canivete suíço que aparece em compressão de imagem, recomendação e redução de dimensionalidade." },
   { id:"secao-aurea", termo:"Razão áurea: matemática e mito", area:"Matemática", dificuldade:2, gancho:"Uma proporção real na botânica e uma lenda estética que quase nada sustenta." },
-  { id:"problema-monty-hall", termo:"Problema de Monty Hall", area:"Matemática", dificuldade:2, gancho:"A resposta correta parece errada até para matemáticos profissionais — e há motivo cognitivo para isso." },
+  { id:"problema-monty-hall", termo:"Problema de Monty Hall", area:"Matemática", dificuldade:2, gancho:"A resposta correta parece errada até para matemáticos profissionais, e há motivo cognitivo para isso." },
 
   /* ── Física ───────────────────────────────────────────────────────── */
   { id:"quatro-forcas", termo:"As quatro interações fundamentais", area:"Física", dificuldade:3, gancho:"Tudo que acontece no universo é mediado por quatro conversas diferentes entre partículas." },
   { id:"entropia", termo:"Entropia e a segunda lei da termodinâmica", area:"Física", dificuldade:3, gancho:"A única lei da física que sabe distinguir passado de futuro." },
   { id:"relatividade-restrita", termo:"Relatividade restrita e dilatação temporal", area:"Física", dificuldade:4, gancho:"Manter a velocidade da luz constante custa caro: o tempo e o espaço têm que ceder." },
   { id:"emaranhamento", termo:"Emaranhamento quântico e desigualdades de Bell", area:"Física", dificuldade:4, gancho:"Um experimento decidiu empiricamente uma disputa que Einstein achava ser só filosófica." },
-  { id:"efeito-casimir", termo:"Efeito Casimir e o vácuo quântico", area:"Física", dificuldade:4, gancho:"Duas placas metálicas no vácuo se atraem — porque o nada não é nada." },
+  { id:"efeito-casimir", termo:"Efeito Casimir e o vácuo quântico", area:"Física", dificuldade:4, gancho:"Duas placas metálicas no vácuo se atraem porque o nada não é nada." },
   { id:"supercondutividade", termo:"Supercondutividade", area:"Física", dificuldade:4, gancho:"Resistência elétrica exatamente zero, e um mecanismo que levou 46 anos para ser explicado." },
-  { id:"buracos-negros-termo", termo:"Termodinâmica de buracos negros", area:"Física", dificuldade:5, gancho:"Buracos negros têm temperatura e entropia — e isso conecta gravidade, quântica e informação." },
+  { id:"buracos-negros-termo", termo:"Termodinâmica de buracos negros", area:"Física", dificuldade:5, gancho:"Buracos negros têm temperatura e entropia, e isso conecta gravidade, quântica e informação." },
   { id:"escalas-alometria", termo:"Leis de escala e alometria", area:"Física", dificuldade:3, gancho:"Por que não existem formigas do tamanho de elefantes: a geometria proíbe." },
-  { id:"ressonancia", termo:"Ressonância", area:"Física", dificuldade:2, gancho:"Empurrar no ritmo certo derruba pontes e afina rádios — o mesmo fenômeno." },
+  { id:"ressonancia", termo:"Ressonância", area:"Física", dificuldade:2, gancho:"Empurrar no ritmo certo derruba pontes e afina rádios: o mesmo fenômeno." },
   { id:"materia-escura", termo:"Matéria escura: evidências e alternativas", area:"Física", dificuldade:4, gancho:"85% da matéria do universo é algo que nunca detectamos diretamente. Ou nossa gravidade está errada." },
   { id:"laser", termo:"Como funciona um laser", area:"Física", dificuldade:3, gancho:"Emissão estimulada: uma previsão de Einstein de 1917 que virou leitor de código de barras." },
   { id:"efeito-doppler", termo:"Efeito Doppler e expansão do universo", area:"Física", dificuldade:2, gancho:"O mesmo motivo pelo qual a ambulância muda de tom revelou que o universo está se expandindo." },
@@ -52,47 +52,47 @@ const CATALOGO = [
   /* ── Química ──────────────────────────────────────────────────────── */
   { id:"catalise", termo:"Catálise e energia de ativação", area:"Química", dificuldade:2, gancho:"Como acelerar uma reação em bilhões de vezes sem consumir nada no processo." },
   { id:"quiralidade", termo:"Quiralidade molecular", area:"Química", dificuldade:3, gancho:"Duas moléculas idênticas como mão esquerda e direita: uma cura, a outra causou a talidomida." },
-  { id:"ligacao-hidrogenio", termo:"Ligação de hidrogênio e as anomalias da água", area:"Química", dificuldade:2, gancho:"O gelo flutuar é uma anomalia física — e a vida na Terra depende dela." },
+  { id:"ligacao-hidrogenio", termo:"Ligação de hidrogênio e as anomalias da água", area:"Química", dificuldade:2, gancho:"O gelo flutuar é uma anomalia física, e a vida na Terra depende dela." },
   { id:"haber-bosch", termo:"Processo Haber-Bosch", area:"Química", dificuldade:3, gancho:"Metade do nitrogênio do seu corpo passou por uma fábrica. Sustenta ~4 bilhões de pessoas." },
   { id:"tabela-periodica", termo:"A lógica da tabela periódica", area:"Química", dificuldade:2, gancho:"Não é uma lista: é um mapa da mecânica quântica dos elétrons disfarçado de tabela." },
   { id:"polimeros", termo:"Polímeros e a origem dos plásticos", area:"Química", dificuldade:2, gancho:"Moléculas gigantes que criaram uma civilização material e um problema geológico." },
   { id:"eletroquimica-baterias", termo:"Eletroquímica das baterias de íon-lítio", area:"Química", dificuldade:3, gancho:"Toda a transição energética depende de mover íons entre duas camadas de material." },
   { id:"maillard", termo:"Reação de Maillard", area:"Química", dificuldade:2, gancho:"Praticamente tudo o que consideramos 'gostoso' e dourado vem de uma única família de reações." },
-  { id:"ph-tampao", termo:"pH e sistemas-tampão", area:"Química", dificuldade:2, gancho:"Seu sangue varia menos de 0,1 de pH ou você morre — e a química que garante isso é elegante." },
+  { id:"ph-tampao", termo:"pH e sistemas-tampão", area:"Química", dificuldade:2, gancho:"Seu sangue varia menos de 0,1 de pH ou você morre, e a química que garante isso é elegante." },
   { id:"quimica-verde", termo:"Química verde e economia atômica", area:"Química", dificuldade:2, gancho:"Reformular a pergunta industrial: não 'quanto rende?', mas 'quanto vira lixo?'" },
 
   /* ── Biologia ─────────────────────────────────────────────────────── */
   { id:"endossimbiose", termo:"Teoria endossimbiótica", area:"Biologia", dificuldade:2, gancho:"Suas mitocôndrias já foram bactérias livres. A ideia foi rejeitada por 15 revistas." },
-  { id:"deriva-genetica", termo:"Deriva genética e efeito fundador", area:"Biologia", dificuldade:3, gancho:"Evolução também acontece por puro acaso — e em populações pequenas o acaso domina." },
+  { id:"deriva-genetica", termo:"Deriva genética e efeito fundador", area:"Biologia", dificuldade:3, gancho:"Evolução também acontece por puro acaso, e em populações pequenas o acaso domina." },
   { id:"altruismo-hamilton", termo:"Seleção de parentesco e a regra de Hamilton", area:"Biologia", dificuldade:3, gancho:"Uma desigualdade de três termos que explica por que abelhas operárias abrem mão de reproduzir." },
   { id:"relogio-circadiano", termo:"Relógio circadiano molecular", area:"Biologia", dificuldade:3, gancho:"Cada célula do seu corpo tem um oscilador químico de 24 horas. Nobel de 2017." },
   { id:"microbioma", termo:"Microbioma intestinal: o que se sabe de fato", area:"Biologia", dificuldade:3, gancho:"Área com resultados reais e um dos maiores excessos de extrapolação da biologia atual." },
   { id:"apoptose", termo:"Apoptose: morte celular programada", area:"Biologia", dificuldade:3, gancho:"Você produz e destrói bilhões de células por dia de forma deliberada e organizada." },
   { id:"crispr", termo:"CRISPR-Cas9", area:"Biologia", dificuldade:3, gancho:"Um sistema imune bacteriano virou a ferramenta de edição genética mais acessível da história." },
   { id:"convergencia-evolutiva", termo:"Convergência evolutiva", area:"Biologia", dificuldade:2, gancho:"O olho tipo câmera surgiu independentemente pelo menos duas vezes. Isso diz algo sobre restrições." },
-  { id:"neuroplasticidade", termo:"Neuroplasticidade: alcance e limites", area:"Biologia", dificuldade:3, gancho:"O cérebro muda com o uso — mas muito menos e mais devagar do que a divulgação sugere." },
+  { id:"neuroplasticidade", termo:"Neuroplasticidade: alcance e limites", area:"Biologia", dificuldade:3, gancho:"O cérebro muda com o uso, mas muito menos e mais devagar do que a divulgação sugere." },
   { id:"fotossintese-c4", termo:"Fotossíntese C3, C4 e CAM", area:"Biologia", dificuldade:3, gancho:"Três soluções de engenharia diferentes para o mesmo problema: capturar carbono sem perder água." },
   { id:"virus-definicao", termo:"Vírus são vivos? O problema da definição de vida", area:"Biologia", dificuldade:2, gancho:"Uma pergunta de fronteira que revela que 'vida' talvez não seja uma categoria natural." },
-  { id:"telomeros", termo:"Telômeros e senescência celular", area:"Biologia", dificuldade:3, gancho:"Um contador molecular de divisões — e a razão pela qual células normais não são imortais." },
+  { id:"telomeros", termo:"Telômeros e senescência celular", area:"Biologia", dificuldade:3, gancho:"Um contador molecular de divisões, e a razão pela qual células normais não são imortais." },
 
   /* ── Neurociência e Psicologia ────────────────────────────────────── */
   { id:"efeito-teste", termo:"Efeito de teste e prática de recuperação", area:"Psicologia", dificuldade:2, gancho:"Estudar relendo produz confiança; estudar se testando produz memória. Não é a mesma coisa." },
   { id:"memoria-trabalho", termo:"Memória de trabalho e carga cognitiva", area:"Psicologia", dificuldade:2, gancho:"O gargalo de ~4 itens que limita tudo que você consegue pensar simultaneamente." },
   { id:"dissonancia-cognitiva", termo:"Dissonância cognitiva", area:"Psicologia", dificuldade:2, gancho:"Mudamos nossas crenças para justificar o que já fizemos, não o contrário." },
-  { id:"vies-confirmacao", termo:"Viés de confirmação", area:"Psicologia", dificuldade:2, gancho:"O viés mais bem documentado da psicologia — e o mais difícil de perceber em si mesmo." },
+  { id:"vies-confirmacao", termo:"Viés de confirmação", area:"Psicologia", dificuldade:2, gancho:"O viés mais bem documentado da psicologia, e o mais difícil de perceber em si mesmo." },
   { id:"crise-replicacao", termo:"Crise de replicação na psicologia", area:"Psicologia", dificuldade:3, gancho:"Metade dos achados clássicos não se sustentou. Como uma ciência descobre que estava errada." },
   { id:"heuristicas-kahneman", termo:"Heurísticas e vieses (Kahneman e Tversky)", area:"Psicologia", dificuldade:2, gancho:"Atalhos mentais que funcionam bem quase sempre e falham de formas previsíveis." },
-  { id:"efeito-placebo", termo:"Efeito placebo e nocebo", area:"Psicologia", dificuldade:3, gancho:"Expectativa produz efeitos fisiológicos mensuráveis — e também confunde ensaios clínicos inteiros." },
+  { id:"efeito-placebo", termo:"Efeito placebo e nocebo", area:"Psicologia", dificuldade:3, gancho:"Expectativa produz efeitos fisiológicos mensuráveis, e também confunde ensaios clínicos inteiros." },
   { id:"atencao-seletiva", termo:"Atenção seletiva e cegueira desatencional", area:"Psicologia", dificuldade:2, gancho:"Você não vê o gorila. Ver exige atenção, e atenção é um recurso escasso." },
   { id:"neuronios-espelho", termo:"Neurônios-espelho: achado e exagero", area:"Neurociência", dificuldade:3, gancho:"Estudo de caso de como uma descoberta real vira explicação universal sem evidência." },
   { id:"consolidacao-sono", termo:"Sono e consolidação de memória", area:"Neurociência", dificuldade:3, gancho:"Dormir não é pausa do aprendizado: é parte do processamento." },
-  { id:"dor-cronica", termo:"Dor crônica como fenômeno do sistema nervoso", area:"Neurociência", dificuldade:3, gancho:"Dor sem lesão é real e mensurável — e isso muda completamente o tratamento." },
+  { id:"dor-cronica", termo:"Dor crônica como fenômeno do sistema nervoso", area:"Neurociência", dificuldade:3, gancho:"Dor sem lesão é real e mensurável, e isso muda completamente o tratamento." },
   { id:"predicao-cerebral", termo:"Cérebro preditivo e codificação preditiva", area:"Neurociência", dificuldade:4, gancho:"Talvez percepção seja alucinação controlada por erro de previsão. Teoria ambiciosa e disputada." },
 
   /* ── Filosofia ────────────────────────────────────────────────────── */
   { id:"hegel-fenomenologia", termo:"Fenomenologia do espírito e dialética em Hegel", area:"Filosofia", dificuldade:5, gancho:"O livro mais difícil da filosofia moderna, e a ideia de que a verdade tem história." },
   { id:"problema-inducao", termo:"O problema da indução (Hume)", area:"Filosofia", dificuldade:3, gancho:"Nenhuma quantidade de observações justifica logicamente uma previsão. A ciência convive com isso." },
-  { id:"falseabilidade", termo:"Falseabilidade e demarcação (Popper)", area:"Filosofia", dificuldade:2, gancho:"O critério mais citado para separar ciência de não-ciência — e suas falhas conhecidas." },
+  { id:"falseabilidade", termo:"Falseabilidade e demarcação (Popper)", area:"Filosofia", dificuldade:2, gancho:"O critério mais citado para separar ciência de não-ciência, e suas falhas conhecidas." },
   { id:"paradigmas-kuhn", termo:"Paradigmas e revoluções científicas (Kuhn)", area:"Filosofia", dificuldade:3, gancho:"Ciência não avança acumulando: ela troca de mapa e não consegue traduzir entre eles." },
   { id:"utilitarismo", termo:"Utilitarismo e suas objeções", area:"Filosofia", dificuldade:2, gancho:"Maximizar bem-estar agregado parece óbvio até você levar a sério as consequências." },
   { id:"imperativo-categorico", termo:"Imperativo categórico (Kant)", area:"Filosofia", dificuldade:3, gancho:"Moral derivada da estrutura da razão, não das consequências. Rigoroso e desconfortável." },
@@ -106,7 +106,7 @@ const CATALOGO = [
   { id:"existencialismo-sartre", termo:"Existência precede a essência (Sartre)", area:"Filosofia", dificuldade:2, gancho:"Liberdade radical como condenação, não como privilégio." },
   { id:"etica-virtude", termo:"Ética das virtudes e eudaimonia", area:"Filosofia", dificuldade:2, gancho:"A pergunta grega não era 'o que devo fazer?', mas 'que tipo de pessoa devo ser?'" },
   { id:"paradoxo-sorites", termo:"Paradoxo sorites e vagueza", area:"Filosofia", dificuldade:2, gancho:"Um grão não faz um monte. Nem dois. Onde exatamente começa o monte?" },
-  { id:"argumento-ontologico", termo:"Argumento ontológico e suas refutações", area:"Filosofia", dificuldade:3, gancho:"Uma tentativa de provar Deus só pela lógica — e a crítica de Kant sobre existência como predicado." },
+  { id:"argumento-ontologico", termo:"Argumento ontológico e suas refutações", area:"Filosofia", dificuldade:3, gancho:"Uma tentativa de provar Deus só pela lógica, e a crítica de Kant sobre existência como predicado." },
   { id:"escola-frankfurt", termo:"Indústria cultural e a Escola de Frankfurt", area:"Filosofia", dificuldade:3, gancho:"Uma crítica de 1944 à cultura de massa que envelheceu de forma perturbadora." },
 
   /* ── Economia ─────────────────────────────────────────────────────── */
@@ -118,10 +118,10 @@ const CATALOGO = [
   { id:"curva-laffer", termo:"Curva de Laffer: teoria e evidência", area:"Economia", dificuldade:2, gancho:"Uma ideia matematicamente trivial que virou bandeira política sem base empírica clara." },
   { id:"tragedia-comuns", termo:"Tragédia dos comuns e a crítica de Ostrom", area:"Economia", dificuldade:3, gancho:"O modelo clássico previa colapso. Ostrom foi a campo e encontrou o contrário." },
   { id:"bolhas-financeiras", termo:"Bolhas especulativas", area:"Economia", dificuldade:3, gancho:"Comportamento racional individual produzindo insanidade coletiva, repetidamente, há 400 anos." },
-  { id:"gini-desigualdade", termo:"Medidas de desigualdade: Gini e alternativas", area:"Economia", dificuldade:2, gancho:"Um único número para resumir a distribuição de renda — e tudo que ele esconde." },
+  { id:"gini-desigualdade", termo:"Medidas de desigualdade: Gini e alternativas", area:"Economia", dificuldade:2, gancho:"Um único número para resumir a distribuição de renda, e tudo que ele esconde." },
   { id:"moeda-fiduciaria", termo:"O que dá valor ao dinheiro", area:"Economia", dificuldade:2, gancho:"Papel sem lastro que funciona porque todo mundo acredita que funciona. Isso é frágil?" },
   { id:"paradoxo-produtividade", termo:"Paradoxo da produtividade de Solow", area:"Economia", dificuldade:3, gancho:"Computadores estão em toda parte, menos nas estatísticas de produtividade." },
-  { id:"economia-comportamental", termo:"Economia comportamental e nudges", area:"Economia", dificuldade:2, gancho:"Substituir o agente racional por gente real — e a discussão sobre paternalismo que veio junto." },
+  { id:"economia-comportamental", termo:"Economia comportamental e nudges", area:"Economia", dificuldade:2, gancho:"Substituir o agente racional por gente real, e a discussão sobre paternalismo que veio junto." },
   { id:"salario-minimo-debate", termo:"Salário mínimo: o debate empírico", area:"Economia", dificuldade:3, gancho:"Caso exemplar de como dados naturais mudaram um consenso teórico de décadas." },
   { id:"renda-basica", termo:"Renda básica universal: evidência dos experimentos", area:"Economia", dificuldade:3, gancho:"Vários testes de campo já foram feitos. O que eles realmente mostraram?" },
   { id:"teoria-firma", termo:"Por que existem empresas (Coase)", area:"Economia", dificuldade:3, gancho:"Se o mercado é eficiente, por que tanta atividade acontece dentro de hierarquias?" },
@@ -136,21 +136,21 @@ const CATALOGO = [
   { id:"estado-de-direito", termo:"Estado de direito e legalidade", area:"Direito", dificuldade:2, gancho:"A diferença entre governar por leis e governar com leis." },
   { id:"presuncao-inocencia", termo:"Ônus da prova e presunção de inocência", area:"Direito", dificuldade:2, gancho:"Uma assimetria deliberada: o sistema aceita errar mais numa direção que na outra." },
   { id:"common-law-civil", termo:"Common law e civil law", area:"Direito", dificuldade:2, gancho:"Duas tradições jurídicas com concepções opostas sobre de onde vem o direito." },
-  { id:"propriedade-intelectual", termo:"Propriedade intelectual: justificativas e críticas", area:"Direito", dificuldade:3, gancho:"Um monopólio temporário concedido pelo Estado — a justificativa é utilitária, não natural." },
+  { id:"propriedade-intelectual", termo:"Propriedade intelectual: justificativas e críticas", area:"Direito", dificuldade:3, gancho:"Um monopólio temporário concedido pelo Estado: a justificativa é utilitária, não natural." },
   { id:"federalismo", termo:"Federalismo e desenho institucional", area:"Ciência Política", dificuldade:2, gancho:"Como distribuir poder no espaço sem dissolver o país nem sufocar a diversidade." },
   { id:"populismo", termo:"Populismo como conceito analítico", area:"Ciência Política", dificuldade:3, gancho:"Um termo usado como xingamento que tem definição técnica precisa e mensurável." },
 
   /* ── Sociologia e Antropologia ────────────────────────────────────── */
   { id:"capital-cultural", termo:"Capital cultural e distinção (Bourdieu)", area:"Sociologia", dificuldade:3, gancho:"Gosto não é pessoal: é posição social convertida em preferência estética." },
   { id:"anomia", termo:"Anomia e suicídio em Durkheim", area:"Sociologia", dificuldade:3, gancho:"O primeiro grande estudo a mostrar que um ato íntimo tem estrutura social." },
-  { id:"dadiva-mauss", termo:"A dádiva e a obrigação de retribuir (Mauss)", area:"Antropologia", dificuldade:3, gancho:"Não existe presente gratuito. Toda troca cria dívida — e vínculo." },
+  { id:"dadiva-mauss", termo:"A dádiva e a obrigação de retribuir (Mauss)", area:"Antropologia", dificuldade:3, gancho:"Não existe presente gratuito. Toda troca cria dívida e vínculo." },
   { id:"lacos-fracos", termo:"A força dos laços fracos (Granovetter)", area:"Sociologia", dificuldade:2, gancho:"Empregos vêm de conhecidos distantes, não de amigos próximos. E há razão estrutural." },
   { id:"profecia-autorrealizavel", termo:"Profecia autorrealizável", area:"Sociologia", dificuldade:2, gancho:"Uma crença falsa que se torna verdadeira só por ser acreditada." },
   { id:"panoptico", termo:"Panóptico e sociedade disciplinar (Foucault)", area:"Sociologia", dificuldade:3, gancho:"O poder mais eficiente não pune: faz você se vigiar sozinho." },
   { id:"etnografia", termo:"Método etnográfico e observação participante", area:"Antropologia", dificuldade:2, gancho:"Como transformar convivência prolongada em conhecimento com validade." },
   { id:"tabu-pureza", termo:"Pureza e perigo (Mary Douglas)", area:"Antropologia", dificuldade:3, gancho:"Sujeira é matéria fora do lugar. Toda classificação produz seu próprio nojo." },
   { id:"individualismo-metodologico", termo:"Individualismo metodológico versus holismo", area:"Sociologia", dificuldade:3, gancho:"Explicar o social pelos indivíduos ou o indivíduo pelo social? A briga fundadora da área." },
-  { id:"modernidade-liquida", termo:"Modernidade líquida (Bauman)", area:"Sociologia", dificuldade:2, gancho:"Um diagnóstico influente da instabilidade contemporânea — e as críticas de que é impressionista." },
+  { id:"modernidade-liquida", termo:"Modernidade líquida (Bauman)", area:"Sociologia", dificuldade:2, gancho:"Um diagnóstico influente da instabilidade contemporânea, e as críticas de que é impressionista." },
 
   /* ── História ─────────────────────────────────────────────────────── */
   { id:"peste-negra", termo:"Peste Negra e reorganização econômica", area:"História", dificuldade:2, gancho:"Um terço da Europa morreu e os salários dos sobreviventes dispararam. As consequências duraram séculos." },
@@ -171,18 +171,18 @@ const CATALOGO = [
   /* ── Linguística ──────────────────────────────────────────────────── */
   { id:"sapir-whorf", termo:"Relatividade linguística (hipótese Sapir-Whorf)", area:"Linguística", dificuldade:3, gancho:"A língua molda o pensamento? Versão forte refutada, versão fraca com evidência real." },
   { id:"gramatica-universal", termo:"Gramática universal e o debate inatista", area:"Linguística", dificuldade:4, gancho:"A hipótese mais influente e mais contestada da linguística do século XX." },
-  { id:"mudanca-fonetica", termo:"Mudança fonética e leis regulares", area:"Linguística", dificuldade:3, gancho:"Línguas mudam com regularidade quase física — o que permite reconstruir idiomas mortos." },
+  { id:"mudanca-fonetica", termo:"Mudança fonética e leis regulares", area:"Linguística", dificuldade:3, gancho:"Línguas mudam com regularidade quase física, o que permite reconstruir idiomas mortos." },
   { id:"pidgin-crioulo", termo:"Pidgins e crioulos", area:"Linguística", dificuldade:3, gancho:"Línguas inteiras nascendo em uma geração, sob condições históricas brutais." },
   { id:"signo-saussure", termo:"Signo linguístico e arbitrariedade (Saussure)", area:"Linguística", dificuldade:2, gancho:"Não há nada de canino na palavra 'cão'. Dessa banalidade nasceu o estruturalismo." },
   { id:"atos-de-fala", termo:"Atos de fala (Austin e Searle)", area:"Linguística", dificuldade:3, gancho:"Dizer 'eu aceito' num casamento não descreve nada: faz algo acontecer." },
   { id:"lei-zipf", termo:"Lei de Zipf e estatística das línguas", area:"Linguística", dificuldade:3, gancho:"A frequência das palavras segue uma regra matemática rígida em qualquer idioma." },
-  { id:"escrita-sistemas", termo:"Sistemas de escrita: alfabeto, silabário, logografia", area:"Linguística", dificuldade:2, gancho:"Três soluções diferentes para representar fala com marcas — com custos cognitivos distintos." },
+  { id:"escrita-sistemas", termo:"Sistemas de escrita: alfabeto, silabário, logografia", area:"Linguística", dificuldade:2, gancho:"Três soluções diferentes para representar fala com marcas, com custos cognitivos distintos." },
 
   /* ── Design e Arquitetura ─────────────────────────────────────────── */
   { id:"gestalt-design", termo:"Princípios da Gestalt no design visual", area:"Design", dificuldade:2, gancho:"Regras de percepção descobertas em 1920 que governam toda interface que você usa hoje." },
   { id:"affordances", termo:"Affordances e design de interação (Norman)", area:"Design", dificuldade:2, gancho:"Se o usuário errou, o objeto é que está mal projetado. Uma inversão radical de responsabilidade." },
   { id:"teoria-cor", termo:"Teoria da cor e contraste simultâneo", area:"Design", dificuldade:2, gancho:"A mesma cor parece diferente dependendo da vizinha. Sua retina não mede: compara." },
-  { id:"tipografia-legibilidade", termo:"Tipografia e legibilidade", area:"Design", dificuldade:2, gancho:"Séculos de convenção tipográfica que quase nunca são testados empiricamente — e o que os testes dizem." },
+  { id:"tipografia-legibilidade", termo:"Tipografia e legibilidade", area:"Design", dificuldade:2, gancho:"Séculos de convenção tipográfica que quase nunca são testados empiricamente, e o que os testes dizem." },
   { id:"grid-editorial", termo:"Sistemas de grid e o estilo suíço", area:"Design", dificuldade:2, gancho:"Uma ideologia modernista disfarçada de método de diagramação." },
   { id:"design-sistemas", termo:"Design systems e consistência em escala", area:"Design", dificuldade:2, gancho:"Como manter coerência visual quando cem pessoas editam o mesmo produto." },
   { id:"acessibilidade", termo:"Acessibilidade e desenho universal", area:"Design", dificuldade:2, gancho:"Projetar para a margem costuma melhorar a experiência do centro. O meio-fio rebaixado é o caso clássico." },
@@ -195,10 +195,10 @@ const CATALOGO = [
 
   /* ── Música e Artes ───────────────────────────────────────────────── */
   { id:"temperamento-igual", termo:"Temperamento igual: a matemática da afinação", area:"Música", dificuldade:3, gancho:"Todo piano do mundo está ligeiramente desafinado de propósito. A física não deixa alternativa." },
-  { id:"harmonia-funcional", termo:"Harmonia funcional e tensão-resolução", area:"Música", dificuldade:3, gancho:"Por que certos acordes 'pedem' outros — uma gramática que você já domina sem saber." },
+  { id:"harmonia-funcional", termo:"Harmonia funcional e tensão-resolução", area:"Música", dificuldade:3, gancho:"Por que certos acordes 'pedem' outros: uma gramática que você já domina sem saber." },
   { id:"timbre", termo:"Timbre e série harmônica", area:"Música", dificuldade:3, gancho:"O que faz um violino soar diferente de uma flauta tocando a mesma nota." },
   { id:"ritmo-metrica", termo:"Ritmo, métrica e síncope", area:"Música", dificuldade:2, gancho:"Groove é uma expectativa temporal violada com precisão." },
-  { id:"serialismo", termo:"Atonalismo e serialismo", area:"Música", dificuldade:3, gancho:"Abolir o centro tonal deliberadamente — e o custo perceptivo dessa decisão." },
+  { id:"serialismo", termo:"Atonalismo e serialismo", area:"Música", dificuldade:3, gancho:"Abolir o centro tonal deliberadamente, e o custo perceptivo dessa decisão." },
   { id:"musica-emocao", termo:"Por que música provoca emoção", area:"Música", dificuldade:3, gancho:"Hipóteses concorrentes, evidência parcial, e um problema científico ainda aberto." },
   { id:"perspectiva-renascimento", termo:"Perspectiva linear e a invenção do espaço pictórico", area:"Artes", dificuldade:2, gancho:"Uma técnica geométrica do século XV que reprogramou como o Ocidente vê imagens." },
   { id:"ready-made", termo:"Ready-made e a pergunta 'o que é arte?'", area:"Artes", dificuldade:2, gancho:"Um urinol em 1917 transferiu a definição de arte do objeto para a instituição." },
@@ -208,12 +208,12 @@ const CATALOGO = [
   /* ── Marketing e Negócios ─────────────────────────────────────────── */
   { id:"posicionamento", termo:"Posicionamento de marca", area:"Marketing", dificuldade:2, gancho:"A disputa não é pelo produto melhor: é por um lugar vago na cabeça das pessoas." },
   { id:"mera-exposicao", termo:"Efeito de mera exposição", area:"Marketing", dificuldade:2, gancho:"Gostamos mais do que já vimos antes, mesmo sem lembrar de ter visto." },
-  { id:"prova-social", termo:"Prova social e influência (Cialdini)", area:"Marketing", dificuldade:2, gancho:"Seis alavancas de persuasão documentadas — e quais delas sobreviveram à replicação." },
+  { id:"prova-social", termo:"Prova social e influência (Cialdini)", area:"Marketing", dificuldade:2, gancho:"Seis alavancas de persuasão documentadas, e quais delas sobreviveram à replicação." },
   { id:"precificacao-psicologica", termo:"Ancoragem e precificação psicológica", area:"Marketing", dificuldade:2, gancho:"O primeiro número que você vê contamina todos os julgamentos seguintes." },
   { id:"difusao-inovacao", termo:"Difusão de inovações (Rogers)", area:"Marketing", dificuldade:2, gancho:"A curva em S que descreve como qualquer novidade se espalha por uma população." },
-  { id:"efeito-rede", termo:"Efeitos de rede e vantagem competitiva", area:"Negócios", dificuldade:2, gancho:"Produtos que ficam melhores quanto mais gente usa — e por isso viram monopólios." },
+  { id:"efeito-rede", termo:"Efeitos de rede e vantagem competitiva", area:"Negócios", dificuldade:2, gancho:"Produtos que ficam melhores quanto mais gente usa, e por isso viram monopólios." },
   { id:"inovacao-disruptiva", termo:"Inovação disruptiva (Christensen)", area:"Negócios", dificuldade:3, gancho:"Um termo brutalmente mal utilizado, com uma tese original bem mais estreita e testável." },
-  { id:"cauda-longa", termo:"Cauda longa e distribuições de poder", area:"Negócios", dificuldade:2, gancho:"Uma tese de 2004 sobre nichos digitais — parcialmente confirmada, parcialmente desmentida." },
+  { id:"cauda-longa", termo:"Cauda longa e distribuições de poder", area:"Negócios", dificuldade:2, gancho:"Uma tese de 2004 sobre nichos digitais: parcialmente confirmada, parcialmente desmentida." },
   { id:"branding-memoria", termo:"Disponibilidade mental e estruturas de memória", area:"Marketing", dificuldade:3, gancho:"A escola empírica que contesta boa parte do marketing tradicional com dados de painel." },
   { id:"metricas-vaidade", termo:"Métricas de vaidade e causalidade em negócios", area:"Negócios", dificuldade:3, gancho:"Números que sobem e não significam nada. Distinguir isso exige desenho experimental." },
 
@@ -221,13 +221,13 @@ const CATALOGO = [
   { id:"indice-glicemico", termo:"Índice glicêmico e resposta metabólica", area:"Nutrição", dificuldade:3, gancho:"Um conceito útil, mal aplicado e frequentemente superestimado. Bom caso de leitura crítica." },
   { id:"epidemiologia-nutricional", termo:"Por que estudos de nutrição se contradizem", area:"Nutrição", dificuldade:3, gancho:"Limitações metodológicas estruturais que explicam a manchete de nutrição da semana." },
   { id:"proteina-necessidade", termo:"Necessidade proteica: evidência e exageros", area:"Nutrição", dificuldade:3, gancho:"Onde termina a fisiologia e começa o marketing de suplementos." },
-  { id:"ultraprocessados", termo:"Alimentos ultraprocessados e a classificação NOVA", area:"Nutrição", dificuldade:3, gancho:"Uma classificação brasileira que virou referência global — e as críticas que ela recebe." },
+  { id:"ultraprocessados", termo:"Alimentos ultraprocessados e a classificação NOVA", area:"Nutrição", dificuldade:3, gancho:"Uma classificação brasileira que virou referência global, e as críticas que ela recebe." },
   { id:"jejum-intermitente", termo:"Jejum intermitente: o que os ensaios mostram", area:"Nutrição", dificuldade:3, gancho:"Mecanismos plausíveis, resultados clínicos mais modestos do que a popularidade sugere." },
-  { id:"vitamina-suplemento", termo:"Suplementação vitamínica: quando funciona", area:"Nutrição", dificuldade:2, gancho:"Deficiência real versus otimização especulativa — a diferença é grande." },
+  { id:"vitamina-suplemento", termo:"Suplementação vitamínica: quando funciona", area:"Nutrição", dificuldade:2, gancho:"Deficiência real versus otimização especulativa: a diferença é grande." },
   { id:"balanco-energetico", termo:"Balanço energético e suas complicações", area:"Nutrição", dificuldade:3, gancho:"'Calorias que entram, calorias que saem' é verdade termodinâmica e péssimo conselho prático." },
   { id:"microbiota-dieta", termo:"Dieta e microbiota: evidência atual", area:"Nutrição", dificuldade:3, gancho:"Associações fortes, causalidade fraca, e uma indústria correndo na frente da ciência." },
   { id:"nnt-risco", termo:"NNT e risco relativo versus absoluto", area:"Medicina", dificuldade:3, gancho:"'Reduz o risco em 50%' pode significar quase nada. Aprender a ler isso muda decisões." },
-  { id:"triagem-sobrediagnostico", termo:"Rastreamento e sobrediagnóstico", area:"Medicina", dificuldade:3, gancho:"Detectar mais cedo nem sempre salva vidas — às vezes só cria mais pacientes." },
+  { id:"triagem-sobrediagnostico", termo:"Rastreamento e sobrediagnóstico", area:"Medicina", dificuldade:3, gancho:"Detectar mais cedo nem sempre salva vidas, às vezes só cria mais pacientes." },
 
   /* ── Computação e IA ──────────────────────────────────────────────── */
   { id:"p-np", termo:"P versus NP", area:"Computação", dificuldade:4, gancho:"Verificar uma resposta é mais fácil que encontrá-la? Vale um milhão de dólares descobrir." },
@@ -235,7 +235,7 @@ const CATALOGO = [
   { id:"compressao-informacao", termo:"Entropia de Shannon e compressão", area:"Computação", dificuldade:3, gancho:"Existe um limite matemático exato para comprimir qualquer arquivo. Shannon calculou." },
   { id:"halting", termo:"Problema da parada e limites da computação", area:"Computação", dificuldade:4, gancho:"Há perguntas que nenhum computador jamais poderá responder. Provado em 1936." },
   { id:"transformers", termo:"Arquitetura Transformer e atenção", area:"IA", dificuldade:4, gancho:"O mecanismo que destravou os modelos de linguagem modernos, explicado sem hype." },
-  { id:"overfitting", termo:"Sobreajuste e o dilema viés-variância", area:"IA", dificuldade:3, gancho:"Decorar não é aprender — e distinguir os dois é o problema central do aprendizado de máquina." },
+  { id:"overfitting", termo:"Sobreajuste e o dilema viés-variância", area:"IA", dificuldade:3, gancho:"Decorar não é aprender, e distinguir os dois é o problema central do aprendizado de máquina." },
   { id:"vies-algoritmico", termo:"Viés algorítmico e justiça estatística", area:"IA", dificuldade:3, gancho:"Definições formais de 'justo' que são matematicamente incompatíveis entre si." },
   { id:"blockchain", termo:"Blockchain e consenso distribuído", area:"Computação", dificuldade:3, gancho:"O problema real que ela resolve, e a lista bem menor de casos em que isso importa." },
   { id:"quantum-computing", termo:"Computação quântica: promessa e estado atual", area:"Computação", dificuldade:4, gancho:"O que ela realmente aceleraria, e a distância entre demonstração e utilidade." },
@@ -245,10 +245,10 @@ const CATALOGO = [
   { id:"valor-p", termo:"O que o valor-p realmente significa", area:"Estatística", dificuldade:3, gancho:"A quantidade mais usada e mais mal interpretada da ciência empírica." },
   { id:"regressao-media", termo:"Regressão à média", area:"Estatística", dificuldade:2, gancho:"Um fenômeno puramente estatístico que gera ilusões de causalidade em medicina, esporte e gestão." },
   { id:"simpson-paradoxo", termo:"Paradoxo de Simpson", area:"Estatística", dificuldade:3, gancho:"A mesma base de dados apoiando conclusões opostas conforme você agrega ou separa." },
-  { id:"causalidade-pearl", termo:"Inferência causal e a escada de Pearl", area:"Estatística", dificuldade:4, gancho:"Um formalismo que permite falar de causa sem constrangimento — e distinguir três níveis de pergunta." },
+  { id:"causalidade-pearl", termo:"Inferência causal e a escada de Pearl", area:"Estatística", dificuldade:4, gancho:"Um formalismo que permite falar de causa sem constrangimento, e distinguir três níveis de pergunta." },
   { id:"amostragem-vies", termo:"Viés de seleção e sobrevivência", area:"Estatística", dificuldade:2, gancho:"Os aviões que voltaram do combate mostravam onde NÃO reforçar a blindagem." },
   { id:"poder-estatistico", termo:"Poder estatístico e estudos subdimensionados", area:"Estatística", dificuldade:3, gancho:"Estudos pequenos não só falham em detectar efeitos: eles exageram os que detectam." },
-  { id:"bootstrap", termo:"Bootstrap e reamostragem", area:"Estatística", dificuldade:3, gancho:"Estimar incerteza reamostrando os próprios dados — uma ideia quase impertinente que funciona." },
+  { id:"bootstrap", termo:"Bootstrap e reamostragem", area:"Estatística", dificuldade:3, gancho:"Estimar incerteza reamostrando os próprios dados: uma ideia quase impertinente que funciona." },
   { id:"pre-registro", termo:"Pré-registro e graus de liberdade do pesquisador", area:"Estatística", dificuldade:2, gancho:"Decidir a análise antes de ver os dados. Simples, barato e transformador." },
 
   /* ── Sustentabilidade e Ecologia ──────────────────────────────────── */
@@ -256,12 +256,12 @@ const CATALOGO = [
   { id:"economia-circular", termo:"Economia circular", area:"Sustentabilidade", dificuldade:2, gancho:"Trocar 'extrair, produzir, descartar' por um ciclo fechado. A física impõe limites que o slogan ignora." },
   { id:"limites-planetarios", termo:"Limites planetários (Rockström)", area:"Sustentabilidade", dificuldade:3, gancho:"Nove fronteiras biofísicas do planeta. Já ultrapassamos mais da metade delas." },
   { id:"sucessao-ecologica", termo:"Sucessão ecológica", area:"Sustentabilidade", dificuldade:2, gancho:"Um terreno arrasado não fica vazio: segue uma sequência previsível até virar floresta madura." },
-  { id:"servicos-ecossistemicos", termo:"Serviços ecossistêmicos", area:"Sustentabilidade", dificuldade:2, gancho:"Colocar preço na polinização e na purificação da água — e o debate que isso provoca." },
+  { id:"servicos-ecossistemicos", termo:"Serviços ecossistêmicos", area:"Sustentabilidade", dificuldade:2, gancho:"Colocar preço na polinização e na purificação da água, e o debate que isso provoca." },
   { id:"especies-invasoras", termo:"Espécies invasoras", area:"Sustentabilidade", dificuldade:2, gancho:"Uma espécie sem predador natural pode reorganizar um ecossistema inteiro em poucas gerações." },
-  { id:"curva-kuznets-ambiental", termo:"Curva de Kuznets ambiental", area:"Sustentabilidade", dificuldade:3, gancho:"A hipótese de que países poluem mais para depois poluir menos — e por que ela é contestada." },
+  { id:"curva-kuznets-ambiental", termo:"Curva de Kuznets ambiental", area:"Sustentabilidade", dificuldade:3, gancho:"A hipótese de que países poluem mais para depois poluir menos, e por que ela é contestada." },
   { id:"pegada-hidrica", termo:"Pegada hídrica direta e indireta", area:"Sustentabilidade", dificuldade:2, gancho:"Um quilo de carne bovina carrega milhares de litros de água invisíveis na conta." },
   { id:"economia-donut", termo:"Economia donut (Kate Raworth)", area:"Sustentabilidade", dificuldade:3, gancho:"Um modelo que troca crescimento do PIB por um espaço seguro entre piso social e teto ecológico." },
-  { id:"acidificacao-oceanos", termo:"Acidificação dos oceanos", area:"Sustentabilidade", dificuldade:3, gancho:"O mesmo CO₂ que aquece a atmosfera também muda o pH do mar — e dissolve concha de organismo vivo." },
+  { id:"acidificacao-oceanos", termo:"Acidificação dos oceanos", area:"Sustentabilidade", dificuldade:3, gancho:"O mesmo CO₂ que aquece a atmosfera também muda o pH do mar e dissolve concha de organismo vivo." },
   { id:"capacidade-suporte", termo:"Capacidade de suporte de um ecossistema", area:"Sustentabilidade", dificuldade:2, gancho:"Todo ambiente tem um limite de população que consegue sustentar indefinidamente. Ultrapassar cobra caro depois." },
   { id:"efeito-estufa-mecanismo", termo:"Efeito estufa: o mecanismo físico", area:"Sustentabilidade", dificuldade:3, gancho:"Não é uma metáfora: é absorção e reemissão de radiação infravermelha, medida em laboratório desde o século XIX." },
   { id:"antropoceno", termo:"Antropoceno: um novo período geológico?", area:"Sustentabilidade", dificuldade:3, gancho:"Geólogos debatem se a atividade humana já deixou uma marca estratigráfica permanente na rocha." },
@@ -277,28 +277,28 @@ const CATALOGO = [
   { id:"contraditorio-ampla-defesa", termo:"Contraditório e ampla defesa", area:"Direito", dificuldade:2, gancho:"Nenhuma decisão contra alguém é válida sem que essa pessoa tenha tido chance real de responder." },
   { id:"dolo-culpa", termo:"Dolo e culpa: a diferença que muda a pena", area:"Direito", dificuldade:2, gancho:"Matar alguém de propósito e matar por descuido são o mesmo resultado e crimes completamente diferentes." },
   { id:"boa-fe-objetiva", termo:"Boa-fé objetiva nos contratos", area:"Direito", dificuldade:3, gancho:"Um dever de lealdade que existe mesmo quando o contrato não escreveu uma palavra sobre isso." },
-  { id:"prescricao-decadencia", termo:"Prescrição e decadência", area:"Direito", dificuldade:2, gancho:"Direitos têm prazo de validade — e há um motivo prático, não moral, para isso existir." },
+  { id:"prescricao-decadencia", termo:"Prescrição e decadência", area:"Direito", dificuldade:2, gancho:"Direitos têm prazo de validade, e há um motivo prático, não moral, para isso existir." },
   { id:"precedente-stare-decisis", termo:"Precedente judicial e stare decisis", area:"Direito", dificuldade:3, gancho:"Decisões passadas amarrando decisões futuras: previsibilidade comprada com menos flexibilidade." },
   { id:"responsabilidade-civil-objetiva", termo:"Responsabilidade civil objetiva versus subjetiva", area:"Direito", dificuldade:3, gancho:"Em certos casos você paga o dano mesmo sem culpa. A pergunta é quando isso é justo." },
   { id:"personalidade-juridica", termo:"Personalidade jurídica das empresas", area:"Direito", dificuldade:2, gancho:"Uma ficção legal que separa a dívida da empresa da carteira de quem é dono dela." },
   { id:"principio-insignificancia", termo:"Princípio da insignificância no direito penal", area:"Direito", dificuldade:2, gancho:"Nem todo ato que se encaixa na letra da lei merece ser tratado como crime." },
   { id:"soft-law", termo:"Soft law: normas internacionais sem força coercitiva", area:"Direito", dificuldade:3, gancho:"Acordos que países assinam sabendo que ninguém vai ser preso por descumprir." },
-  { id:"onus-prova-civil", termo:"Ônus da prova no processo civil", area:"Direito", dificuldade:2, gancho:"Quem alega um fato tem que prová-lo — e essa regra decide quem perde quando a dúvida não se resolve." },
+  { id:"onus-prova-civil", termo:"Ônus da prova no processo civil", area:"Direito", dificuldade:2, gancho:"Quem alega um fato tem que prová-lo, e essa regra decide quem perde quando a dúvida não se resolve." },
 
   /* ── Teoria Musical ────────────────────────────────────────────────── */
   { id:"modos-gregos", termo:"Modos gregos: dórico, frígio e os outros", area:"Música", dificuldade:2, gancho:"Sete formas de organizar a mesma escala de notas brancas, cada uma com um clima emocional distinto." },
-  { id:"contraponto", termo:"Contraponto", area:"Música", dificuldade:3, gancho:"Escrever duas melodias independentes que soam certas tocadas juntas — a técnica que sustenta Bach." },
+  { id:"contraponto", termo:"Contraponto", area:"Música", dificuldade:3, gancho:"Escrever duas melodias independentes que soam certas tocadas juntas: a técnica que sustenta Bach." },
   { id:"cadencias-harmonicas", termo:"Cadências harmônicas", area:"Música", dificuldade:2, gancho:"As poucas sequências de acordes que o ouvido reconhece como 'ponto final' de uma frase musical." },
   { id:"circulo-quintas", termo:"Círculo das quintas", area:"Música", dificuldade:2, gancho:"Um diagrama que organiza todas as tonalidades pela distância acústica entre elas." },
   { id:"forma-sonata", termo:"Forma sonata", area:"Música", dificuldade:3, gancho:"A estrutura de exposição, desenvolvimento e recapitulação por trás da maioria dos primeiros movimentos clássicos." },
   { id:"musica-microtonal", termo:"Microtonalidade e escalas não-ocidentais", area:"Música", dificuldade:3, gancho:"O piano tem 12 notas por oitava porque decidiu ter. Ragas indianos e maqams árabes dividem diferente." },
   { id:"polirritmia", termo:"Polirritmia", area:"Música", dificuldade:3, gancho:"Dois padrões rítmicos incompatíveis tocando ao mesmo tempo, sem que nenhum ceda ao outro." },
-  { id:"canone-fuga", termo:"Cânone e fuga", area:"Música", dificuldade:3, gancho:"A mesma melodia perseguindo a si mesma em vozes defasadas — de 'Frère Jacques' a 'A Arte da Fuga'." },
+  { id:"canone-fuga", termo:"Cânone e fuga", area:"Música", dificuldade:3, gancho:"A mesma melodia perseguindo a si mesma em vozes defasadas, de 'Frère Jacques' a 'A Arte da Fuga'." },
   { id:"notacao-musical-historia", termo:"História da notação musical", area:"Música", dificuldade:2, gancho:"Escrever som em papel levou séculos para chegar ao formato que qualquer músico lê hoje." },
-  { id:"consonancia-dissonancia-fisica", termo:"Consonância e dissonância: a física do intervalo", area:"Música", dificuldade:3, gancho:"Por que uma quinta justa soa estável e uma segunda menor soa tensa — a resposta está nas ondas sonoras, não só no costume." },
+  { id:"consonancia-dissonancia-fisica", termo:"Consonância e dissonância: a física do intervalo", area:"Música", dificuldade:3, gancho:"Por que uma quinta justa soa estável e uma segunda menor soa tensa: a resposta está nas ondas sonoras, não só no costume." },
   { id:"jazz-harmonia-estendida", termo:"Harmonia estendida e reharmonização no jazz", area:"Música", dificuldade:4, gancho:"Empilhar terças além da tríade básica até o acorde virar quase uma paisagem inteira." },
-  { id:"tonalidade-modulacao", termo:"Modulação tonal", area:"Música", dificuldade:3, gancho:"Trocar de tonalidade no meio da peça sem que o ouvido perceba a costura — ou fazendo questão que perceba." },
-  { id:"batimentos-acusticos", termo:"Batimentos acústicos e afinação por ouvido", area:"Música", dificuldade:2, gancho:"Duas notas quase iguais produzem um tremor audível — e afinadores usam esse tremor como régua." },
+  { id:"tonalidade-modulacao", termo:"Modulação tonal", area:"Música", dificuldade:3, gancho:"Trocar de tonalidade no meio da peça sem que o ouvido perceba a costura, ou fazendo questão que perceba." },
+  { id:"batimentos-acusticos", termo:"Batimentos acústicos e afinação por ouvido", area:"Música", dificuldade:2, gancho:"Duas notas quase iguais produzem um tremor audível, e afinadores usam esse tremor como régua." },
   { id:"escalas-pentatonicas", termo:"Escalas pentatônicas", area:"Música", dificuldade:1, gancho:"Cinco notas que aparecem, independentemente umas das outras, em tradições musicais de continentes distintos." },
   { id:"leitmotiv-musica-programa", termo:"Leitmotiv e música de programa", area:"Música", dificuldade:2, gancho:"Dar a um personagem ou ideia um tema musical próprio que retorna e se transforma ao longo da obra." },
 
@@ -308,7 +308,7 @@ const CATALOGO = [
   { id:"cruzadas", termo:"Cruzadas: motivações religiosas e materiais", area:"História", dificuldade:3, gancho:"Fé, terra, comércio e política de curto prazo, todos empurrando na mesma direção por razões diferentes." },
   { id:"renascimento-italiano", termo:"Renascimento italiano: por que em Florença", area:"História", dificuldade:2, gancho:"Dinheiro de banqueiros, textos gregos recém-chegados e uma cidade pequena o bastante para competir por status." },
   { id:"era-exploracoes-maritimas", termo:"Era das explorações marítimas", area:"História", dificuldade:2, gancho:"Portugal e Espanha apostaram em navegação oceânica quando o resto da Europa ainda hesitava." },
-  { id:"revolucao-francesa", termo:"Revolução Francesa: das causas ao Terror", area:"História", dificuldade:3, gancho:"Uma revolta fiscal que virou reinvenção completa do Estado — e depois comeu os próprios líderes." },
+  { id:"revolucao-francesa", termo:"Revolução Francesa: das causas ao Terror", area:"História", dificuldade:3, gancho:"Uma revolta fiscal que virou reinvenção completa do Estado e depois comeu os próprios líderes." },
   { id:"independencias-america-latina", termo:"Independências da América Latina", area:"História", dificuldade:2, gancho:"Um continente inteiro se separou de suas metrópoles em pouco mais de uma geração. Por quê agora?" },
   { id:"imperios-pre-colombianos", termo:"Impérios inca, asteca e maia antes de 1492", area:"História", dificuldade:2, gancho:"Sociedades com astronomia, engenharia e burocracia avançadas, sem roda de tração nem escrita alfabética." },
   { id:"revolucao-russa", termo:"Revolução Russa de 1917", area:"História", dificuldade:3, gancho:"Um império que caiu duas vezes no mesmo ano, para dois grupos diferentes de revolucionários." },
@@ -320,7 +320,7 @@ const CATALOGO = [
   { id:"escravidao-atlantica", termo:"Tráfico atlântico de escravizados: escala e economia", area:"História", dificuldade:3, gancho:"Um sistema econômico transcontinental construído sobre o deslocamento forçado de milhões de pessoas por quatro séculos." },
 
   /* ── Geografia ─────────────────────────────────────────────────────── */
-  { id:"tectonica-placas", termo:"Tectônica de placas", area:"Geografia", dificuldade:2, gancho:"Continentes inteiros se movem centímetros por ano — mais ou menos a velocidade que uma unha cresce." },
+  { id:"tectonica-placas", termo:"Tectônica de placas", area:"Geografia", dificuldade:2, gancho:"Continentes inteiros se movem centímetros por ano, mais ou menos a velocidade que uma unha cresce." },
   { id:"climas-koppen", termo:"Classificação climática de Köppen", area:"Geografia", dificuldade:2, gancho:"Um sistema de letras que descreve o clima de qualquer lugar da Terra a partir de temperatura e chuva." },
   { id:"urbanizacao-primazia", termo:"Cidades primazes e concentração urbana", area:"Geografia", dificuldade:2, gancho:"Em muitos países, uma única cidade domina de forma desproporcional a rede urbana inteira." },
   { id:"fronteiras-geopolitica", termo:"Fronteiras naturais versus fronteiras traçadas", area:"Geografia", dificuldade:2, gancho:"Rios e montanhas fazem fronteiras óbvias. Réguas em mapas coloniais fazem fronteiras que ainda geram guerra." },
