@@ -21,6 +21,12 @@
   --controverso:  #8C6216;
   --especulacao:  #6B4A8A;
 
+  /* Segundo acento — o contraponto frio do terracota, usado só em toques
+     pontuais de identidade (selo, chips ativos, cauda do sorteio). Não
+     entra na leitura: a coluna de texto continua monocromática de propósito. */
+  --acento-2:        #3E7D74;
+  --acento-2-suave:  #DCEBE8;
+
   --serif: ui-serif, "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
   --sans:  ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -45,6 +51,8 @@
   --emergente:    #86B2DC;
   --controverso:  #D6AC5C;
   --especulacao:  #B294D0;
+  --acento-2:        #6FBFB2;
+  --acento-2-suave:  #1B2C29;
   --sombra: 0 1px 2px rgba(0,0,0,.3), 0 6px 22px rgba(0,0,0,.35);
 }
 
@@ -93,6 +101,22 @@ body {
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .barra-marca b { color: var(--tinta); font-weight: 600; }
+
+/* Selo quadrado do cabeçalho — o único lugar do app com uma forma "de
+   adesivo": fundo sólido, canto levemente girado, sombra deslocada em vez
+   de blur. Referência: o crachá de letra do thevocabulary.app, adaptado
+   à paleta editorial em vez do isométrico colorido do original. */
+.marca-selo {
+  flex: none; width: 30px; height: 30px; border-radius: 8px;
+  background: var(--tinta); color: var(--papel);
+  font-family: var(--serif); font-weight: 700; font-size: .78rem;
+  display: grid; place-items: center; letter-spacing: -.02em;
+  transform: rotate(-4deg);
+  box-shadow: 2.5px 3px 0 var(--acento-2);
+}
+
+/* ── Toque "adesivo": sombra sólida deslocada em vez de blur ─────────── */
+.sticker { box-shadow: 3px 3.5px 0 var(--acento-2); }
 
 .icone-btn {
   background: none; border: 1px solid var(--linha); color: var(--tinta-media);
@@ -205,9 +229,23 @@ th { font-weight: 600; font-size: .74rem; letter-spacing: .06em; text-transform:
 .btn-grande { padding: 1.15rem 1.4rem; font-size: 1.05rem; }
 
 /* ── Tela inicial ───────────────────────────────────────────────────── */
-.hero { padding: 2.2rem 0 .5rem; text-align: center; }
-.hero h1 { font-size: 2.2rem; margin: .2rem 0 .55rem; }
+.hero { padding: 2.2rem 0 .5rem; text-align: center; position: relative; }
+.hero h1 {
+  font-size: 2.35rem; margin: .2rem 0 .55rem; font-weight: 700;
+  letter-spacing: -.02em;
+}
 .hero .subtitulo { text-align: center; font-size: 1rem; margin-bottom: 2rem; }
+.hero .chapeu { position: relative; display: inline-block; }
+/* Textura de pontos atrás do rótulo — a única citação direta ao padrão
+   pontilhado do thevocabulary.app, contida a um único elemento pequeno
+   para não competir com a leitura. */
+.hero .chapeu::before {
+  content: ""; position: absolute; left: 50%; top: 50%;
+  width: 5.4rem; height: 1.6rem; transform: translate(-50%,-50%) rotate(-2deg);
+  background-image: radial-gradient(currentColor 1px, transparent 1.3px);
+  background-size: 6px 6px; color: var(--acento-2); opacity: .28;
+  z-index: -1; border-radius: 4px;
+}
 
 .rotulo-campo { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .6rem; }
 
@@ -219,7 +257,7 @@ th { font-weight: 600; font-size: .74rem; letter-spacing: .06em; text-transform:
 }
 .tempo-op b { display: block; font-size: 1.3rem; font-weight: 600; color: var(--tinta); font-family: var(--serif); }
 .tempo-op span { font-size: .7rem; letter-spacing: .04em; }
-.tempo-op[aria-pressed="true"] { border-color: var(--acento); background: var(--acento-suave); color: var(--acento); }
+.tempo-op[aria-pressed="true"] { border-color: var(--acento); background: var(--acento-suave); color: var(--acento); box-shadow: 2px 2.5px 0 var(--acento-2); transform: translate(-1px,-1px); }
 .tempo-op[aria-pressed="true"] b { color: var(--acento); }
 
 .painel {
@@ -284,7 +322,12 @@ th { font-weight: 600; font-size: .74rem; letter-spacing: .06em; text-transform:
 
 /* ── Tela de tempo encerrado ────────────────────────────────────────── */
 .fim-palco { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
-.selo { font-size: 2.6rem; margin-bottom: .4rem; }
+.selo {
+  font-size: 2.2rem; margin: 0 auto .9rem; width: 4.6rem; height: 4.6rem;
+  display: grid; place-items: center; background: var(--papel-2);
+  border: 1px solid var(--linha); border-radius: 14px;
+  transform: rotate(-3deg); box-shadow: 3px 3.5px 0 var(--acento-2);
+}
 
 /* ── Prova ──────────────────────────────────────────────────────────── */
 .questao { border-top: 1px solid var(--linha); padding-top: 1.6rem; margin-top: 1.9rem; }
