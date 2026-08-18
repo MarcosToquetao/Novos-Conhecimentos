@@ -2,7 +2,9 @@
 
 Protótipo de aplicativo de estudo por sorteio. Você escolhe quanto tempo tem, sorteia um conceito que não escolheu, estuda pelo tempo definido e faz uma prova de múltipla escolha com o documento fechado.
 
-**Estado atual:** 202 conceitos no catálogo, 10 com documento escrito. O sorteio só cai nos que já têm documento.
+**Site:** [marcostoquetao.github.io/Novos-Conhecimentos](https://marcostoquetao.github.io/Novos-Conhecimentos/)
+
+**Estado atual:** 202 conceitos publicados no catálogo (mais 75 em revisão em `termos-novos-para-revisar.md`, ainda não aprovados), 10 com documento completo escrito. O sorteio só cai nos que já têm documento.
 
 ---
 
