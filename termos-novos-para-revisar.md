@@ -111,7 +111,7 @@ Tectônica de placas · Köppen · Cidades primazes · Fronteiras naturais e tra
 
 ## Onde o catálogo está agora
 
-347 conceitos, 10 com documento escrito. O sorteio continua caindo só nos que têm documento, então acrescentar termos não afeta o uso — é reservatório para escrever depois.
+347 conceitos, 21 com documento escrito (os 20 já registrados acima mais Cascata trófica, escrito depois deste arquivo ser redigido). O sorteio continua caindo só nos que têm documento, então acrescentar termos não afeta o uso: é reservatório para escrever depois.
 
 Distribuição por área: História 33 · Filosofia 24 · Biologia 22 · Música 21 · Economia 20 · Física 19 · Direito 19 · Sustentabilidade 18 · Matemática 16 · Geografia 16 · Química 13 · Psicologia 12 · Ciência Política 11 · Linguística 11 · Arquitetura 10 · Computação 10 · Nutrição 8 · Estatística 8 · Neurociência 7 · Sociologia 7 · Antropologia 7 · Design 7 · Marketing 6 · Astronomia 6 · Artes 5 · Negócios 4 · IA 3 · Literatura 2 · Medicina 2.
 
