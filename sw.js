@@ -1,7 +1,7 @@
 /* sw.js — cache offline do Novos Conhecimentos.
    Estratégia: cache-first para os arquivos do app (são estáticos e versionados),
    com atualização em segundo plano. Ao publicar conteúdo novo, suba VERSAO. */
-const VERSAO = "nc-v6";
+const VERSAO = "nc-v7";
 const ARQUIVOS = [
   "./", "./index.html", "./manifest.json",
   "./css/estilo.css",

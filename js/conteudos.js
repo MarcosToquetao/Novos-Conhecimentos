@@ -12,6 +12,270 @@
 
 const CONTEUDOS = {};
 
+/* ── agente-principal.js ───────────────────────────────────── */
+CONTEUDOS["agente-principal"] = {
+termo: "Problema agente-principal",
+area: "Economia",
+subtitulo: "Sempre que alguém contrata outra pessoa para agir em seu nome, existe o risco de que essa pessoa persiga seus próprios interesses em vez dos interesses de quem contratou. Adam Smith já notava isso em 1776. A ferramenta que a economia moderna desenvolveu para resolver o problema, pagar executivos com base no desempenho da empresa, virou ela mesma um objeto de disputa sobre se está resolvendo o problema ou apenas mudando sua forma.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que, quando uma pessoa (o agente) age em nome de outra (o principal), os interesses das duas nem sempre coincidem.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que empresas de capital aberto têm donos (acionistas) que não são as mesmas pessoas que administram o dia a dia (executivos)."
+],
+conexoes: [
+  { termo: "Seleção adversa", relacao: "Os dois são os problemas centrais da economia da informação: seleção adversa trata de informação escondida antes de um contrato ser fechado, o problema agente-principal trata de ação escondida depois do contrato fechado." },
+  { termo: "Efeito Cantillon", relacao: "Ambos os temas tratam de situações em que quem toma uma decisão não é necessariamente quem arca com todas as suas consequências, um desalinhamento de incentivos que aparece em contextos econômicos muito diferentes." },
+  { termo: "Falácia do custo afundado", relacao: "Escalada de comprometimento com projetos malsucedidos é um problema recorrente de agência: quem decide continuar um projeto raramente é quem sozinho arca com o custo de reconhecer seu fracasso." },
+  { termo: "Doença holandesa", relacao: "Outro caso econômico em que a estrutura de incentivos de quem decide (governos, gestores de fundos soberanos) pode divergir do interesse de longo prazo de quem é afetado pela decisão (a população, os acionistas)." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Em 1776, Adam Smith já havia notado um problema que hoje tem nome técnico. Escrevendo sobre empresas de capital aberto, ele observou que os diretores, "sendo administradores do dinheiro alheio, e não do próprio, não se pode esperar que vigiem esse dinheiro com o mesmo cuidado ansioso com que os sócios de uma sociedade privada costumam vigiar o seu".<sup class="cit"><a href="#f3">3</a></sup> Essa frase, escrita quase dois séculos antes de a economia formalizar o conceito, descreve exatamente o que hoje se chama de <strong>problema agente-principal</strong>: sempre que uma pessoa (o <em>agente</em>) age em nome de outra (o <em>principal</em>), e o agente tem informação ou controle que o principal não tem, existe o risco de o agente perseguir seus próprios interesses às custas de quem ele deveria representar.</p>
+
+<p>O caso mais estudado é o de executivos de empresas versus acionistas. Os acionistas são donos da empresa, mas não a administram no dia a dia. Quem administra são executivos contratados, que têm informação privilegiada sobre as operações reais da empresa e podem, em princípio, tomar decisões que beneficiam mais a si mesmos (bônus, prestígio, segurança do próprio emprego) do que aos donos do negócio.</p>
+
+<h3>Por que isso não é um problema de má-fé individual</h3>
+
+<p>Vale entender uma coisa importante sobre esse conceito: ele não pressupõe que executivos sejam pessoas desonestas. O problema existe mesmo quando todos os envolvidos agem de boa-fé, porque decorre da própria estrutura da relação: o principal não consegue observar diretamente todo esforço, toda decisão e toda informação que o agente tem, então não há como garantir, só por confiança, que os interesses dos dois vão sempre coincidir. É um problema estrutural de desenho institucional, não de caráter pessoal.</p>
+
+<div class="marca consenso">
+<span class="rot">O que é bem estabelecido</span>
+<p>Que existe um desalinhamento potencial de interesses sempre que uma parte age em nome de outra sob informação assimétrica, e que isso gera custos reais (chamados de custos de agência), é um resultado central e amplamente aceito da teoria econômica, formalizado principalmente por Michael Jensen e William Meckling em 1976.<sup class="cit"><a href="#f1">1</a></sup> Isso não está em disputa.</p>
+</div>
+
+<h3>A solução clássica, e por que ela também gera controvérsia</h3>
+
+<p>A solução mais discutida na teoria e na prática de governança corporativa é alinhar os incentivos do agente aos do principal: pagar executivos com uma parte relevante ligada ao desempenho da empresa (bônus por metas, ações, opções de compra de ações), para que ganhar mais dinheiro para os acionistas também signifique ganhar mais para o próprio executivo.</p>
+
+<p>Só que essa solução também virou, ela mesma, objeto de debate. Alguns pesquisadores argumentam que a forma como os pacotes de remuneração executiva são de fato negociados na prática, muitas vezes com o próprio executivo tendo influência considerável sobre o conselho que aprova seu salário, reproduz o mesmo problema de agência que a remuneração vinculada ao desempenho deveria resolver, só que num nível mais alto.<sup class="cit"><a href="#f4">4</a></sup></p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>A formalização teórica: de Ross a Jensen e Meckling</h3>
+
+<p>A primeira formalização explícita do "problema do principal" na economia é geralmente atribuída a Stephen Ross, num artigo curto de 1973 que batizou formalmente os termos "principal" e "agente" no vocabulário econômico.<sup class="cit"><a href="#f2">2</a></sup> Michael Jensen e William Meckling, três anos depois, num dos artigos mais citados da história da economia financeira, desenvolveram a teoria de forma mais completa, aplicando-a especificamente à relação entre acionistas e executivos, e introduzindo o conceito de <strong>custos de agência</strong>: a soma dos custos de monitoramento (o principal verificando o que o agente faz), dos custos de barganha ou vinculação (o agente se comprometendo contratualmente a certos limites) e da perda residual (o desalinhamento que sobra mesmo depois de todo o resto).<sup class="cit"><a href="#f1">1</a></sup></p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Tipo de custo de agência</th><th>O que é</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Custo de monitoramento</td><td>Recursos gastos pelo principal para observar e verificar o comportamento do agente</td><td>Auditorias externas, conselhos de administração, relatórios financeiros obrigatórios</td></tr>
+<tr><td>Custo de vinculação (bonding)</td><td>Recursos gastos pelo próprio agente para se comprometer contratualmente a certos limites</td><td>Cláusulas contratuais, garantias, remuneração diferida sujeita a metas de longo prazo</td></tr>
+<tr><td>Perda residual</td><td>Desalinhamento que persiste mesmo depois de todo o monitoramento e vinculação possíveis</td><td>Decisões subótimas que nenhum contrato ou fiscalização consegue eliminar por completo</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Além de executivos: onde mais o problema aparece</h3>
+
+<p>O problema agente-principal não é exclusivo de empresas de capital aberto. Ele aparece em qualquer relação de delegação sob informação assimétrica: eleitores (principal) e políticos eleitos (agente); pacientes (principal) e médicos (agente, que decide procedimentos que também afetam sua própria remuneração); seguradoras (principal) e segurados (agente, cujo comportamento de risco a seguradora não observa por completo, um caso que se sobrepõe com risco moral); e clientes (principal) e advogados ou consultores contratados por hora (agente, que pode ter incentivo para prolongar o trabalho além do necessário).</p>
+
+<h3>A remuneração vinculada ao desempenho, na prática</h3>
+
+<p>A teoria prevê que vincular parte da remuneração de um executivo ao desempenho da empresa (via bônus, ações ou opções) deveria alinhar seus incentivos aos dos acionistas. A evidência empírica sobre se isso realmente funciona como previsto é mista: estudos encontram que a sensibilidade entre remuneração e desempenho varia de forma sistemática conforme o risco da empresa, mas há pouca evidência direta e consistente de que contratos de incentivo, por si só, produzam melhor desempenho corporativo de forma confiável em todos os contextos estudados.<sup class="cit"><a href="#f5">5</a></sup></p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>A crítica do "poder gerencial"</h3>
+
+<p>Lucian Bebchuk e Jesse Fried, num livro influente de 2004, propuseram uma leitura alternativa e mais cética da remuneração executiva vinculada a desempenho, chamada de teoria do <strong>poder gerencial</strong> (<em>managerial power</em>).<sup class="cit"><a href="#f4">4</a></sup> Segundo essa visão, em muitas empresas de capital pulverizado, o executivo principal tem influência real sobre a composição e o funcionamento do próprio conselho de administração, o órgão que formalmente deveria fiscalizá-lo e negociar sua remuneração de forma independente. Nesses casos, os pacotes de remuneração, mesmo vinculados nominalmente a metas de desempenho, tenderiam a refletir menos um contrato ótimo negociado a distância e mais o limite do que o próprio executivo consegue extrair sem gerar indignação pública ou de acionistas, o que os autores chamam de "restrição de indignação" (<em>outrage constraint</em>).</p>
+
+<div class="marca controverso">
+<span class="rot">Duas leituras concorrentes, ambas com apoio empírico parcial</span>
+<p>A teoria de agência clássica (Jensen e Meckling) trata a remuneração vinculada a desempenho como solução ao problema de agência entre acionistas e executivos. A teoria do poder gerencial (Bebchuk e Fried) trata boa parte dessa mesma remuneração como sintoma de um problema de agência mais profundo, entre acionistas e o próprio conselho de administração que deveria representá-los. As duas leituras não são mutuamente excludentes: é possível que a remuneração vinculada a desempenho funcione parcialmente como alinhamento de incentivos e, ao mesmo tempo, seja parcialmente capturada pelo poder de influência do executivo sobre seu próprio processo de avaliação. Separar quanto de cada mecanismo está em jogo, numa empresa específica, é uma pergunta empírica difícil, não resolvida de forma unânime pela literatura.</p>
+</div>
+
+<h3>Por que o problema nunca desaparece por completo</h3>
+
+<p>Um ponto conceitual importante, que ajuda a entender por que o problema agente-principal é tratado como estrutural e não como algo "consertável" de uma vez por todas: monitoramento perfeito seria caro demais para valer a pena (o custo de vigiar cada decisão de um agente pode superar o benefício de evitar pequenos desvios), e contratos perfeitos, que preveem toda situação futura possível e alinham incentivos em cada uma delas, são praticamente impossíveis de escrever para relações complexas e de longo prazo. Por isso a teoria não promete eliminar a perda residual, apenas reduzi-la a um nível que valha o custo de fazer isso.</p>
+
+<h3>Aplicações fora do mundo corporativo</h3>
+
+<p>A mesma lógica estrutural ajuda a explicar desenhos institucionais em áreas bem distantes de finanças corporativas. Por que sistemas de saúde pública costumam ter auditorias independentes de procedimentos médicos? Por que contratos de construção civil costumam vincular parte do pagamento à entrega final, e não só ao número de horas trabalhadas? Por que órgãos reguladores costumam ter mandatos fixos e proteção contra demissão arbitrária? Em cada caso, o desenho institucional está, ainda que implicitamente, tentando reduzir uma versão do mesmo problema: como fazer com que quem decide, e tem informação que quem é afetado pela decisão não tem, aja de um jeito que sirva a quem ele deveria representar.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Problema agente-principal", def: "Situação em que uma parte (o agente) age em nome de outra (o principal) sob informação assimétrica, criando risco de que o agente persiga interesses próprios em detrimento dos interesses do principal, mesmo sem má-fé individual." },
+    { termo: "Custos de agência", def: "Conceito formalizado por Jensen e Meckling (1976): a soma dos custos de monitoramento, custos de vinculação (bonding) e perda residual associados a uma relação de agência." },
+    { termo: "Perda residual", def: "Desalinhamento de interesses entre agente e principal que persiste mesmo depois de aplicados todo o monitoramento e toda a vinculação contratual economicamente viáveis." },
+    { termo: "Teoria do poder gerencial (managerial power)", def: "Leitura alternativa, proposta por Bebchuk e Fried (2004), segundo a qual a remuneração executiva vinculada a desempenho pode refletir, em parte, a influência do próprio executivo sobre o conselho que deveria fiscalizá-lo, e não apenas um contrato ótimo de alinhamento de incentivos." },
+    { termo: "Restrição de indignação (outrage constraint)", def: "Na teoria do poder gerencial, o limite prático até onde um executivo consegue extrair remuneração sem gerar reação negativa pública ou de acionistas suficiente para forçar mudança." }
+  ],
+  lembrar: [
+    "Adam Smith já descrevia, em 1776, o problema de diretores administrarem 'o dinheiro alheio' sem o mesmo cuidado que teriam com o próprio dinheiro.",
+    "Stephen Ross (1973) cunhou formalmente os termos 'principal' e 'agente' na economia; Jensen e Meckling (1976) desenvolveram a teoria completa e o conceito de custos de agência.",
+    "O problema agente-principal não pressupõe má-fé individual: é um problema estrutural que surge da própria assimetria de informação entre quem decide e quem é afetado pela decisão.",
+    "A solução clássica é vincular parte da remuneração do agente ao desempenho medido a favor do principal, mas a evidência empírica sobre a eficácia dessa solução é mista.",
+    "Bebchuk e Fried (2004) propuseram a teoria do poder gerencial, segundo a qual parte da remuneração executiva vinculada a desempenho reflete a influência do próprio executivo sobre o conselho, não um contrato ótimo negociado de forma independente.",
+    "As duas leituras (alinhamento de incentivos e poder gerencial) não são mutuamente excludentes, e separar quanto cada uma explica numa empresa específica é uma questão empírica difícil.",
+    "O problema agente-principal aparece bem além de empresas: em política (eleitores e políticos), saúde (pacientes e médicos), seguros (seguradoras e segurados) e serviços profissionais em geral."
+  ],
+  confusoes: [
+    { erro: "O problema agente-principal significa que agentes são, em geral, pessoas desonestas ou de má-fé", correcao: "O problema existe mesmo quando todos agem de boa-fé, porque decorre da estrutura da relação (informação assimétrica), não do caráter das pessoas envolvidas." },
+    { erro: "Vincular a remuneração de um executivo ao desempenho da empresa resolve completamente o problema de agência", correcao: "A evidência empírica sobre a eficácia dessa solução é mista, e a teoria do poder gerencial argumenta que, em muitos casos, a própria negociação da remuneração vinculada a desempenho pode ser capturada pela influência do executivo sobre o conselho." },
+    { erro: "A teoria do poder gerencial de Bebchuk e Fried provou que toda remuneração executiva vinculada a desempenho é ilegítima ou manipulada", correcao: "A teoria propõe que parte da remuneração pode refletir captura de poder, não que isso explique toda remuneração em toda empresa. As duas leituras (alinhamento genuíno e captura de poder) coexistem em graus variados conforme o caso." },
+    { erro: "O problema agente-principal só se aplica a relações entre acionistas e executivos de empresas", correcao: "É um problema estrutural que aparece em qualquer relação de delegação sob informação assimétrica, incluindo política, saúde, seguros e serviços profissionais contratados por hora." },
+    { erro: "É possível, com monitoramento e contratos suficientemente detalhados, eliminar completamente o problema de agência", correcao: "Monitoramento perfeito costuma custar mais do que vale a pena, e contratos que preveem toda situação futura são praticamente impossíveis de escrever, por isso a teoria trata a perda residual como algo a ser reduzido, não eliminado por completo." }
+  ],
+  numeros: [
+    "Smith, A. A Riqueza das Nações, 1776, Livro V, Capítulo 1: primeira descrição histórica do problema, aplicada a diretores de companhias por ações.",
+    "Ross, S. A. (1973), American Economic Review 63(2):134-139: primeira formalização explícita dos termos 'principal' e 'agente' na economia.",
+    "Jensen, M. C. &amp; Meckling, W. H. (1976), Journal of Financial Economics 3(4):305-360: um dos artigos mais citados da história da economia financeira, com quase 100 mil citações, introduzindo o conceito de custos de agência.",
+    "Bebchuk, L. A. &amp; Fried, J. M. Pay without Performance: The Unfulfilled Promise of Executive Compensation, Harvard University Press, 2004: formulação da teoria do poder gerencial."
+  ]
+},
+
+flashcards: [
+  { f: "O que é o problema agente-principal, em termos simples?", v: "Situação em que uma parte (o agente) age em nome de outra (o principal) sob informação assimétrica, criando risco de o agente perseguir interesses próprios em detrimento dos interesses do principal." },
+  { f: "Que observação de Adam Smith, em 1776, já antecipava esse conceito?", v: "Que diretores de companhias por ações, administrando 'o dinheiro alheio' e não o próprio, não vigiariam esse dinheiro com o mesmo cuidado que teriam com seus próprios recursos." },
+  { f: "Quem cunhou formalmente os termos 'principal' e 'agente' na economia, e em que ano?", v: "Stephen Ross, em 1973, num artigo publicado na American Economic Review." },
+  { f: "Quem desenvolveu a teoria completa do problema de agência, aplicada a acionistas e executivos, e introduziu o conceito de custos de agência?", v: "Michael Jensen e William Meckling, em 1976, num dos artigos mais citados da história da economia financeira." },
+  { f: "Quais são os três componentes dos custos de agência, segundo Jensen e Meckling?", v: "Custos de monitoramento (o principal verificando o agente), custos de vinculação ou bonding (o agente se comprometendo contratualmente), e perda residual (o desalinhamento que sobra mesmo depois disso tudo)." },
+  { f: "Por que o problema agente-principal não pressupõe má-fé individual?", v: "Porque ele existe mesmo quando todos agem de boa-fé, decorrendo da própria estrutura da relação (assimetria de informação), não do caráter pessoal dos envolvidos." },
+  { f: "Qual é a solução clássica proposta pela teoria de agência para reduzir o desalinhamento entre executivos e acionistas?", v: "Vincular parte da remuneração do executivo ao desempenho da empresa, por meio de bônus, ações ou opções de compra de ações, alinhando seus incentivos aos dos donos do negócio." },
+  { f: "O que a evidência empírica mostra sobre a eficácia dessa solução clássica?", v: "É mista: há pouca evidência direta e consistente de que contratos de incentivo, por si só, produzam melhor desempenho corporativo de forma confiável em todos os contextos estudados." },
+  { f: "O que é a teoria do poder gerencial, proposta por Bebchuk e Fried em 2004?", v: "A ideia de que, em muitas empresas, o executivo tem influência real sobre o conselho que deveria fiscalizá-lo, fazendo com que a remuneração vinculada a desempenho reflita, em parte, captura de poder, não apenas um contrato ótimo de alinhamento." },
+  { f: "As teorias de alinhamento de incentivos e de poder gerencial são mutuamente excludentes?", v: "Não. É possível que a remuneração vinculada a desempenho funcione parcialmente como alinhamento genuíno e, ao mesmo tempo, seja parcialmente capturada pelo poder de influência do executivo, numa proporção que varia caso a caso." },
+  { f: "Por que o problema agente-principal é tratado como estrutural, e não como algo eliminável por completo?", v: "Porque monitoramento perfeito costuma custar mais do que vale a pena, e contratos que preveem toda situação futura possível são praticamente impossíveis de escrever para relações complexas e de longo prazo." },
+  { f: "Cite três exemplos de relações agente-principal fora do contexto de empresas de capital aberto.", v: "Eleitores e políticos eleitos; pacientes e médicos; seguradoras e segurados. O padrão também aparece em qualquer contratação de serviço profissional sob informação assimétrica." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que é o problema agente-principal?",
+    alts: [
+      "A dificuldade de encontrar um bom advogado para representar uma empresa em tribunal.",
+      "A situação em que uma parte (agente) age em nome de outra (principal) sob informação assimétrica, criando risco de o agente perseguir interesses próprios em detrimento do principal.",
+      "Um método contábil para calcular o lucro líquido de uma empresa.",
+      "A obrigação legal de toda empresa ter pelo menos dois diretores executivos."
+    ],
+    correta: 1,
+    porque: "Esse é o núcleo do conceito: sempre que alguém age em nome de outra pessoa e tem informação ou controle que essa pessoa não tem, existe risco estrutural de desalinhamento de interesses." },
+
+  { camada: "nucleo",
+    q: "Que observação histórica de Adam Smith, em 1776, antecipa o problema agente-principal?",
+    alts: [
+      "Que o comércio internacional sempre beneficia igualmente todos os países envolvidos.",
+      "Que diretores de companhias por ações, administrando dinheiro alheio, não vigiariam esse dinheiro com o mesmo cuidado que teriam com seus próprios recursos.",
+      "Que o preço de qualquer bem é determinado exclusivamente pelo custo de produção.",
+      "Que trabalhadores sempre preferem salários mais altos a qualquer outra forma de compensação."
+    ],
+    correta: 1,
+    porque: "Essa observação de Smith, sobre diretores administrando 'o dinheiro alheio', é considerada uma descrição precoce e precisa do problema que a economia formalizaria dois séculos depois." },
+
+  { camada: "nucleo",
+    q: "Por que o problema agente-principal não pressupõe que agentes sejam pessoas desonestas?",
+    alts: [
+      "Porque agentes são sempre supervisionados por auditorias externas obrigatórias.",
+      "Porque o problema decorre da estrutura da relação (informação assimétrica), existindo mesmo quando todos os envolvidos agem de boa-fé.",
+      "Porque a lei proíbe qualquer forma de conflito de interesse em contratos comerciais.",
+      "Porque agentes nunca têm interesses próprios distintos dos do principal."
+    ],
+    correta: 1,
+    porque: "É um problema estrutural de desenho institucional: a assimetria de informação, por si só, já cria o risco de desalinhamento, independentemente do caráter das pessoas envolvidas." },
+
+  { camada: "aprofundamento",
+    q: "Quem formalizou explicitamente os termos 'principal' e 'agente' na economia, e em que ano?",
+    alts: [
+      "Adam Smith, em 1776.",
+      "Stephen Ross, em 1973.",
+      "John Maynard Keynes, em 1936.",
+      "Milton Friedman, em 1962."
+    ],
+    correta: 1,
+    porque: "Embora Adam Smith já tivesse descrito o fenômeno em termos gerais, foi Ross, num artigo curto de 1973, que cunhou formalmente essa terminologia específica na literatura econômica." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela de custos de agência apresentada no documento, o que é 'perda residual'?",
+    alts: [
+      "O lucro líquido de uma empresa após o pagamento de todos os impostos.",
+      "O desalinhamento de interesses que persiste mesmo depois de aplicados todo o monitoramento e toda a vinculação contratual economicamente viáveis.",
+      "O valor total gasto em auditorias externas contratadas por uma empresa.",
+      "A diferença entre o salário de um executivo e o salário médio dos demais funcionários."
+    ],
+    correta: 1,
+    porque: "A perda residual é o componente dos custos de agência que reconhece que nenhuma combinação de monitoramento e contrato elimina completamente o desalinhamento entre agente e principal." },
+
+  { camada: "aprofundamento",
+    q: "O que a evidência empírica mostra sobre a eficácia de vincular a remuneração de executivos ao desempenho da empresa?",
+    alts: [
+      "É uma solução comprovadamente perfeita, sem nenhuma controvérsia na literatura acadêmica.",
+      "É mista: há pouca evidência direta e consistente de que contratos de incentivo, por si só, produzam melhor desempenho corporativo de forma confiável em todos os contextos.",
+      "É completamente ineficaz, sem nenhum efeito mensurável sobre o comportamento de executivos.",
+      "Só funciona em empresas com menos de dez funcionários."
+    ],
+    correta: 1,
+    porque: "A mistura de evidências reflete a complexidade real de medir e isolar o efeito de contratos de incentivo sobre desempenho corporativo, um tema ainda ativo de pesquisa empírica." },
+
+  { camada: "aprofundamento",
+    q: "Além de empresas de capital aberto, cite um exemplo de relação agente-principal mencionado no documento.",
+    alts: [
+      "A relação entre duas empresas concorrentes no mesmo setor.",
+      "A relação entre eleitores (principal) e políticos eleitos (agente).",
+      "A relação entre dois países que não mantêm nenhum tipo de comércio.",
+      "A relação entre um produto e seu preço de mercado."
+    ],
+    correta: 1,
+    porque: "O documento cita política, saúde e seguros como exemplos de relações agente-principal fora do contexto corporativo, todos compartilhando a mesma estrutura de informação assimétrica sob delegação." },
+
+  { camada: "extensao",
+    q: "O que a teoria do poder gerencial, proposta por Bebchuk e Fried em 2004, argumenta sobre a remuneração executiva vinculada a desempenho?",
+    alts: [
+      "Que essa remuneração é sempre um contrato perfeitamente ótimo, sem nenhum problema.",
+      "Que, em muitas empresas, o executivo tem influência real sobre o conselho que deveria fiscalizá-lo, fazendo com que parte dessa remuneração reflita captura de poder, não apenas alinhamento genuíno de incentivos.",
+      "Que executivos nunca deveriam receber nenhuma forma de remuneração vinculada a desempenho.",
+      "Que apenas empresas familiares sofrem do problema de poder gerencial."
+    ],
+    correta: 1,
+    porque: "Essa teoria propõe uma leitura mais cética de um mecanismo geralmente visto como solução ao problema de agência, argumentando que ele pode, em parte, reproduzir o mesmo problema num nível institucional mais alto." },
+
+  { camada: "extensao",
+    q: "Por que o documento argumenta que as teorias de alinhamento de incentivos e de poder gerencial não são mutuamente excludentes?",
+    alts: [
+      "Porque as duas teorias tratam de fenômenos econômicos completamente não relacionados.",
+      "Porque é possível que a remuneração vinculada a desempenho funcione parcialmente como alinhamento genuíno e, ao mesmo tempo, seja parcialmente capturada pelo poder de influência do executivo, numa proporção que varia caso a caso.",
+      "Porque uma das duas teorias já foi definitivamente refutada pela pesquisa mais recente.",
+      "Porque apenas uma das duas teorias já foi testada empiricamente até hoje."
+    ],
+    correta: 1,
+    porque: "Reconhecer que os dois mecanismos podem coexistir em graus variados, sem que um exclua o outro, é uma leitura mais precisa do estado atual da pesquisa do que escolher uma teoria única e descartar a outra." },
+
+  { camada: "extensao",
+    q: "Por que o problema agente-principal é tratado, na teoria econômica, como algo a ser reduzido, e não eliminado por completo?",
+    alts: [
+      "Porque nenhuma lei permite a criação de contratos que reduzam esse problema.",
+      "Porque monitoramento perfeito costuma custar mais do que vale a pena, e contratos que preveem toda situação futura possível são praticamente impossíveis de escrever para relações complexas e de longo prazo.",
+      "Porque o problema agente-principal só existe em teoria, nunca se manifestando na prática real.",
+      "Porque apenas governos, nunca empresas privadas, têm capacidade de reduzir esse tipo de problema."
+    ],
+    correta: 1,
+    porque: "Esse é um princípio central da teoria: o custo de eliminar toda perda residual normalmente supera o benefício de fazê-lo, então o desenho institucional realista busca um equilíbrio, não uma solução perfeita e completa." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Jensen, M. C. &amp; Meckling, W. H. 'Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure'. <em>Journal of Financial Economics</em> 3(4):305-360, 1976.", url: "https://www.kellogg.northwestern.edu/faculty/hubbard/ec174/lectures/7JENSEN.htm" },
+  { n: 2, tipo: "fonte primária", ref: "Ross, S. A. 'The Economic Theory of Agency: The Principal's Problem'. <em>American Economic Review</em> 63(2):134-139, 1973.", url: "https://www.jstor.org/stable/1817064" },
+  { n: 3, tipo: "fonte primária", ref: "Smith, A. <em>An Inquiry into the Nature and Causes of the Wealth of Nations</em>, Livro V, Capítulo 1, Parte III, 1776.", url: "https://www.marxists.org/reference/archive/smith-adam/works/wealth-of-nations/book05/ch01c.htm" },
+  { n: 4, tipo: "fonte primária", ref: "Bebchuk, L. A. &amp; Fried, J. M. <em>Pay without Performance: The Unfulfilled Promise of Executive Compensation</em>. Harvard University Press, 2004.", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=537783" },
+  { n: 5, tipo: "revisão acadêmica", ref: "'Executive Compensation: A Survey of Theory and Evidence'.", url: "https://corpgov.law.harvard.edu/2017/09/06/executive-compensation-a-survey-of-theory-and-evidence/" },
+  { n: 6, tipo: "crítica", ref: "Bebchuk, L. A. &amp; Fried, J. M. 'Executive Compensation as an Agency Problem'. NBER Working Paper 9813.", url: "https://www.nber.org/system/files/working_papers/w9813/w9813.pdf" },
+  { n: 7, tipo: "crítica", ref: "'Optimal Executive Compensation vs. Managerial Power: A Review of Lucian Bebchuk and Jesse Fried's Pay without Performance'. NBER Working Paper 12798.", url: "https://www.nber.org/system/files/working_papers/w12798/w12798.pdf" },
+  { n: 8, tipo: "reportagem", ref: "ProMarket (Stigler Center, University of Chicago Booth School of Business). 'The Famous Article on the Theory of the Firm is Widely Misunderstood', sobre a recepção e interpretações do artigo de Jensen e Meckling.", url: "https://www.promarket.org/2021/04/04/theory-firm-misunderstood-michael-jensen-william-meckling/" },
+  { n: 9, tipo: "fonte primária", ref: "Estudo sobre sensibilidade entre remuneração executiva e desempenho corporativo, e sua relação com o risco idiossincrático e sistemático da empresa.", url: "https://sciencedirect.com/science/article/pii/S0148296396002834" },
+  { n: 10, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Pay Without Performance', com resumo dos argumentos centrais do livro de Bebchuk e Fried.", url: "https://en.wikipedia.org/wiki/Pay_Without_Performance" },
+  { n: 11, tipo: "revisão acadêmica", ref: "Harvard Law School Forum on Corporate Governance. 'Optimal CEO Compensation with Search: Theory and Empirical Evidence'.", url: "https://corpgov.law.harvard.edu/2013/07/15/optimal-ceo-compensation-with-search-theory-and-empirical-evidence/" },
+  { n: 12, tipo: "fonte primária", ref: "Estudo sobre a relação entre controle do CEO sobre o conselho, desempenho corporativo e sensibilidade de remuneração ao desempenho.", url: "https://www.sciencedirect.com/science/article/abs/pii/S0167268114002054" },
+  { n: 13, tipo: "fonte primária", ref: "'Understanding CEO pay: A test of two pay-to-performance sensitivity measures with alternative measures of alignment and influence'.", url: "https://sciencedirect.com/science/article/pii/S0148296396002834" },
+  { n: 14, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Principal-agent problem', com panorama geral das aplicações do conceito em diferentes áreas.", url: "https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem" },
+  { n: 15, tipo: "fonte primária", ref: "'Search for Optimal CEO Compensation: Theory and Empirical Evidence', sobre desenho de contratos de remuneração executiva em mercados com fricções de busca.", url: "https://econen.sufe.edu.cn/_upload/article/files/d3/34/c6aa75294353b29e32728df8b04e/072e1daf-06de-46bb-896b-95366a75c171.pdf" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
+
 /* ── bayes.js ──────────────────────────────────────────────── */
 CONTEUDOS["bayes"] = {
 termo: "Teorema de Bayes",
@@ -302,6 +566,269 @@ fontes: [
   { n: 6, tipo: "livro", ref: "McGrayne, S. B. <em>The Theory That Would Not Die</em>. Yale University Press, 2011. História do teorema, de Bayes e Laplace a Turing e à estatística contemporânea.", url: "" }
 ]
 };
+
+/* ── biofilmes.js ──────────────────────────────────────────── */
+CONTEUDOS["biofilmes"] = {
+termo: "Biofilmes",
+area: "Biologia",
+subtitulo: "A placa bacteriana que se forma nos dentes, a camada viscosa na parede interna de um cano, e boa parte das infecções que resistem a tratamento com antibiótico têm algo em comum: bactérias organizadas numa comunidade aderida, protegida por uma matriz própria, que se comporta de um jeito radicalmente diferente das mesmas bactérias soltas numa placa de laboratório.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que bactérias podem viver tanto soltas, flutuando num líquido, quanto agrupadas e aderidas a uma superfície.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que antibióticos são testados, em laboratório, principalmente contra bactérias soltas (planctônicas), não contra comunidades organizadas."
+],
+conexoes: [
+  { termo: "Cascata trófica", relacao: "Ambos os temas envolvem comunidades biológicas organizadas cujo comportamento coletivo não se resume à soma do comportamento de cada indivíduo isolado." },
+  { termo: "Seleção adversa", relacao: "A resistência de biofilmes a antibióticos ilustra outro tipo de situação em que testar um sistema em condições simplificadas (bactéria isolada em laboratório) pode dar uma imagem enganosa de como ele se comporta em condições reais mais complexas." },
+  { termo: "Efeito hidrofóbico", relacao: "Ambos os temas mostram fenômenos biológicos e químicos em que a explicação intuitiva de senso comum (bactérias 'escondidas', óleo e água que 'se repelem') simplifica demais um mecanismo real mais específico e mensurável." },
+  { termo: "Crise de replicação", relacao: "Boa parte da pesquisa sobre qual mecanismo exato explica a resistência de biofilmes segue ativa, com múltiplas explicações concorrentes sendo testadas e refinadas, um padrão comum em áreas de pesquisa biomédica de fronteira." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">A placa que se acumula nos dentes quando alguém deixa de escovar por um dia é um exemplo cotidiano de <strong>biofilme</strong>: uma comunidade de bactérias que, em vez de flutuar livremente num líquido, se organiza, adere a uma superfície e se envolve numa matriz própria, formada principalmente por açúcares complexos, proteínas e material genético liberado pelas próprias células. Essa matriz funciona como uma espécie de estrutura urbana construída pela comunidade bacteriana: protege, organiza o acesso a nutrientes e cria microambientes internos diferentes, dependendo da profundidade dentro do biofilme.</p>
+
+<p>Biofilmes não são uma curiosidade rara. Aparecem em canos de água, em rochas de rio, na superfície de próteses médicas, em cateteres, em pulmões de pacientes com certas doenças crônicas e em feridas que não cicatrizam. A pesquisa moderna sobre biofilmes começou a se consolidar nos anos 1970, com o trabalho pioneiro do microbiologista Bill Costerton, que ajudou a estabelecer que esse modo de crescimento em comunidade, e não a bactéria isolada e solta, é a forma predominante em que a maioria das bactérias realmente vive na natureza.</p>
+
+<h3>Por que isso importa tanto para medicina</h3>
+
+<p>O motivo pelo qual biofilmes viraram um tema central em microbiologia médica é simples de enunciar e alarmante na prática: bactérias organizadas em biofilme podem tolerar concentrações de antibiótico centenas, às vezes milhares de vezes maiores do que as necessárias para matar as mesmas bactérias quando estão soltas (na forma chamada planctônica).<sup class="cit"><a href="#f1">1</a></sup> Isso não significa, na maioria dos casos, que essas bactérias tenham sofrido uma mutação genética que as torna resistentes no sentido clássico do termo. Significa que o próprio modo de vida em comunidade, protegido pela matriz e por mudanças no metabolismo de parte das células, produz uma forma de proteção coletiva que desaparece se a mesma bactéria for isolada de novo.</p>
+
+<div class="marca consenso">
+<span class="rot">O que é bem estabelecido</span>
+<p>Que biofilmes toleram concentrações de antibiótico muito maiores que células bacterianas isoladas da mesma espécie, e que isso está por trás de uma fração substancial das infecções bacterianas crônicas e difíceis de tratar, é um achado central e amplamente replicado da microbiologia médica desde os trabalhos de Costerton. O CDC e o NIH, agências oficiais de saúde dos Estados Unidos, estimam que cerca de 65% das infecções microbianas em geral, e até 80% das infecções crônicas especificamente, estejam associadas a biofilmes.<sup class="cit"><a href="#f2">2</a></sup></p>
+</div>
+
+<h3>Um exemplo concreto de magnitude</h3>
+
+<p>Biofilmes de <em>Pseudomonas aeruginosa</em>, uma bactéria comum em infecções hospitalares, crescendo sobre cateteres urinários, são cerca de mil vezes mais resistentes à tobramicina (um antibiótico da família dos aminoglicosídeos) do que as mesmas bactérias crescendo soltas em cultura líquida.<sup class="cit"><a href="#f1">1</a></sup> Esse tipo de número explica por que infecções ligadas a dispositivos médicos implantados (cateteres, próteses articulares, válvulas cardíacas artificiais) são notoriamente difíceis de tratar só com antibiótico, muitas vezes exigindo a remoção física do próprio dispositivo contaminado.</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>Não é um único mecanismo, é uma combinação de vários</h3>
+
+<p>A resistência aumentada de bactérias em biofilme não vem de uma causa única, mas da combinação de pelo menos três mecanismos que atuam em conjunto. Primeiro, a matriz extracelular funciona como uma barreira física parcial, retardando (embora raramente impedindo por completo) a penetração de certos antibióticos até as camadas mais profundas do biofilme. Segundo, dentro do biofilme existe estratificação metabólica: células na superfície, com mais acesso a oxigênio e nutrientes, crescem ativamente, enquanto células nas camadas mais profundas entram num estado de crescimento lento ou quase estacionário, e a maioria dos antibióticos convencionais foi desenvolvida para matar bactérias em crescimento ativo, sendo bem menos eficaz contra células metabolicamente dormentes.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+<h3>Células persistentes: um fenômeno à parte, mas relacionado</h3>
+
+<p>Uma pequena subpopulação de células, tanto dentro quanto fora de biofilmes, entra num estado especial chamado <strong>persistência</strong>: essas células não são geneticamente resistentes (seus descendentes, se voltarem a crescer normalmente, voltam a ser tão sensíveis ao antibiótico quanto a população original), mas entram numa espécie de dormência profunda, frequentemente mediada por sistemas de toxina-antitoxina, que as torna temporariamente tolerantes a praticamente qualquer antibiótico que dependa de processos celulares ativos para funcionar.<sup class="cit"><a href="#f4">4</a></sup> Biofilmes tendem a ter uma proporção maior de células persistentes do que populações planctônicas, o que contribui para a chamada "resiliência" de infecções crônicas: mesmo depois de um curso de antibiótico eliminar a maior parte da população, uma pequena fração de persistentes pode sobreviver e reconstituir a infecção depois que o tratamento termina.</p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Mecanismo</th><th>Como funciona</th><th>É resistência genética clássica?</th></tr></thead>
+<tbody>
+<tr><td>Barreira física da matriz</td><td>Retarda a penetração de certos antibióticos e do sistema imune do hospedeiro</td><td>Não</td></tr>
+<tr><td>Estratificação metabólica</td><td>Células em camadas profundas crescem lentamente, menos vulneráveis a antibióticos que dependem de crescimento ativo</td><td>Não</td></tr>
+<tr><td>Células persistentes</td><td>Subpopulação em dormência profunda, mediada por sistemas de toxina-antitoxina</td><td>Não (tolerância reversível, não mutação herdável)</td></tr>
+<tr><td>Resistência genética clássica</td><td>Mutações ou genes adquiridos que alteram o alvo do antibiótico ou o degradam ativamente</td><td>Sim, pode ocorrer dentro de biofilmes, mas é um mecanismo distinto e adicional</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Coordenação da comunidade: uma menção necessária</h3>
+
+<p>Parte da organização interna de um biofilme depende de comunicação química entre as próprias bactérias, um fenômeno chamado quorum sensing (sinalização de quórum), em que a comunidade "detecta" sua própria densidade populacional e ajusta comportamentos coletivos, como a própria produção da matriz, de acordo com isso. Esse mecanismo de comunicação bacteriana é, ele mesmo, um tópico extenso o suficiente para merecer tratamento próprio, mas vale registrar que a formação e a manutenção de um biofilme maduro dependem, em boa medida, dessa coordenação química entre células vizinhas.</p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Quanto exatamente cada mecanismo contribui, ainda é pergunta de pesquisa</h3>
+
+<p>Um ponto importante de honestidade científica: embora os quatro fatores da tabela acima (barreira física, estratificação metabólica, persistência e eventual resistência genética) sejam todos reconhecidos como reais e relevantes, a proporção exata em que cada um contribui para a resistência total observada num biofilme específico varia conforme a espécie bacteriana, o antibiótico usado e as condições do ambiente, e continua sendo ativamente estudada.<sup class="cit"><a href="#f5">5</a></sup> Não existe uma fórmula única que decomponha, por exemplo, "40% barreira física, 35% dormência metabólica, 25% persistência" válida para todo biofilme; cada sistema estudado tende a revelar uma combinação diferente, o que torna generalizações amplas sobre "o" mecanismo do biofilme uma simplificação a ser evitada.</p>
+
+<div class="marca emergente">
+<span class="rot">Novas estratégias de tratamento em desenvolvimento</span>
+<p>Como antibióticos convencionais foram desenhados e testados, historicamente, contra bactérias planctônicas, uma linha de pesquisa ativa busca estratégias específicas contra o modo de vida em biofilme, em vez de simplesmente aumentar a dose do mesmo antibiótico. Isso inclui bacteriófagos (vírus que infectam bactérias especificamente), que podem carregar enzimas capazes de degradar a matriz do biofilme e facilitar tanto a penetração de antibióticos convencionais quanto o ataque direto às bactérias expostas, e enzimas dispersantes isoladas, capazes de desestruturar a matriz sem depender de um vírus inteiro.<sup class="cit"><a href="#f6">6</a></sup> Nenhuma dessas abordagens substituiu por completo o tratamento convencional até o momento, mas representam uma mudança de estratégia real: atacar a organização coletiva da comunidade bacteriana, não só as células individuais.</p>
+</div>
+
+<h3>Por que "matar a bactéria isolada em laboratório" não basta como teste</h3>
+
+<p>Esse caso ilustra um ponto metodológico mais amplo, relevante além da microbiologia: testar um sistema biológico complexo numa versão simplificada e isolada em laboratório (bactéria solta numa placa de cultura) pode subestimar drasticamente o quanto esse sistema se comporta de forma diferente em condições reais, mais organizadas e mais complexas (bactéria dentro de um biofilme maduro, dentro de um corpo humano vivo, sob ataque simultâneo do sistema imune). Décadas de desenvolvimento de antibióticos usaram testes padronizados contra bactérias planctônicas como critério principal de eficácia, o que ajuda a explicar, retrospectivamente, por que tantos tratamentos que funcionam bem em laboratório falham ou têm eficácia bem reduzida contra infecções biofilme-associadas em pacientes reais.</p>
+
+<h3>Onde biofilmes aparecem além da medicina</h3>
+
+<p>Vale registrar que biofilmes não são exclusivamente um problema médico. Eles também causam corrosão em tubulações industriais, entopimento de filtros de água, e biofouling (acúmulo de organismos) em cascos de navios, o que aumenta o consumo de combustível e exige limpeza periódica cara. Ao mesmo tempo, biofilmes controlados deliberadamente também têm aplicações benéficas, como em estações de tratamento de esgoto, onde comunidades bacterianas organizadas em biofilme são usadas propositalmente para degradar poluentes orgânicos de forma mais eficiente do que bactérias soltas conseguiriam.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Biofilme", def: "Comunidade de bactérias organizada, aderida a uma superfície, envolvida por uma matriz extracelular própria composta principalmente de açúcares complexos, proteínas e material genético liberado pelas células." },
+    { termo: "Célula planctônica", def: "Célula bacteriana isolada, flutuando livremente num meio líquido, sem estar organizada numa comunidade aderida; a forma tradicionalmente usada para testar a eficácia de antibióticos em laboratório." },
+    { termo: "Célula persistente", def: "Subpopulação de células bacterianas, presente em biofilmes e populações planctônicas, que entra num estado de dormência profunda reversível, tolerante a antibióticos, sem ser geneticamente resistente." },
+    { termo: "Quorum sensing (sinalização de quórum)", def: "Mecanismo de comunicação química entre bactérias que permite à comunidade detectar sua própria densidade populacional e coordenar comportamentos coletivos, como a produção da matriz do biofilme." },
+    { termo: "Estratificação metabólica", def: "Diferenciação de atividade metabólica dentro de um biofilme conforme a profundidade: células na superfície crescem ativamente, enquanto células em camadas mais profundas entram em crescimento lento, menos vulnerável a muitos antibióticos convencionais." }
+  ],
+  lembrar: [
+    "A pesquisa moderna sobre biofilmes se consolidou nos anos 1970, com o trabalho pioneiro de Bill Costerton, mostrando que esse é o modo de vida predominante da maioria das bactérias na natureza, não uma exceção.",
+    "Bactérias em biofilme toleram concentrações de antibiótico centenas a milhares de vezes maiores do que as mesmas bactérias isoladas, um exemplo real: biofilmes de Pseudomonas aeruginosa em cateteres são cerca de mil vezes mais resistentes à tobramicina.",
+    "CDC e NIH estimam que cerca de 65% das infecções microbianas em geral, e até 80% das infecções crônicas, estejam associadas a biofilmes.",
+    "A resistência aumentada não vem de um único mecanismo, mas de uma combinação: barreira física da matriz, estratificação metabólica, células persistentes em dormência, e eventual resistência genética clássica adicional.",
+    "Células persistentes não são geneticamente resistentes: seus descendentes, se voltarem a crescer normalmente, voltam a ser tão sensíveis ao antibiótico quanto a população original.",
+    "A proporção exata de contribuição de cada mecanismo varia conforme espécie bacteriana, antibiótico e condições ambientais, e continua sendo tema ativo de pesquisa, sem uma fórmula única aplicável a todo biofilme.",
+    "Novas estratégias de tratamento, como bacteriófagos e enzimas dispersantes de matriz, buscam atacar a organização coletiva do biofilme, não apenas as bactérias individuais."
+  ],
+  confusoes: [
+    { erro: "Bactérias em biofilme são geneticamente resistentes ao antibiótico, do mesmo jeito que uma bactéria que sofreu mutação de resistência", correcao: "Na maioria dos casos, a tolerância vem do modo de vida coletivo (barreira física, dormência metabólica, células persistentes), não de mutação genética herdável. Bactérias retiradas do biofilme e testadas isoladamente voltam a ser sensíveis ao mesmo antibiótico." },
+    { erro: "Existe um único mecanismo que explica toda a resistência de biofilmes a antibióticos", correcao: "É uma combinação de pelo menos três a quatro mecanismos diferentes (barreira física, estratificação metabólica, persistência, e eventual resistência genética adicional), cuja proporção exata varia conforme o sistema estudado." },
+    { erro: "Aumentar a dose do mesmo antibiótico sempre resolve infecções associadas a biofilme", correcao: "A tolerância pode ser centenas a milhares de vezes maior que em bactérias isoladas, tornando doses convencionalmente mais altas insuficientes ou tóxicas antes de serem eficazes; por isso, infecções em dispositivos médicos muitas vezes exigem a remoção física do dispositivo contaminado." },
+    { erro: "Biofilmes são sempre prejudiciais e um problema a ser eliminado", correcao: "Biofilmes também têm aplicações benéficas deliberadas, como em estações de tratamento de esgoto, onde comunidades bacterianas organizadas degradam poluentes de forma mais eficiente do que bactérias soltas." },
+    { erro: "Testar um antibiótico contra bactérias soltas em laboratório é suficiente para prever sua eficácia contra qualquer infecção real", correcao: "Testes padronizados historicamente usam bactérias planctônicas, o que pode subestimar drasticamente a dificuldade real de tratar infecções biofilme-associadas, que se comportam de forma bem diferente." }
+  ],
+  numeros: [
+    "Stewart, P. S. &amp; Costerton, J. W. (2001), Lancet 358:135-138: revisão de referência sobre resistência antibiótica de bactérias em biofilmes.",
+    "Biofilmes de Pseudomonas aeruginosa em cateteres urinários: cerca de 1000 vezes mais resistentes à tobramicina do que as mesmas bactérias em cultura planctônica.",
+    "Estimativas do CDC e do NIH: cerca de 65% das infecções microbianas em geral, e até 80% das infecções crônicas, associadas a biofilmes.",
+    "Clinicamente, biofilmes podem tolerar antibióticos em concentrações de 100 a 10.000 vezes maiores que as necessárias para eliminar as mesmas bactérias na forma planctônica."
+  ]
+},
+
+flashcards: [
+  { f: "O que é um biofilme?", v: "Uma comunidade de bactérias organizada, aderida a uma superfície, envolvida por uma matriz extracelular própria composta de açúcares complexos, proteínas e material genético liberado pelas células." },
+  { f: "Quem ajudou a consolidar a pesquisa moderna sobre biofilmes, a partir dos anos 1970?", v: "O microbiologista Bill Costerton, que mostrou que o modo de vida em biofilme é predominante para a maioria das bactérias na natureza, não uma exceção rara." },
+  { f: "Quanto mais resistente a antibiótico uma bactéria em biofilme pode ser, comparada à mesma bactéria isolada?", v: "De centenas a milhares de vezes mais resistente; um exemplo concreto é o biofilme de Pseudomonas aeruginosa em cateteres, cerca de mil vezes mais resistente à tobramicina." },
+  { f: "Que porcentagem de infecções, segundo estimativas do CDC e do NIH, está associada a biofilmes?", v: "Cerca de 65% das infecções microbianas em geral, e até 80% das infecções crônicas especificamente." },
+  { f: "A resistência de bactérias em biofilme vem, na maioria dos casos, de mutação genética?", v: "Não. Vem principalmente do modo de vida coletivo (barreira física da matriz, dormência metabólica, células persistentes), não de uma mutação herdável que tornaria os descendentes também resistentes fora do biofilme." },
+  { f: "Quais são os principais mecanismos que combinados explicam a resistência de biofilmes?", v: "Barreira física da matriz extracelular, estratificação metabólica (células profundas crescendo lentamente), presença de células persistentes em dormência, e eventual resistência genética clássica adicional." },
+  { f: "O que são células persistentes, e por que não são consideradas geneticamente resistentes?", v: "Subpopulação de células em dormência profunda, tolerante a antibióticos, frequentemente mediada por sistemas de toxina-antitoxina. Não são resistentes no sentido clássico porque seus descendentes, ao voltarem a crescer normalmente, voltam a ser tão sensíveis quanto a população original." },
+  { f: "O que é quorum sensing, e qual é sua relação com biofilmes?", v: "Mecanismo de comunicação química entre bactérias que permite à comunidade detectar sua própria densidade populacional e coordenar comportamentos coletivos, incluindo a produção da matriz que forma e mantém o biofilme." },
+  { f: "A proporção exata de contribuição de cada mecanismo de resistência é a mesma em todo biofilme?", v: "Não. Varia conforme a espécie bacteriana, o antibiótico usado e as condições ambientais, e continua sendo tema ativo de pesquisa, sem uma fórmula única aplicável universalmente." },
+  { f: "Que novas estratégias de tratamento estão sendo desenvolvidas especificamente contra biofilmes, em vez de simplesmente aumentar a dose de antibiótico convencional?", v: "Bacteriófagos capazes de carregar enzimas que degradam a matriz do biofilme, e enzimas dispersantes isoladas, que desestruturam a matriz e facilitam a ação de antibióticos convencionais ou do sistema imune." },
+  { f: "Por que testar um antibiótico apenas contra bactérias planctônicas em laboratório pode ser insuficiente?", v: "Porque bactérias organizadas em biofilme se comportam de forma radicalmente diferente das mesmas bactérias isoladas, o que pode fazer um tratamento eficaz em laboratório falhar ou ter eficácia bem reduzida contra infecções reais associadas a biofilme." },
+  { f: "Biofilmes são sempre prejudiciais?", v: "Não. Também têm aplicações benéficas deliberadas, como em estações de tratamento de esgoto, onde comunidades bacterianas organizadas degradam poluentes orgânicos de forma mais eficiente do que bactérias soltas." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que é um biofilme?",
+    alts: [
+      "Um tipo específico de vírus que infecta apenas plantas.",
+      "Uma comunidade de bactérias organizada, aderida a uma superfície, envolvida por uma matriz extracelular própria.",
+      "Uma técnica de laboratório para cultivar bactérias em ambiente estéril.",
+      "Um medicamento usado para tratar infecções bacterianas resistentes."
+    ],
+    correta: 1,
+    porque: "Biofilmes são comunidades bacterianas organizadas e aderidas, protegidas por uma matriz própria, um modo de vida predominante para a maioria das bactérias na natureza." },
+
+  { camada: "nucleo",
+    q: "Aproximadamente quanto mais resistente a antibiótico pode ser uma bactéria organizada em biofilme, comparada à mesma bactéria isolada (planctônica)?",
+    alts: [
+      "Cerca de duas vezes mais resistente, uma diferença pequena.",
+      "De centenas a milhares de vezes mais resistente, dependendo do caso.",
+      "Bactérias em biofilme não apresentam nenhuma diferença de resistência.",
+      "Bactérias em biofilme são, na verdade, mais sensíveis a antibióticos."
+    ],
+    correta: 1,
+    porque: "Essa magnitude de diferença, documentada em exemplos como o de Pseudomonas aeruginosa em cateteres (cerca de mil vezes mais resistente), é o que torna biofilmes um problema médico tão significativo." },
+
+  { camada: "nucleo",
+    q: "Que porcentagem de infecções crônicas, segundo estimativas do CDC e do NIH, está associada a biofilmes?",
+    alts: [
+      "Menos de 5%, um fenômeno raro.",
+      "Até cerca de 80%.",
+      "Exatamente 100%, todas as infecções crônicas envolvem biofilme.",
+      "Não existe nenhuma estimativa oficial disponível sobre esse tema."
+    ],
+    correta: 1,
+    porque: "Essa estimativa oficial mostra que biofilmes não são um fenômeno raro ou marginal, mas estão associados a uma fração muito relevante das infecções bacterianas difíceis de tratar." },
+
+  { camada: "aprofundamento",
+    q: "A resistência de bactérias em biofilme a antibióticos vem, na maioria dos casos, de mutação genética herdável?",
+    alts: [
+      "Sim, sempre, sem exceção.",
+      "Não, na maioria dos casos: vem do modo de vida coletivo (barreira física, dormência metabólica, células persistentes), e bactérias retiradas do biofilme voltam a ser sensíveis quando testadas isoladamente.",
+      "Sim, mas apenas em bactérias marinhas, nunca em bactérias associadas a infecções humanas.",
+      "A pergunta não faz sentido, porque biofilmes não contêm bactérias vivas."
+    ],
+    correta: 1,
+    porque: "É uma distinção central: a tolerância aumentada, na maioria dos casos, é uma propriedade do modo de vida coletivo, não uma resistência genética fixa e herdável transmitida aos descendentes." },
+
+  { camada: "aprofundamento",
+    q: "O que são células persistentes, segundo o documento?",
+    alts: [
+      "Bactérias que sofreram mutação permanente tornando-as resistentes a qualquer antibiótico para sempre.",
+      "Uma subpopulação de células em dormência profunda reversível, tolerante a antibióticos sem ser geneticamente resistente, frequentemente mediada por sistemas de toxina-antitoxina.",
+      "As únicas células de um biofilme capazes de se reproduzir.",
+      "Bactérias que vivem exclusivamente fora de biofilmes, nunca dentro deles."
+    ],
+    correta: 1,
+    porque: "A reversibilidade é a característica central: descendentes de células persistentes, ao voltarem a crescer normalmente, voltam a ser tão sensíveis ao antibiótico quanto a população original." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela apresentada no documento, o que caracteriza a 'estratificação metabólica' dentro de um biofilme?",
+    alts: [
+      "Todas as células do biofilme crescem exatamente na mesma velocidade, sem nenhuma diferença.",
+      "Células na superfície crescem ativamente, enquanto células em camadas mais profundas entram em crescimento lento, menos vulnerável a antibióticos que dependem de crescimento ativo.",
+      "Apenas bactérias mortas ficam nas camadas profundas do biofilme.",
+      "A estratificação metabólica só ocorre em biofilmes formados por uma única espécie bacteriana."
+    ],
+    correta: 1,
+    porque: "Essa diferenciação de atividade metabólica conforme a profundidade é um dos mecanismos centrais, junto com a barreira física e a persistência, que explica a resistência aumentada de biofilmes." },
+
+  { camada: "aprofundamento",
+    q: "O que é quorum sensing, e qual sua relação com a formação de biofilmes?",
+    alts: [
+      "Um tipo de antibiótico usado especificamente contra biofilmes.",
+      "Um mecanismo de comunicação química entre bactérias que permite à comunidade detectar sua densidade populacional e coordenar comportamentos coletivos, incluindo a produção da matriz do biofilme.",
+      "Uma técnica cirúrgica usada para remover biofilmes de próteses médicas.",
+      "Um fenômeno que ocorre apenas em bactérias que vivem isoladas, nunca em comunidades."
+    ],
+    correta: 1,
+    porque: "Quorum sensing é a base da coordenação coletiva que permite à comunidade bacteriana ajustar comportamentos, como a produção da matriz extracelular, conforme sua própria densidade populacional." },
+
+  { camada: "extensao",
+    q: "Segundo o documento, existe uma proporção fixa e universal de contribuição de cada mecanismo (barreira física, dormência metabólica, persistência) para a resistência de qualquer biofilme?",
+    alts: [
+      "Sim, é sempre 40% barreira física, 35% dormência metabólica e 25% persistência, em qualquer biofilme estudado.",
+      "Não. A proporção exata varia conforme espécie bacteriana, antibiótico usado e condições ambientais, e continua sendo tema ativo de pesquisa.",
+      "Sim, mas apenas para biofilmes formados por Pseudomonas aeruginosa especificamente.",
+      "Não existe nenhuma pesquisa em andamento sobre esse tema atualmente."
+    ],
+    correta: 1,
+    porque: "Reconhecer essa variabilidade é importante para evitar generalizações excessivas sobre 'o' mecanismo do biofilme, quando a realidade é uma combinação de fatores que muda conforme o sistema estudado." },
+
+  { camada: "extensao",
+    q: "Que novas estratégias de tratamento contra biofilmes estão sendo desenvolvidas, segundo o documento, além do uso convencional de antibióticos em dose mais alta?",
+    alts: [
+      "Apenas cirurgias de remoção completa de qualquer tecido próximo à infecção, sem nenhuma alternativa farmacológica.",
+      "Bacteriófagos capazes de carregar enzimas que degradam a matriz do biofilme, e enzimas dispersantes isoladas que facilitam a ação de antibióticos convencionais.",
+      "Vacinas que eliminam permanentemente a capacidade de qualquer bactéria formar biofilme.",
+      "Nenhuma nova estratégia está sendo pesquisada atualmente além dos antibióticos tradicionais."
+    ],
+    correta: 1,
+    porque: "Essas estratégias representam uma mudança de abordagem: atacar a organização coletiva da comunidade bacteriana (a matriz, a coordenação), não apenas tentar matar diretamente as células individuais com mais antibiótico." },
+
+  { camada: "extensao",
+    q: "Qual é a lição metodológica mais ampla que o caso dos biofilmes ilustra, segundo o documento?",
+    alts: [
+      "Que testes de laboratório nunca têm nenhuma utilidade prática para prever eficácia de tratamentos.",
+      "Que testar um sistema biológico complexo numa versão simplificada e isolada (bactéria solta em laboratório) pode subestimar drasticamente seu comportamento em condições reais mais organizadas e complexas.",
+      "Que todas as bactérias do planeta vivem exclusivamente em biofilmes, sem nenhuma exceção.",
+      "Que antibióticos nunca deveriam ser testados em laboratório antes de serem usados em pacientes."
+    ],
+    correta: 1,
+    porque: "Essa lição metodológica, sobre a diferença entre testar em condições simplificadas e testar em condições reais mais complexas, é relevante muito além da microbiologia, aplicando-se a qualquer sistema biológico estudado de forma isolada." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Stewart, P. S. &amp; Costerton, J. W. 'Antibiotic resistance of bacteria in biofilms'. <em>Lancet</em> 358(9276):135-138, 2001.", url: "https://www.researchgate.net/publication/11879616_Stewart_PS_Costerton_JW_Antibiotic_resistance_of_bacteria_in_biofilms_Lancet_2001_358_135-138" },
+  { n: 2, tipo: "documento oficial", ref: "Revisão sobre biofilmes e infecções nosocomiais, citando estimativas do CDC e do NIH sobre a proporção de infecções microbianas e crônicas associadas a biofilmes.", url: "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.987011/full" },
+  { n: 3, tipo: "revisão acadêmica", ref: "'Molecular mechanisms of biofilm-based antibiotic resistance and tolerance in pathogenic bacteria'. <em>FEMS Microbiology Reviews</em> 41(3):276, 2017.", url: "https://academic.oup.com/femsre/article/41/3/276/3089981" },
+  { n: 4, tipo: "revisão acadêmica", ref: "'Surviving as a Community: Antibiotic Tolerance and Persistence in Bacterial Biofilms'.", url: "https://www.sciencedirect.com/science/article/pii/S1931312819302914" },
+  { n: 5, tipo: "revisão acadêmica", ref: "'Antimicrobial Tolerance in Biofilms'.", url: "https://pubmed.ncbi.nlm.nih.gov/26185072/" },
+  { n: 6, tipo: "fonte primária", ref: "'Bacteriophage-Mediated Control of Biofilm: A Promising New Dawn for the Future'. <em>Frontiers in Microbiology</em>, 2022.", url: "https://pubmed.ncbi.nlm.nih.gov/35495689/" },
+  { n: 7, tipo: "revisão acadêmica", ref: "'Bacteriophages and Their Enzymes: Allies Against Microbial Biofilms'.", url: "https://www.mdpi.com/1424-8247/18/12/1771" },
+  { n: 8, tipo: "revisão acadêmica", ref: "'Biofilm-Related Infections: Bridging the Gap between Clinical Management and Fundamental Aspects of Recalcitrance toward Antibiotics'.", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4187679/" },
+  { n: 9, tipo: "revisão acadêmica", ref: "'Bacterial Persister Cells and Development of Antibiotic Resistance in Chronic Infections: An Update'. <em>British Journal of Biomedical Science</em>, 2024.", url: "https://www.frontierspartnerships.org/journals/british-journal-of-biomedical-science/articles/10.3389/bjbs.2024.12958/full" },
+  { n: 10, tipo: "revisão acadêmica", ref: "'Tolerance and Persistence of Pseudomonas aeruginosa in Biofilms Exposed to Antibiotics: Molecular Mechanisms, Antibiotic Strategies and Therapeutic Perspectives'. <em>Frontiers in Microbiology</em>, 2020.", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7481396/" },
+  { n: 11, tipo: "fonte primária", ref: "'Biofilm-mediated infections by multidrug-resistant microbes: a comprehensive exploration and forward perspectives'.", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10867068/" },
+  { n: 12, tipo: "enciclopédia", ref: "Physiopedia. Verbete sobre o papel de biofilmes em infecções crônicas, com resumo acessível dos mecanismos de resistência.", url: "https://www.physio-pedia.com/Biofilms_Role_in_Chronic_Infections" },
+  { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Biofilm', com panorama geral de formação, estrutura e relevância ecológica e médica.", url: "https://en.wikipedia.org/wiki/Biofilm" },
+  { n: 14, tipo: "fonte primária", ref: "'Microbial Biofilm: A Review on Formation, Infection, Antibiotic Resistance, Control Measures, and Innovative Treatment'.", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10305407/" },
+  { n: 15, tipo: "fonte primária", ref: "'The role of nanocomposites against biofilm infections in humans', sobre abordagens terapêuticas emergentes baseadas em nanotecnologia.", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10011468/" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
 
 /* ── cascata-trofica.js ────────────────────────────────────── */
 CONTEUDOS["cascata-trofica"] = {
@@ -622,6 +1149,280 @@ fontes: [
   { n: 15, tipo: "notícia institucional", ref: "Oregon State University Newsroom. 'Yellowstone transformed 15 years after the return of wolves', sobre o trabalho de Ripple e Beschta.", url: "https://news.oregonstate.edu/news/yellowstone-transformed-15-years-after-return-wolves" },
   { n: 16, tipo: "reportagem", ref: "Science.org. 'Predation, not fear of wolves, keeps elk from denuding Yellowstone', cobertura do estudo de Brice, Larsen, Stahler e MacNulty (2024).", url: "https://www.science.org/content/article/predation-not-fear-wolves-keeps-elk-denuding-yellowstone" },
   { n: 17, tipo: "fonte primária", ref: "'History and Status of Wild Ungulate Populations on the Northern Yellowstone Range'. Síntese de censos oficiais de inverno da população de cervos-canadenses, incluindo a contagem de 19.045 em 1994 e a mínima de 3.915 em 2013.", url: "https://www.sciencedirect.com/science/article/pii/S0190052818300750" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
+
+/* ── custo-afundado.js ─────────────────────────────────────── */
+CONTEUDOS["custo-afundado"] = {
+termo: "Falácia do custo afundado",
+area: "Psicologia",
+subtitulo: "Continuar investindo em algo só porque você já investiu muito nele é, na definição de livro-texto, um erro de raciocínio. Só que, quando pesquisadores foram checar de novo se esse comportamento é sempre irracional, mesmo em animais, a resposta ficou mais complicada do que o nome 'falácia' sugere.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que decisões deveriam, em teoria, olhar para frente (custos e benefícios futuros), não para trás.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que economistas tratam certos custos como 'irrecuperáveis' e, por isso, irrelevantes para a próxima decisão."
+],
+conexoes: [
+  { termo: "Efeito Dunning-Kruger", relacao: "Outro viés de decisão amplamente citado, cuja versão popular também precisou de reanálise estatística cuidadosa para separar o núcleo real do exagero." },
+  { termo: "Crise de replicação", relacao: "Um caso em que estudos recentes, incluindo réplicas em animais, questionaram se o mecanismo psicológico original está correto, sem negar que o padrão comportamental observado é real." },
+  { termo: "Falácia do promotor e probabilidade condicional", relacao: "Outro nome popular de 'falácia' aplicado a um raciocínio que, dependendo do contexto, pode não ser tão claramente irracional quanto o rótulo sugere." },
+  { termo: "Problema agente-principal", relacao: "Escalada de comprometimento com custos afundados é um problema recorrente em decisões organizacionais, onde quem decide continuar um projeto raramente é quem arca sozinho com o prejuízo de abandoná-lo." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Você comprou um ingresso não reembolsável para um filme. Na metade, percebe que o filme é ruim. Sair agora significa recuperar pelo menos o tempo que sobrou da noite; ficar até o fim não traz o dinheiro do ingresso de volta de jeito nenhum, ele já foi gasto, quer você fique ou saia. Ainda assim, boa parte das pessoas fica até o fim, citando o dinheiro já gasto como razão. Esse é o exemplo mais simples da <strong>falácia do custo afundado</strong>: deixar uma decisão futura ser influenciada por um custo passado que já não pode ser recuperado, não importa a escolha que se faça daqui para frente.</p>
+
+<p>O nome vem da expressão em inglês <em>sunk cost</em>, custo "afundado", que já foi para o fundo e não volta à tona. A regra normativa da economia é direta: só custos e benefícios futuros deveriam entrar na decisão. O que já foi gasto é, por definição, igual em qualquer cenário a partir de agora, então não deveria pesar na balança.</p>
+
+<h3>O experimento clássico</h3>
+
+<p>Hal Arkes e Catherine Blumer, em 1985, testaram isso com um cenário de viagem de esqui.<sup class="cit"><a href="#f1">1</a></sup> Metade dos participantes imaginava ter comprado uma viagem de $100 não reembolsável para o Michigan, e depois descobria uma viagem melhor, por $50, para Wisconsin, no mesmo fim de semana (impossível fazer as duas). A outra metade imaginava o mesmo cenário, mas sem menção a dinheiro já gasto. Cerca de metade do primeiro grupo escolheu a viagem pior (Michigan), citando o dinheiro já investido, mesmo sabendo que aproveitariam menos.<sup class="cit"><a href="#f1">1</a></sup> O experimento se tornou a demonstração de referência do efeito.</p>
+
+<div class="marca consenso">
+<span class="rot">O que é bem documentado</span>
+<p>Que pessoas, em muitos contextos diferentes (dinheiro, tempo, esforço), tendem a continuar um curso de ação por terem investido nele, mesmo quando a alternativa disponível é objetivamente melhor daqui para frente, é um padrão comportamental replicado em dezenas de estudos desde Arkes e Blumer. Isso não está em disputa.</p>
+</div>
+
+<h3>Onde a pergunta ficou mais interessante</h3>
+
+<p>O que passou a ser questionado, mais recentemente, não é se o padrão de comportamento existe, mas se ele é sempre, e só, um <em>erro</em> de raciocínio. Pesquisadores encontraram um comportamento parecido em ratos e camundongos: animais que já haviam "investido" tempo esperando por uma recompensa continuavam esperando mais do que animais que ainda não tinham investido esse tempo, um padrão interpretado, por décadas, como evidência de que o efeito do custo afundado é tão profundo que aparece até em cérebros bem mais simples que o humano.<sup class="cit"><a href="#f4">4</a></sup></p>
+
+<p>Um estudo de 2022 revisitou essa interpretação com um modelo computacional detalhado e encontrou algo diferente: o mesmo padrão de comportamento nos animais pode surgir de um processo de decisão inteiramente racional (continuar esperando porque, estatisticamente, o tempo já investido é informação real sobre a chance de a recompensa ainda vir), sem precisar de nenhum "viés de custo afundado" separado.<sup class="cit"><a href="#f4">4</a></sup> Isso não anula o experimento humano de Arkes e Blumer, mas mostra que atribuir automaticamente qualquer persistência após investimento a um "erro" psicológico pode estar pulando uma etapa.</p>
+
+<h3>Como aplicar isso na prática, sem exagerar</h3>
+
+<p>A lição prática de Arkes e Blumer continua de pé para decisões humanas explícitas e bem definidas, como a do cinema ou da viagem de esqui: se o dinheiro já foi gasto de qualquer forma, ele não deveria decidir o que fazer a seguir. Mas vale desconfiar de quem usa "isso é só a falácia do custo afundado" como resposta pronta para qualquer decisão de continuar algo em que já se investiu, porque em situações mais complexas, com informação incerta sobre o futuro, persistir depois de um investimento nem sempre é irracional, às vezes é a leitura correta de que o próprio investimento carrega informação real sobre o que vem a seguir.</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>A definição normativa, com precisão</h3>
+
+<p>Em teoria da decisão, um custo afundado é qualquer custo já incorrido que não pode ser recuperado independentemente da escolha futura. A prescrição padrão é que decisões racionais devem se basear apenas em custos e benefícios <strong>marginais</strong>, ou seja, incrementais a partir de agora, ignorando o que já foi gasto. A falácia consiste em deixar o tamanho do investimento passado influenciar a decisão sobre continuar ou não, mesmo quando esse investimento é, matematicamente, igual em todos os cenários possíveis daqui para frente.</p>
+
+<p>Arkes e Blumer propuseram uma explicação psicológica para por que isso acontece: um desejo de não parecer ter desperdiçado o investimento original, ligado à aversão à perda e ao medo de ser visto (por si mesmo ou por outros) como alguém que "jogou dinheiro fora".<sup class="cit"><a href="#f1">1</a></sup> Esse mecanismo, de proteção da própria imagem de tomador de decisão competente, é distinto de um simples erro de cálculo: a pessoa muitas vezes sabe que o dinheiro já foi gasto e ainda assim deixa isso pesar, por razões emocionais e sociais, não por confusão aritmética.</p>
+
+<h3>Escalada de comprometimento em organizações</h3>
+
+<p>Uma versão organizacional relacionada, mas distinta, é a <strong>escalada de comprometimento</strong> (<em>escalation of commitment</em>), descrita por Barry Staw a partir de 1976: gestores e equipes continuam investindo recursos em projetos com desempenho ruim, às vezes aumentando o investimento justamente depois de sinais claros de fracasso, em parte para justificar a decisão original diante de superiores ou de si mesmos. Esse fenômeno amplia o problema do custo afundado individual para o nível institucional, e é agravado quando quem decide continuar não é a mesma pessoa que vai arcar com o custo final de um fracasso reconhecido publicamente.</p>
+
+<h3>A evidência em animais, e por que ela foi reavaliada</h3>
+
+<p>Estudos anteriores a 2022, incluindo trabalhos com camundongos e humanos em tarefas de espera por recompensa, relataram um padrão consistente: quanto mais tempo um indivíduo (humano ou animal) já havia esperado por uma recompensa incerta, mais tempo adicional ele estava disposto a esperar, mesmo quando isso não fazia sentido do ponto de vista da recompensa esperada restante.<sup class="cit"><a href="#f4">4</a></sup> Esse achado foi usado como argumento de que o efeito do custo afundado tem raízes evolutivas profundas, presentes em cérebros de mamíferos bem distantes do humano.</p>
+
+<div class="marca emergente">
+<span class="rot">A reavaliação de 2022</span>
+<p>Torben Ott, Paul Masset, Thiago Gouvêa e Adam Kepecs, publicando na revista <em>Science Advances</em>, construíram um modelo computacional de um agente racional que atualiza continuamente sua estimativa de quanto tempo ainda vale a pena esperar, com base em toda a informação disponível, incluindo o próprio tempo já esperado (que, em muitas tarefas experimentais reais, é uma pista estatística genuína sobre a chance de sucesso). Esse modelo, sem qualquer 'viés de custo afundado' embutido, reproduziu o mesmo padrão de comportamento observado nos animais.<sup class="cit"><a href="#f4">4</a></sup> A conclusão dos autores não é que o custo afundado nunca influencia decisões (o experimento humano de Arkes e Blumer continua válido para o cenário que testou), mas que atribuir automaticamente qualquer persistência após investimento a um viés específico, sem descartar antes uma explicação estatística mais simples, é um erro metodológico recorrente na literatura.</p>
+</div>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Explicação</th><th>Mecanismo proposto</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Falácia do custo afundado (Arkes &amp; Blumer, 1985)</td><td>Aversão à perda e desejo de não parecer ter desperdiçado o investimento</td><td>Bem replicada em decisões humanas explícitas de escolha única</td></tr>
+<tr><td>Escalada de comprometimento (Staw, 1976)</td><td>Justificação social e institucional de uma decisão anterior, mesmo diante de fracasso</td><td>Bem documentada em contextos organizacionais</td></tr>
+<tr><td>Persistência racional dependente de informação (Ott et al., 2022)</td><td>O tempo já investido carrega informação estatística real sobre a chance de sucesso futuro</td><td>Explica parte do comportamento antes atribuído ao viés, especialmente em tarefas de espera repetida</td></tr>
+</tbody>
+</table>
+</div>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Custo afundado como dispositivo de compromisso</h3>
+
+<p>Uma linha de pesquisa mais recente em economia comportamental propõe algo ainda mais contraintuitivo: para uma pessoa com viés de presente (que tende a subvalorizar recompensas futuras em relação a recompensas imediatas), sentir uma resistência psicológica a abandonar um investimento já feito pode funcionar como um <strong>dispositivo de compromisso</strong> útil, ajudando essa pessoa a persistir em projetos que, calculado com cuidado, valem a pena no longo prazo, mas que ela mesma abandonaria cedo demais se avaliasse cada momento isoladamente.<sup class="cit"><a href="#f5">5</a></sup> Segundo essa análise, a sensibilidade ao custo afundado tem um efeito líquido positivo sobre o bem-estar de agentes com viés de presente, mesmo reconhecendo que o mesmo mecanismo também produz os casos claros de persistência ineficiente que a literatura clássica documentou.</p>
+
+<div class="marca controverso">
+<span class="rot">Até onde essa reinterpretação vai</span>
+<p>Essa linha de pesquisa não afirma que toda escalada de comprometimento é, no fundo, boa ideia disfarçada. Ela propõe que o mecanismo psicológico por trás da sensibilidade a custos afundados pode ter uma função adaptativa em certos contextos (conter o abandono precioce de projetos valiosos), ao mesmo tempo em que gera custos reais em outros (manter projetos genuinamente ruins). Separar esses dois casos na prática, sem o benefício da visão retrospectiva, continua sendo difícil, e é exatamente por isso que a etiqueta "falácia" precisa ser usada com mais cuidado do que o senso comum sugere.</p>
+</div>
+
+<h3>Por que isso importa fora do laboratório</h3>
+
+<p>Decisões de negócio, políticas públicas e relações pessoais são repetidamente analisadas através da lente do custo afundado: continuar um projeto de infraestrutura estourado no orçamento, manter um relacionamento insatisfatório "depois de tantos anos investidos", ou insistir numa carreira depois de anos de formação específica. A distinção mais útil, à luz da pesquisa mais recente, não é perguntar apenas "estou sendo influenciado pelo que já gastei", mas separar duas perguntas diferentes: o investimento passado está me dando informação real e válida sobre as chances futuras (o que pode justificar continuar), ou estou só evitando a sensação desconfortável de admitir uma perda (o que é o núcleo do erro original de Arkes e Blumer)? A resposta muda caso a caso, e fingir que a resposta é sempre "é uma falácia, pare agora" ignora a complexidade que a pesquisa mais recente revelou.</p>
+
+<h3>O que fica de pé, e o que precisa de mais cautela</h3>
+
+<p>O experimento original de Arkes e Blumer, com escolhas humanas explícitas e de uma única vez (como a viagem de esqui), continua sendo evidência sólida de que pessoas se deixam influenciar por custos que, matematicamente, deveriam ser irrelevantes. O que mudou é a generalização automática desse achado para qualquer situação de persistência depois de um investimento, especialmente em cenários de decisão repetida e incerta, onde o próprio tempo ou recurso já investido pode carregar informação legítima sobre o que vem a seguir. Tratar todo caso de "continuar apesar do já gasto" como prova automática de irracionalidade é, ironicamente, o tipo de simplificação excessiva que a psicologia da decisão deveria evitar.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Custo afundado (sunk cost)", def: "Custo já incorrido que não pode ser recuperado independentemente da decisão futura, e que, segundo a teoria normativa da decisão, não deveria influenciar escolhas daqui para frente." },
+    { termo: "Falácia do custo afundado", def: "Padrão de comportamento, documentado por Arkes e Blumer em 1985, de continuar um curso de ação por já ter investido nele, mesmo quando a alternativa disponível é objetivamente melhor a partir de agora." },
+    { termo: "Escalada de comprometimento", def: "Versão organizacional do fenômeno, descrita por Barry Staw a partir de 1976: gestores continuam ou aumentam investimento em projetos malsucedidos, em parte para justificar a decisão original." },
+    { termo: "Dispositivo de compromisso (commitment device)", def: "Mecanismo, psicológico ou institucional, que ajuda uma pessoa a manter um plano de longo prazo mesmo diante da tentação de abandoná-lo cedo demais; pesquisa recente propõe que a sensibilidade a custos afundados pode funcionar dessa forma para pessoas com viés de presente." },
+    { termo: "Viés de presente (present bias)", def: "Tendência de dar peso desproporcional a recompensas imediatas em relação a recompensas futuras, mesmo quando essas últimas são objetivamente maiores." }
+  ],
+  lembrar: [
+    "Arkes e Blumer (1985) demonstraram o efeito com o experimento da viagem de esqui: cerca de metade dos participantes escolheu a viagem pior, mas com dinheiro não reembolsável já gasto, em vez da viagem melhor e mais barata.",
+    "A regra normativa da economia é que só custos e benefícios futuros deveriam entrar numa decisão; custos já incorridos são, por definição, iguais em qualquer cenário possível a partir de agora.",
+    "Estudos com ratos e camundongos pareciam mostrar o mesmo padrão de comportamento, sugerindo raízes evolutivas profundas para o efeito.",
+    "Um estudo de 2022 (Ott, Masset, Gouvêa e Kepecs, Science Advances) mostrou que um modelo puramente racional, sem nenhum 'viés de custo afundado', consegue reproduzir o mesmo padrão de comportamento animal, porque o tempo já investido pode carregar informação estatística real sobre a chance de sucesso.",
+    "Escalada de comprometimento (Staw, 1976) é a versão organizacional do fenômeno, agravada quando quem decide continuar um projeto não é quem arca com o custo de reconhecer o fracasso.",
+    "Pesquisa recente em economia comportamental propõe que a sensibilidade a custos afundados pode funcionar como dispositivo de compromisso útil para pessoas com viés de presente, sem que isso anule os casos claros de persistência ineficiente."
+  ],
+  confusoes: [
+    { erro: "Qualquer decisão de continuar algo em que já se investiu tempo ou dinheiro é, por definição, a falácia do custo afundado", correcao: "Em decisões repetidas e incertas, o tempo ou recurso já investido pode carregar informação estatística real sobre as chances futuras, o que pode tornar a persistência uma escolha racional, não uma falácia. É preciso separar caso a caso." },
+    { erro: "O experimento de Arkes e Blumer de 1985 foi refutado pela pesquisa mais recente", correcao: "O experimento humano original, com uma escolha explícita e única, continua sendo evidência sólida do efeito. O que a pesquisa recente questiona é a generalização automática desse achado para outros contextos, especialmente estudos com animais em tarefas de espera repetida." },
+    { erro: "O fato de animais como ratos e camundongos apresentarem o mesmo padrão de comportamento prova que o custo afundado é um viés evolutivo profundo e universal", correcao: "Um modelo computacional puramente racional, sem nenhum viés embutido, reproduziu o mesmo padrão de comportamento animal em pelo menos um estudo (Ott et al., 2022), o que enfraquece a conclusão de que o padrão observado exige necessariamente um mecanismo de viés." },
+    { erro: "Reconhecer que a persistência após investimento pode ser racional em certos contextos significa que a falácia do custo afundado não existe", correcao: "As duas coisas coexistem: o efeito psicológico de Arkes e Blumer é real e replicado em decisões humanas explícitas, e, em paralelo, parte do comportamento antes atribuído automaticamente a esse viés, especialmente em animais e em decisões repetidas, tem explicação estatística mais simples." },
+    { erro: "Escalada de comprometimento e falácia do custo afundado são exatamente a mesma coisa", correcao: "São fenômenos relacionados, mas distintos: a falácia do custo afundado é um padrão individual de decisão; a escalada de comprometimento é sua versão organizacional, com a camada adicional de justificação social e institucional de decisões anteriores." }
+  ],
+  numeros: [
+    "Arkes, H. R. &amp; Blumer, C. (1985), Organizational Behavior and Human Decision Processes 35:124-140: cerca de metade dos participantes com dinheiro já investido escolheu a opção pior no experimento da viagem de esqui.",
+    "Staw, B. M. (1976): formulação original do conceito de escalada de comprometimento em contextos organizacionais.",
+    "Ott, T., Masset, P., Gouvêa, T. S. &amp; Kepecs, A. (2022), Science Advances 8(6):eabi7004: modelo computacional racional reproduz o padrão de comportamento em animais sem viés de custo afundado embutido.",
+    "A falácia do custo afundado é replicada em dezenas de estudos desde 1985, em contextos que envolvem dinheiro, tempo e esforço já investidos."
+  ]
+},
+
+flashcards: [
+  { f: "O que é um custo afundado, na definição da teoria da decisão?", v: "Um custo já incorrido que não pode ser recuperado independentemente da escolha futura, e que, segundo a regra normativa, não deveria influenciar decisões daqui para frente." },
+  { f: "Descreva o experimento clássico de Arkes e Blumer (1985) sobre custo afundado.", v: "Participantes com uma viagem de esqui de $100 não reembolsável, ao descobrirem uma viagem melhor por $50, frequentemente escolhiam a viagem pior e mais cara, citando o dinheiro já investido. Cerca de metade fez essa escolha." },
+  { f: "Qual é a regra normativa da economia sobre quais custos deveriam entrar numa decisão?", v: "Só custos e benefícios marginais, ou seja, incrementais a partir de agora, deveriam contar. Custos já incorridos são iguais em qualquer cenário futuro possível e, por isso, deveriam ser ignorados." },
+  { f: "Que explicação psicológica Arkes e Blumer propuseram para o efeito do custo afundado?", v: "Um desejo de não parecer ter desperdiçado o investimento original, ligado à aversão à perda e ao medo de ser visto como alguém que 'jogou dinheiro fora'." },
+  { f: "O que é escalada de comprometimento, e quem a descreveu originalmente?", v: "Versão organizacional do fenômeno, descrita por Barry Staw a partir de 1976: gestores continuam ou aumentam investimento em projetos malsucedidos, em parte para justificar a decisão original diante de outros." },
+  { f: "Que padrão de comportamento foi observado em ratos e camundongos, e como era interpretado antes de 2022?", v: "Animais que já haviam esperado mais tempo por uma recompensa incerta continuavam esperando mais, um padrão interpretado como evidência de que o efeito do custo afundado tem raízes evolutivas profundas." },
+  { f: "O que Ott, Masset, Gouvêa e Kepecs (2022) mostraram em seu estudo publicado na Science Advances?", v: "Que um modelo computacional de um agente puramente racional, usando o tempo já investido como informação estatística legítima sobre a chance de sucesso, reproduz o mesmo padrão de comportamento animal, sem precisar de nenhum viés de custo afundado embutido." },
+  { f: "Isso significa que o experimento original de Arkes e Blumer, com humanos, foi refutado?", v: "Não. O experimento humano, com uma escolha explícita e única, continua sendo evidência sólida do efeito. O que foi questionado é a generalização automática para outros contextos, como tarefas de espera repetida em animais." },
+  { f: "O que é a proposta de que a sensibilidade a custos afundados funciona como 'dispositivo de compromisso'?", v: "A ideia de que, para pessoas com viés de presente, resistir a abandonar um investimento já feito pode ajudar a manter projetos de longo prazo valiosos que, avaliados momento a momento, seriam abandonados cedo demais." },
+  { f: "Essa proposta significa que toda escalada de comprometimento é, no fundo, uma boa decisão disfarçada?", v: "Não. A pesquisa reconhece que o mesmo mecanismo psicológico também produz os casos clássicos de persistência ineficiente, e que separar os dois casos na prática, sem visão retrospectiva, é difícil." },
+  { f: "Qual é a distinção mais útil para avaliar se uma decisão de continuar algo é racional ou é a falácia do custo afundado?", v: "Perguntar se o investimento passado está dando informação real e válida sobre as chances futuras (o que pode justificar continuar) ou se a pessoa está apenas evitando a sensação desconfortável de admitir uma perda (o núcleo do erro original)." },
+  { f: "Por que a escalada de comprometimento é agravada em contextos organizacionais?", v: "Porque quem decide continuar um projeto malsucedido raramente é a mesma pessoa que arcará sozinha com o custo de reconhecer publicamente o fracasso, o que cria incentivo adicional para justificar a decisão original." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que é a falácia do custo afundado?",
+    alts: [
+      "A tendência de sempre escolher a opção mais barata disponível, independentemente da qualidade.",
+      "Deixar uma decisão futura ser influenciada por um custo passado que já não pode ser recuperado, não importa a escolha feita a partir de agora.",
+      "O hábito de nunca investir dinheiro em projetos de longo prazo.",
+      "A incapacidade de calcular corretamente o valor de um investimento futuro."
+    ],
+    correta: 1,
+    porque: "O núcleo do conceito é deixar um custo irrecuperável (que já é igual em qualquer cenário futuro) pesar numa decisão que deveria olhar só para frente." },
+
+  { camada: "nucleo",
+    q: "No experimento clássico de Arkes e Blumer (1985), o que aconteceu com participantes que tinham uma viagem de esqui de $100 não reembolsável, ao saberem de uma viagem melhor por $50?",
+    alts: [
+      "Todos escolheram automaticamente a viagem melhor e mais barata, sem exceção.",
+      "Cerca de metade escolheu a viagem pior e mais cara, citando o dinheiro já investido como razão.",
+      "Nenhum participante conseguiu decidir, e o experimento foi cancelado.",
+      "Todos pediram reembolso da viagem original antes de decidir."
+    ],
+    correta: 1,
+    porque: "Esse resultado, com cerca de metade dos participantes escolhendo a opção objetivamente pior por causa do dinheiro já gasto, é a demonstração de referência do efeito do custo afundado." },
+
+  { camada: "nucleo",
+    q: "Segundo a regra normativa da economia, quais custos deveriam influenciar uma decisão?",
+    alts: [
+      "Todos os custos já gastos no projeto, do início ao momento atual.",
+      "Apenas custos e benefícios futuros (marginais), já que custos passados são iguais em qualquer cenário possível a partir de agora.",
+      "Apenas custos emocionais, nunca custos financeiros.",
+      "O custo total do projeto, dividido igualmente entre passado e futuro."
+    ],
+    correta: 1,
+    porque: "Como o custo já incorrido não muda dependendo da escolha futura, ele não carrega informação relevante para decidir entre as opções disponíveis a partir de agora, do ponto de vista puramente normativo." },
+
+  { camada: "aprofundamento",
+    q: "O que é escalada de comprometimento, descrita por Barry Staw a partir de 1976?",
+    alts: [
+      "Um método de investimento financeiro que sempre aumenta o retorno ao longo do tempo.",
+      "A versão organizacional do custo afundado: gestores continuam ou aumentam investimento em projetos malsucedidos, em parte para justificar a decisão original.",
+      "Uma técnica de negociação salarial usada em grandes empresas.",
+      "Um princípio de contabilidade que exige registrar todos os custos afundados nos relatórios financeiros."
+    ],
+    correta: 1,
+    porque: "A escalada de comprometimento amplia o efeito individual do custo afundado para o nível institucional, agravado pela pressão de justificar decisões anteriores diante de outras pessoas." },
+
+  { camada: "aprofundamento",
+    q: "Que padrão de comportamento em ratos e camundongos foi historicamente interpretado como evidência de raízes evolutivas profundas para o custo afundado?",
+    alts: [
+      "Animais evitavam completamente qualquer tarefa que envolvesse espera por recompensa.",
+      "Animais que já haviam esperado mais tempo por uma recompensa incerta continuavam esperando mais tempo adicional.",
+      "Animais mostravam preferência aleatória entre recompensas, sem nenhum padrão consistente.",
+      "Animais nunca persistiam em nenhuma tarefa além de alguns segundos."
+    ],
+    correta: 1,
+    porque: "Esse padrão, de persistência crescente proporcional ao tempo já investido, foi por décadas interpretado como evidência de que o efeito do custo afundado é profundo e compartilhado entre espécies." },
+
+  { camada: "aprofundamento",
+    q: "O que Ott, Masset, Gouvêa e Kepecs mostraram em seu estudo de 2022, publicado na Science Advances?",
+    alts: [
+      "Que animais são completamente incapazes de qualquer forma de tomada de decisão racional.",
+      "Que um modelo computacional de um agente puramente racional, usando o tempo já investido como informação estatística legítima, reproduz o mesmo padrão de comportamento animal, sem precisar de um viés de custo afundado.",
+      "Que o experimento original de Arkes e Blumer com humanos estava completamente errado.",
+      "Que ratos e camundongos nunca demonstraram nenhum padrão de persistência relacionado a tempo investido."
+    ],
+    correta: 1,
+    porque: "O estudo propõe uma explicação alternativa e mais simples (persistência racional baseada em informação estatística) para um padrão de comportamento antes atribuído automaticamente a um viés psicológico específico." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela de explicações apresentada no documento, o que diferencia 'persistência racional dependente de informação' (Ott et al., 2022) da falácia clássica do custo afundado?",
+    alts: [
+      "Não há nenhuma diferença real entre as duas explicações.",
+      "Na persistência racional, o tempo já investido carrega informação estatística real sobre a chance de sucesso futuro, enquanto na falácia clássica a pessoa é influenciada pelo desejo de não parecer ter desperdiçado o investimento, mesmo sem essa informação real.",
+      "A persistência racional só se aplica a decisões financeiras, nunca a decisões de tempo.",
+      "A falácia clássica só ocorre em animais, nunca em humanos."
+    ],
+    correta: 1,
+    porque: "A distinção central é se o investimento passado carrega informação genuína e útil para a decisão futura (persistência racional) ou se influencia a decisão apenas por razões emocionais e sociais, sem informação nova (falácia clássica)." },
+
+  { camada: "extensao",
+    q: "O que a linha de pesquisa sobre custo afundado como 'dispositivo de compromisso' propõe?",
+    alts: [
+      "Que a falácia do custo afundado nunca existiu e é um mito da psicologia.",
+      "Que, para pessoas com viés de presente, a resistência a abandonar um investimento já feito pode ajudar a manter projetos de longo prazo valiosos que, avaliados momento a momento, seriam abandonados cedo demais.",
+      "Que todas as pessoas deveriam ser incentivadas a abandonar qualquer projeto assim que surgir uma alternativa melhor.",
+      "Que dispositivos de compromisso só funcionam em contextos financeiros, nunca em decisões pessoais."
+    ],
+    correta: 1,
+    porque: "Essa linha de pesquisa argumenta que o mesmo mecanismo psicológico que causa persistência ineficiente em alguns casos pode, em outros, corrigir um viés diferente (o viés de presente), com efeito líquido positivo sobre o bem-estar." },
+
+  { camada: "extensao",
+    q: "Por que o documento argumenta que a reinterpretação do custo afundado como possível dispositivo de compromisso não significa que toda escalada de comprometimento seja uma boa decisão disfarçada?",
+    alts: [
+      "Porque essa reinterpretação nunca foi aceita por nenhum pesquisador sério.",
+      "Porque o mesmo mecanismo psicológico que pode ajudar a manter projetos valiosos também continua produzindo os casos clássicos de persistência ineficiente, e separar os dois casos na prática, sem visão retrospectiva, é difícil.",
+      "Porque escalada de comprometimento é um fenômeno completamente diferente e sem relação com custo afundado.",
+      "Porque dispositivos de compromisso só existem em teoria, nunca na prática real."
+    ],
+    correta: 1,
+    porque: "A pesquisa recente propõe uma função adaptativa possível para o mecanismo, sem negar que ele também gera os custos reais documentados pela literatura clássica, o que exige cautela ao aplicar qualquer um dos dois rótulos automaticamente." },
+
+  { camada: "extensao",
+    q: "Qual é a pergunta mais útil, segundo o documento, para avaliar se uma decisão de continuar algo é racional ou é a falácia do custo afundado?",
+    alts: [
+      "Perguntar apenas quanto dinheiro já foi gasto no projeto até agora.",
+      "Perguntar se o investimento passado está dando informação real e válida sobre as chances futuras, ou se a pessoa está apenas evitando a sensação desconfortável de admitir uma perda.",
+      "Perguntar se outras pessoas aprovariam a decisão de continuar.",
+      "Perguntar se o projeto já existe há mais de um ano."
+    ],
+    correta: 1,
+    porque: "Essa distinção captura a diferença central revelada pela pesquisa mais recente: persistência baseada em informação genuína pode ser racional, enquanto persistência baseada só em evitar a sensação de desperdício é o núcleo do erro original identificado por Arkes e Blumer." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Arkes, H. R. &amp; Blumer, C. 'The Psychology of Sunk Cost'. <em>Organizational Behavior and Human Decision Processes</em> 35(1):124-140, 1985.", url: "https://www.sciencedirect.com/science/article/abs/pii/0749597885900494" },
+  { n: 2, tipo: "fonte primária", ref: "Staw, B. M. 'Knee-deep in the big muddy: A study of escalating commitment to a chosen course of action'. <em>Organizational Behavior and Human Performance</em> 16(1):27-44, 1976.", url: "https://www.sciencedirect.com/science/article/abs/pii/0030507376900050" },
+  { n: 3, tipo: "enciclopédia", ref: "The Decision Lab. Verbete 'The Sunk Cost Fallacy', com resumo do experimento original e aplicações práticas.", url: "https://thedecisionlab.com/biases/the-sunk-cost-fallacy" },
+  { n: 4, tipo: "crítica", ref: "Ott, T., Masset, P., Gouvêa, T. S. &amp; Kepecs, A. 'Apparent sunk cost effect in rational agents'. <em>Science Advances</em> 8(6):eabi7004, 2022.", url: "https://www.science.org/doi/10.1126/sciadv.abi7004" },
+  { n: 5, tipo: "fonte primária", ref: "Hartig, B. 'Rethinking the Sunk Cost \"Fallacy\": A Commitment Device against Present-Bias'.", url: "https://papers.ssrn.com/sol3/Delivery.cfm/3023700.pdf?abstractid=3023700" },
+  { n: 6, tipo: "divulgação", ref: "ResearchProspect. 'The Sunk Cost Fallacy: Definition &amp; How to Avoid It'.", url: "https://www.researchprospect.com/what-is-the-sunk-cost-fallacy/" },
+  { n: 7, tipo: "reportagem", ref: "Cobertura jornalística sobre a réplica do estudo de Ott e colegas e suas implicações para a interpretação de comportamento animal em neurociência.", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8836799/" },
+  { n: 8, tipo: "enciclopédia", ref: "Verbete de referência sobre escalada de comprometimento (escalation of commitment) em contextos organizacionais.", url: "https://db.arabpsychology.com/escalation-of-commitment-2/" },
+  { n: 9, tipo: "fonte primária", ref: "Thaler, R. 'Toward a Positive Theory of Consumer Choice'. <em>Journal of Economic Behavior &amp; Organization</em> 1(1):39-60, 1980. Introduziu o custo afundado como conceito de economia comportamental.", url: "https://www.sciencedirect.com/science/article/abs/pii/0167268180900517" },
+  { n: 10, tipo: "fonte primária", ref: "Navarro, A. D. &amp; Fantino, E. 'The Sunk Cost Effect in Pigeons and Humans'. <em>Journal of the Experimental Analysis of Behavior</em> 83(1):1-13, 2005. Um dos estudos que relatou o padrão em animais antes da reavaliação de 2022.", url: "https://pubmed.ncbi.nlm.nih.gov/15762377/" },
+  { n: 11, tipo: "fonte primária", ref: "Kahneman, D. &amp; Tversky, A. 'Prospect Theory: An Analysis of Decision under Risk'. <em>Econometrica</em> 47(2):263-291, 1979. Base teórica da aversão à perda usada para explicar o efeito do custo afundado.", url: "https://www.jstor.org/stable/1914185" },
+  { n: 12, tipo: "revisão acadêmica", ref: "'The road ahead for sunk costs'. <em>Learning &amp; Behavior</em>, revisão sobre o estado da pesquisa em custo afundado em humanos e animais.", url: "https://link.springer.com/article/10.3758/s13420-019-00375-8" },
+  { n: 13, tipo: "fonte primária", ref: "Pesquisa sobre custo afundado em decisões de investimento financeiro e vieses de portfólio.", url: "https://www.sciencedirect.com/science/article/pii/S0167268122002268" },
+  { n: 14, tipo: "fonte primária", ref: "'Beating Irrationality: Does Delegating to IT Alleviate the Sunk Cost Effect?', estudo sobre estratégias para reduzir a influência de custos afundados em decisões de negócio.", url: "https://arxiv.org/pdf/1110.2096" },
+  { n: 15, tipo: "divulgação", ref: "Leadership IQ. 'The Sunk Cost Fallacy', com exemplos aplicados a decisões organizacionais.", url: "https://www.leadershipiq.com/blogs/leadershipiq/the-sunk-cost-fallacy" }
 ]
 };
 
@@ -1693,6 +2494,269 @@ fontes: [
 ]
 };
 
+/* ── eleitor-mediano.js ────────────────────────────────────── */
+CONTEUDOS["eleitor-mediano"] = {
+termo: "Teorema do eleitor mediano",
+area: "Ciência Política",
+subtitulo: "Sob um conjunto específico de condições, dois candidatos competindo por votos deveriam convergir para exatamente a mesma posição, a do eleitor do meio da distribuição. Isso é matematicamente demonstrável. O problema é que as condições exigidas quase nunca se aplicam ao mundo real, e entender exatamente onde elas falham explica boa parte da polarização política que o teorema, na sua forma pura, não prevê.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que eleitores podem ser ordenados, aproximadamente, ao longo de um espectro político de um extremo a outro.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que modelos matemáticos em ciências sociais fazem suposições simplificadoras para tornar um problema tratável."
+],
+conexoes: [
+  { termo: "Tragédia dos comuns", relacao: "Ambos são modelos formais influentes de ciência política e economia que descrevem um resultado teórico preciso sob condições específicas, condições que a realidade só cumpre parcialmente." },
+  { termo: "Seleção adversa", relacao: "Os dois são exemplos de como um modelo simplificado, isolando um mecanismo específico, pode revelar uma lógica real e importante sem pretender descrever perfeitamente qualquer situação concreta." },
+  { termo: "Falseabilidade e demarcação (Popper)", relacao: "O teorema do eleitor mediano é um caso interessante para pensar sobre testabilidade: suas previsões dependem de premissas (unidimensionalidade, informação completa) que raramente são satisfeitas, complicando testes empíricos diretos." },
+  { termo: "Efeito Cantillon", relacao: "Ambos os temas envolvem teorias formais de ciências sociais com origem específica e clara, cuja aplicação e alcance real fora do modelo original geram debate contínuo entre especialistas." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Imagine uma eleição com apenas um tema em disputa, algo que pode ser representado como uma linha reta, do "mais à esquerda" ao "mais à direita" nesse tema específico. Cada eleitor tem uma posição preferida nessa linha, e vota no candidato cuja posição está mais próxima da sua. Se existem exatamente dois candidatos competindo por votos, e ambos querem maximizar o número de votos recebidos, o que cada um deveria fazer?</p>
+
+<p>A resposta, formalizada pela primeira vez de forma completa pelo economista escocês Duncan Black em 1948, é contraintuitiva à primeira vista: os dois candidatos deveriam convergir exatamente para a mesma posição, a do <strong>eleitor mediano</strong>, aquele que está bem no meio da distribuição de eleitores ao longo da linha (com exatamente metade dos eleitores à sua esquerda e metade à sua direita).<sup class="cit"><a href="#f2">2</a></sup> Qualquer candidato posicionado à esquerda dessa posição mediana perde para um oponente que se posicione um pouco mais perto do meio, porque esse oponente conquista todos os eleitores entre as duas posições, mais a metade que já estava a favor de cada lado. O mesmo raciocínio, aplicado repetidamente, empurra os dois candidatos para o centro exato da distribuição.</p>
+
+<h3>De onde vem essa ideia</h3>
+
+<p>A intuição matemática por trás do teorema já havia sido explorada por Harold Hotelling em 1929, num contexto diferente: por que duas lojas de doces, numa mesma rua reta, tendem a se instalar lado a lado, bem no meio da rua, em vez de se espalharem para atender melhor cada ponta da rua separadamente?<sup class="cit"><a href="#f1">1</a></sup> A resposta é a mesma lógica: cada loja, ao se mover em direção ao centro, "rouba" clientes do lado adversário sem perder nenhum cliente do próprio lado. Duncan Black formalizou essa lógica especificamente para votação por maioria em 1948, e Anthony Downs, em seu livro de 1957 <em>Uma Teoria Econômica da Democracia</em>, popularizou a aplicação do teorema à competição eleitoral entre partidos políticos, prevendo que partidos racionais deveriam convergir para posições centristas semelhantes.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+<div class="marca consenso">
+<span class="rot">O que é matematicamente sólido</span>
+<p>Sob as condições exatas do modelo (uma única dimensão de disputa, eleitores com preferências bem comportadas ao longo dessa dimensão, dois candidatos, informação completa sobre as preferências dos eleitores, e nenhum outro fator interferindo na decisão de voto além da posição no espectro), o resultado de convergência para o eleitor mediano é uma conclusão matemática rigorosamente demonstrada, não uma hipótese vaga. A disputa não é sobre se a matemática está correta dentro do modelo. É sobre o quanto o modelo, com suas condições específicas, corresponde a eleições reais.</p>
+</div>
+
+<h3>Por que a política real raramente parece assim</h3>
+
+<p>Se o teorema estivesse certo sobre o mundo real sem qualificação, seria de esperar que partidos concorrentes em qualquer democracia bipartidária convergissem para posições quase idênticas, moderadas e centristas. Isso claramente não descreve boa parte da política contemporânea, marcada, em muitos países, por polarização crescente entre partidos, não convergência. A explicação não é que o teorema esteja "errado" matematicamente, é que as condições que ele exige raramente se aplicam com exatidão à política real, algo que também ajuda a explicar muita coisa sobre por que ela funciona do jeito que funciona.</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>A primeira condição que costuma falhar: mais de uma dimensão</h3>
+
+<p>Eleições reais quase nunca envolvem um único tema em disputa. Um eleitor forma sua decisão considerando, simultaneamente, política econômica, política externa, questões sociais, meio ambiente, segurança pública, e dezenas de outros eixos, cada um dos quais poderia, isoladamente, ser representado como uma linha do "mais a favor" ao "mais contra". Quando o espaço de decisão tem duas ou mais dimensões independentes, o resultado matemático muda de forma dramática: Richard McKelvey demonstrou, em 1976, o que ficou conhecido como <strong>teorema do caos</strong>, mostrando que, em espaços multidimensionais, geralmente não existe nenhuma posição estável de equilíbrio (nenhum "eleitor mediano" multidimensional bem definido), e que é possível, em princípio, movimentar a política de qualquer posição para qualquer outra através de uma sequência específica de votações por maioria.<sup class="cit"><a href="#f4">4</a></sup> Isso significa que, assim que mais de um eixo relevante entra em jogo, a previsão clara e única de convergência ao centro deixa de valer de forma automática.</p>
+
+<h3>Outras condições que raramente se sustentam</h3>
+
+<p>Além da multidimensionalidade, várias outras premissas do modelo original são, na melhor das hipóteses, aproximações grosseiras da realidade política. Candidatos não têm informação perfeita sobre a distribuição exata de preferências dos eleitores, e frequentemente atuam sob incerteza considerável. Eleitores nem sempre votam de forma puramente instrumental, baseada apenas na proximidade ideológica; identidade partidária, lealdade histórica, e fatores não ideológicos (carisma, competência percebida, questões de caráter) também pesam na decisão. E o pressuposto de exatamente dois candidatos concorrendo por todos os votos simplifica demais sistemas com mais de dois partidos relevantes, comuns na maioria das democracias fora dos Estados Unidos.</p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Premissa do modelo original</th><th>Situação na política real</th></tr></thead>
+<tbody>
+<tr><td>Uma única dimensão de disputa</td><td>Múltiplas dimensões simultâneas (economia, cultura, política externa, etc.), gerando instabilidade segundo o teorema do caos de McKelvey</td></tr>
+<tr><td>Informação completa sobre preferências dos eleitores</td><td>Incerteza considerável sobre a distribuição real de opinião, mesmo com pesquisas de opinião modernas</td></tr>
+<tr><td>Voto puramente baseado em proximidade ideológica</td><td>Identidade partidária, carisma, competência percebida e outros fatores não ideológicos também pesam</td></tr>
+<tr><td>Exatamente dois candidatos competindo</td><td>Muitos sistemas eleitorais têm mais de dois partidos relevantes, mudando a dinâmica de convergência prevista</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>O papel específico das eleições primárias</h3>
+
+<p>Uma explicação popular para a polarização política é que eleições primárias (em que apenas eleitores de um partido escolhem seu candidato, tipicamente mais ideológicos que o eleitorado geral) empurrariam candidatos para posições mais extremas do que a lógica do eleitor mediano geral preveria. A pesquisa mais recente sobre esse mecanismo específico, porém, mostra um quadro mais nuançado: primárias sozinhas não são suficientes para gerar polarização, sendo necessária a presença de outros fatores complementares (como eleitores motivados por posição ideológica, não apenas por probabilidade de vitória) para que esse efeito apareça de forma robusta.<sup class="cit"><a href="#f6">6</a></sup></p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>O teorema do caos, com mais detalhe</h3>
+
+<p>O resultado de McKelvey merece atenção extra porque é surpreendentemente forte, e não apenas "o modelo simples deixa de funcionar direito". Em espaços de decisão com duas ou mais dimensões, e usando regras de votação por maioria simples, o teorema mostra que, partindo de qualquer posição de política pública, existe uma sequência de propostas, cada uma vencendo a anterior por maioria de votos, que consegue levar o resultado final a qualquer outra posição imaginável no espaço de políticas, incluindo posições extremamente distantes ou até absurdas para a maioria dos eleitores individualmente.<sup class="cit"><a href="#f5">5</a></sup> Isso sugere que, em princípio, sistemas de votação majoritária multidimensional são, matematicamente, muito mais instáveis e manipuláveis do que a intuição sugere, algo que ajuda a explicar por que instituições políticas reais (regras de agenda, comitês, procedimentos legislativos formais) desempenham um papel crucial em produzir estabilidade que a votação majoritária pura, sozinha, não garante.</p>
+
+<div class="marca controverso">
+<span class="rot">Se o modelo simples falha tanto, ele ainda serve para algo?</span>
+<p>Existe debate genuíno sobre quanto valor explicativo resta ao teorema do eleitor mediano, dado que suas condições ideais quase nunca se aplicam integralmente. Uma posição argumenta que o teorema continua sendo uma ferramenta útil como caso de referência, um ponto de partida teórico que ajuda a entender, por contraste, por que a política real diverge dele (e por quanto), do mesmo jeito que um físico usa um modelo de "atrito zero" mesmo sabendo que o atrito real nunca é zero. Outra posição, mais cética, argumenta que, uma vez que as condições do modelo falham de forma tão sistemática (multidimensionalidade quase sempre presente, informação sempre incompleta), o teorema tem pouco poder preditivo real sobre comportamento eleitoral concreto, servindo mais como exercício de elegância matemática do que como ferramenta empírica. Não há consenso definitivo sobre qual dessas leituras é mais correta.</p>
+</div>
+
+<h3>Reduzindo dimensões: por que a política às vezes parece mais simples do que a teoria prevê</h3>
+
+<p>Um fato empírico interessante amortece um pouco a severidade do teorema do caos: em muitas democracias reais, apesar de existirem dezenas de questões politicamente relevantes, o comportamento de voto de boa parte dos eleitores e partidos pode ser razoavelmente bem descrito por uma única dimensão dominante (geralmente rotulada de "esquerda-direita"), porque posições em diferentes temas tendem a andar correlacionadas na prática (quem é mais à esquerda em política econômica tende a ser mais à esquerda também em outras questões, com frequência maior do que a independência estatística pura preveria). Essa correlação empírica entre dimensões, quando forte o suficiente, aproxima o comportamento observado do previsto por um modelo unidimensional simplificado, mesmo que a estrutura teórica subjacente seja, de fato, multidimensional. Isso não elimina o problema teórico apontado por McKelvey, mas explica por que a política real nem sempre se comporta com o caos completo que o teorema, em sua forma mais geral, permite.</p>
+
+<h3>Implicações práticas para quem observa eleições</h3>
+
+<p>A lição mais útil do teorema do eleitor mediano, hoje, não é prever que dois candidatos vão convergir automaticamente para o centro (eles frequentemente não convergem). É oferecer uma pergunta de diagnóstico: quando um sistema político não converge para o centro como o modelo simples preveria, vale perguntar qual das premissas está falhando naquele caso específico. É multidimensionalidade real (questões culturais e econômicas se descolando)? É informação incompleta sobre o eleitorado? É a presença de mais de dois competidores relevantes? É o papel de identidade partidária superando cálculo puramente ideológico? Cada resposta aponta para um mecanismo político diferente, e o próprio teorema, mesmo "falhando" como previsão literal, continua útil como estrutura para fazer essa pergunta de forma precisa.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Teorema do eleitor mediano", def: "Resultado formal, demonstrado por Duncan Black em 1948, segundo o qual, sob condições específicas (uma dimensão de disputa, dois candidatos, informação completa), candidatos competindo por votos convergem para a posição do eleitor mediano, aquele com exatamente metade do eleitorado de cada lado." },
+    { termo: "Eleitor mediano", def: "O eleitor posicionado exatamente no meio da distribuição de preferências ao longo de uma dimensão de disputa política, com metade dos demais eleitores à sua esquerda e metade à sua direita." },
+    { termo: "Teorema do caos (McKelvey-Schofield)", def: "Resultado demonstrado por Richard McKelvey em 1976, mostrando que, em espaços de decisão com duas ou mais dimensões, votação por maioria geralmente não tem posição de equilíbrio estável, e qualquer política pode, em princípio, ser alcançada a partir de qualquer outra por uma sequência de votações." },
+    { termo: "Modelo espacial de competição", def: "Representação de candidatos e eleitores como pontos ao longo de uma ou mais dimensões, usada para modelar formalmente a decisão de voto e a escolha de posicionamento estratégico dos candidatos, com origem no trabalho de Harold Hotelling (1929) sobre competição entre firmas." },
+    { termo: "Convergência (na competição eleitoral)", def: "Tendência prevista pelo modelo espacial simples de que candidatos concorrentes adotem posições políticas cada vez mais semelhantes entre si, aproximando-se do centro da distribuição de preferências dos eleitores." }
+  ],
+  lembrar: [
+    "A intuição matemática do teorema vem de Harold Hotelling (1929), aplicada a competição entre firmas; Duncan Black (1948) formalizou a versão para votação por maioria; Anthony Downs (1957) popularizou a aplicação à competição entre partidos políticos.",
+    "Sob as condições exatas do modelo (uma dimensão, dois candidatos, informação completa, voto puramente ideológico), a convergência para o eleitor mediano é uma conclusão matematicamente rigorosa, não uma hipótese vaga.",
+    "A política real raramente satisfaz essas condições: eleições envolvem múltiplas dimensões, informação incompleta, mais de dois candidatos relevantes em muitos sistemas, e fatores de voto além da proximidade ideológica pura.",
+    "Richard McKelvey (1976) provou o 'teorema do caos': em espaços multidimensionais, votação por maioria geralmente não tem posição de equilíbrio estável, o que explica boa parte de por que a política real não converge como o modelo simples preveria.",
+    "Pesquisa recente mostra que eleições primárias, sozinhas, não são suficientes para gerar polarização; fatores complementares (como motivação ideológica dos eleitores) também precisam estar presentes.",
+    "Em muitas democracias reais, posições em diferentes dimensões políticas tendem a estar correlacionadas (quem é mais à esquerda numa questão tende a ser mais à esquerda em outras), o que aproxima o comportamento observado do previsto por um modelo unidimensional simplificado, mesmo sem eliminar o problema teórico multidimensional.",
+    "Existe debate genuíno, sem consenso definitivo, sobre quanto valor explicativo resta ao teorema quando suas condições ideais raramente se aplicam por completo."
+  ],
+  confusoes: [
+    { erro: "O teorema do eleitor mediano prevê, de forma confiável, que candidatos em qualquer eleição real vão convergir para posições centristas quase idênticas", correcao: "A convergência só é matematicamente garantida sob condições específicas (uma dimensão, dois candidatos, informação completa) que raramente se aplicam integralmente à política real, onde múltiplas dimensões e outros fatores costumam impedir essa convergência." },
+    { erro: "Como a política real frequentemente não converge para o centro, o teorema do eleitor mediano está matematicamente errado", correcao: "A matemática do teorema está correta dentro das condições do modelo. O que falha, na maior parte dos casos reais, são as premissas do modelo (unidimensionalidade, informação completa), não a lógica matemática em si." },
+    { erro: "O teorema do caos de McKelvey (1976) mostra que qualquer resultado de política pública é igualmente provável em qualquer eleição multidimensional", correcao: "O teorema mostra que, em princípio, qualquer posição pode ser alcançada a partir de qualquer outra por uma sequência de votações majoritárias, mas isso é uma afirmação sobre possibilidade teórica, não sobre o que de fato acontece quando instituições reais (regras de agenda, procedimentos legislativos) restringem essas sequências." },
+    { erro: "Eleições primárias são, sozinhas, a causa principal e suficiente da polarização política observada em muitos países", correcao: "Pesquisa mais recente mostra que primárias sozinhas não são suficientes para gerar polarização; é necessária a presença de fatores complementares, como eleitores motivados por posição ideológica além de probabilidade de vitória." },
+    { erro: "Como as condições do modelo raramente se aplicam por completo, o teorema do eleitor mediano não tem nenhuma utilidade prática hoje", correcao: "Mesmo 'falhando' como previsão literal em muitos casos, o teorema continua útil como ferramenta de diagnóstico: perguntar qual premissa específica está falhando num sistema político real ajuda a identificar mecanismos concretos (multidimensionalidade, identidade partidária, número de competidores) por trás da não convergência observada." }
+  ],
+  numeros: [
+    "Hotelling, H. (1929), Economic Journal 39:41-57: origem da intuição matemática de competição espacial, aplicada originalmente a firmas concorrentes.",
+    "Black, D. (1948), Journal of Political Economy 56(1):23-34: primeira formalização completa do teorema do eleitor mediano para votação por maioria.",
+    "Downs, A. An Economic Theory of Democracy, 1957: popularização da aplicação do teorema à competição entre partidos políticos.",
+    "McKelvey, R. (1976): demonstração do teorema do caos, mostrando instabilidade geral de equilíbrio em espaços de decisão multidimensionais sob votação majoritária."
+  ]
+},
+
+flashcards: [
+  { f: "O que o teorema do eleitor mediano prevê, sob suas condições ideais?", v: "Que, numa disputa com uma única dimensão política e dois candidatos, ambos deveriam convergir para a posição do eleitor mediano, aquele com exatamente metade do eleitorado de cada lado." },
+  { f: "Quem formalizou completamente o teorema do eleitor mediano, e em que ano?", v: "Duncan Black, em 1948, num artigo publicado no Journal of Political Economy." },
+  { f: "De onde veio a intuição matemática original por trás do teorema, antes de sua formalização para votação?", v: "De Harold Hotelling, em 1929, num contexto de competição espacial entre firmas (por que duas lojas numa mesma rua tendem a se instalar lado a lado, no meio da rua)." },
+  { f: "Quem popularizou a aplicação do teorema à competição entre partidos políticos, e em que obra?", v: "Anthony Downs, em seu livro de 1957, 'Uma Teoria Econômica da Democracia'." },
+  { f: "Por que a convergência ao centro, prevista pelo teorema, raramente se observa em eleições reais?", v: "Porque as condições exigidas pelo modelo (uma única dimensão de disputa, informação completa, dois candidatos, voto puramente ideológico) raramente se aplicam integralmente à política real." },
+  { f: "O que é o teorema do caos, demonstrado por Richard McKelvey em 1976?", v: "A demonstração de que, em espaços de decisão com duas ou mais dimensões, votação por maioria geralmente não tem posição de equilíbrio estável, e qualquer política pode, em princípio, ser alcançada a partir de qualquer outra por uma sequência de votações." },
+  { f: "O que a existência do teorema do caos implica sobre a instabilidade de sistemas políticos multidimensionais?", v: "Que, matematicamente, esses sistemas são muito mais instáveis do que a intuição sugere, o que ajuda a explicar por que instituições reais (regras de agenda, procedimentos legislativos) são cruciais para produzir estabilidade que a votação majoritária pura não garante sozinha." },
+  { f: "O que pesquisa recente mostra sobre o papel de eleições primárias na polarização política?", v: "Que primárias sozinhas não são suficientes para gerar polarização; são necessários fatores complementares, como eleitores motivados por posição ideológica, além de simples probabilidade de vitória." },
+  { f: "Por que, apesar do teorema do caos, a política real às vezes se comporta de forma mais próxima ao modelo unidimensional simples?", v: "Porque posições em diferentes dimensões políticas tendem a estar correlacionadas na prática (quem é mais à esquerda numa questão tende a ser mais à esquerda em outras), aproximando o comportamento observado do previsto por um modelo unidimensional, mesmo sem eliminar o problema teórico multidimensional." },
+  { f: "Quais são as principais premissas do modelo original que raramente se sustentam na política real, segundo a tabela do documento?", v: "Uma única dimensão de disputa, informação completa sobre preferências dos eleitores, voto puramente baseado em proximidade ideológica, e exatamente dois candidatos competindo." },
+  { f: "Existe consenso sobre quanto valor explicativo resta ao teorema, dado que suas condições raramente se aplicam integralmente?", v: "Não. Uma posição defende que ele continua útil como caso de referência teórico; outra, mais cética, argumenta que tem pouco poder preditivo real sobre comportamento eleitoral concreto." },
+  { f: "Qual é a utilidade prática mais defensável do teorema do eleitor mediano hoje, segundo o documento?", v: "Servir como ferramenta de diagnóstico: quando um sistema político não converge para o centro como o modelo simples preveria, perguntar qual premissa específica está falhando ajuda a identificar mecanismos políticos concretos por trás da não convergência." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que o teorema do eleitor mediano prevê, sob suas condições ideais (uma dimensão, dois candidatos, informação completa)?",
+    alts: [
+      "Que candidatos deveriam se posicionar nos extremos opostos do espectro político para maximizar votos.",
+      "Que dois candidatos competindo por votos deveriam convergir para a mesma posição, a do eleitor mediano.",
+      "Que apenas um candidato pode vencer uma eleição, independentemente de sua posição política.",
+      "Que eleitores sempre votam aleatoriamente, sem nenhuma lógica previsível."
+    ],
+    correta: 1,
+    porque: "Esse é o resultado central do teorema: sob as condições específicas do modelo, a lógica competitiva empurra os dois candidatos para convergir exatamente na posição do eleitor do meio da distribuição." },
+
+  { camada: "nucleo",
+    q: "Quem formalizou completamente o teorema do eleitor mediano para votação por maioria, e em que ano?",
+    alts: [
+      "Anthony Downs, em 1957.",
+      "Duncan Black, em 1948.",
+      "Harold Hotelling, em 1929.",
+      "Richard McKelvey, em 1976."
+    ],
+    correta: 1,
+    porque: "Duncan Black formalizou a versão completa do teorema em 1948, embora a intuição matemática básica já existisse desde o trabalho de Hotelling em 1929, num contexto de competição entre firmas." },
+
+  { camada: "nucleo",
+    q: "Por que a convergência ao centro, prevista pelo teorema, raramente se observa em eleições reais?",
+    alts: [
+      "Porque eleitores nunca votam de forma racional em nenhuma circunstância.",
+      "Porque as condições exigidas pelo modelo (uma única dimensão, informação completa, dois candidatos, voto puramente ideológico) raramente se aplicam integralmente à política real.",
+      "Porque o teorema nunca foi matematicamente demonstrado de forma correta.",
+      "Porque candidatos políticos são proibidos por lei de mudar de posição durante uma campanha."
+    ],
+    correta: 1,
+    porque: "A matemática do teorema é sólida dentro de suas condições; o que falha, na maior parte dos casos reais, são as premissas simplificadoras do modelo, não a lógica interna da demonstração." },
+
+  { camada: "aprofundamento",
+    q: "O que é o teorema do caos, demonstrado por Richard McKelvey em 1976?",
+    alts: [
+      "A demonstração de que eleições sempre produzem resultados aleatórios e imprevisíveis.",
+      "A demonstração de que, em espaços de decisão com duas ou mais dimensões, votação por maioria geralmente não tem posição de equilíbrio estável.",
+      "Um teorema sobre a física do caos aplicado a sistemas climáticos, sem relação com ciência política.",
+      "A prova de que o teorema do eleitor mediano é sempre válido, mesmo em múltiplas dimensões."
+    ],
+    correta: 1,
+    porque: "Esse resultado mostra que, ao contrário do caso unidimensional simples, espaços multidimensionais de decisão política geralmente carecem de qualquer posição de equilíbrio estável sob votação majoritária pura." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela apresentada no documento, qual é a diferença entre a premissa de 'informação completa' do modelo original e a situação real?",
+    alts: [
+      "Não existe diferença nenhuma: candidatos sempre têm informação perfeita sobre as preferências dos eleitores.",
+      "O modelo assume informação completa sobre preferências dos eleitores, enquanto na realidade existe incerteza considerável, mesmo com pesquisas de opinião modernas.",
+      "A informação completa só existe em eleições com mais de dois candidatos.",
+      "A premissa de informação completa nunca foi parte do modelo original de Hotelling, Black ou Downs."
+    ],
+    correta: 1,
+    porque: "Essa é uma das premissas simplificadoras que mais claramente diverge da realidade política, onde candidatos e partidos operam sob incerteza considerável sobre a distribuição exata de opinião do eleitorado." },
+
+  { camada: "aprofundamento",
+    q: "O que pesquisa recente mostra sobre o papel isolado de eleições primárias na geração de polarização política?",
+    alts: [
+      "Que primárias são, sozinhas, suficientes e a causa principal de toda polarização política observada.",
+      "Que primárias sozinhas não são suficientes para gerar polarização; são necessários fatores complementares, como eleitores motivados por posição ideológica.",
+      "Que primárias nunca têm nenhum efeito sobre o posicionamento de candidatos.",
+      "Que primárias só existem em sistemas políticos com mais de cinco partidos relevantes."
+    ],
+    correta: 1,
+    porque: "A relação entre primárias e polarização é mais nuançada do que a explicação popular sugere: primárias por si só, sem fatores complementares, não produzem de forma robusta o efeito de polarização frequentemente atribuído a elas." },
+
+  { camada: "aprofundamento",
+    q: "Por que a correlação entre diferentes dimensões políticas (por exemplo, posição econômica e posição em questões culturais) é relevante para entender por que a política real nem sempre exibe o caos completo previsto por McKelvey?",
+    alts: [
+      "Porque essa correlação elimina completamente qualquer problema teórico apontado pelo teorema do caos.",
+      "Porque, quando posições em diferentes dimensões tendem a andar juntas na prática, o comportamento observado se aproxima do previsto por um modelo unidimensional simplificado, mesmo que a estrutura subjacente seja multidimensional.",
+      "Porque a correlação entre dimensões só ocorre em sistemas eleitorais com apenas um partido.",
+      "Porque McKelvey provou que a correlação entre dimensões é sempre impossível na prática."
+    ],
+    correta: 1,
+    porque: "Essa correlação empírica não elimina o problema teórico da multidimensionalidade, mas explica por que a política real, na prática, frequentemente se comporta de forma mais próxima e previsível do que o teorema do caos, em sua forma mais geral, permitiria." },
+
+  { camada: "extensao",
+    q: "Segundo o documento, existe consenso definitivo sobre quanto valor explicativo resta ao teorema do eleitor mediano, dado que suas condições ideais raramente se aplicam por completo à política real?",
+    alts: [
+      "Sim, há consenso total de que o teorema não tem nenhuma utilidade e deveria ser abandonado.",
+      "Não. Uma posição defende que ele continua útil como caso de referência teórico; outra, mais cética, argumenta que tem pouco poder preditivo real, sem que haja consenso definitivo entre essas leituras.",
+      "Sim, há consenso total de que o teorema descreve perfeitamente qualquer eleição real, sem exceção.",
+      "A pergunta nunca foi discutida por nenhum cientista político."
+    ],
+    correta: 1,
+    porque: "Esse é um debate genuíno e em aberto na ciência política, sem resolução unânime, sobre o valor de modelos formais simplificados cujas premissas divergem sistematicamente da realidade que pretendem descrever." },
+
+  { camada: "extensao",
+    q: "Qual é a utilidade prática mais defensável do teorema do eleitor mediano hoje, segundo a conclusão do documento?",
+    alts: [
+      "Nenhuma: o teorema deveria ser completamente descartado da ciência política moderna.",
+      "Servir como ferramenta de diagnóstico: quando um sistema político não converge para o centro como o modelo simples preveria, perguntar qual premissa específica está falhando ajuda a identificar mecanismos políticos concretos.",
+      "Prever com exatidão o resultado de qualquer eleição futura em qualquer país do mundo.",
+      "Substituir completamente pesquisas de opinião pública como método de análise eleitoral."
+    ],
+    correta: 1,
+    porque: "Mesmo 'falhando' como previsão literal em muitos casos reais, usar o teorema como ponto de referência para perguntar por que a convergência não ocorreu continua sendo uma ferramenta analítica útil e precisa." },
+
+  { camada: "extensao",
+    q: "Por que o teorema do caos de McKelvey (1976) é considerado um resultado 'surpreendentemente forte', segundo o documento, e não apenas uma limitação leve do modelo simples?",
+    alts: [
+      "Porque ele mostra que, em espaços multidimensionais, uma sequência de votações majoritárias pode, em princípio, levar o resultado de qualquer posição inicial a qualquer outra posição imaginável, incluindo posições extremas.",
+      "Porque ele prova que eleições multidimensionais são sempre mais justas que eleições unidimensionais.",
+      "Porque ele foi o primeiro teorema da história a usar qualquer forma de matemática aplicada à política.",
+      "Porque ele mostra que apenas ditaduras sofrem do problema de instabilidade multidimensional, nunca democracias."
+    ],
+    correta: 1,
+    porque: "A força do resultado está em sua generalidade: não é apenas que o equilíbrio simples desaparece, é que a instabilidade se torna tão completa que, em princípio, qualquer resultado de política pública se torna alcançável por manipulação sequencial de votações." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Hotelling, H. 'Stability in Competition'. <em>The Economic Journal</em> 39(153):41-57, 1929.", url: "https://www.jstor.org/stable/2224214" },
+  { n: 2, tipo: "fonte primária", ref: "Black, D. 'On the Rationale of Group Decision-Making'. <em>Journal of Political Economy</em> 56(1):23-34, 1948.", url: "https://www.journals.uchicago.edu/doi/10.1086/256633" },
+  { n: 3, tipo: "fonte primária", ref: "Downs, A. <em>An Economic Theory of Democracy</em>. Harper &amp; Row, 1957.", url: "https://pages.uoregon.edu/myagkov/medianvot.pdf" },
+  { n: 4, tipo: "fonte primária", ref: "McKelvey, R. D. 'Intransitivities in multidimensional voting models and some implications for agenda control'. <em>Journal of Economic Theory</em>, 1976.", url: "https://en.wikipedia.org/wiki/McKelvey%E2%80%93Schofield_chaos_theorem" },
+  { n: 5, tipo: "revisão acadêmica", ref: "'On the instability of majority decision-making: testing the implications of the chaos theorems in a laboratory experiment'. <em>Theory and Decision</em>.", url: "https://link.springer.com/article/10.1007/s11238-019-09741-4" },
+  { n: 6, tipo: "fonte primária", ref: "'Primaries and Candidate Polarization: Behavioral Theory and Experimental Evidence'. <em>American Political Science Review</em>.", url: "https://www.cambridge.org/core/journals/american-political-science-review/article/abs/primaries-and-candidate-polarization-behavioral-theory-and-experimental-evidence/1C1D65F65256F07A47B01BF990822A2B" },
+  { n: 7, tipo: "revisão acadêmica", ref: "Congleton, R. D. 'The Median Voter Model'. Encyclopedia of Public Choice.", url: "https://pages.uoregon.edu/myagkov/medianvot.pdf" },
+  { n: 8, tipo: "fonte primária", ref: "'Polarization, abstention, and the median voter theorem'. <em>Humanities and Social Sciences Communications</em>.", url: "https://www.nature.com/articles/s41599-022-01056-0" },
+  { n: 9, tipo: "fonte primária", ref: "'No Polarization in Spite of Primaries: A Median Voter Theorem with Competitive Nominations'.", url: "https://link.springer.com/chapter/10.1007/978-3-319-15551-7_11" },
+  { n: 10, tipo: "divulgação", ref: "Notes On Liberty. 'Can Median Voter Theorem explain political polarization?'.", url: "https://notesonliberty.com/2017/03/20/can-median-voter-theorem-explain-political-polarization/" },
+  { n: 11, tipo: "enciclopédia", ref: "Oxford Reference. Verbete 'Median voter'.", url: "https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100146688" },
+  { n: 12, tipo: "fonte primária", ref: "'Testing the accuracy of the Downs' spatial voter model on forecasting the winners of the French parliamentary elections in May-June 2007'.", url: "https://www.sciencedirect.com/science/article/abs/pii/S0169207009000478" },
+  { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Median voter theorem', com panorama histórico e das principais críticas ao modelo.", url: "https://en.wikipedia.org/wiki/Median_voter_theorem" },
+  { n: 14, tipo: "fonte primária", ref: "'Beyond the Median Voter Theorem: A New Framework for Ideological Positioning'.", url: "https://arxiv.org/pdf/2502.06562" },
+  { n: 15, tipo: "fonte primária", ref: "'A walk down the middle lane of the Median Voter Theorem's Origins', revisão histórica sobre a origem e desenvolvimento do teorema.", url: "https://wiredspace.wits.ac.za/bitstreams/dca16f0f-5103-478d-ade5-87cf4be6911e/download" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
+
 /* ── fourier.js ────────────────────────────────────────────── */
 CONTEUDOS["fourier"] = {
 termo: "Transformada de Fourier",
@@ -2011,6 +3075,280 @@ fontes: [
   { n: 7, tipo: "livro", ref: "Bracewell, R. <em>The Fourier Transform and Its Applications</em>. 3ª ed., McGraw-Hill, 2000. Referência padrão em engenharia, com tratamento cuidadoso de convolução e amostragem.", url: "" }
 ]
 };
+
+/* ── gato-schrodinger.js ───────────────────────────────────── */
+CONTEUDOS["gato-schrodinger"] = {
+termo: "Gato de Schrödinger e o problema da medição",
+area: "Física",
+subtitulo: "Erwin Schrödinger inventou o gato para provar que uma interpretação da física quântica levava a um absurdo, não para ilustrar que gatos podem estar vivos e mortos ao mesmo tempo. Quase um século depois, físicos já criaram versões reais e minúsculas do experimento em laboratório, e ainda assim não existe consenso sobre o que exatamente acontece no momento da medição.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que partículas quânticas podem existir em combinações de estados (superposição) antes de serem medidas.",
+  "Para o aprofundamento: familiaridade básica com a ideia de probabilidade e com o conceito de que medir algo pode, em física quântica, mudar o próprio sistema medido."
+],
+conexoes: [
+  { termo: "Tunelamento quântico", relacao: "Os dois casos tratam de comportamentos genuinamente quânticos que desafiam a intuição construída a partir da física do dia a dia, e ambos têm implementações tecnológicas reais fora do domínio puramente teórico." },
+  { termo: "Emaranhamento quântico", relacao: "O problema da medição, que o gato de Schrödinger ilustra, está diretamente ligado a como e quando um sistema emaranhado 'decide' um resultado definido." },
+  { termo: "Crise de replicação", relacao: "Como o efeito Dunning-Kruger e a cascata trófica de Yellowstone, é um caso em que a versão popular de um conceito científico se afastou bastante da intenção original de quem o formulou." },
+  { termo: "Falseabilidade e demarcação (Popper)", relacao: "Diferentes interpretações da mecânica quântica (Copenhague, muitos-mundos, colapso objetivo) fazem, em muitos casos, as mesmas previsões observáveis, o que levanta a pergunta de até que ponto elas são cientificamente testáveis entre si." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Em novembro de 1935, o físico austríaco Erwin Schrödinger publicou um artigo com um experimento mental que se tornaria a imagem mais famosa da física quântica.<sup class="cit"><a href="#f1">1</a></sup> A versão popular: um gato é colocado numa caixa fechada junto de um mecanismo ligado a um átomo radioativo. Se o átomo decair, um martelo quebra um frasco de veneno e o gato morre. Se não decair, o gato continua vivo. Como o decaimento do átomo é um evento quântico, regido por probabilidade, a mecânica quântica descreveria o átomo (e, por extensão, o gato) como estando numa combinação dos dois estados, "decaído e não decaído", até que alguém abra a caixa e observe. Popularmente, isso é resumido como "o gato está vivo e morto ao mesmo tempo até ser observado".</p>
+
+<p>Essa versão popular inverte a intenção do próprio Schrödinger. Ele não estava propondo que o gato realmente estivesse nesse estado duplo. Estava fazendo o oposto: usando o absurdo óbvio de um gato vivo-e-morto para mostrar que havia algo errado, ou pelo menos incompleto, na forma como a interpretação dominante da época (hoje chamada de interpretação de Copenhague) descrevia o que acontece entre uma medição e outra.<sup class="cit"><a href="#f1">1</a></sup> Para Schrödinger, era claro que um gato de verdade está vivo ou morto, nunca as duas coisas, quer alguém esteja olhando ou não. O experimento é, no vocabulário da lógica, uma <em>reductio ad absurdum</em>: leve uma ideia às últimas consequências para mostrar que ela não pode estar certa do jeito que foi formulada.</p>
+
+<div class="marca consenso">
+<span class="rot">O que não está em disputa</span>
+<p>Que partículas subatômicas isoladas podem existir em superposição, ou seja, numa combinação matemática de mais de um estado possível ao mesmo tempo, antes de serem medidas, é um resultado experimental extremamente bem estabelecido, verificado repetidamente desde o início do século 20. O que está em disputa não é isso. É o que exatamente acontece no momento em que essa superposição "vira" um resultado definido, o chamado <strong>problema da medição</strong>, e por que sistemas grandes como gatos, pessoas e bolas de futebol nunca parecem estar em superposição observável.</p>
+</div>
+
+<h3>Por que gatos não ficam em superposição, na prática</h3>
+
+<p>A resposta mais aceita hoje para "por que não vemos gatos em superposição" chama-se <strong>decoerência</strong>. Um átomo isolado, bem protegido de qualquer interação com o ambiente, consegue manter uma superposição por um tempo. Um gato, feito de trilhões de átomos, está constantemente trocando informação com o ar ao redor, a luz que reflete, o calor que emite. Cada uma dessas interações "vaza" um pouquinho de informação sobre o estado do gato para o ambiente, e esse vazamento destrói a superposição extremamente rápido, muito antes de qualquer observador abrir a caixa. A superposição não desaparece por mágica quando alguém olha: ela se perde por causa da complexidade e do contato do sistema com o mundo à sua volta.<sup class="cit"><a href="#f7">7</a></sup></p>
+
+<p>Isso não resolve completamente o problema filosófico de fundo (por que existe um resultado definido no final, e não apenas uma soma de possibilidades cada vez mais complicada), mas explica bem por que a superposição de objetos grandes é, na prática, impossível de observar diretamente no dia a dia.</p>
+
+<h3>Versões reais, em miniatura, já foram feitas em laboratório</h3>
+
+<p>A parte que mais surpreende quem conhece só a versão popular do experimento mental: físicos já criaram, de fato, pequenas versões reais de "estados de gato" em laboratório, não com gatos, mas com átomos isolados, fótons e circuitos supercondutores colocados deliberadamente em superposição de dois estados bem distintos entre si (por exemplo, um átomo em duas posições espaciais separadas ao mesmo tempo).<sup class="cit"><a href="#f4">4</a></sup> Serge Haroche e David Wineland dividiram o Nobel de Física de 2012 justamente por técnicas que permitiram criar e observar, em tempo real, esses estados de superposição perdendo coerência aos poucos, ou seja, observar a "morte" gradual do gato quântico acontecendo diante dos instrumentos.<sup class="cit"><a href="#f5">5</a></sup></p>
+
+<h3>Por que essa história é um bom teste de leitura científica</h3>
+
+<p>O gato de Schrödinger é um caso valioso para praticar uma pergunta que vale para qualquer conceito científico popularizado: a versão que circula é a tese de quem formulou a ideia, ou o oposto dela, simplificado até perder o ponto principal? Aqui a resposta é clara e verificável: quem quiser saber o que Schrödinger realmente disse pode ler o artigo original, hoje traduzido e disponível. E o que ele disse foi, essencialmente, "isso soa ridículo, então algo na nossa explicação está incompleto", não "isso é como o universo realmente funciona".</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>O contexto: uma resposta ao artigo EPR</h3>
+
+<p>Schrödinger escreveu o experimento do gato como parte de uma resposta ao artigo de Albert Einstein, Boris Podolsky e Nathan Rosen, publicado alguns meses antes em 1935, que ficou conhecido como o "paradoxo EPR".<sup class="cit"><a href="#f3">3</a></sup> Einstein, Podolsky e Rosen argumentavam que a mecânica quântica, do jeito que era formulada, devia estar incompleta, porque parecia permitir que a medição de uma partícula afetasse instantaneamente outra partícula distante (o que hoje chamamos de emaranhamento quântico). Schrödinger, que trocava correspondência com Einstein sobre o tema, propôs o experimento do gato como uma forma ainda mais visceral de mostrar o mesmo desconforto: se a mecânica quântica descreve literalmente qualquer sistema isolado da mesma forma, inclusive sistemas macroscópicos, ela deveria prever superposições macroscópicas absurdas. Como isso não corresponde à experiência cotidiana, algo precisa ser adicionado ou reinterpretado.</p>
+
+<h3>O que é, precisamente, o problema da medição</h3>
+
+<p>Formalmente, o problema da medição é a tensão entre duas descrições da mecânica quântica que parecem incompatíveis. Enquanto não é medido, um sistema quântico evolui de forma contínua e determinística, segundo a equação de Schrödinger, permitindo superposições de múltiplos estados. No momento em que é medido, porém, o formalismo padrão diz que o sistema "colapsa" abruptamente para um único resultado definido, de forma probabilística, não determinística. A pergunta incômoda é: o que exatamente conta como "medição"? Precisa de um observador consciente? Um aparelho de medição também "conta" como sistema quântico, então por que ele não entra em superposição com o que está medindo? Não existe, dentro do formalismo matemático básico, uma definição precisa e amplamente aceita do momento ou do mecanismo em que esse colapso ocorre.<sup class="cit"><a href="#f7">7</a></sup></p>
+
+<h3>Decoerência: uma peça do quebra-cabeça, não a solução completa</h3>
+
+<p>A teoria da decoerência, desenvolvida principalmente por Wojciech Zurek a partir dos anos 1980, explica de forma matematicamente rigorosa por que sistemas grandes e complexos deixam de exibir efeitos de superposição observáveis: a interação com um ambiente grande e não controlado espalha a informação quântica de um jeito que, na prática, é irreversível.<sup class="cit"><a href="#f7">7</a></sup> Isso explica muito bem por que <em>não vemos</em> gatos em superposição. O que a decoerência sozinha não resolve é a chamada "questão de escolha do resultado" (por que o sistema termina num resultado definido específico, e não noutro, e o que "resultado definido" realmente significa em termos fundamentais). Por isso, mesmo com a decoerência bem estabelecida, o problema filosófico mais profundo da medição continua sem uma resposta unânime.</p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Interpretação</th><th>Ideia central</th><th>O que "resolve" no problema da medição</th></tr></thead>
+<tbody>
+<tr><td>Copenhague (tradicional)</td><td>O colapso é um postulado adicional da teoria; a pergunta "o que causa o colapso" é considerada fora do escopo da física</td><td>Evita a pergunta em vez de respondê-la</td></tr>
+<tr><td>Muitos-mundos (Everett)</td><td>Não há colapso: todos os resultados possíveis acontecem, cada um numa ramificação distinta do universo</td><td>Elimina o colapso, ao custo de aceitar ramificações do universo não observáveis</td></tr>
+<tr><td>Colapso objetivo (ex.: GRW)</td><td>O colapso é um processo físico real, espontâneo, que fica mais provável quanto maior o sistema</td><td>Propõe um mecanismo físico testável, ainda sem confirmação experimental direta</td></tr>
+<tr><td>QBism e afins</td><td>O "estado quântico" descreve o grau de crença de um observador, não uma propriedade objetiva do sistema</td><td>Reinterpreta a pergunta, tratando probabilidade quântica como informação subjetiva</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="marca controverso">
+<span class="rot">Por que isso ainda divide fisicamente</span>
+<p>Um levantamento formal de opinião entre físicos e filósofos especializados em fundamentos da mecânica quântica, conduzido por Maximilian Schlosshauer, Johannes Kofler e Anton Zeilinger em 2013, encontrou respostas divididas entre as diferentes interpretações, sem que nenhuma reunisse maioria clara entre os participantes.<sup class="cit"><a href="#f9">9</a></sup> Isso não significa que a mecânica quântica em si seja incerta: as previsões numéricas da teoria são extremamente bem testadas e concordam com o experimento em todas as situações já checadas. O que está em aberto é a interpretação sobre o que essas previsões dizem a respeito da realidade entre uma medição e outra, uma pergunta que, até o momento, as próprias previsões da teoria não conseguem decidir sozinhas.</p>
+</div>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Como se cria um "gato" de verdade em laboratório</h3>
+
+<p>Vale detalhar como funciona um experimento real desse tipo, porque a técnica é elegante. Charles Monroe, Wineland e colegas prenderam um único íon de berílio numa armadilha eletromagnética, resfriaram seu movimento até perto do estado de menor energia possível, e usaram pulsos de laser cuidadosamente calibrados para colocá-lo numa superposição de duas posições espaciais separadas por uma distância minúscula, mas mensurável, funcionando como um "gato" reduzido a um único átomo em dois lugares ao mesmo tempo.<sup class="cit"><a href="#f4">4</a></sup> Já o grupo de Serge Haroche usou uma técnica diferente, de eletrodinâmica quântica de cavidades: fótons de micro-ondas presos entre dois espelhos supercondutores extremamente refletores, atravessados por átomos que interagem com o campo, permitindo observar a decoerência de uma superposição do campo eletromagnético se desenrolando passo a passo, em tempo real, à medida que mais átomos cruzavam a cavidade.<sup class="cit"><a href="#f5">5</a></sup><sup class="cit"><a href="#f6">6</a></sup></p>
+
+<h3>Por que essa distância entre teoria e experimento persiste há quase um século</h3>
+
+<p>Um ponto que vale destacar: não é falta de tecnologia que impede alguém de simplesmente colocar um gato de verdade em superposição para testar a interpretação de Copenhague contra a de muitos-mundos. É que a decoerência age tão rápido, e cresce tão abruptamente com o número de partículas envolvidas, que a diferença entre "manter um átomo em superposição por segundos" e "manter um gato inteiro em superposição por uma fração de segundo" não é uma questão de grau, é uma barreira prática que cresce exponencialmente com o tamanho e a complexidade do sistema.<sup class="cit"><a href="#f7">7</a></sup> Isso significa que, mesmo daqui a décadas, é bem provável que continue sendo impossível observar diretamente um objeto macroscópico em superposição, o que deixa margem para que diferentes interpretações continuem compatíveis com todos os dados observáveis, sem que nenhuma seja definitivamente eliminada por experimento.</p>
+
+<h3>O que isso ensina sobre testabilidade em física fundamental</h3>
+
+<p>Esse é um caso interessante para pensar sobre os limites do método científico. Duas interpretações que fazem exatamente as mesmas previsões numéricas para todo experimento realizável não podem, por definição, ser diferenciadas por nenhum experimento futuro, só pela análise filosófica de qual delas é mais econômica, mais coerente ou mais satisfatória em outros critérios que não são puramente empíricos. Isso não torna a pergunta sem sentido, mas muda sua natureza: parte da discussão sobre interpretações da mecânica quântica se aproxima mais de filosofia da física do que de física experimental no sentido estrito, o que ajuda a explicar por que o debate persiste sem se resolver do mesmo jeito que uma disputa sobre um valor numérico medido em laboratório se resolveria.</p>
+
+<h3>De volta à imagem popular</h3>
+
+<p>Vale fechar reconhecendo por que a versão simplificada persiste apesar de inverter a intenção original: "o gato está vivo e morto ao mesmo tempo" é uma frase de efeito muito mais memorável do que "a interpretação de Copenhague, aplicada sem qualificação a sistemas macroscópicos, gera uma previsão que não corresponde à experiência cotidiana, o que sugere que a teoria precisa de um ingrediente adicional (decoerência) ou de uma reinterpretação filosófica". O gato sobrevive na cultura popular como ilustração positiva de um princípio que Schrödinger, na verdade, estava usando para apontar um problema sem solução até hoje.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Gato de Schrödinger", def: "Experimento mental de 1935 em que Erwin Schrödinger descreveu um gato hipotético numa combinação de estados vivo e morto, para argumentar que aplicar a interpretação de Copenhague sem qualificação a objetos macroscópicos leva a um absurdo, não para propor que gatos reais possam estar nesse estado." },
+    { termo: "Superposição", def: "Propriedade de sistemas quânticos de existir numa combinação matemática de múltiplos estados possíveis antes de serem medidos, bem estabelecida experimentalmente para partículas isoladas e sistemas pequenos." },
+    { termo: "Problema da medição", def: "Tensão não resolvida entre a evolução contínua e determinística de um sistema quântico isolado e o 'colapso' abrupto e probabilístico que ocorre quando esse sistema é medido, sem definição amplamente aceita do que exatamente conta como medição." },
+    { termo: "Decoerência", def: "Processo, bem descrito matematicamente desde os anos 1980 (Zurek e outros), pelo qual a interação de um sistema quântico com um ambiente grande e não controlado destrói rapidamente a superposição observável, explicando por que objetos macroscópicos não exibem efeitos quânticos visíveis." },
+    { termo: "Interpretações da mecânica quântica", def: "Diferentes propostas filosóficas e formais (Copenhague, muitos-mundos, colapso objetivo, QBism, entre outras) para explicar o que o formalismo quântico diz sobre a realidade entre uma medição e outra, em geral compatíveis com as mesmas previsões numéricas observáveis." }
+  ],
+  lembrar: [
+    "Schrödinger propôs o experimento do gato em 1935 como uma reductio ad absurdum contra a interpretação de Copenhague aplicada sem qualificação a objetos grandes, não como uma ilustração positiva de superposição macroscópica.",
+    "O experimento foi parte de uma resposta ao artigo EPR (Einstein, Podolsky e Rosen), publicado meses antes em 1935, sobre a suposta incompletude da mecânica quântica.",
+    "Superposição de partículas isoladas é um resultado experimental extremamente bem estabelecido. O que continua em disputa é o problema da medição: o que exatamente acontece, e por que, no momento em que essa superposição vira um resultado definido.",
+    "Decoerência explica bem por que objetos grandes como gatos não exibem superposição observável, mas não resolve sozinha a questão filosófica de por que existe um resultado definido específico ao final do processo.",
+    "Físicos já criaram versões reais e minúsculas de 'estados de gato' em laboratório, com átomos e fótons isolados. Serge Haroche e David Wineland dividiram o Nobel de Física de 2012 por técnicas relacionadas a isso.",
+    "Um levantamento de 2013 (Schlosshauer, Kofler e Zeilinger) encontrou opiniões divididas entre físicos e filósofos sobre qual interpretação da mecânica quântica é correta, sem maioria clara para nenhuma.",
+    "Diferentes interpretações da mecânica quântica costumam fazer as mesmas previsões numéricas observáveis, o que torna parte da discussão mais próxima de filosofia da física do que de uma disputa resolvível só por experimento."
+  ],
+  confusoes: [
+    { erro: "Schrödinger acreditava que o gato realmente estava vivo e morto ao mesmo tempo até ser observado", correcao: "Schrödinger considerava essa conclusão 'bastante ridícula', usando-a propositalmente como um absurdo para criticar a interpretação de Copenhague aplicada sem qualificação a sistemas macroscópicos, não como uma afirmação sobre o que realmente acontece com gatos." },
+    { erro: "A superposição só é destruída porque um observador consciente olha para o sistema", correcao: "A explicação mais aceita hoje, a decoerência, mostra que a superposição se perde pela interação física do sistema com um ambiente complexo (ar, luz, calor), rápido demais para depender de consciência ou observação intencional." },
+    { erro: "A física quântica já resolveu completamente o problema da medição", correcao: "As previsões numéricas da mecânica quântica são extremamente bem testadas, mas a interpretação sobre o que causa o colapso e o que ele significa continua sem consenso, como mostram levantamentos formais de opinião entre especialistas." },
+    { erro: "Já foi feito um experimento colocando um gato de verdade em superposição", correcao: "O que já foi feito são versões em miniatura, com átomos isolados, fótons ou circuitos supercondutores. A decoerência torna extremamente improvável observar diretamente objetos macroscópicos reais, como gatos, em superposição, mesmo com tecnologia futura." },
+    { erro: "Interpretação de muitos-mundos e interpretação de Copenhague podem ser diferenciadas por algum experimento ainda não realizado", correcao: "As duas interpretações fazem, na maior parte dos casos analisados até hoje, as mesmas previsões observáveis, o que torna a escolha entre elas mais uma questão de análise filosófica e critérios como economia teórica do que de um teste experimental decisivo." }
+  ],
+  numeros: [
+    "Schrödinger, E. 'Die gegenwärtige Situation in der Quantenmechanik'. Naturwissenschaften 23, 1935: artigo original em três partes que introduziu o experimento do gato.",
+    "Einstein, Podolsky &amp; Rosen. 'Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?'. Physical Review 47:777, 1935: o artigo EPR que motivou a resposta de Schrödinger.",
+    "Monroe, Meekhof, King &amp; Wineland. 'A Schrödinger Cat Superposition State of an Atom'. Science 272(5265):1131-1136, 1996: primeira criação de um estado de superposição espacial num único átomo aprisionado.",
+    "Serge Haroche e David Wineland dividiram o Prêmio Nobel de Física de 2012 por métodos experimentais que permitem medir e manipular sistemas quânticos individuais.",
+    "Schlosshauer, Kofler &amp; Zeilinger (2013): levantamento com 33 participantes especialistas em fundamentos da mecânica quântica, sem maioria clara para nenhuma interpretação."
+  ]
+},
+
+flashcards: [
+  { f: "Qual era o propósito original de Schrödinger ao propor o experimento do gato, em 1935?", v: "Usar o absurdo de um gato vivo e morto ao mesmo tempo como reductio ad absurdum, para argumentar que a interpretação de Copenhague, aplicada sem qualificação a sistemas macroscópicos, levava a uma conclusão que não corresponde à experiência cotidiana." },
+  { f: "O experimento do gato foi uma resposta a qual outro artigo científico de 1935?", v: "O artigo de Einstein, Podolsky e Rosen (EPR), que argumentava que a mecânica quântica devia estar incompleta." },
+  { f: "O que está bem estabelecido experimentalmente sobre superposição quântica, sem disputa?", v: "Que partículas subatômicas isoladas podem existir em superposição de múltiplos estados antes de serem medidas, um resultado verificado repetidamente desde o início do século 20." },
+  { f: "O que é o 'problema da medição' na mecânica quântica?", v: "A tensão não resolvida entre a evolução contínua e determinística de um sistema quântico isolado e o colapso abrupto e probabilístico que ocorre no momento da medição, sem definição amplamente aceita do que conta como medição." },
+  { f: "O que é decoerência, e o que ela explica?", v: "O processo pelo qual a interação de um sistema quântico com um ambiente complexo destrói rapidamente a superposição observável. Explica bem por que objetos grandes, como gatos, não exibem efeitos quânticos visíveis no dia a dia." },
+  { f: "O que a decoerência, sozinha, não resolve sobre o problema da medição?", v: "Por que o sistema termina num resultado definido específico, e não noutro, e o que 'resultado definido' significa em termos fundamentais. Essa questão continua sem resposta unânime." },
+  { f: "Que tipo de experimento real, em miniatura, já foi realizado com base na ideia do gato de Schrödinger?", v: "Criação de superposições em átomos isolados, fótons e circuitos supercondutores, como o experimento de Monroe, Meekhof, King e Wineland (1996), colocando um único íon em duas posições espaciais ao mesmo tempo." },
+  { f: "Por que Serge Haroche e David Wineland ganharam o Nobel de Física de 2012?", v: "Por métodos experimentais inovadores que permitem medir e manipular sistemas quânticos individuais, incluindo observar a decoerência de estados de superposição acontecendo em tempo real." },
+  { f: "O que o levantamento de Schlosshauer, Kofler e Zeilinger (2013) encontrou sobre a opinião de especialistas em fundamentos da mecânica quântica?", v: "Respostas divididas entre diferentes interpretações (Copenhague, muitos-mundos, colapso objetivo e outras), sem que nenhuma reunisse maioria clara entre os participantes." },
+  { f: "Por que é praticamente impossível observar diretamente um gato real em superposição, mesmo com tecnologia futura?", v: "Porque a decoerência age extremamente rápido e cresce de forma abrupta com o número de partículas envolvidas, tornando a manutenção de superposição em objetos macroscópicos uma barreira prática, não apenas tecnológica atual." },
+  { f: "Por que a escolha entre diferentes interpretações da mecânica quântica é considerada, em parte, mais filosófica do que experimental?", v: "Porque interpretações como Copenhague e muitos-mundos costumam fazer as mesmas previsões numéricas observáveis, então nenhum experimento futuro pode, por definição, diferenciá-las nesses casos, restando critérios como economia teórica e coerência filosófica." },
+  { f: "Qual é a lição mais ampla que o caso do gato de Schrödinger ensina sobre ler ciência popularizada?", v: "Vale sempre checar se a versão popular de uma ideia é a tese de quem a formulou originalmente ou o oposto dela, simplificado até perder o ponto principal. Nesse caso, a versão popular inverte a intenção crítica original de Schrödinger." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "Qual era a intenção original de Erwin Schrödinger ao propor o experimento mental do gato, em 1935?",
+    alts: [
+      "Provar que gatos reais podem ficar vivos e mortos ao mesmo tempo se colocados numa caixa fechada.",
+      "Usar o absurdo de um gato vivo e morto simultaneamente para criticar a interpretação de Copenhague aplicada sem qualificação a objetos macroscópicos.",
+      "Demonstrar que a física quântica não tem nenhuma aplicação prática fora do laboratório.",
+      "Substituir a teoria da relatividade de Einstein por um novo modelo baseado em gatos."
+    ],
+    correta: 1,
+    porque: "Schrödinger considerava a conclusão de um gato vivo-e-morto 'bastante ridícula' e a usou deliberadamente como um absurdo lógico (reductio ad absurdum), não como uma previsão que ele endossava." },
+
+  { camada: "nucleo",
+    q: "O que está bem estabelecido experimentalmente, sem disputa, sobre a física quântica neste contexto?",
+    alts: [
+      "Que gatos e outros objetos macroscópicos já foram observados diretamente em superposição.",
+      "Que partículas subatômicas isoladas podem existir em superposição de múltiplos estados antes de serem medidas.",
+      "Que a interpretação de Copenhague foi definitivamente refutada por experimento.",
+      "Que a mecânica quântica não tem nenhuma previsão numérica testável."
+    ],
+    correta: 1,
+    porque: "Superposição de sistemas pequenos e isolados é um resultado experimental repetidamente verificado. O que está em disputa é a interpretação do que acontece no momento da medição, não a existência da superposição em si." },
+
+  { camada: "nucleo",
+    q: "Por que gatos e outros objetos macroscópicos não exibem superposição observável no dia a dia, segundo a explicação mais aceita hoje?",
+    alts: [
+      "Porque a consciência de um observador destrói instantaneamente qualquer superposição ao redor.",
+      "Por causa da decoerência: a interação constante do objeto com um ambiente complexo (ar, luz, calor) destrói a superposição rapidamente, antes de qualquer observação intencional.",
+      "Porque objetos macroscópicos nunca obedecem às leis da física quântica.",
+      "Porque gatos têm uma propriedade biológica especial que os torna imunes a efeitos quânticos."
+    ],
+    correta: 1,
+    porque: "A decoerência, e não a observação consciente, é o mecanismo físico que explica por que sistemas grandes e complexos perdem a superposição rápido demais para ser observada no cotidiano." },
+
+  { camada: "aprofundamento",
+    q: "O experimento do gato de Schrödinger foi proposto como parte de uma resposta a qual outro artigo científico?",
+    alts: [
+      "O artigo de Niels Bohr sobre o princípio da complementaridade.",
+      "O artigo de Einstein, Podolsky e Rosen (EPR), sobre a suposta incompletude da mecânica quântica.",
+      "O artigo de Werner Heisenberg sobre o princípio da incerteza.",
+      "O artigo de Max Planck sobre a quantização da energia."
+    ],
+    correta: 1,
+    porque: "Schrödinger, que correspondia com Einstein, propôs o gato como uma forma ainda mais visceral de expressar o desconforto do artigo EPR (1935) com implicações da mecânica quântica aplicadas sem qualificação." },
+
+  { camada: "aprofundamento",
+    q: "O que a teoria da decoerência, desenvolvida principalmente por Wojciech Zurek, explica, e o que ela não resolve sozinha?",
+    alts: [
+      "Explica tudo sobre o problema da medição, sem deixar nenhuma questão em aberto.",
+      "Explica por que sistemas grandes perdem superposição observável rapidamente, mas não resolve sozinha por que o sistema termina num resultado definido específico.",
+      "Explica apenas fenômenos de física clássica, sem relação com mecânica quântica.",
+      "Prova definitivamente que a interpretação de muitos-mundos está correta."
+    ],
+    correta: 1,
+    porque: "A decoerência é uma peça importante e matematicamente bem descrita do quebra-cabeça, mas a questão filosófica de por que emerge um resultado definido específico continua sem resposta unânime entre especialistas." },
+
+  { camada: "aprofundamento",
+    q: "O que Monroe, Meekhof, King e Wineland demonstraram em 1996, publicado na revista Science?",
+    alts: [
+      "A primeira observação direta de um gato biológico em superposição quântica.",
+      "A criação de um estado de superposição espacial num único átomo aprisionado, funcionando como uma versão minúscula do 'gato' quântico.",
+      "A refutação completa da teoria da decoerência.",
+      "A prova de que partículas quânticas nunca podem ser observadas em superposição."
+    ],
+    correta: 1,
+    porque: "Esse experimento colocou um único íon de berílio em superposição de duas posições espaciais separadas, uma implementação real e controlada, em escala atômica, da ideia central do experimento mental de Schrödinger." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela de interpretações da mecânica quântica apresentada no documento, o que a interpretação de muitos-mundos (Everett) propõe sobre o colapso?",
+    alts: [
+      "Que o colapso é causado exclusivamente pela consciência do observador.",
+      "Que não há colapso: todos os resultados possíveis acontecem, cada um numa ramificação distinta do universo.",
+      "Que o colapso é impossível de ocorrer em qualquer circunstância.",
+      "Que o colapso só ocorre em sistemas biológicos, nunca em partículas isoladas."
+    ],
+    correta: 1,
+    porque: "A interpretação de muitos-mundos elimina a necessidade de um colapso, ao custo filosófico de aceitar ramificações do universo não observáveis diretamente, uma das principais alternativas à interpretação de Copenhague." },
+
+  { camada: "extensao",
+    q: "O que o levantamento de Schlosshauer, Kofler e Zeilinger, publicado em 2013, encontrou ao entrevistar físicos e filósofos especializados em fundamentos da mecânica quântica?",
+    alts: [
+      "Consenso quase unânime a favor da interpretação de Copenhague.",
+      "Opiniões divididas entre diferentes interpretações, sem que nenhuma reunisse maioria clara entre os participantes.",
+      "Rejeição unânime de todas as interpretações existentes até aquele momento.",
+      "Consenso de que o problema da medição já havia sido completamente resolvido."
+    ],
+    correta: 1,
+    porque: "Esse levantamento formal é uma evidência direta de que a disputa sobre interpretações da mecânica quântica continua ativa entre especialistas, décadas depois do experimento mental original de Schrödinger." },
+
+  { camada: "extensao",
+    q: "Por que, segundo o documento, é considerado praticamente impossível observar diretamente um objeto macroscópico real, como um gato, em superposição, mesmo com avanços tecnológicos futuros?",
+    alts: [
+      "Porque leis específicas de proteção animal proíbem esse tipo de experimento em qualquer país.",
+      "Porque a decoerência age muito rápido e cresce de forma abrupta com o número de partículas envolvidas, tornando a manutenção de superposição em sistemas grandes e complexos uma barreira prática que aumenta exponencialmente.",
+      "Porque gatos são fisicamente incapazes de interagir com fótons ou partículas subatômicas.",
+      "Porque nenhum laboratório do mundo possui equipamento sensível o suficiente para tentar esse experimento."
+    ],
+    correta: 1,
+    porque: "O crescimento exponencial da decoerência com o tamanho e a complexidade do sistema é uma barreira física fundamental, não apenas uma limitação tecnológica atual, o que sugere que esse limite deve persistir por muito tempo." },
+
+  { camada: "extensao",
+    q: "Por que parte do debate entre interpretações da mecânica quântica é descrita, no documento, como mais próxima de filosofia da física do que de física experimental no sentido estrito?",
+    alts: [
+      "Porque físicos, em geral, não se interessam por filosofia.",
+      "Porque interpretações diferentes, como Copenhague e muitos-mundos, costumam fazer exatamente as mesmas previsões numéricas observáveis, o que significa que nenhum experimento futuro pode, por definição, diferenciá-las nesses casos.",
+      "Porque a mecânica quântica ainda não tem nenhuma previsão numérica confirmada por experimento.",
+      "Porque filósofos assumiram completamente o controle da pesquisa em física quântica desde os anos 1930."
+    ],
+    correta: 1,
+    porque: "Quando duas teorias fazem previsões observacionais idênticas, a escolha entre elas depende de critérios adicionais (economia teórica, coerência filosófica) que vão além do teste experimental direto, aproximando essa parte da discussão da filosofia da ciência." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Schrödinger, E. 'Die gegenwärtige Situation in der Quantenmechanik'. <em>Naturwissenschaften</em> 23:807-812, 823-828, 844-849, 1935. Artigo original, em três partes, que introduziu o experimento do gato.", url: "https://en.wikipedia.org/wiki/Schr%C3%B6dinger's_cat" },
+  { n: 2, tipo: "tradução acadêmica", ref: "Trimmer, J. D. 'The Present Situation in Quantum Mechanics: A Translation of Schrödinger's Cat Paradox Paper'. <em>Proceedings of the American Philosophical Society</em> 124:323-338, 1980.", url: "https://www.jstor.org/stable/986572" },
+  { n: 3, tipo: "fonte primária", ref: "Einstein, A., Podolsky, B. &amp; Rosen, N. 'Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?'. <em>Physical Review</em> 47:777, 1935.", url: "https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777" },
+  { n: 4, tipo: "fonte primária", ref: "Monroe, C., Meekhof, D. M., King, B. E. &amp; Wineland, D. J. 'A Schrödinger Cat Superposition State of an Atom'. <em>Science</em> 272(5265):1131-1136, 1996.", url: "https://www.science.org/doi/10.1126/science.272.5265.1131" },
+  { n: 5, tipo: "fonte primária", ref: "Myatt, C. J. et al. 'Decoherence of quantum superpositions through coupling to engineered reservoirs'. <em>Nature</em> 403:269-273, 2000.", url: "https://www.nature.com/articles/35002001" },
+  { n: 6, tipo: "documento institucional", ref: "The Nobel Prize. Comunicado sobre o Prêmio Nobel de Física de 2012, concedido a Serge Haroche e David J. Wineland.", url: "https://www.nobelprize.org/prizes/physics/2012/summary/" },
+  { n: 7, tipo: "revisão acadêmica", ref: "Zurek, W. H. 'Decoherence, einselection, and the quantum origins of the classical'. <em>Reviews of Modern Physics</em> 75:715, 2003.", url: "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.75.715" },
+  { n: 8, tipo: "enciclopédia", ref: "Britannica. Verbete 'Schrödinger's cat', com resumo do experimento mental e seu contexto histórico.", url: "https://www.britannica.com/science/Schrodingers-cat" },
+  { n: 9, tipo: "fonte primária", ref: "Schlosshauer, M., Kofler, J. &amp; Zeilinger, A. 'A Snapshot of Foundational Attitudes Toward Quantum Mechanics'. <em>Studies in History and Philosophy of Science Part B</em> 44:222-230, 2013.", url: "https://arxiv.org/abs/1301.1069" },
+  { n: 10, tipo: "divulgação", ref: "Live Science. 'Schrödinger's cat: The favorite, misunderstood pet of quantum mechanics'.", url: "https://www.livescience.com/schrodingers-cat.html" },
+  { n: 11, tipo: "enciclopédia filosófica", ref: "Stanford Encyclopedia of Philosophy. Verbete sobre interpretações da mecânica quântica e o problema da medição.", url: "https://plato.stanford.edu/entries/qm/" },
+  { n: 12, tipo: "fonte primária", ref: "Everett, H. '\"Relative State\" Formulation of Quantum Mechanics'. <em>Reviews of Modern Physics</em> 29:454, 1957. Artigo original da interpretação de muitos-mundos.", url: "https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.29.454" },
+  { n: 13, tipo: "fonte primária", ref: "Ghirardi, G. C., Rimini, A. &amp; Weber, T. 'Unified dynamics for microscopic and macroscopic systems'. <em>Physical Review D</em> 34:470, 1986. Artigo original da teoria de colapso objetivo (GRW).", url: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.34.470" },
+  { n: 14, tipo: "fonte primária", ref: "Fuchs, C. A., Mermin, N. D. &amp; Schack, R. 'An introduction to QBism with an application to the locality of quantum mechanics'. <em>American Journal of Physics</em> 82:749, 2014.", url: "https://pubs.aip.org/aapt/ajp/article/82/8/749/1042162" },
+  { n: 15, tipo: "divulgação", ref: "Physics World / Institute of Physics. Reportagens sobre a criação de estados de superposição em laboratório e o significado real do experimento de Schrödinger.", url: "https://physicsworld.com/a/schrodingers-cat-lives-longer-than-ever/" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
 
 /* ── gestalt-design.js ─────────────────────────────────────── */
 CONTEUDOS["gestalt-design"] = {
@@ -2592,6 +3930,277 @@ fontes: [
   { n: 6, tipo: "comentário", ref: "Houlgate, S. <em>The Hegel Reader</em> e <em>An Introduction to Hegel</em>. Blackwell. Entrada acessível que discute explicitamente as distorções mais comuns, inclusive a de Popper.", url: "" }
 ]
 };
+
+/* ── homunculo-cortical.js ─────────────────────────────────── */
+CONTEUDOS["homunculo-cortical"] = {
+termo: "Homúnculo cortical",
+area: "Neurociência",
+subtitulo: "A figura do 'homenzinho' distorcido, com mãos e lábios enormes e costas minúsculas, está em praticamente todo livro introdutório de neurociência há quase um século. O mapa básico que ela representa é real. A ideia de que cada parte do corpo tem uma casinha fixa e organizada nessa faixa do cérebro, porém, foi bastante revisada em pesquisas recentes, incluindo um estudo publicado em 2026.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que diferentes partes do corpo são controladas por diferentes regiões do cérebro.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que o córtex cerebral (a camada externa enrugada do cérebro) tem áreas especializadas em funções específicas."
+],
+conexoes: [
+  { termo: "Cérebro dividido: o experimento e a releitura", relacao: "Os dois casos mostram como um modelo clássico e influente de organização cerebral, aceito por décadas, pode ser revisado de forma substancial quando técnicas de imagem e registro mais precisas ficam disponíveis." },
+  { termo: "Neuroplasticidade: alcance e limites", relacao: "A descoberta de que o córtex motor mistura representações do corpo com uma rede de controle de ação mais abstrata ajuda a explicar por que a reorganização cortical após lesões é mais flexível do que o mapa clássico do homúnculo sugeria." },
+  { termo: "Reconsolidação da memória", relacao: "Ambos são casos em que uma estrutura cerebral, antes vista como fixa e estática (um mapa gravado, uma memória consolidada), se revelou mais dinâmica e reorganizável do que a descrição inicial sugeria." },
+  { termo: "Crise de replicação", relacao: "O ajuste do modelo do homúnculo não veio de uma refutação total, mas de uma revisão baseada em métodos mais precisos, um padrão comum quando a ciência revisita um achado clássico décadas depois." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Nos anos 1930 e 1940, o neurocirurgião canadense Wilder Penfield operava pacientes com epilepsia grave que precisavam ficar acordados durante a cirurgia, para que a equipe pudesse identificar com precisão quais áreas do cérebro eram seguras para remover. Aproveitando essa janela rara, Penfield estimulava eletricamente pontos específicos da superfície do cérebro exposto e anotava o que o paciente sentia ou qual músculo se contraía.<sup class="cit"><a href="#f2">2</a></sup> Repetindo isso em centenas de pacientes, ele mapeou, com um nível de detalhe inédito para a época, quais pontos de uma faixa estreita do córtex (o córtex motor primário, numa faixa que passa por cima da cabeça de orelha a orelha) correspondiam a qual parte do corpo.</p>
+
+<p>O resultado ficou famoso como o <strong>homúnculo cortical</strong>: um desenho de um corpo humano distorcido, esticado sobre essa faixa do cérebro, com mãos, lábios e língua enormes (porque ocupam uma área desproporcionalmente grande do mapa, refletindo o controle fino e preciso que temos sobre elas) e tronco, pernas e costas minúsculos (porque exigem controle motor bem menos refinado).<sup class="cit"><a href="#f1">1</a></sup> A imagem apareceu no livro de Penfield e Theodore Rasmussen, <em>The Cerebral Cortex of Man</em>, publicado em 1950, e desde então é reproduzida em praticamente todo livro introdutório de neurociência.</p>
+
+<div class="marca consenso">
+<span class="rot">O que continua sólido</span>
+<p>Que diferentes partes do corpo são representadas por diferentes regiões do córtex motor e sensorial, e que essa representação é desproporcional ao tamanho físico da parte do corpo (refletindo a precisão do controle motor ou a densidade de receptores sensoriais, não o tamanho anatômico), é um achado bem estabelecido e amplamente replicado desde o trabalho original de Penfield. Isso não mudou.</p>
+</div>
+
+<h3>O que mudou: o mapa é bem mais bagunçado do que o desenho sugere</h3>
+
+<p>O desenho clássico do homúnculo sugere um mapa organizado, contínuo e limpo: uma sequência ordenada, da cabeça aos pés, sem sobreposição. Pesquisas recentes, usando ressonância magnética funcional de altíssima precisão em indivíduos estudados repetidamente ao longo de muitas sessões, mostraram algo mais complicado: intercaladas entre as regiões que controlam mão, pé e boca, existem faixas de córtex que não controlam nenhum movimento específico de uma única parte do corpo, mas parecem estar envolvidas em coordenar ações que exigem o corpo inteiro, ou em processos mais gerais de controle e regulação (como estado de alerta e resposta a erro).<sup class="cit"><a href="#f3">3</a></sup> Essa descoberta, publicada na revista <em>Nature</em> em 2023, recebeu o nome de rede de ação somato-cognitiva (SCAN, na sigla em inglês).</p>
+
+<h3>E ficou ainda mais detalhado em 2026</h3>
+
+<p>Um estudo publicado na <em>Nature</em> em junho de 2026, usando eletrodos implantados que registram a atividade de neurônios individuais em pacientes com paralisia (participantes de ensaios clínicos de interfaces cérebro-computador), foi além: descobriu que, em cada ponto amostrado dessa faixa do córtex motor, existe informação sobre o corpo inteiro misturada junto, não apenas sobre a parte "designada" pelo mapa clássico.<sup class="cit"><a href="#f4">4</a></sup> A intensidade relativa dessa informação ainda segue, de modo geral, o padrão clássico (mais informação sobre a mão numa região "de mão"), mas a organização real é descrita pelos autores como um mosaico de zonas, cada uma com sua própria representação do corpo inteiro, e não como um mapa único, ordenado e exclusivo, do jeito que o desenho de Penfield sugere à primeira vista.</p>
+
+<div class="marca emergente">
+<span class="rot">Como encaixar as duas descobertas</span>
+<p>As descobertas de 2023 e 2026 não jogam fora o trabalho de Penfield. Elas refinam algo que já era conhecido de forma aproximada (que regiões diferentes do córtex controlam partes diferentes do corpo, com áreas maiores para partes de controle mais fino) com uma resolução que a tecnologia dos anos 1930 e 1940 simplesmente não permitia alcançar. A imagem de um "homenzinho" deitado, esticado e ordenado sobre o córtex continua sendo uma simplificação didática útil para uma primeira aula, mas hoje sabemos que ela esconde uma organização real bem mais entrelaçada, com zonas de controle geral do corpo intercaladas entre as regiões específicas.</p>
+</div>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>O método original de Penfield, com mais precisão</h3>
+
+<p>Penfield e seu colaborador Edwin Boldrey publicaram o primeiro mapeamento sistemático em 1937, baseado em estimulação elétrica direta do córtex exposto de mais de 400 pacientes ao longo de vários anos de cirurgias.<sup class="cit"><a href="#f1">1</a></sup> Cada ponto do mapa representava a resposta relatada por um ou poucos pacientes, sob condições de cirurgia (paciente sedado localmente, mas consciente, sob estresse, com tempo limitado para testar cada ponto). O desenho icônico do homúnculo, publicado depois no livro de 1950 com Rasmussen, é uma síntese visual e estilizada dessas centenas de pontos individuais, não uma medição direta e contínua de uma única pessoa.</p>
+
+<h3>Por que essa metodologia deixava zonas cegas</h3>
+
+<p>Um mapa construído ponto a ponto, em condições cirúrgicas, com número limitado de estimulações por paciente, tem uma resolução espacial necessariamente grosseira comparada às técnicas de imagem funcional de hoje. Isso ajuda a explicar por que padrões mais sutis, como a rede de ação somato-cognitiva intercalada entre as regiões de efetor específico, não apareceram no mapa original: exigiam medir a mesma pessoa repetidamente, com muito mais pontos de amostragem e maior sensibilidade estatística, algo que só ficou tecnicamente viável décadas depois, com ressonância magnética funcional de "amostragem densa" (muitas sessões da mesma pessoa, em vez de uma amostra grande de pessoas diferentes medidas poucas vezes).</p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Estudo</th><th>Método</th><th>O que revisou no mapa clássico</th></tr></thead>
+<tbody>
+<tr><td>Penfield &amp; Boldrey (1937); Penfield &amp; Rasmussen (1950)</td><td>Estimulação elétrica direta durante cirurgia, centenas de pacientes</td><td>Estabeleceu o mapa básico e sua desproporção (mãos e boca ocupando área maior que tronco)</td></tr>
+<tr><td>Gordon et al. (2023), Nature</td><td>Ressonância magnética funcional de amostragem densa, mesmos indivíduos em múltiplas sessões</td><td>Encontrou a rede de ação somato-cognitiva (SCAN), intercalada entre as regiões de efetor específico</td></tr>
+<tr><td>Estudo de 2026, Nature</td><td>Registro de neurônios individuais via eletrodos implantados, pacientes de ensaios de interface cérebro-computador</td><td>Mostrou que cada zona do córtex motor contém informação sobre o corpo inteiro, organizada como um mosaico, não um mapa único e exclusivo</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>O que é, precisamente, a rede de ação somato-cognitiva</h3>
+
+<p>A descoberta de 2023 identificou regiões intercaladas entre as áreas clássicas de mão, pé e boca que têm conectividade forte com redes cerebrais associadas a controle cognitivo geral, estado de alerta, processamento de erro e regulação fisiológica (como frequência cardíaca e pressão arterial), não apenas com movimento de uma parte específica do corpo.<sup class="cit"><a href="#f3">3</a></sup> A interpretação proposta pelos autores é que essas zonas ajudam a integrar e coordenar ações que envolvem o corpo inteiro (como se levantar, ou reagir de forma coordenada a algo inesperado), servindo de ponte entre planejamento cognitivo mais abstrato e execução motora específica de uma parte do corpo.</p>
+
+<h3>Relevância prática, além da curiosidade acadêmica</h3>
+
+<p>Essa revisão do mapa clássico não é só um ajuste teórico: interfaces cérebro-computador, usadas para ajudar pessoas com paralisia a controlar próteses ou cursores de computador com a atividade cerebral, dependem diretamente de saber com precisão qual região do córtex motor decodificar para qual tipo de movimento pretendido. Um mapa mais preciso, que reconhece a mistura de informação sobre o corpo inteiro em cada zona, em vez de uma divisão limpa e exclusiva por parte do corpo, tem implicações diretas para como esses dispositivos são projetados e calibrados.<sup class="cit"><a href="#f4">4</a></sup></p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Por que um modelo "errado em detalhe" sobreviveu tão bem por tanto tempo</h3>
+
+<p>Vale refletir sobre por que o desenho de Penfield permaneceu como imagem de referência por quase noventa anos, mesmo com uma resolução que hoje sabemos ser grosseira. Primeiro, porque a estrutura básica (desproporção de área cortical, ordem geral de cabeça aos pés) continua correta e é pedagogicamente poderosa: é uma forma vívida e memorável de ensinar que "mais precisão de movimento equivale a mais espaço cerebral dedicado", uma ideia real e importante mesmo com os detalhes finos revisados. Segundo, porque testar a hipótese alternativa (uma organização mais entrelaçada e distribuída) exigia tecnologia de imagem e registro neural que simplesmente não existia até recentemente. Um modelo simplificado, mas parcialmente correto e didaticamente útil, tende a durar até que a tecnologia necessária para testá-lo com mais rigor apareça, não até que alguém pense em questioná-lo.</p>
+
+<h3>O padrão se repete: de mapa estático para sistema dinâmico</h3>
+
+<p>Esse é um padrão recorrente na história da neurociência: um primeiro mapeamento, feito com a melhor tecnologia disponível numa época, tende a retratar uma estrutura como mais fixa, discreta e ordenada do que ela realmente é. Trabalhos posteriores, com métodos mais sensíveis, quase sempre revelam mais sobreposição, mais dinamismo e mais dependência de contexto do que o mapa original sugeria. Isso não é peculiar ao homúnculo cortical: é a mesma lógica por trás de revisões em outras áreas da neurociência, da localização de funções de linguagem à compreensão de como memórias são armazenadas e reativadas.</p>
+
+<div class="marca controverso">
+<span class="rot">O que ainda não está fechado</span>
+<p>A extensão exata da rede de ação somato-cognitiva, sua relação causal com controle motor voluntário versus regulação fisiológica automática, e até que ponto o "mosaico" descrito em 2026 se generaliza para outras regiões do córtex além da faixa motora primária são questões ainda ativas de pesquisa, sem uma síntese teórica final aceita amplamente. O que existe hoje é uma correção empírica bem estabelecida ao mapa clássico, não ainda uma teoria unificada e completa que substitua o modelo de Penfield por igual poder explicativo e pedagógico.</p>
+</div>
+
+<h3>Como reescrever a lição sem jogar fora a imagem</h3>
+
+<p>A forma mais honesta de ensinar o homúnculo cortical hoje combina as duas camadas: usar a imagem clássica para transmitir a ideia central (representação cortical desproporcional ao tamanho físico do corpo, proporcional à precisão de controle exigida), e explicitamente qualificar que o mapa real é mais parecido com um mosaico de zonas interligadas do que com um desenho único, limpo e contínuo. Essa é, aliás, uma boa prática geral ao lidar com qualquer diagrama clássico de livro didático: perguntar se ele descreve a estrutura básica corretamente (aqui, sim) ou se a simplicidade visual do desenho esconde uma complexidade real que só ficou visível com tecnologia posterior (aqui, também sim).</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Homúnculo cortical", def: "Representação visual, criada a partir do mapeamento de Wilder Penfield, de um corpo humano distorcido e esticado sobre o córtex motor ou sensorial, com partes do corpo desenhadas proporcionalmente à área cortical que ocupam, não ao seu tamanho físico real." },
+    { termo: "Córtex motor primário", def: "Faixa estreita do córtex cerebral, que passa de orelha a orelha por cima da cabeça, envolvida na geração de comandos para movimentos voluntários específicos do corpo." },
+    { termo: "Rede de ação somato-cognitiva (SCAN)", def: "Conjunto de regiões, descoberto em 2023, intercaladas entre as áreas clássicas de efetor específico (mão, pé, boca) no córtex motor, com forte conectividade a redes de controle cognitivo geral, estado de alerta e regulação fisiológica." },
+    { termo: "Mosaico de representações corporais", def: "Modelo proposto em 2026, com base em registro de neurônios individuais, segundo o qual cada zona amostrada do córtex motor contém informação sobre o corpo inteiro, não apenas sobre a parte de efetor 'designada' pelo mapa clássico." },
+    { termo: "Amostragem densa (dense sampling)", def: "Técnica de neuroimagem que estuda repetidamente os mesmos poucos indivíduos, em muitas sessões, em vez de uma amostra grande de pessoas medidas poucas vezes, permitindo detectar padrões sutis invisíveis em estudos tradicionais de grupo." }
+  ],
+  lembrar: [
+    "Wilder Penfield mapeou o córtex motor e sensorial de centenas de pacientes de epilepsia durante cirurgias nos anos 1930 e 1940, usando estimulação elétrica direta do cérebro exposto.",
+    "O desenho icônico do homúnculo, publicado com Theodore Rasmussen em 1950, mostra partes do corpo com área cortical proporcional à precisão de controle exigida (mãos e boca grandes, tronco pequeno), não ao tamanho físico real.",
+    "A desproporção básica do mapa continua bem estabelecida e não foi contestada pelas pesquisas recentes.",
+    "Em 2023, um estudo na revista Nature (Gordon e colegas) descobriu a rede de ação somato-cognitiva (SCAN), regiões intercaladas entre as áreas clássicas, ligadas a controle cognitivo geral e regulação fisiológica, não a movimento de uma parte específica do corpo.",
+    "Em junho de 2026, outro estudo na Nature, usando registro de neurônios individuais em pacientes de ensaios de interface cérebro-computador, mostrou que cada zona do córtex motor contém informação sobre o corpo inteiro, organizada como um mosaico de representações sobrepostas.",
+    "Essas descobertas recentes revisam o detalhe fino do mapa clássico (organização limpa e exclusiva por parte do corpo), sem invalidar sua estrutura básica (desproporção cortical ligada à precisão de controle).",
+    "A revisão do mapa tem implicações práticas diretas para o projeto de interfaces cérebro-computador usadas por pessoas com paralisia."
+  ],
+  confusoes: [
+    { erro: "As pesquisas recentes provaram que o mapa de Penfield estava completamente errado", correcao: "A estrutura básica do mapa (desproporção de área cortical ligada à precisão de controle motor, não ao tamanho físico da parte do corpo) continua bem estabelecida. O que foi revisado foi a organização fina, mais entrelaçada e menos exclusiva do que o desenho clássico sugere." },
+    { erro: "O desenho do homúnculo representa uma medição direta e contínua de uma única pessoa", correcao: "É uma síntese visual e estilizada de centenas de pontos de estimulação coletados em muitos pacientes diferentes, sob condições cirúrgicas, não um mapa contínuo medido numa única pessoa com alta resolução." },
+    { erro: "A rede de ação somato-cognitiva (SCAN), descoberta em 2023, controla movimentos específicos de uma parte do corpo, como mão ou pé", correcao: "Ao contrário das regiões clássicas de efetor específico, a SCAN está mais ligada a coordenação de ações do corpo inteiro e a processos gerais como estado de alerta e regulação fisiológica, não ao controle fino de uma parte isolada." },
+    { erro: "O estudo de 2026 mostrou que o mapa clássico do homúnculo não tem nenhuma relação com a organização real do córtex motor", correcao: "O estudo encontrou que a intensidade relativa de informação sobre cada parte do corpo ainda segue, de modo geral, o padrão clássico (mais informação sobre a mão em regiões 'de mão'), mas organizada como um mosaico com informação sobre o corpo inteiro presente em cada zona, não como divisões exclusivas e limpas." },
+    { erro: "Essa revisão do mapa cortical é só uma curiosidade acadêmica sem aplicação prática", correcao: "Interfaces cérebro-computador para pessoas com paralisia dependem diretamente de mapas precisos do córtex motor para decodificar a intenção de movimento, então essas descobertas têm implicações diretas para o projeto e a calibração desses dispositivos." }
+  ],
+  numeros: [
+    "Penfield, W. &amp; Boldrey, E. (1937), Brain 60(4):389-443: primeiro mapeamento sistemático publicado, baseado em estimulação elétrica de mais de 400 pacientes.",
+    "Penfield, W. &amp; Rasmussen, T. The Cerebral Cortex of Man, 1950: livro que popularizou o desenho icônico do homúnculo cortical.",
+    "Gordon, E. M. et al. (2023), Nature 617:351-359: descoberta da rede de ação somato-cognitiva (SCAN), verificada nos três maiores conjuntos de dados de ressonância funcional disponíveis.",
+    "Estudo de junho de 2026, Nature: mapeamento por registro de neurônios individuais em 20 arranjos de eletrodos, 8 indivíduos com paralisia por lesão medular, ELA ou AVC de tronco encefálico, revelando organização em mosaico."
+  ]
+},
+
+flashcards: [
+  { f: "Como Wilder Penfield mapeou originalmente o córtex motor e sensorial, nos anos 1930 e 1940?", v: "Estimulando eletricamente pontos específicos do cérebro exposto durante cirurgias de epilepsia em pacientes acordados, e anotando a resposta relatada, ao longo de centenas de pacientes." },
+  { f: "O que a área ocupada por cada parte do corpo no desenho do homúnculo representa?", v: "A precisão do controle motor ou a densidade de receptores sensoriais daquela parte, não seu tamanho físico real. Por isso mãos e lábios aparecem enormes e o tronco, minúsculo." },
+  { f: "Em que livro e ano o desenho icônico do homúnculo foi publicado?", v: "No livro The Cerebral Cortex of Man, de Wilder Penfield e Theodore Rasmussen, em 1950." },
+  { f: "O que continua bem estabelecido, sem disputa, sobre o mapa cortical do corpo?", v: "Que diferentes partes do corpo são representadas por diferentes regiões corticais, e que essa representação é desproporcional ao tamanho físico, refletindo a precisão de controle exigida." },
+  { f: "O que a descoberta de 2023, publicada na Nature por Gordon e colegas, encontrou?", v: "A rede de ação somato-cognitiva (SCAN): regiões intercaladas entre as áreas clássicas de mão, pé e boca, com forte conectividade a redes de controle cognitivo geral, estado de alerta e regulação fisiológica." },
+  { f: "Que tipo de dado essa descoberta de 2023 usou, e por que isso foi importante?", v: "Ressonância magnética funcional de amostragem densa (muitas sessões dos mesmos indivíduos), o que permite detectar padrões sutis invisíveis em estudos tradicionais com muitos indivíduos medidos poucas vezes." },
+  { f: "O que o estudo de junho de 2026, também publicado na Nature, descobriu usando registro de neurônios individuais?", v: "Que cada zona amostrada do córtex motor contém informação sobre o corpo inteiro, organizada como um mosaico de representações sobrepostas, não como divisões exclusivas e limpas por parte do corpo." },
+  { f: "As descobertas de 2023 e 2026 invalidam o trabalho original de Penfield?", v: "Não. Elas refinam, com tecnologia muito mais precisa, um achado básico que já era conhecido de forma aproximada, sem contradizer a desproporção cortical fundamental que Penfield documentou." },
+  { f: "Por que o desenho clássico do homúnculo permaneceu como imagem de referência por quase noventa anos?", v: "Porque sua estrutura básica continua correta e é pedagogicamente poderosa, e porque testar a hipótese de uma organização mais entrelaçada exigia tecnologia de imagem e registro neural que só ficou disponível recentemente." },
+  { f: "Qual é a relevância prática, além da curiosidade acadêmica, dessa revisão do mapa cortical?", v: "Interfaces cérebro-computador usadas por pessoas com paralisia dependem de mapas precisos do córtex motor para decodificar a intenção de movimento, então um modelo mais preciso tem implicações diretas para o projeto desses dispositivos." },
+  { f: "O que ainda não está totalmente resolvido sobre a rede de ação somato-cognitiva e o modelo de mosaico?", v: "A extensão exata da rede, sua relação causal com controle motor voluntário versus regulação fisiológica automática, e até que ponto o modelo de mosaico se generaliza para outras regiões do córtex além da faixa motora primária." },
+  { f: "Qual é a forma mais honesta de ensinar o homúnculo cortical hoje, segundo o documento?", v: "Usar a imagem clássica para transmitir a ideia central de desproporção cortical, mas qualificar explicitamente que o mapa real é mais parecido com um mosaico de zonas interligadas do que com um desenho único, limpo e contínuo." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que o desenho clássico do homúnculo cortical representa?",
+    alts: [
+      "O tamanho físico real de cada parte do corpo humano.",
+      "A área do córtex motor ou sensorial dedicada a cada parte do corpo, proporcional à precisão de controle exigida, não ao tamanho físico real.",
+      "A quantidade de neurônios totais existentes em cada parte do corpo.",
+      "Um mapa da evolução do corpo humano ao longo de milhões de anos."
+    ],
+    correta: 1,
+    porque: "É por isso que mãos e lábios, que exigem controle muito fino e preciso, aparecem enormes no desenho, enquanto o tronco, que exige controle motor menos refinado, aparece minúsculo." },
+
+  { camada: "nucleo",
+    q: "Como Wilder Penfield coletou os dados originais para o mapeamento do córtex, nos anos 1930 e 1940?",
+    alts: [
+      "Usando ressonância magnética funcional em voluntários saudáveis.",
+      "Estimulando eletricamente pontos do cérebro exposto de pacientes de epilepsia durante cirurgia, e anotando a resposta relatada.",
+      "Analisando autópsias de cérebros de pessoas com diferentes tipos de lesão.",
+      "Usando questionários de autoavaliação sobre habilidades motoras."
+    ],
+    correta: 1,
+    porque: "O mapa clássico é uma síntese de centenas de pontos de estimulação elétrica direta, coletados durante cirurgias em que os pacientes precisavam estar conscientes por razões médicas." },
+
+  { camada: "nucleo",
+    q: "O que continua bem estabelecido hoje sobre a organização do corpo no córtex, sem disputa?",
+    alts: [
+      "Que cada parte do corpo tem exatamente a mesma quantidade de área cortical dedicada, sem nenhuma diferença.",
+      "Que diferentes partes do corpo são representadas por diferentes regiões corticais, com área desproporcional ao tamanho físico, refletindo a precisão de controle exigida.",
+      "Que o córtex motor não tem nenhuma relação com o controle do corpo.",
+      "Que apenas a mão tem representação cortical, nenhuma outra parte do corpo."
+    ],
+    correta: 1,
+    porque: "Esse princípio básico, estabelecido por Penfield e nunca contestado pelas pesquisas mais recentes, é a base do que continua sendo ensinado sobre o homúnculo cortical." },
+
+  { camada: "aprofundamento",
+    q: "O que a descoberta da rede de ação somato-cognitiva (SCAN), publicada por Gordon e colegas na Nature em 2023, encontrou?",
+    alts: [
+      "Que o córtex motor não existe e foi um erro de Penfield.",
+      "Regiões intercaladas entre as áreas clássicas de mão, pé e boca, com forte conectividade a redes de controle cognitivo geral, estado de alerta e regulação fisiológica.",
+      "Que apenas macacos e outros primatas têm representação cortical do corpo, não humanos.",
+      "Que o mapa de Penfield estava invertido, com mãos representando pés e vice-versa."
+    ],
+    correta: 1,
+    porque: "A SCAN não substitui as regiões de efetor específico do mapa clássico, mas revela zonas adicionais, intercaladas entre elas, ligadas a processos mais gerais de coordenação e regulação do corpo." },
+
+  { camada: "aprofundamento",
+    q: "Que tipo de técnica de neuroimagem foi essencial para a descoberta de 2023, e por que ela permitiu ver algo que estudos anteriores não viam?",
+    alts: [
+      "Tomografia computadorizada de raio-X, usada pela primeira vez em neurociência.",
+      "Ressonância magnética funcional de amostragem densa, que estuda repetidamente os mesmos indivíduos em muitas sessões, permitindo detectar padrões sutis invisíveis em estudos tradicionais de grupo.",
+      "Eletroencefalograma de superfície, sem nenhuma relação com ressonância magnética.",
+      "Biópsias cerebrais realizadas post-mortem em doadores de órgãos."
+    ],
+    correta: 1,
+    porque: "Amostragem densa aumenta muito a sensibilidade estatística para detectar padrões que ficariam obscurecidos numa amostra tradicional de muitas pessoas medidas poucas vezes cada uma." },
+
+  { camada: "aprofundamento",
+    q: "O que o estudo publicado na Nature em junho de 2026, usando registro de neurônios individuais, descobriu sobre a organização do córtex motor?",
+    alts: [
+      "Que cada zona do córtex motor controla exclusivamente uma única parte do corpo, sem nenhuma sobreposição.",
+      "Que cada zona amostrada do córtex motor contém informação sobre o corpo inteiro, organizada como um mosaico de representações sobrepostas, embora a intensidade relativa ainda siga, de modo geral, o padrão clássico.",
+      "Que o córtex motor não processa nenhuma informação relacionada a movimento voluntário.",
+      "Que apenas pacientes com paralisia têm uma organização cortical em mosaico, diferente de pessoas sem lesão."
+    ],
+    correta: 1,
+    porque: "O estudo, usando dados de eletrodos implantados em pacientes de ensaios de interface cérebro-computador, mostrou uma organização mais entrelaçada que o mapa clássico sugeria, sem eliminar completamente o padrão geral de desproporção por parte do corpo." },
+
+  { camada: "aprofundamento",
+    q: "Por que a metodologia original de Penfield, apesar de pioneira, deixava zonas cegas na resolução do mapa?",
+    alts: [
+      "Porque Penfield não tinha formação médica adequada para conduzir o estudo.",
+      "Porque o mapa era construído ponto a ponto, em condições cirúrgicas, com número limitado de estimulações por paciente, resultando numa resolução espacial necessariamente grosseira comparada às técnicas atuais.",
+      "Porque Penfield se recusou a publicar os dados brutos de seus experimentos.",
+      "Porque todos os pacientes estudados por Penfield tinham o mesmo tipo exato de epilepsia."
+    ],
+    correta: 1,
+    porque: "Detectar padrões sutis, como a rede de ação somato-cognitiva, exigia muito mais pontos de amostragem e maior sensibilidade estatística do que o método de estimulação cirúrgica direta permitia na época de Penfield." },
+
+  { camada: "extensao",
+    q: "Segundo o documento, por que o desenho clássico do homúnculo permaneceu como imagem de referência por quase noventa anos, mesmo com uma resolução hoje considerada grosseira?",
+    alts: [
+      "Porque nenhum outro neurocientista jamais tentou revisar ou testar o modelo original.",
+      "Porque sua estrutura básica continua correta e é pedagogicamente poderosa, e porque testar uma organização mais entrelaçada exigia tecnologia de imagem e registro neural que só ficou disponível recentemente.",
+      "Porque leis internacionais de direitos autorais protegeram o desenho original de qualquer modificação.",
+      "Porque o desenho nunca foi realmente testado ou questionado por nenhuma pesquisa até 2023."
+    ],
+    correta: 1,
+    porque: "Um modelo simplificado, mas parcialmente correto e didaticamente útil, tende a durar até que a tecnologia necessária para testá-lo com mais rigor apareça, e essa tecnologia só amadureceu recentemente." },
+
+  { camada: "extensao",
+    q: "O que o documento aponta como ainda não totalmente resolvido sobre a rede de ação somato-cognitiva e o modelo de mosaico de 2026?",
+    alts: [
+      "Se o córtex motor existe de fato, questão considerada ainda em aberto.",
+      "A extensão exata da rede, sua relação causal com controle motor voluntário versus regulação fisiológica automática, e até que ponto o modelo de mosaico se generaliza para outras regiões do córtex.",
+      "Se pacientes com paralisia têm cérebros fundamentalmente diferentes de pessoas sem lesão.",
+      "Se Wilder Penfield realmente existiu como pesquisador histórico."
+    ],
+    correta: 1,
+    porque: "Existe hoje uma correção empírica bem estabelecida ao mapa clássico, mas ainda não uma teoria unificada e completa que explique todos os aspectos da nova organização descoberta, com perguntas de pesquisa genuinamente em aberto." },
+
+  { camada: "extensao",
+    q: "Qual é a forma mais honesta de ensinar o homúnculo cortical hoje, segundo a conclusão do documento?",
+    alts: [
+      "Parar de usar o desenho clássico completamente, por ser cientificamente inválido.",
+      "Usar a imagem clássica para transmitir a ideia central de desproporção cortical ligada à precisão de controle, qualificando explicitamente que a organização real é mais parecida com um mosaico entrelaçado do que com um mapa único e limpo.",
+      "Ensinar apenas o modelo de 2026, ignorando completamente o trabalho histórico de Penfield.",
+      "Evitar mencionar qualquer descoberta posterior a 1950, para não confundir estudantes iniciantes."
+    ],
+    correta: 1,
+    porque: "Essa abordagem preserva o valor pedagógico real do desenho clássico (a ideia central de desproporção cortical) enquanto reconhece explicitamente as descobertas mais recentes sobre a organização entrelaçada do córtex motor." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Penfield, W. &amp; Boldrey, E. 'Somatic motor and sensory representation in the cerebral cortex of man as studied by electrical stimulation'. <em>Brain</em> 60(4):389-443, 1937.", url: "https://academic.oup.com/brain/article-abstract/60/4/389/354655" },
+  { n: 2, tipo: "fonte primária", ref: "Penfield, W. &amp; Rasmussen, T. <em>The Cerebral Cortex of Man: A Clinical Study of Localization of Function</em>. New York: Macmillan, 1950.", url: "https://archive.org/details/cerebralcortexof0000penf" },
+  { n: 3, tipo: "fonte primária", ref: "Gordon, E. M. et al. 'A somato-cognitive action network alternates with effector regions in motor cortex'. <em>Nature</em> 617:351-359, 2023.", url: "https://www.nature.com/articles/s41586-023-05964-2" },
+  { n: 4, tipo: "fonte primária", ref: "'A mosaic of whole-body representations on the human precentral gyrus'. <em>Nature</em>, 17 de junho de 2026.", url: "https://www.nature.com/articles/s41586-026-10653-x" },
+  { n: 5, tipo: "reportagem científica", ref: "Nature News. 'Famous \"homunculus\" brain map redrawn to include complex movements'.", url: "https://www.nature.com/articles/d41586-023-01312-6" },
+  { n: 6, tipo: "divulgação", ref: "Knowing Neurons. 'Redefining Movement: The SCAN Revolution'.", url: "https://knowingneurons.com/redefining_movement_scan/" },
+  { n: 7, tipo: "revisão acadêmica", ref: "Diedrichsen Lab. Revisão aberta ('open review') do artigo de Gordon et al. (2023) sobre a rede de ação somato-cognitiva.", url: "https://www.diedrichsenlab.org/BrainDataScience/or_gordon2023/index.htm" },
+  { n: 8, tipo: "reportagem", ref: "Tech Times. 'Motor Homunculus Overturned: Single-Neuron Data from Stanford Reshapes BCI Targeting', cobertura do estudo de 2026.", url: "https://www.techtimes.com/articles/318645/20260618/motor-homunculus-overturned-single-neuron-data-stanford-reshapes-bci-targeting.htm" },
+  { n: 9, tipo: "fonte primária", ref: "Versão de preprint do estudo de mosaico de representações corporais no córtex motor humano, com detalhes metodológicos completos.", url: "https://www.biorxiv.org/content/10.1101/2024.09.14.613041v1.full" },
+  { n: 10, tipo: "divulgação", ref: "Reportagem sobre implicações da revisão do mapa cortical para reabilitação e tratamento de lesões motoras.", url: "https://acupuncturesyracuse.com/why-the-homunculus-lied-rethinking-the-motor-cortex-and-what-it-means-for-injury-rehab/" },
+  { n: 11, tipo: "fonte primária", ref: "Versão de acesso livre (PMC) do artigo de Gordon et al. (2023) sobre a rede de ação somato-cognitiva.", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10172144/" },
+  { n: 12, tipo: "fonte primária", ref: "Registro do estudo de 2026 sobre representações em mosaico no giro pré-central humano na base PubMed.", url: "https://pubmed.ncbi.nlm.nih.gov/42310450/" },
+  { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Cortical homunculus', com histórico do desenho e revisões posteriores.", url: "https://en.wikipedia.org/wiki/Cortical_homunculus" },
+  { n: 14, tipo: "reportagem científica", ref: "Sciety. Cobertura e avaliações públicas do preprint 'A mosaic of whole-body representations in human motor cortex'.", url: "https://sciety.org/articles/activity/10.1101/2024.09.14.613041" },
+  { n: 15, tipo: "reportagem", ref: "Cobertura sobre reconstrução da organização somatotópica do trato corticoespinhal com técnicas modernas de tractografia.", url: "https://arxiv.org/pdf/2306.05623" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
 
 /* ── ikigai.js ─────────────────────────────────────────────── */
 CONTEUDOS["ikigai"] = {
@@ -3679,6 +5288,540 @@ fontes: [
 ]
 };
 
+/* ── maquina-turing.js ─────────────────────────────────────── */
+CONTEUDOS["maquina-turing"] = {
+termo: "Máquina de Turing",
+area: "Computação",
+subtitulo: "Um dispositivo imaginário com uma fita infinita, um cabeçote de leitura e um punhado de regras simples bastou para definir, de uma vez por todas, o que significa 'computável'. Toda a teoria da computação, e boa parte do que hoje entendemos sobre os limites do que qualquer computador jamais poderá fazer, parte dessa ideia de 1936.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que um algoritmo é uma sequência precisa de passos para resolver um problema.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que alguns problemas matemáticos podem, em princípio, não ter solução algorítmica nenhuma."
+],
+conexoes: [
+  { termo: "Teoremas da incompletude de Gödel", relacao: "Turing usou uma técnica de diagonalização muito próxima da usada por Gödel para provar seus teoremas de incompletude, aplicando-a para mostrar que certos problemas computacionais não têm solução algorítmica." },
+  { termo: "Gato de Schrödinger e o problema da medição", relacao: "Ambos os casos envolvem debate sobre se a física quântica altera limites fundamentais estabelecidos por teorias anteriores, no caso da máquina de Turing, se computadores quânticos ultrapassam os limites da computabilidade clássica." },
+  { termo: "Cascata trófica", relacao: "Como outros conceitos fundamentais, a máquina de Turing tem uma versão popular simplificada (o 'computador teórico que faz tudo') que esconde debates técnicos genuínos sobre seus limites exatos." },
+  { termo: "Paradoxo de Fermi e o Grande Filtro", relacao: "Ambos os temas tratam de perguntas sobre limites fundamentais, o que é computável em princípio e o que é fisicamente possível, que continuam sendo território ativo de pesquisa teórica." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Em 1936, o matemático britânico Alan Turing propôs uma máquina que nunca foi construída fisicamente e nunca precisou ser: um dispositivo imaginário, hoje chamado de <strong>máquina de Turing</strong>, com uma fita infinitamente longa dividida em células, um cabeçote que lê e escreve símbolos numa célula de cada vez, e uma tabela pequena e finita de regras simples: dependendo do símbolo lido e do "estado" atual da máquina, ela escreve um novo símbolo, se move uma célula para a esquerda ou direita, e muda para outro estado.<sup class="cit"><a href="#f1">1</a></sup></p>
+
+<p>Isso parece simples demais para importar. A descoberta central de Turing foi que esse mecanismo minúsculo, com regras tão básicas, é capaz de executar qualquer processo que mereça o nome de "cálculo" ou "algoritmo", no sentido mais geral possível. Não é uma calculadora limitada a operações aritméticas: com a fita e as regras certas, uma máquina de Turing pode, em princípio, simular qualquer procedimento passo a passo bem definido que um matemático humano conseguiria seguir com papel e lápis, dado tempo suficiente.</p>
+
+<h3>O problema que Turing estava tentando resolver</h3>
+
+<p>Turing não inventou essa máquina por curiosidade abstrata. Em 1928, o matemático alemão David Hilbert havia formulado o que chamou de "problema principal da lógica matemática", o <em>Entscheidungsproblem</em> (problema da decisão): existe algum procedimento mecânico, aplicável a qualquer afirmação matemática, capaz de determinar se ela é verdadeira ou falsa?<sup class="cit"><a href="#f7">7</a></sup> Para responder a essa pergunta de forma rigorosa, era preciso primeiro definir com precisão matemática o que "procedimento mecânico" sequer significa, algo que, até então, era tratado de forma intuitiva. A máquina de Turing foi a resposta: uma definição matemática exata do que significa "computar algo passo a passo", contra a qual qualquer alegação de "existe um procedimento mecânico para isso" poderia, finalmente, ser testada com rigor.</p>
+
+<div class="marca consenso">
+<span class="rot">O que é aceito sem disputa</span>
+<p>Que a máquina de Turing captura corretamente a noção intuitiva de "o que é computável passo a passo", é uma afirmação chamada de tese de Church-Turing, proposta de forma independente por Alonzo Church (usando uma formalização matemática diferente, o cálculo lambda) e por Alan Turing em 1936. Não é um teorema matemático demonstrável, é uma tese sobre a correspondência entre uma noção intuitiva e uma definição formal, mas é aceita de forma praticamente unânime há quase noventa anos, sem que nenhum contraexemplo genuíno tenha resistido a escrutínio.<sup class="cit"><a href="#f2">2</a></sup></p>
+</div>
+
+<h3>Todo computador moderno é, em essência, uma máquina de Turing</h3>
+
+<p>Aqui está a parte que costuma surpreender: o computador ou celular usado para ler este texto não consegue calcular nada que uma máquina de Turing, com fita suficiente e tempo suficiente, também não consiga calcular. A diferença entre um laptop moderno e a máquina de fita imaginária de 1936 não é de capacidade fundamental, é de velocidade e de quantidade de memória disponível. Em termos do que é, em princípio, computável, os dois são equivalentes.</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>A resposta ao Entscheidungsproblem: não</h3>
+
+<p>No mesmo artigo de 1936, "On Computable Numbers, with an Application to the Entscheidungsproblem", Turing usou sua máquina para responder à pergunta de Hilbert de forma negativa. Ele definiu um problema específico, hoje chamado de <strong>problema da parada</strong> (halting problem): dado o código de uma máquina de Turing e uma entrada, é possível, em geral, determinar de antemão se essa máquina vai eventualmente parar (chegar a um resultado) ou vai rodar para sempre sem nunca terminar? Turing provou que não existe nenhum procedimento algorítmico geral capaz de responder essa pergunta corretamente para todo par possível de máquina e entrada.<sup class="cit"><a href="#f1">1</a></sup> Como consequência direta, o Entscheidungsproblem original de Hilbert também não tem solução: não existe procedimento mecânico geral para decidir a verdade de qualquer afirmação matemática.</p>
+
+<h3>Como se prova algo assim: a técnica da diagonalização</h3>
+
+<p>A demonstração de Turing usa uma técnica de "diagonalização" muito parecida com a que Kurt Gödel havia usado poucos anos antes para provar seus teoremas de incompletude. A ideia central, simplificada: suponha, por absurdo, que existisse uma máquina "H" capaz de examinar o código de qualquer outra máquina mais sua entrada, e dizer com certeza se ela vai parar ou não. É possível construir uma nova máquina que usa H sobre seu próprio código, de um jeito propositalmente contraditório (fazendo o oposto do que H prevê), o que gera uma contradição lógica sempre que H tenta prever o comportamento dessa nova máquina em relação a si mesma. Como a contradição é inevitável, a suposição original (de que H existe) precisa ser falsa. É uma prova elegante de impossibilidade, não uma limitação técnica temporária que a tecnologia futura poderia superar.</p>
+
+<h3>Relevância prática: por que engenheiros de software se importam</h3>
+
+<p>O problema da parada não é só uma curiosidade teórica de 1936. Ele explica por que nenhuma ferramenta de análise de código consegue, de forma totalmente geral e automática, garantir que um programa qualquer nunca vai travar num loop infinito, ou detectar com certeza absoluta todo tipo possível de bug lógico em qualquer programa arbitrário. Ferramentas modernas de verificação de software contornam esse limite de formas específicas (analisando classes restritas de programas, aceitando margens de incerteza, ou exigindo que o programador escreva anotações adicionais), mas o limite teórico de fundo, estabelecido por Turing, continua valendo para o caso totalmente geral.</p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Conceito</th><th>O que significa</th><th>Relevância</th></tr></thead>
+<tbody>
+<tr><td>Máquina de Turing</td><td>Modelo matemático abstrato de computação, com fita, cabeçote e regras de estado</td><td>Definição formal do que significa 'computável passo a passo'</td></tr>
+<tr><td>Tese de Church-Turing</td><td>Afirmação de que essa definição formal captura corretamente a noção intuitiva de algoritmo</td><td>Base conceitual de toda a ciência da computação teórica</td></tr>
+<tr><td>Máquina universal de Turing</td><td>Uma única máquina de Turing capaz de simular qualquer outra máquina de Turing, dado seu código como entrada</td><td>Fundamento teórico da ideia de computador de propósito geral, programável</td></tr>
+<tr><td>Problema da parada</td><td>Pergunta sobre se um programa qualquer vai terminar ou rodar para sempre</td><td>Primeiro exemplo célebre de um problema matematicamente bem definido e comprovadamente sem solução algorítmica geral</td></tr>
+</tbody>
+</table>
+</div>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Computação quântica muda esse quadro?</h3>
+
+<p>Uma pergunta recorrente, especialmente com o avanço recente de computadores quânticos: eles conseguem calcular coisas que uma máquina de Turing clássica não consegue calcular, em princípio? A resposta aceita hoje é não. Computadores quânticos podem, para certos problemas específicos, encontrar a resposta muito mais rápido que computadores clássicos (uma vantagem de velocidade, não de capacidade fundamental), mas não resolvem nenhum problema que seja comprovadamente indecidível para uma máquina de Turing clássica, como o problema da parada. A evidência disponível não sustenta a ideia de que tecnologias quânticas permitam "hipercomputação" (calcular além do que a tese de Church-Turing prevê como possível).<sup class="cit"><a href="#f8">8</a></sup></p>
+
+<div class="marca controverso">
+<span class="rot">A versão física da tese, ainda em debate filosófico</span>
+<p>Existe uma versão mais forte e mais especulativa da tese de Church-Turing, às vezes chamada de tese de Church-Turing física, que afirma que nenhum sistema físico real, de qualquer natureza, jamais será capaz de calcular além do que uma máquina de Turing calcula. Diferente da tese original (sobre o que "algoritmo" significa matematicamente), essa versão é uma afirmação empírica sobre o universo físico, e por isso, em princípio, poderia ser falsa se alguma nova física ainda desconhecida permitisse algo diferente. Propostas de "hipercomputação" (usando processos físicos hipotéticos como tarefas supertarefa, computação com buracos negros, ou processos retrocausais) foram exploradas teoricamente, mas dependem de suposições físicas que, até hoje, carecem de qualquer evidência experimental de viabilidade, o que mantém essas propostas no território da especulação teórica, não da física estabelecida.<sup class="cit"><a href="#f4">4</a></sup></p>
+</div>
+
+<h3>Por que a discussão sobre hipercomputação continua relevante</h3>
+
+<p>Mesmo sendo, hoje, majoritariamente especulativa, a discussão sobre hipercomputação cumpre um papel útil: obriga a distinguir com precisão duas coisas que costumam ser confundidas. Uma é matemática pura (a tese de Church-Turing original, sobre o que "algoritmo" significa como conceito abstrato, amplamente aceita e nunca seriamente contestada). A outra é uma afirmação sobre física (será que existe algum processo físico real que calcule algo além disso), que é logicamente independente da primeira e permanece, em princípio, aberta a revisão caso alguma descoberta futura em física fundamental mude o quadro. Até o momento, nenhuma descoberta desse tipo apareceu.</p>
+
+<h3>O legado mais amplo, além da teoria da computabilidade</h3>
+
+<p>A ideia de uma máquina universal de Turing, capaz de simular qualquer outra máquina de Turing a partir de seu código, é o antepassado teórico direto do conceito de computador de propósito geral e programável, a base de toda a indústria de tecnologia da informação moderna. Antes de Turing, "computador" era, em muitos contextos, uma palavra para descrever uma pessoa que calculava números manualmente, com uma máquina dedicada construída para um único propósito. A ideia de uma única máquina capaz de executar qualquer programa que lhe seja dado, mudando de tarefa apenas trocando o programa, sem alterar o hardware, é uma contribuição conceitual de Turing tão importante quanto o próprio resultado sobre o problema da parada.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Máquina de Turing", def: "Modelo matemático abstrato de computação, proposto por Alan Turing em 1936, com uma fita infinita, um cabeçote de leitura e escrita, e uma tabela finita de regras de estado, usado para definir formalmente o que significa 'computável'." },
+    { termo: "Tese de Church-Turing", def: "Afirmação de que a definição formal de computação por máquina de Turing captura corretamente a noção intuitiva de algoritmo, proposta independentemente por Alonzo Church e Alan Turing em 1936, aceita de forma praticamente unânime." },
+    { termo: "Entscheidungsproblem", def: "Problema formulado por David Hilbert em 1928: existe um procedimento mecânico geral para decidir a verdade de qualquer afirmação matemática? Turing respondeu negativamente em 1936, usando o problema da parada." },
+    { termo: "Problema da parada (halting problem)", def: "Pergunta sobre se, dado o código de uma máquina de Turing e uma entrada, é possível determinar algoritmicamente se ela vai parar ou rodar para sempre. Turing provou que não existe solução algorítmica geral para essa pergunta." },
+    { termo: "Tese de Church-Turing física", def: "Versão mais forte e especulativa da tese original, afirmando que nenhum sistema físico real será capaz de calcular além do que uma máquina de Turing calcula; diferente da tese matemática original, é uma afirmação empírica sobre o universo físico." }
+  ],
+  lembrar: [
+    "Alan Turing propôs a máquina de Turing em 1936, num artigo que respondia ao Entscheidungsproblem de David Hilbert, formulado em 1928.",
+    "A máquina de Turing é um modelo matemático abstrato (fita, cabeçote, regras de estado), nunca precisou ser construída fisicamente para cumprir seu papel teórico.",
+    "A tese de Church-Turing, proposta independentemente por Church e Turing em 1936, afirma que esse modelo captura corretamente a noção intuitiva de algoritmo, e é aceita de forma praticamente unânime há quase noventa anos.",
+    "Turing provou que o problema da parada (saber se um programa qualquer vai terminar ou rodar para sempre) não tem solução algorítmica geral, respondendo negativamente ao Entscheidungsproblem original.",
+    "Todo computador moderno é, em capacidade fundamental de computação, equivalente a uma máquina de Turing: a diferença é de velocidade e memória disponível, não de poder computacional em princípio.",
+    "Computadores quânticos podem resolver certos problemas mais rápido, mas não resolvem problemas comprovadamente indecidíveis, como o problema da parada; não há evidência de que permitam hipercomputação.",
+    "A tese de Church-Turing física, mais forte e especulativa, é uma afirmação empírica sobre o universo, distinta da tese matemática original, e propostas de hipercomputação carecem, até hoje, de evidência experimental de viabilidade."
+  ],
+  confusoes: [
+    { erro: "A máquina de Turing é um computador de verdade, construído fisicamente por Alan Turing", correcao: "É um modelo matemático abstrato, uma ferramenta de raciocínio teórico. Nunca precisou ser construída fisicamente para cumprir seu papel de definir formalmente o que significa 'computável'." },
+    { erro: "Computadores modernos são fundamentalmente mais poderosos que uma máquina de Turing, em termos do que conseguem calcular", correcao: "Em capacidade fundamental de computação, computadores modernos são equivalentes a uma máquina de Turing com fita suficiente. A diferença é de velocidade e memória disponível, não de poder computacional em princípio." },
+    { erro: "O problema da parada não tem solução hoje porque a tecnologia ainda não é boa o suficiente", correcao: "É uma prova matemática de impossibilidade, não uma limitação tecnológica temporária. Nenhum avanço futuro de hardware ou software poderá, em princípio, resolver o problema da parada de forma totalmente geral." },
+    { erro: "Computadores quânticos ultrapassam os limites estabelecidos pela tese de Church-Turing, calculando coisas que máquinas de Turing clássicas não conseguem calcular em princípio", correcao: "Computadores quânticos podem ser mais rápidos para certos problemas específicos, mas a evidência disponível não sustenta que consigam resolver problemas comprovadamente indecidíveis, como o problema da parada, nem que permitam hipercomputação." },
+    { erro: "A tese de Church-Turing é um teorema matemático, provado de forma definitiva", correcao: "É uma tese, não um teorema: uma afirmação sobre a correspondência entre uma noção intuitiva (algoritmo) e uma definição formal (máquina de Turing), aceita por consenso e por ausência de contraexemplos, não demonstrada por prova matemática dedutiva." }
+  ],
+  numeros: [
+    "Turing, A. M. 'On Computable Numbers, with an Application to the Entscheidungsproblem', 1936: artigo original que propôs a máquina de Turing e provou a indecidibilidade do problema da parada.",
+    "Hilbert formulou o Entscheidungsproblem em 1928, num congresso internacional de matemáticos, chamando-o de 'o problema principal da lógica matemática'.",
+    "Alonzo Church chegou a uma conclusão equivalente por um caminho matemático diferente (o cálculo lambda), na mesma época que Turing, em 1936.",
+    "A tese de Church-Turing é aceita há quase noventa anos, sem nenhum contraexemplo genuíno que tenha resistido a escrutínio científico."
+  ]
+},
+
+flashcards: [
+  { f: "O que é uma máquina de Turing, em termos básicos?", v: "Um modelo matemático abstrato de computação, com uma fita infinita, um cabeçote de leitura e escrita, e uma tabela finita de regras de estado, proposto por Alan Turing em 1936." },
+  { f: "Qual problema, formulado por David Hilbert em 1928, motivou Turing a propor essa máquina?", v: "O Entscheidungsproblem: existe um procedimento mecânico geral capaz de decidir se qualquer afirmação matemática é verdadeira ou falsa?" },
+  { f: "O que é a tese de Church-Turing?", v: "A afirmação de que a definição formal de computação por máquina de Turing captura corretamente a noção intuitiva de algoritmo, proposta independentemente por Alonzo Church e Alan Turing em 1936." },
+  { f: "O que é o problema da parada (halting problem)?", v: "A pergunta sobre se, dado o código de uma máquina de Turing e uma entrada, é possível determinar algoritmicamente se ela vai parar ou rodar para sempre." },
+  { f: "O que Turing provou sobre o problema da parada, e o que isso implica para o Entscheidungsproblem original?", v: "Que não existe solução algorítmica geral para o problema da parada, o que implica que o Entscheidungsproblem também não tem solução: não existe procedimento mecânico geral para decidir a verdade de qualquer afirmação matemática." },
+  { f: "Que técnica de demonstração Turing usou, e com qual outro resultado matemático famoso ela se parece?", v: "A técnica de diagonalização, muito parecida com a usada por Kurt Gödel poucos anos antes para provar seus teoremas de incompletude." },
+  { f: "Qual é a relação entre a capacidade computacional de um computador moderno e a de uma máquina de Turing?", v: "São equivalentes em capacidade fundamental de computação. A diferença entre eles é de velocidade e memória disponível, não de poder computacional em princípio." },
+  { f: "Computadores quânticos conseguem resolver o problema da parada ou outros problemas comprovadamente indecidíveis?", v: "Não, segundo a evidência disponível. Eles podem ser mais rápidos para certos problemas específicos, mas não ultrapassam os limites de computabilidade estabelecidos pela tese de Church-Turing." },
+  { f: "O que é a tese de Church-Turing física, e por que ela é diferente da tese original?", v: "É uma versão mais forte e especulativa, afirmando que nenhum sistema físico real calculará além do que uma máquina de Turing calcula. Diferente da tese matemática original, é uma afirmação empírica sobre o universo físico, em princípio revisável." },
+  { f: "O que é hipercomputação, e qual é seu status científico atual?", v: "Propostas teóricas de processos físicos hipotéticos (supertarefas, buracos negros, processos retrocausais) que calculariam além dos limites de uma máquina de Turing. Até hoje carecem de qualquer evidência experimental de viabilidade, permanecendo especulação teórica." },
+  { f: "O que é uma máquina universal de Turing?", v: "Uma única máquina de Turing capaz de simular qualquer outra máquina de Turing, dado seu código como entrada. É o antepassado teórico do conceito de computador de propósito geral e programável." },
+  { f: "Por que ferramentas de análise de software não conseguem garantir, de forma totalmente geral, que um programa nunca vai travar num loop infinito?", v: "Porque isso é uma instância do problema da parada, comprovadamente sem solução algorítmica geral. Ferramentas modernas contornam esse limite analisando classes restritas de programas ou aceitando margens de incerteza." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que é uma máquina de Turing?",
+    alts: [
+      "Um computador físico construído por Alan Turing em 1936 e ainda em funcionamento hoje.",
+      "Um modelo matemático abstrato de computação, com fita, cabeçote de leitura e escrita, e regras de estado, usado para definir formalmente o que significa 'computável'.",
+      "Um programa de inteligência artificial desenvolvido na década de 1980.",
+      "Um dispositivo mecânico usado exclusivamente para decifrar códigos durante a Segunda Guerra Mundial."
+    ],
+    correta: 1,
+    porque: "A máquina de Turing é uma ferramenta de raciocínio matemático abstrato, nunca precisou ser construída fisicamente para cumprir seu papel teórico de definir precisamente o conceito de computação." },
+
+  { camada: "nucleo",
+    q: "Qual problema, formulado por David Hilbert em 1928, motivou Alan Turing a propor sua máquina?",
+    alts: [
+      "O problema de encontrar todos os números primos existentes.",
+      "O Entscheidungsproblem: existe um procedimento mecânico geral capaz de decidir se qualquer afirmação matemática é verdadeira ou falsa?",
+      "O problema de calcular a órbita exata dos planetas do sistema solar.",
+      "O problema de provar a existência de números irracionais."
+    ],
+    correta: 1,
+    porque: "Para responder a essa pergunta com rigor, era preciso primeiro definir com precisão matemática o que 'procedimento mecânico' significa, e foi exatamente isso que a máquina de Turing fez." },
+
+  { camada: "nucleo",
+    q: "Qual é a relação entre a capacidade computacional de um computador moderno e a de uma máquina de Turing?",
+    alts: [
+      "Computadores modernos são infinitamente mais poderosos, capazes de calcular coisas impossíveis para uma máquina de Turing.",
+      "São equivalentes em capacidade fundamental de computação; a diferença entre eles é de velocidade e memória disponível, não de poder computacional em princípio.",
+      "Máquinas de Turing são mais poderosas que qualquer computador já construído.",
+      "Não existe nenhuma relação entre os dois conceitos."
+    ],
+    correta: 1,
+    porque: "Esse é um dos pontos mais surpreendentes do tema: em termos do que é, em princípio, computável, um laptop moderno e a máquina de fita imaginária de 1936 têm exatamente o mesmo poder." },
+
+  { camada: "aprofundamento",
+    q: "O que é o problema da parada (halting problem), e o que Turing provou sobre ele?",
+    alts: [
+      "É a pergunta sobre quanto tempo um computador demora para ligar, e Turing provou que sempre demora menos de um segundo.",
+      "É a pergunta sobre se, dado o código de uma máquina de Turing e uma entrada, é possível determinar se ela vai parar ou rodar para sempre, e Turing provou que não existe solução algorítmica geral para essa pergunta.",
+      "É a pergunta sobre quando a indústria de computadores vai parar de crescer, e Turing previu a resposta com precisão.",
+      "É um problema já resolvido por computadores quânticos modernos."
+    ],
+    correta: 1,
+    porque: "Essa é uma prova matemática de impossibilidade, não uma limitação tecnológica temporária, e tem implicações diretas para os limites de qualquer ferramenta de análise automática de programas." },
+
+  { camada: "aprofundamento",
+    q: "Que técnica de demonstração Turing usou para provar a indecidibilidade do problema da parada, e com qual outro resultado famoso ela se parece?",
+    alts: [
+      "Indução matemática simples, sem relação com nenhum outro resultado famoso.",
+      "A técnica de diagonalização, muito parecida com a usada por Kurt Gödel poucos anos antes para provar seus teoremas de incompletude.",
+      "Um experimento físico realizado em laboratório com máquinas reais.",
+      "Uma pesquisa estatística com centenas de programadores voluntários."
+    ],
+    correta: 1,
+    porque: "Ambas as provas (de Gödel e de Turing) usam uma versão da técnica de diagonalização, construindo uma contradição lógica a partir da suposição de que um procedimento geral e completo existiria." },
+
+  { camada: "aprofundamento",
+    q: "O que é a tese de Church-Turing, e qual é seu status epistemológico (é um teorema ou uma tese)?",
+    alts: [
+      "É um teorema matemático, demonstrado por prova dedutiva formal, sem nenhuma dúvida possível.",
+      "É uma tese, não um teorema: uma afirmação sobre a correspondência entre a noção intuitiva de algoritmo e a definição formal de máquina de Turing, aceita por consenso e ausência de contraexemplos.",
+      "É uma lei física, comparável às leis de Newton, testável apenas em laboratório.",
+      "É uma hipótese já refutada pela computação quântica moderna."
+    ],
+    correta: 1,
+    porque: "Diferente de um teorema, a tese de Church-Turing não pode ser 'provada' no sentido matemático estrito, porque conecta um conceito intuitivo e informal (algoritmo) a uma definição formal precisa; sua aceitação vem do consenso e da ausência de contraexemplos em quase noventa anos." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela apresentada no documento, o que é uma máquina universal de Turing?",
+    alts: [
+      "Uma máquina de Turing capaz de resolver o problema da parada para qualquer outra máquina.",
+      "Uma única máquina de Turing capaz de simular qualquer outra máquina de Turing, dado seu código como entrada, fundamento teórico do conceito de computador programável de propósito geral.",
+      "A primeira máquina de Turing física, construída na década de 1940.",
+      "Um tipo de máquina de Turing usada exclusivamente para cálculos financeiros."
+    ],
+    correta: 1,
+    porque: "A ideia de uma única máquina que executa qualquer programa dado a ela, sem mudança de hardware, é o antepassado teórico direto do computador de propósito geral moderno." },
+
+  { camada: "extensao",
+    q: "Segundo a evidência disponível hoje, computadores quânticos conseguem resolver problemas comprovadamente indecidíveis para máquinas de Turing clássicas, como o problema da parada?",
+    alts: [
+      "Sim, essa é considerada a principal vantagem prática da computação quântica.",
+      "Não. Computadores quânticos podem ser mais rápidos para certos problemas específicos, mas a evidência disponível não sustenta que ultrapassem os limites de computabilidade estabelecidos pela tese de Church-Turing.",
+      "Sim, mas apenas para problemas relacionados à criptografia.",
+      "A pergunta ainda não faz sentido tecnicamente, porque computadores quânticos não existem de fato."
+    ],
+    correta: 1,
+    porque: "A vantagem da computação quântica, quando existe, é de velocidade para problemas específicos (uma vantagem de desempenho), não de capacidade fundamental de calcular algo além do que já era, em princípio, computável." },
+
+  { camada: "extensao",
+    q: "Qual é a diferença entre a tese de Church-Turing original e a tese de Church-Turing física?",
+    alts: [
+      "Não existe diferença real entre as duas, são apenas nomes alternativos para a mesma afirmação.",
+      "A tese original é sobre o que 'algoritmo' significa matematicamente; a versão física é uma afirmação empírica sobre o universo, propondo que nenhum sistema físico real jamais calculará além do que uma máquina de Turing calcula.",
+      "A tese física já foi provada matematicamente, enquanto a original continua sendo apenas uma hipótese.",
+      "A tese física se aplica só a computadores quânticos, e a original só a computadores clássicos."
+    ],
+    correta: 1,
+    porque: "Essa distinção é importante porque a versão física, sendo uma afirmação empírica sobre a natureza, é logicamente independente da tese matemática original e permanece, em princípio, revisável por descobertas futuras em física fundamental." },
+
+  { camada: "extensao",
+    q: "Qual é o status científico atual das propostas de 'hipercomputação' (processos físicos hipotéticos que calculariam além dos limites de uma máquina de Turing)?",
+    alts: [
+      "Já foram implementadas com sucesso em laboratórios de física quântica avançada.",
+      "Permanecem especulação teórica, carecendo, até hoje, de qualquer evidência experimental de viabilidade física.",
+      "Foram definitivamente refutadas e abandonadas por toda a comunidade científica.",
+      "São consideradas certeza científica, apenas aguardando desenvolvimento de engenharia."
+    ],
+    correta: 1,
+    porque: "Essas propostas dependem de suposições físicas (como supertarefas ou processos retrocausais) que não têm, até o momento, nenhum suporte experimental, o que as mantém no domínio da especulação teórica, distinta de física estabelecida." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Turing, A. M. 'On Computable Numbers, with an Application to the Entscheidungsproblem'. <em>Proceedings of the London Mathematical Society</em>, 1936.", url: "https://www.jerrycards.com/news/alan-turing-1936-on-computable-numbers-birth-of-computer-science" },
+  { n: 2, tipo: "enciclopédia filosófica", ref: "Stanford Encyclopedia of Philosophy. Verbete 'The Church-Turing Thesis'.", url: "https://plato.stanford.edu/entries/church-turing/" },
+  { n: 3, tipo: "enciclopédia filosófica", ref: "Stanford Encyclopedia of Philosophy. Verbete 'Computability and Complexity'.", url: "https://plato.stanford.edu/entries/computability/" },
+  { n: 4, tipo: "fonte primária", ref: "Copeland, B. J. &amp; Shagrir, O. 'Physical Hypercomputation and the Church-Turing Thesis'.", url: "https://www.researchgate.net/publication/227007023_Physical_Hypercomputation_and_the_Church-Turing_Thesis" },
+  { n: 5, tipo: "fonte primária", ref: "'Hypercomputation and the Physical Church-Turing Thesis'. <em>The British Journal for the Philosophy of Science</em> 54(2):181, 2003.", url: "https://www.journals.uchicago.edu/doi/10.1093/bjps/54.2.181" },
+  { n: 6, tipo: "divulgação", ref: "Kronecker Wallis. 'Church-Turing Thesis Explained: The Limits of Computation'.", url: "https://www.kroneckerwallis.com/church-turing-thesis-explained-the-limits-of-computation/" },
+  { n: 7, tipo: "enciclopédia", ref: "Grokipedia. Verbete sobre a tese de Church-Turing, com contexto histórico do Entscheidungsproblem.", url: "https://grokipedia.com/page/Church%E2%80%93Turing_thesis" },
+  { n: 8, tipo: "fonte primária", ref: "Estudo sobre hipercomputação com processos quânticos adiabáticos e seus limites teóricos.", url: "https://www.sciencedirect.com/science/article/pii/S0304397503006339" },
+  { n: 9, tipo: "fonte primária", ref: "'Zeno machines and hypercomputation', sobre modelos de supertarefas e seus limites físicos.", url: "https://arxiv.org/html/cs/0412022v1" },
+  { n: 10, tipo: "reportagem", ref: "Center Consulting. 'On Computable Numbers, with an Application to the Entscheidungsproblem (1936)', resumo acessível do artigo original e seu impacto histórico.", url: "https://www.centerconsulting.com/code-library/papers/turing-1936" },
+  { n: 11, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Turing machine', com detalhamento técnico do formalismo e variantes.", url: "https://en.wikipedia.org/wiki/Turing_machine" },
+  { n: 12, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Halting problem', com detalhamento da prova de indecidibilidade e suas aplicações.", url: "https://en.wikipedia.org/wiki/Halting_problem" },
+  { n: 13, tipo: "fonte primária", ref: "Church, A. 'An Unsolvable Problem of Elementary Number Theory'. <em>American Journal of Mathematics</em> 58(2):345-363, 1936. Formulação independente e equivalente à de Turing, via cálculo lambda.", url: "https://www.jstor.org/stable/2371045" },
+  { n: 14, tipo: "revisão acadêmica", ref: "'The Church-Turing thesis: Still valid after all these years?'. <em>Applied Mathematics and Computation</em>.", url: "https://www.sciencedirect.com/science/article/abs/pii/S0096300305008374" },
+  { n: 15, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Church-Turing thesis', com panorama das diferentes formulações e do debate sobre hipercomputação.", url: "https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
+
+/* ── memoria-falsa.js ──────────────────────────────────────── */
+CONTEUDOS["memoria-falsa"] = {
+termo: "Memória falsa e o paradigma DRM",
+area: "Psicologia",
+subtitulo: "É possível fazer uma pessoa lembrar, com confiança e detalhes, de uma palavra que nunca foi dita, ou de um episódio da infância que nunca aconteceu. Isso já foi demonstrado centenas de vezes em laboratório, mudou como tribunais tratam depoimentos, e ainda gera debate metodológico sério sobre como medir e classificar o próprio fenômeno.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que lembrar não é reproduzir uma gravação, é reconstruir algo a partir de fragmentos.",
+  "Para o aprofundamento: familiaridade com a ideia de que testemunhos de memória são usados como evidência em processos judiciais."
+],
+conexoes: [
+  { termo: "Efeito Dunning-Kruger", relacao: "Outro caso em que uma descoberta real e sólida de laboratório circula popularmente numa versão exagerada, o que exige separar o achado técnico da narrativa simplificada." },
+  { termo: "Cérebro dividido: o experimento e a releitura", relacao: "Os dois casos mostram como a interpretação de um achado neuropsicológico ou cognitivo pode evoluir bastante nas décadas seguintes à publicação original, sem que o dado bruto mude." },
+  { termo: "Crise de replicação", relacao: "O debate atual sobre como contar e classificar memórias falsas no paradigma 'perdido no shopping' é um exemplo direto de disputa metodológica ainda ativa sobre um efeito já bem estabelecido." },
+  { termo: "Reconsolidação da memória", relacao: "Ambos os temas mostram que a memória humana não é um arquivo estático: ela pode ser alterada tanto no momento da lembrança (reconsolidação) quanto no momento da própria formação (memória falsa)." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">Peça a alguém para memorizar uma lista de palavras como "cama, descanso, acordado, cansado, sonho, desperto, cochilo, paz, bocejo, soneca, cobertor, escuro". Depois de um tempo, peça que ela diga quais palavras estavam na lista. É muito comum que a pessoa diga, com confiança, que a palavra "sono" estava lá. Ela nunca esteve. Nenhuma das palavras da lista é "sono", mas todas apontam fortemente para esse conceito, e a mente da pessoa preenche a lacuna sozinha, criando uma lembrança de algo que nunca foi apresentado.</p>
+
+<p>Esse procedimento é conhecido como <strong>paradigma DRM</strong>, sigla que junta os nomes de James Deese, que descreveu o efeito pela primeira vez em 1959,<sup class="cit"><a href="#f1">1</a></sup> e de Henry Roediger e Kathleen McDermott, que o retomaram e popularizaram em 1995, num artigo hoje clássico da psicologia cognitiva.<sup class="cit"><a href="#f2">2</a></sup> O achado central: memória falsa não é algo raro, exótico, que só acontece em circunstâncias extremas. Ela pode ser produzida de forma confiável, em minutos, com listas de palavras cuidadosamente escolhidas, em praticamente qualquer pessoa.</p>
+
+<div class="marca consenso">
+<span class="rot">O que é bem estabelecido</span>
+<p>Que memórias falsas, no sentido de lembranças de algo que não aconteceu (ou não aconteceu do jeito lembrado), podem ser criadas de forma sistemática e replicável em laboratório, com alto grau de confiança subjetiva por parte de quem lembra, é um dos achados mais replicados da psicologia cognitiva desde 1995. Isso vale tanto para itens simples, como uma palavra isolada, quanto, em estudos posteriores, para episódios inteiros da vida da pessoa.</p>
+</div>
+
+<h3>Do laboratório para a vida real: o estudo do shopping</h3>
+
+<p>Elizabeth Loftus, já conhecida por décadas de pesquisa sobre a maleabilidade do testemunho ocular, e Jacqueline Pickrell foram além das palavras isoladas: tentaram implantar, em adultos, a lembrança de um episódio inteiro que nunca aconteceu, ficar perdido num shopping center por volta dos 5 anos de idade.<sup class="cit"><a href="#f3">3</a></sup> Usando um parente mais velho para "confirmar" o episódio fictício junto com três lembranças reais, uma fração relevante dos participantes passou a relatar, com detalhes próprios inventados, uma lembrança do episódio que jamais existiu.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+<p>O motivo declarado da pesquisa não era um exercício acadêmico abstrato. Nos anos 1980 e 1990, tribunais nos Estados Unidos viram uma onda de processos baseados em "memórias recuperadas" de abuso na infância, muitas vezes emergidas durante terapia. Loftus queria testar, com rigor experimental, se era possível implantar uma lembrança inteira e falsa em alguém, como forma de questionar se toda memória "recuperada" em terapia era necessariamente confiável.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+<div class="marca controverso">
+<span class="rot">Um ponto que exige cuidado</span>
+<p>Loftus foi explícita ao afirmar que o estudo do shopping não provava que toda memória de abuso infantil relatada em terapia fosse falsa. O estudo mostrava que é possível implantar uma lembrança inteiramente inventada em algumas pessoas, sob condições específicas, não que memórias de eventos traumáticos reais sejam, em geral, pouco confiáveis. Usar esse estudo para descartar automaticamente qualquer relato de abuso é uma extrapolação que vai além do que a pesquisa demonstrou, e foi, de fato, um uso indevido comum do achado em disputas judiciais daquela época.</p>
+</div>
+
+<h3>Por que isso importa fora do laboratório</h3>
+
+<p>O paradigma DRM e o estudo do shopping mudaram, de forma concreta, como sistemas de justiça tratam depoimentos. Protocolos de entrevista policial e psicológica passaram a levar mais a sério o risco de "contaminar" uma testemunha com perguntas sugestivas, e cortes em vários países passaram a admitir, com mais frequência, peritos especializados em confiabilidade de memória. A lição central, para além do laboratório: confiança subjetiva ao lembrar de algo não é, por si só, prova de que aquilo realmente aconteceu daquele jeito.</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>Como o efeito DRM funciona, mecanicamente</h3>
+
+<p>Roediger e McDermott usaram listas de 12 a 15 palavras, cada uma associada semanticamente a uma palavra "crítica" que nunca aparece na lista (no exemplo do núcleo, "sono"). Em seus experimentos, participantes "lembravam" da palavra crítica em cerca de 40% a 55% dos casos, taxa comparável, em alguns testes, à taxa de lembrança de palavras que realmente estavam na lista.<sup class="cit"><a href="#f2">2</a></sup> A explicação mais aceita é que, ao processar cada palavra da lista, a mente ativa automaticamente conceitos relacionados na memória semântica, e essa ativação da palavra crítica, mesmo sem ela ter sido apresentada, é forte o bastante para ser confundida, na hora de recordar, com uma lembrança real de tê-la visto ou ouvido.</p>
+
+<h3>O desenho experimental do estudo do shopping</h3>
+
+<p>Loftus e Pickrell recrutaram 24 participantes, cada um pareado com um parente mais velho (geralmente um dos pais ou um irmão mais velho) que ajudava a fornecer detalhes de três episódios reais da infância do participante. Um quarto episódio, fictício (perder-se num shopping por volta dos 5 anos, chorar, ser ajudado por uma senhora mais velha e finalmente reencontrar a família), era inserido junto dos três reais, sempre "confirmado" pelo parente como tendo de fato acontecido. Em entrevistas subsequentes, cerca de um quarto dos participantes passou a relatar lembrar do episódio fictício, alguns acrescentando detalhes sensoriais e emocionais próprios que não faziam parte da história original fornecida pelos pesquisadores.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Estudo</th><th>O que testou</th><th>Achado principal</th></tr></thead>
+<tbody>
+<tr><td>Deese (1959)</td><td>Intrusões de palavras não apresentadas em listas de recordação imediata</td><td>Primeira descrição sistemática do efeito, décadas antes de ser retomado</td></tr>
+<tr><td>Roediger &amp; McDermott (1995)</td><td>Retomada e expansão sistemática do paradigma de Deese com listas associativas</td><td>Taxas de falsa lembrança de 40% a 55%, comparáveis à lembrança de itens reais</td></tr>
+<tr><td>Loftus &amp; Pickrell (1995)</td><td>Implantação de um episódio inteiro e fictício da infância, com apoio de um parente</td><td>Cerca de um quarto dos participantes passou a 'lembrar' do episódio fictício</td></tr>
+<tr><td>Murphy et al. (2023)</td><td>Réplica pré-registrada, com amostra cinco vezes maior, do estudo de Loftus e Pickrell</td><td>Cerca de 35% desenvolveram alguma crença ou memória falsa do episódio</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>O que conta como "memória falsa", precisamente</h3>
+
+<p>Vale diferenciar dois níveis de efeito que a literatura às vezes trata como sinônimos, mas não são idênticos: acreditar que um evento aconteceu (crença) e ter uma lembrança subjetiva, com detalhes sensoriais e narrativos, de tê-lo vivido (memória). Nem todo participante que passa a acreditar no evento fictício desenvolve uma "lembrança" no sentido mais forte, com riqueza de detalhes reconstituídos. Distinguir esses dois níveis é importante para não superestimar, a partir das taxas gerais relatadas, quantas pessoas de fato "lembram" versus quantas apenas "acreditam" ter acontecido.<sup class="cit"><a href="#f4">4</a></sup></p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Uma disputa metodológica que segue ativa</h3>
+
+<p>Décadas depois do estudo original, pesquisadores continuam debatendo, em periódicos especializados, como exatamente contar e classificar memórias falsas no paradigma "perdido no shopping". Um artigo de 2025 na revista <em>Applied Cognitive Psychology</em>, provocativamente intitulado "Quem se perdeu no shopping? Desafios em contar e classificar memórias falsas", questiona os critérios usados por diferentes equipes de pesquisa para decidir se um participante "de fato" desenvolveu uma memória falsa ou apenas concordou, de forma superficial, com uma sugestão do entrevistador.<sup class="cit"><a href="#f5">5</a></sup> Outro artigo do mesmo número da revista chega a perguntar se é hora de "deixar o shopping center para trás", apontando falhas de mensuração e limites de validade externa do paradigma clássico.<sup class="cit"><a href="#f6">6</a></sup></p>
+
+<div class="marca emergente">
+<span class="rot">O que essa disputa muda, e o que não muda</span>
+<p>Essa discussão recente não questiona se memórias falsas podem ser criadas, isso continua bem estabelecido, replicado inclusive com amostra cinco vezes maior por Murphy e colegas em 2023.<sup class="cit"><a href="#f4">4</a></sup> O que está em disputa é a precisão dos números específicos frequentemente citados ("um quarto das pessoas", "35% das pessoas"), que dependem bastante de como cada equipe de pesquisa define o que conta como uma memória falsa genuína, versus uma concordância superficial ou uma crença sem detalhes reconstituídos. É um lembrete de que, mesmo em efeitos bem replicados, a porcentagem exata citada numa manchete de divulgação científica merece ser lida com a mesma cautela reservada a qualquer outro número isolado.</p>
+</div>
+
+<h3>Implicações para terapia e para o sistema de justiça</h3>
+
+<p>A pesquisa sobre memória falsa alimentou, nos anos 1990, um movimento conhecido como "Síndrome da Falsa Memória", que questionava terapias baseadas em recuperação de memórias reprimidas de abuso. Esse movimento também gerou controvérsia própria: críticos apontaram que ele foi por vezes usado, em processos judiciais, para desacreditar sistematicamente relatos verdadeiros de abuso, indo além do que a pesquisa de laboratório realmente sustenta.<sup class="cit"><a href="#f7">7</a></sup> A leitura mais equilibrada, hoje, reconhece duas coisas ao mesmo tempo: memórias podem ser distorcidas ou implantadas sob condições específicas de sugestão repetida, e a maioria dos relatos de eventos autobiográficos, incluindo eventos traumáticos, não é fabricada. A pesquisa sobre memória falsa serve para melhorar protocolos de entrevista (evitando perguntas sugestivas e repetição indutora), não para descartar relatos de memória em bloco.</p>
+
+<h3>Por que a mente cria memórias falsas em primeiro lugar</h3>
+
+<p>Do ponto de vista da neurociência cognitiva, memória não funciona como um arquivo de vídeo armazenado intacto e reproduzido sob demanda. Ela é reconstruída a cada lembrança, a partir de fragmentos armazenados de forma distribuída e de expectativas, esquemas e associações ativas no momento em que a pessoa tenta lembrar. Esse mesmo mecanismo que permite generalizar, inferir e completar informação ausente de forma útil na vida cotidiana (por exemplo, "lembrar" corretamente do sentido geral de uma conversa longa sem guardar cada palavra) é o que também abre espaço para preencher lacunas com informação plausível, mas errada, quando as pistas apontam fortemente na direção de algo que não aconteceu.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Paradigma DRM (Deese-Roediger-McDermott)", def: "Procedimento experimental em que listas de palavras associadas a um conceito ausente (a 'palavra crítica') induzem, de forma confiável, a falsa lembrança dessa palavra ausente, com alta confiança subjetiva." },
+    { termo: "Memória falsa", def: "Lembrança de um evento, detalhe ou item que não ocorreu, ou que ocorreu de forma diferente da lembrada, mantida com graus variados de confiança e riqueza de detalhes reconstituídos." },
+    { termo: "Técnica 'perdido no shopping' (lost-in-the-mall)", def: "Procedimento em que um episódio autobiográfico fictício é apresentado a um participante, com apoio de um parente que 'confirma' sua ocorrência, testando se é possível implantar a lembrança de um evento inteiro que nunca aconteceu." },
+    { termo: "Síndrome da Falsa Memória", def: "Movimento e conceito, surgido nos anos 1990, questionando a confiabilidade de memórias de abuso 'recuperadas' em terapia, controverso por ter sido usado, em alguns casos, para descartar relatos verdadeiros." },
+    { termo: "Memória reconstrutiva", def: "Modelo, dominante na psicologia cognitiva, segundo o qual a memória não é reproduzida como uma gravação intacta, mas reconstruída a cada lembrança a partir de fragmentos, esquemas e associações ativas no momento da recordação." }
+  ],
+  lembrar: [
+    "James Deese descreveu o efeito pela primeira vez em 1959, mas ele só se popularizou depois de ser retomado por Henry Roediger e Kathleen McDermott em 1995.",
+    "No paradigma DRM, listas de palavras associadas a uma palavra ausente induzem falsa lembrança dessa palavra em 40% a 55% dos casos, taxa comparável à de itens que realmente estavam na lista.",
+    "Elizabeth Loftus e Jacqueline Pickrell (1995) implantaram, num estudo com apoio de parentes, a lembrança de um episódio inteiro e fictício (perder-se num shopping na infância) em cerca de um quarto dos participantes.",
+    "Uma réplica pré-registrada de 2023, com amostra cinco vezes maior (Murphy e colegas), encontrou cerca de 35% dos participantes desenvolvendo alguma crença ou memória falsa do episódio.",
+    "Loftus foi explícita ao afirmar que o estudo não provava que memórias de abuso infantil recuperadas em terapia fossem falsas, apenas que é possível implantar uma memória inteira sob condições específicas.",
+    "Artigos de 2024 e 2025 em periódicos especializados debatem ativamente como contar e classificar memórias falsas nesse paradigma, questionando a precisão dos números específicos costumeiramente citados.",
+    "A pesquisa sobre memória falsa mudou protocolos de entrevista policial e psicológica, tornando-os mais cautelosos com perguntas sugestivas, sem, no entanto, invalidar relatos de memória em geral."
+  ],
+  confusoes: [
+    { erro: "O estudo do shopping de Loftus e Pickrell prova que a maioria dos relatos de abuso infantil recuperados em terapia é falsa", correcao: "Loftus foi explícita ao afirmar o contrário: o estudo mostra que é possível implantar uma memória fictícia inteira sob condições experimentais específicas, não que memórias de eventos traumáticos reais sejam, em geral, pouco confiáveis." },
+    { erro: "Memória falsa só ocorre com informações triviais, como palavras isoladas, nunca com eventos autobiográficos importantes", correcao: "O estudo 'perdido no shopping' e réplicas posteriores mostram que episódios inteiros da vida de uma pessoa, com detalhes emocionais e sensoriais, também podem ser implantados sob condições de sugestão repetida." },
+    { erro: "A confiança com que alguém relata uma lembrança é uma boa medida de quão precisa essa lembrança é", correcao: "Um dos achados centrais dessa linha de pesquisa é justamente o oposto: pessoas relatam memórias falsas com o mesmo grau de confiança subjetiva, e às vezes mais riqueza de detalhes, do que memórias verdadeiras." },
+    { erro: "Como pesquisas recentes questionam os números exatos do estudo do shopping, isso significa que memórias falsas não podem realmente ser implantadas", correcao: "A disputa metodológica atual é sobre como contar e classificar precisamente o fenômeno, não sobre se ele existe. A réplica de 2023, com amostra maior, continuou encontrando uma proporção substancial de participantes desenvolvendo crenças ou memórias falsas." },
+    { erro: "O paradigma DRM e a técnica 'perdido no shopping' são a mesma coisa", correcao: "São procedimentos relacionados, mas diferentes: o DRM testa falsa lembrança de palavras isoladas a partir de associação semântica; a técnica do shopping testa a implantação de um episódio autobiográfico inteiro, com apoio social de um parente." }
+  ],
+  numeros: [
+    "Deese, J. (1959), Journal of Experimental Psychology 58(1):17: primeira descrição sistemática do efeito de intrusão de palavras não apresentadas.",
+    "Roediger, H. L. &amp; McDermott, K. B. (1995), Journal of Experimental Psychology: Learning, Memory, and Cognition 21(4):803-814: taxas de falsa lembrança de 40% a 55% no paradigma DRM.",
+    "Loftus, E. F. &amp; Pickrell, J. E. (1995), Psychiatric Annals 25:720-725: cerca de um quarto de 24 participantes desenvolveu memória do episódio fictício de estar perdido num shopping.",
+    "Murphy, G. et al. (2023), Memory 31(6):818-830: réplica pré-registrada com amostra cinco vezes maior, encontrando cerca de 35% de crenças ou memórias falsas do mesmo episódio.",
+    "Artigos de 2024 e 2025 na revista Applied Cognitive Psychology questionam ativamente os critérios de contagem e classificação de memórias falsas no paradigma clássico."
+  ]
+},
+
+flashcards: [
+  { f: "O que é o paradigma DRM, e de onde vem o nome?", v: "Procedimento em que listas de palavras associadas a uma palavra ausente ('crítica') induzem falsa lembrança dessa palavra. O nome vem de Deese (1959), que o descreveu primeiro, e Roediger e McDermott (1995), que o retomaram e popularizaram." },
+  { f: "Qual é a taxa típica de falsa lembrança da palavra crítica no paradigma DRM, segundo Roediger e McDermott?", v: "Entre 40% e 55% dos casos, taxa comparável, em alguns testes, à taxa de lembrança de palavras que realmente estavam na lista." },
+  { f: "O que Loftus e Pickrell (1995) testaram no estudo conhecido como 'perdido no shopping'?", v: "Se era possível implantar, em adultos, com apoio de um parente mais velho, a lembrança de um episódio inteiro e fictício da infância (ficar perdido num shopping por volta dos 5 anos)." },
+  { f: "Quantos participantes, aproximadamente, desenvolveram a memória do episódio fictício no estudo original de Loftus e Pickrell?", v: "Cerca de um quarto dos 24 participantes, alguns acrescentando detalhes sensoriais e emocionais próprios não fornecidos pelos pesquisadores." },
+  { f: "Por que Loftus conduziu esse estudo, historicamente?", v: "Para testar, com rigor experimental, se memórias inteiras e falsas podiam ser implantadas, num contexto de debate sobre 'memórias recuperadas' de abuso infantil em terapia nos anos 1980 e 1990." },
+  { f: "O estudo do shopping prova que relatos de abuso infantil recuperados em terapia são geralmente falsos?", v: "Não. A própria Loftus foi explícita: o estudo mostra que é possível implantar uma memória fictícia sob condições específicas, não que memórias de eventos traumáticos reais sejam, em geral, pouco confiáveis." },
+  { f: "O que a réplica pré-registrada de Murphy e colegas (2023) encontrou, com uma amostra cinco vezes maior?", v: "Cerca de 35% dos participantes desenvolveram alguma crença ou memória falsa do episódio fictício, confirmando o efeito geral, com uma proporção diferente da do estudo original." },
+  { f: "Qual é a distinção importante entre 'acreditar' que um evento aconteceu e 'lembrar' dele?", v: "Nem todo participante que passa a acreditar no evento fictício desenvolve uma lembrança subjetiva rica em detalhes sensoriais e narrativos reconstituídos; são dois níveis diferentes de efeito, muitas vezes tratados como sinônimos na divulgação." },
+  { f: "Sobre o que exatamente é a disputa metodológica atual (2024-2025) em torno do paradigma 'perdido no shopping'?", v: "Sobre como diferentes equipes de pesquisa definem e contam o que conta como uma memória falsa genuína, versus uma concordância superficial ou crença sem detalhes reconstituídos, questionando a precisão de números específicos costumeiramente citados." },
+  { f: "Essa disputa metodológica significa que memórias falsas não podem ser implantadas?", v: "Não. A existência do efeito continua bem estabelecida. O que está em disputa é a precisão dos números exatos, que variam conforme os critérios de classificação usados." },
+  { f: "Por que a confiança subjetiva ao lembrar de algo não é, por si só, prova de precisão?", v: "Porque memórias falsas costumam ser relatadas com o mesmo grau de confiança, e às vezes mais riqueza de detalhes reconstituídos, do que memórias verdadeiras, um dos achados centrais dessa linha de pesquisa." },
+  { f: "Segundo o modelo de memória reconstrutiva, por que a mente cria memórias falsas?", v: "Porque a memória não é reproduzida como uma gravação intacta, mas reconstruída a cada lembrança a partir de fragmentos, esquemas e associações ativas no momento da recordação, o que permite preencher lacunas com informação plausível, mas às vezes errada." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que é o paradigma DRM?",
+    alts: [
+      "Um teste de inteligência geral usado para medir QI.",
+      "Um procedimento experimental em que listas de palavras associadas a uma palavra ausente induzem, de forma confiável, a falsa lembrança dessa palavra ausente.",
+      "Uma técnica de hipnose usada para recuperar memórias reprimidas.",
+      "Um exame de imagem cerebral usado para detectar mentiras."
+    ],
+    correta: 1,
+    porque: "O paradigma DRM demonstra que memória falsa pode ser produzida de forma sistemática e replicável com listas de palavras cuidadosamente escolhidas, sem precisar de nenhuma técnica exótica." },
+
+  { camada: "nucleo",
+    q: "O que Loftus e Pickrell testaram no estudo 'perdido no shopping' (1995)?",
+    alts: [
+      "Se pessoas conseguem se orientar melhor em shoppings grandes do que em shoppings pequenos.",
+      "Se era possível implantar, em adultos, a lembrança de um episódio inteiro e fictício da infância, com apoio de um parente mais velho.",
+      "Se crianças perdidas em shoppings sofrem trauma permanente.",
+      "Se lojas de shopping influenciam decisões de compra por meio de propaganda subliminar."
+    ],
+    correta: 1,
+    porque: "O estudo testou diretamente a possibilidade de implantar um episódio autobiográfico completamente fictício, indo além de itens isolados como palavras, para episódios inteiros da vida da pessoa." },
+
+  { camada: "nucleo",
+    q: "O que aconteceu com uma fração relevante dos participantes do estudo original de Loftus e Pickrell?",
+    alts: [
+      "Nenhum participante acreditou no episódio fictício.",
+      "Cerca de um quarto dos participantes passou a relatar lembrar do episódio fictício, alguns com detalhes próprios inventados.",
+      "Todos os participantes identificaram corretamente o episódio como falso.",
+      "Os participantes se recusaram a continuar o experimento."
+    ],
+    correta: 1,
+    porque: "Esse resultado, replicado depois em outros estudos, é a demonstração central de que memórias autobiográficas inteiras, não só palavras isoladas, podem ser implantadas sob condições experimentais específicas." },
+
+  { camada: "aprofundamento",
+    q: "Segundo o documento, qual é a distinção importante entre 'acreditar' que um evento aconteceu e efetivamente 'lembrar' dele?",
+    alts: [
+      "Não existe distinção real entre os dois conceitos, eles são sempre idênticos.",
+      "Acreditar é apenas concordar que algo pode ter acontecido, enquanto lembrar envolve uma lembrança subjetiva rica em detalhes sensoriais e narrativos reconstituídos; nem todo participante que acredita desenvolve essa lembrança mais forte.",
+      "Lembrar é sempre mais confiável do que acreditar, sem exceção.",
+      "A distinção só se aplica a memórias de infância, nunca a memórias de eventos recentes."
+    ],
+    correta: 1,
+    porque: "Diferenciar esses dois níveis é importante para não superestimar, a partir de taxas gerais relatadas, quantas pessoas realmente desenvolvem uma memória rica em detalhes versus quantas apenas concordam superficialmente com a sugestão." },
+
+  { camada: "aprofundamento",
+    q: "Qual foi o achado da réplica pré-registrada de Murphy e colegas, publicada em 2023, com uma amostra cinco vezes maior que a original?",
+    alts: [
+      "Nenhum participante desenvolveu qualquer crença ou memória falsa, refutando o estudo original.",
+      "Cerca de 35% dos participantes desenvolveram alguma crença ou memória falsa do episódio fictício, uma proporção diferente, mas na mesma direção geral do estudo original.",
+      "Todos os participantes desenvolveram memórias falsas idênticas às do estudo original.",
+      "A réplica não conseguiu ser concluída por problemas metodológicos insuperáveis."
+    ],
+    correta: 1,
+    porque: "A réplica, com metodologia mais rigorosa e amostra maior, confirmou o efeito geral de implantação de memória falsa, ainda que com uma taxa numérica diferente da relatada no estudo original de 1995." },
+
+  { camada: "aprofundamento",
+    q: "Por que Elizabeth Loftus foi explícita ao afirmar que o estudo do shopping não provava que memórias de abuso infantil recuperadas em terapia fossem falsas?",
+    alts: [
+      "Porque ela nunca se interessou pelo tema de memórias recuperadas.",
+      "Porque o estudo demonstrava apenas que é possível implantar uma memória inteiramente fictícia sob condições experimentais específicas, o que é diferente de provar que memórias de eventos traumáticos reais sejam, em geral, pouco confiáveis.",
+      "Porque o estudo foi conduzido antes de qualquer debate sobre memórias recuperadas existir.",
+      "Porque ela acreditava que todas as memórias de abuso eram automaticamente verdadeiras."
+    ],
+    correta: 1,
+    porque: "Extrapolar do estudo (memórias podem ser implantadas sob condições específicas) para a conclusão de que relatos de abuso são geralmente falsos vai além do que a pesquisa efetivamente demonstrou, um uso indevido comum do achado em disputas judiciais da época." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela cronológica apresentada no documento, o que Deese descreveu em 1959, antes de o efeito ser retomado por Roediger e McDermott?",
+    alts: [
+      "A implantação de episódios autobiográficos inteiros e fictícios.",
+      "A primeira descrição sistemática de intrusões de palavras não apresentadas em listas de recordação imediata.",
+      "A técnica 'perdido no shopping'.",
+      "O conceito de Síndrome da Falsa Memória."
+    ],
+    correta: 1,
+    porque: "Deese descreveu o fenômeno básico de intrusão de palavras associadas décadas antes de o paradigma ser expandido e popularizado por Roediger e McDermott em 1995." },
+
+  { camada: "extensao",
+    q: "Sobre o que trata a disputa metodológica ativa, discutida em artigos de 2024 e 2025 na revista Applied Cognitive Psychology, sobre o paradigma 'perdido no shopping'?",
+    alts: [
+      "Sobre se memórias falsas podem, em princípio, ser criadas, questão ainda totalmente em aberto.",
+      "Sobre como diferentes equipes de pesquisa definem e contam o que conta como uma memória falsa genuína, questionando a precisão dos números específicos costumeiramente citados.",
+      "Sobre se o estudo original de Loftus e Pickrell foi conduzido de forma antiética.",
+      "Sobre se shoppings centers são um ambiente representativo de eventos autobiográficos comuns."
+    ],
+    correta: 1,
+    porque: "A disputa é sobre critérios de mensuração e classificação, não sobre a existência do fenômeno, que continua bem estabelecida e replicada, inclusive pela própria réplica de 2023 com amostra maior." },
+
+  { camada: "extensao",
+    q: "Qual é a leitura mais equilibrada, segundo o documento, sobre a relação entre pesquisa de memória falsa e relatos de abuso infantil em terapia?",
+    alts: [
+      "Todo relato de abuso recuperado em terapia deve ser automaticamente descartado como memória falsa.",
+      "Memórias podem ser distorcidas ou implantadas sob condições específicas de sugestão repetida, mas a maioria dos relatos de eventos autobiográficos, incluindo traumáticos, não é fabricada; a pesquisa serve para melhorar protocolos de entrevista, não para descartar relatos em bloco.",
+      "Nenhuma memória humana pode ser confiada, então testemunhos nunca deveriam ser usados em processos judiciais.",
+      "Memórias implantadas em laboratório são idênticas, em todos os aspectos, a memórias de eventos traumáticos reais."
+    ],
+    correta: 1,
+    porque: "Essa leitura equilibrada reconhece tanto a maleabilidade real da memória sob certas condições quanto a confiabilidade geral da maioria dos relatos autobiográficos, evitando os dois extremos de credulidade total e ceticismo total." },
+
+  { camada: "extensao",
+    q: "Segundo o modelo de memória reconstrutiva discutido no documento, por que a mesma capacidade que permite generalizar e inferir informação também abre espaço para memórias falsas?",
+    alts: [
+      "Porque a memória é armazenada como uma gravação de vídeo intacta que às vezes é copiada incorretamente.",
+      "Porque a memória é reconstruída a cada lembrança a partir de fragmentos, esquemas e associações ativas no momento da recordação, o que permite preencher lacunas com informação plausível, mas por vezes errada.",
+      "Porque o cérebro humano não tem nenhuma capacidade de armazenar informação de forma confiável.",
+      "Porque memórias falsas só ocorrem em pessoas com algum tipo de comprometimento cognitivo diagnosticado."
+    ],
+    correta: 1,
+    porque: "O mesmo mecanismo reconstrutivo que permite completar informação ausente de forma útil no dia a dia (como lembrar do sentido geral de uma conversa) é o que, sob certas condições, produz preenchimentos incorretos indistinguíveis subjetivamente de lembranças verdadeiras." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Deese, J. 'On the prediction of occurrence of particular verbal intrusions in immediate recall'. <em>Journal of Experimental Psychology</em> 58(1):17-22, 1959.", url: "https://pubmed.ncbi.nlm.nih.gov/13664879/" },
+  { n: 2, tipo: "fonte primária", ref: "Roediger, H. L. &amp; McDermott, K. B. 'Creating false memories: Remembering words not presented in lists'. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition</em> 21(4):803-814, 1995.", url: "http://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-McDermott-1995_JEPLMC.pdf" },
+  { n: 3, tipo: "fonte primária", ref: "Loftus, E. F. &amp; Pickrell, J. E. 'The Formation of False Memories'. <em>Psychiatric Annals</em> 25(12):720-725, 1995.", url: "https://journals.healio.com/doi/10.3928/0048-5713-19951201-07" },
+  { n: 4, tipo: "réplica", ref: "Murphy, G. et al. 'Lost in the mall again: a preregistered replication and extension of Loftus &amp; Pickrell (1995)'. <em>Memory</em> 31(6):818-830, 2023.", url: "https://pubmed.ncbi.nlm.nih.gov/37312574/" },
+  { n: 5, tipo: "crítica", ref: "Murphy, G. et al. 'Who Got Lost in the Mall? Challenges in Counting and Classifying False Memories'. <em>Applied Cognitive Psychology</em>, 2025.", url: "https://onlinelibrary.wiley.com/doi/10.1002/acp.70044" },
+  { n: 6, tipo: "crítica", ref: "Szojka, Z. A. et al. 'Is It Time to Leave the Shopping Mall Behind? Measurement Flaws, Plausibility, and External Validity of False Memory Research'. <em>Applied Cognitive Psychology</em>, 2025.", url: "https://onlinelibrary.wiley.com/doi/10.1002/acp.70083" },
+  { n: 7, tipo: "reportagem", ref: "Mad in America. 'The False Memory Syndrome at 30: How Flawed Science Turned into Conventional Wisdom', sobre a controvérsia em torno do movimento de síndrome da falsa memória.", url: "https://www.madinamerica.com/2021/02/false-memory-syndrome/" },
+  { n: 8, tipo: "revisão acadêmica", ref: "Wade, K. A. et al. 'Still Lost in the Mall: False Memories Happen and That's What Matters'. <em>Applied Cognitive Psychology</em>, 2025.", url: "https://onlinelibrary.wiley.com/doi/full/10.1002/acp.70028" },
+  { n: 9, tipo: "revisão acadêmica", ref: "'The Deese-Roediger-McDermott (DRM) Task: A Simple Cognitive Paradigm to Investigate False Memories in the Laboratory'.", url: "https://pubmed.ncbi.nlm.nih.gov/28190038/" },
+  { n: 10, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Deese-Roediger-McDermott paradigm', com resumo técnico do procedimento e variações usadas na literatura.", url: "https://en.wikipedia.org/wiki/Deese%E2%80%93Roediger%E2%80%93McDermott_paradigm" },
+  { n: 11, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Lost in the mall technique', com histórico do estudo e réplicas posteriores.", url: "https://en.wikipedia.org/wiki/Lost_in_the_mall_technique" },
+  { n: 12, tipo: "divulgação", ref: "The Skeptic. 'Replicating a classic false memory study: Lost in the mall again', cobertura acessível da réplica de 2023.", url: "https://www.skeptic.org.uk/2023/05/replicating-a-classic-false-memory-study-lost-in-the-mall-again/" },
+  { n: 13, tipo: "crítica", ref: "Andrews, B. et al. 'Lost in the Mall? Interrogating Judgements of False Memory'. <em>Applied Cognitive Psychology</em>, 2024.", url: "https://onlinelibrary.wiley.com/doi/10.1002/acp.70012" },
+  { n: 14, tipo: "reportagem acadêmica", ref: "'Current state of \"lost in the mall\": implications for expert testimony and forensic assessment of memory'.", url: "https://www.tandfonline.com/doi/full/10.1080/13218719.2025.2556461" },
+  { n: 15, tipo: "divulgação", ref: "Medium (Jeff Barlatier). '\"Lost in the Mall\": How a Simple Story Shook Our Confidence in Memory', resumo acessível do histórico do estudo e seu impacto cultural.", url: "https://medium.com/@jeffreybarlatier/lost-in-the-mall-how-a-simple-story-shook-our-confidence-in-memory-db0299312d48" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
+
 /* ── micorrizas.js ─────────────────────────────────────────── */
 CONTEUDOS["micorrizas"] = {
 termo: "Micorrizas e a 'wood wide web'",
@@ -4097,6 +6240,271 @@ fontes: [
   { n: 13, tipo: "revisão", ref: "Brundrett, M.C. &amp; Tedersoo, L. 'Evolutionary history of mycorrhizal symbioses and global host plant diversity'. <em>New Phytologist</em> 220:1108-1115, 2018. Distribuição dos tipos de micorriza entre as plantas.", url: "https://doi.org/10.1111/nph.14976" }
 ]
 };
+
+/* ── navalha-ockham.js ─────────────────────────────────────── */
+CONTEUDOS["navalha-ockham"] = {
+termo: "Navalha de Ockham e seus limites",
+area: "Filosofia",
+subtitulo: "A frase latina atribuída a Guilherme de Ockham para justificar a preferência pela explicação mais simples não aparece, com essas palavras exatas, em nenhum texto que ele escreveu. E mesmo a versão real do princípio, bem mais modesta do que o clichê sugere, é uma heurística prática, não uma garantia de que a explicação simples é a verdadeira.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que, entre duas explicações que dão conta dos mesmos fatos, existe uma tendência intuitiva a preferir a mais simples.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que teorias científicas fazem previsões testáveis, e que mais de uma teoria pode, às vezes, explicar os mesmos dados observados."
+],
+conexoes: [
+  { termo: "Falseabilidade e demarcação (Popper)", relacao: "Ambos são critérios usados para avaliar teorias científicas, mas nenhum dos dois garante, sozinho, que uma teoria seja verdadeira: são ferramentas de julgamento, não provas." },
+  { termo: "Teoremas da incompletude de Gödel", relacao: "Ambos os temas envolvem limites formais do que pode ser decidido ou justificado dentro de um sistema, e ambos costumam ser citados de forma imprecisa fora do contexto técnico original." },
+  { termo: "Efeito Dunning-Kruger", relacao: "Outro caso de atribuição histórica popularmente incorreta ou simplificada, em que a versão de senso comum de uma ideia diverge do que a fonte original realmente disse ou pretendia." },
+  { termo: "Cascata trófica", relacao: "Ambos os casos mostram que aceitar a explicação mais simples ou mais bonita de um fenômeno, sem checar a evidência com cuidado, é exatamente o tipo de atalho que a própria navalha de Ockham, bem entendida, não recomenda." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">"Entia non sunt multiplicanda praeter necessitatem", entidades não devem ser multiplicadas além do necessário. Essa frase em latim é citada em incontáveis livros de lógica e ciência como a formulação original da navalha de Ockham, atribuída ao frade franciscano inglês Guilherme de Ockham, que viveu no século 14. Há um problema: essas palavras exatas não aparecem em nenhum texto sobrevivente de Ockham. A formulação popular mais conhecida do princípio foi, na verdade, escrita por um filósofo bem posterior, o franciscano irlandês John Punch, num comentário sobre a obra de Duns Scotus publicado em 1639, quase trezentos anos depois da morte de Ockham.<sup class="cit"><a href="#f1">1</a></sup></p>
+
+<p>Isso não significa que Ockham não tenha nada a ver com a ideia. Ele de fato usava, com frequência, princípios de economia explicativa parecidos em seus próprios escritos filosóficos, só que em formulações diferentes e mais específicas ao contexto de cada argumento, não como uma máxima geral resumida numa única frase latina memorável. O próprio termo "navalha de Ockham" só passou a ser usado séculos depois da morte dele, e boa parte da fama do princípio associado a seu nome vem justamente da frequência e da eficácia com que ele o aplicava em debates específicos, não de uma única citação canônica que ele tivesse escrito.<sup class="cit"><a href="#f1">1</a></sup></p>
+
+<div class="marca consenso">
+<span class="rot">O que sobra, mesmo corrigindo a atribuição</span>
+<p>Independentemente de quem escreveu a frase exata, o princípio em si (preferir, entre explicações que dão conta igualmente bem dos mesmos fatos, a que exige menos suposições adicionais) é uma ferramenta de raciocínio amplamente usada e valiosa, tanto na filosofia quanto na ciência. O erro de atribuição histórica não invalida o princípio, só mostra que a versão de manual escolar, com a citação exata e a origem específica, é menos precisa do que costuma parecer.</p>
+</div>
+
+<h3>O limite mais importante: simplicidade não é garantia de verdade</h3>
+
+<p>Aqui está o ponto central que costuma se perder quando a navalha de Ockham é invocada casualmente numa discussão: ela é uma <strong>heurística</strong>, uma regra prática de bom senso para decidir onde investigar primeiro ou qual hipótese considerar mais provável antes de ter evidência decisiva, não uma lei da natureza nem um critério que garanta que a explicação mais simples é sempre a correta. A realidade, por vezes, é mais complicada do que qualquer explicação simples daria conta. Usar a navalha de Ockham como se fosse prova definitiva ("essa explicação é mais simples, logo é a verdadeira") é um uso incorreto do princípio, mesmo na sua formulação mais legítima.</p>
+
+<h3>Um exemplo do uso correto, e um do uso incorreto</h3>
+
+<p>Uso correto: diante de duas hipóteses que explicam igualmente bem um conjunto de sintomas, um médico prioriza investigar primeiro a causa mais comum e mais simples (uma gripe, antes de uma doença rara), sem descartar por completo a hipótese mais complexa, apenas ordenando por onde começar a investigação. Uso incorreto: alguém descarta uma explicação científica bem estabelecida, mas que envolve vários mecanismos interligados, só porque uma explicação alternativa, mais simples de entender, "soa mais elegante", sem checar se essa explicação alternativa realmente dá conta de todos os dados observados. A complexidade real do mundo não se dobra à preferência humana por explicações fáceis de contar.</p>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>De onde vem, de fato, a versão popular da frase</h3>
+
+<p>A pesquisa histórica sobre a origem exata da navalha de Ockham mostra um padrão comum na história das ideias: um princípio geral, presente de forma dispersa e contextual na obra de um pensador, é condensado por comentaristas posteriores numa frase de efeito mais memorável e mais citável, que depois passa a ser atribuída retroativamente ao pensador original. John Punch, o comentarista de 1639, provavelmente estava sintetizando de boa-fé o espírito do que via nos textos de Ockham, não inventando uma ideia nova do zero, mas o resultado histórico é que a citação mais famosa associada a Ockham não é, tecnicamente, dele.<sup class="cit"><a href="#f1">1</a></sup></p>
+
+<h3>A formalização moderna: de heurística filosófica a princípio matemático</h3>
+
+<p>O que dá à navalha de Ockham uma base mais rigorosa hoje não é a filosofia medieval, é a teoria da informação e a estatística do século 20. O matemático Ray Solomonoff propôs, nos anos 1960, um formalismo de indução (conhecido como indução de Solomonoff) que usa a probabilidade de Bayes combinada com um "prior universal": entre hipóteses compatíveis com os dados observados, dar mais peso, de antemão, às hipóteses que podem ser descritas de forma mais compacta.<sup class="cit"><a href="#f2">2</a></sup> Essa ideia foi desenvolvida em paralelo por Andrey Kolmogorov e Gregory Chaitin, na noção de <strong>complexidade de Kolmogorov</strong>: a complexidade intrínseca de uma sequência de dados é o tamanho da menor descrição possível capaz de gerá-la.</p>
+
+<p>A partir dessas ideias, surgiu o princípio do <strong>comprimento mínimo de descrição</strong> (<em>Minimum Description Length</em>, MDL), amplamente usado hoje em estatística e aprendizado de máquina: um bom modelo é aquele que consegue comprimir os dados observados de forma eficiente, incluindo, no cálculo, o custo de descrever o próprio modelo.<sup class="cit"><a href="#f3">3</a></sup> Isso formaliza matematicamente uma versão precisa da navalha de Ockham: entre dois modelos que se ajustam igualmente bem aos dados, prefira o que precisa de menos informação para ser especificado.</p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Versão</th><th>Origem</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>'Entia non sunt multiplicanda...'</td><td>Atribuída a Ockham (século 14), mas escrita por John Punch em 1639</td><td>Popular, mas historicamente imprecisa como citação direta</td></tr>
+<tr><td>Princípios de economia explicativa de Ockham</td><td>Presentes de forma dispersa nos textos originais de Ockham</td><td>Reais, mas contextuais e específicos a cada argumento, não uma máxima única</td></tr>
+<tr><td>Indução de Solomonoff / complexidade de Kolmogorov</td><td>Formalização matemática do século 20</td><td>Base rigorosa e testável para uma versão precisa do princípio de simplicidade</td></tr>
+<tr><td>Princípio do comprimento mínimo de descrição (MDL)</td><td>Aplicação prática em estatística e aprendizado de máquina</td><td>Usado hoje para seleção de modelos, evitando sobreajuste</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Por que essa formalização importa na prática</h3>
+
+<p>Em estatística e aprendizado de máquina, um modelo complexo demais pode se ajustar perfeitamente aos dados de treino observados, mas se sair mal em dados novos, um problema chamado <strong>sobreajuste</strong> (<em>overfitting</em>). O princípio do comprimento mínimo de descrição, e formalismos relacionados baseados em complexidade de Kolmogorov, dão uma justificativa matemática precisa para penalizar a complexidade excessiva de um modelo, não porque "simples é sempre melhor" por razões estéticas, mas porque modelos desnecessariamente complexos tendem a capturar ruído específico dos dados de treino, em vez do padrão real e generalizável.</p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>Quando a explicação simples está, de fato, errada</h3>
+
+<p>A história da ciência tem exemplos claros de casos em que a explicação mais simples disponível numa época acabou sendo superada por uma explicação mais complexa, porque a evidência acumulada simplesmente não cabia na versão simples. O modelo geocêntrico do sistema solar, com a Terra no centro, é mais simples de imaginar intuitivamente do que o modelo heliocêntrico com órbitas elípticas, mas precisou de camadas cada vez mais complicadas de "epiciclos" para continuar prevendo corretamente o movimento dos planetas, até que o modelo heliocêntrico, apesar de menos intuitivo à primeira vista, se revelou mais simples <em>no sentido formal</em> (menos parâmetros ajustados arbitrariamente) e mais correto. O ponto não é que simplicidade estava errada, é que a simplicidade aparente e intuitiva de uma explicação nem sempre coincide com sua simplicidade formal ou com sua correção.</p>
+
+<div class="marca controverso">
+<span class="rot">Simplicidade segundo qual critério, exatamente?</span>
+<p>Um problema filosófico genuíno e ainda discutido é que "simplicidade" não tem uma definição única e universalmente aceita fora dos formalismos matemáticos específicos, como complexidade de Kolmogorov (que, por sua vez, depende da escolha de uma linguagem de descrição de referência). Duas pessoas podem discordar sinceramente sobre qual de duas teorias é "mais simples", dependendo do que cada uma considera uma suposição básica aceitável e do que considera uma complicação adicional. Isso significa que invocar a navalha de Ockham numa discussão filosófica ou científica informal, sem especificar precisamente qual noção de simplicidade está em jogo, pode facilmente virar um argumento vazio, em que cada lado afirma que sua própria posição é "a mais simples".</p>
+</div>
+
+<h3>Como usar o princípio sem cair nas armadilhas comuns</h3>
+
+<p>A forma mais defensável de aplicar a navalha de Ockham hoje combina três cuidados. Primeiro, tratá-la como uma heurística de priorização de investigação, não como prova de verdade: ela ajuda a decidir por onde começar a testar hipóteses, não decide sozinha qual hipótese é correta. Segundo, quando possível, ancorar "simplicidade" numa noção formal e mensurável (número de parâmetros livres, complexidade de descrição), em vez de uma impressão subjetiva de qual explicação "soa" mais elegante. Terceiro, lembrar que o critério final para aceitar uma teoria científica não é sua simplicidade, é sua capacidade de explicar e prever corretamente os dados observados; simplicidade é, na melhor das hipóteses, um critério de desempate entre teorias que já passam nesse teste com sucesso comparável.</p>
+
+<h3>A lição mais ampla, além da filosofia medieval</h3>
+
+<p>O caso da navalha de Ockham ensina algo que vale para muitas ideias filosóficas e científicas populares: a versão de manual, com uma citação exata, uma origem clara e um enunciado memorável, costuma ser uma simplificação posterior de algo mais nuançado e mais contextual no pensamento original. Isso não torna a ideia por trás dela sem valor, mas convida a tratar citações históricas famosas com o mesmo ceticismo saudável que a própria navalha, bem aplicada, recomendaria: checar a fonte antes de aceitar a atribuição como certa.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Navalha de Ockham", def: "Princípio de economia explicativa, popularmente resumido como 'entidades não devem ser multiplicadas além do necessário', segundo o qual, entre explicações que dão conta igualmente bem dos mesmos fatos, deve-se preferir a que exige menos suposições adicionais." },
+    { termo: "Heurística", def: "Regra prática de bom senso usada para orientar decisões ou investigações sob incerteza, sem garantir, por si só, um resultado correto; distinta de uma prova ou lei formal." },
+    { termo: "Indução de Solomonoff", def: "Formalismo matemático, proposto por Ray Solomonoff nos anos 1960, que combina probabilidade bayesiana com um 'prior universal' que favorece hipóteses descritíveis de forma mais compacta." },
+    { termo: "Complexidade de Kolmogorov", def: "Medida formal da complexidade intrínseca de uma sequência de dados, definida como o tamanho da menor descrição (programa) capaz de gerá-la." },
+    { termo: "Princípio do comprimento mínimo de descrição (MDL)", def: "Aplicação prática, em estatística e aprendizado de máquina, do princípio de simplicidade: um bom modelo é aquele que comprime os dados de forma eficiente, incluindo o custo de descrever o próprio modelo, evitando sobreajuste." }
+  ],
+  lembrar: [
+    "A frase latina 'Entia non sunt multiplicanda praeter necessitatem', atribuída a Guilherme de Ockham, não aparece com essas palavras exatas em nenhum texto sobrevivente dele. Foi formulada por John Punch, em 1639, quase três séculos depois da morte de Ockham.",
+    "Ockham de fato usava princípios de economia explicativa parecidos, mas de forma contextual e específica a cada argumento, não como uma máxima única resumida numa frase.",
+    "O erro de atribuição histórica não invalida o princípio em si, que continua sendo uma ferramenta de raciocínio amplamente usada e valiosa.",
+    "A navalha de Ockham é uma heurística (regra prática útil), não uma garantia de verdade: a explicação mais simples nem sempre é a correta.",
+    "Ray Solomonoff, Andrey Kolmogorov e Gregory Chaitin formalizaram, no século 20, versões matemáticas precisas do princípio de simplicidade, dando origem ao princípio do comprimento mínimo de descrição (MDL), hoje usado em estatística e aprendizado de máquina.",
+    "'Simplicidade' não tem uma definição única e universal fora de formalismos matemáticos específicos, o que pode tornar invocações informais da navalha de Ockham vagas ou até vazias.",
+    "O critério final para aceitar uma teoria científica é sua capacidade de explicar e prever dados observados; simplicidade funciona, na melhor das hipóteses, como critério de desempate entre teorias com desempenho comparável."
+  ],
+  confusoes: [
+    { erro: "Guilherme de Ockham escreveu literalmente a frase 'entidades não devem ser multiplicadas além do necessário'", correcao: "Essa formulação exata é atribuída a John Punch, num comentário de 1639, quase três séculos depois da morte de Ockham. Ockham usava princípios parecidos, mas em formulações contextuais diferentes." },
+    { erro: "A navalha de Ockham garante que a explicação mais simples entre duas hipóteses é sempre a verdadeira", correcao: "É uma heurística de priorização, não uma garantia de verdade. A realidade, por vezes, é mais complicada do que qualquer explicação simples poderia dar conta, e a evidência observada é o critério final, não a simplicidade." },
+    { erro: "Simplicidade tem uma definição única e objetiva, sobre a qual todos concordam", correcao: "Fora de formalismos matemáticos específicos, como complexidade de Kolmogorov, 'simplicidade' pode ser interpretada de formas diferentes, o que torna invocações informais do princípio, sem especificar o critério usado, potencialmente vagas." },
+    { erro: "O modelo geocêntrico do sistema solar era mais simples e por isso deveria ter sido preferido pela navalha de Ockham corretamente aplicada", correcao: "O modelo geocêntrico exigia camadas cada vez mais complicadas de epiciclos para continuar prevendo corretamente os movimentos planetários. O modelo heliocêntrico, apesar de menos intuitivo à primeira vista, era mais simples no sentido formal (menos parâmetros ajustados arbitrariamente)." },
+    { erro: "A formalização moderna da navalha de Ockham (MDL, complexidade de Kolmogorov) é a mesma coisa que a ideia filosófica medieval original", correcao: "São relacionadas em espírito, mas distintas: a formalização moderna dá uma base matemática rigorosa e testável a uma versão precisa do princípio, algo que a filosofia medieval, por si só, não oferecia." }
+  ],
+  numeros: [
+    "John Punch formulou a versão latina popular da navalha de Ockham em 1639, num comentário sobre a obra de Duns Scotus, quase três séculos após a morte de Ockham (1347).",
+    "O termo 'navalha de Ockham' só passou a ser usado séculos depois da morte do próprio Ockham.",
+    "Ray Solomonoff propôs a indução de Solomonoff nos anos 1960, combinando probabilidade bayesiana com um prior universal baseado em compressibilidade dos dados.",
+    "O princípio do comprimento mínimo de descrição (MDL) é hoje amplamente usado em estatística e aprendizado de máquina para seleção de modelos e prevenção de sobreajuste."
+  ]
+},
+
+flashcards: [
+  { f: "A frase latina 'Entia non sunt multiplicanda praeter necessitatem' foi escrita literalmente por Guilherme de Ockham?", v: "Não. Essa formulação exata é atribuída a John Punch, num comentário de 1639, quase três séculos depois da morte de Ockham em 1347." },
+  { f: "Ockham não tinha, então, nenhuma relação com o princípio de economia explicativa associado a seu nome?", v: "Tinha: ele de fato usava princípios parecidos com frequência em seus escritos, só que em formulações contextuais e específicas a cada argumento, não como uma máxima única resumida numa frase latina memorável." },
+  { f: "A navalha de Ockham garante que a explicação mais simples entre duas hipóteses é sempre a verdadeira?", v: "Não. É uma heurística, uma regra prática útil para priorizar investigação, não uma garantia de verdade. A realidade pode ser mais complicada do que qualquer explicação simples dá conta." },
+  { f: "O que é a indução de Solomonoff, e quem a propôs?", v: "Um formalismo matemático, proposto por Ray Solomonoff nos anos 1960, que combina probabilidade bayesiana com um 'prior universal' que favorece hipóteses descritíveis de forma mais compacta." },
+  { f: "O que é complexidade de Kolmogorov?", v: "Medida formal da complexidade intrínseca de uma sequência de dados, definida como o tamanho da menor descrição (programa) capaz de gerá-la." },
+  { f: "O que é o princípio do comprimento mínimo de descrição (MDL), e para que serve na prática?", v: "Um princípio, aplicado em estatística e aprendizado de máquina, segundo o qual um bom modelo comprime os dados de forma eficiente, incluindo o custo de descrever o próprio modelo, ajudando a evitar sobreajuste." },
+  { f: "Por que o modelo geocêntrico do sistema solar não é um bom exemplo de aplicação correta da navalha de Ockham?", v: "Porque, apesar de mais intuitivo à primeira vista, exigia camadas cada vez mais complicadas de epiciclos para continuar prevendo corretamente os movimentos planetários. O modelo heliocêntrico era mais simples no sentido formal (menos parâmetros ajustados arbitrariamente)." },
+  { f: "Por que 'simplicidade' pode ser um critério problemático quando invocado informalmente numa discussão?", v: "Porque não tem uma definição única e universal fora de formalismos matemáticos específicos. Duas pessoas podem discordar sinceramente sobre qual de duas teorias é 'mais simples', dependendo do que cada uma considera uma suposição básica." },
+  { f: "Qual é o critério final para aceitar uma teoria científica, segundo o documento?", v: "Sua capacidade de explicar e prever corretamente os dados observados. Simplicidade funciona, na melhor das hipóteses, como critério de desempate entre teorias com desempenho comparável nesse teste." },
+  { f: "O que é sobreajuste (overfitting), e como o princípio MDL ajuda a evitá-lo?", v: "É quando um modelo complexo demais se ajusta perfeitamente aos dados de treino, mas se sai mal em dados novos. O princípio MDL penaliza matematicamente a complexidade excessiva, favorecendo modelos que capturam o padrão real, não apenas ruído específico dos dados de treino." },
+  { f: "Quais são os três cuidados recomendados pelo documento para usar a navalha de Ockham corretamente?", v: "Tratá-la como heurística de priorização, não prova de verdade; ancorar 'simplicidade' numa noção formal e mensurável quando possível; e lembrar que o critério final é a capacidade de explicar e prever dados, não a simplicidade em si." },
+  { f: "Qual é a lição mais ampla que o caso da navalha de Ockham ensina sobre citações históricas famosas?", v: "Que a versão de manual, com citação exata e origem clara, costuma ser uma simplificação posterior de algo mais nuançado no pensamento original, e vale a pena checar a fonte antes de aceitar a atribuição como certa." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "A frase latina 'Entia non sunt multiplicanda praeter necessitatem', comumente atribuída a Guilherme de Ockham, foi escrita literalmente por ele?",
+    alts: [
+      "Sim, aparece exatamente com essas palavras em vários de seus textos originais.",
+      "Não. Essa formulação exata é atribuída a John Punch, num comentário de 1639, quase três séculos depois da morte de Ockham.",
+      "Sim, mas apenas numa única carta pessoal que só foi descoberta recentemente.",
+      "Não se sabe, porque nenhum texto de Ockham sobreviveu até hoje."
+    ],
+    correta: 1,
+    porque: "A pesquisa histórica mostra que essa citação específica, tão associada a Ockham, foi na verdade formulada por outro filósofo, quase três séculos depois de sua morte." },
+
+  { camada: "nucleo",
+    q: "O que a navalha de Ockham, corretamente entendida, representa?",
+    alts: [
+      "Uma prova matemática de que a explicação mais simples é sempre a verdadeira.",
+      "Uma heurística, uma regra prática útil para priorizar investigação, sem garantir, por si só, que a explicação mais simples é a correta.",
+      "Uma lei física, comparável às leis de Newton, testável exclusivamente em laboratório.",
+      "Um teorema demonstrado formalmente por Guilherme de Ockham no século 14."
+    ],
+    correta: 1,
+    porque: "É importante distinguir uma heurística útil (uma regra prática de bom senso) de uma garantia de verdade. A navalha de Ockham ajuda a decidir por onde investigar primeiro, não decide sozinha qual hipótese está correta." },
+
+  { camada: "nucleo",
+    q: "Ockham realmente não tinha nenhuma relação com o princípio de economia explicativa associado a seu nome?",
+    alts: [
+      "Correto, o nome foi atribuído a ele por engano completo, sem nenhuma base real.",
+      "Incorreto: ele de fato usava princípios parecidos com frequência, mas em formulações contextuais e específicas a cada argumento, não como uma máxima única.",
+      "Correto, Ockham nunca discutiu questões de simplicidade explicativa em nenhum de seus escritos.",
+      "Incorreto: ele foi o primeiro filósofo da história a discutir qualquer forma de economia explicativa."
+    ],
+    correta: 1,
+    porque: "O erro de atribuição é sobre a citação exata, não sobre a relação geral de Ockham com o espírito do princípio, que ele de fato aplicava, só que de forma diferente da frase de manual escolar." },
+
+  { camada: "aprofundamento",
+    q: "O que é a indução de Solomonoff, proposta nos anos 1960?",
+    alts: [
+      "Um método experimental de física de partículas usado para detectar novas partículas subatômicas.",
+      "Um formalismo matemático que combina probabilidade bayesiana com um 'prior universal', favorecendo hipóteses descritíveis de forma mais compacta.",
+      "Uma teoria filosófica sobre a natureza da consciência humana.",
+      "Um método de votação usado em sistemas democráticos modernos."
+    ],
+    correta: 1,
+    porque: "Esse formalismo, desenvolvido por Ray Solomonoff, dá uma base matemática rigorosa a uma versão precisa do princípio de simplicidade, muito além da formulação filosófica original." },
+
+  { camada: "aprofundamento",
+    q: "O que é o princípio do comprimento mínimo de descrição (MDL), e para que ele é usado na prática?",
+    alts: [
+      "Um princípio usado exclusivamente em linguística para comparar o comprimento de palavras em diferentes idiomas.",
+      "Um princípio, usado em estatística e aprendizado de máquina, segundo o qual um bom modelo comprime os dados de forma eficiente, incluindo o custo de descrever o próprio modelo, ajudando a evitar sobreajuste.",
+      "Uma lei trabalhista que regula o tamanho máximo de contratos comerciais.",
+      "Um método de compressão de arquivos de áudio e vídeo sem nenhuma relação com modelos estatísticos."
+    ],
+    correta: 1,
+    porque: "O MDL formaliza matematicamente a ideia de que, entre modelos que se ajustam igualmente bem aos dados, deve-se preferir o que exige menos informação para ser especificado, uma versão precisa da navalha de Ockham." },
+
+  { camada: "aprofundamento",
+    q: "Por que o modelo geocêntrico do sistema solar não é um bom exemplo de aplicação correta da navalha de Ockham, apesar de parecer intuitivamente mais simples?",
+    alts: [
+      "Porque o modelo geocêntrico nunca foi levado a sério por nenhum astrônomo histórico.",
+      "Porque exigia camadas cada vez mais complicadas de epiciclos para continuar prevendo corretamente os movimentos planetários, enquanto o modelo heliocêntrico era mais simples no sentido formal, com menos parâmetros ajustados arbitrariamente.",
+      "Porque o modelo geocêntrico nunca fez nenhuma previsão testável sobre o movimento dos planetas.",
+      "Porque o modelo heliocêntrico foi proposto antes do modelo geocêntrico, invertendo a ordem histórica."
+    ],
+    correta: 1,
+    porque: "Esse exemplo mostra que simplicidade intuitiva (fácil de imaginar) nem sempre coincide com simplicidade formal (poucos parâmetros ajustados), um ponto central para entender os limites do princípio." },
+
+  { camada: "aprofundamento",
+    q: "Segundo a tabela apresentada no documento, qual é a diferença entre a frase popular atribuída a Ockham e os princípios de economia explicativa realmente presentes em seus textos?",
+    alts: [
+      "Não existe nenhuma diferença, são exatamente a mesma coisa.",
+      "A frase popular foi escrita por John Punch em 1639, enquanto os princípios reais de Ockham eram contextuais e específicos a cada argumento, não uma máxima única.",
+      "Os princípios reais de Ockham só foram descobertos no século 21, através de manuscritos recém-encontrados.",
+      "A frase popular é mais antiga que os próprios textos originais de Ockham."
+    ],
+    correta: 1,
+    porque: "Essa distinção entre a citação de efeito posterior e o uso real, mais disperso e contextual, do princípio nos textos originais de Ockham é o cerne da correção histórica discutida no documento." },
+
+  { camada: "extensao",
+    q: "Por que o documento argumenta que 'simplicidade' pode ser um critério problemático quando invocado informalmente, sem especificação, numa discussão filosófica ou científica?",
+    alts: [
+      "Porque simplicidade nunca tem nenhuma relação com teorias científicas legítimas.",
+      "Porque não tem uma definição única e universal fora de formalismos matemáticos específicos, o que pode levar duas pessoas a discordar sinceramente sobre qual de duas teorias é 'mais simples'.",
+      "Porque simplicidade só pode ser medida em teorias de física, nunca em outras áreas do conhecimento.",
+      "Porque nenhum filósofo jamais discutiu o conceito de simplicidade de forma rigorosa."
+    ],
+    correta: 1,
+    porque: "Sem ancorar 'simplicidade' numa noção formal e mensurável, invocações informais da navalha de Ockham correm o risco de se tornarem argumentos vazios, em que cada lado afirma que sua posição é a mais simples." },
+
+  { camada: "extensao",
+    q: "Qual é o critério final que o documento propõe para aceitar uma teoria científica, distinto da simplicidade?",
+    alts: [
+      "A popularidade da teoria entre o público em geral.",
+      "A capacidade da teoria de explicar e prever corretamente os dados observados; simplicidade funciona, na melhor das hipóteses, como critério de desempate entre teorias com desempenho comparável.",
+      "O prestígio acadêmico do cientista que propôs a teoria.",
+      "A quantidade de anos que a teoria já existe sem ser questionada."
+    ],
+    correta: 1,
+    porque: "Essa hierarquia de critérios (capacidade explicativa e preditiva em primeiro lugar, simplicidade como desempate) evita o erro comum de usar simplicidade como prova definitiva de verdade." },
+
+  { camada: "extensao",
+    q: "Qual é a lição mais ampla, além da filosofia medieval, que o caso da navalha de Ockham ensina, segundo a conclusão do documento?",
+    alts: [
+      "Que citações filosóficas nunca devem ser usadas em nenhuma discussão séria.",
+      "Que a versão de manual de uma ideia famosa, com citação exata e origem clara, costuma ser uma simplificação posterior de algo mais nuançado no pensamento original, o que justifica checar a fonte antes de aceitar a atribuição.",
+      "Que toda a filosofia produzida antes do século 20 deve ser descartada por imprecisão histórica.",
+      "Que apenas formalismos matemáticos têm valor filosófico real."
+    ],
+    correta: 1,
+    porque: "Essa lição de ceticismo saudável sobre atribuições históricas populares é, ironicamente, o mesmo tipo de cuidado que a navalha de Ockham, bem aplicada, recomendaria ao avaliar qualquer afirmação." }
+],
+
+fontes: [
+  { n: 1, tipo: "revisão acadêmica", ref: "Thorburn, W. M. 'The Myth of Occam's Razor'. <em>Mind</em> 27(107):345-353, 1918. Investigação histórica sobre a origem da frase e sua atribuição a Ockham.", url: "https://en.wikisource.org/wiki/The_Myth_of_Occam's_Razor" },
+  { n: 2, tipo: "fonte primária", ref: "Li, M. &amp; Vitányi, P. 'Minimum Description Length Induction, Bayesianism, and Kolmogorov Complexity'. <em>IEEE Transactions on Information Theory</em> 46(2):446-464, 2000.", url: "https://homepages.cwi.nl/~paulv/papers/mdlindbayeskolmcompl.pdf" },
+  { n: 3, tipo: "revisão acadêmica", ref: "'Computational Occam's Razor in Machine Learning', panorama sobre complexidade de Kolmogorov e indução de Solomonoff aplicadas a modelos computacionais.", url: "https://www.emergentmind.com/topics/computational-occam-s-razor" },
+  { n: 4, tipo: "reportagem", ref: "American Association for the Advancement of Science (AAAS). 'The origin and popular use of Occam's razor'.", url: "https://www.aaas.org/membership/scientia/origin-and-popular-use-occams-razor" },
+  { n: 5, tipo: "divulgação", ref: "Irish Philosophy. 'Who sharpened Occam's Razor?', sobre o papel de John Punch na formulação da frase popular.", url: "https://irishphilosophy.com/2014/05/27/who-sharpened-occams-razor/" },
+  { n: 6, tipo: "fonte primária", ref: "'A Philosophical Treatise of Universal Induction', sobre os fundamentos formais da indução de Solomonoff e sua relação com simplicidade.", url: "https://arxiv.org/pdf/1105.5721" },
+  { n: 7, tipo: "divulgação", ref: "Baez, J. 'What is Occam's Razor?', explicação acessível da versão filosófica e científica do princípio.", url: "https://math.ucr.edu/home/baez/physics/General/occam.html" },
+  { n: 8, tipo: "enciclopédia", ref: "Britannica Kids. Verbete sobre Guilherme de Ockham e a navalha de Ockham, com resumo biográfico e histórico.", url: "https://kids.britannica.com/students/article/Occams-razor/56716" },
+  { n: 9, tipo: "fonte primária", ref: "'On Universal Prediction and Bayesian Confirmation', sobre a relação formal entre indução universal, complexidade e confirmação bayesiana de teorias.", url: "https://arxiv.org/pdf/0709.1516" },
+  { n: 10, tipo: "fonte primária", ref: "'The Relativity of Induction', discussão sobre os limites e a dependência de linguagem de referência na definição formal de simplicidade.", url: "https://arxiv.org/pdf/2009.10613" },
+  { n: 11, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Occam's razor', com panorama histórico, filosófico e das aplicações científicas modernas do princípio.", url: "https://en.wikipedia.org/wiki/Occam%27s_razor" },
+  { n: 12, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'William of Ockham', com biografia e resumo de sua obra filosófica original.", url: "https://en.wikipedia.org/wiki/William_of_Ockham" },
+  { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Kolmogorov complexity', com definição formal e aplicações em teoria da informação.", url: "https://en.wikipedia.org/wiki/Kolmogorov_complexity" },
+  { n: 14, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Solomonoff's theory of inductive inference', com detalhamento técnico do formalismo.", url: "https://en.wikipedia.org/wiki/Solomonoff%27s_theory_of_inductive_inference" },
+  { n: 15, tipo: "revisão acadêmica", ref: "'Improving Deep Learning through Automatic Programming', sobre aplicações contemporâneas de princípios de compressão e simplicidade em modelos de aprendizado de máquina.", url: "https://arxiv.org/pdf/1807.02816" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
 
 /* ── paradoxo-fermi.js ─────────────────────────────────────── */
 CONTEUDOS["paradoxo-fermi"] = {
@@ -4756,6 +7164,279 @@ fontes: [
   { n: 6, tipo: "divulgação", ref: "Carroll, S. <em>The Particle at the End of the Universe</em>. Dutton, 2012. Mecanismo de Higgs e quebra de simetria em linguagem acessível, com honestidade sobre o que segue em aberto.", url: "" }
 ]
 };
+
+/* ── reconsolidacao.js ─────────────────────────────────────── */
+CONTEUDOS["reconsolidacao"] = {
+termo: "Reconsolidação da memória",
+area: "Neurociência",
+subtitulo: "Por décadas, o modelo padrão dizia que uma memória, uma vez consolidada, ficava estável para sempre. A descoberta de que lembrar reabre uma janela de instabilidade mudou esse quadro e abriu uma linha de tratamento real para transtorno de estresse pós-traumático. A ideia de 'apagar' memórias traumáticas com um remédio, porém, é bem mais limitada do que a manchete costuma sugerir.",
+prerequisitos: [
+  "Nenhum pré-requisito técnico. Basta aceitar que memórias precisam de um processo biológico de 'fixação' para se tornarem duradouras.",
+  "Para o aprofundamento: familiaridade básica com a ideia de que emoções fortes, como o medo, envolvem uma estrutura cerebral chamada amígdala."
+],
+conexoes: [
+  { termo: "Memória falsa e o paradigma DRM", relacao: "Ambos os temas mostram que a memória humana não é um arquivo estático: ela pode ser alterada tanto no momento da própria formação (memória falsa) quanto no momento em que é relembrada (reconsolidação)." },
+  { termo: "Cérebro dividido: o experimento e a releitura", relacao: "Outro caso de neurociência em que um modelo clássico, bem estabelecido, foi revisado décadas depois por uma linha de pesquisa que trouxe mais nuance sem derrubar o achado original." },
+  { termo: "Neuroplasticidade: alcance e limites", relacao: "A reconsolidação é mais um exemplo de que estruturas cerebrais tidas como fixas (aqui, uma memória já consolidada) são, na prática, mais mutáveis do que a intuição sugere, mas dentro de limites reais." },
+  { termo: "Crise de replicação", relacao: "A distância entre a manchete popular ('remédio apaga memórias') e o resultado real dos ensaios clínicos (redução do componente emocional, não da lembrança factual) é um exercício de leitura cuidadosa de evidência." }
+],
+
+camadas: {
+
+nucleo: { minutos: 15, html: `
+<p class="abre">O modelo clássico de memória, dominante por boa parte do século 20, descrevia um processo em duas etapas: uma memória nova é frágil e instável logo depois de formada, mas, em algumas horas, passa por um processo chamado <strong>consolidação</strong>, que a torna estável e duradoura, resistente a interferência. Uma vez consolidada, a ideia era que essa memória permanecia fixa, como um arquivo salvo, disponível para ser lida quantas vezes fosse necessário sem que a leitura em si a alterasse.</p>
+
+<p>Em 2000, um estudo com ratos, conduzido por Karim Nader, Glenn Schafe e Joseph LeDoux, desafiou diretamente essa ideia.<sup class="cit"><a href="#f1">1</a></sup> Os pesquisadores treinaram ratos a associar um som a um choque leve (uma memória de medo clássica), esperaram a memória se consolidar por completo, e depois reativaram essa memória tocando o som de novo. Imediatamente após essa reativação, injetaram uma substância que bloqueia a síntese de proteínas na amígdala (a região do cérebro central para processamento de medo). O resultado: a memória de medo, mesmo já consolidada havia dias, praticamente desaparecia.<sup class="cit"><a href="#f1">1</a></sup> Se o mesmo bloqueio fosse feito sem reativar a memória primeiro, nada acontecia, ela permanecia intacta.</p>
+
+<h3>O que isso revela: lembrar reabre uma janela</h3>
+
+<p>A interpretação foi que o simples ato de lembrar não é uma leitura neutra de um arquivo salvo. Ele torna a memória temporariamente instável de novo, exigindo um novo processo de "re-fixação", chamado <strong>reconsolidação</strong>, para permanecer estável. Durante essa janela de instabilidade, que dura só algumas horas, a memória fica vulnerável a ser enfraquecida, fortalecida ou mesmo alterada em seu conteúdo, antes de "travar" de novo.<sup class="cit"><a href="#f1">1</a></sup></p>
+
+<div class="marca consenso">
+<span class="rot">O que é bem estabelecido</span>
+<p>Que memórias, incluindo memórias de medo bem consolidadas, entram numa janela temporária de instabilidade quando são reativadas, e que intervenções farmacológicas ou comportamentais aplicadas durante essa janela específica podem enfraquecer a memória de um jeito que a mesma intervenção, aplicada sem reativação prévia, não consegue, é um achado bem replicado desde 2000, tanto em animais quanto, com adaptações, em humanos.</p>
+</div>
+
+<h3>Da bancada de laboratório ao consultório</h3>
+
+<p>Essa descoberta abriu uma linha de pesquisa clínica real: em vez de bloquear totalmente a síntese de proteínas (algo inviável e perigoso em humanos), pesquisadores testaram um remédio já aprovado e seguro, o propranolol (um beta-bloqueador usado normalmente para pressão alta e ansiedade), administrado logo antes de a pessoa reativar deliberadamente uma memória traumática, em sessões terapêuticas estruturadas. A ideia: interferir especificamente na reconsolidação da carga emocional daquela memória, sem apagar o conteúdo factual dela.<sup class="cit"><a href="#f4">4</a></sup></p>
+
+<div class="marca controverso">
+<span class="rot">O que a mídia costuma exagerar</span>
+<p>Manchetes sobre esse tipo de tratamento costumam usar a expressão "remédio que apaga memórias". Isso é impreciso de um jeito importante: as pessoas tratadas continuam lembrando dos fatos do que aconteceu. O que muda, segundo os próprios pesquisadores da área, é a intensidade da resposta emocional e fisiológica associada à lembrança (o medo, a angústia, os sintomas de ansiedade ao recordar), não a existência da lembrança factual em si.<sup class="cit"><a href="#f5">5</a></sup></p>
+</div>
+` },
+
+aprofundamento: { minutos: 30, html: `
+<h3>O desenho experimental original, com mais detalhe</h3>
+
+<p>Nader, Schafe e LeDoux usaram o chamado condicionamento de medo pavloviano: ratos aprendem a associar um som neutro a um choque elétrico leve, e passam a "congelar" (parar de se mover, uma resposta de medo mensurável) só de ouvir o som, mesmo sem o choque. Depois de a memória estar consolidada, os pesquisadores injetavam anisomicina, um inibidor de síntese de proteínas, diretamente na amígdala basolateral, tanto em ratos que tinham acabado de ouvir o som de novo (reativação) quanto em ratos que não tinham. Só o primeiro grupo perdeu a resposta de medo condicionada.<sup class="cit"><a href="#f1">1</a></sup> Isso isolou, com bastante precisão, que era a combinação específica de reativação mais bloqueio de síntese proteica, e não qualquer um dos dois fatores isoladamente, que interferia na memória.</p>
+
+<h3>Do bloqueio total de proteínas ao propranolol em humanos</h3>
+
+<p>Nenhum inibidor de síntese proteica como o usado em ratos é seguro para uso em pessoas. A adaptação clínica usa o propranolol, que age num sistema diferente, mas relacionado: bloqueia receptores adrenérgicos envolvidos na consolidação (e reconsolidação) da carga emocional de memórias, um mecanismo já conhecido desde estudos mais antigos sobre como a adrenalina fortalece memórias emocionalmente intensas no momento em que são formadas.</p>
+
+<p>Alain Brunet e colegas conduziram um ensaio clínico randomizado, duplo-cego e controlado por placebo, com 60 adultos com transtorno de estresse pós-traumático de longa duração, publicado no <em>American Journal of Psychiatry</em> em 2018.<sup class="cit"><a href="#f2">2</a></sup> Os participantes tomavam propranolol ou placebo cerca de 90 minutos antes de uma sessão semanal de reativação da memória traumática, por seis semanas seguidas. O grupo tratado com propranolol apresentou redução estatisticamente significativa nos sintomas de TEPT, medidos por uma escala clínica padronizada, comparado ao grupo placebo.<sup class="cit"><a href="#f2">2</a></sup></p>
+
+<div class="tabela-env">
+<table>
+<thead><tr><th>Estudo</th><th>Método</th><th>Achado</th></tr></thead>
+<tbody>
+<tr><td>Nader, Schafe &amp; LeDoux (2000)</td><td>Bloqueio de síntese proteica na amígdala de ratos, após reativação de memória de medo</td><td>Memória de medo consolidada praticamente desapareceu, mas só quando reativada antes do bloqueio</td></tr>
+<tr><td>Brunet et al. (2018)</td><td>Ensaio clínico randomizado, propranolol antes de reativação de memória traumática, 6 sessões semanais</td><td>Redução estatisticamente significativa de sintomas de TEPT, comparado a placebo</td></tr>
+<tr><td>Meta-análises subsequentes</td><td>Agregação de múltiplos ensaios em amostras clínicas e saudáveis</td><td>Efeito real, mas de magnitude variável entre estudos, dependente de protocolo e momento exato da administração</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>O que o propranolol não faz</h3>
+
+<p>É importante separar dois componentes de uma memória traumática: o conteúdo factual (o que aconteceu) e a carga emocional associada (o quanto lembrar disso provoca sofrimento físico e psicológico intenso). A evidência disponível indica que o propranolol, nesse protocolo, afeta principalmente a segunda, não a primeira: pacientes tratados continuam sabendo o que aconteceu, mas relatam menos sofrimento fisiológico ao lembrar.<sup class="cit"><a href="#f5">5</a></sup> Além disso, o efeito parece ser específico à memória reativada durante o tratamento, não uma supressão emocional geral que afetaria outras memórias ou a capacidade de sentir medo em novas situações.<sup class="cit"><a href="#f5">5</a></sup></p>
+` },
+
+extensao: { minutos: 60, html: `
+<h3>A magnitude do efeito, com mais cautela</h3>
+
+<p>Meta-análises que agregam múltiplos ensaios de bloqueio farmacológico de reconsolidação com propranolol, tanto em amostras clínicas (pacientes com TEPT) quanto em amostras saudáveis (memórias emocionais induzidas em laboratório), encontram um efeito real, mas nem sempre do mesmo tamanho, e sensível a detalhes do protocolo: o momento exato da administração do remédio em relação à reativação da memória, a intensidade e a forma como a memória é reativada, e características individuais dos participantes.<sup class="cit"><a href="#f3">3</a></sup> Alguns estudos independentes não conseguiram replicar efeitos tão fortes quanto os relatados nos primeiros trabalhos da área, um padrão de "encolhimento do efeito em réplicas" comum em muitas linhas de pesquisa biomédica, e não motivo, por si só, para descartar o fenômeno.</p>
+
+<div class="marca emergente">
+<span class="rot">Onde a pesquisa está hoje</span>
+<p>O consenso que vem se formando é que o bloqueio de reconsolidação com propranolol é uma ferramenta real, com efeito modesto a moderado, mais confiável quando o protocolo de reativação e administração é seguido com precisão, e não uma "borracha de memórias" que funciona de forma garantida e ampla. Isso é consistente com o padrão geral da neurociência translacional: um mecanismo robusto em animais de laboratório, com controle experimental total, tende a produzir efeitos reais, porém mais variáveis e sensíveis a detalhes de protocolo, quando adaptado para humanos em condições clínicas reais.</p>
+</div>
+
+<h3>O debate ético: apagar sofrimento é sempre desejável?</h3>
+
+<p>A possibilidade, mesmo que limitada, de reduzir farmacologicamente a carga emocional de uma memória gerou debate filosófico e ético real, discutido inclusive em publicações de associações médicas.<sup class="cit"><a href="#f6">6</a></sup> Argumentos contrários apontam que memórias, mesmo dolorosas, fazem parte da identidade e da história de uma pessoa, e que alterá-las farmacologicamente levanta questões sobre autenticidade e sobre o direito (ou dever) de lembrar, especialmente em contextos de trauma coletivo, como guerras ou genocídios, onde memória e testemunho têm também um papel social e histórico, não só individual. Argumentos a favor enfatizam o sofrimento real e incapacitante de quem vive com TEPT crônico, e o princípio médico geral de aliviar sofrimento quando isso é possível com segurança.</p>
+
+<h3>Uma preocupação recorrente, e por que ela é mais limitada do que parece</h3>
+
+<p>Uma pergunta levantada com frequência é se esse tipo de tratamento poderia ser usado de forma maliciosa, por exemplo, por alguém tentando reduzir a culpa associada à memória de um crime cometido. Pesquisadores que analisaram essa possibilidade com cuidado apontam limites práticos importantes: o protocolo exige reativação deliberada e repetida da memória específica sob supervisão clínica, ao longo de várias sessões, o efeito é predominantemente sobre a resposta emocional (não elimina o conhecimento factual, que continuaria disponível para investigação), e a literatura não sustenta a ideia de um "apagamento" rápido, discreto e sob demanda que corresponderia ao cenário de uso indevido temido.<sup class="cit"><a href="#f7">7</a></sup></p>
+
+<h3>Fechando o quadro</h3>
+
+<p>A reconsolidação da memória é um caso raro em neurociência: uma descoberta básica de laboratório, com um mecanismo bem caracterizado a partir de 2000, que efetivamente virou um tratamento real testado em ensaios clínicos randomizados menos de duas décadas depois. Isso não é comum na pesquisa biomédica, onde a maioria dos achados de bancada nunca chega perto de um protocolo clínico validado. Ao mesmo tempo, o caso ilustra bem por que a versão de manchete ("cientistas descobrem remédio que apaga memórias traumáticas") simplifica a ponto de distorcer: o que existe é uma ferramenta real, de efeito modesto a moderado, específica para a carga emocional de uma memória reativada sob protocolo clínico controlado, não um apagador universal e imediato de lembranças.</p>
+` }
+},
+
+sintese: {
+  definicoes: [
+    { termo: "Consolidação da memória", def: "Processo biológico, que leva algumas horas, pelo qual uma memória recém-formada se torna estável e resistente a interferência, num modelo clássico anterior à descoberta da reconsolidação." },
+    { termo: "Reconsolidação", def: "Processo pelo qual uma memória já consolidada, ao ser reativada (lembrada), entra numa janela temporária de instabilidade e precisa passar por uma nova 're-fixação' para permanecer estável, ficando vulnerável a alteração durante essa janela." },
+    { termo: "Bloqueio de reconsolidação", def: "Intervenção farmacológica ou comportamental aplicada durante a janela de instabilidade que se segue à reativação de uma memória, capaz de enfraquecer especificamente essa memória de um jeito que a mesma intervenção, sem reativação prévia, não consegue." },
+    { termo: "Propranolol", def: "Medicamento beta-bloqueador, normalmente usado para pressão alta e ansiedade, que em protocolos experimentais é administrado antes da reativação de uma memória traumática para interferir na reconsolidação de sua carga emocional." },
+    { termo: "Transtorno de estresse pós-traumático (TEPT)", def: "Condição psiquiátrica caracterizada por sintomas persistentes de sofrimento intenso ao relembrar um evento traumático, alvo principal dos ensaios clínicos de bloqueio de reconsolidação com propranolol." }
+  ],
+  lembrar: [
+    "Karim Nader, Glenn Schafe e Joseph LeDoux (2000) mostraram que bloquear a síntese de proteínas na amígdala de ratos, logo após a reativação de uma memória de medo já consolidada, praticamente apagava essa memória, algo que o mesmo bloqueio, sem reativação prévia, não fazia.",
+    "Isso revisou o modelo clássico de que memórias consolidadas ficam fixas para sempre: lembrar reabre uma janela temporária de instabilidade, exigindo um novo processo de fixação (reconsolidação).",
+    "A adaptação clínica em humanos usa o propranolol, um remédio já aprovado e seguro, administrado antes de sessões de reativação deliberada de uma memória traumática.",
+    "Alain Brunet e colegas (2018) publicaram um ensaio clínico randomizado com 60 pacientes de TEPT, mostrando redução estatisticamente significativa de sintomas com esse protocolo, comparado a placebo.",
+    "O tratamento não apaga o conteúdo factual da memória: pacientes continuam lembrando o que aconteceu, mas relatam menos sofrimento fisiológico e emocional ao recordar.",
+    "Meta-análises encontram um efeito real, mas de magnitude variável entre estudos, sensível a detalhes do protocolo de administração e reativação.",
+    "O debate ético em torno desse tipo de tratamento envolve perguntas sobre identidade, autenticidade da memória e o papel social de lembrar eventos traumáticos, especialmente coletivos."
+  ],
+  confusoes: [
+    { erro: "O propranolol 'apaga' memórias traumáticas por completo", correcao: "Pacientes tratados continuam lembrando os fatos do que aconteceu. O que a evidência mostra é redução da carga emocional e da resposta fisiológica de sofrimento associada à lembrança, não eliminação do conteúdo factual." },
+    { erro: "O modelo clássico de consolidação da memória (uma vez fixada, fica estável para sempre) foi completamente refutado", correcao: "A descoberta da reconsolidação revisou e complementou o modelo clássico, mostrando que a estabilidade não é permanente e incondicional, mas o conceito básico de um processo de fixação continua válido, só que agora entendido como algo que pode se repetir a cada reativação." },
+    { erro: "Qualquer pessoa poderia usar esse tratamento discretamente para apagar a culpa de um crime cometido", correcao: "O protocolo exige reativação deliberada e repetida da memória sob supervisão clínica, ao longo de várias sessões, afeta predominantemente a resposta emocional (não o conhecimento factual), e não corresponde a um apagamento rápido e sob demanda." },
+    { erro: "O efeito do bloqueio de reconsolidação em humanos é tão forte e consistente quanto o observado nos experimentos originais com ratos", correcao: "Meta-análises mostram efeito real, porém de magnitude variável entre estudos em humanos, sensível a detalhes de protocolo, um padrão comum quando um mecanismo de laboratório é adaptado para condições clínicas reais." },
+    { erro: "A pesquisa sobre reconsolidação é puramente teórica, sem aplicação clínica real até hoje", correcao: "Ensaios clínicos randomizados, como o de Brunet e colegas (2018), já testaram esse mecanismo diretamente em pacientes com TEPT, com resultados publicados em periódicos médicos de referência." }
+  ],
+  numeros: [
+    "Nader, K., Schafe, G. E. &amp; LeDoux, J. E. (2000), Nature 406:722-726: descoberta original da reconsolidação em memórias de medo de ratos.",
+    "Brunet, A. et al. (2018), American Journal of Psychiatry 175(5):427-433: ensaio clínico randomizado com 60 adultos com TEPT, 6 semanas de tratamento semanal com propranolol antes de reativação da memória traumática.",
+    "O protocolo de Brunet e colegas administrava propranolol cerca de 90 minutos antes de cada sessão de reativação da memória traumática.",
+    "Meta-análises sobre bloqueio de reconsolidação com propranolol agregam dados de amostras clínicas e saudáveis, encontrando efeito real, mas de magnitude variável entre estudos."
+  ]
+},
+
+flashcards: [
+  { f: "Qual era o modelo clássico sobre estabilidade de memórias, antes da descoberta da reconsolidação?", v: "Que uma memória, depois de passar pelo processo de consolidação (algumas horas após ser formada), permanecia estável e fixa para sempre, disponível para ser 'lida' sem que isso a alterasse." },
+  { f: "O que Nader, Schafe e LeDoux descobriram em 2000?", v: "Que bloquear a síntese de proteínas na amígdala de ratos, logo após a reativação de uma memória de medo já consolidada, praticamente apagava essa memória, algo que o mesmo bloqueio, sem reativação prévia, não fazia." },
+  { f: "O que é reconsolidação, em termos simples?", v: "O processo pelo qual uma memória já consolidada, ao ser reativada (lembrada), entra numa janela temporária de instabilidade e precisa de uma nova 'fixação' para permanecer estável." },
+  { f: "Que remédio é usado na adaptação clínica desse mecanismo em humanos, e por quê?", v: "O propranolol, um beta-bloqueador já aprovado e seguro, porque bloqueadores de síntese proteica como os usados em ratos não são seguros para uso em pessoas." },
+  { f: "O que Brunet e colegas encontraram em seu ensaio clínico randomizado de 2018, publicado no American Journal of Psychiatry?", v: "Que 60 pacientes com TEPT, tratados com propranolol antes de sessões semanais de reativação da memória traumática por 6 semanas, tiveram redução estatisticamente significativa de sintomas, comparados a placebo." },
+  { f: "O propranolol, nesse protocolo, apaga o conteúdo factual da memória traumática?", v: "Não. Pacientes continuam lembrando o que aconteceu. O que muda é a intensidade da resposta emocional e fisiológica de sofrimento ao recordar, não a existência da lembrança factual." },
+  { f: "O que meta-análises mostram sobre a magnitude do efeito do bloqueio de reconsolidação em humanos?", v: "Um efeito real, mas de magnitude variável entre estudos, sensível a detalhes do protocolo, como o momento exato da administração do remédio em relação à reativação da memória." },
+  { f: "Por que a preocupação de que criminosos possam usar esse tratamento para apagar a culpa de um crime é considerada exagerada pela literatura?", v: "Porque o protocolo exige reativação deliberada e repetida da memória sob supervisão clínica, afeta principalmente a resposta emocional (não o conhecimento factual, que continuaria disponível), e não corresponde a um apagamento rápido e discreto." },
+  { f: "Quais são os dois lados do debate ético sobre bloqueio farmacológico de reconsolidação?", v: "Contrários apontam que memórias, mesmo dolorosas, fazem parte da identidade e têm papel social (em trauma coletivo, por exemplo). A favor enfatizam o sofrimento real de quem vive com TEPT crônico e o princípio médico de aliviar sofrimento com segurança." },
+  { f: "Por que o caso da reconsolidação é considerado incomum na pesquisa biomédica?", v: "Porque uma descoberta básica de laboratório, caracterizada a partir de 2000, virou um tratamento testado em ensaios clínicos randomizados em humanos em menos de duas décadas, algo raro comparado à maioria dos achados de bancada." },
+  { f: "Qual é a distinção mais importante para não exagerar o alcance desse tratamento?", v: "Separar o conteúdo factual de uma memória (o que aconteceu, que permanece) da sua carga emocional associada (o sofrimento ao lembrar, que pode ser reduzido pelo tratamento)." },
+  { f: "O efeito do bloqueio de reconsolidação parece ser geral (afetando várias memórias e a capacidade de sentir medo em novas situações) ou específico?", v: "Específico à memória reativada durante o tratamento. Não há evidência de uma supressão emocional geral que afetaria outras memórias ou reações de medo em situações novas." }
+],
+
+prova: [
+  { camada: "nucleo",
+    q: "O que o modelo clássico de consolidação da memória, anterior à descoberta da reconsolidação, previa?",
+    alts: [
+      "Que memórias nunca se tornam estáveis, permanecendo frágeis para sempre.",
+      "Que uma memória, depois de consolidada, permanece estável e fixa, disponível para ser lembrada sem que isso a altere.",
+      "Que apenas memórias de medo passam por consolidação, nenhum outro tipo de memória.",
+      "Que memórias são apagadas automaticamente após um ano, independente de qualquer intervenção."
+    ],
+    correta: 1,
+    porque: "Esse era o modelo dominante antes de 2000: uma vez fixada, a memória seria estável, como um arquivo salvo que poderia ser lido repetidamente sem se alterar." },
+
+  { camada: "nucleo",
+    q: "O que Nader, Schafe e LeDoux descobriram em seu experimento com ratos, publicado em 2000?",
+    alts: [
+      "Que memórias nunca podem ser alteradas depois de formadas, sob nenhuma circunstância.",
+      "Que bloquear a síntese de proteínas na amígdala, logo após reativar uma memória de medo já consolidada, praticamente apagava essa memória.",
+      "Que ratos não têm capacidade nenhuma de formar memórias de medo.",
+      "Que a amígdala não tem nenhuma relação com processamento de medo."
+    ],
+    correta: 1,
+    porque: "O achado central é que a reativação (lembrar) torna a memória temporariamente vulnerável a interferência, algo que o bloqueio de síntese proteica sem reativação prévia não conseguia produzir." },
+
+  { camada: "nucleo",
+    q: "O que o propranolol, usado em protocolos clínicos de bloqueio de reconsolidação, realmente afeta, segundo a evidência disponível?",
+    alts: [
+      "Apaga completamente o conhecimento factual da memória traumática.",
+      "Reduz principalmente a intensidade da resposta emocional e fisiológica de sofrimento associada à lembrança, sem eliminar o conteúdo factual.",
+      "Não tem nenhum efeito mensurável sobre memórias traumáticas.",
+      "Apaga todas as memórias da pessoa, não apenas a memória traumática específica."
+    ],
+    correta: 1,
+    porque: "Pacientes tratados continuam sabendo o que aconteceu; o que muda é a carga emocional associada à lembrança, uma distinção central para entender corretamente o tratamento." },
+
+  { camada: "aprofundamento",
+    q: "No experimento original de Nader, Schafe e LeDoux, o que aconteceu com ratos que receberam o bloqueador de síntese proteica sem reativação prévia da memória?",
+    alts: [
+      "A memória de medo também foi apagada, exatamente como no grupo com reativação.",
+      "Nada aconteceu: a memória permaneceu intacta, mostrando que o efeito depende especificamente da combinação de reativação mais bloqueio.",
+      "Os ratos desenvolveram uma memória de medo ainda mais forte.",
+      "Os ratos perderam completamente a capacidade de formar novas memórias."
+    ],
+    correta: 1,
+    porque: "Esse resultado de controle foi essencial para isolar que era a reativação, e não o bloqueio de síntese proteica isoladamente, que criava a janela de vulnerabilidade da memória." },
+
+  { camada: "aprofundamento",
+    q: "Qual foi o desenho do ensaio clínico de Brunet e colegas, publicado no American Journal of Psychiatry em 2018?",
+    alts: [
+      "Um estudo observacional sem grupo controle, com relatos espontâneos de pacientes.",
+      "Um ensaio randomizado, duplo-cego e controlado por placebo, com 60 adultos com TEPT, recebendo propranolol ou placebo antes de sessões semanais de reativação da memória traumática por 6 semanas.",
+      "Um experimento realizado exclusivamente em animais, sem nenhum participante humano.",
+      "Um estudo de caso único, com apenas um paciente acompanhado por vários anos."
+    ],
+    correta: 1,
+    porque: "O rigor metodológico desse desenho (randomização, duplo-cego, placebo) é o que permite atribuir a redução de sintomas observada especificamente ao propranolol, e não a outros fatores." },
+
+  { camada: "aprofundamento",
+    q: "O que meta-análises sobre bloqueio de reconsolidação com propranolol em humanos mostram sobre a magnitude do efeito?",
+    alts: [
+      "Um efeito nulo, sem nenhuma diferença significativa entre tratamento e placebo em qualquer estudo.",
+      "Um efeito real, mas de magnitude variável entre estudos, sensível a detalhes do protocolo, como o momento exato da administração em relação à reativação.",
+      "Um efeito idêntico ao observado nos experimentos originais com ratos, sem nenhuma variação entre estudos.",
+      "Um efeito que piora os sintomas de TEPT em praticamente todos os casos estudados."
+    ],
+    correta: 1,
+    porque: "Esse padrão de efeito real, porém variável e sensível a protocolo, é comum quando um mecanismo bem controlado em laboratório é adaptado para condições clínicas reais em humanos." },
+
+  { camada: "aprofundamento",
+    q: "Por que pesquisadores argumentam que a preocupação de uso indevido do tratamento (por exemplo, para apagar a culpa de um crime) é mais limitada do que parece?",
+    alts: [
+      "Porque o tratamento nunca funciona em nenhuma circunstância, tornando a preocupação irrelevante.",
+      "Porque o protocolo exige reativação deliberada e repetida da memória sob supervisão clínica ao longo de várias sessões, e afeta predominantemente a resposta emocional, não o conhecimento factual, que continuaria disponível.",
+      "Porque o propranolol só pode ser administrado por policiais, nunca por médicos ou psicólogos.",
+      "Porque não existe nenhuma memória associada a crimes que possa ser afetada por esse tipo de tratamento."
+    ],
+    correta: 1,
+    porque: "A distância entre o cenário temido (apagamento rápido e discreto sob demanda) e o que o protocolo real exige (várias sessões supervisionadas, efeito predominantemente emocional) é significativa." },
+
+  { camada: "extensao",
+    q: "Segundo o documento, o que caracteriza a leitura mais atual e cautelosa sobre o bloqueio de reconsolidação com propranolol?",
+    alts: [
+      "Que é uma 'borracha de memórias' que funciona de forma garantida e ampla em qualquer paciente.",
+      "Que é uma ferramenta real, com efeito modesto a moderado, mais confiável quando o protocolo de reativação e administração é seguido com precisão, não um apagador universal e imediato de lembranças.",
+      "Que o efeito nunca foi replicado em nenhum estudo independente após o trabalho original de Brunet.",
+      "Que o tratamento é considerado ineficaz por toda a comunidade científica atual."
+    ],
+    correta: 1,
+    porque: "Essa leitura equilibrada reconhece tanto a realidade do efeito quanto suas limitações práticas, evitando tanto o exagero da manchete popular quanto o descarte completo do fenômeno." },
+
+  { camada: "extensao",
+    q: "Quais são os principais argumentos do debate ético sobre bloqueio farmacológico de reconsolidação, segundo o documento?",
+    alts: [
+      "Não existe nenhum debate ético sobre o tema, sendo uma questão puramente técnica.",
+      "Contrários apontam que memórias, mesmo dolorosas, fazem parte da identidade e têm papel social em trauma coletivo; a favor enfatizam o sofrimento real de quem vive com TEPT crônico e o princípio médico de aliviar sofrimento com segurança.",
+      "O debate se resume exclusivamente ao custo financeiro do tratamento para sistemas de saúde pública.",
+      "Todos os especialistas concordam que o tratamento deveria ser proibido em qualquer circunstância."
+    ],
+    correta: 1,
+    porque: "Esse debate reflete uma tensão real entre valorizar a autenticidade e o papel social da memória, especialmente em contextos coletivos, e reconhecer o sofrimento genuíno que motiva a busca por tratamento." },
+
+  { camada: "extensao",
+    q: "Por que o documento descreve o caso da reconsolidação como incomum na pesquisa biomédica?",
+    alts: [
+      "Porque é o único mecanismo de memória já estudado em toda a história da neurociência.",
+      "Porque uma descoberta básica de laboratório com ratos, caracterizada a partir de 2000, virou um tratamento testado em ensaios clínicos randomizados em humanos em menos de duas décadas, um caminho raramente percorrido por completo na pesquisa biomédica.",
+      "Porque nenhum outro mecanismo cerebral jamais foi replicado em animais e depois em humanos.",
+      "Porque a descoberta foi feita sem nenhum financiamento público ou privado."
+    ],
+    correta: 1,
+    porque: "A maioria dos achados básicos de laboratório nunca chega perto de um protocolo clínico validado por ensaio randomizado, o que torna o percurso da reconsolidação, de rato a ensaio clínico humano, particularmente notável." }
+],
+
+fontes: [
+  { n: 1, tipo: "fonte primária", ref: "Nader, K., Schafe, G. E. &amp; LeDoux, J. E. 'Fear memories require protein synthesis in the amygdala for reconsolidation after retrieval'. <em>Nature</em> 406:722-726, 2000.", url: "https://www.nature.com/articles/35021052" },
+  { n: 2, tipo: "fonte primária", ref: "Brunet, A., Saumier, D., Liu, A., Streiner, D. L., Tremblay, J. &amp; Pitman, R. K. 'Reduction of PTSD Symptoms With Pre-Reactivation Propranolol Therapy: A Randomized Controlled Trial'. <em>American Journal of Psychiatry</em> 175(5):427-433, 2018.", url: "https://psychiatryonline.org/ajp/doi/10.1176/appi.ajp.2017.17050481" },
+  { n: 3, tipo: "meta-análise", ref: "'Impairing memory reconsolidation with propranolol in healthy and clinical samples: a meta-analysis'. <em>Journal of Psychiatry &amp; Neuroscience</em>.", url: "https://cdnsciencepub.com/doi/full/10.1503/jpn.210057" },
+  { n: 4, tipo: "revisão acadêmica", ref: "Nader, K. &amp; Einarsson, E. Ö. 'The labile nature of consolidation theory'. <em>Nature Reviews Neuroscience</em>.", url: "https://www.nature.com/articles/35044580" },
+  { n: 5, tipo: "reportagem científica", ref: "National Geographic. 'More on propranolol, the drug that doesn't erase memories', esclarecendo os limites reais do tratamento.", url: "https://www.nationalgeographic.com/science/article/more-on-propranolol-the-drug-that-doesnt-erase-memories" },
+  { n: 6, tipo: "debate ético", ref: "American Medical Association Journal of Ethics. 'Preventing Bad Memories: Is It Ethical?'.", url: "https://journalofethics.ama-assn.org/article/preventing-bad-memories-it-ethical/2008-11" },
+  { n: 7, tipo: "crítica", ref: "Elsey, J. &amp; Kindt, M. 'Can criminals use propranolol to erase crime-related memories? A response to McGorrery (2017)'. <em>Psychiatry, Psychology and Law</em>.", url: "https://journals.sagepub.com/doi/full/10.1177/1037969X18765204" },
+  { n: 8, tipo: "fonte primária", ref: "Ensaio clínico randomizado sobre reativação de memória traumática com e sem propranolol, e sintomas comórbidos de depressão maior.", url: "https://www.nature.com/articles/s41386-021-00984-w" },
+  { n: 9, tipo: "reportagem", ref: "National Geographic. 'Beta-blocker drug erases the emotion of fearful memories', cobertura acessível sobre o mecanismo do propranolol.", url: "https://www.nationalgeographic.com/science/article/beta-blocker-drug-erases-the-emotion-of-fearful-memories" },
+  { n: 10, tipo: "divulgação", ref: "The Science Survey. 'The Drug That May Forever Change Fear: Propranolol'.", url: "https://thesciencesurvey.com/news/2024/06/20/the-drug-that-may-forever-change-fear-propranolol/" },
+  { n: 11, tipo: "fonte primária", ref: "Ensaio clínico piloto comparando terapia de reconsolidação a paroxetina para estresse traumático em contexto de baixa renda, no Nepal.", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8417983/" },
+  { n: 12, tipo: "revisão acadêmica", ref: "Journal of Neuroscience. 'Characterization of Fear Memory Reconsolidation', estudo de acompanhamento sobre os parâmetros temporais do processo.", url: "https://www.jneurosci.org/content/24/42/9269" },
+  { n: 13, tipo: "fonte primária", ref: "Estudo sobre reconsolidação seletiva: memórias diretamente reativadas, mas não memórias associadas indiretamente, sofrem reconsolidação na amígdala.", url: "https://www.pnas.org/doi/10.1073/pnas.0507168103" },
+  { n: 14, tipo: "reportagem", ref: "Psychiatric News (American Psychiatric Association). 'Propranolol Combined With Reactivation Therapy May Reduce PTSD Symptoms', cobertura do ensaio de Brunet e colegas para a comunidade psiquiátrica.", url: "https://psychiatryonline.org/doi/10.1176/appi.pn.2018.pp2a2" },
+  { n: 15, tipo: "enciclopédia", ref: "MDPI Encyclopedia. Verbete sobre o uso de propranolol em transtorno de estresse pós-traumático, com resumo de mecanismos e evidência clínica.", url: "https://encyclopedia.pub/entry/26909" }
+]
+};
+
+if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
 
 /* ── revolucao-haitiana.js ─────────────────────────────────── */
 CONTEUDOS["revolucao-haitiana"] = {
