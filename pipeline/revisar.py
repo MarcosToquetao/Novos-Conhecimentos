@@ -114,8 +114,21 @@ class Tratador(http.server.SimpleHTTPRequestHandler):
         pass
 
 
+class Servidor(http.server.ThreadingHTTPServer):
+    allow_reuse_address = False   # no Windows, reusar a porta deixaria dois servidores dividindo a 8766
+
+
 if __name__ == "__main__":
+    import webbrowser
     sys.stdout.reconfigure(encoding="utf-8")
-    srv = http.server.ThreadingHTTPServer(("127.0.0.1", PORTA), functools.partial(Tratador, directory=str(g.RAIZ)))
-    print(f"Revisão em http://localhost:{PORTA}/pipeline/revisar.html  (Ctrl+C para sair)")
-    srv.serve_forever()
+    try:
+        srv = Servidor(("127.0.0.1", PORTA), functools.partial(Tratador, directory=str(g.RAIZ)))
+    except OSError:
+        sys.exit(f"A porta {PORTA} já está em uso: provavelmente a revisão já está aberta em outro terminal.")
+    url = f"http://localhost:{PORTA}/pipeline/revisar.html"
+    print(f"Revisão em {url}\nDeixe este terminal aberto enquanto revisa. Ctrl+C encerra.")
+    webbrowser.open(url)
+    try:
+        srv.serve_forever()
+    except KeyboardInterrupt:
+        print("\nRevisão encerrada.")
