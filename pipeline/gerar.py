@@ -8,6 +8,7 @@ Uso
   python pipeline/gerar.py licao <id> [<id> ...] [--seco] [--sem-revisao-pro]
   python pipeline/gerar.py licao --todas          lições para todo documento sem lição nem rascunho
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
+  python pipeline/gerar.py triagem                JEV marca termos do catálogo sem respaldo suficiente (não apaga)
   python pipeline/gerar.py aprender               resume suas notas em regras novas no estilo.md
   python pipeline/gerar.py status                 fila, sequência de aprovações e custo gasto
   python pipeline/gerar.py teste                  autoteste das checagens, sem chamar API
@@ -27,7 +28,7 @@ FLASH, PRO, JEV = "deepseek-flash", "deepseek-v4-pro", "typesafe/jev-1.13"
 # US$ por milhão de tokens (cache hit, cache miss, saída), preços de pico; fora do pico é metade.
 PRECOS = {FLASH: (0.006, 0.30, 1.20), PRO: (0.044, 1.32, 3.96)}
 GRADUACAO = 9          # aprovações seguidas de primeira para liberar publicação automática
-MARCAS = ["consenso", "emergente", "controverso", "especulacao"]
+MARCAS = ["consenso", "emergente"]  # lições só afirmam o que tem respaldo; controverso e especulação ficam de fora
 # Limiares do portão JEV. Ajuste com o que `aprender` mostrar sobre os seus veredictos.
 LIMIAR = {"ia": 0.5, "marca": 0.6, "ambigua": 0.5, "interesse": 1.5}
 
@@ -38,9 +39,9 @@ def chave(nome):
     if arq.exists():
         for linha in arq.read_text(encoding="utf-8").splitlines():
             k, _, v = linha.partition("=")
-            if k.strip() == nome:
+            if k.strip() == nome and v.strip().strip('"'):
                 return v.strip().strip('"')
-    sys.exit(f"Falta {nome} em .env na raiz do projeto.")
+    sys.exit(f"Falta {nome} em .env na raiz do projeto (cole a chave depois do sinal de igual).")
 
 
 def post(url, corpo, token, tentativas=3):
@@ -201,7 +202,7 @@ def checar_licao(L, doc):
             if html.count("<strong>") > 1:
                 avisos.append(f"tela {i}: mais de um negrito")
             if t.get("marca") and t["marca"] not in MARCAS:
-                erros.append(f"tela {i}: marca inválida {t['marca']}")
+                erros.append(f"tela {i}: marca {t['marca']} não é permitida (só consenso ou emergente)")
             if t.get("fonte") is not None and t["fonte"] not in fontes:
                 erros.append(f"tela {i}: fonte {t['fonte']} não existe no documento")
             if t.get("marca") and t.get("fonte") is None:
@@ -407,6 +408,35 @@ def gerar_grafo(seco=False):
     print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-2:])
 
 
+# ── triagem do catálogo: só fica tema com respaldo ──────────────────────
+def triagem():
+    """O JEV avalia se o núcleo de cada termo do catálogo é conhecimento estabelecido.
+    Grava pipeline/triagem.json e lista os suspeitos para o editor decidir. Não apaga nada."""
+    idx = indice()
+    cs = idx["conceitos"]
+    resp = {}
+    for i in range(0, len(cs), 20):
+        lote = cs[i:i + 20]
+        estado = {"itens": {c["id"]: f"{c['termo']} ({c['area']}): {c['gancho']}" for c in lote}}
+        perg = {c["id"]: {"type": "choice",
+                          "instructions": f"Qual é o status do núcleo do conceito itens.{c['id']} na sua área?",
+                          "criteria": {"estabelecido": "conhecimento aceito, em livro-texto, com evidência replicada ou fato documentado",
+                                       "emergente": "evidência séria e replicada, mas recente",
+                                       "controverso": "especialistas competentes discordam sobre o núcleo do conceito",
+                                       "especulativo": "hipótese sem teste decisivo, ou afirmação popular sem base"}}
+                for c in lote}
+        resp.update(jev(estado, perg, "triagem", "catalogo"))
+        print(f"  {min(i + 20, len(cs))}/{len(cs)}", end="\r")
+    saida = {k: {"status": v.get("choice"), "p": v.get("probabilities", {})} for k, v in resp.items()}
+    (PIPE / "triagem.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding="utf-8")
+    risco = lambda k: saida[k]["p"].get("controverso", 0) + saida[k]["p"].get("especulativo", 0)
+    suspeitos = sorted((k for k in saida if risco(k) > 0.35), key=lambda k: -risco(k))
+    termo = {c["id"]: (c["termo"], c["doc"]) for c in cs}
+    print(f"\n{len(suspeitos)} termo(s) com risco de não ter respaldo suficiente (controverso + especulativo > 35%):")
+    for k in suspeitos:
+        print(f"  {risco(k):.0%}  {'[TEM DOC] ' if termo[k][1] else ''}{termo[k][0]} ({k})")
+
+
 # ── aprendizado e status ────────────────────────────────────────────────
 def aprender():
     avs = avaliacoes()
@@ -480,6 +510,8 @@ def main():
             gerar_licao(i, idx, seco="--seco" in flags, revisao_pro="--sem-revisao-pro" not in flags)
     elif cmd == "grafo":
         gerar_grafo(seco="--seco" in flags)
+    elif cmd == "triagem":
+        triagem()
     elif cmd == "aprender":
         aprender()
     elif cmd == "status":

@@ -19,14 +19,22 @@ Uma lição tem de 6 a 9 telas, lidas uma de cada vez, em 3 a 5 minutos.
 - Uma tela com afirmação empírica relevante leva `marca` (o grau de certeza) e `fonte` (o número da fonte no documento).
 - O `fecho` é uma frase que aponta para um conceito vizinho do acervo, despertando a próxima curiosidade. Não é resumo.
 
+## Critério de tema: só conhecimento com respaldo
+
+O app ensina coisas curiosas **e garantidas**. A pessoa precisa sair com a certeza de que aprendeu algo verdadeiro, não uma teoria da moda.
+
+- Entra: conceito cujo núcleo é conhecimento estabelecido na área, em livro-texto e revisões, com evidência replicada. Em áreas não experimentais (história, música, filosofia, direito), fato documentado ou estrutura bem descrita, não interpretação disputada.
+- Não entra: tema cujo núcleo é controverso (especialistas competentes discordam), especulativo (hipótese sem teste decisivo), afirmação popular sem base, ou tema que só existe para desmentir um mito.
+- Curioso não é sinônimo de polêmico. O interesse vem do mecanismo surpreendente, do exemplo concreto, da consequência inesperada.
+
 ## Marcação epistêmica
 
-- `consenso`: amplamente replicado, aceito na área, presente em revisões e livros-texto.
-- `emergente`: evidência crescente e séria, mas recente ou ainda sem consolidação.
-- `controverso`: especialistas competentes discordam, ou a evidência aponta para lados diferentes.
-- `especulacao`: hipótese plausível, sem teste empírico decisivo.
+Numa lição só existem duas marcas:
 
-Classifique com rigor. Popularidade não é consenso. Um achado com base empírica sólida não vira especulação por cautela.
+- `consenso`: amplamente replicado, aceito na área, presente em revisões e livros-texto.
+- `emergente`: evidência séria e replicada em mais de um estudo independente, mas recente. Use pouco.
+
+Afirmação controversa ou especulativa não entra na lição, nem com marca. Se o documento de origem tem um trecho assim, deixe-o de fora. Classifique com rigor: popularidade não é consenso.
 
 ## Registro de linguagem
 

@@ -45,7 +45,7 @@ for (const f of arquivosDocs) carregarJs(p("js", "docs", f), { CONTEUDOS, module
 
 /* ── Validação ─────────────────────────────────────────────────────── */
 const erros = [], avisos = [];
-const MARCAS = ["consenso", "emergente", "controverso", "especulacao"];
+const MARCAS = ["consenso", "emergente"];   /* lições só afirmam o que tem respaldo científico */
 
 function validar(id, d) {
   const e = (m) => erros.push(`${id}: ${m}`), a = (m) => avisos.push(`${id}: ${m}`);
