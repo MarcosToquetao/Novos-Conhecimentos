@@ -10,7 +10,7 @@ O objetivo de uma lição não é resumir o conceito. É deixar a pessoa com uma
 
 ## Formato da lição
 
-Uma lição tem de 6 a 9 telas, lidas uma de cada vez, em 3 a 5 minutos.
+Uma lição tem de 6 a 9 telas, lidas uma de cada vez, em 3 a 5 minutos. Conte antes de responder: o array `telas` tem **no máximo 9 itens no total, perguntas incluídas**. Se o assunto pede mais, corte o que é secundário; a lição não precisa cobrir o documento inteiro.
 
 - A primeira tela é o gancho: um fato concreto, uma situação cotidiana ou uma pergunta que a intuição responde errado. Nada de definição na primeira tela.
 - Cada tela de texto carrega **uma** ideia, em no máximo 60 palavras. Se precisa de "além disso", são duas telas.
@@ -52,6 +52,9 @@ Afirmação controversa ou especulativa não entra na lição, nem com marca. Se
 - Negrito em mais de uma expressão por tela.
 - Título em Title Case.
 - Listas de três itens artificiais ("rápido, eficiente e seguro").
+- A estrutura "não é X, mas Y" (ou "não é X, é Y"). Diga direto o que é.
+- Termo técnico que o leitor não vai usar de novo (nome de teorema secundário, sigla de modelo). A lição fica no mecanismo central.
+- Conta com mais de dois números na mesma tela.
 - Começar telas seguidas do mesmo jeito.
 - Final genérico do tipo "isso mostra a importância de...".
 - Framing histórico raso ("desde sempre a humanidade...").

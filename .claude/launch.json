@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8765"],
       "port": 8765
+    },
+    {
+      "name": "revisao",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["pipeline/revisar.py"],
+      "port": 8766
     }
   ]
 }

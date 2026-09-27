@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisão · Novos Conhecimentos</title>
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+  body { padding: 0 16px 48px; }
+  .rev { max-width: 1180px; margin: 0 auto; display: grid; gap: 20px; grid-template-columns: 220px 390px 1fr; align-items: start; }
+  @media (max-width: 980px) { .rev { grid-template-columns: 1fr; } }
+  .cab { max-width: 1180px; margin: 0 auto; padding: 16px 0; display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; justify-content: space-between; border-bottom: 1px solid var(--regra); margin-bottom: 20px; }
+  .abas-rev { display: flex; gap: 8px; }
+  .abas-rev button { width: auto; padding: .5rem .8rem; }
+  .fila { display: grid; max-height: 80vh; overflow: auto; }
+  .fila button { text-align: left; background: none; border: 0; border-bottom: 1px solid var(--regra-2); padding: .55rem .2rem; cursor: pointer; display: grid; gap: 2px; }
+  .fila button[aria-current] { background: var(--selecao); }
+  .fila .sinais { font: .68rem var(--mono); color: var(--tinta-3); }
+  .telefone { transform: translateZ(0); height: 720px; overflow: auto; border: 7px solid #111; border-radius: 30px; background: var(--cartao); padding: 0 14px 90px; }
+  .telefone .licao { min-height: 0; }
+  .painel-rev { display: grid; gap: 14px; }
+  .sinal { font: .8rem/1.5 var(--mono); margin: 0; padding-left: 10px; border-left: 2px solid var(--regra); }
+  .sinal.erro { border-color: var(--carimbo); color: var(--carimbo); }
+  .sinal.jev { border-color: var(--controverso); }
+  .rubrica { display: grid; gap: 10px; }
+  .rubrica fieldset { border: 0; padding: 0; margin: 0; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .rubrica legend { font: 500 .72rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-2); width: 100%; margin-bottom: 4px; }
+  .rubrica label { border: 1px solid var(--regra); padding: .35rem .7rem; font: .85rem var(--mono); cursor: pointer; }
+  .rubrica input { position: absolute; opacity: 0; }
+  .rubrica input:checked + span { font-weight: 500; }
+  .rubrica label:has(input:checked) { border: 2px solid var(--tinta); background: var(--selecao); }
+  .rubrica .dica { font: .72rem var(--mono); color: var(--tinta-3); width: 100%; }
+  textarea { width: 100%; border: 1px solid var(--regra); background: var(--ficha); color: var(--tinta); font: .82rem/1.45 var(--mono); padding: .6rem; border-radius: 0; }
+  .decidir { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .msg { font: .82rem var(--mono); margin: 0; }
+  .triagem { max-width: 1180px; margin: 0 auto; display: grid; gap: 0; }
+  .tri { display: grid; grid-template-columns: 70px 1fr auto; gap: 12px; align-items: center; border-bottom: 1px solid var(--regra-2); padding: .7rem 0; }
+  .tri .acoes-tri { display: flex; gap: 6px; }
+  .tri .acoes-tri button { width: auto; padding: .45rem .7rem; }
+  .tri.decidido { opacity: .5; }
+</style>
+</head>
+<body>
+<div class="cab">
+  <div>
+    <p class="rotulo">Revisão supervisionada</p>
+    <p class="ficha-gancho" id="placar">&nbsp;</p>
+  </div>
+  <div class="abas-rev">
+    <button class="btn" id="ver-licoes">Lições</button>
+    <button class="btn fio" id="ver-triagem">Curadoria do catálogo</button>
+  </div>
+</div>
+
+<div class="rev" id="modo-licoes">
+  <nav class="fila" id="fila" aria-label="Rascunhos na fila"></nav>
+  <div class="telefone" id="telefone"><p class="vazio" style="padding:2rem 0">Escolha um rascunho na fila.</p></div>
+  <form class="painel-rev" id="painel" hidden>
+    <div><p class="rotulo" id="p-area"></p><p class="ficha-termo" style="font-size:1.6rem;margin:.2rem 0" id="p-termo"></p><p class="rotulo" id="p-modelo"></p></div>
+    <div id="p-sinais" style="display:grid;gap:6px"></div>
+    <div class="rubrica" id="rubrica"></div>
+    <label class="rotulo" for="comentario">O que mudar (vira regra no aprendizado)</label>
+    <textarea id="comentario" rows="4" placeholder="Ex.: a tela 3 explica o termo técnico antes do exemplo; inverta."></textarea>
+    <details>
+      <summary class="rotulo" style="cursor:pointer">Editar a lição (json)</summary>
+      <textarea id="json" rows="18" spellcheck="false"></textarea>
+      <p class="ficha-gancho" style="font-size:.8rem">Editar e aprovar publica a versão editada, mas não conta como aprovação de primeira.</p>
+    </details>
+    <div class="decidir">
+      <button type="button" class="btn fio" id="rejeitar">Rejeitar</button>
+      <button type="button" class="btn" id="aprovar">Aprovar e publicar</button>
+    </div>
+    <p class="msg" id="msg" aria-live="polite"></p>
+  </form>
+</div>
+
+<div class="triagem" id="modo-triagem" hidden>
+  <p class="ficha-gancho" style="margin:0 0 1rem">O JEV achou que estes termos do catálogo podem não ter respaldo suficiente (controverso ou especulativo). O número é a probabilidade somada. Decida: manter ou tirar do app. Nada é apagado até aplicarmos as decisões juntos.</p>
+  <div id="tri-lista"></div>
+</div>
+
+<script src="../js/licao.js"></script>
+<script>
+const $ = (s) => document.querySelector(s);
+const CRITERIOS = [
+  ["curadoria", "Curadoria do tema", "tema curioso, com respaldo, e que alarga o acervo"],
+  ["estetica", "Estética", "ritmo das telas, tamanho, carimbos, perguntas no lugar certo"],
+  ["escrita", "Escrita", "frases claras, sem vício de IA, exemplos concretos"],
+  ["interesse", "Desperta interesse", "o gancho puxa e o fecho dá vontade de continuar"]
+];
+let atual = null;
+
+$("#rubrica").innerHTML = CRITERIOS.map(([k, nome, dica]) => `
+  <fieldset><legend>${nome}</legend>
+  ${[1, 2, 3, 4, 5].map(n => `<label><input type="radio" name="${k}" value="${n}"><span>${n}</span></label>`).join("")}
+  <span class="dica">${dica}</span></fieldset>`).join("");
+
+async function carregarFila(escolher) {
+  const f = await fetch("/api/fila").then(r => r.json());
+  $("#placar").textContent = `${f.itens.length} na fila · aprovadas de primeira em sequência: ${f.sequencia}/${f.graduacao} · gasto US$ ${f.gasto.toFixed(4)}`;
+  $("#fila").innerHTML = f.itens.map(x => `<button data-id="${x.id}"><span class="item-lista termo" style="border:0;padding:0">${x.termo}</span>
+    <span class="sinais">${x.area} · ${x.erros} erro(s) · ${x.alertas} alerta(s)</span></button>`).join("") || `<p class="vazio">Fila vazia.</p>`;
+  document.querySelectorAll("#fila button").forEach(b => b.addEventListener("click", () => abrir(b.dataset.id)));
+  const alvo = escolher || (f.itens[0] && f.itens[0].id);
+  if (alvo) abrir(alvo);
+}
+
+async function abrir(id) {
+  const r = await fetch("/api/rascunho/" + id).then(r => r.json());
+  atual = r;
+  document.querySelectorAll("#fila button").forEach(b => b.toggleAttribute("aria-current", b.dataset.id === id));
+  $("#p-area").textContent = r.doc.area;
+  $("#p-termo").textContent = r.doc.termo;
+  $("#p-modelo").textContent = `${r.rascunho.modelo} · ${r.rascunho.rodadas} rodada(s) · US$ ${r.rascunho.custo_usd}`;
+  const s = r.rascunho;
+  $("#p-sinais").innerHTML = [
+    ...s.erros.map(e => `<p class="sinal erro">erro: ${e}</p>`),
+    ...s.alertas_jev.map(e => `<p class="sinal jev">JEV: ${e}</p>`),
+    ...s.avisos.map(e => `<p class="sinal">aviso: ${e}</p>`)
+  ].join("") || `<p class="sinal">Nenhum sinal automático.</p>`;
+  $("#json").value = JSON.stringify(s.licao, null, 2);
+  $("#comentario").value = "";
+  document.querySelectorAll("#rubrica input").forEach(i => i.checked = false);
+  $("#msg").textContent = "";
+  $("#painel").hidden = false;
+  tocar(s.licao);
+}
+
+function tocar(licao) {
+  Licao($("#telefone"), { termo: atual.doc.termo, area: atual.doc.area, fontes: atual.doc.fontes, licao }, {
+    aoFechar: () => tocar(licao),
+    aoTerminar: (res) => {
+      $("#telefone").innerHTML = `<div class="licao"><p class="rotulo" style="margin-top:1rem">${res.acertos} de ${res.total} perguntas</p>
+        <p class="ficha-gancho">${licao.fecho}</p><button class="btn fio" id="de-novo">Ver de novo</button></div>`;
+      $("#de-novo").addEventListener("click", () => tocar(licao));
+    }
+  });
+}
+
+async function decidir(veredicto) {
+  const notas = {};
+  for (const [k] of CRITERIOS) { const v = document.querySelector(`input[name="${k}"]:checked`); if (v) notas[k] = +v.value; }
+  if (veredicto === "aprovado" && Object.keys(notas).length < 4) { $("#msg").textContent = "Dê as quatro notas antes de aprovar."; return; }
+  if (veredicto === "rejeitado" && !$("#comentario").value.trim()) { $("#msg").textContent = "Diga o que estava errado: é isso que ensina o gerador."; return; }
+  let licao;
+  try { licao = JSON.parse($("#json").value); } catch (e) { $("#msg").textContent = "O json editado está inválido."; return; }
+  $("#msg").textContent = "Salvando…";
+  const r = await fetch("/api/avaliar", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id: atual.rascunho.id, veredicto, notas, comentario: $("#comentario").value.trim(), licao }) }).then(r => r.json());
+  if (r.erro) { $("#msg").textContent = r.erro; return; }
+  $("#msg").textContent = r.veredicto === "rejeitado" ? "Rejeitada. Volta a ser gerada no próximo lote." : `Publicada (${r.veredicto}).`;
+  carregarFila();
+}
+$("#aprovar").addEventListener("click", () => decidir("aprovado"));
+$("#rejeitar").addEventListener("click", () => decidir("rejeitado"));
+
+async function carregarTriagem() {
+  const t = await fetch("/api/triagem").then(r => r.json());
+  $("#tri-lista").innerHTML = t.itens.map(x => `
+    <div class="tri${x.decisao ? " decidido" : ""}" data-id="${x.id}">
+      <span class="carimbo ${x.risco > .8 ? "" : "controverso"}">${Math.round(x.risco * 100)}%</span>
+      <div><p style="margin:0;font-weight:560">${x.termo}${x.doc ? ' <span class="rotulo">· tem ficha</span>' : ""}</p>
+        <p class="ficha-gancho" style="font-size:.85rem">${x.area} · ${x.gancho}</p>
+        ${x.decisao ? `<p class="rotulo">decidido: ${x.decisao}</p>` : ""}</div>
+      <div class="acoes-tri"><button class="btn fio" data-d="manter">Manter</button><button class="btn" data-d="remover">Tirar</button></div>
+    </div>`).join("") || `<p class="vazio">Sem triagem. Rode python pipeline/gerar.py triagem.</p>`;
+  document.querySelectorAll(".tri button").forEach(b => b.addEventListener("click", async () => {
+    const linha = b.closest(".tri");
+    await fetch("/api/curadoria", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: linha.dataset.id, decisao: b.dataset.d }) });
+    linha.classList.add("decidido");
+    linha.querySelector("div").insertAdjacentHTML("beforeend", `<p class="rotulo">decidido: ${b.dataset.d}</p>`);
+  }));
+}
+
+function modo(qual) {
+  $("#modo-licoes").hidden = qual !== "licoes";
+  $("#modo-triagem").hidden = qual !== "triagem";
+  $("#ver-licoes").className = qual === "licoes" ? "btn" : "btn fio";
+  $("#ver-triagem").className = qual === "triagem" ? "btn" : "btn fio";
+  if (qual === "triagem") carregarTriagem();
+}
+$("#ver-licoes").addEventListener("click", () => modo("licoes"));
+$("#ver-triagem").addEventListener("click", () => modo("triagem"));
+carregarFila();
+</script>
+</body>
+</html>

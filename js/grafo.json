@@ -1,0 +1,2873 @@
+{
+"fourier": {
+"sub": "análise",
+"liga": [
+"numeros-complexos",
+"compressao-informacao",
+"laser"
+]
+},
+"bayes": {
+"sub": "probabilidade",
+"liga": [
+"prob-condicional",
+"problema-monty-hall",
+"valor-p",
+"heuristicas-kahneman"
+]
+},
+"cantor-infinitos": {
+"sub": "fundamentos",
+"liga": [
+"godel",
+"topologia-basica",
+"halting",
+"banach-tarski"
+]
+},
+"godel": {
+"sub": "fundamentos",
+"liga": [
+"cantor-infinitos",
+"halting",
+"p-np",
+"paradoxo-mentiroso"
+]
+},
+"topologia-basica": {
+"sub": "geometria",
+"liga": [
+"cantor-infinitos",
+"fractais",
+"caos-deterministico"
+]
+},
+"caos-deterministico": {
+"sub": "sistemas-dinâmicos",
+"liga": [
+"fractais",
+"topologia-basica",
+"demonio-laplace"
+]
+},
+"fractais": {
+"sub": "geometria",
+"liga": [
+"caos-deterministico",
+"topologia-basica",
+"escalas-alometria"
+]
+},
+"teoria-jogos": {
+"sub": "aplicada",
+"liga": [
+"otimizacao-convexa",
+"vantagem-comparativa",
+"acao-coletiva",
+"tragedia-comuns"
+]
+},
+"grafos": {
+"sub": "combinatória",
+"liga": [
+"topologia-basica",
+"p-np"
+]
+},
+"numeros-complexos": {
+"sub": "álgebra",
+"liga": [
+"fourier"
+]
+},
+"prob-condicional": {
+"sub": "probabilidade",
+"liga": [
+"bayes",
+"problema-monty-hall",
+"simpson-paradoxo",
+"valor-p"
+]
+},
+"otimizacao-convexa": {
+"sub": "otimização",
+"liga": [
+"algebra-linear-svd",
+"teoria-jogos",
+"overfitting",
+"caos-deterministico"
+]
+},
+"algebra-linear-svd": {
+"sub": "álgebra",
+"liga": [
+"otimizacao-convexa",
+"transformers",
+"compressao-informacao"
+]
+},
+"secao-aurea": {
+"sub": "aplicada",
+"liga": [
+"fractais",
+"perspectiva-renascimento"
+]
+},
+"problema-monty-hall": {
+"sub": "probabilidade",
+"liga": [
+"bayes",
+"prob-condicional",
+"heuristicas-kahneman",
+"vies-confirmacao"
+]
+},
+"banach-tarski": {
+"sub": "fundamentos",
+"liga": [
+"cantor-infinitos",
+"topologia-basica"
+]
+},
+"quatro-forcas": {
+"sub": "partículas",
+"liga": [
+"emaranhamento",
+"materia-escura",
+"plasma"
+]
+},
+"entropia": {
+"sub": "termodinâmica",
+"liga": [
+"tempo-seta",
+"compressao-informacao",
+"buracos-negros-termo"
+]
+},
+"relatividade-restrita": {
+"sub": "relatividade",
+"liga": [
+"paradoxo-gemeos",
+"efeito-doppler",
+"buracos-negros-termo"
+]
+},
+"emaranhamento": {
+"sub": "quântica",
+"liga": [
+"gato-schrodinger",
+"quantum-computing",
+"efeito-casimir",
+"tunelamento-quantico"
+]
+},
+"efeito-casimir": {
+"sub": "quântica",
+"liga": [
+"emaranhamento",
+"tunelamento-quantico",
+"supercondutividade"
+]
+},
+"supercondutividade": {
+"sub": "matéria condensada",
+"liga": [
+"efeito-casimir",
+"plasma",
+"tunelamento-quantico"
+]
+},
+"buracos-negros-termo": {
+"sub": "gravitação",
+"liga": [
+"entropia",
+"radiacao-hawking",
+"relatividade-restrita",
+"estrelas-neutrons"
+]
+},
+"escalas-alometria": {
+"sub": "biofísica",
+"liga": [
+"fractais",
+"capacidade-suporte"
+]
+},
+"ressonancia": {
+"sub": "oscilações",
+"liga": [
+"batimentos-acusticos",
+"caos-deterministico",
+"laser"
+]
+},
+"materia-escura": {
+"sub": "cosmologia",
+"liga": [
+"energia-escura",
+"quatro-forcas",
+"lentes-gravitacionais"
+]
+},
+"laser": {
+"sub": "óptica",
+"liga": [
+"ressonancia",
+"fourier"
+]
+},
+"efeito-doppler": {
+"sub": "ondas",
+"liga": [
+"relatividade-restrita"
+]
+},
+"principio-minima-acao": {
+"sub": "fundamentos",
+"liga": [
+"otimizacao-convexa"
+]
+},
+"tempo-seta": {
+"sub": "termodinâmica",
+"liga": [
+"entropia",
+"causalidade-pearl",
+"buracos-negros-termo"
+]
+},
+"plasma": {
+"sub": "matéria condensada",
+"liga": [
+"supercondutividade",
+"quatro-forcas",
+"laser"
+]
+},
+"tunelamento-quantico": {
+"sub": "quântica",
+"liga": [
+"emaranhamento",
+"gato-schrodinger",
+"supercondutividade"
+]
+},
+"paradoxo-gemeos": {
+"sub": "relatividade",
+"liga": [
+"relatividade-restrita",
+"tempo-seta"
+]
+},
+"gato-schrodinger": {
+"sub": "quântica",
+"liga": [
+"emaranhamento",
+"tunelamento-quantico",
+"cerebro-cuba"
+]
+},
+"demonio-maxwell": {
+"sub": "termodinâmica",
+"liga": [
+"entropia",
+"tempo-seta",
+"compressao-informacao"
+]
+},
+"catalise": {
+"sub": "cinética",
+"liga": [
+"le-chatelier",
+"eletroquimica-baterias",
+"maillard"
+]
+},
+"quiralidade": {
+"sub": "estereoquímica",
+"liga": [
+"tabela-periodica"
+]
+},
+"ligacao-hidrogenio": {
+"sub": "ligações",
+"liga": [
+"ph-tampao",
+"efeito-hidrofobico",
+"tabela-periodica"
+]
+},
+"haber-bosch": {
+"sub": "processos",
+"liga": [
+"le-chatelier",
+"quimica-verde",
+"catalise"
+]
+},
+"tabela-periodica": {
+"sub": "estrutura atômica",
+"liga": [
+"ligacao-hidrogenio",
+"quiralidade"
+]
+},
+"polimeros": {
+"sub": "materiais",
+"liga": [
+"quimica-verde",
+"quimica-prebiotica"
+]
+},
+"eletroquimica-baterias": {
+"sub": "eletroquímica",
+"liga": [
+"catalise"
+]
+},
+"maillard": {
+"sub": "reações",
+"liga": [
+"catalise"
+]
+},
+"ph-tampao": {
+"sub": "ácido-base",
+"liga": [
+"ligacao-hidrogenio"
+]
+},
+"quimica-verde": {
+"sub": "sustentável",
+"liga": [
+"haber-bosch",
+"catalise",
+"polimeros",
+"economia-circular"
+]
+},
+"efeito-hidrofobico": {
+"sub": "forças intermoleculares",
+"liga": [
+"ligacao-hidrogenio",
+"quimica-prebiotica",
+"ph-tampao",
+"catalise"
+]
+},
+"le-chatelier": {
+"sub": "equilíbrio",
+"liga": [
+"catalise",
+"haber-bosch",
+"ph-tampao"
+]
+},
+"quimica-prebiotica": {
+"sub": "origem da vida",
+"liga": [
+"efeito-hidrofobico",
+"polimeros",
+"endossimbiose",
+"quiralidade"
+]
+},
+"endossimbiose": {
+"sub": "evolução",
+"liga": [
+"convergencia-evolutiva",
+"quimica-prebiotica"
+]
+},
+"deriva-genetica": {
+"sub": "evolução",
+"liga": [
+"altruismo-hamilton",
+"convergencia-evolutiva"
+]
+},
+"altruismo-hamilton": {
+"sub": "evolução",
+"liga": [
+"deriva-genetica",
+"convergencia-evolutiva"
+]
+},
+"relogio-circadiano": {
+"sub": "fisiologia",
+"liga": [
+"consolidacao-sono",
+"neuroplasticidade",
+"microbioma",
+"telomeros"
+]
+},
+"microbioma": {
+"sub": "ecologia microbiana",
+"liga": [
+"microbiota-dieta",
+"biofilmes",
+"quorum-sensing"
+]
+},
+"apoptose": {
+"sub": "biologia celular",
+"liga": [
+"telomeros",
+"crispr",
+"regeneracao-animal"
+]
+},
+"crispr": {
+"sub": "genética",
+"liga": [
+"apoptose",
+"bacteriofagos",
+"transferencia-horizontal"
+]
+},
+"convergencia-evolutiva": {
+"sub": "evolução",
+"liga": [
+"deriva-genetica",
+"evo-devo",
+"endossimbiose"
+]
+},
+"neuroplasticidade": {
+"sub": "neurociência",
+"liga": [
+"consolidacao-sono",
+"relogio-circadiano",
+"reconsolidacao",
+"memoria-trabalho"
+]
+},
+"fotossintese-c4": {
+"sub": "fisiologia vegetal",
+"liga": [
+"sucessao-ecologica",
+"capacidade-suporte"
+]
+},
+"virus-definicao": {
+"sub": "evolução",
+"liga": [
+"bacteriofagos",
+"quimica-prebiotica",
+"endossimbiose"
+]
+},
+"telomeros": {
+"sub": "biologia celular",
+"liga": [
+"apoptose",
+"relogio-circadiano",
+"regeneracao-animal"
+]
+},
+"evo-devo": {
+"sub": "evolução",
+"liga": [
+"convergencia-evolutiva",
+"plasticidade-fenotipica",
+"crispr",
+"endossimbiose"
+]
+},
+"quorum-sensing": {
+"sub": "ecologia microbiana",
+"liga": [
+"microbioma",
+"biofilmes",
+"bacteriofagos",
+"transferencia-horizontal"
+]
+},
+"plasticidade-fenotipica": {
+"sub": "evolução",
+"liga": [
+"evo-devo",
+"tardigrados",
+"regeneracao-animal"
+]
+},
+"transferencia-horizontal": {
+"sub": "evolução",
+"liga": [
+"crispr",
+"bacteriofagos",
+"microbioma"
+]
+},
+"bacteriofagos": {
+"sub": "microbiologia",
+"liga": [
+"virus-definicao",
+"quorum-sensing",
+"transferencia-horizontal",
+"microbioma"
+]
+},
+"biofilmes": {
+"sub": "microbiologia",
+"liga": [
+"quorum-sensing",
+"microbioma",
+"transferencia-horizontal",
+"bacteriofagos"
+]
+},
+"tardigrados": {
+"sub": "zoologia",
+"liga": [
+"plasticidade-fenotipica",
+"regeneracao-animal"
+]
+},
+"ophiocordyceps": {
+"sub": "ecologia",
+"liga": [
+"quorum-sensing"
+]
+},
+"senescencia-negligenciavel": {
+"sub": "envelhecimento",
+"liga": [
+"telomeros",
+"tardigrados",
+"apoptose",
+"regeneracao-animal"
+]
+},
+"regeneracao-animal": {
+"sub": "biologia do desenvolvimento",
+"liga": [
+"apoptose",
+"neuroplasticidade",
+"telomeros",
+"evo-devo"
+]
+},
+"efeito-teste": {
+"sub": "aprendizagem",
+"liga": [
+"memoria-trabalho",
+"consolidacao-sono",
+"reconsolidacao"
+]
+},
+"memoria-trabalho": {
+"sub": "cognição",
+"liga": [
+"efeito-teste",
+"atencao-seletiva",
+"neuroplasticidade"
+]
+},
+"dissonancia-cognitiva": {
+"sub": "cognição social",
+"liga": [
+"vies-confirmacao",
+"heuristicas-kahneman",
+"profecia-autorrealizavel",
+"custo-afundado"
+]
+},
+"vies-confirmacao": {
+"sub": "cognição social",
+"liga": [
+"dissonancia-cognitiva",
+"heuristicas-kahneman",
+"amostragem-vies",
+"crise-replicacao"
+]
+},
+"crise-replicacao": {
+"sub": "metodologia",
+"liga": [
+"vies-confirmacao",
+"efeito-placebo",
+"pre-registro",
+"poder-estatistico"
+]
+},
+"heuristicas-kahneman": {
+"sub": "cognição social",
+"liga": [
+"vies-confirmacao",
+"dissonancia-cognitiva",
+"efeito-placebo",
+"custo-afundado"
+]
+},
+"efeito-placebo": {
+"sub": "saúde",
+"liga": [
+"crise-replicacao",
+"dor-cronica",
+"nnt-risco",
+"heuristicas-kahneman"
+]
+},
+"atencao-seletiva": {
+"sub": "cognição",
+"liga": [
+"memoria-trabalho",
+"predicao-cerebral",
+"neuronios-espelho",
+"dunning-kruger"
+]
+},
+"dunning-kruger": {
+"sub": "cognição social",
+"liga": [
+"heuristicas-kahneman",
+"vies-confirmacao",
+"crise-replicacao",
+"atencao-seletiva"
+]
+},
+"memoria-falsa": {
+"sub": "memória",
+"liga": [
+"reconsolidacao",
+"efeito-teste",
+"consolidacao-sono",
+"crise-replicacao"
+]
+},
+"custo-afundado": {
+"sub": "decisão",
+"liga": [
+"dissonancia-cognitiva",
+"heuristicas-kahneman",
+"custo-oportunidade",
+"economia-comportamental"
+]
+},
+"teoria-da-mente": {
+"sub": "cognição social",
+"liga": [
+"neuronios-espelho",
+"predicao-cerebral",
+"split-brain",
+"dissonancia-cognitiva"
+]
+},
+"neuronios-espelho": {
+"sub": "neurociência",
+"liga": [
+"teoria-da-mente",
+"predicao-cerebral",
+"atencao-seletiva",
+"neuroplasticidade"
+]
+},
+"consolidacao-sono": {
+"sub": "neurociência",
+"liga": [
+"reconsolidacao",
+"memoria-falsa",
+"relogio-circadiano",
+"efeito-teste"
+]
+},
+"dor-cronica": {
+"sub": "neurociência",
+"liga": [
+"predicao-cerebral",
+"efeito-placebo",
+"neuroplasticidade",
+"atencao-seletiva"
+]
+},
+"predicao-cerebral": {
+"sub": "neurociência",
+"liga": [
+"teoria-da-mente",
+"neuronios-espelho",
+"dor-cronica",
+"atencao-seletiva"
+]
+},
+"split-brain": {
+"sub": "neurociência",
+"liga": [
+"teoria-da-mente",
+"problema-dificil",
+"homunculo-cortical",
+"neuronios-espelho"
+]
+},
+"homunculo-cortical": {
+"sub": "neurociência",
+"liga": [
+"split-brain",
+"dor-cronica",
+"predicao-cerebral",
+"neuroplasticidade"
+]
+},
+"reconsolidacao": {
+"sub": "memória",
+"liga": [
+"consolidacao-sono",
+"memoria-falsa",
+"neuroplasticidade",
+"efeito-teste"
+]
+},
+"hegel-fenomenologia": {
+"sub": "filosofia continental",
+"liga": [
+"existencialismo-sartre",
+"fenomenologia-husserl",
+"eterno-retorno",
+"escola-frankfurt"
+]
+},
+"problema-inducao": {
+"sub": "epistemologia",
+"liga": [
+"falseabilidade",
+"paradigmas-kuhn",
+"demonio-laplace",
+"bayes"
+]
+},
+"falseabilidade": {
+"sub": "epistemologia",
+"liga": [
+"problema-inducao",
+"paradigmas-kuhn",
+"crise-replicacao",
+"navalha-ockham"
+]
+},
+"paradigmas-kuhn": {
+"sub": "epistemologia",
+"liga": [
+"falseabilidade",
+"problema-inducao",
+"crise-replicacao"
+]
+},
+"utilitarismo": {
+"sub": "ética",
+"liga": [
+"imperativo-categorico",
+"etica-virtude",
+"problema-bonde",
+"veu-ignorancia"
+]
+},
+"imperativo-categorico": {
+"sub": "ética",
+"liga": [
+"utilitarismo",
+"etica-virtude",
+"contrato-social",
+"veu-ignorancia"
+]
+},
+"quarto-chines": {
+"sub": "mente",
+"liga": [
+"problema-dificil",
+"teoria-da-mente",
+"cerebro-cuba"
+]
+},
+"problema-dificil": {
+"sub": "mente",
+"liga": [
+"quarto-chines",
+"cerebro-cuba",
+"split-brain"
+]
+},
+"experimento-mental-navio": {
+"sub": "metafísica",
+"liga": [
+"cerebro-cuba",
+"problema-dificil",
+"quarto-chines"
+]
+},
+"veu-ignorancia": {
+"sub": "política",
+"liga": [
+"contrato-social",
+"utilitarismo",
+"imperativo-categorico",
+"teoria-jogos"
+]
+},
+"eterno-retorno": {
+"sub": "filosofia continental",
+"liga": [
+"existencialismo-sartre",
+"hegel-fenomenologia",
+"absurdismo"
+]
+},
+"linguagem-wittgenstein": {
+"sub": "linguagem",
+"liga": [
+"signo-saussure",
+"atos-de-fala",
+"quarto-chines",
+"fenomenologia-husserl"
+]
+},
+"fenomenologia-husserl": {
+"sub": "filosofia continental",
+"liga": [
+"hegel-fenomenologia",
+"existencialismo-sartre",
+"linguagem-wittgenstein",
+"problema-dificil"
+]
+},
+"existencialismo-sartre": {
+"sub": "filosofia continental",
+"liga": [
+"hegel-fenomenologia",
+"eterno-retorno",
+"absurdismo"
+]
+},
+"etica-virtude": {
+"sub": "ética",
+"liga": [
+"utilitarismo",
+"imperativo-categorico",
+"ubuntu"
+]
+},
+"paradoxo-sorites": {
+"sub": "lógica",
+"liga": [
+"paradoxo-mentiroso",
+"navalha-ockham"
+]
+},
+"argumento-ontologico": {
+"sub": "metafísica",
+"liga": [
+"navalha-ockham",
+"problema-inducao",
+"cerebro-cuba"
+]
+},
+"escola-frankfurt": {
+"sub": "teoria crítica",
+"liga": [
+"hegel-fenomenologia",
+"capital-cultural",
+"panoptico"
+]
+},
+"problema-bonde": {
+"sub": "ética",
+"liga": [
+"utilitarismo",
+"imperativo-categorico",
+"etica-virtude"
+]
+},
+"absurdismo": {
+"sub": "filosofia continental",
+"liga": [
+"existencialismo-sartre",
+"eterno-retorno"
+]
+},
+"cerebro-cuba": {
+"sub": "epistemologia",
+"liga": [
+"problema-dificil",
+"quarto-chines",
+"experimento-mental-navio",
+"demonio-laplace"
+]
+},
+"paradoxo-mentiroso": {
+"sub": "lógica",
+"liga": [
+"godel",
+"paradoxo-sorites",
+"navalha-ockham",
+"cantor-infinitos"
+]
+},
+"navalha-ockham": {
+"sub": "metodologia",
+"liga": [
+"paradoxo-sorites",
+"argumento-ontologico",
+"falseabilidade"
+]
+},
+"demonio-laplace": {
+"sub": "metafísica",
+"liga": [
+"caos-deterministico",
+"problema-inducao",
+"cerebro-cuba",
+"tempo-seta"
+]
+},
+"vantagem-comparativa": {
+"sub": "comércio",
+"liga": [
+"custo-oportunidade",
+"teoria-jogos",
+"moeda-fiduciaria",
+"bretton-woods"
+]
+},
+"externalidades": {
+"sub": "falhas de mercado",
+"liga": [
+"tragedia-comuns",
+"assimetria-informacao",
+"custo-oportunidade",
+"pegada-carbono"
+]
+},
+"assimetria-informacao": {
+"sub": "falhas de mercado",
+"liga": [
+"externalidades",
+"selecao-adversa",
+"agente-principal",
+"economia-comportamental"
+]
+},
+"custo-oportunidade": {
+"sub": "microeconomia",
+"liga": [
+"vantagem-comparativa",
+"externalidades",
+"custo-afundado"
+]
+},
+"inflacao-mecanismos": {
+"sub": "macroeconomia",
+"liga": [
+"moeda-fiduciaria",
+"curva-laffer",
+"armadilha-liquidez",
+"efeito-cantillon"
+]
+},
+"curva-laffer": {
+"sub": "política fiscal",
+"liga": [
+"inflacao-mecanismos",
+"salario-minimo-debate",
+"renda-basica",
+"teoria-firma"
+]
+},
+"tragedia-comuns": {
+"sub": "instituições",
+"liga": [
+"externalidades",
+"acao-coletiva",
+"servicos-ecossistemicos",
+"capacidade-suporte"
+]
+},
+"bolhas-financeiras": {
+"sub": "macroeconomia",
+"liga": [
+"assimetria-informacao",
+"economia-comportamental",
+"efeito-rede",
+"inflacao-mecanismos"
+]
+},
+"gini-desigualdade": {
+"sub": "desigualdade",
+"liga": [
+"salario-minimo-debate",
+"renda-basica",
+"curva-kuznets-ambiental"
+]
+},
+"moeda-fiduciaria": {
+"sub": "macroeconomia",
+"liga": [
+"inflacao-mecanismos",
+"bretton-woods",
+"efeito-cantillon"
+]
+},
+"paradoxo-produtividade": {
+"sub": "crescimento",
+"liga": [
+"teoria-firma"
+]
+},
+"economia-comportamental": {
+"sub": "microeconomia",
+"liga": [
+"heuristicas-kahneman",
+"assimetria-informacao",
+"dissonancia-cognitiva",
+"custo-afundado"
+]
+},
+"salario-minimo-debate": {
+"sub": "política econômica",
+"liga": [
+"gini-desigualdade",
+"renda-basica",
+"curva-laffer",
+"inflacao-mecanismos"
+]
+},
+"renda-basica": {
+"sub": "política social",
+"liga": [
+"gini-desigualdade",
+"salario-minimo-debate",
+"economia-comportamental",
+"curva-laffer"
+]
+},
+"teoria-firma": {
+"sub": "organização industrial",
+"liga": [
+"agente-principal",
+"paradoxo-produtividade",
+"assimetria-informacao"
+]
+},
+"selecao-adversa": {
+"sub": "falhas de mercado",
+"liga": [
+"assimetria-informacao",
+"agente-principal",
+"teoria-firma",
+"economia-comportamental"
+]
+},
+"agente-principal": {
+"sub": "organização industrial",
+"liga": [
+"selecao-adversa",
+"assimetria-informacao",
+"teoria-firma",
+"acao-coletiva"
+]
+},
+"doenca-holandesa": {
+"sub": "macroeconomia",
+"liga": [
+"geografia-recursos-minerais",
+"inflacao-mecanismos",
+"efeito-cantillon",
+"moeda-fiduciaria"
+]
+},
+"armadilha-liquidez": {
+"sub": "macroeconomia",
+"liga": [
+"inflacao-mecanismos",
+"moeda-fiduciaria",
+"bolhas-financeiras",
+"efeito-cantillon"
+]
+},
+"efeito-cantillon": {
+"sub": "macroeconomia",
+"liga": [
+"inflacao-mecanismos",
+"moeda-fiduciaria",
+"doenca-holandesa",
+"gini-desigualdade"
+]
+},
+"teorema-arrow": {
+"sub": "teoria política",
+"liga": [
+"sistemas-eleitorais",
+"eleitor-mediano",
+"tirania-maioria"
+]
+},
+"sistemas-eleitorais": {
+"sub": "instituições",
+"liga": [
+"teorema-arrow",
+"eleitor-mediano",
+"gerrymandering",
+"federalismo"
+]
+},
+"separacao-poderes": {
+"sub": "instituições",
+"liga": [
+"contrato-social",
+"estado-de-direito",
+"federalismo",
+"tirania-maioria"
+]
+},
+"contrato-social": {
+"sub": "teoria política",
+"liga": [
+"separacao-poderes",
+"veu-ignorancia",
+"estado-de-direito",
+"imperativo-categorico"
+]
+},
+"gerrymandering": {
+"sub": "instituições",
+"liga": [
+"sistemas-eleitorais",
+"teorema-arrow",
+"eleitor-mediano",
+"federalismo"
+]
+},
+"acao-coletiva": {
+"sub": "teoria política",
+"liga": [
+"tragedia-comuns",
+"teoria-jogos",
+"agente-principal",
+"tirania-maioria"
+]
+},
+"federalismo": {
+"sub": "instituições",
+"liga": [
+"separacao-poderes",
+"sistemas-eleitorais",
+"gerrymandering",
+"contrato-social"
+]
+},
+"populismo": {
+"sub": "teoria política",
+"liga": [
+"tirania-maioria",
+"eleitor-mediano"
+]
+},
+"eleitor-mediano": {
+"sub": "teoria política",
+"liga": [
+"teorema-arrow",
+"sistemas-eleitorais",
+"populismo",
+"gerrymandering"
+]
+},
+"soft-power": {
+"sub": "relações internacionais",
+"liga": []
+},
+"tirania-maioria": {
+"sub": "teoria política",
+"liga": [
+"separacao-poderes",
+"acao-coletiva",
+"populismo",
+"teorema-arrow"
+]
+},
+"estado-de-direito": {
+"sub": "teoria do direito",
+"liga": [
+"separacao-poderes",
+"presuncao-inocencia",
+"principio-legalidade-penal",
+"soft-law"
+]
+},
+"presuncao-inocencia": {
+"sub": "processo penal",
+"liga": [
+"estado-de-direito",
+"in-dubio-pro-reo",
+"onus-prova-civil",
+"devido-processo-legal"
+]
+},
+"common-law-civil": {
+"sub": "sistemas jurídicos",
+"liga": [
+"precedente-stare-decisis",
+"estado-de-direito"
+]
+},
+"propriedade-intelectual": {
+"sub": "direito civil",
+"liga": [
+"soft-law",
+"inovacao-disruptiva",
+"posicionamento"
+]
+},
+"habeas-corpus": {
+"sub": "processo penal",
+"liga": [
+"presuncao-inocencia",
+"devido-processo-legal",
+"principio-legalidade-penal",
+"coisa-julgada"
+]
+},
+"principio-legalidade-penal": {
+"sub": "direito penal",
+"liga": [
+"habeas-corpus",
+"presuncao-inocencia",
+"dolo-culpa",
+"principio-insignificancia"
+]
+},
+"in-dubio-pro-reo": {
+"sub": "processo penal",
+"liga": [
+"presuncao-inocencia",
+"onus-prova-civil",
+"principio-legalidade-penal",
+"devido-processo-legal"
+]
+},
+"coisa-julgada": {
+"sub": "processo civil",
+"liga": [
+"precedente-stare-decisis",
+"devido-processo-legal",
+"prescricao-decadencia",
+"habeas-corpus"
+]
+},
+"devido-processo-legal": {
+"sub": "processo constitucional",
+"liga": [
+"contraditorio-ampla-defesa",
+"presuncao-inocencia",
+"coisa-julgada",
+"estado-de-direito"
+]
+},
+"contraditorio-ampla-defesa": {
+"sub": "processo constitucional",
+"liga": [
+"devido-processo-legal",
+"onus-prova-civil",
+"presuncao-inocencia",
+"habeas-corpus"
+]
+},
+"dolo-culpa": {
+"sub": "direito penal",
+"liga": [
+"principio-legalidade-penal",
+"responsabilidade-civil-objetiva",
+"principio-insignificancia",
+"presuncao-inocencia"
+]
+},
+"boa-fe-objetiva": {
+"sub": "direito civil",
+"liga": [
+"responsabilidade-civil-objetiva",
+"onus-prova-civil",
+"prescricao-decadencia"
+]
+},
+"prescricao-decadencia": {
+"sub": "direito civil",
+"liga": [
+"coisa-julgada",
+"boa-fe-objetiva",
+"responsabilidade-civil-objetiva",
+"onus-prova-civil"
+]
+},
+"precedente-stare-decisis": {
+"sub": "teoria do direito",
+"liga": [
+"common-law-civil",
+"coisa-julgada",
+"estado-de-direito",
+"soft-law"
+]
+},
+"responsabilidade-civil-objetiva": {
+"sub": "direito civil",
+"liga": [
+"dolo-culpa",
+"boa-fe-objetiva",
+"onus-prova-civil",
+"personalidade-juridica"
+]
+},
+"personalidade-juridica": {
+"sub": "direito civil",
+"liga": [
+"responsabilidade-civil-objetiva",
+"teoria-firma",
+"propriedade-intelectual"
+]
+},
+"principio-insignificancia": {
+"sub": "direito penal",
+"liga": [
+"dolo-culpa",
+"principio-legalidade-penal",
+"presuncao-inocencia",
+"in-dubio-pro-reo"
+]
+},
+"soft-law": {
+"sub": "direito internacional",
+"liga": [
+"propriedade-intelectual",
+"estado-de-direito",
+"precedente-stare-decisis"
+]
+},
+"onus-prova-civil": {
+"sub": "processo civil",
+"liga": [
+"presuncao-inocencia",
+"contraditorio-ampla-defesa",
+"in-dubio-pro-reo",
+"responsabilidade-civil-objetiva"
+]
+},
+"capital-cultural": {
+"sub": "sociologia da cultura",
+"liga": [
+"anomia",
+"panoptico",
+"escola-frankfurt"
+]
+},
+"anomia": {
+"sub": "sociologia",
+"liga": [
+"capital-cultural",
+"profecia-autorrealizavel",
+"modernidade-liquida",
+"panoptico"
+]
+},
+"lacos-fracos": {
+"sub": "sociologia",
+"liga": [
+"capital-cultural",
+"efeito-rede",
+"difusao-inovacao",
+"profecia-autorrealizavel"
+]
+},
+"profecia-autorrealizavel": {
+"sub": "sociologia",
+"liga": [
+"anomia",
+"dissonancia-cognitiva",
+"lacos-fracos"
+]
+},
+"panoptico": {
+"sub": "sociologia",
+"liga": [
+"anomia",
+"capital-cultural",
+"modernidade-liquida",
+"escola-frankfurt"
+]
+},
+"etnografia": {
+"sub": "antropologia",
+"liga": [
+"tabu-pureza"
+]
+},
+"tabu-pureza": {
+"sub": "antropologia",
+"liga": [
+"etnografia",
+"wabi-sabi",
+"ubuntu"
+]
+},
+"individualismo-metodologico": {
+"sub": "sociologia",
+"liga": [
+"anomia",
+"capital-cultural",
+"teoria-firma",
+"agente-principal"
+]
+},
+"modernidade-liquida": {
+"sub": "sociologia",
+"liga": [
+"anomia",
+"panoptico",
+"escola-frankfurt"
+]
+},
+"ikigai": {
+"sub": "antropologia",
+"liga": [
+"wabi-sabi",
+"ubuntu",
+"wu-wei"
+]
+},
+"wabi-sabi": {
+"sub": "antropologia",
+"liga": [
+"ikigai",
+"wu-wei",
+"tabu-pureza"
+]
+},
+"ubuntu": {
+"sub": "antropologia",
+"liga": [
+"ikigai",
+"wu-wei",
+"etica-virtude"
+]
+},
+"wu-wei": {
+"sub": "antropologia",
+"liga": [
+"ikigai",
+"wabi-sabi",
+"ubuntu"
+]
+},
+"peste-negra": {
+"sub": "história medieval",
+"liga": [
+"pequena-era-gelo",
+"crise-seculo-iii",
+"trocas-colombianas"
+]
+},
+"revolucao-neolitica": {
+"sub": "pré-história",
+"liga": [
+"imperios-pre-colombianos",
+"seda-rotas"
+]
+},
+"imprensa-gutenberg": {
+"sub": "história moderna",
+"liga": [
+"iluminismo",
+"revolucao-cientifica",
+"renascimento-italiano",
+"revolucao-industrial-porque"
+]
+},
+"revolucao-industrial-porque": {
+"sub": "história econômica",
+"liga": [
+"imprensa-gutenberg",
+"iluminismo",
+"revolucao-cientifica"
+]
+},
+"trocas-colombianas": {
+"sub": "história moderna",
+"liga": [
+"era-exploracoes-maritimas",
+"imperios-pre-colombianos",
+"seda-rotas",
+"peste-negra"
+]
+},
+"iluminismo": {
+"sub": "história moderna",
+"liga": [
+"revolucao-cientifica",
+"revolucao-francesa",
+"imprensa-gutenberg",
+"contrato-social"
+]
+},
+"guerra-fria-dissuasao": {
+"sub": "história contemporânea",
+"liga": [
+"queda-muro-berlim",
+"soft-power"
+]
+},
+"bretton-woods": {
+"sub": "história econômica",
+"liga": [
+"moeda-fiduciaria",
+"inflacao-mecanismos"
+]
+},
+"descolonizacao": {
+"sub": "história contemporânea",
+"liga": [
+"revolucao-haitiana",
+"independencias-america-latina"
+]
+},
+"historiografia-annales": {
+"sub": "teoria da história",
+"liga": [
+"memoria-historica",
+"pequena-era-gelo"
+]
+},
+"revolucao-cientifica": {
+"sub": "história moderna",
+"liga": [
+"iluminismo",
+"imprensa-gutenberg",
+"revolucao-industrial-porque"
+]
+},
+"seda-rotas": {
+"sub": "história antiga",
+"liga": [
+"imperio-mongol",
+"trocas-colombianas",
+"revolucao-neolitica",
+"liga-hanseatica"
+]
+},
+"memoria-historica": {
+"sub": "teoria da história",
+"liga": [
+"historiografia-annales",
+"revolucao-francesa",
+"holocausto-historiografia",
+"patrimonio-restauro"
+]
+},
+"pequena-era-gelo": {
+"sub": "história ambiental",
+"liga": [
+"peste-negra",
+"historiografia-annales",
+"trocas-colombianas",
+"crise-seculo-iii"
+]
+},
+"queda-imperio-romano": {
+"sub": "história antiga",
+"liga": [
+"crise-seculo-iii",
+"idade-media-feudalismo",
+"imperio-mongol"
+]
+},
+"idade-media-feudalismo": {
+"sub": "história medieval",
+"liga": [
+"cruzadas",
+"peste-negra",
+"liga-hanseatica",
+"renascimento-italiano"
+]
+},
+"cruzadas": {
+"sub": "história medieval",
+"liga": [
+"idade-media-feudalismo",
+"seda-rotas",
+"imperio-mongol",
+"liga-hanseatica"
+]
+},
+"renascimento-italiano": {
+"sub": "história moderna",
+"liga": [
+"iluminismo",
+"imprensa-gutenberg",
+"idade-media-feudalismo",
+"perspectiva-renascimento"
+]
+},
+"era-exploracoes-maritimas": {
+"sub": "história moderna",
+"liga": [
+"trocas-colombianas",
+"imperios-pre-colombianos",
+"seda-rotas",
+"cartografia-projecoes"
+]
+},
+"revolucao-francesa": {
+"sub": "história moderna",
+"liga": [
+"iluminismo",
+"contrato-social",
+"independencias-america-latina",
+"revolucao-russa"
+]
+},
+"independencias-america-latina": {
+"sub": "história moderna",
+"liga": [
+"revolucao-francesa",
+"revolucao-haitiana",
+"descolonizacao",
+"contrato-social"
+]
+},
+"imperios-pre-colombianos": {
+"sub": "história antiga",
+"liga": [
+"trocas-colombianas",
+"era-exploracoes-maritimas",
+"revolucao-neolitica",
+"imperio-mali"
+]
+},
+"revolucao-russa": {
+"sub": "história contemporânea",
+"liga": [
+"revolucao-francesa",
+"primeira-guerra-causas",
+"queda-muro-berlim"
+]
+},
+"primeira-guerra-causas": {
+"sub": "história contemporânea",
+"liga": [
+"revolucao-russa"
+]
+},
+"holocausto-historiografia": {
+"sub": "história contemporânea",
+"liga": [
+"memoria-historica",
+"historiografia-annales"
+]
+},
+"movimento-direitos-civis-eua": {
+"sub": "história contemporânea",
+"liga": [
+"tirania-maioria",
+"soft-power"
+]
+},
+"queda-muro-berlim": {
+"sub": "história contemporânea",
+"liga": [
+"guerra-fria-dissuasao",
+"revolucao-russa"
+]
+},
+"imperio-mongol": {
+"sub": "história medieval",
+"liga": [
+"seda-rotas",
+"cruzadas",
+"idade-media-feudalismo",
+"liga-hanseatica"
+]
+},
+"escravidao-atlantica": {
+"sub": "história moderna",
+"liga": [
+"trocas-colombianas",
+"revolucao-haitiana",
+"era-exploracoes-maritimas",
+"imperio-mali"
+]
+},
+"revolucao-haitiana": {
+"sub": "história moderna",
+"liga": [
+"escravidao-atlantica",
+"independencias-america-latina",
+"revolucao-francesa",
+"descolonizacao"
+]
+},
+"liga-hanseatica": {
+"sub": "história medieval",
+"liga": [
+"seda-rotas",
+"idade-media-feudalismo",
+"imperio-mongol",
+"cruzadas"
+]
+},
+"crise-seculo-iii": {
+"sub": "história antiga",
+"liga": [
+"queda-imperio-romano",
+"peste-negra",
+"pequena-era-gelo"
+]
+},
+"imperio-mali": {
+"sub": "história medieval",
+"liga": [
+"seda-rotas",
+"imperios-pre-colombianos",
+"escravidao-atlantica",
+"trocas-colombianas"
+]
+},
+"sapir-whorf": {
+"sub": "linguística",
+"liga": [
+"gramatica-universal",
+"signo-saussure",
+"linguagem-wittgenstein",
+"linguas-de-sinais"
+]
+},
+"gramatica-universal": {
+"sub": "linguística",
+"liga": [
+"sapir-whorf",
+"mudanca-fonetica",
+"pidgin-crioulo",
+"linguas-de-sinais"
+]
+},
+"mudanca-fonetica": {
+"sub": "linguística histórica",
+"liga": [
+"gramatica-universal",
+"gramaticalizacao",
+"escrita-sistemas"
+]
+},
+"pidgin-crioulo": {
+"sub": "sociolinguística",
+"liga": [
+"gramatica-universal",
+"diglossia",
+"linguas-de-sinais"
+]
+},
+"signo-saussure": {
+"sub": "semiótica",
+"liga": [
+"sapir-whorf",
+"atos-de-fala",
+"linguagem-wittgenstein"
+]
+},
+"atos-de-fala": {
+"sub": "pragmática",
+"liga": [
+"signo-saussure",
+"linguagem-wittgenstein",
+"diglossia",
+"gramaticalizacao"
+]
+},
+"lei-zipf": {
+"sub": "linguística quantitativa",
+"liga": [
+"compressao-informacao",
+"escrita-sistemas",
+"cauda-longa"
+]
+},
+"escrita-sistemas": {
+"sub": "linguística",
+"liga": [
+"mudanca-fonetica",
+"lei-zipf",
+"gramaticalizacao",
+"imprensa-gutenberg"
+]
+},
+"gramaticalizacao": {
+"sub": "linguística histórica",
+"liga": [
+"mudanca-fonetica",
+"gramatica-universal",
+"diglossia",
+"atos-de-fala"
+]
+},
+"linguas-de-sinais": {
+"sub": "linguística",
+"liga": [
+"gramatica-universal",
+"sapir-whorf",
+"pidgin-crioulo",
+"escrita-sistemas"
+]
+},
+"diglossia": {
+"sub": "sociolinguística",
+"liga": [
+"pidgin-crioulo",
+"gramaticalizacao",
+"atos-de-fala",
+"escrita-sistemas"
+]
+},
+"gestalt-design": {
+"sub": "design visual",
+"liga": [
+"teoria-cor",
+"tipografia-legibilidade",
+"affordances",
+"perspectiva-renascimento"
+]
+},
+"affordances": {
+"sub": "design de interação",
+"liga": [
+"gestalt-design",
+"design-sistemas",
+"acessibilidade"
+]
+},
+"teoria-cor": {
+"sub": "design visual",
+"liga": [
+"gestalt-design",
+"tipografia-legibilidade",
+"chiaroscuro",
+"perspectiva-renascimento"
+]
+},
+"tipografia-legibilidade": {
+"sub": "design gráfico",
+"liga": [
+"gestalt-design",
+"teoria-cor",
+"grid-editorial",
+"acessibilidade"
+]
+},
+"grid-editorial": {
+"sub": "design gráfico",
+"liga": [
+"tipografia-legibilidade",
+"design-sistemas",
+"gestalt-design",
+"forma-funcao"
+]
+},
+"design-sistemas": {
+"sub": "design de produto",
+"liga": [
+"grid-editorial",
+"affordances",
+"acessibilidade"
+]
+},
+"acessibilidade": {
+"sub": "design universal",
+"liga": [
+"affordances",
+"design-sistemas",
+"tipografia-legibilidade",
+"grid-editorial"
+]
+},
+"forma-funcao": {
+"sub": "teoria da arquitetura",
+"liga": [
+"bauhaus",
+"brutalismo",
+"design-sistemas"
+]
+},
+"bauhaus": {
+"sub": "história da arquitetura",
+"liga": [
+"forma-funcao",
+"grid-editorial",
+"brutalismo",
+"metabolismo-japones"
+]
+},
+"cidade-jacobs": {
+"sub": "urbanismo",
+"liga": [
+"espaco-publico",
+"cidade-jardim"
+]
+},
+"conforto-termico": {
+"sub": "arquitetura bioclimática",
+"liga": [
+"arquitetura-vernacular",
+"ilhas-calor-urbanas",
+"efeito-estufa-mecanismo"
+]
+},
+"espaco-publico": {
+"sub": "urbanismo",
+"liga": [
+"cidade-jacobs",
+"cidade-jardim",
+"cidade-jacobs"
+]
+},
+"patrimonio-restauro": {
+"sub": "conservação",
+"liga": [
+"memoria-historica",
+"arquitetura-vernacular",
+"brutalismo",
+"forma-funcao"
+]
+},
+"brutalismo": {
+"sub": "história da arquitetura",
+"liga": [
+"bauhaus",
+"metabolismo-japones",
+"forma-funcao",
+"patrimonio-restauro"
+]
+},
+"cidade-jardim": {
+"sub": "urbanismo",
+"liga": [
+"cidade-jacobs",
+"espaco-publico"
+]
+},
+"arquitetura-vernacular": {
+"sub": "arquitetura",
+"liga": [
+"conforto-termico",
+"patrimonio-restauro"
+]
+},
+"metabolismo-japones": {
+"sub": "história da arquitetura",
+"liga": [
+"brutalismo",
+"bauhaus",
+"forma-funcao"
+]
+},
+"temperamento-igual": {
+"sub": "teoria musical",
+"liga": [
+"timbre",
+"harmonia-funcional",
+"batimentos-acusticos",
+"consonancia-dissonancia-fisica"
+]
+},
+"harmonia-funcional": {
+"sub": "teoria musical",
+"liga": [
+"cadencias-harmonicas",
+"circulo-quintas",
+"tonalidade-modulacao",
+"forma-sonata"
+]
+},
+"timbre": {
+"sub": "acústica",
+"liga": [
+"temperamento-igual",
+"consonancia-dissonancia-fisica",
+"batimentos-acusticos",
+"escalas-pentatonicas"
+]
+},
+"ritmo-metrica": {
+"sub": "teoria musical",
+"liga": [
+"polirritmia",
+"jazz-harmonia-estendida"
+]
+},
+"serialismo": {
+"sub": "música do século xx",
+"liga": [
+"musica-microtonal",
+"jazz-harmonia-estendida",
+"forma-sonata"
+]
+},
+"musica-emocao": {
+"sub": "psicologia da música",
+"liga": [
+"harmonia-funcional",
+"timbre",
+"ritmo-metrica"
+]
+},
+"modos-gregos": {
+"sub": "teoria musical",
+"liga": [
+"escalas-pentatonicas",
+"harmonia-funcional",
+"tonalidade-modulacao",
+"musica-microtonal"
+]
+},
+"contraponto": {
+"sub": "composição",
+"liga": [
+"canone-fuga",
+"harmonia-funcional",
+"forma-sonata",
+"cadencias-harmonicas"
+]
+},
+"cadencias-harmonicas": {
+"sub": "teoria musical",
+"liga": [
+"harmonia-funcional",
+"circulo-quintas",
+"tonalidade-modulacao",
+"forma-sonata"
+]
+},
+"circulo-quintas": {
+"sub": "teoria musical",
+"liga": [
+"cadencias-harmonicas",
+"tonalidade-modulacao",
+"modos-gregos",
+"harmonia-funcional"
+]
+},
+"forma-sonata": {
+"sub": "teoria musical",
+"liga": [
+"cadencias-harmonicas",
+"contraponto",
+"tonalidade-modulacao"
+]
+},
+"musica-microtonal": {
+"sub": "teoria musical",
+"liga": [
+"escalas-pentatonicas",
+"modos-gregos",
+"serialismo",
+"consonancia-dissonancia-fisica"
+]
+},
+"polirritmia": {
+"sub": "ritmo",
+"liga": [
+"ritmo-metrica",
+"jazz-harmonia-estendida",
+"batimentos-acusticos"
+]
+},
+"canone-fuga": {
+"sub": "composição",
+"liga": [
+"contraponto",
+"forma-sonata",
+"leitmotiv-musica-programa"
+]
+},
+"notacao-musical-historia": {
+"sub": "teoria musical",
+"liga": [
+"modos-gregos",
+"contraponto",
+"temperamento-igual"
+]
+},
+"consonancia-dissonancia-fisica": {
+"sub": "acústica",
+"liga": [
+"batimentos-acusticos",
+"temperamento-igual",
+"timbre",
+"musica-microtonal"
+]
+},
+"jazz-harmonia-estendida": {
+"sub": "improvisação",
+"liga": [
+"harmonia-funcional",
+"tonalidade-modulacao",
+"polirritmia",
+"serialismo"
+]
+},
+"tonalidade-modulacao": {
+"sub": "harmonia",
+"liga": [
+"harmonia-funcional",
+"circulo-quintas",
+"cadencias-harmonicas",
+"jazz-harmonia-estendida"
+]
+},
+"batimentos-acusticos": {
+"sub": "acústica",
+"liga": [
+"consonancia-dissonancia-fisica",
+"temperamento-igual",
+"ressonancia",
+"timbre"
+]
+},
+"escalas-pentatonicas": {
+"sub": "teoria musical",
+"liga": [
+"modos-gregos",
+"musica-microtonal"
+]
+},
+"leitmotiv-musica-programa": {
+"sub": "música e narrativa",
+"liga": [
+"canone-fuga",
+"serialismo",
+"musica-emocao"
+]
+},
+"perspectiva-renascimento": {
+"sub": "história da arte",
+"liga": [
+"trompe-loeil",
+"secao-aurea",
+"renascimento-italiano"
+]
+},
+"ready-made": {
+"sub": "arte moderna",
+"liga": [
+"dada-surrealismo",
+"trompe-loeil"
+]
+},
+"chiaroscuro": {
+"sub": "técnica artística",
+"liga": [
+"trompe-loeil",
+"teoria-cor"
+]
+},
+"dada-surrealismo": {
+"sub": "arte moderna",
+"liga": [
+"ready-made",
+"trompe-loeil"
+]
+},
+"trompe-loeil": {
+"sub": "técnica artística",
+"liga": [
+"chiaroscuro",
+"perspectiva-renascimento",
+"ready-made",
+"gestalt-design"
+]
+},
+"narrativa-nao-linear": {
+"sub": "teoria literária",
+"liga": [
+"realismo-magico",
+"memoria-historica"
+]
+},
+"realismo-magico": {
+"sub": "literatura latino-americana",
+"liga": [
+"narrativa-nao-linear",
+"memoria-historica",
+"trocas-colombianas"
+]
+},
+"posicionamento": {
+"sub": "estratégia de marca",
+"liga": [
+"branding-memoria",
+"mera-exposicao",
+"prova-social",
+"precificacao-psicologica"
+]
+},
+"mera-exposicao": {
+"sub": "psicologia do consumidor",
+"liga": [
+"posicionamento",
+"prova-social",
+"precificacao-psicologica",
+"heuristicas-kahneman"
+]
+},
+"prova-social": {
+"sub": "psicologia do consumidor",
+"liga": [
+"mera-exposicao",
+"posicionamento",
+"difusao-inovacao",
+"efeito-rede"
+]
+},
+"precificacao-psicologica": {
+"sub": "psicologia do consumidor",
+"liga": [
+"mera-exposicao",
+"prova-social",
+"economia-comportamental"
+]
+},
+"difusao-inovacao": {
+"sub": "marketing",
+"liga": [
+"efeito-rede",
+"prova-social",
+"inovacao-disruptiva",
+"lacos-fracos"
+]
+},
+"branding-memoria": {
+"sub": "marketing",
+"liga": [
+"posicionamento",
+"mera-exposicao"
+]
+},
+"efeito-rede": {
+"sub": "negócios",
+"liga": [
+"difusao-inovacao",
+"cauda-longa",
+"inovacao-disruptiva",
+"metricas-vaidade"
+]
+},
+"inovacao-disruptiva": {
+"sub": "negócios",
+"liga": [
+"efeito-rede",
+"difusao-inovacao",
+"metricas-vaidade"
+]
+},
+"cauda-longa": {
+"sub": "negócios",
+"liga": [
+"efeito-rede",
+"lei-zipf",
+"inovacao-disruptiva",
+"metricas-vaidade"
+]
+},
+"metricas-vaidade": {
+"sub": "negócios",
+"liga": [
+"efeito-rede",
+"inovacao-disruptiva",
+"cauda-longa"
+]
+},
+"indice-glicemico": {
+"sub": "nutrição",
+"liga": [
+"balanco-energetico",
+"ultraprocessados",
+"epidemiologia-nutricional",
+"microbiota-dieta"
+]
+},
+"epidemiologia-nutricional": {
+"sub": "nutrição",
+"liga": [
+"indice-glicemico",
+"ultraprocessados",
+"vitamina-suplemento",
+"nnt-risco"
+]
+},
+"proteina-necessidade": {
+"sub": "nutrição",
+"liga": [
+"balanco-energetico",
+"vitamina-suplemento",
+"microbiota-dieta"
+]
+},
+"ultraprocessados": {
+"sub": "nutrição",
+"liga": [
+"indice-glicemico",
+"epidemiologia-nutricional",
+"microbiota-dieta",
+"balanco-energetico"
+]
+},
+"jejum-intermitente": {
+"sub": "nutrição",
+"liga": [
+"balanco-energetico",
+"indice-glicemico",
+"microbiota-dieta"
+]
+},
+"vitamina-suplemento": {
+"sub": "nutrição",
+"liga": [
+"epidemiologia-nutricional",
+"proteina-necessidade",
+"ultraprocessados"
+]
+},
+"balanco-energetico": {
+"sub": "nutrição",
+"liga": [
+"indice-glicemico",
+"jejum-intermitente",
+"proteina-necessidade",
+"microbiota-dieta"
+]
+},
+"microbiota-dieta": {
+"sub": "nutrição",
+"liga": [
+"microbioma",
+"ultraprocessados",
+"indice-glicemico",
+"epidemiologia-nutricional"
+]
+},
+"nnt-risco": {
+"sub": "medicina baseada em evidências",
+"liga": [
+"valor-p",
+"poder-estatistico",
+"triagem-sobrediagnostico",
+"pre-registro"
+]
+},
+"triagem-sobrediagnostico": {
+"sub": "medicina baseada em evidências",
+"liga": [
+"nnt-risco",
+"valor-p",
+"amostragem-vies"
+]
+},
+"p-np": {
+"sub": "teoria da computação",
+"liga": [
+"halting",
+"maquina-turing",
+"godel",
+"criptografia-assimetrica"
+]
+},
+"criptografia-assimetrica": {
+"sub": "segurança",
+"liga": [
+"p-np",
+"zero-knowledge",
+"blockchain"
+]
+},
+"compressao-informacao": {
+"sub": "teoria da informação",
+"liga": [
+"entropia",
+"fourier",
+"lei-zipf",
+"criptografia-assimetrica"
+]
+},
+"halting": {
+"sub": "teoria da computação",
+"liga": [
+"p-np",
+"maquina-turing",
+"godel",
+"cantor-infinitos"
+]
+},
+"transformers": {
+"sub": "aprendizado de máquina",
+"liga": [
+"overfitting",
+"vies-algoritmico",
+"algebra-linear-svd"
+]
+},
+"overfitting": {
+"sub": "aprendizado de máquina",
+"liga": [
+"transformers",
+"vies-algoritmico",
+"valor-p"
+]
+},
+"vies-algoritmico": {
+"sub": "aprendizado de máquina",
+"liga": [
+"overfitting",
+"transformers",
+"amostragem-vies"
+]
+},
+"blockchain": {
+"sub": "sistemas distribuídos",
+"liga": [
+"criptografia-assimetrica",
+"zero-knowledge",
+"teorema-cap",
+"maquina-turing"
+]
+},
+"quantum-computing": {
+"sub": "computação",
+"liga": [
+"emaranhamento",
+"tunelamento-quantico",
+"p-np",
+"maquina-turing"
+]
+},
+"reprodutibilidade-computacional": {
+"sub": "metodologia",
+"liga": [
+"pre-registro"
+]
+},
+"maquina-turing": {
+"sub": "teoria da computação",
+"liga": [
+"halting",
+"p-np",
+"godel",
+"quantum-computing"
+]
+},
+"zero-knowledge": {
+"sub": "criptografia",
+"liga": [
+"criptografia-assimetrica",
+"blockchain",
+"p-np"
+]
+},
+"teorema-cap": {
+"sub": "sistemas distribuídos",
+"liga": [
+"blockchain"
+]
+},
+"valor-p": {
+"sub": "inferência",
+"liga": [
+"poder-estatistico",
+"pre-registro",
+"nnt-risco",
+"bayes"
+]
+},
+"regressao-media": {
+"sub": "inferência",
+"liga": [
+"valor-p",
+"amostragem-vies",
+"simpson-paradoxo",
+"causalidade-pearl"
+]
+},
+"simpson-paradoxo": {
+"sub": "paradoxos",
+"liga": [
+"regressao-media",
+"causalidade-pearl",
+"valor-p",
+"prob-condicional"
+]
+},
+"causalidade-pearl": {
+"sub": "causalidade",
+"liga": [
+"simpson-paradoxo",
+"regressao-media",
+"valor-p",
+"pre-registro"
+]
+},
+"amostragem-vies": {
+"sub": "metodologia",
+"liga": [
+"valor-p",
+"regressao-media",
+"pre-registro",
+"triagem-sobrediagnostico"
+]
+},
+"poder-estatistico": {
+"sub": "metodologia",
+"liga": [
+"valor-p",
+"pre-registro",
+"nnt-risco",
+"amostragem-vies"
+]
+},
+"bootstrap": {
+"sub": "inferência",
+"liga": [
+"valor-p",
+"poder-estatistico",
+"amostragem-vies",
+"reprodutibilidade-computacional"
+]
+},
+"pre-registro": {
+"sub": "metodologia",
+"liga": [
+"valor-p",
+"poder-estatistico",
+"reprodutibilidade-computacional",
+"crise-replicacao"
+]
+},
+"pegada-carbono": {
+"sub": "métricas",
+"liga": [
+"economia-circular",
+"limites-planetarios",
+"pegada-hidrica",
+"greenwashing"
+]
+},
+"economia-circular": {
+"sub": "economia",
+"liga": [
+"pegada-carbono",
+"limites-planetarios",
+"economia-donut",
+"termodinamica-reciclagem"
+]
+},
+"limites-planetarios": {
+"sub": "ciência do sistema terra",
+"liga": [
+"economia-circular",
+"capacidade-suporte",
+"acidificacao-oceanos",
+"antropoceno"
+]
+},
+"sucessao-ecologica": {
+"sub": "ecologia",
+"liga": [
+"servicos-ecossistemicos",
+"especies-invasoras",
+"capacidade-suporte",
+"cascata-trofica"
+]
+},
+"servicos-ecossistemicos": {
+"sub": "ecologia",
+"liga": [
+"sucessao-ecologica",
+"micorrizas",
+"capacidade-suporte",
+"economia-donut"
+]
+},
+"especies-invasoras": {
+"sub": "ecologia",
+"liga": [
+"sucessao-ecologica",
+"biomas-terrestres",
+"cascata-trofica",
+"capacidade-suporte"
+]
+},
+"curva-kuznets-ambiental": {
+"sub": "economia ambiental",
+"liga": [
+"limites-planetarios",
+"economia-donut",
+"gini-desigualdade",
+"greenwashing"
+]
+},
+"pegada-hidrica": {
+"sub": "métricas",
+"liga": [
+"pegada-carbono",
+"economia-circular",
+"limites-planetarios",
+"rios-internacionais-hidropolitica"
+]
+},
+"economia-donut": {
+"sub": "economia",
+"liga": [
+"economia-circular",
+"limites-planetarios",
+"curva-kuznets-ambiental",
+"servicos-ecossistemicos"
+]
+},
+"acidificacao-oceanos": {
+"sub": "ciência do sistema terra",
+"liga": [
+"limites-planetarios",
+"efeito-estufa-mecanismo",
+"correntes-oceanicas",
+"antropoceno"
+]
+},
+"capacidade-suporte": {
+"sub": "ecologia",
+"liga": [
+"limites-planetarios",
+"sucessao-ecologica",
+"escalas-alometria",
+"tragedia-comuns"
+]
+},
+"efeito-estufa-mecanismo": {
+"sub": "clima",
+"liga": [
+"acidificacao-oceanos",
+"limites-planetarios",
+"antropoceno"
+]
+},
+"antropoceno": {
+"sub": "ciência do sistema terra",
+"liga": [
+"efeito-estufa-mecanismo",
+"limites-planetarios",
+"acidificacao-oceanos"
+]
+},
+"termodinamica-reciclagem": {
+"sub": "termodinâmica",
+"liga": [
+"economia-circular",
+"entropia",
+"limites-planetarios",
+"greenwashing"
+]
+},
+"greenwashing": {
+"sub": "métricas",
+"liga": [
+"pegada-carbono",
+"curva-kuznets-ambiental",
+"economia-circular",
+"termodinamica-reciclagem"
+]
+},
+"cascata-trofica": {
+"sub": "ecologia",
+"liga": [
+"sucessao-ecologica",
+"especies-invasoras",
+"biomagnificacao",
+"micorrizas"
+]
+},
+"micorrizas": {
+"sub": "ecologia",
+"liga": [
+"servicos-ecossistemicos",
+"cascata-trofica",
+"sucessao-ecologica"
+]
+},
+"biomagnificacao": {
+"sub": "ecologia",
+"liga": [
+"cascata-trofica",
+"especies-invasoras",
+"servicos-ecossistemicos"
+]
+},
+"tectonica-placas": {
+"sub": "geologia",
+"liga": [
+"biomas-terrestres"
+]
+},
+"climas-koppen": {
+"sub": "climatologia",
+"liga": [
+"biomas-terrestres",
+"monções",
+"desertificacao"
+]
+},
+"urbanizacao-primazia": {
+"sub": "geografia urbana",
+"liga": [
+"migracao-push-pull"
+]
+},
+"fronteiras-geopolitica": {
+"sub": "geopolítica",
+"liga": [
+"cartografia-projecoes",
+"rios-internacionais-hidropolitica",
+"geografia-recursos-minerais",
+"descolonizacao"
+]
+},
+"desertificacao": {
+"sub": "geografia física",
+"liga": [
+"climas-koppen",
+"biomas-terrestres",
+"capacidade-suporte"
+]
+},
+"correntes-oceanicas": {
+"sub": "oceanografia",
+"liga": [
+"climas-koppen",
+"el-nino",
+"acidificacao-oceanos",
+"monções"
+]
+},
+"biomas-terrestres": {
+"sub": "ecologia",
+"liga": [
+"climas-koppen",
+"desertificacao",
+"especies-invasoras"
+]
+},
+"demografia-transicao": {
+"sub": "demografia",
+"liga": [
+"migracao-push-pull",
+"urbanizacao-primazia",
+"capacidade-suporte"
+]
+},
+"escalas-mapa-modificavel": {
+"sub": "geografia quantitativa",
+"liga": [
+"gerrymandering"
+]
+},
+"rios-internacionais-hidropolitica": {
+"sub": "geopolítica",
+"liga": [
+"fronteiras-geopolitica",
+"pegada-hidrica",
+"desertificacao",
+"monções"
+]
+},
+"ilhas-calor-urbanas": {
+"sub": "climatologia urbana",
+"liga": [
+"conforto-termico",
+"climas-koppen"
+]
+},
+"monções": {
+"sub": "climatologia",
+"liga": [
+"climas-koppen",
+"correntes-oceanicas",
+"rios-internacionais-hidropolitica",
+"desertificacao"
+]
+},
+"cartografia-projecoes": {
+"sub": "cartografia",
+"liga": [
+"fronteiras-geopolitica",
+"era-exploracoes-maritimas"
+]
+},
+"migracao-push-pull": {
+"sub": "demografia",
+"liga": [
+"demografia-transicao",
+"urbanizacao-primazia",
+"fronteiras-geopolitica"
+]
+},
+"geografia-recursos-minerais": {
+"sub": "geografia econômica",
+"liga": [
+"doenca-holandesa",
+"fronteiras-geopolitica",
+"tragedia-comuns",
+"descolonizacao"
+]
+},
+"el-nino": {
+"sub": "climatologia",
+"liga": [
+"correntes-oceanicas",
+"monções",
+"climas-koppen",
+"desertificacao"
+]
+},
+"paradoxo-fermi": {
+"sub": "astrofísica",
+"liga": []
+},
+"lentes-gravitacionais": {
+"sub": "cosmologia",
+"liga": [
+"materia-escura",
+"energia-escura",
+"relatividade-restrita",
+"escada-distancias"
+]
+},
+"estrelas-neutrons": {
+"sub": "astrofísica",
+"liga": [
+"buracos-negros-termo"
+]
+},
+"radiacao-hawking": {
+"sub": "gravitação quântica",
+"liga": [
+"buracos-negros-termo",
+"entropia",
+"tunelamento-quantico"
+]
+},
+"energia-escura": {
+"sub": "cosmologia",
+"liga": [
+"materia-escura",
+"efeito-doppler",
+"escada-distancias"
+]
+},
+"escada-distancias": {
+"sub": "cosmologia",
+"liga": [
+"energia-escura",
+"lentes-gravitacionais",
+"efeito-doppler"
+]
+}
+}

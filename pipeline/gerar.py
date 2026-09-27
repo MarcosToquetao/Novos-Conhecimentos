@@ -53,13 +53,13 @@ def post(url, corpo, token, tentativas=3):
                 return json.loads(r.read())
         except urllib.error.HTTPError as e:
             msg = e.read().decode(errors="replace")[:400]
-            if e.code in (429, 500, 502, 503) and t < tentativas - 1:
+            if (e.code == 429 or e.code >= 500) and t < tentativas - 1:
                 time.sleep(5 * (t + 1)); continue
-            sys.exit(f"HTTP {e.code} em {url}: {msg}")
+            raise RuntimeError(f"HTTP {e.code} em {url}: {msg}")
         except urllib.error.URLError as e:
             if t < tentativas - 1:
                 time.sleep(5); continue
-            sys.exit(f"Sem conexão com {url}: {e}")
+            raise RuntimeError(f"Sem conexão com {url}: {e}")
 
 
 def pico():
@@ -164,7 +164,11 @@ def checar_texto(onde, s, erros):
         erros.append(f"{onde}: aspas curvas")
     if EMOJI.search(s):
         erros.append(f"{onde}: emoji")
+    if re.search(r"\[\d+\]", s):
+        erros.append(f"{onde}: citação [n] no texto (a fonte vai no campo fonte, que vira carimbo)")
     baixo = s.lower()
+    if re.search(r"\bnão (é|são|foi|era|está)\b[^.;:]{0,90}?,? mas\b", baixo):
+        erros.append(f"{onde}: estrutura «não é X, mas Y»")
     for e in expressoes_proibidas():
         if re.search(r"\b" + re.escape(e), baixo):  # sem \b no fim: pega plural e flexões
             erros.append(f"{onde}: expressão proibida «{e}»")
@@ -301,7 +305,8 @@ def vizinhos(id_, idx):
 def prompts_licao(id_, idx):
     doc = documento(id_)
     sistema = estilo() + "\n\n## Tarefa\n\nTransforme o documento de estudo aprovado que vem na mensagem do usuário numa lição curta no formato acima. " \
-        "Use só informação que está no documento. Cite fontes pelo número n da lista de fontes do documento. " \
+        "Use só informação que está no documento. No documento, [n] marca a fonte de uma afirmação: na lição, ponha esse número " \
+        "no campo fonte da tela e nunca escreva [n] dentro do texto. " \
         "Responda somente com um objeto json com as chaves gancho, telas e fecho, no mesmo formato do exemplo."
     ex = exemplos(id_)
     if ex:
@@ -335,6 +340,7 @@ def gerar_licao(id_, idx, seco=False, revisao_pro=True):
     if (erros or alertas) and revisao_pro:
         print(f"  {len(erros)} erro(s), {len(alertas)} alerta(s) do JEV: reescrevendo trechos com {PRO}")
         pedido = "Corrija só os problemas listados, mantendo o resto da lição igual. " \
+                 "Se o problema for número de telas, junte ou corte telas secundárias até o array telas ter no máximo 9 itens, perguntas incluídas. " \
                  "Responda com o objeto json completo da lição corrigida.\n\nProblemas:\n" + \
                  "\n".join(f"- {x}" for x in erros + alertas) + "\n\nLição:\n" + json.dumps(L, ensure_ascii=False)
         L2, c2 = deepseek(PRO, sistema, usuario + "\n\n" + pedido, "revisao", id_)
@@ -507,7 +513,10 @@ def main():
             feitos = {p.stem for p in RASC.glob("*.json")} if RASC.exists() else set()
             ids = [c["id"] for c in idx["conceitos"] if c["doc"] and not c["licao"] and c["id"] not in feitos]
         for i in ids:
-            gerar_licao(i, idx, seco="--seco" in flags, revisao_pro="--sem-revisao-pro" not in flags)
+            try:
+                gerar_licao(i, idx, seco="--seco" in flags, revisao_pro="--sem-revisao-pro" not in flags)
+            except RuntimeError as e:   # uma falha de rede não derruba o lote inteiro
+                print(f"  {i}: falhou ({e}); siga com os outros e rode de novo depois")
     elif cmd == "grafo":
         gerar_grafo(seco="--seco" in flags)
     elif cmd == "triagem":

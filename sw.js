@@ -1,16 +1,17 @@
-/* sw.js — cache offline do Novos Conhecimentos.
+/* sw.js: cache offline do Novos Conhecimentos.
    Estratégia: cache-first para os arquivos do app (são estáticos e versionados),
-   com atualização em segundo plano. Ao publicar conteúdo novo, suba VERSAO. */
-const VERSAO = "nc-e38df65b";
+   com atualização em segundo plano. VERSAO é atualizada sozinha pelo build.js. */
+const VERSAO = "nc-8f5824ca";
 const ARQUIVOS = [
   "./", "./index.html", "./manifest.json",
   "./css/estilo.css",
-  "./js/app.js", "./dados/indice.json",
+  "./js/app.js", "./js/licao.js", "./js/acervo.js", "./dados/indice.json",
   "./icons/icon-192.png", "./icons/icon-512.png",
-  "./fonts/noticiatext-400-latin.woff2", "./fonts/noticiatext-400-latin-ext.woff2",
-  "./fonts/noticiatext-700-latin.woff2", "./fonts/noticiatext-700-latin-ext.woff2",
-  "./fonts/noticiatext-400i-latin.woff2", "./fonts/noticiatext-400i-latin-ext.woff2",
-  "./fonts/inter-var-latin.woff2", "./fonts/inter-var-latin-ext.woff2"
+  "./fonts/fraunces-500_650-latin.woff2", "./fonts/fraunces-500_650-latin-ext.woff2",
+  "./fonts/literata-400_600-latin.woff2", "./fonts/literata-400_600-latin-ext.woff2",
+  "./fonts/literata-400i-latin.woff2", "./fonts/literata-400i-latin-ext.woff2",
+  "./fonts/ibmplexmono-400-latin.woff2", "./fonts/ibmplexmono-400-latin-ext.woff2",
+  "./fonts/ibmplexmono-500-latin.woff2", "./fonts/ibmplexmono-500-latin-ext.woff2"
 ];
 
 self.addEventListener("install", (e) => {
@@ -24,7 +25,7 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (e) => {
-  if (e.request.method !== "GET") return;
+  if (e.request.method !== "GET" || new URL(e.request.url).origin !== location.origin) return;  /* métricas e links externos passam direto */
   e.respondWith(
     caches.match(e.request).then(hit => {
       const rede = fetch(e.request).then(res => {

@@ -1,0 +1,3125 @@
+{
+ "fourier": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "bayes": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "cantor-infinitos": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "godel": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "topologia-basica": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "caos-deterministico": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "fractais": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "teoria-jogos": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "grafos": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "numeros-complexos": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "prob-condicional": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "otimizacao-convexa": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "algebra-linear-svd": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "secao-aurea": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.69,
+   "especulativo": 0.19,
+   "emergente": 0,
+   "controverso": 0.12
+  }
+ },
+ "problema-monty-hall": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "quatro-forcas": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "entropia": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "relatividade-restrita": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "emaranhamento": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "efeito-casimir": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.98,
+   "especulativo": 0,
+   "emergente": 0.02,
+   "controverso": 0
+  }
+ },
+ "supercondutividade": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "buracos-negros-termo": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.09,
+   "emergente": 0.01,
+   "estabelecido": 0.88,
+   "controverso": 0.02
+  }
+ },
+ "escalas-alometria": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "ressonancia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "materia-escura": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0.01,
+   "estabelecido": 0.25,
+   "controverso": 0.73
+  }
+ },
+ "laser": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "efeito-doppler": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "principio-minima-acao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.99,
+   "controverso": 0.01
+  }
+ },
+ "tempo-seta": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.04,
+   "emergente": 0,
+   "estabelecido": 0.71,
+   "controverso": 0.25
+  }
+ },
+ "plasma": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "catalise": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "quiralidade": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "ligacao-hidrogenio": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "haber-bosch": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "tabela-periodica": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "polimeros": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "eletroquimica-baterias": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "maillard": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "ph-tampao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "quimica-verde": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.98,
+   "emergente": 0.02,
+   "especulativo": 0,
+   "controverso": 0
+  }
+ },
+ "endossimbiose": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "deriva-genetica": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "especulativo": 0
+  }
+ },
+ "altruismo-hamilton": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "relogio-circadiano": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "microbioma": {
+  "status": "emergente",
+  "p": {
+   "controverso": 0.03,
+   "estabelecido": 0.45,
+   "emergente": 0.51,
+   "especulativo": 0.01
+  }
+ },
+ "apoptose": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "crispr": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.94,
+   "emergente": 0.06,
+   "controverso": 0
+  }
+ },
+ "convergencia-evolutiva": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "especulativo": 0
+  }
+ },
+ "neuroplasticidade": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "fotossintese-c4": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "especulativo": 0
+  }
+ },
+ "virus-definicao": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.01,
+   "emergente": 0,
+   "controverso": 0.99
+  }
+ },
+ "telomeros": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "efeito-teste": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0.01,
+   "controverso": 0
+  }
+ },
+ "memoria-trabalho": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.97,
+   "emergente": 0,
+   "controverso": 0.03
+  }
+ },
+ "dissonancia-cognitiva": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.04,
+   "estabelecido": 0.96,
+   "emergente": 0,
+   "especulativo": 0
+  }
+ },
+ "vies-confirmacao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "crise-replicacao": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.05,
+   "estabelecido": 0.72,
+   "emergente": 0.23,
+   "especulativo": 0
+  }
+ },
+ "heuristicas-kahneman": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "especulativo": 0
+  }
+ },
+ "efeito-placebo": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "atencao-seletiva": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "neuronios-espelho": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.17,
+   "emergente": 0,
+   "estabelecido": 0.13,
+   "controverso": 0.7
+  }
+ },
+ "consolidacao-sono": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "dor-cronica": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0.02,
+   "estabelecido": 0.97,
+   "controverso": 0.01
+  }
+ },
+ "predicao-cerebral": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0,
+   "estabelecido": 0,
+   "controverso": 0.99
+  }
+ },
+ "hegel-fenomenologia": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.16,
+   "emergente": 0,
+   "estabelecido": 0.38,
+   "controverso": 0.46
+  }
+ },
+ "problema-inducao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.83,
+   "controverso": 0.16
+  }
+ },
+ "falseabilidade": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.3,
+   "controverso": 0.7
+  }
+ },
+ "paradigmas-kuhn": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.36,
+   "controverso": 0.63
+  }
+ },
+ "utilitarismo": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.24,
+   "controverso": 0.75
+  }
+ },
+ "imperativo-categorico": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.07,
+   "emergente": 0,
+   "estabelecido": 0.57,
+   "controverso": 0.36
+  }
+ },
+ "quarto-chines": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.05,
+   "emergente": 0,
+   "estabelecido": 0.07,
+   "controverso": 0.88
+  }
+ },
+ "problema-dificil": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.06,
+   "emergente": 0,
+   "estabelecido": 0.04,
+   "controverso": 0.9
+  }
+ },
+ "experimento-mental-navio": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.29,
+   "emergente": 0,
+   "estabelecido": 0.08,
+   "controverso": 0.63
+  }
+ },
+ "veu-ignorancia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.16,
+   "emergente": 0,
+   "estabelecido": 0.59,
+   "controverso": 0.25
+  }
+ },
+ "eterno-retorno": {
+  "status": "especulativo",
+  "p": {
+   "especulativo": 0.49,
+   "emergente": 0,
+   "estabelecido": 0.15,
+   "controverso": 0.36
+  }
+ },
+ "linguagem-wittgenstein": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.67,
+   "controverso": 0.32
+  }
+ },
+ "fenomenologia-husserl": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.06,
+   "emergente": 0,
+   "estabelecido": 0.6900000000000001,
+   "controverso": 0.25
+  }
+ },
+ "existencialismo-sartre": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.17,
+   "emergente": 0,
+   "estabelecido": 0.61,
+   "controverso": 0.22
+  }
+ },
+ "etica-virtude": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.02,
+   "emergente": 0,
+   "estabelecido": 0.75,
+   "controverso": 0.23
+  }
+ },
+ "paradoxo-sorites": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.02,
+   "emergente": 0,
+   "estabelecido": 0.19,
+   "controverso": 0.79
+  }
+ },
+ "argumento-ontologico": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.39,
+   "controverso": 0.58,
+   "emergente": 0,
+   "estabelecido": 0.03
+  }
+ },
+ "escola-frankfurt": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0.18,
+   "estabelecido": 0.79,
+   "especulativo": 0.03
+  }
+ },
+ "vantagem-comparativa": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1
+  }
+ },
+ "externalidades": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.99
+  }
+ },
+ "assimetria-informacao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1
+  }
+ },
+ "custo-oportunidade": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1
+  }
+ },
+ "inflacao-mecanismos": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0.95,
+   "emergente": 0,
+   "estabelecido": 0.05
+  }
+ },
+ "curva-laffer": {
+  "status": "especulativo",
+  "p": {
+   "especulativo": 0.77,
+   "controverso": 0.22,
+   "emergente": 0,
+   "estabelecido": 0.01
+  }
+ },
+ "tragedia-comuns": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.01,
+   "controverso": 0.52,
+   "emergente": 0,
+   "estabelecido": 0.47
+  }
+ },
+ "bolhas-financeiras": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "controverso": 0.3,
+   "emergente": 0,
+   "estabelecido": 0.69
+  }
+ },
+ "gini-desigualdade": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0.08,
+   "emergente": 0,
+   "estabelecido": 0.92
+  }
+ },
+ "moeda-fiduciaria": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "controverso": 0.07,
+   "emergente": 0,
+   "estabelecido": 0.92
+  }
+ },
+ "paradoxo-produtividade": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.4,
+   "controverso": 0.58,
+   "especulativo": 0.01,
+   "emergente": 0.01
+  }
+ },
+ "economia-comportamental": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0.11,
+   "emergente": 0.09,
+   "estabelecido": 0.8
+  }
+ },
+ "salario-minimo-debate": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.11,
+   "controverso": 0.82,
+   "especulativo": 0,
+   "emergente": 0.07
+  }
+ },
+ "renda-basica": {
+  "status": "emergente",
+  "p": {
+   "estabelecido": 0.11,
+   "controverso": 0.15,
+   "especulativo": 0.02,
+   "emergente": 0.72
+  }
+ },
+ "teoria-firma": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.8,
+   "controverso": 0.19,
+   "especulativo": 0.01,
+   "emergente": 0
+  }
+ },
+ "teorema-arrow": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1
+  }
+ },
+ "sistemas-eleitorais": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0.01,
+   "estabelecido": 0.99,
+   "especulativo": 0
+  }
+ },
+ "separacao-poderes": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0.05,
+   "estabelecido": 0.95,
+   "especulativo": 0
+  }
+ },
+ "contrato-social": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.63,
+   "controverso": 0.27,
+   "especulativo": 0.1
+  }
+ },
+ "gerrymandering": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "acao-coletiva": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.96,
+   "emergente": 0,
+   "controverso": 0.04
+  }
+ },
+ "estado-de-direito": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.62,
+   "controverso": 0.38,
+   "especulativo": 0
+  }
+ },
+ "presuncao-inocencia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "common-law-civil": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "propriedade-intelectual": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.82,
+   "emergente": 0,
+   "controverso": 0.18
+  }
+ },
+ "federalismo": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.89,
+   "emergente": 0,
+   "controverso": 0.11
+  }
+ },
+ "populismo": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.35,
+   "emergente": 0,
+   "controverso": 0.65
+  }
+ },
+ "capital-cultural": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.05,
+   "estabelecido": 0.95,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "anomia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.96,
+   "emergente": 0,
+   "controverso": 0.04
+  }
+ },
+ "dadiva-mauss": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "estabelecido": 0.85,
+   "emergente": 0,
+   "controverso": 0.14
+  }
+ },
+ "lacos-fracos": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "profecia-autorrealizavel": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.91,
+   "controverso": 0.08,
+   "especulativo": 0.01
+  }
+ },
+ "panoptico": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.02,
+   "estabelecido": 0.9,
+   "emergente": 0,
+   "controverso": 0.08
+  }
+ },
+ "etnografia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "tabu-pureza": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "estabelecido": 0.9,
+   "emergente": 0,
+   "controverso": 0.09
+  }
+ },
+ "individualismo-metodologico": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.15,
+   "emergente": 0,
+   "controverso": 0.85
+  }
+ },
+ "modernidade-liquida": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.07,
+   "estabelecido": 0.02,
+   "emergente": 0,
+   "controverso": 0.91
+  }
+ },
+ "peste-negra": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "revolucao-neolitica": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.64,
+   "especulativo": 0.01,
+   "controverso": 0.35,
+   "emergente": 0
+  }
+ },
+ "imprensa-gutenberg": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "revolucao-industrial-porque": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.01,
+   "especulativo": 0,
+   "controverso": 0.99,
+   "emergente": 0
+  }
+ },
+ "trocas-colombianas": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "iluminismo": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.78,
+   "especulativo": 0,
+   "controverso": 0.22,
+   "emergente": 0
+  }
+ },
+ "guerra-fria-dissuasao": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.93,
+   "especulativo": 0,
+   "controverso": 0.07,
+   "emergente": 0
+  }
+ },
+ "bretton-woods": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "descolonizacao": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.97,
+   "especulativo": 0,
+   "controverso": 0.03,
+   "emergente": 0
+  }
+ },
+ "historiografia-annales": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "controverso": 0.01,
+   "emergente": 0
+  }
+ },
+ "revolucao-cientifica": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.97,
+   "especulativo": 0,
+   "controverso": 0.03,
+   "emergente": 0
+  }
+ },
+ "seda-rotas": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "controverso": 0.01,
+   "emergente": 0
+  }
+ },
+ "memoria-historica": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.58,
+   "especulativo": 0,
+   "controverso": 0.41,
+   "emergente": 0.01
+  }
+ },
+ "pequena-era-gelo": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "especulativo": 0,
+   "controverso": 0.03,
+   "estabelecido": 0.97
+  }
+ },
+ "sapir-whorf": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.13,
+   "especulativo": 0.03,
+   "controverso": 0.83,
+   "emergente": 0.01
+  }
+ },
+ "gramatica-universal": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0,
+   "especulativo": 0,
+   "controverso": 1,
+   "emergente": 0
+  }
+ },
+ "mudanca-fonetica": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0,
+   "emergente": 0
+  }
+ },
+ "pidgin-crioulo": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.96,
+   "especulativo": 0,
+   "controverso": 0.04,
+   "emergente": 0
+  }
+ },
+ "signo-saussure": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "controverso": 0.01,
+   "emergente": 0
+  }
+ },
+ "atos-de-fala": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.96,
+   "especulativo": 0,
+   "controverso": 0.04,
+   "emergente": 0
+  }
+ },
+ "lei-zipf": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "controverso": 0.01,
+   "emergente": 0
+  }
+ },
+ "escrita-sistemas": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "controverso": 0.01
+  }
+ },
+ "gestalt-design": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.98,
+   "especulativo": 0.01,
+   "controverso": 0.01
+  }
+ },
+ "affordances": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.75,
+   "especulativo": 0.02,
+   "controverso": 0.23
+  }
+ },
+ "teoria-cor": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0
+  }
+ },
+ "tipografia-legibilidade": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.01,
+   "estabelecido": 0.46,
+   "especulativo": 0.09,
+   "controverso": 0.44
+  }
+ },
+ "grid-editorial": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.88,
+   "especulativo": 0.01,
+   "controverso": 0.11
+  }
+ },
+ "design-sistemas": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.05,
+   "estabelecido": 0.94,
+   "especulativo": 0,
+   "controverso": 0.01
+  }
+ },
+ "acessibilidade": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.98,
+   "especulativo": 0.01,
+   "controverso": 0.01
+  }
+ },
+ "forma-funcao": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.42,
+   "especulativo": 0.15,
+   "controverso": 0.43
+  }
+ },
+ "bauhaus": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0
+  }
+ },
+ "cidade-jacobs": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.66,
+   "especulativo": 0.05,
+   "controverso": 0.28
+  }
+ },
+ "conforto-termico": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0
+  }
+ },
+ "espaco-publico": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.01,
+   "estabelecido": 0.82,
+   "especulativo": 0.03,
+   "controverso": 0.14
+  }
+ },
+ "patrimonio-restauro": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.02,
+   "especulativo": 0,
+   "controverso": 0.98
+  }
+ },
+ "temperamento-igual": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0
+  }
+ },
+ "harmonia-funcional": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.97,
+   "especulativo": 0.01,
+   "controverso": 0.02
+  }
+ },
+ "timbre": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "controverso": 0
+  }
+ },
+ "ritmo-metrica": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.97,
+   "especulativo": 0.01,
+   "controverso": 0.02
+  }
+ },
+ "serialismo": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.96,
+   "especulativo": 0,
+   "controverso": 0.04
+  }
+ },
+ "musica-emocao": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0,
+   "especulativo": 0.2,
+   "controverso": 0.8
+  }
+ },
+ "perspectiva-renascimento": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "ready-made": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.93,
+   "emergente": 0,
+   "controverso": 0.07,
+   "especulativo": 0
+  }
+ },
+ "narrativa-nao-linear": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "realismo-magico": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.88,
+   "emergente": 0,
+   "controverso": 0.11,
+   "especulativo": 0.01
+  }
+ },
+ "posicionamento": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.92,
+   "emergente": 0,
+   "controverso": 0.02,
+   "especulativo": 0.06
+  }
+ },
+ "mera-exposicao": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01,
+   "especulativo": 0
+  }
+ },
+ "prova-social": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.91,
+   "emergente": 0,
+   "controverso": 0.09,
+   "especulativo": 0
+  }
+ },
+ "precificacao-psicologica": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.98,
+   "emergente": 0,
+   "controverso": 0.02,
+   "especulativo": 0
+  }
+ },
+ "difusao-inovacao": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01,
+   "especulativo": 0
+  }
+ },
+ "efeito-rede": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "inovacao-disruptiva": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.26,
+   "emergente": 0.01,
+   "controverso": 0.64,
+   "especulativo": 0.09
+  }
+ },
+ "cauda-longa": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.03,
+   "emergente": 0,
+   "controverso": 0.95,
+   "especulativo": 0.02
+  }
+ },
+ "branding-memoria": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.7,
+   "emergente": 0.13,
+   "controverso": 0.16,
+   "especulativo": 0.01
+  }
+ },
+ "metricas-vaidade": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.89,
+   "emergente": 0.01,
+   "controverso": 0.03,
+   "especulativo": 0.07
+  }
+ },
+ "indice-glicemico": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.76,
+   "emergente": 0,
+   "controverso": 0.23,
+   "especulativo": 0.01
+  }
+ },
+ "epidemiologia-nutricional": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.86,
+   "emergente": 0.01,
+   "controverso": 0.12,
+   "especulativo": 0.01
+  }
+ },
+ "proteina-necessidade": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.82,
+   "emergente": 0,
+   "controverso": 0.17,
+   "especulativo": 0.01
+  }
+ },
+ "ultraprocessados": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.04,
+   "emergente": 0.02,
+   "controverso": 0.94,
+   "especulativo": 0
+  }
+ },
+ "jejum-intermitente": {
+  "status": "emergente",
+  "p": {
+   "estabelecido": 0.06,
+   "emergente": 0.47,
+   "controverso": 0.32,
+   "especulativo": 0.15
+  }
+ },
+ "vitamina-suplemento": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.83,
+   "emergente": 0,
+   "controverso": 0.09,
+   "especulativo": 0.08
+  }
+ },
+ "balanco-energetico": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.02,
+   "emergente": 0,
+   "estabelecido": 0.78,
+   "controverso": 0.2
+  }
+ },
+ "microbiota-dieta": {
+  "status": "emergente",
+  "p": {
+   "especulativo": 0.26,
+   "emergente": 0.53,
+   "estabelecido": 0.01,
+   "controverso": 0.2
+  }
+ },
+ "nnt-risco": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "triagem-sobrediagnostico": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0.02,
+   "estabelecido": 0.97,
+   "controverso": 0.01
+  }
+ },
+ "p-np": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.13,
+   "emergente": 0,
+   "estabelecido": 0.81,
+   "controverso": 0.06
+  }
+ },
+ "criptografia-assimetrica": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "compressao-informacao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "halting": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "transformers": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0.14,
+   "estabelecido": 0.86,
+   "controverso": 0
+  }
+ },
+ "overfitting": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "vies-algoritmico": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0.06,
+   "estabelecido": 0.29,
+   "controverso": 0.65
+  }
+ },
+ "blockchain": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0.03,
+   "estabelecido": 0.91,
+   "controverso": 0.05
+  }
+ },
+ "quantum-computing": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.02,
+   "emergente": 0.33,
+   "estabelecido": 0.65,
+   "controverso": 0
+  }
+ },
+ "reprodutibilidade-computacional": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0.1,
+   "estabelecido": 0.83,
+   "controverso": 0.07
+  }
+ },
+ "valor-p": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.89,
+   "controverso": 0.11
+  }
+ },
+ "regressao-media": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "simpson-paradoxo": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "causalidade-pearl": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0.13,
+   "estabelecido": 0.86,
+   "controverso": 0.01
+  }
+ },
+ "amostragem-vies": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "poder-estatistico": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "bootstrap": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "pre-registro": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.27,
+   "controverso": 0.01,
+   "especulativo": 0,
+   "estabelecido": 0.72
+  }
+ },
+ "pegada-carbono": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0.09,
+   "especulativo": 0,
+   "estabelecido": 0.91
+  }
+ },
+ "economia-circular": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0.09,
+   "controverso": 0.48,
+   "especulativo": 0.06,
+   "estabelecido": 0.37
+  }
+ },
+ "limites-planetarios": {
+  "status": "emergente",
+  "p": {
+   "emergente": 0.47,
+   "controverso": 0.06,
+   "especulativo": 0,
+   "estabelecido": 0.47
+  }
+ },
+ "sucessao-ecologica": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "servicos-ecossistemicos": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.01,
+   "controverso": 0.35,
+   "especulativo": 0,
+   "estabelecido": 0.64
+  }
+ },
+ "especies-invasoras": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "curva-kuznets-ambiental": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0,
+   "controverso": 0.98,
+   "especulativo": 0.02,
+   "estabelecido": 0
+  }
+ },
+ "pegada-hidrica": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.01,
+   "controverso": 0.02,
+   "especulativo": 0,
+   "estabelecido": 0.97
+  }
+ },
+ "economia-donut": {
+  "status": "emergente",
+  "p": {
+   "emergente": 0.42,
+   "controverso": 0.22,
+   "especulativo": 0.33,
+   "estabelecido": 0.03
+  }
+ },
+ "acidificacao-oceanos": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "capacidade-suporte": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0.02,
+   "especulativo": 0,
+   "estabelecido": 0.98
+  }
+ },
+ "efeito-estufa-mecanismo": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "antropoceno": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0.03,
+   "controverso": 0.97,
+   "especulativo": 0,
+   "estabelecido": 0
+  }
+ },
+ "termodinamica-reciclagem": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "greenwashing": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.01,
+   "controverso": 0.04,
+   "especulativo": 0.03,
+   "estabelecido": 0.92
+  }
+ },
+ "habeas-corpus": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "principio-legalidade-penal": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "in-dubio-pro-reo": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1
+  }
+ },
+ "coisa-julgada": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "devido-processo-legal": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.99,
+   "especulativo": 0
+  }
+ },
+ "contraditorio-ampla-defesa": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "dolo-culpa": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.99,
+   "especulativo": 0
+  }
+ },
+ "boa-fe-objetiva": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.02,
+   "especulativo": 0,
+   "estabelecido": 0.98,
+   "emergente": 0
+  }
+ },
+ "prescricao-decadencia": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0
+  }
+ },
+ "precedente-stare-decisis": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.06,
+   "emergente": 0,
+   "estabelecido": 0.94,
+   "especulativo": 0
+  }
+ },
+ "responsabilidade-civil-objetiva": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.14,
+   "especulativo": 0,
+   "estabelecido": 0.86,
+   "emergente": 0
+  }
+ },
+ "personalidade-juridica": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.02,
+   "especulativo": 0,
+   "estabelecido": 0.98,
+   "emergente": 0
+  }
+ },
+ "principio-insignificancia": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.12,
+   "emergente": 0,
+   "estabelecido": 0.88,
+   "especulativo": 0
+  }
+ },
+ "soft-law": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.14,
+   "especulativo": 0,
+   "estabelecido": 0.86,
+   "emergente": 0
+  }
+ },
+ "onus-prova-civil": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.99,
+   "especulativo": 0
+  }
+ },
+ "modos-gregos": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "especulativo": 0.02,
+   "estabelecido": 0.97,
+   "emergente": 0
+  }
+ },
+ "contraponto": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0
+  }
+ },
+ "cadencias-harmonicas": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "circulo-quintas": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "forma-sonata": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0
+  }
+ },
+ "musica-microtonal": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "polirritmia": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "canone-fuga": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0
+  }
+ },
+ "notacao-musical-historia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "consonancia-dissonancia-fisica": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "jazz-harmonia-estendida": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "tonalidade-modulacao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "batimentos-acusticos": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "escalas-pentatonicas": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.02,
+   "emergente": 0,
+   "estabelecido": 0.97,
+   "controverso": 0.01
+  }
+ },
+ "leitmotiv-musica-programa": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0
+  }
+ },
+ "queda-imperio-romano": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.08,
+   "controverso": 0.92
+  }
+ },
+ "idade-media-feudalismo": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.1,
+   "controverso": 0.9
+  }
+ },
+ "cruzadas": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.33,
+   "emergente": 0,
+   "estabelecido": 0.67,
+   "especulativo": 0
+  }
+ },
+ "renascimento-italiano": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.18,
+   "emergente": 0,
+   "estabelecido": 0.8099999999999999,
+   "especulativo": 0.01
+  }
+ },
+ "era-exploracoes-maritimas": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.03,
+   "emergente": 0,
+   "estabelecido": 0.97,
+   "especulativo": 0
+  }
+ },
+ "revolucao-francesa": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.94,
+   "controverso": 0.06
+  }
+ },
+ "independencias-america-latina": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.83,
+   "controverso": 0.17
+  }
+ },
+ "imperios-pre-colombianos": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "revolucao-russa": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.9,
+   "controverso": 0.1
+  }
+ },
+ "primeira-guerra-causas": {
+  "status": "controverso",
+  "p": {
+   "controverso": 0.54,
+   "emergente": 0,
+   "estabelecido": 0.46,
+   "especulativo": 0
+  }
+ },
+ "holocausto-historiografia": {
+  "status": "controverso",
+  "p": {
+   "controverso": 0.89,
+   "emergente": 0,
+   "estabelecido": 0.11,
+   "especulativo": 0
+  }
+ },
+ "movimento-direitos-civis-eua": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "especulativo": 0
+  }
+ },
+ "queda-muro-berlim": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.16,
+   "emergente": 0,
+   "estabelecido": 0.73,
+   "especulativo": 0.11
+  }
+ },
+ "imperio-mongol": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "escravidao-atlantica": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "tectonica-placas": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "climas-koppen": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "urbanizacao-primazia": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "fronteiras-geopolitica": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.05,
+   "estabelecido": 0.95,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "desertificacao": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "correntes-oceanicas": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "biomas-terrestres": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "demografia-transicao": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "escalas-mapa-modificavel": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "rios-internacionais-hidropolitica": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "ilhas-calor-urbanas": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "monções": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "cartografia-projecoes": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "migracao-push-pull": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.98,
+   "emergente": 0,
+   "controverso": 0.02
+  }
+ },
+ "geografia-recursos-minerais": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.01,
+   "estabelecido": 0.44,
+   "emergente": 0,
+   "controverso": 0.55
+  }
+ },
+ "el-nino": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "paradoxo-fermi": {
+  "status": "especulativo",
+  "p": {
+   "especulativo": 0.93,
+   "estabelecido": 0.03,
+   "emergente": 0,
+   "controverso": 0.04
+  }
+ },
+ "lentes-gravitacionais": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "estrelas-neutrons": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "radiacao-hawking": {
+  "status": "especulativo",
+  "p": {
+   "estabelecido": 0,
+   "controverso": 0,
+   "especulativo": 1,
+   "emergente": 0
+  }
+ },
+ "energia-escura": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.35,
+   "controverso": 0.19,
+   "especulativo": 0.32,
+   "emergente": 0.14
+  }
+ },
+ "escada-distancias": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "dunning-kruger": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.28,
+   "controverso": 0.66,
+   "especulativo": 0.04,
+   "emergente": 0.01
+  }
+ },
+ "memoria-falsa": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.99,
+   "controverso": 0,
+   "especulativo": 0,
+   "emergente": 0.01
+  }
+ },
+ "custo-afundado": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.97,
+   "controverso": 0.02,
+   "especulativo": 0.01,
+   "emergente": 0
+  }
+ },
+ "teoria-da-mente": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.5,
+   "controverso": 0.49,
+   "especulativo": 0,
+   "emergente": 0.01
+  }
+ },
+ "problema-bonde": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.02,
+   "controverso": 0.98,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "absurdismo": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.76,
+   "controverso": 0.2,
+   "especulativo": 0.04,
+   "emergente": 0
+  }
+ },
+ "cerebro-cuba": {
+  "status": "especulativo",
+  "p": {
+   "estabelecido": 0.33,
+   "controverso": 0.31,
+   "especulativo": 0.36,
+   "emergente": 0
+  }
+ },
+ "paradoxo-mentiroso": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.74,
+   "controverso": 0.26,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "navalha-ockham": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.43,
+   "controverso": 0.52,
+   "especulativo": 0.05,
+   "emergente": 0
+  }
+ },
+ "demonio-laplace": {
+  "status": "especulativo",
+  "p": {
+   "estabelecido": 0.26,
+   "controverso": 0.1,
+   "especulativo": 0.64,
+   "emergente": 0
+  }
+ },
+ "tunelamento-quantico": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "paradoxo-gemeos": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "gato-schrodinger": {
+  "status": "controverso",
+  "p": {
+   "estabelecido": 0.04,
+   "controverso": 0.95,
+   "especulativo": 0.01,
+   "emergente": 0
+  }
+ },
+ "demonio-maxwell": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 0.91,
+   "controverso": 0.01,
+   "especulativo": 0.08,
+   "emergente": 0
+  }
+ },
+ "efeito-hidrofobico": {
+  "status": "estabelecido",
+  "p": {
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "le-chatelier": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "estabelecido": 0.99,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "quimica-prebiotica": {
+  "status": "especulativo",
+  "p": {
+   "emergente": 0.02,
+   "estabelecido": 0.03,
+   "controverso": 0.12,
+   "especulativo": 0.83
+  }
+ },
+ "evo-devo": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.02,
+   "estabelecido": 0.96,
+   "controverso": 0.02,
+   "especulativo": 0
+  }
+ },
+ "quorum-sensing": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "plasticidade-fenotipica": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "transferencia-horizontal": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "bacteriofagos": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.03,
+   "estabelecido": 0.97,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "biofilmes": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "tardigrados": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.95,
+   "controverso": 0.04,
+   "especulativo": 0.01
+  }
+ },
+ "ophiocordyceps": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0.01,
+   "estabelecido": 0.98,
+   "especulativo": 0,
+   "emergente": 0.01
+  }
+ },
+ "senescencia-negligenciavel": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0.05,
+   "estabelecido": 0.22,
+   "controverso": 0.72,
+   "especulativo": 0.01
+  }
+ },
+ "regeneracao-animal": {
+  "status": "estabelecido",
+  "p": {
+   "controverso": 0,
+   "estabelecido": 1,
+   "especulativo": 0,
+   "emergente": 0
+  }
+ },
+ "split-brain": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0.01,
+   "estabelecido": 0.15,
+   "controverso": 0.84,
+   "especulativo": 0
+  }
+ },
+ "homunculo-cortical": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.01,
+   "estabelecido": 0.96,
+   "controverso": 0.03,
+   "especulativo": 0
+  }
+ },
+ "reconsolidacao": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0.05,
+   "estabelecido": 0.86,
+   "controverso": 0.09,
+   "especulativo": 0
+  }
+ },
+ "selecao-adversa": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "agente-principal": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "doenca-holandesa": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.49,
+   "controverso": 0.51,
+   "especulativo": 0
+  }
+ },
+ "armadilha-liquidez": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.53,
+   "controverso": 0.47,
+   "especulativo": 0
+  }
+ },
+ "efeito-cantillon": {
+  "status": "controverso",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 0.02,
+   "controverso": 0.97,
+   "especulativo": 0.01
+  }
+ },
+ "maquina-turing": {
+  "status": "estabelecido",
+  "p": {
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0,
+   "especulativo": 0
+  }
+ },
+ "zero-knowledge": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "teorema-cap": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "estabelecido": 0.87,
+   "emergente": 0,
+   "controverso": 0.12
+  }
+ },
+ "gramaticalizacao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "linguas-de-sinais": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "diglossia": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.78,
+   "controverso": 0.22
+  }
+ },
+ "chiaroscuro": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "dada-surrealismo": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "trompe-loeil": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "brutalismo": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.77,
+   "emergente": 0,
+   "controverso": 0.23
+  }
+ },
+ "cidade-jardim": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "estabelecido": 0.95,
+   "emergente": 0,
+   "controverso": 0.04
+  }
+ },
+ "arquitetura-vernacular": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.99,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "metabolismo-japones": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.08,
+   "estabelecido": 0.9,
+   "emergente": 0,
+   "controverso": 0.02
+  }
+ },
+ "eleitor-mediano": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.02,
+   "estabelecido": 0.81,
+   "emergente": 0,
+   "controverso": 0.16
+  }
+ },
+ "soft-power": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.1,
+   "estabelecido": 0.33,
+   "emergente": 0,
+   "controverso": 0.57
+  }
+ },
+ "tirania-maioria": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.07,
+   "estabelecido": 0.81,
+   "emergente": 0,
+   "controverso": 0.12
+  }
+ },
+ "cascata-trofica": {
+  "status": "controverso",
+  "p": {
+   "especulativo": 0.02,
+   "estabelecido": 0.07,
+   "emergente": 0,
+   "controverso": 0.91
+  }
+ },
+ "micorrizas": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "estabelecido": 0.98,
+   "emergente": 0,
+   "controverso": 0.01
+  }
+ },
+ "biomagnificacao": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 1,
+   "emergente": 0,
+   "controverso": 0
+  }
+ },
+ "ikigai": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.44,
+   "emergente": 0,
+   "estabelecido": 0.47,
+   "controverso": 0.09
+  }
+ },
+ "wabi-sabi": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "estabelecido": 0.98,
+   "emergente": 0,
+   "controverso": 0.02
+  }
+ },
+ "ubuntu": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.01,
+   "emergente": 0,
+   "estabelecido": 0.94,
+   "controverso": 0.05
+  }
+ },
+ "wu-wei": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0.04,
+   "emergente": 0,
+   "estabelecido": 0.86,
+   "controverso": 0.1
+  }
+ },
+ "banach-tarski": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.99,
+   "controverso": 0.01
+  }
+ },
+ "revolucao-haitiana": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "liga-hanseatica": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ },
+ "crise-seculo-iii": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 0.96,
+   "controverso": 0.04
+  }
+ },
+ "imperio-mali": {
+  "status": "estabelecido",
+  "p": {
+   "especulativo": 0,
+   "emergente": 0,
+   "estabelecido": 1,
+   "controverso": 0
+  }
+ }
+}

@@ -94,10 +94,12 @@ if (erros.length) { console.log(`\n${erros.length} erro(s). Nada foi gravado.`);
 if (SO_CHECAR) { console.log(`ok: ${Object.keys(CONTEUDOS).length} documentos válidos, ${avisos.length} aviso(s)`); process.exit(0); }
 
 /* ── Layout do mapa do acervo ──────────────────────────────────────── */
-/* Força simples e determinística: repulsão entre todos os nós, mola nas arestas,
-   gravidade para o centro da área e da subárea. Posições gravadas no índice,
-   então o mapa é o mesmo para todo mundo e o app não precisa calcular nada.
-   ponytail: repulsão O(n²), ok até ~2 mil nós; acima disso, usar quadtree. */
+/* Hierárquico e determinístico. Cada área é montada sozinha (força dentro da área,
+   com as subáreas puxando seus nós para formar braços); depois as áreas viram ilhas
+   num anel por macro-região, e as regiões num anel maior. Ligações entre áreas são
+   desenhadas mas não puxam, senão tudo vira um bolo no centro. Posições gravadas no
+   índice: o mapa é o mesmo para todo mundo e o app não calcula nada.
+   ponytail: repulsão O(n²) por área, ok até algumas centenas de nós por área. */
 function aleatorio(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
 const arestas = [];
@@ -107,52 +109,63 @@ for (const [id, g] of Object.entries(GRAFO)) for (const v of g.liga || []) {
   if (!vistos.has(k) && CATALOGO.some(c => c.id === v) && CATALOGO.some(c => c.id === id)) { vistos.add(k); arestas.push([id, v]); }
 }
 
-function layout() {
-  const rnd = aleatorio(42);
-  const macros = Object.keys(MACROS);
-  const centroArea = {};
-  macros.forEach((mk, i) => {
-    const ang = (i / macros.length) * 2 * Math.PI;
-    const mx = Math.cos(ang) * 420, my = Math.sin(ang) * 420;
-    const areas = MACROS[mk].areas;
-    areas.forEach((a, j) => {
-      const r = areas.length > 1 ? 70 + 12 * areas.length : 0, b = ang + (j / areas.length) * 2 * Math.PI;
-      centroArea[a] = [mx + Math.cos(b) * r, my + Math.sin(b) * r];
-    });
+function layoutArea(nos, ars, rnd) {
+  const subs = [...new Set(nos.map(n => n.sub))].sort();
+  nos.forEach(n => {   /* começa com cada subárea num setor do círculo: vira braço */
+    const ang = (subs.indexOf(n.sub) + rnd() * .6) / subs.length * 2 * Math.PI, r = 20 + rnd() * 30;
+    n.x = Math.cos(ang) * r; n.y = Math.sin(ang) * r; n.vx = n.vy = 0;
   });
-  const nos = CATALOGO.map(c => {
-    const [ax, ay] = centroArea[c.area];
-    return { id: c.id, area: c.area, sub: (GRAFO[c.id] || {}).sub || "", x: ax + (rnd() - .5) * 60, y: ay + (rnd() - .5) * 60, vx: 0, vy: 0 };
-  });
-  const idx = Object.fromEntries(nos.map((n, i) => [n.id, i]));
-  const ars = arestas.map(([a, b]) => [idx[a], idx[b]]);
-
-  for (let it = 0, temp = 1; it < 400; it++, temp *= 0.992) {
+  for (let it = 0, temp = 1; it < 300; it++, temp *= 0.99) {
     for (let i = 0; i < nos.length; i++) for (let j = i + 1; j < nos.length; j++) {
-      const a = nos[i], b = nos[j];
-      let dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy + 0.01;
-      if (d2 > 90000) continue;
-      const f = 400 / d2;
+      const a = nos[i], b = nos[j], dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy + 0.01, f = 900 / d2;
       a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f;
     }
-    for (const [i, j] of ars) {
-      const a = nos[i], b = nos[j], mesma = a.area === b.area;
-      const dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) + 0.01;
-      const f = (d - (mesma ? 30 : 90)) * (mesma ? 0.02 : 0.004) / d;
+    for (const [a, b] of ars) {
+      const dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy) + 0.01, f = (d - 40) * 0.02 / d;
       a.vx += dx * f; a.vy += dy * f; b.vx -= dx * f; b.vy -= dy * f;
     }
-    const centroSub = {};
-    for (const n of nos) if (n.sub) { const k = n.area + "|" + n.sub; const c = centroSub[k] || (centroSub[k] = [0, 0, 0]); c[0] += n.x; c[1] += n.y; c[2]++; }
+    const cs = {};
+    for (const n of nos) { const c = cs[n.sub] || (cs[n.sub] = [0, 0, 0]); c[0] += n.x; c[1] += n.y; c[2]++; }
     for (const n of nos) {
-      const [ax, ay] = centroArea[n.area];
-      n.vx += (ax - n.x) * 0.012; n.vy += (ay - n.y) * 0.012;
-      const cs = n.sub && centroSub[n.area + "|" + n.sub];
-      if (cs && cs[2] > 1) { n.vx += (cs[0] / cs[2] - n.x) * 0.03; n.vy += (cs[1] / cs[2] - n.y) * 0.03; }
-      const v = Math.hypot(n.vx, n.vy), max = 12 * temp + 0.5;
+      const c = cs[n.sub];
+      n.vx += (c[0] / c[2] - n.x) * 0.04 - n.x * 0.008; n.vy += (c[1] / c[2] - n.y) * 0.04 - n.y * 0.008;
+      const v = Math.hypot(n.vx, n.vy), max = 6 * temp + 0.3;
       if (v > max) { n.vx *= max / v; n.vy *= max / v; }
       n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6;
     }
   }
+  return Math.max(30, ...nos.map(n => Math.hypot(n.x, n.y)));   /* raio da ilha */
+}
+
+function anel(itens, folga) {   /* distribui círculos de raio r em volta de um centro sem sobrepor */
+  if (itens.length === 1) return { R: itens[0].r, pos: [[0, 0]] };
+  const perimetro = itens.reduce((s, x) => s + 2 * x.r + folga, 0);
+  const rc = Math.max(perimetro / (2 * Math.PI), Math.max(...itens.map(x => x.r)) + folga);
+  let ang = 0;
+  const pos = itens.map(x => { const meio = ang + (x.r + folga / 2) / rc; ang += (2 * x.r + folga) / rc; return [Math.cos(meio) * rc, Math.sin(meio) * rc]; });
+  return { R: rc + Math.max(...itens.map(x => x.r)), pos };
+}
+
+function layout() {
+  const rnd = aleatorio(42);
+  const nos = CATALOGO.map(c => ({ id: c.id, area: c.area, sub: (GRAFO[c.id] || {}).sub || "" }));
+  const porId = Object.fromEntries(nos.map(n => [n.id, n]));
+  const ilhas = {};
+  for (const area of new Set(nos.map(n => n.area))) {
+    const ns = nos.filter(n => n.area === area);
+    const ars = arestas.filter(([a, b]) => porId[a].area === area && porId[b].area === area).map(([a, b]) => [porId[a], porId[b]]);
+    ilhas[area] = { ns, r: layoutArea(ns, ars, rnd) };
+  }
+  const regioes = Object.entries(MACROS).map(([k, m]) => {
+    const itens = m.areas.filter(a => ilhas[a]).map(a => ({ area: a, r: ilhas[a].r }));
+    const { R, pos } = anel(itens, 26);
+    return { itens, pos, r: R };
+  });
+  const mundo = anel(regioes, 36);
+  regioes.forEach((reg, i) => reg.itens.forEach((it, j) => {
+    const cx = mundo.pos[i][0] + reg.pos[j][0], cy = mundo.pos[i][1] + reg.pos[j][1];
+    ilhas[it.area].ns.forEach(n => { n.x += cx; n.y += cy; });
+  }));
   /* normaliza para uma caixa 0..1000 com margem */
   const xs = nos.map(n => n.x), ys = nos.map(n => n.y);
   const x0 = Math.min(...xs), y0 = Math.min(...ys), esc = 920 / Math.max(Math.max(...xs) - x0, Math.max(...ys) - y0);

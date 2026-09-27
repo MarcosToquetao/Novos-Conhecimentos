@@ -1,545 +1,303 @@
-/* =========================================================================
-   Novos Conhecimentos — folha de estilo
-   Estética: editorial de papel, com a linguagem visual do Vocabulary —
-   fundo casca-de-ovo, tinta quase preta, serifa de notícia em corpo largo
-   e peso regular, cantos generosos, azulejos arredondados no lugar de
-   círculos, e a dupla sálvia/coral como cor de identidade.
-   Coluna de ~34rem (~62-68 caracteres) preservada: a leitura longa manda.
-   ========================================================================= */
+/* estilo.css: identidade Fichário do Novos Conhecimentos.
+   Interface = ficha de biblioteca (canto reto, fio de 1px, rótulo em mono).
+   Leitura = registro editorial plano; a marca epistêmica é um carimbo, nunca uma caixa com fundo.
+   Fontes auto-hospedadas para o PWA funcionar offline. */
 
-/* ── Tipografia local (o PWA precisa funcionar sem rede) ─────────────── */
-@font-face {
-  font-family: "Noticia Text"; font-style: normal; font-weight: 400; font-display: swap;
-  src: url("../fonts/noticiatext-400-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2122, U+2212, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Noticia Text"; font-style: normal; font-weight: 400; font-display: swap;
-  src: url("../fonts/noticiatext-400-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Noticia Text"; font-style: normal; font-weight: 700; font-display: swap;
-  src: url("../fonts/noticiatext-700-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2122, U+2212, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Noticia Text"; font-style: normal; font-weight: 700; font-display: swap;
-  src: url("../fonts/noticiatext-700-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Noticia Text"; font-style: italic; font-weight: 400; font-display: swap;
-  src: url("../fonts/noticiatext-400i-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2122, U+2212, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Noticia Text"; font-style: italic; font-weight: 400; font-display: swap;
-  src: url("../fonts/noticiatext-400i-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap;
-  src: url("../fonts/inter-var-latin.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2122, U+2212, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Inter"; font-style: normal; font-weight: 400 700; font-display: swap;
-  src: url("../fonts/inter-var-latin-ext.woff2") format("woff2");
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 500 650; font-display: swap;
+  src: url("../fonts/fraunces-500_650-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 500 650; font-display: swap;
+  src: url("../fonts/fraunces-500_650-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/ibmplexmono-400-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/ibmplexmono-400-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../fonts/ibmplexmono-500-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../fonts/ibmplexmono-500-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Literata"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/literata-400i-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Literata"; font-style: italic; font-weight: 400; font-display: swap;
+  src: url("../fonts/literata-400i-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 400 600; font-display: swap;
+  src: url("../fonts/literata-400_600-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 400 600; font-display: swap;
+  src: url("../fonts/literata-400_600-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* ── Tokens ─────────────────────────────────────────────────────────── */
+/* Claro: papel de cartão e tinta verde-quase-preta. Escuro: o fichário à noite.
+   O tema segue o sistema até a pessoa escolher; a escolha vai em data-tema. */
 :root {
-  /* Papel e tinta — modo claro.
-     O fundo casca-de-ovo (#F0EBE1) é o gesto que mais define a referência:
-     nada aqui é branco puro, exceto os azulejos que precisam saltar dele. */
-  --papel:        #F0EBE1;
-  --papel-2:      #FFFFFF;
-  --papel-3:      #E6DFD1;
-  --tinta:        #0F0F0F;
-  --tinta-media:  #4A4B52;
-  --tinta-suave:  #85817A;
-  --linha:        #DCD3C2;
-  --acento:       #337F7F;
-  --acento-suave: #DCEAE7;
-
-  /* Família de identidade, vinda da referência: sálvia, coral, limão,
-     lavanda e índigo. Entram na interface e nas figuras, nunca no corpo
-     do texto — a coluna de leitura continua tinta sobre papel. */
-  --sage:      #93C1C1;
-  --coral:     #F2A093;
-  --limao:     #FFF6C2;
-  --lavanda:   #D5CCF2;
-  --indigo:    #160042;
-
-  --consenso:     #2F7A63;
-  --emergente:    #3A3A8C;
-  --controverso:  #A8623A;
-  --especulacao:  #6B4FA8;
-
-  --serif: "Noticia Text", ui-serif, Georgia, "Times New Roman", serif;
-  --sans:  "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-
+  --cartao: #E3E7DE; --ficha: #F4F1E4; --tinta: #1E2A24; --tinta-2: #46534B; --tinta-3: #6B7466;
+  --regra: #9AA394; --regra-2: #C9CDBF; --carimbo: #C4382E; --selecao: #DDE6D3;
+  --consenso: #2F7A63; --emergente: #3A3A8C; --controverso: #A8623A; --especulacao: #6B4FA8;
+  --m-vida: #3F7A4A; --m-materia: #2B3A67; --m-formal: #5A4E8C; --m-mente: #A4452F;
+  --m-sociedade: #9A6B1E; --m-terra: #6E5B3E; --m-cultura: #8C3F6E; --m-ideias: #3A6B7A;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --texto: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   --col: 34rem;
-  --raio:   20px;   /* azulejos e painéis */
-  --raio-g: 28px;   /* superfícies grandes */
-  --raio-p: 12px;   /* botões de ícone, chips pequenos */
-  --sombra: 0 1px 2px rgba(15,15,15,.04), 0 8px 26px rgba(15,15,15,.06);
+  color-scheme: light;
 }
-
-[data-tema="escuro"] {
-  --papel:        #121316;
-  --papel-2:      #1C1D22;
-  --papel-3:      #25262C;
-  --tinta:        #EDEAE3;
-  --tinta-media:  #B6B4AF;
-  --tinta-suave:  #8A8880;
-  --linha:        #32343A;
-  --acento:       #7CC4BC;
-  --acento-suave: #16302E;
-
-  --sage:      #6FA8A8;
-  --coral:     #D98878;
-  --limao:     #4A4630;
-  --lavanda:   #9A8FC4;
-  --indigo:    #C9BEF0;
-
-  --consenso:     #6FBF9E;
-  --emergente:    #9AA0E8;
-  --controverso:  #DFA173;
-  --especulacao:  #B294D0;
-  --sombra: 0 1px 2px rgba(0,0,0,.35), 0 8px 26px rgba(0,0,0,.4);
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) {
+  --cartao: #161B18; --ficha: #212823; --tinta: #E6E3D6; --tinta-2: #BDBCB0; --tinta-3: #8E9489;
+  --regra: #58625B; --regra-2: #343C37; --carimbo: #E36A58; --selecao: #2C3A2F;
+  --consenso: #62B89A; --emergente: #9A9AE6; --controverso: #DE9A6C; --especulacao: #B097E6;
+  --m-vida: #74B383; --m-materia: #8397D6; --m-formal: #A597E0; --m-mente: #E08466;
+  --m-sociedade: #D9A64E; --m-terra: #BFA37A; --m-cultura: #D98AB8; --m-ideias: #7DB8C9;
+  color-scheme: dark;
+} }
+:root[data-tema="escuro"] {
+  --cartao: #161B18; --ficha: #212823; --tinta: #E6E3D6; --tinta-2: #BDBCB0; --tinta-3: #8E9489;
+  --regra: #58625B; --regra-2: #343C37; --carimbo: #E36A58; --selecao: #2C3A2F;
+  --consenso: #62B89A; --emergente: #9A9AE6; --controverso: #DE9A6C; --especulacao: #B097E6;
+  --m-vida: #74B383; --m-materia: #8397D6; --m-formal: #A597E0; --m-mente: #E08466;
+  --m-sociedade: #D9A64E; --m-terra: #BFA37A; --m-cultura: #D98AB8; --m-ideias: #7DB8C9;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; }
-
 body {
-  margin: 0;
-  background: var(--papel);
-  color: var(--tinta);
-  font-family: var(--sans);
-  font-size: 17px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  overscroll-behavior-y: none;
+  margin: 0; background: var(--cartao); color: var(--tinta);
+  font: 17px/1.6 var(--texto); -webkit-font-smoothing: antialiased; overscroll-behavior-y: none;
 }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--carimbo); outline-offset: 2px; }
+.oculto, [hidden] { display: none !important; }
 
-/* ── Estrutura de telas ─────────────────────────────────────────────── */
-.tela { display: none; padding: 0 1.25rem 5rem; }
-/* A animação de entrada fica no conteúdo, nunca na .tela: um transform na
-   .tela — mesmo a matriz identidade deixada por animation-fill-mode: both —
-   cria bloco de contenção e quebra o position:fixed do rodapé de ação. */
-.tela.ativa { display: block; animation: aparece .28s ease both; }
-.tela.ativa > .envelope, .tela.ativa > .envelope-largo { animation: sobe .28s ease both; }
-@keyframes aparece { from { opacity: 0; } to { opacity: 1; } }
-@keyframes sobe { from { transform: translateY(7px); } to { transform: none; } }
+/* ── Estrutura ──────────────────────────────────────────────────────── */
+/* Nenhum transform na .tela: criaria bloco de contenção e quebraria o position:fixed. */
+.tela { display: none; padding: 0 1rem 7.5rem; }
+.tela.ativa { display: block; }
+.envelope { max-width: var(--col); margin: 0 auto; display: grid; gap: 1rem; }
+.envelope-largo { max-width: 46rem; margin: 0 auto; display: grid; gap: 1rem; }
 
-.envelope { max-width: var(--col); margin: 0 auto; }
-.envelope-largo { max-width: 46rem; margin: 0 auto; }
-
-/* ── Cabeçalho fixo ─────────────────────────────────────────────────── */
-/* Sem backdrop-filter: o fundo já é opaco, e o filtro criaria bloco de
-   contenção sem necessidade (foi essa classe de bug que quebrou o rodapé
-   fixo antes). */
 .barra {
-  position: sticky; top: 0; z-index: 40;
-  background: var(--papel);
-  border-bottom: 1px solid var(--linha);
-  padding: .6rem 1.15rem;
-  display: flex; align-items: center; gap: .6rem;
-  padding-top: max(.6rem, env(safe-area-inset-top));
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  max-width: 46rem; margin: 0 auto; padding: max(.9rem, env(safe-area-inset-top)) 1rem .7rem;
+  font: 500 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-2);
 }
-.barra-marca {
-  font-family: var(--serif); font-size: .95rem; letter-spacing: -.02em;
-  color: var(--tinta); margin-right: auto;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.barra-marca b { font-weight: 700; }
-
-/* Azulejo de marca — direto do ícone do app da referência: quadrado
-   branco de canto generoso, letra em serifa quase preta, sem rotação. */
-.marca-selo {
-  flex: none; width: 34px; height: 34px; border-radius: var(--raio-p);
-  background: var(--papel-2); color: var(--tinta);
-  border: 1px solid var(--linha);
-  font-family: var(--serif); font-weight: 700; font-size: .95rem;
-  display: grid; place-items: center; letter-spacing: -.03em;
-  box-shadow: var(--sombra);
-}
-
-/* Azulejo, não círculo: a referência não usa nenhuma forma redonda na
-   interface — tudo é quadrado de canto generoso. */
+.barra b { font-weight: 500; color: var(--tinta); }
 .icone-btn {
-  background: var(--papel-2); border: 1px solid var(--linha); color: var(--tinta-media);
-  width: 36px; height: 36px; border-radius: var(--raio-p); cursor: pointer;
-  display: grid; place-items: center; flex: none; padding: 0;
-  transition: background .15s, color .15s, border-color .15s, transform .12s;
+  width: 34px; height: 34px; border: 1px solid var(--regra); background: var(--ficha); color: var(--tinta);
+  display: grid; place-items: center; cursor: pointer; padding: 0; flex: none;
 }
-.icone-btn svg { width: 17px; height: 17px; display: block; }
-.icone-btn:hover { color: var(--tinta); border-color: var(--tinta-suave); }
-.icone-btn:active { transform: scale(.93); }
+.icone-btn svg { width: 17px; height: 17px; }
 
-/* ── Tipografia ─────────────────────────────────────────────────────── */
-/* Títulos em peso regular, não negrito: o tamanho e o tracking negativo é
-   que dão presença, como na referência. Negrito em display fica pesado
-   demais numa serifa de notícia. */
-h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.2; letter-spacing: -.028em; }
-h1 { font-size: 2.15rem; margin: 1.6rem 0 .5rem; }
-h2 { font-size: 1.5rem; margin: 2.5rem 0 .7rem; letter-spacing: -.022em; }
-h3 { font-size: 1.15rem; margin: 1.9rem 0 .5rem; font-weight: 700; letter-spacing: -.012em; }
-.chapeu {
-  font-family: var(--sans); font-size: .7rem; font-weight: 600;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--acento);
-  margin: 0 0 .5rem;
+.abas {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: var(--cartao); border-top: 1px solid var(--regra);
+  padding-bottom: env(safe-area-inset-bottom);
 }
-.subtitulo { font-family: var(--serif); font-size: 1.08rem; font-style: italic; color: var(--tinta-media); margin: 0 0 1.4rem; line-height: 1.5; }
-
-/* Noticia Text tem altura-x maior que a serifa anterior: o corpo cai um
-   pouco para manter a mesma mancha, e a entrelinha sobe. */
-.leitura { font-family: var(--serif); font-size: 1.06rem; line-height: 1.75; letter-spacing: -.005em; }
-.leitura p { margin: 0 0 1.15rem; }
-.leitura p.abre::first-letter { float: left; font-size: 3.3rem; line-height: .8; padding: .1em .08em 0 0; font-weight: 400; color: var(--tinta); }
-.leitura strong { font-weight: 600; }
-.leitura em { font-style: italic; }
-.leitura ul, .leitura ol { margin: 0 0 1.15rem; padding-left: 1.25rem; }
-.leitura li { margin-bottom: .5rem; }
-.leitura a { color: var(--acento); text-underline-offset: 2px; }
-.leitura code { font-family: var(--mono); font-size: .88em; background: var(--papel-3); padding: .1em .35em; border-radius: 4px; }
-
-/* Fórmula como destaque de página impressa: fios finos acima e abaixo,
-   sem moldura nem canto. */
-.formula {
-  font-family: var(--serif); font-size: 1.14rem; text-align: center;
-  background: none; border: none; border-radius: 0;
-  border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha);
-  padding: 1.2rem .4rem; margin: 1.7rem 0; overflow-x: auto; line-height: 1.75;
+.aba {
+  font: 500 .7rem var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  padding: .8rem 0 .95rem; background: none; border: 0; border-top: 2px solid transparent; color: var(--tinta-3); cursor: pointer;
 }
-.formula .leg { display: block; font-family: var(--sans); font-size: .77rem; color: var(--tinta-suave); margin-top: .6rem; }
+.aba[aria-current="page"] { color: var(--tinta); border-top-color: var(--tinta); }
 
-blockquote {
-  margin: 1.4rem 0; padding: .2rem 0 .2rem 1.1rem;
-  border-left: 3px solid var(--acento);
-  font-family: var(--serif); font-style: italic; color: var(--tinta-media);
-}
-blockquote cite { display: block; font-style: normal; font-family: var(--sans); font-size: .8rem; color: var(--tinta-suave); margin-top: .5rem; }
-
-/* ── Citação inline ─────────────────────────────────────────────────── */
-sup.cit { font-family: var(--sans); font-size: .62em; font-weight: 700; vertical-align: super; line-height: 0; }
-sup.cit a { color: var(--acento); text-decoration: none; padding: 0 .12em; }
-sup.cit a:hover { text-decoration: underline; }
-
-/* ── Marcadores epistêmicos ─────────────────────────────────────────── */
-/* Duas linguagens deliberadamente distintas: a interface usa azulejo de
-   canto generoso; a página de leitura é tipografia plana, com fio e
-   rótulo suspenso, como um boxe de revista. Caixa arredondada com fundo
-   em cima de texto corrido achata a hierarquia e é o padrão que todo
-   gerador de conteúdo produz por omissão. */
-.marca {
-  border: none; border-top: 2px solid currentColor;
-  background: none; border-radius: 0;
-  padding: .7rem 0 .2rem; margin: 1.9rem 0;
-  font-family: var(--sans); font-size: .91rem; line-height: 1.62;
-  color: var(--tinta-media);
-}
-.marca > .rot {
-  display: block; font-size: .63rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; margin-bottom: .5rem;
-}
-.marca p { color: var(--tinta-media); }
-.marca p { margin: 0 0 .6rem; }
-.marca p:last-child { margin-bottom: 0; }
-/* O fio superior herda currentColor, então basta trocar a cor do bloco. */
-.marca.consenso     { color: var(--consenso); }
-.marca.emergente    { color: var(--emergente); }
-.marca.controverso  { color: var(--controverso); }
-.marca.especulacao  { color: var(--especulacao); }
-
-/* ── Diagramas ──────────────────────────────────────────────────────── */
-.figura { margin: 2rem 0; }
-.figura svg { width: 100%; height: auto; display: block; background: none; border: none; border-radius: 0; }
-.figura figcaption {
-  font-family: var(--sans); font-size: .78rem; color: var(--tinta-suave);
-  margin-top: .7rem; padding-top: .55rem; border-top: 1px solid var(--linha); line-height: 1.55;
-}
-.svg-tinta   { fill: var(--tinta); }
-.svg-suave   { fill: var(--tinta-suave); }
-.svg-acento  { fill: var(--acento); }
-.svg-t-linha { stroke: var(--tinta); }
-.svg-s-linha { stroke: var(--tinta-suave); }
-.svg-a-linha { stroke: var(--acento); }
-.svg-l-linha { stroke: var(--linha); }
-.svg-rot { font-family: var(--sans); font-size: 11px; fill: var(--tinta-media); }
-.svg-rot-p { font-family: var(--sans); font-size: 9.5px; fill: var(--tinta-suave); }
-
-/* ── Tabela ─────────────────────────────────────────────────────────── */
-.tabela-env { overflow-x: auto; margin: 1.4rem 0; -webkit-overflow-scrolling: touch; }
-table { border-collapse: collapse; width: 100%; font-family: var(--sans); font-size: .88rem; }
-th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--linha); vertical-align: top; }
-th { font-weight: 600; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-suave); }
-
-/* ── Botões ─────────────────────────────────────────────────────────── */
-/* Botão primário em tinta quase preta, como as chamadas da referência —
-   o teal fica para links e detalhes, não para blocos grandes de cor. */
-.btn {
-  font-family: var(--sans); font-size: .94rem; font-weight: 600;
-  border-radius: 999px; border: 1px solid var(--linha);
-  background: var(--papel-2); color: var(--tinta);
-  padding: .85rem 1.4rem; cursor: pointer; width: 100%;
-  letter-spacing: -.01em;
-  transition: transform .12s, background .15s, border-color .15s, color .15s;
-}
-.btn:active { transform: scale(.985); }
-.btn.primario { background: var(--tinta); border-color: var(--tinta); color: var(--papel); }
-.btn.primario:hover { background: #262626; border-color: #262626; }
-[data-tema="escuro"] .btn.primario { background: var(--tinta); color: #121316; }
-[data-tema="escuro"] .btn.primario:hover { background: #fff; border-color: #fff; }
-.btn.discreto { background: none; color: var(--tinta-suave); border-color: transparent; font-weight: 500; }
-.btn.discreto:hover { color: var(--tinta); }
-.btn:disabled { opacity: .42; cursor: not-allowed; }
-.btn-linha { display: flex; gap: .6rem; margin-top: .8rem; }
-.btn-linha .btn { width: auto; flex: 1; }
-.btn-grande { padding: 1.2rem 1.4rem; font-size: 1.05rem; }
-
-/* ── Tela inicial ───────────────────────────────────────────────────── */
-/* Grade de cartões-fantasma ao fundo, como no site da referência: contornos
-   de canto muito generoso, quase invisíveis, que dão profundidade ao papel
-   sem virar decoração. Puramente ornamental, logo aria-hidden no HTML. */
-#tela-inicio { position: relative; }
-.fundo-cartoes {
-  position: absolute; inset: 0 -1.25rem; z-index: 0; pointer-events: none;
-  overflow: hidden;
-}
-.fundo-cartoes i {
-  position: absolute; display: block;
-  border: 1px solid var(--linha); border-radius: 44px; opacity: .5;
-}
-.fundo-cartoes i:nth-child(1) { left: -30%; top: 2.5rem;  width: 48%; height: 14rem; }
-.fundo-cartoes i:nth-child(2) { right: -32%; top: -1rem;  width: 50%; height: 16rem; }
-.fundo-cartoes i:nth-child(3) { left: -34%; top: 19rem;   width: 46%; height: 18rem; }
-.fundo-cartoes i:nth-child(4) { right: -34%; top: 21rem;  width: 44%; height: 15rem; }
-#tela-inicio > .envelope { position: relative; z-index: 1; }
-
-.hero { padding: 2.6rem 0 .5rem; text-align: center; }
-.hero h1 {
-  font-size: 2.75rem; margin: .1rem 0 .7rem; font-weight: 400;
-  letter-spacing: -.035em; line-height: 1.08; text-wrap: balance;
-}
-.hero .subtitulo { text-align: center; font-size: 1.02rem; margin-bottom: 2.2rem; }
-/* Rótulo como azulejo pequeno, não como texto solto */
-.hero .chapeu {
-  display: inline-block; margin-bottom: .9rem;
-  background: var(--sage); color: var(--indigo);
-  border-radius: 999px; padding: .3rem .8rem; font-size: .64rem;
-}
-/* No escuro a sálvia é meio-tom: o texto tem que escurecer, não clarear. */
-[data-tema="escuro"] .hero .chapeu { color: #10171A; }
-
-.rotulo-campo { font-size: .7rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .7rem; }
-
-.tempos { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; margin-bottom: 1.7rem; }
-.tempo-op {
-  border: 1px solid var(--linha); background: var(--papel-2); border-radius: var(--raio);
-  padding: 1rem .3rem .85rem; cursor: pointer; text-align: center; color: var(--tinta-suave);
-  font-family: var(--sans); transition: all .16s;
-}
-.tempo-op b { display: block; font-size: 1.6rem; font-weight: 400; color: var(--tinta); font-family: var(--serif); letter-spacing: -.03em; line-height: 1.1; }
-.tempo-op span { font-size: .63rem; letter-spacing: .07em; font-weight: 600; }
-.tempo-op[aria-pressed="true"] { border-color: var(--tinta); background: var(--limao); color: var(--tinta-media); }
-.tempo-op[aria-pressed="true"] b { color: var(--tinta); }
-
-.painel {
-  border: 1px solid var(--linha); border-radius: var(--raio-g);
-  background: var(--papel-2); padding: 1.3rem 1.2rem; margin: 1.7rem 0;
-}
-.painel h3 { margin: 0 0 .9rem; font-size: 1.02rem; font-weight: 700; }
-
-.estat { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; text-align: center; }
-.estat div b { display: block; font-family: var(--serif); font-size: 1.75rem; font-weight: 400; letter-spacing: -.03em; }
-.estat div span { font-size: .64rem; letter-spacing: .07em; font-weight: 600; text-transform: uppercase; color: var(--tinta-suave); }
-
-/* ── Sorteio ────────────────────────────────────────────────────────── */
-.sorteio-palco { min-height: 58vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
-.roleta { font-family: var(--serif); font-size: 1.5rem; color: var(--tinta-suave); min-height: 4.4rem; display: grid; place-items: center; padding: 0 .5rem; }
-.sorteado h1 { font-size: 2rem; margin: .35rem 0 .6rem; }
-.sorteado .gancho { font-family: var(--serif); font-style: italic; font-size: 1.06rem; color: var(--tinta-media); margin: 0 auto 1.5rem; max-width: 26rem; line-height: 1.55; }
-.pilulas { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: center; margin-bottom: 1.5rem; }
-.pilula {
-  font-size: .7rem; font-weight: 600; letter-spacing: .02em;
-  border: 1px solid var(--linha); border-radius: 999px; padding: .32rem .8rem;
-  color: var(--tinta-media); background: var(--papel-2);
-}
-
-/* ── Cronômetro ─────────────────────────────────────────────────────── */
-.crono-barra {
-  position: sticky; top: 0; z-index: 45;
-  background: var(--papel);
-  border-bottom: 1px solid var(--linha);
-  padding: .5rem 1.15rem .45rem;
-  padding-top: max(.5rem, env(safe-area-inset-top));
-}
-.crono-topo { display: flex; align-items: baseline; gap: .7rem; max-width: var(--col); margin: 0 auto; }
-.crono-num { font-family: var(--serif); font-size: 1.35rem; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-.crono-tema { font-size: .76rem; color: var(--tinta-suave); margin-left: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 48%; }
-.crono-num.alerta { color: var(--controverso); }
-.progresso { height: 3px; background: var(--linha); border-radius: 3px; overflow: hidden; margin: .45rem auto 0; max-width: var(--col); }
-.progresso i { display: block; height: 100%; background: var(--acento); width: 0%; transition: width 1s linear; }
-
-/* ── Camadas do documento ───────────────────────────────────────────── */
-.camada { border-top: 1px solid var(--linha); margin-top: 2.6rem; padding-top: 1.8rem; }
-.camada:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
-.camada-rot {
-  font-family: var(--sans); font-size: .68rem; font-weight: 700; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .2rem;
-  display: flex; align-items: center; gap: .5rem;
-}
-.camada-rot span { color: var(--acento); }
-
-/* Cabeça do documento: fios em cima e embaixo, sem caixa. */
-.bloco-meta {
-  border: none; border-top: 1px solid var(--tinta); border-bottom: 1px solid var(--linha);
-  border-radius: 0; padding: 1rem 0 1.1rem; background: none; margin: 1.8rem 0;
-  font-family: var(--sans); font-size: .89rem;
-}
-.bloco-meta h4 { font-family: var(--sans); font-size: .63rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tinta-suave); margin: 0 0 .6rem; font-weight: 700; }
-.bloco-meta ul { margin: 0; padding-left: 1.05rem; }
-.bloco-meta li { margin-bottom: .4rem; color: var(--tinta-media); }
-
-/* ── Síntese de fim de documento ────────────────────────────────────── */
-/* Fecha a leitura com o que precisa sobreviver a ela. Fio grosso em cima
-   para marcar que a exposição terminou; sem caixa, sem canto arredondado. */
-.sintese {
-  border-top: 3px solid var(--tinta); margin-top: 3rem; padding-top: 1.1rem;
-  font-family: var(--sans);
-}
-.sintese-rot {
-  font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-  color: var(--tinta); margin: 0 0 1.4rem;
-}
-.sintese h3 {
-  font-family: var(--sans); font-size: .68rem; font-weight: 700; letter-spacing: .13em;
-  text-transform: uppercase; color: var(--tinta-suave);
-  margin: 1.8rem 0 .75rem; padding-bottom: .4rem; border-bottom: 1px solid var(--linha);
-}
-.sintese h3:first-of-type { margin-top: 0; }
-
-.sintese-defs { margin: 0; font-size: .91rem; line-height: 1.6; }
-.sintese-defs dt { font-family: var(--serif); font-weight: 700; font-size: 1rem; letter-spacing: -.012em; margin-top: .85rem; }
-.sintese-defs dt:first-child { margin-top: 0; }
-.sintese-defs dd { margin: .15rem 0 0; color: var(--tinta-media); }
-
-.sintese-lista { margin: 0; padding-left: 1.1rem; font-size: .91rem; line-height: 1.6; }
-.sintese-lista li { margin-bottom: .6rem; color: var(--tinta-media); }
-
-/* Erro comum e correção, em duas linhas contrastadas: o engano tachado
-   pela cor de controvérsia, a correção em tinta cheia. */
-.sintese-conf { list-style: none; margin: 0; padding: 0; font-size: .91rem; line-height: 1.58; }
-.sintese-conf li { margin-bottom: .95rem; padding-left: .9rem; border-left: 2px solid var(--controverso); }
-.sintese-conf b { display: block; font-weight: 600; color: var(--controverso); }
-.sintese-conf span { display: block; color: var(--tinta); margin-top: .2rem; }
-
-/* ── Fontes ─────────────────────────────────────────────────────────── */
-.fontes { font-family: var(--sans); font-size: .84rem; line-height: 1.55; }
-.fontes li { margin-bottom: .7rem; color: var(--tinta-media); }
-.fontes li:target { background: var(--acento-suave); border-radius: 4px; }
-.fontes .tipo { font-size: .67rem; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-suave); border: 1px solid var(--linha); border-radius: 3px; padding: .04rem .3rem; margin-right: .35rem; }
-
-/* ── Tela de tempo encerrado ────────────────────────────────────────── */
-.fim-palco { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; text-align: center; }
-.selo {
-  font-size: 2.2rem; margin: 0 auto .9rem; width: 4.6rem; height: 4.6rem;
-  display: grid; place-items: center; background: var(--papel-2);
-  border: 1px solid var(--linha); border-radius: 14px;
-  transform: rotate(-3deg); box-shadow: 3px 3.5px 0 var(--acento);
-}
-
-/* ── Prova ──────────────────────────────────────────────────────────── */
-.questao { border-top: 1px solid var(--linha); padding-top: 1.6rem; margin-top: 1.9rem; }
-.questao:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-.questao-num { font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--tinta-suave); margin-bottom: .45rem; }
-.questao-enun { font-family: var(--serif); font-size: 1.08rem; line-height: 1.55; margin: 0 0 1rem; }
-.alts { display: grid; gap: .5rem; }
-.alt {
-  display: flex; gap: .75rem; align-items: flex-start; text-align: left;
-  border: 1px solid var(--linha); border-radius: var(--raio); background: var(--papel-2);
-  padding: .85rem 1rem; cursor: pointer; font-family: var(--sans); font-size: .92rem;
-  line-height: 1.52; color: var(--tinta); transition: all .15s; width: 100%;
-}
-.alt .letra { font-weight: 700; color: var(--tinta-suave); flex: none; font-size: .82rem; padding-top: .08rem; }
-.alt[aria-pressed="true"] { border-color: var(--tinta); background: var(--limao); }
-.alt[aria-pressed="true"] .letra { color: var(--tinta); }
-.alt.certa { border-color: var(--consenso); background: color-mix(in srgb, var(--consenso) 12%, var(--papel-2)); }
-.alt.errada { border-color: #B4453A; background: color-mix(in srgb, #B4453A 12%, var(--papel-2)); }
-.alt:disabled { cursor: default; }
-.porque {
-  font-family: var(--sans); font-size: .87rem; line-height: 1.55; color: var(--tinta-media);
-  border-left: 3px solid var(--linha); padding: .1rem 0 .1rem .85rem; margin-top: .85rem;
-}
-.aviso-prova {
-  border: 1px solid var(--linha); background: var(--limao); border-radius: var(--raio); padding: 1rem 1.15rem;
-  font-family: var(--sans); font-size: .87rem; color: var(--tinta-media); margin-bottom: 1.9rem;
-}
-
-/* ── Resultado ──────────────────────────────────────────────────────── */
-.nota-grande { font-family: var(--serif); font-size: 3.8rem; font-weight: 400; letter-spacing: -.04em; line-height: 1; margin: .3rem 0; }
-.nota-legenda { font-family: var(--sans); font-size: .92rem; color: var(--tinta-media); margin-bottom: 1.7rem; }
-
-/* ── Flashcards ─────────────────────────────────────────────────────── */
-.card-fc {
-  border: 1px solid var(--linha); border-radius: var(--raio); background: var(--papel-2);
-  padding: 1.1rem 1.2rem; margin-bottom: .7rem; cursor: pointer;
-}
-.card-fc .frente { font-family: var(--serif); font-size: 1.05rem; line-height: 1.5; letter-spacing: -.012em; }
-.card-fc .verso { font-family: var(--sans); font-size: .9rem; line-height: 1.55; color: var(--tinta-media); margin-top: .8rem; padding-top: .8rem; border-top: 1px solid var(--linha); display: none; }
-.card-fc.aberto .verso { display: block; }
-.card-fc .dica { font-size: .7rem; color: var(--tinta-suave); letter-spacing: .06em; text-transform: uppercase; margin-top: .5rem; }
-.card-fc.aberto .dica { display: none; }
-
-/* ── Catálogo e histórico ───────────────────────────────────────────── */
-.busca {
-  width: 100%; padding: .85rem 1.1rem; border-radius: 999px;
-  border: 1px solid var(--linha); background: var(--papel-2); color: var(--tinta);
-  font-family: var(--sans); font-size: .95rem; margin-bottom: 1.2rem;
-}
-.busca:focus { outline: none; border-color: var(--tinta); }
-.item-lista { border-bottom: 1px solid var(--linha); padding: .85rem 0; }
-.item-lista .termo { font-family: var(--serif); font-size: 1.03rem; }
-.item-lista .meta { font-size: .74rem; color: var(--tinta-suave); margin-top: .2rem; display: flex; gap: .55rem; flex-wrap: wrap; align-items: center; }
-.tag-pronto { color: var(--consenso); font-weight: 600; }
-.item-lista .g { font-family: var(--serif); font-style: italic; font-size: .92rem; color: var(--tinta-media); margin-top: .35rem; line-height: 1.5; }
-
-.vazio { text-align: center; color: var(--tinta-suave); font-family: var(--serif); font-style: italic; padding: 2.5rem 0; }
-
-/* ── Rodapé de ação fixo ────────────────────────────────────────────── */
 .rodape-acao {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-  background: var(--papel);
-  border-top: 1px solid var(--linha);
-  padding: .7rem 1.15rem calc(.7rem + env(safe-area-inset-bottom));
+  background: var(--cartao); border-top: 1px solid var(--regra);
+  padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
 }
-.rodape-acao .envelope { display: flex; gap: .5rem; align-items: stretch; }
-.rodape-acao .btn { width: auto; flex: 1; font-size: .87rem; padding-left: .8rem; padding-right: .8rem; }
-/* Com três ações o texto quebrava em duas linhas: aperta o corpo e deixa
-   só a ação primária com peso visual. */
-.rodape-acao .envelope:has(> :nth-child(3)) .btn { font-size: .8rem; padding-left: .5rem; padding-right: .5rem; }
+.rodape-acao .envelope { display: flex; gap: .5rem; }
+.rodape-acao .btn { flex: 1; }
 
-.oculto { display: none !important; }
+/* ── Peças do fichário ──────────────────────────────────────────────── */
+.rotulo { font: 500 .72rem/1.35 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-3); margin: 0; }
 
-/* ── Desktop ────────────────────────────────────────────────────────── */
+.ficha { background: var(--ficha); border: 1px solid var(--regra-2); padding: 1.1rem 1.1rem 1.4rem; position: relative; }
+.ficha-furo::after {
+  content: ""; position: absolute; left: 50%; bottom: -8px; width: 15px; height: 15px; border-radius: 50%;
+  background: var(--cartao); border: 1px solid var(--regra-2); transform: translateX(-50%);
+}
+.ficha-cab {
+  display: flex; justify-content: space-between; gap: .5rem;
+  font: 500 .72rem var(--mono); letter-spacing: .06em; color: var(--tinta-2);
+  border-bottom: 1px solid var(--carimbo); padding-bottom: .45rem;
+}
+.ficha-termo { font: 650 2.1rem/1.02 var(--display); letter-spacing: -.01em; margin: .9rem 0 .5rem; text-wrap: balance; }
+.ficha-gancho { font-size: .95rem; line-height: 1.5; color: var(--tinta-2); margin: 0; }
+
+.carimbo {
+  display: inline-block; border: 2px solid currentColor; color: var(--carimbo); background: none;
+  font: 500 .7rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  padding: 5px 8px 4px; transform: rotate(-3deg); opacity: .92; cursor: default;
+}
+button.carimbo { cursor: pointer; }
+.carimbo.consenso { color: var(--consenso); } .carimbo.emergente { color: var(--emergente); }
+.carimbo.controverso { color: var(--controverso); } .carimbo.especulacao { color: var(--especulacao); }
+.carimbo .n { opacity: .75; margin-left: 6px; }
+@media (prefers-reduced-motion: no-preference) { .carimbo.anima { animation: batida .35s cubic-bezier(.2, 1.6, .4, 1) both; } }
+@keyframes batida { from { transform: rotate(-12deg) scale(1.6); opacity: 0; } to { transform: rotate(-3deg) scale(1); opacity: .92; } }
+
+.btn {
+  display: block; width: 100%; border: 1px solid var(--tinta); background: var(--tinta); color: var(--ficha);
+  font: 500 .84rem var(--mono); letter-spacing: .06em; text-transform: uppercase;
+  padding: .95rem .8rem; text-align: center; cursor: pointer;
+}
+.btn.fio { background: transparent; color: var(--tinta); }
+.btn.discreto { background: transparent; border-color: transparent; color: var(--tinta-3); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.acoes { display: grid; gap: .5rem; }
+
+.regua { display: flex; gap: 4px; }
+.regua i { flex: 1; height: 3px; background: var(--regra-2); }
+.regua i.feita { background: var(--tinta); }
+
+.alts { display: grid; gap: .5rem; }
+.alt {
+  display: flex; gap: .7rem; align-items: baseline; width: 100%; text-align: left;
+  background: transparent; border: 1px solid var(--regra); padding: .75rem .85rem;
+  font: .95rem/1.45 var(--texto); color: var(--tinta); cursor: pointer;
+}
+.alt .letra { font: 500 .75rem var(--mono); color: var(--tinta-3); flex: none; }
+.alt[aria-pressed="true"] { border: 2px solid var(--tinta); background: var(--selecao); padding: calc(.75rem - 1px) calc(.85rem - 1px); }
+.alt.certa { border: 2px solid var(--consenso); padding: calc(.75rem - 1px) calc(.85rem - 1px); }
+.alt.certa .letra { color: var(--consenso); }
+.alt.errada { border: 1px dashed var(--carimbo); color: var(--tinta-3); text-decoration: line-through; text-decoration-color: var(--carimbo); }
+.alt:disabled { cursor: default; }
+.porque { border-left: 2px solid var(--consenso); padding: .1rem 0 .1rem .8rem; font-size: .9rem; line-height: 1.55; color: var(--tinta-2); margin: 0; }
+
+.lista { display: grid; }
+.item-lista { border-bottom: 1px solid var(--regra-2); padding: .8rem 0; display: grid; gap: .15rem; }
+button.item-lista { background: none; border-width: 0 0 1px; text-align: left; cursor: pointer; width: 100%; }
+.item-lista .termo { font: 560 1.02rem/1.3 var(--texto); }
+.item-lista .meta { font: .72rem var(--mono); letter-spacing: .04em; color: var(--tinta-3); display: flex; gap: .5rem; flex-wrap: wrap; }
+.vazio { color: var(--tinta-3); font-style: italic; padding: 1.5rem 0; margin: 0; }
+.busca {
+  width: 100%; padding: .75rem .9rem; border: 1px solid var(--regra); background: var(--ficha); color: var(--tinta);
+  font: .9rem var(--mono); border-radius: 0;
+}
+.busca:focus { outline: none; border-color: var(--tinta); }
+
+/* ── Hoje ───────────────────────────────────────────────────────────── */
+.hoje-cab { display: flex; justify-content: space-between; gap: .5rem; margin-top: .4rem; }
+
+/* ── Lição ──────────────────────────────────────────────────────────── */
+.licao { max-width: var(--col); margin: 0 auto; min-height: calc(100vh - 7rem); display: flex; flex-direction: column; gap: 1rem; padding-top: max(.9rem, env(safe-area-inset-top)); }
+.licao-topo { display: flex; justify-content: space-between; align-items: center; font: 500 .72rem var(--mono); letter-spacing: .06em; color: var(--tinta-2); }
+.licao-topo button { background: none; border: 0; padding: .3rem .4rem .3rem 0; cursor: pointer; font: 500 .9rem var(--mono); color: var(--tinta-2); }
+.licao-corpo { display: grid; gap: 1rem; align-content: start; }
+.licao-corpo .leitura { font-size: 1.12rem; line-height: 1.62; }
+.licao-corpo .leitura p { margin: 0; }
+.licao-gancho { font: 500 1.55rem/1.25 var(--display); letter-spacing: -.005em; text-wrap: balance; margin: 1.2rem 0 0; }
+.licao-pergunta { font: 560 1.1rem/1.4 var(--texto); margin: 0; }
+.licao-ref { font: .8rem/1.45 var(--mono); color: var(--tinta-3); border-top: 1px dashed var(--regra); padding-top: .5rem; margin: 0; }
+.licao-figura svg { width: 100%; height: auto; display: block; }
+
+/* ── Resultado ──────────────────────────────────────────────────────── */
+.res-cab { display: flex; justify-content: space-between; align-items: center; gap: .8rem; margin-top: 1rem; }
+.res-termo { font: 650 1.9rem/1.05 var(--display); margin: 0; text-wrap: balance; }
+.mini-mapa { width: 100%; aspect-ratio: 2 / 1; border: 1px solid var(--regra-2); background: var(--ficha); display: block; }
+.compart { font: .78rem/1.5 var(--mono); white-space: pre-line; border: 1px dashed var(--regra); padding: .7rem; color: var(--tinta-2); margin: 0; }
+
+/* ── Acervo ─────────────────────────────────────────────────────────── */
+.acervo { background: var(--ficha); border: 1px solid var(--regra-2); position: relative; touch-action: none; user-select: none; -webkit-user-select: none; }
+.acervo svg { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; max-height: 68vh; cursor: grab; }
+.acervo-ctrl { position: absolute; right: 8px; top: 8px; display: grid; gap: 4px; }
+.acervo-ctrl button { width: 34px; height: 34px; border: 1px solid var(--regra); background: var(--ficha); color: var(--tinta); font: 500 1rem var(--mono); cursor: pointer; padding: 0; }
+.acervo-info { display: grid; gap: .35rem; }
+.no { cursor: pointer; }
+
+/* ── Documento (Aprofundar): registro editorial, sem caixas ─────────── */
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 650; line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; }
+.leitura h1 { font-size: 2.1rem; margin: .4rem 0 .5rem; }
+.chapeu { font: 500 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-3); margin: 1rem 0 .3rem; }
+.doc h1 { font-size: 2.2rem; margin: 0 0 .5rem; }
+.subtitulo { font-size: 1.05rem; font-style: italic; color: var(--tinta-2); margin: 0 0 1.2rem; line-height: 1.5; }
+
+.leitura { font-size: 1.06rem; line-height: 1.72; }
+.leitura p { margin: 0 0 1.1rem; }
+.leitura p.abre::first-letter { float: left; font: 650 3.3rem/.8 var(--display); padding: .1em .08em 0 0; }
+.leitura strong { font-weight: 600; }
+.leitura h3 { font-size: 1.2rem; margin: 1.9rem 0 .5rem; }
+.leitura ul, .leitura ol { margin: 0 0 1.1rem; padding-left: 1.25rem; }
+.leitura li { margin-bottom: .45rem; }
+.leitura a { color: var(--tinta); text-underline-offset: 2px; }
+.leitura code { font-family: var(--mono); font-size: .86em; }
+
+.formula { font-size: 1.12rem; text-align: center; border-top: 1px solid var(--regra-2); border-bottom: 1px solid var(--regra-2); padding: 1.1rem .4rem; margin: 1.6rem 0; overflow-x: auto; line-height: 1.75; }
+.formula .leg { display: block; font: .75rem var(--mono); color: var(--tinta-3); margin-top: .6rem; }
+blockquote { margin: 1.4rem 0; padding: .2rem 0 .2rem 1rem; border-left: 2px solid var(--regra); font-style: italic; color: var(--tinta-2); }
+blockquote cite { display: block; font: normal .75rem var(--mono); color: var(--tinta-3); margin-top: .5rem; }
+
+sup.cit { font: 500 .6em var(--mono); vertical-align: super; line-height: 0; }
+sup.cit a { color: var(--carimbo); text-decoration: none; padding: 0 .1em; }
+
+/* Caixa epistêmica vira trecho entre fios, com o rótulo como carimbo. */
+.marca { border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; padding: .8rem 0 .6rem; margin: 1.8rem 0; font-size: .95rem; line-height: 1.62; }
+.marca > .rot {
+  display: inline-block; border: 2px solid currentColor; font: 500 .66rem/1 var(--mono); letter-spacing: .08em;
+  text-transform: uppercase; padding: 5px 8px 4px; transform: rotate(-2deg); margin-bottom: .6rem;
+}
+.marca p { color: var(--tinta-2); margin: 0 0 .6rem; }
+.marca p:last-child { margin-bottom: 0; }
+.marca.consenso { color: var(--consenso); } .marca.emergente { color: var(--emergente); }
+.marca.controverso { color: var(--controverso); } .marca.especulacao { color: var(--especulacao); }
+
+.figura { margin: 1.8rem 0; }
+.figura svg { width: 100%; height: auto; display: block; }
+.figura figcaption { font: .76rem/1.55 var(--mono); color: var(--tinta-3); margin-top: .6rem; padding-top: .5rem; border-top: 1px solid var(--regra-2); }
+.svg-tinta { fill: var(--tinta); } .svg-suave { fill: var(--tinta-3); } .svg-acento { fill: var(--carimbo); }
+.svg-t-linha { stroke: var(--tinta); } .svg-s-linha { stroke: var(--tinta-3); } .svg-a-linha { stroke: var(--carimbo); } .svg-l-linha { stroke: var(--regra); }
+.svg-rot { font-family: var(--mono); font-size: 10.5px; fill: var(--tinta-2); }
+.svg-rot-p { font-family: var(--mono); font-size: 9px; fill: var(--tinta-3); }
+
+.tabela-env { overflow-x: auto; margin: 1.4rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--regra-2); vertical-align: top; }
+th { font: 500 .7rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-3); }
+
+.camada { border-top: 1px solid var(--regra); margin-top: 2.4rem; padding-top: 1.6rem; }
+.camada:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+.camada-rot { font: 500 .7rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-3); margin: 0 0 .8rem; }
+.camada-rot span { color: var(--carimbo); }
+
+.bloco-meta { border-top: 1px solid var(--tinta); border-bottom: 1px solid var(--regra-2); padding: 1rem 0; margin: 1.6rem 0; font-size: .92rem; }
+.bloco-meta h4 { font: 500 .66rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-3); margin: 0 0 .5rem; }
+.bloco-meta ul { margin: 0; padding-left: 1.05rem; }
+.bloco-meta li { margin-bottom: .35rem; color: var(--tinta-2); }
+
+.sintese { border-top: 3px solid var(--tinta); margin-top: 2.8rem; padding-top: 1rem; }
+.sintese-rot { font: 500 .7rem var(--mono); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 1.2rem; }
+.sintese h3 { font: 500 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-3); margin: 1.7rem 0 .7rem; padding-bottom: .4rem; border-bottom: 1px solid var(--regra-2); }
+.sintese h3:first-of-type { margin-top: 0; }
+.sintese-defs { margin: 0; font-size: .94rem; line-height: 1.6; }
+.sintese-defs dt { font-weight: 600; margin-top: .8rem; }
+.sintese-defs dt:first-child { margin-top: 0; }
+.sintese-defs dd { margin: .15rem 0 0; color: var(--tinta-2); }
+.sintese-lista { margin: 0; padding-left: 1.1rem; font-size: .94rem; line-height: 1.6; }
+.sintese-lista li { margin-bottom: .55rem; color: var(--tinta-2); }
+.sintese-conf { list-style: none; margin: 0; padding: 0; font-size: .94rem; line-height: 1.58; }
+.sintese-conf li { margin-bottom: .9rem; padding-left: .9rem; border-left: 2px solid var(--carimbo); }
+.sintese-conf b { display: block; font-weight: 600; color: var(--tinta-2); text-decoration: line-through; text-decoration-color: var(--carimbo); }
+.sintese-conf span { display: block; margin-top: .2rem; }
+
+.fontes { font: .8rem/1.55 var(--mono); padding-left: 1.4rem; }
+.fontes li { margin-bottom: .7rem; color: var(--tinta-2); }
+.fontes li:target { background: var(--selecao); }
+.fontes .tipo { font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-3); border: 1px solid var(--regra); padding: 0 .3rem; margin-right: .35rem; }
+
+/* ── Prova do documento ─────────────────────────────────────────────── */
+.questao { border-top: 1px solid var(--regra-2); padding-top: 1.4rem; margin-top: 1.6rem; }
+.questao:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.questao-num { font: 500 .7rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-3); margin: 0 0 .4rem; }
+.questao-enun { font-size: 1.06rem; line-height: 1.5; margin: 0 0 .9rem; }
+.questao .porque { margin-top: .8rem; }
+.aviso-prova { border: 1px dashed var(--regra); padding: .9rem 1rem; font-size: .9rem; color: var(--tinta-2); margin: 0; }
+.nota-grande { font: 650 3.6rem/1 var(--display); margin: .3rem 0; }
+
+.card-fc { border: 1px solid var(--regra-2); background: var(--ficha); padding: 1rem 1.1rem; cursor: pointer; }
+.card-fc .frente { font-size: 1.02rem; line-height: 1.5; }
+.card-fc .verso { font-size: .92rem; line-height: 1.55; color: var(--tinta-2); margin-top: .8rem; padding-top: .8rem; border-top: 1px solid var(--regra-2); display: none; }
+.card-fc.aberto .verso { display: block; }
+.card-fc .dica { font: .68rem var(--mono); color: var(--tinta-3); letter-spacing: .06em; text-transform: uppercase; margin-top: .5rem; }
+.card-fc.aberto .dica { display: none; }
+
 @media (min-width: 720px) {
   body { font-size: 18px; }
-  .leitura { font-size: 1.14rem; }
-  h1 { font-size: 2.3rem; }
-  .hero { padding: 3.4rem 0 1rem; }
+  .tela { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
-
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
-
-@media print {
-  .barra, .crono-barra, .rodape-acao, .icone-btn { display: none !important; }
-  .tela { display: block !important; }
-}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

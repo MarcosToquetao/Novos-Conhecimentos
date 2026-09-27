@@ -1,13 +1,13 @@
 {
   "name": "Novos Conhecimentos",
   "short_name": "Conhecimentos",
-  "description": "Sorteie um conceito, estude por um tempo determinado e teste o que de fato ficou.",
+  "description": "Uma ficha por dia: um conceito curioso e bem estabelecido da ciência, em poucos minutos.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F0EBE1",
-  "theme_color": "#F0EBE1",
+  "background_color": "#E3E7DE",
+  "theme_color": "#E3E7DE",
   "lang": "pt-BR",
   "icons": [
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
