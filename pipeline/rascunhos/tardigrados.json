@@ -1,11 +1,11 @@
 {
  "id": "tardigrados",
  "tipo": "licao",
- "criado": "2026-09-27T16:58:04",
- "modelo": "deepseek-flash",
+ "criado": "2026-09-27T19:23:39",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Um animal microscópico pode passar anos sem água, sem comida e sem oxigênio. Quando você pinga uma gota d'água, ele volta a andar como se nada tivesse acontecido.",
+  "gancho": "Um animal microscópico pode passar anos sem água, sem comida e sem oxigênio, recolher as pernas, encolher até virar uma bolinha e desligar quase tudo. Basta uma gota d'água para ele voltar a andar como se nada tivesse acontecido.",
   "telas": [
    {
     "tipo": "foto",
@@ -15,13 +15,16 @@
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Quando a água acaba, o tardígrado recolhe as pernas, encolhe o corpo até virar uma bolinha e desliga quase tudo. Esse estado se chama <strong>criptobiose</strong>.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Um tardígrado em estado ativo. Em um metro quadrado de musgo podem viver mais de 2 milhões deles.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "foto",
     "foto": 2,
-    "legenda": "No estado de tonel, o corpo encolhe e as pernas se retraem. Não é morte, é suspensão.",
+    "legenda": "No estado de tonel, o corpo encolhe e as pernas se retraem. O teor de água cai a 1% do normal.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -33,31 +36,65 @@
     "max": 100,
     "escala": "log",
     "resposta": 0.01,
-    "legenda": "O metabolismo fica abaixo de 0,01% do habitual, e o teor de água cai a 1% do normal.",
+    "legenda": "O metabolismo fica abaixo de 0,01% do habitual. Não é morte: é suspensão.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "pergunta",
-    "q": "O que protege as células do tardígrado quando a água sai?",
-    "alts": [
-     "Um açúcar chamado trealose, que forma uma camada protetora",
-     "Proteínas desordenadas que formam uma matriz vítrea no citoplasma",
-     "Uma camada de gordura que impede a perda de água"
+    "tipo": "comparar",
+    "a": "Treálose (achava-se)",
+    "b": "Proteínas desordenadas (sabe-se)",
+    "linhas": [
+     {
+      "aspecto": "Quantidade no corpo",
+      "a": "presente, mas insuficiente",
+      "b": "abundantes durante a seca"
+     },
+     {
+      "aspecto": "Mecanismo",
+      "a": "protegeria membranas",
+      "b": "formam uma matriz vítrea que segura as estruturas celulares"
+     },
+     {
+      "aspecto": "Evidência",
+      "a": "funciona em outros organismos",
+      "b": "demonstrada em tardígrados"
+     }
     ],
-    "correta": 1,
-    "porque": "Os tardígrados produzem trealose, mas não o suficiente. O que segura as estruturas celulares são proteínas sem forma fixa que se ligam às membranas."
+    "legenda": "Por muito tempo se achou que a resistência à seca vinha de um açúcar. Hoje se sabe que o serviço é feito por proteínas sem forma fixa.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Dsup se liga ao nucleossomo",
+      "texto": "A proteína se prende aos carretéis onde o DNA se enrola."
+     },
+     {
+      "nome": "Barreira contra radicais",
+      "texto": "Ela impede que radicais hidroxila atinjam o DNA."
+     },
+     {
+      "nome": "Reparo é ativado",
+      "texto": "Em algumas espécies, genes de reparo do DNA também são acionados."
+     }
+    ],
+    "legenda": "Contra radiação, a proteína Dsup protege o material genético bloqueando o ataque químico.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Um tardígrado resiste a 5.000 Gy de radiação. O que faz esse serviço?",
+    "q": "O que o experimento da missão FOTON-M3 mostrou sobre a resistência dos tardígrados no espaço?",
     "alts": [
-     "A mesma matriz vítrea que protege contra a seca",
-     "Uma proteína chamada Dsup, que se liga ao DNA e o protege dos radicais hidroxila",
-     "O corpo encolhido, que diminui a área exposta à radiação"
+     "Eles são indestrutíveis e sobrevivem a qualquer condição espacial",
+     "A maioria sobreviveu ao vácuo protegida da radiação ultravioleta, mas quase nenhum resistiu à radiação solar direta",
+     "Nenhum tardígrado sobreviveu ao vácuo do espaço"
     ],
     "correta": 1,
-    "porque": "A Dsup se prende aos nucleossomos e impede que os radicais hidroxila atinjam o material genético."
+    "porque": "Dos tardígrados protegidos da radiação ultravioleta, 68% sobreviveram ao vácuo. Sob radiação solar completa, só três indivíduos resistiram. Toleram, mas não são indestrutíveis."
    },
    {
     "tipo": "pontos",
@@ -68,26 +105,38 @@
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A capacidade de virar tonel varia entre espécies. Um estudo de 2014 mostrou que um tardígrado marinho resiste à dessecação completa, enquanto outro da mesma região é vulnerável.</p>"
+    "tipo": "pergunta",
+    "q": "Um tardígrado marinho e um de água doce entram em tonel do mesmo jeito?",
+    "alts": [
+     "Sim, todos os tardígrados usam o mesmo mecanismo",
+     "Não, a capacidade varia: um tardígrado marinho estudado em 2014 resistiu à dessecação completa, enquanto outro da mesma região foi vulnerável",
+     "Tardígrados marinhos nunca entram em criptobiose"
+    ],
+    "correta": 1,
+    "porque": "Até pouco tempo se supunha que tardígrados marinhos não entravam em tonel. O estudo de 2014 mostrou que a capacidade existe, mas não é igual para todos."
    }
   ],
-  "fecho": "A criptobiose é um estado extremo, mas não é o único jeito de um animal mudar de forma conforme o ambiente. Isso tem nome: plasticidade fenotípica."
+  "fecho": "A criptobiose é um estado extremo de suspensão, mas não é o único jeito de um animal mudar de forma conforme o ambiente. Isso tem nome: plasticidade fenotípica."
  },
  "erros": [],
- "avisos": [
-  "tela 6: duas perguntas seguidas"
- ],
+ "avisos": [],
  "alertas_jev": [
-  "tela 4: o tipo visual não combina com o conteúdo (0.39); troque de tipo ou use texto",
-  "tela 5: gabarito suspeito (0.53)",
-  "tela 7: marcada consenso, JEV diz emergente (0.66)",
-  "tela 7: o tipo visual não combina com o conteúdo (0.39); troque de tipo ou use texto"
+  "tela 4: o tipo visual não combina com o conteúdo (0.38); troque de tipo ou use texto",
+  "tela 5: trata de disputa ou evidência contestada (0.92); lição só ensina o núcleo estabelecido",
+  "tela 6: marcada consenso, JEV diz emergente (0.77)",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.06)",
+  "tela 8: marcada consenso, JEV diz emergente (0.67)",
+  "tela 8: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto",
+  "tela 9: a pergunta depende de algo que a lição ainda não mostrou (0.09)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 3.33,
+   "score": 3.37,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -99,64 +148,79 @@
     "0": 0,
     "1": 0,
     "2": 0,
-    "3": 0.67,
-    "4": 0.33
+    "3": 0.62,
+    "4": 0.38
    },
-   "confidence": 0.72
+   "confidence": 0.68
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.25
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
     "controverso": 0,
     "consenso": 1,
+    "emergente": 0,
     "especulacao": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.03
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.79
+   "noul": 0.04
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.24
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.03,
+    "consenso": 0.51,
+    "emergente": 0.28,
+    "especulacao": 0.18
+   },
+   "confidence": 0.34
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.05
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.3
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "controverso": 0.01,
-    "consenso": 0.98,
+    "controverso": 0,
+    "consenso": 1,
+    "emergente": 0,
     "especulacao": 0
    },
-   "confidence": 0.98
+   "confidence": 0.99
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.16
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.23
-  },
-  "encaixe_3": {
-   "type": "noul",
-   "noul": 0.85
+   "noul": 0.06
   },
   "ia_4": {
    "type": "noul",
@@ -166,60 +230,130 @@
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.15,
-    "controverso": 0.02,
-    "consenso": 0.82,
+    "controverso": 0.01,
+    "consenso": 0.74,
+    "emergente": 0.24,
     "especulacao": 0.01
    },
-   "confidence": 0.76
+   "confidence": 0.65
   },
-  "disputa_4": {
-   "type": "noul",
-   "noul": 0.06
-  },
-  "encaixe_4": {
-   "type": "noul",
-   "noul": 0.39
-  },
-  "ambigua_5": {
-   "type": "noul",
-   "noul": 0.53
-  },
-  "ambigua_6": {
-   "type": "noul",
-   "noul": 0.17
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.29
-  },
-  "marca_7": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "emergente": 0.66,
-    "especulacao": 0.01,
-    "consenso": 0.28,
-    "controverso": 0.05
-   },
-   "confidence": 0.56
-  },
-  "disputa_7": {
-   "type": "noul",
-   "noul": 0.14
-  },
-  "encaixe_7": {
-   "type": "noul",
-   "noul": 0.39
-  },
-  "ia_8": {
+  "tecnico_4": {
    "type": "noul",
    "noul": 0.33
   },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.51,
+    "especulacao": 0,
+    "consenso": 0.48,
+    "controverso": 0.01
+   },
+   "confidence": 0.35
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.77,
+    "especulacao": 0,
+    "consenso": 0.22,
+    "controverso": 0.01
+   },
+   "confidence": 0.69
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.67,
+    "especulacao": 0,
+    "consenso": 0.29,
+    "controverso": 0.04
+   },
+   "confidence": 0.56
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.12
+  },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.26
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.24
   }
  },
- "custo_usd": 0.00917
+ "custo_usd": 0.00188
 }

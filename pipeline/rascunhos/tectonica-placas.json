@@ -1,47 +1,31 @@
 {
  "id": "tectonica-placas",
  "tipo": "licao",
- "criado": "2026-09-27T16:27:53",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:13:32",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
   "gancho": "A cordilheira dos Himalaias cresce alguns centímetros por ano. Ninguém sente, mas a Índia está empurrando a Ásia para cima há milhões de anos.",
   "telas": [
    {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Diagramas do estudo de Tanya Atwater (1970), que usou padrões magnéticos para explicar a evolução tectônica da costa oeste da América do Norte.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
     "tipo": "texto",
-    "html": "<p>A litosfera é a camada externa rígida da Terra. Ela está quebrada em sete ou oito placas principais, que se movem sobre uma camada mais quente e mole, a astenosfera.</p>"
-   },
-   {
-    "tipo": "estimar",
-    "q": "Em média, qual é a velocidade máxima com que duas placas se movem uma em relação à outra?",
-    "unidade": "centímetros por ano",
-    "min": 0,
-    "max": 100,
-    "escala": "linear",
-    "resposta": 10,
-    "legenda": "O movimento relativo entre placas geralmente varia de zero a 10 centímetros por ano. A placa de Nazca chega a 16 centímetros por ano.",
+    "html": "<p>A litosfera é a camada externa rígida da Terra. Ela está quebrada em sete ou oito placas principais, que se movem sobre uma camada mais quente e mole, a astenosfera.</p>",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "camadas",
-    "camadas": [
-     {
-      "nome": "Litosfera",
-      "nota": "crosta e parte superior do manto, rígida"
-     },
-     {
-      "nome": "Astenosfera",
-      "nota": "mais quente, flui com facilidade"
-     }
-    ],
-    "eixo": {
-     "topo": "superfície",
-     "base": "interior"
-    },
-    "legenda": "As placas são pedaços da litosfera que deslizam sobre a astenosfera.",
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Corte da litosfera continental e oceânica sobre a astenosfera. A crosta oceânica é mais densa e afunda mais.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 3
    },
    {
     "tipo": "comparar",
@@ -139,18 +123,23 @@
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Hoje a tectônica de placas é usada para explicar a geologia de regiões concretas, como a formação das ilhas japonesas, os Variscides na Europa e a orogenia Laramide na América do Norte.</p>"
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "Vulcões Parinacota e Pomerape, nos Andes, formados pela subducção de uma placa sob a outra. A água liberada na subducção gera o magma.",
+    "marca": "consenso",
+    "fonte": 3
    }
   ],
   "fecho": "As placas explicam a geologia de regiões específicas. E o que define os biomas terrestres que vemos hoje?"
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [
-  "tela 2: o tipo visual não combina com o conteúdo (0.44); troque de tipo ou use texto"
- ],
+ "alertas_jev": [],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.84
+  },
   "interesse": {
    "type": "score",
    "score": 2.77,
@@ -172,80 +161,115 @@
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.25
   },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.04
-  },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.31
-  },
-  "marca_2": {
+  "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
     "emergente": 0,
+    "consenso": 1,
     "especulacao": 0,
     "controverso": 0
    },
    "confidence": 0.99
   },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.72
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.05
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.44
+   "noul": 0.04
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.28
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
     "emergente": 0,
+    "consenso": 1,
     "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.21
+  },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.05
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.84
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.38
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
     "emergente": 0,
+    "consenso": 1,
     "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.22
+  },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.04
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.93
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.32
   },
   "ambigua_5": {
    "type": "noul",
@@ -253,49 +277,65 @@
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.35
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.84,
+    "consenso": 0.81,
     "emergente": 0.01,
     "especulacao": 0,
-    "controverso": 0.15
+    "controverso": 0.18
    },
-   "confidence": 0.78
+   "confidence": 0.75
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.32
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.1
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.92
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.22
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.19
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.29
   },
   "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 1,
     "emergente": 0,
     "especulacao": 0,
-    "consenso": 1,
     "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.33
+  },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.09
   },
   "encaixe_8": {
    "type": "noul",
@@ -303,12 +343,31 @@
   },
   "ia_9": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.21
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.3
   },
   "disputa_9": {
    "type": "noul",
    "noul": 0.05
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.89
   }
  },
- "custo_usd": 0.00802
+ "custo_usd": 0.00215
 }

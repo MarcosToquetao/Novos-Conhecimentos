@@ -1,0 +1,280 @@
+{
+ "id": "agente-principal",
+ "tipo": "licao",
+ "criado": "2026-09-27T19:18:08",
+ "modelo": "reaproveitada",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1776, Adam Smith notou que um diretor cuida do dinheiro alheio sem o mesmo cuidado ansioso que teria com o próprio. Só quase dois séculos depois a economia conseguiu dar nome, desenho e custo a esse desalinhamento, que não envolve só empresas: aparece na política, na saúde e em qualquer relação em que uma pessoa decide em nome de outra.",
+  "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Um conselho de administração decide o futuro de uma empresa. Mas quem ali administra o dinheiro dos outros nem sempre tem os mesmos interesses dos donos.",
+    "fonte": 3
+   },
+   {
+    "tipo": "comparar",
+    "a": "Principal (acionista)",
+    "b": "Agente (executivo)",
+    "linhas": [
+     {
+      "aspecto": "Papel",
+      "a": "dono do negócio",
+      "b": "contratado para decidir"
+     },
+     {
+      "aspecto": "Informação",
+      "a": "vê relatórios e resultados prontos",
+      "b": "vive as operações e os números de dentro"
+     },
+     {
+      "aspecto": "Interesse imediato",
+      "a": "valor da empresa no longo prazo",
+      "b": "bônus, prestígio, segurança do próprio emprego"
+     }
+    ],
+    "legenda": "A assimetria de informação entre quem decide e quem é afetado pela decisão cria um desalinhamento que não depende de má-fé.",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Se o diretor for uma pessoa honesta e bem-intencionada, o problema agente-principal desaparece?",
+    "alts": [
+     "Sim, basta escolher pessoas de confiança",
+     "Não: o problema decorre da estrutura de informação, mesmo com todos agindo de boa-fé",
+     "Desaparece se o salário for alto o suficiente"
+    ],
+    "correta": 1,
+    "porque": "O principal não consegue observar todo esforço e toda informação do agente. Só por confiança não há como garantir que os interesses dos dois vão sempre coincidir, porque a assimetria de informação é estrutural."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "1776",
+      "texto": "Adam Smith descreve o descuido de administradores com 'o dinheiro alheio'."
+     },
+     {
+      "nome": "1973",
+      "texto": "Stephen Ross cria os termos 'principal' e 'agente' na economia."
+     },
+     {
+      "nome": "1976",
+      "texto": "Jensen e Meckling formalizam a teoria e criam o conceito de custos de agência."
+     }
+    ],
+    "legenda": "Uma intuição de 1776 virou teoria econômica formal duzentos anos depois.",
+    "fonte": 2
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Monitoramento",
+      "nota": "auditorias, conselhos, relatórios pagos pelo principal"
+     },
+     {
+      "nome": "Vinculação",
+      "nota": "cláusulas contratuais, bônus sujeitos a metas de longo prazo"
+     },
+     {
+      "nome": "Perda residual",
+      "nota": "desalinhamento que sobra mesmo com todo o resto"
+     }
+    ],
+    "eixo": {
+     "topo": "o que se tenta reduzir",
+     "base": "o que nunca se elimina por completo"
+    },
+    "legenda": "Os três custos de agência. A perda residual existe porque monitoramento perfeito custa mais do que vale e contrato que prevê tudo é impossível.",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Na saúde, o médico decide procedimentos que afetam a conta do paciente. A assimetria de informação está em toda relação de delegação, não só em empresas.",
+    "fonte": 14
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual foi a solução clássica que a teoria propôs para reduzir o desalinhamento entre executivos e acionistas?",
+    "alts": [
+     "Aumentar o salário fixo dos executivos",
+     "Vincular parte da remuneração ao desempenho da empresa",
+     "Dar poder de veto aos acionistas sobre qualquer decisão do dia a dia"
+    ],
+    "correta": 1,
+    "porque": "Bônus, ações e opções foram desenhados para que o executivo ganhe mais quando o acionista ganha mais. Mas a eficácia real dessa solução tem evidência mista, porque a negociação do próprio pacote de incentivos pode sofrer do mesmo problema de agência.",
+    "fonte": 5
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Eleitores e políticos",
+      "texto": "o eleitor delega decisões a um político que tem prioridades próprias e informação que o eleitor não vê"
+     },
+     {
+      "nome": "Pacientes e médicos",
+      "texto": "o paciente depende da recomendação de um profissional que também ganha com os procedimentos que indica"
+     },
+     {
+      "nome": "Seguradoras e segurados",
+      "texto": "o segurado assume mais riscos porque a seguradora não observa seu comportamento completo"
+     }
+    ],
+    "legenda": "Toda relação de delegação sob assimetria de informação carrega alguma forma do problema agente-principal.",
+    "fonte": 14
+   }
+  ],
+  "fecho": "O mesmo desalinhamento aparece quando alguém vende um carro usado e conhece o defeito que você não conhece. É o que George Akerlof chamou de mercado de limões."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
+ "alertas_jev": [
+  "tela 7: resposta óbvia, acerta quem não leu (0.69)",
+  "tela 8: o tipo visual não combina com o conteúdo (0.21); troque de tipo ou use texto",
+  "nota do editor sobre esta lição: O tema foi mal explorado e ficou muito na ideia e pouco no exemplo pratico. Também faltam elementos visuais e de esquemas para melhor entendimento do conceito. Conceitos politicos/economicos sao importantes e devem estar presentes entre os conceitos, mas eles devem ser apresentados de uma forma a atrair tambem alguem que é de uma área totalmente diferente."
+ ],
+ "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "interesse": {
+   "type": "score",
+   "score": 2.89,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.11,
+    "3": 0.89,
+    "4": 0
+   },
+   "confidence": 0.9
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.97
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.81
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.83
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.69
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.21
+  }
+ },
+ "custo_usd": 0.00447
+}

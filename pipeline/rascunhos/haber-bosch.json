@@ -1,12 +1,17 @@
 {
  "id": "haber-bosch",
  "tipo": "licao",
- "criado": "2026-09-27T16:28:34",
- "modelo": "deepseek-flash",
+ "criado": "2026-09-27T19:20:29",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "O ar que você respira é 78% nitrogênio. Mesmo assim, quase metade do nitrogênio no seu corpo passou por uma fábrica antes de chegar até você.",
+  "gancho": "O ar que você respira é 78% nitrogênio. Mesmo assim, quase metade do nitrogênio no seu corpo passou por uma fábrica antes de chegar até você. É o processo Haber-Bosch, que transforma o gás inerte do ar em amônia para fertilizantes.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A amônia que fertiliza os campos do mundo é produzida em fábricas como esta, a partir de ar, água e gás natural."
+   },
    {
     "tipo": "texto",
     "html": "<p>Os dois átomos de nitrogênio do ar são unidos por uma ligação tripla muito forte. A molécula é quase inerte: quebrá-la consome muita energia.</p>",
@@ -14,27 +19,29 @@
     "fonte": 2
    },
    {
-    "tipo": "estimar",
-    "q": "Em 1909, quanto de amônia Fritz Haber conseguiu produzir por hora na bancada, em mililitros?",
-    "unidade": "mL por hora",
-    "min": 1,
-    "max": 10000,
-    "escala": "log",
-    "resposta": 125,
-    "legenda": "Cerca de 125 mL por hora. Quatro anos depois, a primeira fábrica já produzia 20 toneladas por dia.",
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Na natureza, apenas bactérias nas raízes de leguminosas, como este trevo, conseguem quebrar a ligação tripla do nitrogênio.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
    },
    {
-    "tipo": "curva",
-    "forma": "saturacao",
-    "eixo_x": "temperatura",
-    "eixo_y": "velocidade da reação",
-    "marco": {
-     "x": 0.7,
-     "rotulo": "450 °C"
-    },
-    "legenda": "No frio o equilíbrio favorece a amônia, mas a reação trava. O catalisador sobe essa curva sem mudar onde ela termina.",
+    "tipo": "comparar",
+    "a": "Equilíbrio favorável",
+    "b": "Produção rápida",
+    "linhas": [
+     {
+      "aspecto": "Condição",
+      "a": "Temperatura baixa",
+      "b": "Temperatura alta"
+     },
+     {
+      "aspecto": "O que acontece",
+      "a": "A reação quase não ocorre",
+      "b": "Mais amônia se forma por hora"
+     }
+    ],
+    "legenda": "A solução de Haber e Bosch foi usar um catalisador de ferro a cerca de 450 °C e 200 atmosferas de pressão, encontrando um meio-termo rentável entre química e economia.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -44,7 +51,7 @@
     "alts": [
      "Aumenta a quantidade final de amônia no equilíbrio",
      "Acelera a reação oferecendo um caminho de menor energia de ativação",
-     "Impede que a amônia se decompra de volta"
+     "Impede que a amônia se decomponha de volta"
     ],
     "correta": 1,
     "porque": "O catalisador muda a velocidade, não a posição do equilíbrio. Sem ele, a reação seria lenta demais na temperatura em que o equilíbrio ainda rende amônia."
@@ -75,30 +82,9 @@
     "fonte": 1
    },
    {
-    "tipo": "pontos",
-    "valor": 15,
-    "frase": "N de cada 100 moléculas de gás saem do reator como amônia numa única passagem.",
-    "legenda": "Os gases que não reagiram são reciclados. Com o reciclo, a conversão global chega a 97%.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "linha_tempo",
-    "eventos": [
-     {
-      "ano": 1909,
-      "texto": "Haber produz amônia no laboratório, a 125 mL por hora."
-     },
-     {
-      "ano": 1913,
-      "texto": "A primeira fábrica, em Oppau, começa a operar."
-     },
-     {
-      "ano": 1914,
-      "texto": "A produção chega a 20 toneladas por dia."
-     }
-    ],
-    "legenda": "Carl Bosch, da BASF, transformou a bancada de Haber numa indústria.",
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "A primeira fábrica de amônia, em Oppau, Alemanha. Em 1914, produzia 20 toneladas por dia com o processo que Haber criou e Bosch escalonou.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -116,7 +102,7 @@
    {
     "tipo": "pontos",
     "valor": 40,
-    "frase": "N de cada 100 pessoas no mundo devem sua alimentação ao processo Haber-Bosch.",
+    "frase": "de cada 100 pessoas no mundo devem sua alimentação ao processo Haber-Bosch.",
     "legenda": "Cerca de 80% da amônia produzida vai para fertilizantes.",
     "marca": "consenso",
     "fonte": 1
@@ -127,14 +113,17 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 2: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto",
-  "tela 6: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto",
-  "tela 9: o tipo visual não combina com o conteúdo (0.24); troque de tipo ou use texto"
+  "tela 9: soa como IA (0.51)",
+  "tela 9: o tipo visual não combina com o conteúdo (0.22); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 3.09,
+   "score": 3.14,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -145,26 +134,19 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.02,
-    "3": 0.87,
-    "4": 0.11
+    "2": 0.01,
+    "3": 0.84,
+    "4": 0.15
    },
-   "confidence": 0.88
+   "confidence": 0.87
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.34
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0
-   },
-   "confidence": 1
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_1": {
    "type": "noul",
@@ -172,141 +154,169 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.37
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.01,
-    "especulacao": 0.02,
-    "consenso": 0.97,
-    "emergente": 0
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
    },
-   "confidence": 0.97
+   "confidence": 1
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.36
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.06
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.3
+   "noul": 0.04
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.23
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0
+    "controverso": 0.01,
+    "emergente": 0.01,
+    "consenso": 0.98
    },
-   "confidence": 1
+   "confidence": 0.98
   },
-  "disputa_3": {
-   "type": "noul",
-   "noul": 0.09
-  },
-  "encaixe_3": {
-   "type": "noul",
-   "noul": 0.93
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.07
-  },
-  "ia_5": {
+  "tecnico_3": {
    "type": "noul",
    "noul": 0.27
   },
-  "marca_5": {
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
    },
    "confidence": 1
   },
-  "disputa_5": {
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "disputa_4": {
    "type": "noul",
    "noul": 0.09
   },
-  "encaixe_5": {
+  "encaixe_4": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.93
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.61
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.08
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.31
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "especulacao": 0,
     "controverso": 0,
-    "especulacao": 0.01,
-    "consenso": 0.99,
+    "consenso": 1,
     "emergente": 0
    },
-   "confidence": 0.98
+   "confidence": 1
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.35
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.08
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.94
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.22
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
+    "especulacao": 0,
     "controverso": 0,
     "consenso": 1,
-    "especulacao": 0
+    "emergente": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_7": {
    "type": "noul",
    "noul": 0.05
   },
-  "encaixe_7": {
+  "respondivel_8": {
    "type": "noul",
-   "noul": 0.97
+   "noul": 0.95
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.35
   },
   "ambigua_8": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.23
   },
   "ia_9": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.51
   },
   "marca_9": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "especulacao": 0.07,
     "controverso": 0.04,
-    "emergente": 0.02,
-    "consenso": 0.91,
-    "especulacao": 0.03
+    "consenso": 0.84,
+    "emergente": 0.05
    },
-   "confidence": 0.88
+   "confidence": 0.79
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_9": {
    "type": "noul",
@@ -314,8 +324,8 @@
   },
   "encaixe_9": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.22
   }
  },
- "custo_usd": 0.00724
+ "custo_usd": 0.00306
 }

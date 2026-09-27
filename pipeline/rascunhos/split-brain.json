@@ -1,11 +1,11 @@
 {
  "id": "split-brain",
  "tipo": "licao",
- "criado": "2026-09-27T15:48:15",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:15:08",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um paciente com o corpo caloso cortado diz que não viu nada. A mão esquerda dele, sem que ele saiba explicar, pega o objeto certo. Um lado do cérebro sabia, o outro não.",
+  "gancho": "Um paciente com o corpo caloso cortado diz que não viu nada. A mão esquerda dele, sem que ele saiba explicar, pega o objeto certo. Um lado do cérebro sabia, o outro não. Isso é o experimento do cérebro dividido.",
   "telas": [
    {
     "tipo": "figura",
@@ -39,35 +39,9 @@
     "fonte": 2
    },
    {
-    "tipo": "pergunta",
-    "q": "Uma palavra pisca rápido no campo visual esquerdo. O paciente diz que não viu nada. O que acontece se pedirem que pegue o objeto correspondente com a mão esquerda?",
-    "alts": [
-     "Erra, porque não viu o objeto",
-     "Escolhe o objeto certo, mas continua dizendo que não viu nada",
-     "Escolhe o objeto certo e consegue explicar por que escolheu"
-    ],
-    "correta": 1,
-    "porque": "A informação chegou ao hemisfério direito, que controla a mão esquerda e não produz fala. A boca continua dizendo que não sabe por quê."
-   },
-   {
     "tipo": "comparar",
-    "a": "Pessoas destras",
-    "b": "Pessoas canhotas",
-    "linhas": [
-     {
-      "aspecto": "Fala no hemisfério esquerdo",
-      "a": "95 a 99%",
-      "b": "cerca de 70%"
-     }
-    ],
-    "legenda": "A fala quase sempre fica no hemisfério esquerdo.",
-    "marca": "consenso",
-    "fonte": 3
-   },
-   {
-    "tipo": "comparar",
-    "a": "Estímulo à direita",
-    "b": "Estímulo à esquerda",
+    "a": "Campo visual direito",
+    "b": "Campo visual esquerdo",
     "linhas": [
      {
       "aspecto": "Hemisfério que recebe",
@@ -91,6 +65,42 @@
    },
    {
     "tipo": "pergunta",
+    "q": "Uma palavra pisca rápido no campo visual esquerdo. O paciente diz que não viu nada. O que acontece se pedirem que pegue o objeto correspondente com a mão esquerda?",
+    "alts": [
+     "Erra, porque não viu o objeto",
+     "Escolhe o objeto certo, mas continua dizendo que não viu nada",
+     "Escolhe o objeto certo e consegue explicar por que escolheu"
+    ],
+    "correta": 1,
+    "porque": "A informação chegou ao hemisfério direito, que controla a mão esquerda e não produz fala. A boca continua dizendo que não sabe por quê."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Estímulo no campo visual direito",
+    "b": "Estímulo no campo visual esquerdo",
+    "linhas": [
+     {
+      "aspecto": "Nomeação em voz alta",
+      "a": "acerta 92% das vezes",
+      "b": "acerta 73% das vezes"
+     },
+     {
+      "aspecto": "Casar figura sem falar",
+      "a": "acerta 73% das vezes",
+      "b": "acerta 96% das vezes"
+     },
+     {
+      "aspecto": "Conclusão",
+      "a": "vantagem para linguagem",
+      "b": "vantagem para tarefa não verbal"
+     }
+    ],
+    "legenda": "Os efeitos de hemicampo existem: a percepção é dividida. Mas os dois lados são conscientes.",
+    "marca": "consenso",
+    "fonte": 6
+   },
+   {
+    "tipo": "pergunta",
     "q": "Mostraram uma pata de galinha ao hemisfério esquerdo e uma nevasca ao direito. A mão direita apontou a galinha, a esquerda apontou uma pá. Perguntaram por quê. O que o paciente respondeu?",
     "alts": [
      "Que a mão esquerda agiu sozinha, sem ele mandar",
@@ -102,36 +112,40 @@
    },
    {
     "tipo": "comparar",
-    "a": "Cérebro intacto",
-    "b": "Cérebro dividido",
+    "a": "Mito popular",
+    "b": "Evidência atual",
     "linhas": [
      {
-      "aspecto": "Informação visual",
-      "a": "as duas metades se unem pelo corpo caloso",
-      "b": "cada hemisfério fica com sua metade"
+      "aspecto": "Afirmação",
+      "a": "lado esquerdo é lógico, direito é criativo",
+      "b": "cada pessoa tem um lado dominante"
      },
      {
-      "aspecto": "Resposta do paciente",
-      "a": "única e coerente",
-      "b": "pode discordar entre mão e boca"
+      "aspecto": "O que os dados mostram",
+      "a": "lateralização é local (ex.: linguagem à esquerda)",
+      "b": "estudo com 1.011 pessoas não achou fenótipo dominante"
      }
     ],
-    "legenda": "O corte do corpo caloso revela o que cada hemisfério faz sozinho.",
-    "marca": "consenso",
-    "fonte": 2
+    "legenda": "A ideia de um cérebro 'esquerdista' ou 'direitista' não é posição no debate científico.",
+    "fonte": 14
    }
   ],
-  "fecho": "Se o hemisfério esquerdo inventa explicações confiantes para ações que não viu, isso deve acontecer também em cérebros intactos. O que a introspecção realmente alcança?"
+  "fecho": "Se o hemisfério esquerdo inventa explicações confiantes para ações que não viu, isso deve acontecer também em cérebros intactos. O que a introspecção realmente alcança? O problema difícil da consciência."
  },
- "erros": [
-  "tela 4: comparar precisa de 2 a 4 linhas"
- ],
+ "erros": [],
  "avisos": [],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 5: trata de disputa ou evidência contestada (0.66); lição só ensina o núcleo estabelecido",
+  "tela 7: trata de disputa ou evidência contestada (0.94); lição só ensina o núcleo estabelecido"
+ ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.96
+  },
   "interesse": {
    "type": "score",
-   "score": 3.19,
+   "score": 3.13,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -143,130 +157,155 @@
     "0": 0,
     "1": 0,
     "2": 0.01,
-    "3": 0.79,
-    "4": 0.2
+    "3": 0.84,
+    "4": 0.15
    },
-   "confidence": 0.83
+   "confidence": 0.87
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.37
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "consenso": 1,
     "emergente": 0,
-    "especulacao": 0
+    "consenso": 0.98,
+    "especulacao": 0,
+    "controverso": 0.02
    },
-   "confidence": 0.99
+   "confidence": 0.97
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.09
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.32
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "consenso": 1,
     "emergente": 0,
-    "especulacao": 0
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
    },
    "confidence": 0.99
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.2
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.08
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.93
   },
-  "ambigua_3": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.35
   },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.34
-  },
-  "marca_4": {
+  "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.01,
-    "consenso": 0.98,
-    "emergente": 0.01,
-    "especulacao": 0
+    "emergente": 0.02,
+    "consenso": 0.85,
+    "especulacao": 0.01,
+    "controverso": 0.12
    },
-   "confidence": 0.97
+   "confidence": 0.81
   },
-  "disputa_4": {
+  "tecnico_3": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.2
   },
-  "encaixe_4": {
-   "type": "noul",
-   "noul": 0.88
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.29
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.01,
-    "consenso": 0.99,
-    "emergente": 0,
-    "especulacao": 0
-   },
-   "confidence": 0.99
-  },
-  "disputa_5": {
-   "type": "noul",
-   "noul": 0.09
-  },
-  "encaixe_5": {
-   "type": "noul",
-   "noul": 0.91
-  },
-  "ambigua_6": {
-   "type": "noul",
-   "noul": 0.13
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.49
-  },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.01,
-    "consenso": 0.99,
-    "emergente": 0,
-    "especulacao": 0
-   },
-   "confidence": 0.99
-  },
-  "disputa_7": {
+  "disputa_3": {
    "type": "noul",
    "noul": 0.1
   },
-  "encaixe_7": {
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "controverso": 0.36,
+    "emergente": 0.27,
+    "consenso": 0.35,
+    "especulacao": 0.02
+   },
+   "confidence": 0.15
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.66
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.55
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_7": {
    "type": "noul",
    "noul": 0.94
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.91
   }
  },
- "custo_usd": 0.01211
+ "custo_usd": 0.00402
 }

@@ -1,15 +1,18 @@
 {
  "id": "temperamento-igual",
  "tipo": "licao",
- "criado": "2026-09-27T15:36:17",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T19:23:40",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Você já afinou um violão? Então já esbarrou num problema matemático sem solução. As cordas e as escalas simplesmente não fecham, e todo músico decide onde esconder o erro.",
+  "gancho": "Você já afinou um violão? Então já esbarrou num problema matemático sem solução. As cordas e as escalas simplesmente não fecham, e todo músico decide onde esconder o erro. Isso se chama temperamento.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Uma corda vibrando produz harmônicos em múltiplos inteiros da frequência fundamental: 2×, 3×, 4×, 5×. Quando dois sons têm harmônicos que coincidem, soam consonantes. Isso acontece com razões de números inteiros pequenos.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Uma corda vibrando produz harmônicos em múltiplos inteiros da frequência fundamental. Dois sons são consonantes quando seus harmônicos coincidem em boa medida.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "comparar",
@@ -19,7 +22,7 @@
      {
       "aspecto": "Oitava",
       "a": "2:1",
-      "b": "mesma nota, mais aguda"
+      "b": "mesma nota, bem mais aguda"
      },
      {
       "aspecto": "Quinta justa",
@@ -32,53 +35,52 @@
       "b": "doce, define o modo maior"
      }
     ],
-    "legenda": "Razões de números inteiros pequenos. A explicação é acústica, não convenção cultural.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "figura",
-    "fig": "temperamento-comma",
-    "legenda": "Empilhando quintas puras, a trajetória é uma espiral, não um círculo. Ela passa do ponto de partida por 23,46 cents.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Doze quintas puras deveriam voltar ao dó, sete oitavas acima. Mas (3/2)<sup>12</sup> = 129,746… e 2<sup>7</sup> = 128. A diferença, cerca de 23,46 cents, é a coma pitagórica. Ela não pode ser eliminada: é consequência de 3 e 2 serem primos entre si.</p>",
+    "legenda": "Razões de números inteiros pequenos. A explicação é acústica, não uma convenção cultural.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Por que o círculo das quintas não fecha?",
+    "q": "Uma pessoa dedilha as cordas soltas de um violão e acha que está tudo certo. O que ela não percebe?",
     "alts": [
-     "Porque os instrumentos desafinam com o tempo",
-     "Porque nenhuma potência de 3 é igual a uma potência de 2",
-     "Porque os pitagóricos calcularam errado"
+     "As cordas estão com a tensão errada",
+     "Os intervalos entre as notas são aproximações que nunca fecham perfeitamente",
+     "O violão precisa de uma oitava a mais de cordas"
     ],
     "correta": 1,
-    "porque": "O erro não vem de medição, mas da aritmética: 3 e 2 não têm fator comum. É impossível que uma potência de 3 iguale uma potência de 2."
+    "porque": "A afinação comum de violão já usa o temperamento igual, escondendo um erro matemático que não tem solução."
+   },
+   {
+    "tipo": "figura",
+    "fig": "temperamento-comma",
+    "legenda": "Empilhando quintas puras, a trajetória é uma espiral, não um círculo. Ela passa do ponto de partida por cerca de 23 cents. Nenhum ajuste resolve isso: é consequência de 3 e 2 serem primos entre si.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "Entonação justa",
-      "texto": "Alguns intervalos perfeitamente puros, outros horríveis. Existe o \"lobo\", inutilizável."
+      "texto": "Alguns intervalos são perfeitamente puros, mas um deles vira o \"lobo\" e fica inutilizável."
      },
      {
       "nome": "Temperamentos desiguais",
-      "texto": "Erro distribuído de forma desigual. Cada tonalidade ganha um caráter sonoro distinto. Dominaram os séculos XVII e XVIII."
+      "texto": "O erro é distribuído de forma desigual. Cada tonalidade ganha um caráter distinto."
      },
      {
       "nome": "Temperamento igual",
-      "texto": "Oitava dividida em doze partes exatamente iguais. Erro espalhado igualmente. Todas as tonalidades soam idênticas."
+      "texto": "A oitava é dividida em doze partes exatamente iguais. O erro é espalhado uniformemente."
      }
     ],
     "legenda": "Três estratégias para esconder o erro que não pode ser eliminado.",
     "marca": "consenso",
     "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Cravo de estilo flamengo. Instrumentos antigos como este eram afinados com temperamentos desiguais, que davam um sabor único a cada tonalidade."
    },
    {
     "tipo": "figura",
@@ -89,27 +91,54 @@
    },
    {
     "tipo": "pergunta",
-    "q": "No temperamento igual, qual intervalo é sacrificado para preservar a quinta?",
+    "q": "No temperamento igual, qual intervalo é sacrificado?",
     "alts": [
      "A oitava",
      "A terça maior",
      "A quarta justa"
     ],
     "correta": 1,
-    "porque": "A quinta erra por menos de 2 cents, praticamente inaudível. A terça maior erra por quase 14 cents, o que é claramente audível em acordes sustentados."
+    "porque": "A quinta erra por menos de 2 cents, praticamente inaudível. A terça maior erra por quase 14 cents, ouvida claramente em acordes sustentados. Ela define o modo do acorde."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Antes do temperamento igual",
+    "b": "Depois do temperamento igual",
+    "linhas": [
+     {
+      "aspecto": "Caráter das tonalidades",
+      "a": "cada uma tinha sabor próprio",
+      "b": "todas soam iguais"
+     },
+     {
+      "aspecto": "Modulação",
+      "a": "restrita a tons vizinhos",
+      "b": "livre entre todas as 24 tonalidades"
+     }
+    ],
+    "legenda": "A uniformidade trouxe liberdade para compor, mas apagou diferenças que compositores como Bach exploravam.",
+    "marca": "consenso",
+    "fonte": 1
    }
   ],
-  "fecho": "O temperamento igual tornou todas as tonalidades iguais, mas será que ainda percebemos diferenças de caráter? A resposta está na interação entre afinação e timbre."
+  "fecho": "O temperamento igual tornou todas as tonalidades iguais. O que mudou no jeito de compor? A resposta está na harmonia funcional: um sistema que ganhou força junto com a nova afinação."
  },
  "erros": [],
  "avisos": [
-  "tela 4: 45 palavras (máximo 40)"
+  "tela 4: legenda com mais de 25 palavras"
  ],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 3: a pergunta depende de algo que a lição ainda não mostrou (0.26)",
+  "tela 4: técnico demais para leigo (0.67)"
+ ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.85,
+   "score": 2.93,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -120,15 +149,30 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.15,
-    "3": 0.84,
+    "2": 0.08,
+    "3": 0.91,
     "4": 0.01
    },
-   "confidence": 0.86
+   "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.42
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.02,
+    "emergente": 0,
+    "especulacao": 0.01,
+    "consenso": 0.97
+   },
+   "confidence": 0.96
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.35
   },
   "disputa_1": {
    "type": "noul",
@@ -136,49 +180,46 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.34
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.07,
-    "emergente": 0,
+    "controverso": 0.13,
+    "emergente": 0.01,
     "especulacao": 0.01,
-    "consenso": 0.92
+    "consenso": 0.85
    },
-   "confidence": 0.9
+   "confidence": 0.8
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.46
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.14
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.58
+   "noul": 0.6
   },
-  "ia_3": {
+  "respondivel_3": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.26
   },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0,
-    "emergente": 0,
-    "especulacao": 0,
-    "consenso": 1
-   },
-   "confidence": 1
-  },
-  "disputa_3": {
+  "obvia_3": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.37
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.11
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.3
   },
   "marca_4": {
    "type": "choice",
@@ -191,60 +232,115 @@
    },
    "confidence": 1
   },
-  "disputa_4": {
+  "tecnico_4": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.67
   },
-  "ambigua_5": {
+  "disputa_4": {
    "type": "noul",
    "noul": 0.1
   },
-  "ia_6": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.38
   },
-  "marca_6": {
+  "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.01,
+    "controverso": 0,
     "emergente": 0,
-    "especulacao": 0.01,
-    "consenso": 0.98
+    "especulacao": 0,
+    "consenso": 1
    },
-   "confidence": 0.98
+   "confidence": 0.99
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.72
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.15
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.14
-  },
-  "encaixe_6": {
-   "type": "noul",
-   "noul": 0.81
+   "noul": 0.1
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.37
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
     "especulacao": 0,
+    "controverso": 0,
     "emergente": 0,
     "consenso": 1
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.36
   },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.09
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.88
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.24
   },
   "ambigua_8": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.23
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.09,
+    "emergente": 0.01,
+    "consenso": 0.79,
+    "controverso": 0.11
+   },
+   "confidence": 0.71
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.95
   }
  },
- "custo_usd": 0.00111
+ "custo_usd": 0.00175
 }

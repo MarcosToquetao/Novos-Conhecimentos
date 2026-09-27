@@ -1,20 +1,21 @@
 {
  "id": "custo-afundado",
  "tipo": "licao",
- "criado": "2026-09-27T15:44:02",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:18:52",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Você pagou caro por um ingresso que não pode mais ser devolvido. Na metade do filme, percebe que é ruim. Sair agora significa recuperar o tempo que sobrou da noite. Ficar até o fim não traz o dinheiro de volta de jeito nenhum.",
+  "gancho": "Você pagou caro por um ingresso que não pode mais ser devolvido. Na metade do filme, percebe que é ruim. Sair agora significa recuperar o tempo que sobrou da noite; ficar até o fim não traz o dinheiro de volta de jeito nenhum. Esse é o exemplo mais simples da falácia do custo afundado.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Boa parte das pessoas fica até o fim e cita o dinheiro já gasto como razão. Esse é o <strong>custo afundado</strong>: deixar uma decisão futura ser influenciada por um custo passado que não volta, não importa o que se faça daqui pra frente.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Até ratos e camundongos mostram um comportamento parecido: depois de 'investir' tempo esperando por uma recompensa incerta, continuam esperando mais do que animais que não fizeram esse investimento."
    },
    {
     "tipo": "comparar",
     "a": "Decisão racional",
-    "b": "Custo afundado",
+    "b": "Sob o custo afundado",
     "linhas": [
      {
       "aspecto": "O que entra na conta",
@@ -48,36 +49,11 @@
     "porque": "O dinheiro já foi gasto e não volta, quer você fique ou saia. Só o que ainda pode mudar deveria entrar na conta."
    },
    {
-    "tipo": "comparar",
-    "a": "Sem custo afundado",
-    "b": "Com custo afundado",
-    "linhas": [
-     {
-      "aspecto": "O que pesa",
-      "a": "só o que vem depois",
-      "b": "também o que já foi gasto"
-     },
-     {
-      "aspecto": "Escolha típica",
-      "a": "viagem melhor e mais barata",
-      "b": "viagem pior, com dinheiro preso nela"
-     },
-     {
-      "aspecto": "Razão citada",
-      "a": "aproveitar melhor o fim de semana",
-      "b": "não desperdiçar o investimento"
-     }
-    ],
-    "legenda": "No experimento das viagens, cerca de metade do grupo com dinheiro não reembolsável escolheu a viagem pior.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "Viagem paga",
-      "texto": "$100 não reembolsáveis em Michigan"
+      "texto": "$100 não reembolsáveis no Michigan"
      },
      {
       "nome": "Alternativa melhor",
@@ -92,22 +68,34 @@
       "texto": "Cerca de metade escolhe Michigan para não 'desperdiçar' o que pagou"
      }
     ],
-    "legenda": "O experimento clássico de Arkes e Blumer mostra o custo afundado em ação.",
+    "legenda": "Experimento clássico de Arkes e Blumer: uma decisão pior pesa mais quando já se gastou dinheiro nela.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "pergunta",
-    "q": "Em organizações, qual é a versão do custo afundado?",
-    "alts": [
-     "Escalada de comprometimento: continuar investindo em projetos ruins para justificar decisões anteriores",
-     "Orçamento flexível: cortar recursos de todos os projetos igualmente",
-     "Análise de custo-benefício: cancelar qualquer projeto que não dê lucro imediato"
+    "tipo": "comparar",
+    "a": "Sem custo afundado",
+    "b": "Com custo afundado",
+    "linhas": [
+     {
+      "aspecto": "O que pesa",
+      "a": "só o que vem depois",
+      "b": "também o que já foi gasto"
+     },
+     {
+      "aspecto": "Escolha típica",
+      "a": "viagem melhor e mais barata",
+      "b": "viagem pior, com dinheiro 'preso' nela"
+     },
+     {
+      "aspecto": "Razão citada",
+      "a": "aproveitar melhor o fim de semana",
+      "b": "não desperdiçar o investimento"
+     }
     ],
-    "correta": 0,
-    "porque": "Gestores e equipes continuam apostando em projetos que vão mal, às vezes para não admitir que a decisão original foi ruim.",
+    "legenda": "Cerca de metade das pessoas com um gasto passado escolheu a viagem pior. O dinheiro não voltava de qualquer jeito.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
    },
    {
     "tipo": "etapas",
@@ -129,24 +117,45 @@
       "texto": "Continuar vira uma defesa da escolha original, não uma aposta no futuro"
      }
     ],
-    "legenda": "Escalada de comprometimento em organizações: persistir não pelo retorno esperado, mas para não parecer que errou.",
+    "legenda": "Nas empresas, a escalada de comprometimento faz times continuarem apostando num projeto ruim para não admitir que a decisão original foi um erro.",
     "marca": "consenso",
     "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Gestores continuam investindo num projeto que só dá prejuízo há meses. Por que param de novo dinheiro num poço sem fundo?",
+    "alts": [
+     "Têm informação secreta sobre o futuro",
+     "Querem justificar o investimento original, uma escalada de comprometimento",
+     "Fizeram uma análise que mostra lucro certo"
+    ],
+    "correta": 1,
+    "porque": "Muitas vezes continuam para não parecer que desperdiçaram o dinheiro. Admitir o erro tem um custo social e profissional que pesa mais que o prejuízo atual."
+   },
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O que os animais fazem parece custo afundado, mas talvez seja só uma decisão racional: o tempo já investido é uma pista sobre a chance de a recompensa aparecer."
    }
   ],
-  "fecho": "Reconhecer o custo afundado é mais fácil quando ele aparece no cinema. Por que a mesma pessoa que sai da sala continua investindo num projeto ruim? A resposta tem nome: dissonância cognitiva."
+  "fecho": "Reconhecer o custo afundado no cinema é fácil. Por que a mesma pessoa continua investindo num projeto ruim no escritório? A resposta tem nome: dissonância cognitiva."
  },
  "erros": [],
  "avisos": [
-  "tela 1: 44 palavras (máximo 40)"
+  "gancho com mais de 45 palavras"
  ],
  "alertas_jev": [
-  "tela 7: soa como IA (0.57)"
+  "tela 6: soa como IA (0.55)",
+  "tela 8: trata de disputa ou evidência contestada (0.91); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 2.87,
+   "score": 2.88,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -157,120 +166,168 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.14,
-    "3": 0.85,
+    "2": 0.13,
+    "3": 0.86,
     "4": 0.01
    },
-   "confidence": 0.87
+   "confidence": 0.88
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.48
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.6
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.31
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "controverso": 0.04,
-    "consenso": 0.94,
+    "consenso": 0.86,
+    "emergente": 0.02,
+    "controverso": 0.11,
     "especulacao": 0.01
    },
-   "confidence": 0.93
+   "confidence": 0.82
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.15
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.95
+  },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.54
   },
   "ambigua_3": {
    "type": "noul",
-   "noul": 0.17
+   "noul": 0.16
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.25
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 0.77,
     "emergente": 0.12,
-    "controverso": 0.05,
-    "consenso": 0.81,
+    "controverso": 0.1,
     "especulacao": 0.01
    },
-   "confidence": 0.75
+   "confidence": 0.69
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.18
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.84
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.37
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.12,
-    "controverso": 0.08,
-    "consenso": 0.79,
+    "consenso": 0.77,
+    "emergente": 0.09,
+    "controverso": 0.13,
     "especulacao": 0.01
    },
-   "confidence": 0.71
+   "confidence": 0.69
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.19
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.88
+   "noul": 0.95
   },
-  "ambigua_6": {
+  "ia_6": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.55
   },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.57
-  },
-  "marca_7": {
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.01,
-    "controverso": 0.09,
-    "consenso": 0.8,
-    "emergente": 0.1
+    "consenso": 0.65,
+    "especulacao": 0.05,
+    "emergente": 0.1,
+    "controverso": 0.2
    },
-   "confidence": 0.72
+   "confidence": 0.55
   },
-  "disputa_7": {
+  "tecnico_6": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.08
   },
-  "encaixe_7": {
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "disputa_8": {
    "type": "noul",
    "noul": 0.91
   }
  },
- "custo_usd": 0.01077
+ "custo_usd": 0.00327
 }

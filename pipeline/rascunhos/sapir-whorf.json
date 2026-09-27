@@ -1,144 +1,136 @@
 {
  "id": "sapir-whorf",
  "tipo": "licao",
- "criado": "2026-09-27T15:35:58",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:23:32",
+ "modelo": "reaproveitada",
  "rodadas": 2,
  "licao": {
-  "gancho": "Você consegue pensar em algo que o português não tem palavra para descrever? Provavelmente sim. E isso já derruba a versão mais famosa da ideia de que a língua define o pensamento.",
+  "gancho": "Você consegue pensar em algo que o português não tem palavra para descrever? Provavelmente sim. E isso já derruba a versão mais famosa da ideia de que a língua define o pensamento. Essa ideia tem nome: relatividade linguística.",
   "telas": [
    {
-    "tipo": "comparar",
-    "a": "Versão forte",
-    "b": "Versão fraca",
-    "linhas": [
-     {
-      "aspecto": "O que afirma",
-      "a": "a língua determina o pensamento",
-      "b": "a língua influencia atenção e memória"
-     },
-     {
-      "aspecto": "Consequência",
-      "a": "o que não tem palavra não pode ser pensado",
-      "b": "certas distinções ficam mais fáceis"
-     },
-     {
-      "aspecto": "Status",
-      "a": "abandonada",
-      "b": "debatida com evidência"
-     }
-    ],
-    "legenda": "A versão forte é autorrefutante: se a língua limitasse o pensável, não daria para descrever um conceito que ela não tem.",
-    "marca": "consenso"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Benjamin Lee Whorf. Ele e Edward Sapir nunca chamaram sua ideia de 'hipótese Sapir-Whorf'; o rótulo e as versões 'forte' e 'fraca' vieram de comentadores depois dos anos 1950.",
+    "fonte": 2
    },
    {
-    "tipo": "camadas",
-    "camadas": [
-     {
-      "nome": "1911: Boas",
-      "nota": "4 raízes para neve"
-     },
-     {
-      "nome": "1940: Whorf",
-      "nota": "7 palavras"
-     },
-     {
-      "nome": "1984: imprensa",
-      "nota": "400 palavras"
-     }
-    ],
-    "eixo": {
-     "topo": "mais palavras",
-     "base": "menos palavras"
-    },
-    "legenda": "O número cresceu a cada recontagem, sem fonte nova. Ninguém foi conferir.",
+    "tipo": "texto",
+    "html": "<p>A <strong>versão forte</strong> dizia que a língua determina o que se pode pensar. Ela foi abandonada: bebês categorizam antes de falar, e o tempo todo aprendemos conceitos que nossa língua não nomeia.</p>",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "figura",
     "fig": "whorf-fronteira",
-    "legenda": "O experimento de 2007 mostrou vantagem russa na fronteira entre azul-claro e azul-escuro. A replicação de 2020 não encontrou o efeito.",
+    "legenda": "O russo divide o azul em duas categorias (sinij e goluboj). Em 2007, um experimento viu vantagem nessa fronteira, mas em 2020 o efeito não se replicou: aparecia só em tarefas de categorização, não na percepção.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Tarefa de discriminação",
+      "texto": "Participante vê três quadrados azuis e aponta qual é igual ao de cima."
+     },
+     {
+      "nome": "Vantagem russa em 2007",
+      "texto": "Russos eram mais rápidos quando os tons cruzavam a fronteira sinij/goluboj."
+     },
+     {
+      "nome": "Sem vantagem em 2020",
+      "texto": "A replicação não achou o efeito. A fronteira mostrou-se instável."
+     }
+    ],
+    "legenda": "O efeito da cor é pequeno, dependente da tarefa e não se mostrou estável.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que o resultado de 2007 sobre as cores não se sustentou?",
+    "q": "Por que o experimento das cores não prova a relatividade linguística?",
     "alts": [
-     "Porque os russos não distinguem azul-claro de azul-escuro",
-     "Porque o efeito só aparece em tarefas que pedem categorização explícita, e não em discriminação pura",
-     "Porque a língua russa não tem palavra para azul"
+     "Porque o russo não distingue mais azul-claro de azul-escuro",
+     "Porque o efeito não se replicou como vantagem perceptiva e só apareceu em tarefas de categorização explícita",
+     "Porque as cores são muito subjetivas para qualquer experimento"
     ],
     "correta": 1,
-    "porque": "Em 2020, a vantagem de tempo de reação não se repetiu. O efeito categórico surgiu apenas quando a tarefa exigia categorizar, não quando era só perceber."
+    "porque": "A replicação de 2020 mostrou que a vantagem era de categorização, não de percepção. A língua pode influenciar como agrupamos, não o que vemos."
    },
    {
     "tipo": "comparar",
-    "a": "Guugu Yimithirr",
-    "b": "Português",
+    "a": "Referencial relativo (português)",
+    "b": "Referencial absoluto (Guugu Yimithirr)",
     "linhas": [
      {
-      "aspecto": "Direções",
-      "a": "norte, sul, leste, oeste",
-      "b": "esquerda, direita, frente, atrás"
-     },
-     {
       "aspecto": "Exemplo",
-      "a": "a xícara está a nordeste da colher",
-      "b": "a xícara está à esquerda da colher"
+      "a": "a xícara está à esquerda da colher",
+      "b": "a xícara está a nordeste da colher"
      },
      {
-      "aspecto": "Orientação",
-      "a": "absoluta, sempre ligada aos pontos cardeais",
-      "b": "relativa, depende do corpo do falante"
+      "aspecto": "Depende de",
+      "a": "do corpo do falante",
+      "b": "dos pontos cardeais"
+     },
+     {
+      "aspecto": "Efeito cognitivo",
+      "a": "a orientação muda quando o falante gira",
+      "b": "mantêm orientação absoluta até em tarefas não verbais"
      }
     ],
-    "legenda": "Falantes de Guugu Yimithirr mantêm orientação absoluta até em ambientes fechados.",
+    "legenda": "A evidência mais robusta de relatividade linguística está no espaço, não na cor.",
     "marca": "consenso",
     "fonte": 4
    },
    {
-    "tipo": "pergunta",
-    "q": "Por que o caso do espaço é mais convincente que o da cor?",
-    "alts": [
-     "Porque envolve mais línguas e mais falantes",
-     "Porque o efeito aparece em tarefas não linguísticas, é grande e foi replicado em populações independentes",
-     "Porque os falantes de Guugu Yimithirr têm vocabulário maior"
-    ],
-    "correta": 1,
-    "porque": "A diferença não some quando a tarefa não usa palavras, é comportamentalmente visível e se repete em vários continentes. No caso da cor, os efeitos são pequenos e dependentes da tarefa."
+    "tipo": "texto",
+    "html": "<p>Falantes de Guugu Yimithirr resolvem tarefas de rotação em coordenadas absolutas, mesmo sem palavras. O efeito é comportamentalmente visível e foi replicado em vários continentes.</p>",
+    "marca": "consenso",
+    "fonte": 4
    },
    {
-    "tipo": "ordenar",
-    "q": "Ordene os passos que levaram da versão forte à evidência atual.",
-    "itens": [
-     "Formulação da hipótese por Sapir e Whorf",
-     "Abandono da versão forte pela comunidade científica",
-     "Experimentos sobre cor mostram efeitos pequenos e instáveis",
-     "Evidência robusta aparece no domínio do espaço"
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Família pirahã na Amazônia. Estudos sobre números nessa língua mostraram que falantes realizam bem tarefas de correspondência um-a-um, mas carecem de rótulos para cardinalidades exatas. Isso fala sobre memória, não sobre limites do pensamento.",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual é o principal desafio para provar que a língua influencia o pensamento?",
+    "alts": [
+     "Separar o efeito da língua do efeito da cultura, porque grupos com línguas diferentes também têm práticas, ambientes e escolaridades diferentes",
+     "Encontrar línguas com poucas palavras para cores, porque quase todas têm muitas",
+     "Convencer falantes de línguas com referenciais absolutos a usar esquerda e direita"
     ],
-    "porque": "A versão forte caiu por ser autorrefutante e por contradizer evidências básicas. Depois, a discussão passou a ser sobre efeitos fracos, com resultados variáveis por domínio."
+    "correta": 0,
+    "porque": "Isolar a língua exige controlar cultura, escolaridade e ambiente, o que raramente é possível. Esse é um dos quatro problemas metodológicos recorrentes nos estudos de relatividade linguística."
    }
   ],
   "fecho": "Se a língua não é uma prisão, o que ela é? A arbitrariedade do signo linguístico, ideia de Saussure, ajuda a entender por que cada língua corta o mundo de um jeito."
  },
  "erros": [],
  "avisos": [
-  "tela 1: marca sem fonte"
+  "tela 3: legenda com mais de 25 palavras",
+  "tela 8: legenda com mais de 25 palavras"
  ],
  "alertas_jev": [
-  "tela 1: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
-  "tela 2: marcada consenso, JEV diz especulacao (0.69)",
-  "tela 2: trata de disputa ou evidência contestada (0.94); lição só ensina o núcleo estabelecido",
-  "tela 2: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto",
-  "tela 3: marcada consenso, JEV diz controverso (0.74)",
-  "tela 3: trata de disputa ou evidência contestada (0.94); lição só ensina o núcleo estabelecido"
+  "tela 1: trata de disputa ou evidência contestada (0.73); lição só ensina o núcleo estabelecido",
+  "tela 2: trata de disputa ou evidência contestada (0.90); lição só ensina o núcleo estabelecido",
+  "tela 3: marcada consenso, JEV diz controverso (0.62)",
+  "tela 3: trata de disputa ou evidência contestada (0.93); lição só ensina o núcleo estabelecido",
+  "tela 4: trata de disputa ou evidência contestada (0.93); lição só ensina o núcleo estabelecido",
+  "tela 8: trata de disputa ou evidência contestada (0.85); lição só ensina o núcleo estabelecido",
+  "tela 9: a pergunta depende de algo que a lição ainda não mostrou (0.21)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.89
+  },
   "interesse": {
    "type": "score",
-   "score": 2.83,
+   "score": 2.79,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -149,108 +141,194 @@
    "probabilities": {
     "0": 0,
     "1": 0.01,
-    "2": 0.15,
-    "3": 0.83,
-    "4": 0.01
+    "2": 0.19,
+    "3": 0.8,
+    "4": 0
    },
-   "confidence": 0.85
+   "confidence": 0.82
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.26
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "controverso",
-   "probabilities": {
-    "especulacao": 0.02,
-    "consenso": 0.39,
-    "emergente": 0.13,
-    "controverso": 0.46
-   },
-   "confidence": 0.28
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.89
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.93
+   "noul": 0.73
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.36
   },
   "marca_2": {
    "type": "choice",
-   "choice": "especulacao",
+   "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.69,
-    "consenso": 0.11,
-    "emergente": 0.02,
-    "controverso": 0.18
+    "especulacao": 0,
+    "controverso": 0.02,
+    "consenso": 0.97,
+    "emergente": 0.01
    },
-   "confidence": 0.59
+   "confidence": 0.97
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.94
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.28
+   "noul": 0.9
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.22
   },
   "marca_3": {
    "type": "choice",
    "choice": "controverso",
    "probabilities": {
-    "especulacao": 0.06,
+    "especulacao": 0.01,
+    "controverso": 0.62,
     "consenso": 0,
-    "emergente": 0.2,
-    "controverso": 0.74
+    "emergente": 0.37
    },
-   "confidence": 0.64
+   "confidence": 0.49
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.22
   },
   "disputa_3": {
    "type": "noul",
+   "noul": 0.93
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "emergente": 0.46,
+    "controverso": 0.47,
+    "consenso": 0.07,
+    "especulacao": 0
+   },
+   "confidence": 0.3
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "respondivel_5": {
+   "type": "noul",
    "noul": 0.94
   },
-  "ambigua_4": {
+  "obvia_5": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.22
   },
-  "ia_5": {
+  "ambigua_5": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.07
   },
-  "marca_5": {
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.39,
+    "especulacao": 0,
+    "consenso": 0.44,
+    "controverso": 0.17
+   },
+   "confidence": 0.26
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "especulacao": 0,
-    "consenso": 0.61,
-    "emergente": 0.35,
-    "controverso": 0.04
+    "emergente": 0.34,
+    "consenso": 0.51,
+    "controverso": 0.15
    },
-   "confidence": 0.47
+   "confidence": 0.34
   },
-  "disputa_5": {
-   "type": "noul",
-   "noul": 0.24
-  },
-  "encaixe_5": {
-   "type": "noul",
-   "noul": 0.93
-  },
-  "ambigua_6": {
+  "tecnico_7": {
    "type": "noul",
    "noul": 0.16
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.45999999999999996,
+    "especulacao": 0.01,
+    "consenso": 0.33,
+    "controverso": 0.2
+   },
+   "confidence": 0.29
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.18
   }
  },
- "custo_usd": 0.00655
+ "custo_usd": 0.02392
 }

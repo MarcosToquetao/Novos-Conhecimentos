@@ -1,24 +1,31 @@
 {
  "id": "lacos-fracos",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:12",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:21:35",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Você precisa de uma informação nova. Pensa no melhor amigo. Ele conhece as mesmas pessoas que você, frequenta os mesmos lugares, sabe as mesmas coisas. Agora pensa naquele conhecido distante, que cresceu em outro bairro. É por ele que a novidade costuma chegar.",
+  "gancho": "Você precisa de uma informação nova. Pensa no melhor amigo. Ele conhece as mesmas pessoas que você, frequenta os mesmos lugares, sabe as mesmas coisas. Agora pensa naquele conhecido distante, que cresceu em outro bairro. A ciência mostra que é por ele que a novidade costuma chegar.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Num subúrbio de Boston, a maioria dos que trocaram de emprego soube da vaga por um conhecido distante, não por amigo íntimo ou parente.",
+    "marca": "consenso",
+    "fonte": 1
+   },
    {
     "tipo": "comparar",
     "a": "Melhor amigo",
     "b": "Conhecido distante",
     "linhas": [
      {
-      "aspecto": "Círculo",
+      "aspecto": "Círculo social",
       "a": "quase o mesmo que o seu",
       "b": "outro bairro, outra empresa"
      },
      {
-      "aspecto": "Informação",
+      "aspecto": "Informação que traz",
       "a": "redundante, você já sabe",
       "b": "nova, fora do seu repertório"
      },
@@ -34,51 +41,52 @@
    },
    {
     "tipo": "pergunta",
-    "q": "Por que o conhecido distante tem mais chance de trazer uma informação que você não tem?",
+    "q": "Dois colegas de trabalho estão a par de uma vaga interna. Um ouviu de um amigo do departamento; o outro, de um conhecido do setor financeiro. Qual deles provavelmente ouviu a novidade primeiro?",
     "alts": [
-     "Porque ele é mais inteligente e sabe mais coisas",
-     "Porque o círculo dele quase não se sobrepõe ao seu, então o que ele sabe não está no seu repertório",
-     "Porque ele se esforça mais para ajudar"
+     "O que ouviu do amigo do departamento, porque são amigos próximos",
+     "O que ouviu do conhecido de outro setor, porque a informação veio de um grupo diferente",
+     "Os dois ao mesmo tempo, porque a empresa é pequena"
     ],
     "correta": 1,
-    "porque": "Seu melhor amigo frequenta os mesmos lugares que você e repete o que você já sabe. O distante está em outro grupo e traz novidade."
+    "porque": "O amigo próximo vive no mesmo círculo profissional e sabe as mesmas vagas que o colega. O conhecido distante, fora desse círculo, trouxe a informação antes que ela circulasse internamente."
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "Amigos próximos",
-      "texto": "convivem muito, apresentam um ao outro"
+      "texto": "convivem muito e apresentam um ao outro"
      },
      {
       "nome": "Círculos se sobrepõem",
-      "texto": "todos têm quase os mesmos contatos"
+      "texto": "todos ficam com quase os mesmos contatos"
      },
      {
-      "nome": "Informação redundante",
-      "texto": "as novidades são repetidas"
+      "nome": "Informação repetida",
+      "texto": "as novidades que um traz o outro já ouviu"
      }
     ],
-    "legenda": "Laços fortes ficam fechados no aglomerado. Laços fracos fazem a ponte.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Granovetter chamou de <strong>ponte</strong> a ligação que é o único caminho entre dois grupos. E quase toda ponte é um laço fraco.</p>",
+    "legenda": "Laços fortes fecham o grupo; laços fracos fazem a ponte para fora.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Numa empresa, um funcionário só fala com colegas do seu departamento. Outro tem contatos em vários departamentos. Quem tem mais chance de ouvir sobre uma vaga nova a tempo?",
+    "q": "O que faz de um laço fraco uma ponte de verdade?",
     "alts": [
-     "O primeiro, porque tem laços mais fortes e confiáveis",
-     "O segundo, porque ocupa uma posição que liga grupos diferentes",
-     "Os dois têm a mesma chance, pois o que importa é a quantidade de conhecidos"
+     "A pessoa ser muito simpática e falar com todo mundo",
+     "Ser o único caminho que liga dois grupos que, de outro modo, não se conectariam",
+     "Ter muitos seguidores em rede social"
     ],
     "correta": 1,
-    "porque": "O que importa é a posição na rede, em quantos grupos diferentes a pessoa está presente, e não a quantidade de conhecidos."
+    "porque": "Granovetter mostrou que quase toda ponte é um laço fraco. Se dois grupos tivessem vários amigos em comum, seriam um grupo só. A ponte é a exceção que une."
+   },
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Em Washington, lobistas alcançam gabinetes que os amigos íntimos não alcançam usando laços fracos: conhecidos que estão fora do círculo habitual.",
+    "marca": "consenso",
+    "fonte": 4
    },
    {
     "tipo": "curva",
@@ -89,43 +97,53 @@
      "x": 0.5,
      "rotulo": "ponto ótimo"
     },
-    "legenda": "O efeito tem forma de U invertido: enfraquecer demais faz a ligação parar de carregar informação.",
+    "legenda": "Um experimento com 20 milhões de pessoas no LinkedIn mostrou que o efeito tem forma de U invertido: laço fraco demais deixa de carregar informação.",
     "marca": "emergente",
     "fonte": 9
    },
    {
-    "tipo": "pergunta",
-    "q": "Se laços fracos conectam grupos diferentes, o que isso implica sobre a informação que eles carregam?",
-    "alts": [
-     "Carregam só benefícios, pois conectam mundos novos",
-     "Carregam qualquer informação, inclusive a prejudicial, e por isso podem ter efeitos negativos",
-     "Não carregam informação confiável, por isso não servem para nada"
+    "tipo": "comparar",
+    "a": "Laço forte",
+    "b": "Laço fraco",
+    "linhas": [
+     {
+      "aspecto": "O que carrega melhor",
+      "a": "confiança e conhecimento complexo",
+      "b": "informação nova e pouco redundante"
+     },
+     {
+      "aspecto": "Onde circula",
+      "a": "dentro do mesmo grupo",
+      "b": "entre grupos diferentes"
+     },
+     {
+      "aspecto": "Risco principal",
+      "a": "redundância: todos sabem o mesmo",
+      "b": "pouca confiança e ausência de cobrança"
+     }
     ],
-    "correta": 1,
-    "porque": "Um estudo com adolescentes mostrou que a ideação suicida podia se espalhar por essa rota. Se transportam informação entre grupos, transportam também a ruim."
-   },
-   {
-    "tipo": "pontos",
-    "valor": 13,
-    "frase": "de cada 100 estudos sobre o tema mostram algum efeito negativo dos laços fracos.",
-    "legenda": "Número aproximado: o documento cita estudos específicos, mas não traz uma proporção exata.",
-    "marca": "emergente",
-    "fonte": 11
+    "legenda": "Os dois tipos de laço não competem: cada um serve a um propósito diferente na rede.",
+    "marca": "consenso",
+    "fonte": 7
    }
   ],
-  "fecho": "A posição na rede importa mais que a quantidade de contatos. Bourdieu mostrou que o capital cultural funciona de modo parecido: o que conta é onde você está, não só o que você tem."
+  "fecho": "A posição na rede importa mais que a quantidade de contatos. Ela lembra o capital cultural de Bourdieu: o que conta é onde você está, não só o que você tem."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
  "alertas_jev": [
-  "tela 6: soa como IA (0.66)",
-  "tela 8: soa como IA (0.81)",
-  "tela 8: o tipo visual não combina com o conteúdo (0.21); troque de tipo ou use texto"
+  "tela 7: soa como IA (0.55)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.9,
+   "score": 3,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -136,11 +154,11 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.11,
-    "3": 0.88,
-    "4": 0.01
+    "2": 0.03,
+    "3": 0.94,
+    "4": 0.03
    },
-   "confidence": 0.9
+   "confidence": 0.95
   },
   "ia_1": {
    "type": "noul",
@@ -150,121 +168,176 @@
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.04,
-    "controverso": 0.12,
-    "consenso": 0.83,
-    "especulacao": 0.01
+    "emergente": 0.11,
+    "consenso": 0.8,
+    "especulacao": 0.01,
+    "controverso": 0.08
    },
-   "confidence": 0.76
+   "confidence": 0.72
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.11
   },
-  "encaixe_1": {
+  "ia_2": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.34
   },
-  "ambigua_2": {
-   "type": "noul",
-   "noul": 0.06
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.5
-  },
-  "marca_3": {
+  "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.06,
-    "emergente": 0.04,
-    "consenso": 0.88,
-    "especulacao": 0.02
+    "emergente": 0.13,
+    "consenso": 0.74,
+    "especulacao": 0.01,
+    "controverso": 0.12
    },
-   "confidence": 0.84
+   "confidence": 0.65
   },
-  "disputa_3": {
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "disputa_2": {
    "type": "noul",
    "noul": 0.08
   },
-  "encaixe_3": {
+  "encaixe_2": {
    "type": "noul",
-   "noul": 0.71
+   "noul": 0.95
+  },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.48
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.16
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.47
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.07,
-    "emergente": 0.1,
-    "consenso": 0.78,
-    "especulacao": 0.05
+    "emergente": 0.08,
+    "consenso": 0.87,
+    "especulacao": 0.02,
+    "controverso": 0.03
    },
-   "confidence": 0.7
+   "confidence": 0.84
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.08
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.79
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.8
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.55
   },
   "ambigua_5": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.1
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.66
+   "noul": 0.38
   },
   "marca_6": {
    "type": "choice",
    "choice": "especulacao",
    "probabilities": {
-    "controverso": 0.32,
-    "emergente": 0.25,
-    "consenso": 0.06,
-    "especulacao": 0.37
+    "consenso": 0.22,
+    "emergente": 0.15,
+    "especulacao": 0.6,
+    "controverso": 0.03
    },
-   "confidence": 0.16
+   "confidence": 0.47
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.09
   },
-  "encaixe_6": {
+  "ia_7": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.55
   },
-  "ambigua_7": {
-   "type": "noul",
-   "noul": 0.24
-  },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.81
-  },
-  "marca_8": {
+  "marca_7": {
    "type": "choice",
    "choice": "emergente",
    "probabilities": {
     "consenso": 0.02,
-    "especulacao": 0.29,
-    "emergente": 0.55,
-    "controverso": 0.14
+    "emergente": 0.77,
+    "especulacao": 0.1,
+    "controverso": 0.11
    },
-   "confidence": 0.4
+   "confidence": 0.69
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.72,
+    "emergente": 0.23,
+    "especulacao": 0,
+    "controverso": 0.05
+   },
+   "confidence": 0.62
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.53
+   "noul": 0.23
   },
   "encaixe_8": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.95
   }
  },
- "custo_usd": 0.00862
+ "custo_usd": 0.00187
 }

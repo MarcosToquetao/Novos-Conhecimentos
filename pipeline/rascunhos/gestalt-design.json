@@ -1,12 +1,17 @@
 {
  "id": "gestalt-design",
  "tipo": "licao",
- "criado": "2026-09-27T15:36:12",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:11:54",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
   "gancho": "Um rótulo a doze pixels do campo de cima e a quatro do campo de baixo pertence ao campo de baixo. Nenhuma instrução escrita corrige essa leitura. A percepção não negocia.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Wolfgang Köhler, um dos fundadores. A escola descobriu que vemos o mundo organizado, não como pedaços soltos."
+   },
    {
     "tipo": "texto",
     "html": "<p>Duas luzes piscando na cadência certa não são vistas como duas luzes. São vistas como uma luz que se move. Não há movimento no estímulo: o sistema visual produz o movimento.</p>",
@@ -46,6 +51,11 @@
     "fonte": 1
    },
    {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Os recortes nos círculos fazem o cérebro criar um quadrado branco que não existe. É o princípio do fechamento."
+   },
+   {
     "tipo": "pergunta",
     "q": "Numa tela, um card agrupa campos distantes, e uma linha conecta dois botões muito próximos. Que leitura o sistema visual impõe?",
     "alts": [
@@ -78,6 +88,13 @@
     "fonte": 4
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Vaso ou dois perfis? O sistema visual decide antes o que é figura e o que é fundo. A área menor e a que parece à frente viram figura.",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
     "tipo": "pergunta",
     "q": "Por que reformular os princípios como uma lista de itens equivalentes é problemático?",
     "alts": [
@@ -89,26 +106,6 @@
     "porque": "A revisão de um século de pesquisa mostra que os princípios interagem, e tratá-los como regras independentes não corresponde aos dados.",
     "marca": "consenso",
     "fonte": 1
-   },
-   {
-    "tipo": "camadas",
-    "camadas": [
-     {
-      "nome": "Fundo",
-      "nota": "área maior, contínua, parece atrás"
-     },
-     {
-      "nome": "Figura",
-      "nota": "área menor, cercada, parece à frente"
-     }
-    ],
-    "eixo": {
-     "topo": "Figura",
-     "base": "Fundo"
-    },
-    "legenda": "Antes de agrupar, o sistema visual decide o que é objeto e o que é vazio. Sombra, elevação e contraste manipulam essa decisão.",
-    "marca": "consenso",
-    "fonte": 5
    }
   ],
   "fecho": "A Gestalt explica como você agrupa. Norman pergunta outra coisa: como o objeto sugere o que fazer com ele. Isso tem nome: affordances."
@@ -116,12 +113,16 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 3: o tipo visual não combina com o conteúdo (0.45); troque de tipo ou use texto"
+  "tela 1: o tipo visual não combina com o conteúdo (0.45); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.86
+  },
   "interesse": {
    "type": "score",
-   "score": 2.72,
+   "score": 2.84,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -131,81 +132,109 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.05,
-    "2": 0.2,
-    "3": 0.71,
+    "1": 0.03,
+    "2": 0.15,
+    "3": 0.78,
     "4": 0.04
    },
-   "confidence": 0.71
+   "confidence": 0.79
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.46
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "consenso": 0.99,
-    "controverso": 0.01,
-    "especulacao": 0
-   },
-   "confidence": 0.99
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.06
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.45
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.24
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.02,
-    "consenso": 0.87,
-    "controverso": 0.1,
-    "especulacao": 0.01
+    "consenso": 0.99,
+    "especulacao": 0,
+    "emergente": 0,
+    "controverso": 0.01
    },
-   "confidence": 0.84
+   "confidence": 0.98
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.16
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.47
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.82,
-    "emergente": 0.05,
-    "controverso": 0.12,
-    "especulacao": 0.01
+    "especulacao": 0.01,
+    "consenso": 0.88,
+    "emergente": 0.02,
+    "controverso": 0.09
    },
-   "confidence": 0.76
+   "confidence": 0.85
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.11
   },
   "disputa_3": {
    "type": "noul",
+   "noul": 0.08
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.8,
+    "especulacao": 0.01,
+    "emergente": 0.05,
+    "controverso": 0.14
+   },
+   "confidence": 0.73
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "disputa_4": {
+   "type": "noul",
    "noul": 0.13
   },
-  "encaixe_3": {
+  "encaixe_4": {
    "type": "noul",
-   "noul": 0.45
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.32
+   "noul": 0.66
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.23
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_5": {
    "type": "noul",
@@ -213,26 +242,27 @@
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.65
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.83
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.31
   },
   "ambigua_6": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.32
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.3
   },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "consenso": 0.99,
-    "controverso": 0.01,
-    "especulacao": 0
-   },
-   "confidence": 0.97
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_7": {
    "type": "noul",
@@ -240,8 +270,47 @@
   },
   "encaixe_7": {
    "type": "noul",
+   "noul": 0.95
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.02,
+    "especulacao": 0.04,
+    "consenso": 0.83,
+    "controverso": 0.11
+   },
+   "confidence": 0.77
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.71
+  },
+  "respondivel_9": {
+   "type": "noul",
    "noul": 0.91
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.1
   }
  },
- "custo_usd": 0.00587
+ "custo_usd": 0.0026
 }

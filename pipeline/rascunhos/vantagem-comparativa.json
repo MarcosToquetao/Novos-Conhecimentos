@@ -1,12 +1,17 @@
 {
  "id": "vantagem-comparativa",
  "tipo": "licao",
- "criado": "2026-09-27T15:35:25",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "criado": "2026-09-27T19:24:08",
+ "modelo": "reaproveitada+deepseek-v4-pro+editor",
+ "rodadas": 3,
  "licao": {
-  "gancho": "Dois países, dois produtos. Um deles é melhor nos dois. Mesmo assim, os dois ganham se comerciarem. Essa ideia rendeu a Paul Samuelson um desafio que ele levou anos para responder.",
+  "gancho": "Portugal produz vinho e tecido com menos horas de trabalho do que a Inglaterra. A intuição diz que não há motivo para comerciar. Mas o que cada país sacrifica ao fazer um produto explica por que os dois ganham. Essa ideia, de 1817, é até hoje uma das poucas verdades não triviais das ciências sociais.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "David Ricardo. Em 1817 ele mostrou que dois países ganham com o comércio mesmo quando um é melhor em tudo."
+   },
    {
     "tipo": "figura",
     "fig": "ricardo-ppf",
@@ -20,79 +25,129 @@
     "b": "Inglaterra",
     "linhas": [
      {
-      "aspecto": "Custo do vinho",
-      "a": "80 horas",
-      "b": "120 horas"
+      "aspecto": "Horas para 1 vinho",
+      "a": "80",
+      "b": "120"
      },
      {
-      "aspecto": "Custo do tecido",
-      "a": "90 horas",
-      "b": "100 horas"
+      "aspecto": "Horas para 1 tecido",
+      "a": "90",
+      "b": "100"
      },
      {
-      "aspecto": "Sacrifício para fazer vinho",
-      "a": "0,89 tecido",
-      "b": "1,2 tecido"
+      "aspecto": "Tecido sacrificado por cada vinho",
+      "a": "0,89 unidade",
+      "b": "1,2 unidade"
      }
     ],
-    "legenda": "Portugal é melhor nos dois. Mas sacrifica menos tecido para fazer vinho, e a Inglaterra sacrifica menos vinho para fazer tecido.",
+    "legenda": "Portugal é melhor nos dois. Mas sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Se Portugal produz vinho e tecido com menos horas que a Inglaterra, por que os dois ganham comerciando?",
+    "q": "Se Portugal produz vinho e tecido com menos horas de trabalho que a Inglaterra, por que os dois ganham comerciando?",
     "alts": [
-     "Porque a Inglaterra tem salários mais baixos",
-     "Porque o que importa é quanto cada um deixa de produzir do outro bem, não o custo absoluto",
-     "Porque Portugal tem tecnologia superior"
+     "Porque a Inglaterra paga salários mais baixos",
+     "Porque o que importa é quanto cada um sacrifica do outro produto, não o custo absoluto",
+     "Porque Portugal tem tecnologia mais avançada"
     ],
     "correta": 1,
     "porque": "O custo de oportunidade decide a especialização. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido."
    },
    {
-    "tipo": "estimar",
-    "q": "No exemplo de Ricardo, com 200 horas de trabalho e especialização completa, quantas unidades de vinho o mundo ganha em relação à produção sem comércio?",
-    "unidade": "unidades de vinho",
-    "min": 0,
-    "max": 2,
-    "escala": "linear",
-    "resposta": 0.42,
-    "legenda": "O mundo ganha 0,42 unidade de vinho e perde 0,11 de tecido. A qualquer taxa entre 0,89 e 1,2 tecido por vinho, os dois países ficam com mais dos dois bens.",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Sem comércio",
+      "texto": "Cada país divide suas horas entre vinho e tecido. Total mundial: 2,08 vinho e 2,11 tecido."
+     },
+     {
+      "nome": "Com especialização",
+      "texto": "Portugal só faz vinho (2,5 unidades), Inglaterra só faz tecido (2 unidades)."
+     },
+     {
+      "nome": "Resultado",
+      "texto": "O mundo ganha 0,42 de vinho e perde 0,11 de tecido. A qualquer taxa de troca entre 0,89 e 1,2 tecido por vinho, os dois ficam com mais dos dois bens."
+     }
+    ],
+    "legenda": "Ninguém trabalhou mais horas. A tecnologia é a mesma. Só mudou quem faz o quê.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>O teorema garante que o comércio aumenta o produto total e que existe uma divisão desse ganho que deixaria todos melhores. Não garante que essa divisão acontece de fato, nem diz nada sobre quem perde dentro de cada país.</p>"
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "Paul Samuelson, década de 1970. Ele disse que a vantagem comparativa era a única proposição verdadeira e não trivial das ciências sociais."
    },
    {
     "tipo": "pergunta",
-    "q": "O que o teorema de Stolper-Samuelson prevê sobre a abertura comercial?",
+    "q": "O teorema afirma que o comércio aumenta o produto total dos países. O que ele não afirma?",
     "alts": [
-     "Todos os trabalhadores do país ganham igualmente",
-     "O fator usado intensivamente no setor exportador ganha, e o do setor que compete com importações perde",
-     "O país como um todo perde"
+     "Que o produto total aumenta",
+     "Que existe uma divisão do ganho que deixaria todos melhores",
+     "Que essa divisão de fato acontece na prática"
     ],
-    "correta": 1,
-    "porque": "A abertura aumenta a remuneração real do fator usado intensivamente no setor exportador e reduz a do fator usado no setor que compete com importações. Há ganhadores e perdedores identificáveis.",
+    "correta": 2,
+    "porque": "O teorema diz que existe uma distribuição do ganho que deixaria todos melhores. Não garante que ela ocorre, nem diz nada sobre quem perde dentro de cada país."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Ganhador típico",
+    "b": "Perdedor típico",
+    "linhas": [
+     {
+      "aspecto": "Quem é",
+      "a": "trabalhador do setor exportador",
+      "b": "trabalhador do setor que compete com importações"
+     },
+     {
+      "aspecto": "O que acontece com sua renda",
+      "a": "aumenta",
+      "b": "cai"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "engenheiro de software nos EUA",
+      "b": "operário têxtil nos EUA"
+     }
+    ],
+    "legenda": "O teorema de Stolper-Samuelson mostra que o comércio cria ganhadores e perdedores dentro de cada país.",
     "marca": "consenso",
     "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que o China Shock mostrou sobre o ajuste de trabalhadores americanos à concorrência chinesa?",
+    "alts": [
+     "Eles trocaram de emprego rapidamente, como a teoria previa",
+     "Houve perda de emprego persistente e o ajuste foi muito mais lento do que os modelos supunham",
+     "Os salários subiram nas regiões mais expostas"
+    ],
+    "correta": 1,
+    "porque": "Autor, Dorn e Hanson mostraram que os efeitos ainda eram visíveis uma década depois. O ajuste demorou mais e a mobilidade geográfica foi menor do que a teoria previa.",
+    "marca": "emergente",
+    "fonte": 3
    }
   ],
-  "fecho": "A vantagem comparativa mostra quando dois países ganham trocando. Mas quando duas pessoas ou empresas negociam, como decidem o que aceitar? Isso é o Equilíbrio de Nash."
+  "fecho": "A vantagem comparativa mostra quando dois países ganham trocando. Mas o que cada um sacrifica ao escolher uma alternativa em vez de outra tem nome: custo de oportunidade."
  },
  "erros": [],
  "avisos": [
-  "tela 4: legenda com mais de 25 palavras"
+  "gancho com mais de 45 palavras"
  ],
  "alertas_jev": [
-  "tela 4: o tipo visual não combina com o conteúdo (0.35); troque de tipo ou use texto"
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.40)",
+  "tela 9: a pergunta depende de algo que a lição ainda não mostrou (0.06)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.92
+  },
   "interesse": {
    "type": "score",
-   "score": 2.88,
+   "score": 2.98,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -103,26 +158,19 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.13,
-    "3": 0.86,
-    "4": 0.01
+    "2": 0.06,
+    "3": 0.9,
+    "4": 0.04
    },
-   "confidence": 0.88
+   "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.37
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.02,
-    "consenso": 0.96,
-    "controverso": 0.02,
-    "emergente": 0
-   },
-   "confidence": 0.94
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_1": {
    "type": "noul",
@@ -130,66 +178,156 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.47
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.05,
-    "consenso": 0.92,
-    "controverso": 0.03,
-    "emergente": 0
+    "controverso": 0.01,
+    "emergente": 0,
+    "consenso": 0.98,
+    "especulacao": 0.01
    },
-   "confidence": 0.89
+   "confidence": 0.98
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.59
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.12
   },
-  "encaixe_2": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.27
   },
-  "ambigua_3": {
-   "type": "noul",
-   "noul": 0.07
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.3
-  },
-  "marca_4": {
+  "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.1,
-    "consenso": 0.85,
-    "controverso": 0.04,
-    "emergente": 0.01
+    "controverso": 0.01,
+    "emergente": 0,
+    "consenso": 0.98,
+    "especulacao": 0.01
    },
-   "confidence": 0.8
+   "confidence": 0.97
   },
-  "disputa_4": {
+  "tecnico_3": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.53
   },
-  "encaixe_4": {
+  "disputa_3": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.16
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.06
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.5
+   "noul": 0.33
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.06,
+    "emergente": 0.01,
+    "consenso": 0.92,
+    "especulacao": 0.01
+   },
+   "confidence": 0.89
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.47
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.54
+   "noul": 0.12
   },
-  "ambigua_6": {
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.48
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.3,
+    "especulacao": 0.01,
+    "consenso": 0.51,
+    "emergente": 0.18
+   },
+   "confidence": 0.35
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "ambigua_9": {
    "type": "noul",
    "noul": 0.08
   }
  },
- "custo_usd": 0.00588
+ "custo_usd": 0.02147
 }

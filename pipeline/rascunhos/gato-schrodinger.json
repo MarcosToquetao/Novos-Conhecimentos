@@ -1,74 +1,73 @@
 {
  "id": "gato-schrodinger",
  "tipo": "licao",
- "criado": "2026-09-27T15:38:19",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:20:12",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Todo mundo já ouviu que o gato de Schrödinger fica vivo e morto ao mesmo tempo até alguém abrir a caixa. Schrödinger escreveu isso para dizer o contrário.",
+  "gancho": "Todo mundo já ouviu que o gato de Schrödinger fica vivo e morto ao mesmo tempo até alguém abrir a caixa. Schrödinger escreveu isso justamente para mostrar que essa ideia, levada a sério, gerava um absurdo.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Em 1935, Schrödinger imaginou um gato numa caixa ligado a um átomo radioativo. Se o átomo decai, o veneno mata o gato. Se não, ele vive.</p>",
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O físico austríaco Erwin Schrödinger. Em 1935, ele publicou um experimento mental usando um gato para criticar a interpretação de Copenhague da física quântica.",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "O que Schrödinger queria mostrar com esse gato?",
+    "q": "Por que Schrödinger criou essa história do gato?",
     "alts": [
-     "Que o gato realmente fica vivo e morto ao mesmo tempo",
-     "Que levar a interpretação de Copenhague a sério dá um resultado absurdo, então algo está incompleto",
-     "Que animais podem entrar em superposição quântica"
+     "Para provar que o gato fica vivo e morto ao mesmo tempo",
+     "Para mostrar que a interpretação da época, se aplicada a objetos grandes, gera um absurdo",
+     "Para ilustrar como animais podem entrar em superposição quântica"
     ],
     "correta": 1,
-    "porque": "Ele usou o absurdo de propósito, como uma reductio ad absurdum. Para Schrödinger, um gato de verdade está vivo ou morto, olhem ou não."
-   },
-   {
-    "tipo": "comparar",
-    "a": "Versão popular",
-    "b": "O que Schrödinger escreveu",
-    "linhas": [
-     {
-      "aspecto": "O gato",
-      "a": "vivo e morto ao mesmo tempo",
-      "b": "ou vivo, ou morto"
-     },
-     {
-      "aspecto": "Sentido",
-      "a": "descrição do universo real",
-      "b": "crítica à interpretação de Copenhague"
-     },
-     {
-      "aspecto": "Conclusão",
-      "a": "a superposição é o ponto",
-      "b": "algo na explicação está incompleto"
-     }
-    ],
-    "legenda": "A versão que circula inverte a intenção do autor.",
+    "porque": "Ele usou o absurdo de propósito, como uma reductio ad absurdum. Para Schrödinger, um gato de verdade está vivo ou morto, olhem ou não. A intenção era criticar, não ilustrar.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "camadas",
-    "camadas": [
+    "tipo": "etapas",
+    "etapas": [
      {
-      "nome": "Átomo",
-      "nota": "superposição de decaído e não decaído"
+      "nome": "Átomo radioativo",
+      "texto": "pode decair ou não, numa superposição quântica de dois estados"
      },
      {
       "nome": "Mecanismo",
-      "nota": "martelo e frasco de veneno"
+      "texto": "se decair, um martelo quebra o frasco de veneno"
      },
      {
       "nome": "Gato",
-      "nota": "trilhões de átomos em contato com o ar, a luz e o calor"
+      "texto": "segundo a interpretação sem ressalvas, ficaria numa mistura impossível de vivo e morto"
      }
     ],
-    "eixo": {
-     "topo": "quântico",
-     "base": "macroscópico"
-    },
-    "legenda": "A cada camada, o sistema troca mais informação com o ambiente. É por aí que a superposição se perde.",
+    "legenda": "O problema está em passar a superposição do átomo para um objeto grande sem nenhuma qualificação.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Partícula isolada",
+    "b": "Gato (objeto grande)",
+    "linhas": [
+     {
+      "aspecto": "Tamanho",
+      "a": "um átomo ou fóton",
+      "b": "trilhões de átomos"
+     },
+     {
+      "aspecto": "Contato com ambiente",
+      "a": "quase nenhum",
+      "b": "constante: ar, luz, calor"
+     },
+     {
+      "aspecto": "Superposição observável",
+      "a": "sim, por um tempo",
+      "b": "não, se perde rápido demais"
+     }
+    ],
+    "legenda": "A diferença de escala e de contato com o mundo explica por que gatos não ficam em superposição.",
     "marca": "consenso",
     "fonte": 7
    },
@@ -87,11 +86,13 @@
      "Porque a superposição nunca foi observada em nada"
     ],
     "correta": 1,
-    "porque": "A decoerência é um processo físico, não depende de observador consciente. E superposição de partículas isoladas é um resultado experimental muito bem estabelecido."
+    "porque": "A decoerência é um processo físico, não depende de observador consciente. E superposição de partículas isoladas é um resultado experimental muito bem estabelecido.",
+    "marca": "consenso",
+    "fonte": 7
    },
    {
     "tipo": "estimar",
-    "q": "Em que ano físicos criaram pela primeira vez uma versão real e minúscula de um estado de gato, com um átomo isolado em dois estados ao mesmo tempo?",
+    "q": "Em que ano físicos criaram uma versão real e minúscula de um estado de gato, com um átomo isolado em dois estados ao mesmo tempo?",
     "unidade": "ano",
     "min": 1980,
     "max": 2020,
@@ -117,9 +118,33 @@
       "texto": "o átomo termina observado em um estado, como previsto pela mecânica quântica"
      }
     ],
-    "legenda": "Foi assim que Haroche e Wineland observaram um 'gato quântico' morrendo aos poucos em laboratório.",
+    "legenda": "Foi assim que Haroche e Wineland observaram um 'gato quântico' morrendo aos poucos em laboratório. Técnica que rendeu o Nobel de Física em 2012.",
     "marca": "consenso",
     "fonte": 5
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Átomo",
+      "nota": "superposição de decaído e não decaído"
+     },
+     {
+      "nome": "Mecanismo",
+      "nota": "martelo e frasco de veneno"
+     },
+     {
+      "nome": "Gato",
+      "nota": "trilhões de átomos em contato com o ar, a luz e o calor"
+     }
+    ],
+    "eixo": {
+     "topo": "quântico, isolado",
+     "base": "macroscópico, em contato com o ambiente"
+    },
+    "legenda": "A cada camada, o sistema troca mais informação com o ambiente. É por aí que a superposição se perde.",
+    "marca": "consenso",
+    "fonte": 7
    }
   ],
   "fecho": "Se a medição de uma partícula parece afetar outra à distância, o que está acontecendo entre elas? Isso tem nome: emaranhamento quântico."
@@ -127,13 +152,17 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 3: trata de disputa ou evidência contestada (0.93); lição só ensina o núcleo estabelecido",
-  "tela 7: o tipo visual não combina com o conteúdo (0.27); troque de tipo ou use texto"
+  "tela 3: trata de disputa ou evidência contestada (0.69); lição só ensina o núcleo estabelecido",
+  "tela 7: o tipo visual não combina com o conteúdo (0.40); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.97,
+   "score": 2.84,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -144,88 +173,120 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.05,
-    "3": 0.93,
-    "4": 0.02
+    "2": 0.16,
+    "3": 0.83,
+    "4": 0.01
    },
-   "confidence": 0.94
+   "confidence": 0.85
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.33
   },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.23
-  },
-  "ambigua_2": {
+  "tecnico_1": {
    "type": "noul",
    "noul": 0.08
   },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "respondivel_2": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "obvia_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "ambigua_2": {
+   "type": "noul",
+   "noul": 0.06
+  },
   "ia_3": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.32
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "emergente": 0.01,
+    "consenso": 0.87,
     "controverso": 0.04,
-    "consenso": 0.94,
-    "especulacao": 0.01,
-    "emergente": 0.01
+    "especulacao": 0.08
    },
-   "confidence": 0.93
+   "confidence": 0.83
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.21
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.69
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.91
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.34
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
+    "emergente": 0,
     "consenso": 1,
-    "especulacao": 0,
-    "emergente": 0
+    "controverso": 0,
+    "especulacao": 0
    },
-   "confidence": 0.99
+   "confidence": 1
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.36
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.94
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.43
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
+    "emergente": 0,
     "consenso": 1,
-    "especulacao": 0,
-    "emergente": 0
+    "controverso": 0,
+    "especulacao": 0
    },
    "confidence": 1
   },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.31
+  },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.36
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.35
   },
   "ambigua_6": {
    "type": "noul",
@@ -233,50 +294,85 @@
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.32
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.05,
-    "consenso": 0.88,
-    "especulacao": 0.01,
-    "emergente": 0.06
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0.01,
+    "consenso": 0.99
    },
-   "confidence": 0.84
+   "confidence": 0.98
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.14
   },
   "encaixe_7": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.4
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.35
   },
   "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "especulacao": 0,
-    "consenso": 0.99,
-    "emergente": 0.01,
-    "controverso": 0
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
    },
-   "confidence": 0.99
+   "confidence": 1
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.28
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.16
+   "noul": 0.17
   },
   "encaixe_8": {
    "type": "noul",
    "noul": 0.96
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.92
   }
  },
- "custo_usd": 0.00734
+ "custo_usd": 0.00205
 }

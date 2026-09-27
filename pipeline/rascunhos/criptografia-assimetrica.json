@@ -1,15 +1,16 @@
 {
  "id": "criptografia-assimetrica",
  "tipo": "licao",
- "criado": "2026-09-27T16:29:37",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:18:58",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Dois primos combinam uma senha antes de trocar cartas secretas. Mas como combinar a senha com um desconhecido, sem nunca terem se encontrado?",
+  "gancho": "Dois primos combinam uma senha antes de trocar cartas secretas. Mas como combinar a senha com um desconhecido sem nunca terem se encontrado? Em 1976, Diffie e Hellman acharam uma saída: separar a chave em duas.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Até os anos 1970, toda cifra usava a mesma chave para trancar e destrancar. As duas pessoas precisavam combinar a senha antes, num encontro secreto. Em 1976, Diffie e Hellman mostraram que dá para fazer isso em praça pública.</p>"
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Uma caixa de correio é uma boa analogia. O endereço é público: qualquer um pode depositar uma carta pela fenda. Mas só quem tem a chave da portinhola lê o conteúdo."
    },
    {
     "tipo": "comparar",
@@ -41,7 +42,7 @@
     "etapas": [
      {
       "nome": "1. Gerar o par",
-      "texto": "O computador cria uma chave pública e uma chave privada a partir de um número secreto."
+      "texto": "O computador cria uma chave pública e uma privada a partir de um número secreto."
      },
      {
       "nome": "2. Publicar",
@@ -85,6 +86,13 @@
     "fonte": 1
    },
    {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "O cadeado verde no navegador mostra que a conexão usa criptografia. A chave pública do servidor combinou uma chave secreta temporária, e a conversa seguiu cifrada por ela.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
     "tipo": "comparar",
     "a": "Cifrar",
     "b": "Assinar",
@@ -123,34 +131,41 @@
     "fonte": 2
    },
    {
+    "tipo": "foto",
+    "foto": 5,
+    "legenda": "Clifford Cocks, do serviço secreto britânico, criou o que hoje chamamos de RSA em 1973. Só em 1997 o governo liberou os documentos.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
     "tipo": "pergunta",
     "q": "Um site publica sua chave pública num diretório. Um atacante copia essa chave. O que ele consegue fazer?",
     "alts": [
      "Decifrar as mensagens enviadas ao site",
-     "Nada, sem a chave privada correspondente a mensagem continua ilegível",
-     "Trancar mensagens com essa chave no lugar do site"
+     "Nada. Sem a chave privada correspondente, a mensagem continua ilegível para ele",
+     "Impedir que outras pessoas encontrem a chave pública original"
     ],
     "correta": 1,
     "porque": "A chave pública pode ser vista e copiada. O que protege é a dificuldade de deduzir a privada a partir dela.",
     "marca": "consenso",
     "fonte": 2
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>A cifra esconde o conteúdo, mas não esconde quem fala com quem. O cabeçalho da mensagem pode revelar remetente, destinatário, horário e programa usado.</p>"
    }
   ],
   "fecho": "Como saber que aquela chave pública pertence mesmo a quem diz? Esse é o problema que as autoridades certificadoras tentam resolver. E há quem proponha fazer isso sem uma autoridade central, com blockchain."
  },
  "erros": [],
  "avisos": [
-  "tela 7: duas perguntas seguidas"
+  "tela 1: legenda com mais de 25 palavras"
  ],
  "alertas_jev": [],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.83
+  },
   "interesse": {
    "type": "score",
-   "score": 2.85,
+   "score": 2.9,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -160,35 +175,43 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.15,
-    "3": 0.83,
+    "1": 0,
+    "2": 0.11,
+    "3": 0.88,
     "4": 0.01
    },
-   "confidence": 0.86
+   "confidence": 0.9
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.18
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.04
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.38
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
     "consenso": 1,
-    "emergente": 0
+    "controverso": 0,
+    "emergente": 0,
+    "especulacao": 0
    },
    "confidence": 1
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.18
   },
   "disputa_2": {
    "type": "noul",
@@ -200,18 +223,22 @@
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.31
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
     "consenso": 1,
-    "emergente": 0
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
    },
    "confidence": 1
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.16
   },
   "disputa_3": {
    "type": "noul",
@@ -223,18 +250,22 @@
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.32
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 0.98,
     "controverso": 0,
-    "especulacao": 0.03,
-    "consenso": 0.97,
-    "emergente": 0
+    "emergente": 0,
+    "especulacao": 0.02
    },
-   "confidence": 0.95
+   "confidence": 0.97
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.25
   },
   "disputa_4": {
    "type": "noul",
@@ -242,47 +273,105 @@
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.93
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.23
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
+    "emergente": 0,
     "consenso": 1,
-    "emergente": 0
+    "controverso": 0,
+    "especulacao": 0
    },
    "confidence": 1
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.28
   },
   "disputa_5": {
    "type": "noul",
    "noul": 0.05
   },
-  "encaixe_5": {
+  "ia_6": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.25
   },
-  "ambigua_6": {
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_6": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.21
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.28
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.22
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.21
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "consenso": 0.9,
+    "controverso": 0.06,
+    "especulacao": 0.03
+   },
+   "confidence": 0.86
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.57
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.13
   }
  },
- "custo_usd": 0.00734
+ "custo_usd": 0.00235
 }

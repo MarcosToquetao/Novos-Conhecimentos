@@ -1,17 +1,27 @@
 {
  "id": "gerrymandering",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:31",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:20:17",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Em 1812, o governador de Massachusetts, Elbridge Gerry, assinou uma lei que redesenhava os distritos eleitorais do estado. Um dos novos distritos parecia uma salamandra, e um jornal de Boston apelidou a figura de Gerry-mander.",
+  "gancho": "Em 1812, o governador de Massachusetts, Elbridge Gerry, assinou uma lei que redesenhava os distritos eleitorais do estado. Um dos novos distritos parecia uma salamandra. Um jornal de Boston apelidou a figura de Gerry-mander. O termo pegou e hoje descreve uma prática que permite vencer eleições sem mudar um voto sequer.",
   "telas": [
    {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A caricatura de 1812 que deu origem ao termo: um distrito com a forma de um monstro alado e garras."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Dois séculos depois, o quarto distrito de Illinois mostra como os traçados podem seguir caminhos sinuosos, unindo bairros distantes."
+   },
+   {
     "tipo": "texto",
-    "html": "<p>O termo pegou. Hoje <strong>gerrymandering</strong> é o nome de qualquer manipulação de fronteiras eleitorais para favorecer um partido ou grupo.</p>",
+    "html": "<p>Em sistemas distritais, quem vence no distrito leva a cadeira. Se você controla o desenho do mapa, pode desperdiçar o máximo de votos do oponente e o mínimo dos seus.</p>",
     "marca": "consenso",
-    "fonte": 1
+    "fonte": 2
    },
    {
     "tipo": "comparar",
@@ -29,7 +39,7 @@
       "b": "vencem com sobras e os votos além do necessário viram inúteis"
      }
     ],
-    "legenda": "Duas táticas que transformam votos em cadeiras: desperdiçar os votos do oponente e aproveitar melhor os seus.",
+    "legenda": "Duas maneiras de transformar a mesma quantidade de votos em resultados opostos.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -41,33 +51,14 @@
     "max": 1000,
     "escala": "log",
     "resposta": 83,
-    "legenda": "83 mil votos a mais. Mesmo assim, perderam em 13 dos 18 distritos.",
+    "legenda": "Candidatos democratas tiveram 83 mil votos a mais no total. Perderam em 13 dos 18 distritos.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "Distribuição eficiente",
-      "texto": "Seus apoiadores são espalhados para vencer por margens estreitas em muitos distritos"
-     },
-     {
-      "nome": "Concentração do adversário",
-      "texto": "Os eleitores do oponente ficam empacotados em poucos distritos onde ganham com sobras"
-     },
-     {
-      "nome": "Votos desperdiçados",
-      "texto": "Os votos que sobram nas vitórias fáceis do adversário viram votos inúteis"
-     },
-     {
-      "nome": "Maioria de cadeiras",
-      "texto": "O partido conquista a maioria das cadeiras mesmo perdendo no voto popular geral"
-     }
-    ],
-    "legenda": "Não é preciso ter mais votos no total. Basta distribuí-los de forma que os seus rendam mais cadeiras e os do adversário se desperdicem.",
-    "marca": "consenso",
-    "fonte": 2
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Mesma distribuição de eleitores, resultados diferentes. O segredo está em como se traçam as linhas."
    },
    {
     "tipo": "pergunta",
@@ -78,66 +69,64 @@
      "Os votos do adversário foram anulados por irregularidades"
     ],
     "correta": 0,
-    "porque": "O partido que gerrymanda distribui seus apoiadores de maneira que ganham por pouco em muitos distritos. Os votos do adversário que sobram nas vitórias fáceis viram votos desperdiçados."
+    "porque": "O partido que gerrymanda espalha seus apoiadores para ganhar por pouco em muitos lugares. Os votos do adversário que sobram nas vitórias fáceis viram desperdício."
    },
    {
-    "tipo": "pontos",
-    "valor": 11.7,
-    "frase": "de cada 100 votos, essa era a diferença de eficiência entre os partidos no mapa de Wisconsin.",
-    "legenda": "Um tribunal federal considerou que o mapa de 2011 violava a constituição, citando uma diferença de eficiência entre 11,7% e 13%.",
+    "tipo": "comparar",
+    "a": "Partido A",
+    "b": "Partido B",
+    "linhas": [
+     {
+      "aspecto": "Votos totais",
+      "a": "perdeu",
+      "b": "ganhou"
+     },
+     {
+      "aspecto": "Cadeiras",
+      "a": "maioria",
+      "b": "minoria"
+     },
+     {
+      "aspecto": "Votos por vitória",
+      "a": "margens pequenas",
+      "b": "margens enormes"
+     }
+    ],
+    "legenda": "Ganhar de lavada nos distritos onde se vence é um problema, não uma vantagem. Cada voto acima do necessário é um voto que não elegeu ninguém.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "linha_tempo",
-    "eventos": [
-     {
-      "ano": 1812,
-      "texto": "Elbridge Gerry assina a lei que cria o distrito com formato de salamandra"
-     },
-     {
-      "ano": 1972,
-      "texto": "Erikson observa que o viés pode surgir da concentração natural de eleitores"
-     },
-     {
-      "ano": 2013,
-      "texto": "Chen e Rodden mostram que a geografia pode produzir viés sem intenção"
-     },
-     {
-      "ano": 2016,
-      "texto": "Tribunal em Wisconsin usa o gap de eficiência para considerar o mapa inconstitucional"
-     }
-    ],
-    "legenda": "O conceito nasceu em 1812 e a forma de medi-lo se desenvolveu ao longo de décadas.",
-    "marca": "consenso"
-   },
-   {
     "tipo": "pergunta",
-    "q": "Um mapa favorece um partido, mas ninguém manipulou as fronteiras. O que isso pode ser?",
+    "q": "Se um mapa favorece um partido, isso sempre indica que alguém manipulou as fronteiras de propósito?",
     "alts": [
-     "Impossível, viés sempre indica intenção",
-     "Gerrymandering não intencional, resultado da concentração geográfica de eleitores",
-     "Erro no cálculo das cadeiras"
+     "Sim, o viés prova a intenção de manipular",
+     "Não, a concentração geográfica natural de eleitores pode gerar viés sem manipulação",
+     "Não, porque a legislação eleitoral proíbe qualquer tipo de viés"
     ],
     "correta": 1,
-    "porque": "Em muitos estados, os democratas se concentram em grandes cidades. Essa concentração faz com que, mesmo com 50% dos votos, conquistem menos de 50% das cadeiras."
+    "porque": "Em muitos estados americanos, eleitores democratas se concentram em grandes cidades. Essa aglomeração natural faz com que percam cadeiras mesmo com metade dos votos. É o gerrymandering não intencional."
    }
   ],
-  "fecho": "Se o desenho dos distritos pode distorcer a relação entre votos e cadeiras, como outros sistemas eleitorais evitam esse problema? Existem alternativas que transferem esse desenho para comissões independentes ou usam representação proporcional de lista."
+  "fecho": "Se traçar linhas no mapa distorce a vontade das urnas, o que acontece quando se abandona o mapa e se elege por lista partidária? É o que explica o conceito de Sistemas eleitorais e a lei de Duverger."
  },
  "erros": [],
  "avisos": [
-  "tela 7: marca sem fonte"
+  "gancho com mais de 45 palavras"
  ],
  "alertas_jev": [
-  "tela 3: o tipo visual não combina com o conteúdo (0.34); troque de tipo ou use texto",
-  "tela 4: soa como IA (0.57)",
-  "tela 6: o tipo visual não combina com o conteúdo (0.31); troque de tipo ou use texto"
+  "tela 5: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto",
+  "tela 6: soa como IA (0.58)",
+  "tela 9: a pergunta depende de algo que a lição ainda não mostrou (0.36)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.94
+  },
   "interesse": {
    "type": "score",
-   "score": 2.78,
+   "score": 3.02,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -148,154 +137,176 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.21,
-    "3": 0.79,
-    "4": 0
+    "2": 0.02,
+    "3": 0.94,
+    "4": 0.04
    },
-   "confidence": 0.81
+   "confidence": 0.95
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.29
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.06,
-    "emergente": 0.01,
-    "consenso": 0.93,
-    "especulacao": 0
-   },
-   "confidence": 0.9
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.04
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.1
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.32
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.03,
-    "emergente": 0.01,
-    "consenso": 0.96,
-    "especulacao": 0
-   },
-   "confidence": 0.94
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.07
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.93
+   "noul": 0.11
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.5
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.08,
-    "emergente": 0.05,
-    "consenso": 0.85,
-    "especulacao": 0.02
+    "especulacao": 0.01,
+    "emergente": 0,
+    "consenso": 0.95,
+    "controverso": 0.04
    },
-   "confidence": 0.8
+   "confidence": 0.93
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.32
-  },
-  "encaixe_3": {
-   "type": "noul",
-   "noul": 0.34
+   "noul": 0.1
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.57
+   "noul": 0.38
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.08,
-    "emergente": 0.03,
-    "consenso": 0.89,
-    "especulacao": 0
+    "especulacao": 0.01,
+    "emergente": 0,
+    "consenso": 0.97,
+    "controverso": 0.02
    },
-   "confidence": 0.86
+   "confidence": 0.97
   },
-  "disputa_4": {
+  "tecnico_4": {
    "type": "noul",
    "noul": 0.11
   },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.09
+  },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.88
+   "noul": 0.92
   },
-  "ambigua_5": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.26
   },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.33
-  },
-  "marca_6": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "controverso": 0.33,
-    "emergente": 0.35,
-    "consenso": 0.31,
-    "especulacao": 0.01
-   },
-   "confidence": 0.13
-  },
-  "disputa_6": {
-   "type": "noul",
-   "noul": 0.53
-  },
-  "encaixe_6": {
-   "type": "noul",
-   "noul": 0.31
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.37
-  },
-  "marca_7": {
+  "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.57,
-    "controverso": 0.14,
-    "especulacao": 0,
-    "emergente": 0.29
+    "especulacao": 0.02,
+    "controverso": 0.06,
+    "emergente": 0.01,
+    "consenso": 0.91
    },
-   "confidence": 0.43
+   "confidence": 0.89
   },
-  "disputa_7": {
+  "tecnico_5": {
    "type": "noul",
-   "noul": 0.51
+   "noul": 0.13
   },
-  "encaixe_7": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.23
   },
-  "ambigua_8": {
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.58
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "disputa_6": {
    "type": "noul",
    "noul": 0.22
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.81
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.02,
+    "emergente": 0,
+    "consenso": 0.97,
+    "especulacao": 0.01
+   },
+   "confidence": 0.96
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.16
   }
  },
- "custo_usd": 0.00728
+ "custo_usd": 0.00187
 }

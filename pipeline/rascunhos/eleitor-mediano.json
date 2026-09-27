@@ -1,22 +1,27 @@
 {
  "id": "eleitor-mediano",
  "tipo": "licao",
- "criado": "2026-09-27T15:45:32",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:19:47",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Dois candidatos disputando a mesma eleição, com eleitores espalhados da esquerda à direita. Onde cada um deve se posicionar para ganhar? A resposta surpreende: os dois no mesmo lugar, bem no meio.",
+  "gancho": "Dois candidatos disputando a mesma eleição, com eleitores espalhados da esquerda à direita em um único tema. Onde cada um deve se posicionar para ganhar? A resposta surpreende: os dois no mesmo lugar, bem no meio.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O teorema do eleitor mediano prevê que, em um mundo de dois candidatos e um só tema, a disputa empurra ambos para o centro."
+   },
    {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "Candidato à esquerda",
-      "texto": "está longe do centro"
+      "texto": "está distante do centro"
      },
      {
       "nome": "Oponente se move",
-      "texto": "um pouco mais para o meio, roubando eleitores do centro"
+      "texto": "um pouco para o meio, conquistando eleitores do centro"
      },
      {
       "nome": "O primeiro reage",
@@ -24,30 +29,30 @@
      },
      {
       "nome": "Convergência",
-      "texto": "os dois acabam na posição mediana"
+      "texto": "os dois terminam na posição mediana"
      }
     ],
-    "legenda": "A disputa empurra os dois para o centro exato.",
+    "legenda": "A lógica da competição empurra os dois para a posição do eleitor que está exatamente no meio.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que os candidatos não se afastam para agradar suas bases?",
+    "q": "Por que um candidato não se afasta para agradar sua base?",
     "alts": [
-     "Porque perderiam eleitores do outro lado sem ganhar nenhum",
-     "Porque se mover ao centro rouba eleitores do oponente sem perder os próprios",
+     "Porque perderia eleitores do outro lado sem ganhar nenhum extra da sua base",
+     "Porque quem se move ao centro rouba eleitores do oponente sem perder os próprios",
      "Porque a lei eleitoral exige moderação"
     ],
     "correta": 1,
-    "porque": "Quem se move ao centro atrai eleitores que estão entre as duas posições. Quem se afasta perde para o oponente que ficou mais perto do meio."
+    "porque": "Ao se mover para o centro, o candidato atrai eleitores que estão entre as duas posições. Afastar-se significaria entregar esses eleitores para o oponente que ficou mais perto do meio."
    },
    {
     "tipo": "linha_tempo",
     "eventos": [
      {
       "ano": 1929,
-      "texto": "Hotelling usa a mesma lógica para explicar por que lojas competidoras se instalam lado a lado"
+      "texto": "Hotelling usa a mesma lógica para explicar por que lojas concorrentes se instalam lado a lado"
      },
      {
       "ano": 1948,
@@ -58,7 +63,7 @@
       "texto": "Downs aplica a ideia à competição entre partidos políticos"
      }
     ],
-    "legenda": "Três passos até a formulação moderna.",
+    "legenda": "Três passos até a formulação moderna do teorema.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -75,7 +80,7 @@
      {
       "aspecto": "Informação",
       "a": "completa sobre preferências",
-      "b": "incerteza sobre a distribuição real"
+      "b": "incerteza sobre a distribuição de opinião"
      },
      {
       "aspecto": "Voto",
@@ -88,35 +93,72 @@
       "b": "muitas vezes mais de dois partidos relevantes"
      }
     ],
-    "legenda": "As premissas que raramente se sustentam.",
+    "legenda": "As premissas do modelo que raramente se sustentam na prática.",
     "marca": "consenso",
     "fonte": 7
    },
    {
     "tipo": "pergunta",
-    "q": "Por que eleições reais frequentemente não mostram candidatos convergindo ao centro?",
+    "q": "Por que a convergência ao centro nem sempre acontece na política real?",
     "alts": [
-     "Porque o teorema do eleitor mediano está matematicamente errado",
+     "Porque o teorema do eleitor mediano contém um erro matemático",
      "Porque as premissas do modelo (uma dimensão, dois candidatos, informação completa) raramente se aplicam",
      "Porque os eleitores não sabem onde estão no espectro político"
     ],
     "correta": 1,
-    "porque": "A matemática do teorema é sólida dentro das condições do modelo. O que falha na prática são as premissas, não a lógica."
+    "porque": "A lógica matemática do teorema é sólida dentro das condições do seu modelo. Na prática, é a falha das premissas, e não da lógica, que impede a convergência."
+   },
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A distância ideológica entre partidos americanos aumentou nas últimas décadas, o oposto do que o modelo simples prevê.",
+    "marca": "consenso",
+    "fonte": 8
+   },
+   {
+    "tipo": "comparar",
+    "a": "Modelo do eleitor mediano",
+    "b": "Teorema do caos (McKelvey)",
+    "linhas": [
+     {
+      "aspecto": "Dimensões",
+      "a": "uma",
+      "b": "múltiplas"
+     },
+     {
+      "aspecto": "Resultado",
+      "a": "convergência estável ao centro",
+      "b": "instabilidade e possibilidade de vários resultados"
+     },
+     {
+      "aspecto": "Aplica-se quando",
+      "a": "um só tema domina a eleição",
+      "b": "vários temas importam ao mesmo tempo"
+     }
+    ],
+    "legenda": "Quando o debate tem mais de um eixo, a convergência deixa de ser garantida.",
+    "marca": "consenso",
+    "fonte": 4
    }
   ],
-  "fecho": "O teorema do eleitor mediano é um caso especial de uma pergunta maior: como agregar preferências individuais numa decisão coletiva? Arrow mostrou que nenhum sistema de votação atende a todos os critérios razoáveis ao mesmo tempo. Isso tem nome: teorema da impossibilidade de Arrow."
+  "fecho": "O teorema do eleitor mediano resolve o problema de agregar vontades quando há um só tema. Arrow mostrou que, com três ou mais alternativas, nenhum sistema de votação atende a todos os critérios razoáveis ao mesmo tempo. Isso tem nome: teorema da impossibilidade de Arrow."
  },
- "erros": [
-  "5 telas (esperado 6 a 9)"
- ],
+ "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 4: trata de disputa ou evidência contestada (0.62); lição só ensina o núcleo estabelecido"
+  "tela 1: soa como IA (0.58)",
+  "tela 2: soa como IA (0.52)",
+  "tela 7: trata de disputa ou evidência contestada (0.81); lição só ensina o núcleo estabelecido",
+  "tela 8: soa como IA (0.54)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.9
+  },
   "interesse": {
    "type": "score",
-   "score": 2.91,
+   "score": 2.92,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -127,65 +169,66 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.09,
-    "3": 0.9,
+    "2": 0.08,
+    "3": 0.91,
     "4": 0.01
    },
    "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.5
+   "noul": 0.58
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.17,
-    "controverso": 0.24,
-    "emergente": 0.02,
-    "consenso": 0.57
-   },
-   "confidence": 0.44
-  },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.17
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.93
-  },
-  "ambigua_2": {
-   "type": "noul",
-   "noul": 0.22
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.34
-  },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.08,
-    "emergente": 0.01,
-    "consenso": 0.89,
-    "controverso": 0.02
-   },
-   "confidence": 0.85
-  },
-  "disputa_3": {
+  "tecnico_1": {
    "type": "noul",
    "noul": 0.07
   },
-  "encaixe_3": {
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.25,
+    "emergente": 0.01,
+    "consenso": 0.59,
+    "especulacao": 0.15
+   },
+   "confidence": 0.46
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "encaixe_2": {
    "type": "noul",
    "noul": 0.94
   },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.71
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.35
+  },
   "ia_4": {
    "type": "noul",
-   "noul": 0.48
+   "noul": 0.33
   },
   "marca_4": {
    "type": "choice",
@@ -193,23 +236,112 @@
    "probabilities": {
     "especulacao": 0.05,
     "emergente": 0.01,
-    "consenso": 0.82,
-    "controverso": 0.12
+    "consenso": 0.92,
+    "controverso": 0.02
    },
-   "confidence": 0.76
+   "confidence": 0.9
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.62
+   "noul": 0.08
   },
   "encaixe_4": {
    "type": "noul",
+   "noul": 0.94
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.48
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.07,
+    "emergente": 0.01,
+    "consenso": 0.88,
+    "especulacao": 0.04
+   },
+   "confidence": 0.84
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "encaixe_5": {
+   "type": "noul",
    "noul": 0.95
   },
-  "ambigua_5": {
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "ambigua_6": {
    "type": "noul",
    "noul": 0.1
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.69,
+    "emergente": 0.09,
+    "especulacao": 0.01,
+    "controverso": 0.21
+   },
+   "confidence": 0.59
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.81
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.88,
+    "emergente": 0.03,
+    "especulacao": 0.02,
+    "controverso": 0.07
+   },
+   "confidence": 0.83
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.95
   }
  },
- "custo_usd": 0.00891
+ "custo_usd": 0.00307
 }

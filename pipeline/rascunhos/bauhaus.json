@@ -1,0 +1,293 @@
+{
+ "id": "bauhaus",
+ "tipo": "licao",
+ "criado": "2026-09-27T19:18:11",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1919, um arquiteto alemão fundiu duas escolas de arte em Weimar e criou a Bauhaus. Ela existiria por apenas 14 anos, teria menos de 1.300 alunos, e no entanto definiria a aparência de muita coisa que usamos até hoje.",
+  "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Walter Gropius, o arquiteto alemão que fundou a Bauhaus em 1919. Ele queria juntar arte, artesanato e tecnologia moderna em um só lugar."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O edifício da Bauhaus em Dessau, projetado por Gropius. O prédio de vidro e concreto se tornou a imagem mais conhecida da escola."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Vorkurs",
+      "texto": "O aluno passava um ano experimentando materiais e cor. Era o curso preparatório obrigatório."
+     },
+     {
+      "nome": "Oficinas",
+      "texto": "Depois, escolhia uma oficina: cerâmica, tecelagem, mobiliário, teatro, tipografia ou pintura."
+     },
+     {
+      "nome": "Arquitetura",
+      "texto": "Curso próprio só foi criado em 1927. Ainda assim, o edifício era visto como o objetivo final."
+     }
+    ],
+    "legenda": "O caminho de todo aluno da Bauhaus, do primeiro ano até a especialização.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a história da arte era ensinada só depois de três ou quatro anos?",
+    "alts": [
+     "Porque a escola não tinha professores de história disponíveis antes",
+     "Para o aluno não copiar os padrões do passado antes de aprender a criar",
+     "Porque a história da arte era considerada irrelevante para o design"
+    ],
+    "correta": 1,
+    "porque": "A justificativa era direta: conhecer os estilos antigos cedo demais levaria o aluno a imitar em vez de inventar. Primeiro ele aprendia a criar; depois estudava o que os outros criaram."
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1919,
+      "texto": "Gropius funda a escola em Weimar, no clima de experimentação da República de Weimar."
+     },
+     {
+      "ano": 1925,
+      "texto": "A direita vence na Turíngia. A escola se muda para Dessau, cidade de governo mais à esquerda."
+     },
+     {
+      "ano": 1932,
+      "texto": "Com os nazistas vitoriosos em Dessau, a escola vai para Berlim."
+     },
+     {
+      "ano": 1933,
+      "texto": "A Gestapo fecha a escola. Professores e alunos se dispersam."
+     }
+    ],
+    "legenda": "Duas mudanças de cidade por pressão política em apenas 14 anos de existência.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "foto",
+    "foto": 5,
+    "legenda": "Prédios de apartamentos da Bauhaus em Dessau, construídos sob a direção de Hannes Meyer. Foram um dos raros projetos de habitação que a escola ergueu."
+   },
+   {
+    "tipo": "comparar",
+    "a": "A Bauhaus sob Hannes Meyer",
+    "b": "A Bauhaus sob Mies van der Rohe",
+    "linhas": [
+     {
+      "aspecto": "Construções",
+      "a": "5 prédios de apartamentos e a escola sindical de Bernau",
+      "b": "nenhum projeto construído pela escola"
+     },
+     {
+      "aspecto": "Finanças",
+      "a": "em 1929 deu seu primeiro lucro",
+      "b": "suspendeu a fabricação de produtos"
+     },
+     {
+      "aspecto": "Foco",
+      "a": "pesquisava necessidades dos moradores e usava componentes baratos",
+      "b": "concentrou tudo no ensino"
+     }
+    ],
+    "legenda": "A escola que dizia ter a construção como objetivo final quase não construiu. Seus diretores tinham prioridades opostas.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que os contemporâneos da Bauhaus fizeram que a própria escola quase não fez?",
+    "alts": [
+     "Criaram um estilo ornamentado que rivalizava com o modernismo",
+     "Construíram milhares de unidades de habitação operária, enquanto a Bauhaus fez só dois projetos do tipo",
+     "Fecharam as portas antes de 1933 por falta de alunos"
+    ],
+    "correta": 1,
+    "porque": "Quem ergueu bairros inteiros para trabalhadores na Alemanha de Weimar foram arquitetos como Ernst May em Frankfurt e Bruno Taut em Berlim, não a Bauhaus."
+   }
+  ],
+  "fecho": "A ideia de que a forma de um objeto deve seguir a função que ele cumpre tem origem anterior à Bauhaus e ganhou sentidos diferentes. De onde ela veio?"
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 4: a pergunta depende de algo que a lição ainda não mostrou (0.10)",
+  "tela 7: trata de disputa ou evidência contestada (0.66); lição só ensina o núcleo estabelecido",
+  "tela 8: a pergunta depende de algo que a lição ainda não mostrou (0.16)"
+ ],
+ "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "interesse": {
+   "type": "score",
+   "score": 2.96,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.05,
+    "3": 0.93,
+    "4": 0.02
+   },
+   "confidence": 0.94
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "especulacao": 0.07,
+    "consenso": 0.91,
+    "controverso": 0.02
+   },
+   "confidence": 0.88
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "especulacao": 0.03,
+    "consenso": 0.96,
+    "controverso": 0.01
+   },
+   "confidence": 0.95
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.03,
+    "controverso": 0.18,
+    "consenso": 0.71,
+    "especulacao": 0.08
+   },
+   "confidence": 0.61
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.66
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.46
+  }
+ },
+ "custo_usd": 0.00221
+}

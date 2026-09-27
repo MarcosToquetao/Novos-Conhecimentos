@@ -1,53 +1,47 @@
 {
  "id": "fourier",
  "tipo": "licao",
- "criado": "2026-09-27T15:33:55",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T19:09:59",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um som complicado, a vibração de uma ponte, um sinal de rádio: qualquer um deles pode ser escrito como uma soma de oscilações puras. Foi essa a afirmação que fez Lagrange rejeitar o trabalho de Fourier em 1807.",
+  "gancho": "Em 1807, Joseph Fourier afirmou que qualquer função, mesmo cheia de quinas, pode ser escrita como uma soma de senos e cossenos. Lagrange rejeitou o trabalho. Hoje, a ideia está em todo lugar: dos arquivos MP3 à descoberta da estrutura do DNA.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Joseph Fourier. Seu trabalho sobre o calor foi rejeitado em 1807, mas a matemática que ele criou se tornou onipresente.",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Como um prisma separa a luz branca em cores, a transformada de Fourier separa um sinal qualquer nas frequências puras que o compõem."
+   },
    {
     "tipo": "figura",
     "fig": "fourier-decomp",
-    "legenda": "A mesma onda quadrada somando cada vez mais senos. Com 1 termo, uma ondulação. Com 9, o degrau quase aparece.",
+    "legenda": "Uma onda quadrada, cheia de quinas, sendo construída pela soma de senos. Com 1 termo, só uma ondulação. Com 9, o degrau está quase lá.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A transformada de Fourier descobre quais oscilações puras existem dentro de um sinal e com que peso. É como um prisma que separa as cores já presentes na luz branca.</p>"
-   },
-   {
     "tipo": "figura",
     "fig": "fourier-dominios",
-    "legenda": "Em cima, o sinal no tempo. Embaixo, o mesmo sinal em frequências. Nenhuma informação se perdeu.",
+    "legenda": "Em cima, o sinal de um acorde no tempo. Embaixo, o mesmo sinal no domínio da frequência, mostrando as notas. Nada se perdeu, é só outra coordenada.",
     "marca": "consenso",
     "fonte": 7
    },
    {
     "tipo": "pergunta",
-    "q": "Você filtra um chiado de 8 kHz de uma gravação de voz. Por que a transformada ajuda?",
+    "q": "O que a transformada de Fourier mostra que o gráfico do som de um acorde de piano no tempo não mostra diretamente?",
     "alts": [
-     "Ela reduz o tamanho do arquivo antes de filtrar",
-     "No domínio da frequência o chiado é uma coluna isolada, fácil de apagar",
-     "Ela reamostra o sinal e descarta as amostras com ruído"
+     "O volume do som em cada instante",
+     "Quais notas foram tocadas e com que força",
+     "A duração total do acorde"
     ],
     "correta": 1,
-    "porque": "Separar chiado de voz no tempo é espinhoso. Na frequência, basta apagar a coluna de 8 kHz e voltar."
-   },
-   {
-    "tipo": "figura",
-    "fig": "fourier-gibbs",
-    "legenda": "Aproximação de um salto com 9 e com 49 harmônicos. A largura do erro encolhe, o pico não.",
-    "marca": "consenso",
-    "fonte": 6
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Raios X atravessam um cristal e formam manchas no detector. Esse padrão é a transformada do interior da molécula. A imagem 51 de Rosalind Franklin, que mostrou a hélice do DNA, é exatamente isso.</p>",
-    "marca": "consenso",
-    "fonte": 3
+    "porque": "O gráfico no tempo é uma única linha ondulada. A transformada revela as frequências que se somam para formar essa onda, que são as notas do acorde."
    },
    {
     "tipo": "comparar",
@@ -65,45 +59,63 @@
       "b": "multiplicar por um número"
      },
      {
-      "aspecto": "Convolução",
-      "a": "operação cara",
-      "b": "multiplicação ponto a ponto"
+      "aspecto": "Comprimir (MP3, JPEG)",
+      "a": "difícil separar o relevante",
+      "b": "basta descartar frequências que o ouvido ou olho não notam"
      }
     ],
-    "legenda": "Operações difíceis num domínio ficam triviais no outro."
+    "legenda": "Operações trabalhosas num domínio se tornam triviais no outro.",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "O padrão de difração de raios X do DNA (esquerda) é, literalmente, a transformada da estrutura molecular (direita). Para reconstruir a dupla hélice, a cientista fez a transformada inversa.",
+    "marca": "consenso",
+    "fonte": 3
    },
    {
     "tipo": "pergunta",
-    "q": "Um sinal biológico parece ruído, mas revela um pico limpo a 1 ciclo por 24 horas. O que isso indica?",
+    "q": "Por que uma nota de piano tocada por um instante muito curto não tem uma altura bem definida?",
     "alts": [
-     "O sinal é aleatório e o pico é coincidência",
-     "Existe um ritmo diário no sinal",
-     "O detector introduziu ruído em 24 Hz"
+     "É uma limitação do ouvido humano",
+     "O martelo do piano bate com menos força",
+     "É uma lei matemática: um sinal localizado no tempo se espalha na frequência"
     ],
-    "correta": 1,
-    "porque": "Um pico em 1 ciclo por dia é a assinatura de um ritmo circadiano, detectado sem que se soubesse que ele estava lá."
+    "correta": 2,
+    "porque": "Não é falha de equipamento. Quanto mais curto o estalo, mais frequências são necessárias para descrevê-lo. É o princípio da incerteza da transformada."
    },
    {
     "tipo": "ordenar",
-    "q": "Coloque na ordem da história da ferramenta.",
+    "q": "Coloque na ordem em que a ferramenta se desenvolveu.",
     "itens": [
      "Fourier entrega o trabalho à Academia de Paris, que o rejeita",
-     "Fourier publica o resultado como livro",
-     "Gauss descobre o algoritmo rápido e ele fica esquecido",
-     "Cooley e Tukey publicam a FFT e ela se espalha"
+     "Fourier publica a sua teoria num livro",
+     "Gauss descobre um algoritmo rápido, que fica esquecido",
+     "Cooley e Tukey redescobrem o algoritmo (a FFT), tornando o processamento digital viável"
     ],
-    "porque": "O algoritmo rápido existia desde 1805, mas só foi redescoberto e difundido em 1965."
+    "porque": "A ideia central é de 1807. O algoritmo que a torna prática no computador foi descoberto por Gauss em 1805, mas ficou esquecido por 160 anos.",
+    "marca": "consenso",
+    "fonte": 5
    }
   ],
   "fecho": "A peça central da fórmula é um ponto girando num círculo. Isso conecta a transformada à identidade de Euler e aos números complexos."
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 1: soa como IA (0.51)",
+  "tela 1: trata de disputa ou evidência contestada (0.65); lição só ensina o núcleo estabelecido"
+ ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.91
+  },
   "interesse": {
    "type": "score",
-   "score": 2.81,
+   "score": 3.01,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -113,43 +125,48 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.18,
-    "3": 0.8,
-    "4": 0.01
+    "1": 0,
+    "2": 0.04,
+    "3": 0.9,
+    "4": 0.06
    },
-   "confidence": 0.83
+   "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.51
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 1,
-    "emergente": 0,
-    "especulacao": 0,
-    "controverso": 0
-   },
-   "confidence": 1
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.65
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.82
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.3
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.16
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.05
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.66
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.22
   },
   "marca_3": {
    "type": "choice",
@@ -162,19 +179,19 @@
    },
    "confidence": 1
   },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.2
+  },
   "disputa_3": {
    "type": "noul",
    "noul": 0.06
   },
-  "ambigua_4": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.25
   },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.24
-  },
-  "marca_5": {
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
@@ -183,47 +200,94 @@
     "especulacao": 0,
     "controverso": 0
    },
-   "confidence": 0.99
+   "confidence": 1
   },
-  "disputa_5": {
+  "tecnico_4": {
    "type": "noul",
-   "noul": 0.16
+   "noul": 0.31
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.08
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.28
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
     "emergente": 0,
+    "consenso": 1,
     "especulacao": 0,
     "controverso": 0
    },
-   "confidence": 0.99
+   "confidence": 1
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.23
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.04
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.93
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.26
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.24
   },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.05
   },
   "encaixe_7": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.79
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.22
   },
   "ambigua_8": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.12
   }
  },
- "custo_usd": 0.00067
+ "custo_usd": 0.00488
 }

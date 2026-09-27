@@ -1,15 +1,22 @@
 {
  "id": "consonancia-dissonancia-fisica",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:33",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:13:41",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Toque um lá e o mi logo acima no piano: o som fica firme, redondo, quase uma nota só. Toque o mesmo lá com o si bemol: o som raspa, incomoda, e o ouvido pede que algo se resolva.",
+  "gancho": "Toque um lá e o mi logo acima no piano: o som fica firme, redondo, quase uma nota só. Toque o mesmo lá com o si bemol: o som raspa, incomoda, e o ouvido pede que algo se resolva. A diferença entre esses dois pares de notas é o contraste entre consonância e dissonância, e ele pode ser medido fisicamente.",
   "telas": [
    {
     "tipo": "texto",
     "html": "<p>Consonância é o que percebemos como <strong>estável e resolvido</strong>. Dissonância é o que soa tenso e pede continuação. Quase toda tradição musical com melodia tem esses dois rótulos, ainda que cada cultura escolha intervalos diferentes para cada grupo.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Duas ondas de frequências diferentes se somam e formam uma onda resultante cuja amplitude sobe e desce. É essa flutuação que o ouvido percebe.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -29,7 +36,7 @@
       "texto": "Acima disso, o som parece um tom complexo, sem tremor nem aspereza."
      }
     ],
-    "legenda": "A velocidade da flutuação é a diferença entre as duas frequências.",
+    "legenda": "A velocidade da flutuação é a diferença entre as duas frequências. A dissonância sensorial é a aspereza do meio.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -70,6 +77,13 @@
     "porque": "Razões simples como 3:2 alinham harmônicos; razões complexas deixam muitos pares a pequenas distâncias, gerando aspereza."
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Registro do tronco encefálico: intervalos consonantes geram respostas neurais mais fortes que dissonantes, já nas primeiras etapas do processamento auditivo.",
+    "marca": "emergente",
+    "fonte": 5
+   },
+   {
     "tipo": "comparar",
     "a": "Tensão",
     "b": "Prazer",
@@ -95,6 +109,13 @@
     "fonte": 3
    },
    {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Bebês recém-nascidos discriminam consonância e dissonância mesmo sem nenhum treino musical. Isso sugere uma base biológica para a distinção.",
+    "marca": "consenso",
+    "fonte": 9
+   },
+   {
     "tipo": "pergunta",
     "q": "Um mesmo intervalo soa mais áspero num violino que num sino. O que isso indica?",
     "alts": [
@@ -109,14 +130,24 @@
   "fecho": "Se a aspereza depende dos harmônicos, como um instrumento escolhe quais harmônicos carregar? Isso tem nome: timbre e série harmônica."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
  "alertas_jev": [
-  "tela 1: soa como IA (0.52)"
+  "tela 1: soa como IA (0.54)",
+  "tela 6: soa como IA (0.62)",
+  "tela 7: soa como IA (0.52)",
+  "tela 8: marcada consenso, JEV diz emergente (0.69)",
+  "tela 8: o tipo visual não combina com o conteúdo (0.45); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 2.89,
+   "score": 2.96,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -127,68 +158,80 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.11,
-    "3": 0.88,
+    "2": 0.05,
+    "3": 0.94,
     "4": 0.01
    },
-   "confidence": 0.9
+   "confidence": 0.95
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.52
+   "noul": 0.54
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.02,
-    "consenso": 0.9,
-    "controverso": 0.07,
+    "emergente": 0.01,
+    "controverso": 0.09,
+    "consenso": 0.89,
     "especulacao": 0.01
    },
-   "confidence": 0.86
+   "confidence": 0.85
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.08
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.38
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.06,
-    "consenso": 0.92,
-    "controverso": 0.02,
-    "especulacao": 0
+    "emergente": 0.03,
+    "controverso": 0.03,
+    "consenso": 0.93,
+    "especulacao": 0.01
    },
-   "confidence": 0.89
+   "confidence": 0.91
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.14
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.05
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.82
+   "noul": 0.84
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.39
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.02,
-    "consenso": 0.97,
-    "controverso": 0.01,
+    "emergente": 0.06,
+    "controverso": 0.04,
+    "consenso": 0.9,
     "especulacao": 0
    },
-   "confidence": 0.96
+   "confidence": 0.86
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.24
   },
   "disputa_3": {
    "type": "noul",
@@ -196,39 +239,140 @@
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.87
   },
-  "ambigua_4": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.32
   },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.49
-  },
-  "marca_5": {
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.17,
-    "consenso": 0.8,
-    "controverso": 0.03,
+    "emergente": 0.05,
+    "controverso": 0.02,
+    "consenso": 0.93,
     "especulacao": 0
    },
-   "confidence": 0.73
+   "confidence": 0.91
   },
-  "disputa_5": {
+  "tecnico_4": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.57
   },
-  "encaixe_5": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.07
   },
-  "ambigua_6": {
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.62
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.03,
+    "emergente": 0.8,
+    "consenso": 0.12,
+    "controverso": 0.05
+   },
+   "confidence": 0.74
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "disputa_6": {
    "type": "noul",
    "noul": 0.13
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0.35,
+    "consenso": 0.59,
+    "controverso": 0.05
+   },
+   "confidence": 0.47
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0.69,
+    "consenso": 0.27,
+    "controverso": 0.03
+   },
+   "confidence": 0.58
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.14
   }
  },
- "custo_usd": 0.00763
+ "custo_usd": 0.01681
 }

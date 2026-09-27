@@ -1,12 +1,17 @@
 {
  "id": "trocas-colombianas",
  "tipo": "licao",
- "criado": "2026-09-27T16:27:59",
- "modelo": "deepseek-flash",
+ "criado": "2026-09-27T19:23:55",
+ "modelo": "reaproveitada+editor",
  "rodadas": 2,
  "licao": {
   "gancho": "Em 1520, a capital asteca tinha cerca de 200 mil habitantes. No mesmo ano, um vírus para o qual ninguém ali tinha defesa matou muitos deles. Em poucas décadas, a população do México caiu de 20 milhões para pouco mais de um milhão.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Pessoas astecas com marcas de varíola ilustradas no Códice Florentino do século XVI."
+   },
    {
     "tipo": "texto",
     "html": "<p><strong>Intercâmbio colombiano</strong> é o nome do transporte em larga escala de plantas, animais, pessoas e doenças entre os hemisférios, iniciado depois de 1492.</p>"
@@ -106,16 +111,22 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 2: o tipo visual não combina com o conteúdo (0.37); troque de tipo ou use texto",
-  "tela 3: soa como IA (0.56)",
-  "tela 5: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto",
-  "tela 8: marcada consenso, JEV diz emergente (0.83)",
-  "tela 8: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto"
+  "tela 3: o tipo visual não combina com o conteúdo (0.40); troque de tipo ou use texto",
+  "tela 4: soa como IA (0.53)",
+  "tela 6: o tipo visual não combina com o conteúdo (0.31); troque de tipo ou use texto",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.26)",
+  "tela 7: resposta óbvia, acerta quem não leu (0.65)",
+  "tela 9: marcada consenso, JEV diz emergente (0.84)",
+  "tela 9: o tipo visual não combina com o conteúdo (0.26); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.76
+  },
   "interesse": {
    "type": "score",
-   "score": 3.1,
+   "score": 3.06,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -126,139 +137,191 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.02,
-    "3": 0.86,
-    "4": 0.12
+    "2": 0.03,
+    "3": 0.88,
+    "4": 0.09
    },
-   "confidence": 0.88
+   "confidence": 0.9
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.49
+   "noul": 0.23
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.09
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.44
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.01,
-    "emergente": 0,
-    "consenso": 0.99,
-    "especulacao": 0
-   },
-   "confidence": 0.98
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.08
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.37
+   "noul": 0.06
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.32
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.03,
-    "controverso": 0.26,
-    "consenso": 0.71,
-    "especulacao": 0
+    "emergente": 0,
+    "consenso": 0.98,
+    "especulacao": 0.01,
+    "controverso": 0.01
    },
-   "confidence": 0.61
+   "confidence": 0.98
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.08
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.83
+   "noul": 0.4
   },
-  "ambigua_4": {
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.04,
+    "consenso": 0.72,
+    "especulacao": 0,
+    "controverso": 0.24
+   },
+   "confidence": 0.62
+  },
+  "tecnico_4": {
    "type": "noul",
    "noul": 0.14
   },
-  "ia_5": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.12
   },
-  "marca_5": {
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.07,
-    "controverso": 0.26,
-    "consenso": 0.67,
-    "especulacao": 0
+    "emergente": 0.04,
+    "especulacao": 0,
+    "consenso": 0.61,
+    "controverso": 0.35
    },
-   "confidence": 0.55
+   "confidence": 0.47
   },
-  "disputa_5": {
+  "tecnico_6": {
    "type": "noul",
    "noul": 0.11
   },
-  "encaixe_5": {
+  "disputa_6": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.12
   },
-  "ambigua_6": {
+  "encaixe_6": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.31
   },
-  "ia_7": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.26
   },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.01,
-    "emergente": 0.03,
-    "consenso": 0.96,
-    "especulacao": 0
-   },
-   "confidence": 0.94
-  },
-  "disputa_7": {
+  "obvia_7": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.65
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.46
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.3
   },
   "marca_8": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "consenso": 0.02,
-    "controverso": 0.14,
-    "especulacao": 0.01,
-    "emergente": 0.83
+    "emergente": 0.03,
+    "especulacao": 0,
+    "consenso": 0.96,
+    "controverso": 0.01
    },
-   "confidence": 0.77
+   "confidence": 0.94
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_8": {
    "type": "noul",
+   "noul": 0.08
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.84,
+    "especulacao": 0.02,
+    "consenso": 0.01,
+    "controverso": 0.13
+   },
+   "confidence": 0.78
+  },
+  "tecnico_9": {
+   "type": "noul",
    "noul": 0.21
   },
-  "encaixe_8": {
+  "disputa_9": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.2
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.26
   }
  },
- "custo_usd": 0.00741
+ "custo_usd": 0.00344
 }

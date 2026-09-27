@@ -1,17 +1,23 @@
 {
  "id": "revolucao-haitiana",
  "tipo": "licao",
- "criado": "2026-09-27T15:47:48",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:16:32",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Cerca de meio milhão de pessoas escravizadas em Saint-Domingue se levantou em 1791. Treze anos depois, era o único Estado soberano da história nascido de escravizados que se libertaram pela força.",
+  "gancho": "Em 1791, a colônia mais lucrativa do planeta explodiu. Cerca de meio milhão de pessoas escravizadas em Saint-Domingue se levantou. Treze anos depois, nascia o Haiti: o único Estado soberano da história fundado por escravizados que se libertaram pela força.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Gravura do século XIX retratando o levante de escravizados contra seus senhores durante a Revolução Haitiana.",
+    "marca": "consenso"
+   },
    {
     "tipo": "pontos",
     "valor": 40,
-    "frase": "de todo o açúcar consumido na Europa vinha só de Saint-Domingue em 1789.",
-    "legenda": "E também 60% de todo o café. A colônia mais lucrativa do planeta, movida por trabalho escravizado.",
+    "frase": "de todo o açúcar consumido na Europa vinha só de Saint-Domingue.",
+    "legenda": "E também 60% do café. Para manter a produção, cerca de 30 a 40 mil pessoas eram trazidas da África todo ano, só para repor quem morria.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -44,30 +50,10 @@
     "fonte": 1
    },
    {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "Agosto de 1791",
-      "texto": "Começa a revolta na planície do Norte, com coordenação entre plantações."
-     },
-     {
-      "nome": "Semanas depois",
-      "texto": "Dezenas de milhares de pessoas estão em armas, plantações são incendiadas."
-     },
-     {
-      "nome": "Registros",
-      "texto": "Documentos administrativos e relatos de proprietários confirmam a rápida propagação."
-     }
-    ],
-    "legenda": "A revolta não foi um levante isolado: espalhou-se com uma velocidade que surpreendeu os colonos.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
     "tipo": "pergunta",
     "q": "Por que o caso haitiano é diferente de todas as outras rebeliões escravas conhecidas?",
     "alts": [
-     "Foi a mais longa, durou mais de uma década",
+     "Foi a mais longa, durando mais de uma década",
      "Foi a única que terminou na fundação de um Estado soberano com abolição permanente da escravidão dentro dele",
      "Foi a única em que os escravizados venceram batalhas contra um exército europeu"
     ],
@@ -100,6 +86,12 @@
     "fonte": 5
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Retrato de Toussaint Louverture em uniforme militar. Ex-escravizado, tornou-se a figura central do movimento e consolidou a abolição antes de ser preso pelos franceses.",
+    "marca": "consenso"
+   },
+   {
     "tipo": "etapas",
     "etapas": [
      {
@@ -127,17 +119,11 @@
     "fonte": 7
    },
    {
-    "tipo": "pergunta",
-    "q": "Depois da independência, por que as potências escravistas demoraram décadas para reconhecer o Haiti?",
-    "alts": [
-     "Porque o Haiti se recusou a assinar tratados comerciais",
-     "Porque temiam que o exemplo de uma nação negra livre incentivasse revoltas em suas próprias colônias escravistas",
-     "Porque a França ainda controlava o porto de Porto Príncipe"
-    ],
-    "correta": 1,
-    "porque": "Os Estados Unidos só reconheceram o Haiti em 1862, durante a Guerra Civil, quase sessenta anos depois.",
+    "tipo": "foto",
+    "foto": 5,
+    "legenda": "Mosquito Aedes aegypti, transmissor da febre amarela. Cerca de 15 mil soldados franceses morreram da doença em apenas dois meses, um golpe devastador para a expedição de Leclerc.",
     "marca": "consenso",
-    "fonte": 8
+    "fonte": 7
    },
    {
     "tipo": "ordenar",
@@ -149,7 +135,7 @@
      "Dessalines vence em Vertières",
      "Dessalines proclama a independência em Gonaïves"
     ],
-    "porque": "São marcos diferentes: a abolição de 1794, a revogação de 1802, a prisão de Toussaint em 1802, Vertières em novembro de 1803 e a independência em 1º de janeiro de 1804.",
+    "porque": "A abolição veio em 1794, a revogação e a prisão de Toussaint em 1802, Vertières em novembro de 1803 e a independência em 1º de janeiro de 1804. Cinco marcos diferentes em dez anos.",
     "marca": "consenso"
    }
   ],
@@ -157,16 +143,22 @@
  },
  "erros": [],
  "avisos": [
-  "tela 8: marca sem fonte"
+  "tela 1: marca sem fonte",
+  "tela 6: marca sem fonte",
+  "tela 9: marca sem fonte"
  ],
  "alertas_jev": [
-  "tela 1: o tipo visual não combina com o conteúdo (0.25); troque de tipo ou use texto",
-  "tela 5: trata de disputa ou evidência contestada (0.86); lição só ensina o núcleo estabelecido"
+  "tela 2: o tipo visual não combina com o conteúdo (0.26); troque de tipo ou use texto",
+  "tela 5: trata de disputa ou evidência contestada (0.87); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.94
+  },
   "interesse": {
    "type": "score",
-   "score": 3.15,
+   "score": 3.29,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -177,124 +169,202 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.01,
-    "3": 0.83,
-    "4": 0.16
+    "2": 0,
+    "3": 0.7,
+    "4": 0.3
    },
-   "confidence": 0.86
+   "confidence": 0.75
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.39
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.35,
-    "emergente": 0.04,
-    "consenso": 0.55,
-    "especulacao": 0.06
+    "controverso": 0.01,
+    "especulacao": 0.13,
+    "consenso": 0.86,
+    "emergente": 0
    },
-   "confidence": 0.4
+   "confidence": 0.81
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.04
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.08
   },
   "encaixe_1": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.91
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.27
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.18,
-    "emergente": 0.02,
+    "controverso": 0.19,
+    "especulacao": 0.03,
     "consenso": 0.76,
-    "especulacao": 0.04
+    "emergente": 0.02
    },
    "confidence": 0.68
   },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.12
+  },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.09
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.89
+   "noul": 0.26
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.47
+   "noul": 0.29
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.02,
-    "emergente": 0.03,
-    "consenso": 0.95,
-    "especulacao": 0
+    "controverso": 0.21,
+    "especulacao": 0.1,
+    "consenso": 0.67,
+    "emergente": 0.02
    },
-   "confidence": 0.92
+   "confidence": 0.57
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.6
+   "noul": 0.26
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.86
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.71
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.34
   },
   "ambigua_4": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.29
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.27
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.02,
+    "consenso": 0.97,
     "emergente": 0,
-    "consenso": 0.98,
-    "especulacao": 0
+    "especulacao": 0.01,
+    "controverso": 0.02
    },
-   "confidence": 0.97
+   "confidence": 0.95
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.86
+   "noul": 0.87
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.95
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.33
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.88,
+    "emergente": 0.01,
+    "especulacao": 0.03,
+    "controverso": 0.08
+   },
+   "confidence": 0.84
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.53
+   "noul": 0.12
   },
   "encaixe_6": {
    "type": "noul",
+   "noul": 0.93
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.55
+  },
+  "encaixe_7": {
+   "type": "noul",
    "noul": 0.97
   },
-  "ambigua_7": {
+  "ia_8": {
    "type": "noul",
-   "noul": 0.13
+   "noul": 0.29
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.87,
+    "emergente": 0.01,
+    "especulacao": 0.03,
+    "controverso": 0.09
+   },
+   "confidence": 0.82
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.9
   }
  },
- "custo_usd": 0.01056
+ "custo_usd": 0.02986
 }

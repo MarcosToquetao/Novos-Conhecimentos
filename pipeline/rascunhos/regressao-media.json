@@ -1,12 +1,19 @@
 {
  "id": "regressao-media",
  "tipo": "licao",
- "criado": "2026-09-27T16:27:46",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:13:04",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um instrutor de voo elogia um cadete que fez uma manobra perfeita e, na tentativa seguinte, o cadete vai pior. Noutro dia, grita com um que errou feio e, na próxima tentativa, o desempenho melhora. A conclusão que salta aos olhos: elogio atrapalha, bronca ajuda.",
+  "gancho": "Um instrutor de voo elogia um cadete que fez uma manobra perfeita e, na tentativa seguinte, o cadete vai pior. Noutro dia, grita com um que errou feio e, na próxima tentativa, o desempenho melhora. A conclusão que salta aos olhos: elogio atrapalha, bronca ajuda. O fenômeno que explica o que realmente ocorreu se chama regressão à média.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O instrutor atribuiu o resultado à sua bronca ou ao seu elogio, mas era só a regressão à média em ação.",
+    "marca": "consenso",
+    "fonte": 1
+   },
    {
     "tipo": "comparar",
     "a": "Manobra perfeita",
@@ -29,30 +36,6 @@
      }
     ],
     "legenda": "Nos dois casos o desempenho habitual da pessoa não mudou. Só o acaso da primeira tentativa sumiu.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "Medida extrema",
-      "texto": "Você seleciona um grupo por ter ido muito bem ou muito mal."
-     },
-     {
-      "nome": "Acaso embutido",
-      "texto": "Parte daquele resultado extremo veio de sorte ou azar."
-     },
-     {
-      "nome": "Nova medida",
-      "texto": "Na repetição, a sorte não se repete."
-     },
-     {
-      "nome": "Regressão",
-      "texto": "A média do grupo volta para perto da média geral."
-     }
-    ],
-    "legenda": "A regressão é mais forte quanto maior o peso do acaso na medida.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -93,8 +76,23 @@
     "fonte": 6
    },
    {
-    "tipo": "texto",
-    "html": "<p>Para escapar do engano, sorteie dois grupos: um recebe a intervenção, o outro não. Os dois regridem igual, e só a <strong>diferença</strong> entre eles mostra o efeito real.</p>"
+    "tipo": "comparar",
+    "a": "Grupo com intervenção",
+    "b": "Grupo controle (sem nada)",
+    "linhas": [
+     {
+      "aspecto": "Primeira medida",
+      "a": "selecionado por valor extremo",
+      "b": "selecionado por valor extremo"
+     },
+     {
+      "aspecto": "Segunda medida",
+      "a": "regride à média + efeito real",
+      "b": "regride apenas à média"
+     }
+    ],
+    "legenda": "Para escapar do engano, sorteie dois grupos. Os dois regridem igual, e só a diferença entre eles mostra o efeito real.",
+    "fonte": 6
    },
    {
     "tipo": "etapas",
@@ -118,26 +116,31 @@
    },
    {
     "tipo": "texto",
-    "html": "<p>Ela aparece sempre que se seleciona um grupo por um valor extremo de uma variável medida com erro e depois se mede a mesma variável de novo.</p>",
+    "html": "<p>A regressão funciona nos dois sentidos e não é o mesmo que a falácia do apostador. Depois de dez caras seguidas numa moeda honesta, a próxima sequência tende a ser menos extrema, mas a moeda não fica devendo coroas.</p>",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 1
    }
   ],
   "fecho": "A regressão à média explica também como estudos observacionais podem enganar por causa da seleção da amostra. Isso tem nome: viés de seleção e sobrevivência."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
  "alertas_jev": [
-  "tela 1: trata de disputa ou evidência contestada (0.77); lição só ensina o núcleo estabelecido",
-  "tela 2: soa como IA (0.51)",
-  "tela 4: trata de disputa ou evidência contestada (0.62); lição só ensina o núcleo estabelecido",
-  "tela 4: o tipo visual não combina com o conteúdo (0.43); troque de tipo ou use texto",
-  "tela 7: soa como IA (0.54)"
+  "tela 1: trata de disputa ou evidência contestada (0.81); lição só ensina o núcleo estabelecido",
+  "tela 1: o tipo visual não combina com o conteúdo (0.47); troque de tipo ou use texto",
+  "tela 4: trata de disputa ou evidência contestada (0.65); lição só ensina o núcleo estabelecido",
+  "tela 8: trata de disputa ou evidência contestada (0.69); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.94
+  },
   "interesse": {
    "type": "score",
-   "score": 3.03,
+   "score": 3.09,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -148,123 +151,163 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.05,
-    "3": 0.87,
-    "4": 0.08
+    "2": 0.03,
+    "3": 0.85,
+    "4": 0.12
    },
-   "confidence": 0.89
+   "confidence": 0.88
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.33
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.03,
-    "emergente": 0,
     "consenso": 0.97,
-    "controverso": 0
+    "controverso": 0,
+    "especulacao": 0.03,
+    "emergente": 0
    },
-   "confidence": 0.96
+   "confidence": 0.95
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.77
+   "noul": 0.81
   },
   "encaixe_1": {
    "type": "noul",
-   "noul": 0.88
+   "noul": 0.47
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.51
+   "noul": 0.23
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
+    "consenso": 0.99,
+    "especulacao": 0.01,
     "emergente": 0,
-    "consenso": 1,
     "controverso": 0
    },
-   "confidence": 1
+   "confidence": 0.98
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.54
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.89
+   "noul": 0.9
+  },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.38
   },
   "ambigua_3": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.14
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.2
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.05,
-    "emergente": 0.08,
-    "consenso": 0.84,
+    "consenso": 0.79,
+    "especulacao": 0.07,
+    "emergente": 0.11,
     "controverso": 0.03
    },
-   "confidence": 0.78
+   "confidence": 0.71
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.55
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.62
+   "noul": 0.65
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.5
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.27
   },
   "ambigua_5": {
    "type": "noul",
-   "noul": 0.13
+   "noul": 0.12
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.3
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.19
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.36
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.93
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.54
+   "noul": 0.46
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
     "emergente": 0,
-    "consenso": 1,
-    "controverso": 0
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
    },
    "confidence": 1
   },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.19
   },
   "encaixe_7": {
    "type": "noul",
-   "noul": 0.9
+   "noul": 0.91
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.47
+   "noul": 0.23
   },
   "marca_8": {
    "type": "choice",
@@ -277,10 +320,14 @@
    },
    "confidence": 1
   },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.14
+  },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.69
   }
  },
- "custo_usd": 0.01418
+ "custo_usd": 0.00241
 }

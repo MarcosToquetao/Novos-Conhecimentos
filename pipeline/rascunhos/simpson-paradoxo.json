@@ -1,12 +1,19 @@
 {
  "id": "simpson-paradoxo",
  "tipo": "licao",
- "criado": "2026-09-27T16:30:58",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:13:03",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
   "gancho": "Em 1973, a Universidade da Califórnia em Berkeley divulgou os números de admissão da pós-graduação. Homens foram admitidos numa taxa maior que mulheres. Parecia discriminação. Departamento por departamento, o viés era pequeno e em favor das mulheres.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O campus de Berkeley, onde os dados de admissão de 1973 mostraram uma conclusão nos totais e a conclusão oposta departamento por departamento.",
+    "marca": "consenso",
+    "fonte": 1
+   },
    {
     "tipo": "texto",
     "html": "<p>O paradoxo de Simpson é isso: uma tendência aparece em vários grupos e desaparece ou se inverte quando eles são somados.</p>"
@@ -63,40 +70,22 @@
     "porque": "O departamento escolhido é uma variável de confusão: afeta a chance de admissão e difere entre homens e mulheres."
    },
    {
-    "tipo": "comparar",
-    "a": "Pedras pequenas",
-    "b": "Pedras grandes",
-    "linhas": [
-     {
-      "aspecto": "Tratamento A",
-      "a": "melhor",
-      "b": "melhor"
-     },
-     {
-      "aspecto": "Tratamento B",
-      "a": "pior",
-      "b": "pior"
-     },
-     {
-      "aspecto": "Frequência",
-      "a": "mais usado em casos leves",
-      "b": "mais usado em casos graves"
-     }
-    ],
-    "legenda": "Somando os dois tamanhos, o Tratamento B parece melhor. O tamanho da pedra é a variável de confusão.",
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "No estudo clássico, o Tratamento A é melhor para pedras pequenas e grandes. Mas, ao juntar os tamanhos, o Tratamento B parece superior. O tamanho da pedra é a variável de confusão que explica a inversão.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "No estudo das pedras nos rins, por que o Tratamento B parece melhor no total?",
+    "q": "No estudo das pedras nos rins, por que o Tratamento B parece melhor no total se ele era pior em cada tamanho de pedra?",
     "alts": [
-     "Porque é realmente mais eficaz em todos os casos",
-     "Porque foi aplicado com mais frequência aos casos leves, que têm melhor prognóstico",
-     "Porque o Tratamento A tem efeitos colaterais graves"
+     "Porque o B tem um componente secreto que funciona melhor em casos graves",
+     "O Tratamento A, que era o melhor, foi aplicado com mais frequência justamente nos casos mais sérios e difíceis de curar",
+     "O Tratamento B foi mais testado, e por isso seus números totais são mais confiáveis"
     ],
     "correta": 1,
-    "porque": "O Tratamento A foi usado nos casos graves, que já tinham pior prognóstico. Isso puxa a taxa de sucesso para baixo no total."
+    "porque": "Os médicos davam o melhor tratamento (A) aos casos mais graves (pedras grandes) e o B aos leves. O total é puxado para baixo para A por causa da gravidade dos pacientes, não da eficácia do tratamento."
    },
    {
     "tipo": "etapas",
@@ -120,28 +109,34 @@
    },
    {
     "tipo": "pergunta",
-    "q": "O paradoxo desaparece se aumentarmos o tamanho da amostra?",
+    "q": "O paradoxo de Simpson desaparece se eu simplesmente aumentar o tamanho da amostra?",
     "alts": [
-     "Sim, porque com mais dados a verdade aparece",
-     "Não, porque envolve confusão e não colapsabilidade, e esta não some com mais dados",
-     "Só desaparece se usarmos métodos bayesianos"
+     "Sim, porque com mais dados a flutuação some e a verdade aparece",
+     "Não, porque uma das causas é a não colapsabilidade, que é uma propriedade matemática da estrutura dos dados, não um erro amostral",
+     "Só desaparece se usarmos métodos bayesianos em vez de frequentistas"
     ],
     "correta": 1,
-    "porque": "A não colapsabilidade é uma propriedade matemática das proporções dos subgrupos, não um erro amostral."
+    "porque": "A não colapsabilidade acontece quando os grupos têm tamanhos muito diferentes, distorcendo a média simples. Coletar mais dados não equilibra essa desproporção."
    }
   ],
   "fecho": "Como decidir quando ajustar e quando não ajustar? A resposta vem dos grafos causais. Veja Inferência causal e a escada de Pearl."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "tela 6: legenda com mais de 25 palavras"
+ ],
  "alertas_jev": [
-  "tela 7: soa como IA (0.56)",
-  "tela 7: o tipo visual não combina com o conteúdo (0.25); troque de tipo ou use texto"
+  "tela 8: soa como IA (0.57)",
+  "tela 8: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.89
+  },
   "interesse": {
    "type": "score",
-   "score": 3.03,
+   "score": 3.08,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -152,124 +147,195 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.03,
-    "3": 0.91,
-    "4": 0.06
+    "2": 0.02,
+    "3": 0.88,
+    "4": 0.1
    },
-   "confidence": 0.92
+   "confidence": 0.9
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.44
+   "noul": 0.35
   },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.15
-  },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.39
-  },
-  "marca_2": {
+  "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "controverso": 0.02,
-    "especulacao": 0.02,
-    "consenso": 0.96,
+    "especulacao": 0.01,
+    "consenso": 0.97,
     "emergente": 0
    },
-   "confidence": 0.95
+   "confidence": 0.96
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.58
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.7
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.47
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.9
+   "noul": 0.13
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.45
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.04,
-    "especulacao": 0.05,
-    "consenso": 0.9,
-    "emergente": 0.01
+    "controverso": 0.03,
+    "especulacao": 0.01,
+    "consenso": 0.96,
+    "emergente": 0
    },
-   "confidence": 0.88
+   "confidence": 0.94
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.18
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.46
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.86
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.19
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.26
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.01,
-    "especulacao": 0.05,
-    "consenso": 0.93,
-    "emergente": 0.01
-   },
-   "confidence": 0.9
-  },
-  "disputa_5": {
-   "type": "noul",
-   "noul": 0.24
-  },
-  "encaixe_5": {
-   "type": "noul",
    "noul": 0.9
   },
-  "ambigua_6": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.3
   },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.56
-  },
-  "marca_7": {
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "controverso": 0.03,
-    "especulacao": 0,
-    "consenso": 0.96,
-    "emergente": 0.01
+    "especulacao": 0.04,
+    "consenso": 0.93,
+    "emergente": 0
    },
-   "confidence": 0.94
+   "confidence": 0.9
   },
-  "disputa_7": {
-   "type": "noul",
-   "noul": 0.31
-  },
-  "encaixe_7": {
-   "type": "noul",
-   "noul": 0.25
-  },
-  "ambigua_8": {
+  "tecnico_4": {
    "type": "noul",
    "noul": 0.15
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.88
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "emergente": 0.01,
+    "especulacao": 0.03,
+    "consenso": 0.95
+   },
+   "confidence": 0.93
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.62
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.7
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "emergente": 0,
+    "especulacao": 0,
+    "consenso": 0.99
+   },
+   "confidence": 0.98
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.84
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.1
   }
  },
- "custo_usd": 0.00401
+ "custo_usd": 0.003
 }

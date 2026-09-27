@@ -248,6 +248,10 @@ def checar_licao(L, doc):
     visuais = [t for t in telas if t.get("tipo") in VISUAIS]
     if telas and len(visuais) * 2 < len(telas):
         erros.append(f"só {len(visuais)} telas visuais de {len(telas)} (pelo menos metade)")
+    elif len(telas) >= 7 and len(visuais) < 5:
+        erros.append(f"só {len(visuais)} telas visuais (pelo menos 5)")
+    if doc.get("fotos") and not any(t.get("tipo") == "foto" for t in telas):
+        erros.append("o documento tem fotos reais e a lição não usa nenhuma: ponha de 1 a 3 telas foto, a primeira logo depois do gancho")
     checar_texto("gancho", L.get("gancho", ""), erros)
     checar_texto("fecho", L.get("fecho", ""), erros)
 
@@ -388,7 +392,7 @@ def portao_jev(L, termo, alvo):
                                     "instructions": f"O trecho telas.t{i} gira em torno de um debate, controvérsia, mito a desmentir ou evidência contestada?",
                                     "criteria": {"true": "o foco é a disputa, a dúvida ou a desmistificação",
                                                  "false": "o foco é conhecimento estabelecido sobre o conceito"}}
-            if t.get("tipo") in VISUAIS - {"figura"}:
+            if t.get("tipo") in VISUAIS - {"figura", "foto"}:   # figura e foto já foram escolhidas para o conteúdo
                 perg[f"encaixe_{i}"] = {"type": "noul",
                                         "instructions": f"A forma visual '{t['tipo']}' combina com o conteúdo de telas.t{i}?",
                                         "criteria": {"true": "combina: etapas é sequência no tempo, ciclo volta ao início, camadas são níveis físicos ou gradiente, curva é tendência descrita, comparar contrasta duas coisas do mesmo tipo",

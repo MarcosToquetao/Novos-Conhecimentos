@@ -1,50 +1,35 @@
 {
  "id": "quatro-forcas",
  "tipo": "licao",
- "criado": "2026-09-27T15:47:11",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:22:53",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Um ímã de geladeira de poucos gramas vence a atração gravitacional de todo o planeta Terra sobre um clipe de papel. A gravidade parece forte no dia a dia, mas é a mais fraca das quatro interações.",
+  "gancho": "Um ímã de geladeira de poucos gramas vence a atração gravitacional de todo o planeta Terra sobre um clipe de papel. A física descobriu que bastam quatro interações para explicar tudo o que acontece no universo, e a gravidade é a mais fraca delas.",
   "telas": [
    {
     "tipo": "texto",
     "html": "<p>Você está sentado. Não afunda na cadeira. O que impede a matéria de atravessar a matéria é uma interação: os elétrons do seu corpo repelem os elétrons da cadeira.</p>"
    },
    {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Na descrição moderna, uma força não é uma influência misteriosa: é uma troca de partículas mediadoras. Dois quarks interagem trocando glúons."
+   },
+   {
     "tipo": "figura",
     "fig": "forcas-alcance",
-    "legenda": "Alcance das interações em escala logarítmica. Cada divisão vale um fator de dez mil.",
+    "legenda": "Alcance das interações em escala logarítmica. Cada divisão vale um fator de dez mil. O alcance determina qual força governa cada escala do universo.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "camadas",
-    "camadas": [
-     {
-      "nome": "Forte",
-      "nota": "mantém quarks e núcleos unidos, alcance ~10⁻¹⁵ m"
-     },
-     {
-      "nome": "Eletromagnética",
-      "nota": "responde pela química, luz e solidez, alcance infinito"
-     },
-     {
-      "nome": "Fraca",
-      "nota": "transforma partículas, permite decaimento beta, alcance ~10⁻¹⁸ m"
-     },
-     {
-      "nome": "Gravidade",
-      "nota": "mais fraca, alcance infinito, só acumula"
-     }
-    ],
-    "eixo": {
-     "topo": "mais intensa",
-     "base": "menos intensa"
-    },
-    "legenda": "As quatro interações fundamentais, ordenadas por intensidade relativa.",
+    "tipo": "pontos",
+    "valor": 1,
+    "frase": "da massa do seu corpo vem das massas de repouso dos quarks. Os outros 99% vêm da energia do campo forte.",
+    "legenda": "A massa do próton é ~938 MeV/c²; os três quarks somam ~9 MeV/c². O resto é energia de ligação convertida em massa.",
     "marca": "consenso",
-    "fonte": 1
+    "fonte": 5
    },
    {
     "tipo": "comparar",
@@ -62,85 +47,87 @@
       "b": "infinito"
      },
      {
-      "aspecto": "Intensidade relativa",
-      "a": "~10⁻²",
-      "b": "~10⁻³⁸"
+      "aspecto": "Exemplo concreto",
+      "a": "um ímã de geladeira vence a Terra sobre um clipe",
+      "b": "domina o cosmo porque não se anula"
      }
     ],
-    "legenda": "A gravidade acumula porque não tem carga negativa; a eletromagnética se anula.",
+    "legenda": "A gravidade acumula porque não tem carga negativa; a eletromagnética se anula em objetos grandes.",
     "marca": "consenso",
     "fonte": 3
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a força fraca é curta e fraca?",
+    "q": "Por que a força fraca tem alcance tão curto?",
     "alts": [
      "Porque seus mediadores, os bósons W e Z, são muito pesados",
      "Porque sua intensidade intrínseca é pequena",
      "Porque ela só age dentro do núcleo, onde há pouca energia"
     ],
     "correta": 0,
-    "porque": "O alcance depende da massa do mediador. Criar bósons W e Z, cerca de 80 a 90 vezes mais pesados que um próton, é caro e limita a distância."
-   },
-   {
-    "tipo": "estimar",
-    "q": "Num próton, que fração da massa vem da energia do campo forte?",
-    "unidade": "%",
-    "min": 0,
-    "max": 100,
-    "escala": "linear",
-    "resposta": 99,
-    "legenda": "A massa do próton é ~938 MeV/c²; os três quarks somam ~9 MeV/c², cerca de 1%. O resto é energia de ligação convertida em massa.",
-    "marca": "consenso",
-    "fonte": 5
+    "porque": "O alcance depende da massa do mediador. Os bósons W e Z pesam cerca de 80 a 90 vezes mais que um próton, e criar partículas tão pesadas é energeticamente caro."
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
-      "nome": "Acima de 100 GeV",
-      "texto": "eletromagnética e fraca formam uma única interação com quatro mediadores sem massa"
+      "nome": "Universo primitivo",
+      "texto": "Eletromagnética e fraca são uma única interação, no calor extremo"
      },
      {
-      "nome": "Universo esfria",
-      "texto": "abaixo de 100 GeV, o campo de Higgs assume um valor não nulo em todo o espaço"
+      "nome": "Expansão e resfriamento",
+      "texto": "O campo de Higgs se espalha e preenche todo o espaço"
      },
      {
-      "nome": "Quebra de simetria",
-      "texto": "três mediadores adquirem massa e viram W⁺, W⁻ e Z⁰; um permanece sem massa, o fóton"
+      "nome": "Três mediadores pesados",
+      "texto": "Os bósons W⁺, W⁻ e Z⁰ ganham massa, e a força fraca fica de curto alcance"
      },
      {
-      "nome": "Hoje",
-      "texto": "vemos duas forças com propriedades radicalmente diferentes"
+      "nome": "Um mediador sem massa",
+      "texto": "O fóton permanece, e o eletromagnetismo ganha alcence infinito"
      }
     ],
-    "legenda": "A diferença entre eletromagnética e fraca é um efeito da temperatura do universo.",
+    "legenda": "A diferença entre as duas forças que vimos hoje é um efeito da temperatura do universo.",
     "marca": "consenso",
     "fonte": 1
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Simulação de colisão de pótons no CMS. O bóson de Higgs, pieça central para a unicifação eletrofraca, foi enconttrado em 2012.",
+    "marca": "consenso",
+    "fonte": 6
+   },
+   {
     "tipo": "pergunta",
-    "q": "Por que a eletromagnética não domina em escala astronômica, mesmo sendo muito mais forte que a gravidade?",
+    "q": "Por que a eletromagnéica não domina em ecala astrônomica, mesmo sendo muito mais forte que a gravidade?",
     "alts": [
      "Porque a gravidade tem alcance maior",
-     "Porque as cargas elétricas se cancelam em objetos grandes",
+     "Porque as cargas eléticas se cancelam em objetos gandes",
      "Porque a gravidade é mais intensa que as outras forças"
     ],
     "correta": 1,
-    "porque": "Objetos grandes são eletricamente neutros. A gravidade não tem carga negativa para cancelar, então só acumula."
+    "porque": "Objetos gandes são eletricamente neutros. A gravidade não tem carga negativa para cancelar, então só acumula."
    }
   ],
-  "fecho": "A gravidade é descrita pela relatividade geral, e as outras três pelo Modelo Padrão. As duas teorias são incompatíveis em regime extremo. Por que ainda não temos uma teoria quântica da gravidade?"
+  "fecho": "A gravidade é descrita pela relatividade geral, e as outras três pelo Modelo Padão. As duas teorias são incompátiveis em regime extemo. Por que aida não tems uma teoia quântica da gravidade? Leia sobre emaranhamento quântico para ver outa frente onde a realidade resite à unifcação."
  },
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 3: soa como IA (0.57)"
+  "tela 3: soa como IA (0.54)",
+  "tela 4: técnico demais para leigo (0.84)",
+  "tela 4: o tipo visual não combina com o conteúdo (0.33); troque de tipo ou use texto",
+  "tela 6: a pergunta depende de algo que a lição ainda não mostrou (0.17)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.9
+  },
   "interesse": {
    "type": "score",
-   "score": 3.02,
+   "score": 3.06,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -151,9 +138,9 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.03,
-    "3": 0.91,
-    "4": 0.06
+    "2": 0.02,
+    "3": 0.9,
+    "4": 0.08
    },
    "confidence": 0.92
   },
@@ -161,116 +148,133 @@
    "type": "noul",
    "noul": 0.25
   },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.1
+  },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.07
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.32
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.02,
-    "consenso": 0.98,
-    "emergente": 0,
-    "controverso": 0
-   },
-   "confidence": 0.96
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.47
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.12
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.57
+   "noul": 0.54
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
+    "controverso": 0,
     "consenso": 1,
-    "emergente": 0,
-    "controverso": 0
+    "especulacao": 0,
+    "emergente": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.55
   },
   "disputa_3": {
    "type": "noul",
    "noul": 0.05
   },
-  "encaixe_3": {
-   "type": "noul",
-   "noul": 0.86
-  },
   "ia_4": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.25
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "controverso": 0.01,
+    "consenso": 0.99,
     "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0,
-    "controverso": 0
+    "emergente": 0
    },
-   "confidence": 1
+   "confidence": 0.98
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.84
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.13
+   "noul": 0.16
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.33
   },
-  "ambigua_5": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.25
   },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.23
-  },
-  "marca_6": {
+  "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
+    "controverso": 0,
     "consenso": 1,
-    "emergente": 0,
-    "controverso": 0
+    "especulacao": 0,
+    "emergente": 0
    },
    "confidence": 1
   },
-  "disputa_6": {
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ambigua_6": {
    "type": "noul",
    "noul": 0.09
   },
-  "encaixe_6": {
-   "type": "noul",
-   "noul": 0.61
-  },
   "ia_7": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.44
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
     "consenso": 1,
-    "emergente": 0
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.51
   },
   "disputa_7": {
    "type": "noul",
@@ -280,10 +284,41 @@
    "type": "noul",
    "noul": 0.96
   },
-  "ambigua_8": {
+  "ia_8": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.32
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 0.99
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.11
   }
  },
- "custo_usd": 0.00654
+ "custo_usd": 0.00281
 }

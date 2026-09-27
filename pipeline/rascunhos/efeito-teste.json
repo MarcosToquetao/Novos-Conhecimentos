@@ -1,12 +1,17 @@
 {
  "id": "efeito-teste",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:48",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:19:43",
+ "modelo": "reaproveitada+editor",
  "rodadas": 2,
  "licao": {
   "gancho": "Duas pessoas estudam a mesma lista por uma hora. Uma relê quatro vezes. A outra lê uma vez e tenta lembrar nas outras três, sem olhar. No mesmo dia, a primeira lembra mais. Uma semana depois, a segunda lembra bem mais.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Estudantes em uma sala de aula respondendo a um questionário escolar."
+   },
    {
     "tipo": "comparar",
     "a": "Relê 4 vezes",
@@ -163,13 +168,19 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 5: soa como IA (0.57)",
-  "tela 7: soa como IA (0.52)"
+  "tela 4: a pergunta depende de algo que a lição ainda não mostrou (0.36)",
+  "tela 6: soa como IA (0.56)",
+  "tela 8: soa como IA (0.54)",
+  "tela 9: soa como IA (0.51)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.94,
+   "score": 2.95,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -184,143 +195,195 @@
     "3": 0.91,
     "4": 0.02
    },
-   "confidence": 0.92
+   "confidence": 0.93
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.35
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.04
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.16
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.95
+   "noul": 0.08
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.31
   },
-  "marca_2": {
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "consenso": 0.99,
     "controverso": 0.01,
+    "emergente": 0.01,
+    "consenso": 0.98,
     "especulacao": 0
    },
    "confidence": 0.97
   },
-  "disputa_2": {
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "disputa_3": {
    "type": "noul",
    "noul": 0.13
   },
-  "encaixe_2": {
+  "encaixe_3": {
    "type": "noul",
-   "noul": 0.87
+   "noul": 0.88
   },
-  "ambigua_3": {
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "ambigua_4": {
    "type": "noul",
    "noul": 0.14
   },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.29
-  },
-  "marca_4": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0.05,
-    "consenso": 0.93,
-    "controverso": 0.02,
-    "especulacao": 0
-   },
-   "confidence": 0.91
-  },
-  "disputa_4": {
-   "type": "noul",
-   "noul": 0.13
-  },
-  "encaixe_4": {
-   "type": "noul",
-   "noul": 0.95
-  },
   "ia_5": {
    "type": "noul",
-   "noul": 0.57
+   "noul": 0.3
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.1,
-    "consenso": 0.88,
-    "controverso": 0.01,
+    "controverso": 0.02,
+    "emergente": 0.08,
+    "consenso": 0.89,
     "especulacao": 0.01
    },
-   "confidence": 0.84
+   "confidence": 0.87
   },
-  "disputa_5": {
-   "type": "noul",
-   "noul": 0.24
-  },
-  "encaixe_5": {
-   "type": "noul",
-   "noul": 0.93
-  },
-  "ambigua_6": {
+  "tecnico_5": {
    "type": "noul",
    "noul": 0.1
   },
-  "ia_7": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.52
+   "noul": 0.14
   },
-  "marca_7": {
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "consenso": 1,
-    "controverso": 0,
-    "especulacao": 0
+    "consenso": 0.91,
+    "emergente": 0.07,
+    "controverso": 0.01,
+    "especulacao": 0.01
    },
-   "confidence": 0.99
+   "confidence": 0.88
   },
-  "disputa_7": {
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "ambigua_7": {
    "type": "noul",
    "noul": 0.11
   },
-  "encaixe_7": {
-   "type": "noul",
-   "noul": 0.95
-  },
   "ia_8": {
    "type": "noul",
-   "noul": 0.49
+   "noul": 0.54
   },
   "marca_8": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "controverso": 0.12,
-    "emergente": 0.52,
-    "especulacao": 0.03,
-    "consenso": 0.33
+    "consenso": 1,
+    "especulacao": 0,
+    "emergente": 0,
+    "controverso": 0
    },
-   "confidence": 0.37
+   "confidence": 0.99
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.11
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.1
   },
   "encaixe_8": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "consenso": 0.39,
+    "controverso": 0.08,
+    "especulacao": 0.02,
+    "emergente": 0.51
+   },
+   "confidence": 0.34
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "encaixe_9": {
    "type": "noul",
    "noul": 0.93
   }
  },
- "custo_usd": 0.00708
+ "custo_usd": 0.00307
 }

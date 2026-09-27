@@ -1,12 +1,19 @@
 {
  "id": "memoria-falsa",
  "tipo": "licao",
- "criado": "2026-09-27T15:46:28",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:14:27",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Depois de ouvir uma lista de palavras como cama, descanso, sonho, cochilo e soneca, muita gente jura que a palavra sono estava lá. Nunca esteve. A mente preencheu a lacuna sozinha.",
+  "gancho": "Depois de ouvir uma lista de palavras como cama, descanso, sonho, cochilo e soneca, muita gente jura que a palavra sono estava lá. Nunca esteve. A mente preencheu a lacuna sozinha, criando uma memória falsa.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A psicóloga Elizabeth Loftus dedicou décadas a mostrar que a memória é maleável. Sua pergunta central: podemos implantar uma lembrança inteira de algo que nunca aconteceu?",
+    "marca": "consenso",
+    "fonte": 3
+   },
    {
     "tipo": "texto",
     "html": "<p>Esse é o paradigma DRM: listas de palavras que giram em torno de um tema, mas nunca incluem a palavra-chave. A pessoa lembra dela com confiança, mesmo sem tê-la ouvido.</p>",
@@ -46,8 +53,22 @@
     "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Elizabeth Loftus e Jacqueline Pickrell foram além: tentaram implantar a lembrança de um episódio inteiro da infância que nunca aconteceu, como se perder num shopping aos 5 anos.</p>",
+    "tipo": "pergunta",
+    "q": "Por que a palavra crítica é lembrada mesmo sem ter sido apresentada?",
+    "alts": [
+     "Porque ela foi dita em voz baixa e passou despercebida",
+     "Porque as palavras da lista ativam automaticamente o conceito associado na memória semântica",
+     "Porque a pessoa inventa de propósito para acertar"
+    ],
+    "correta": 1,
+    "porque": "Ao processar cada palavra, a mente ativa conceitos relacionados. Essa ativação é forte o bastante para ser confundida, na recordação, com uma lembrança real.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Para ir além das palavras, pesquisadores tentaram implantar a lembrança de um episódio inteiro da infância: perder-se num shopping center aos 5 anos.",
     "marca": "consenso",
     "fonte": 3
    },
@@ -64,7 +85,7 @@
      {
       "aspecto": "Crença de que aconteceu",
       "a": "não",
-      "b": "sim, para cerca de um quarto dos participantes"
+      "b": "sim, para cerca de 35% dos participantes"
      },
      {
       "aspecto": "Detalhes emocionais",
@@ -72,9 +93,9 @@
       "b": "podem surgir e ser inventados"
      }
     ],
-    "legenda": "No estudo de Loftus e Pickrell, cerca de um quarto dos participantes passaram a lembrar do episódio fictício, alguns com detalhes próprios.",
+    "legenda": "Na réplica de 2023, 35% dos participantes passaram a crer ou relatar lembranças do episódio fictício, mesmo que ele nunca tenha ocorrido.",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 4
    },
    {
     "tipo": "pergunta",
@@ -90,37 +111,11 @@
     "fonte": 3
    },
    {
-    "tipo": "linha_tempo",
-    "eventos": [
-     {
-      "ano": 1959,
-      "texto": "Deese descreve o efeito pela primeira vez, com intrusões de palavras não apresentadas em listas."
-     },
-     {
-      "ano": 1995,
-      "texto": "Roediger e McDermott retomam e popularizam o paradigma com listas associativas."
-     },
-     {
-      "ano": 1995,
-      "texto": "Loftus e Pickrell implantam a lembrança de um episódio inteiro e fictício da infância."
-     }
-    ],
-    "legenda": "Décadas de pesquisa mostram que o fenômeno se replica, mesmo quando os números exatos são debatidos.",
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Essa descoberta mudou tribunais. Hoje, protocolos de entrevista policial levam a sério o risco de contaminar uma testemunha com perguntas sugestivas.",
     "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que a palavra crítica é lembrada mesmo sem ter sido apresentada?",
-    "alts": [
-     "Porque ela foi dita em voz baixa e passou despercebida",
-     "Porque as palavras da lista ativam automaticamente o conceito associado na memória semântica",
-     "Porque a pessoa inventa de propósito para acertar"
-    ],
-    "correta": 1,
-    "porque": "Ao processar cada palavra, a mente ativa conceitos relacionados. Essa ativação é forte o bastante para ser confundida, na recordação, com uma lembrança real.",
-    "marca": "consenso",
-    "fonte": 2
+    "fonte": 5
    }
   ],
   "fecho": "Depois de uma lembrança ser formada, ela pode mudar cada vez que é evocada. Isso se chama reconsolidação."
@@ -128,12 +123,17 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 3: o tipo visual não combina com o conteúdo (0.44); troque de tipo ou use texto"
+  "tela 4: o tipo visual não combina com o conteúdo (0.44); troque de tipo ou use texto",
+  "tela 9: o tipo visual não combina com o conteúdo (0.46); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.91
+  },
   "interesse": {
    "type": "score",
-   "score": 2.88,
+   "score": 2.92,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -144,150 +144,221 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.13,
-    "3": 0.86,
+    "2": 0.09,
+    "3": 0.9,
     "4": 0.01
    },
-   "confidence": 0.88
+   "confidence": 0.91
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.43
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0.01,
-    "consenso": 0.99,
-    "emergente": 0
+    "consenso": 0.91,
+    "controverso": 0.06,
+    "emergente": 0.03,
+    "especulacao": 0
    },
-   "confidence": 0.98
+   "confidence": 0.89
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.46
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.62
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.34
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
     "especulacao": 0,
-    "controverso": 0.01,
-    "consenso": 0.99,
-    "emergente": 0
+    "controverso": 0
    },
-   "confidence": 0.98
+   "confidence": 0.99
   },
-  "disputa_2": {
+  "tecnico_2": {
    "type": "noul",
    "noul": 0.12
   },
-  "encaixe_2": {
+  "disputa_2": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.14
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.38
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0.04,
-    "consenso": 0.96,
-    "emergente": 0
+    "consenso": 0.98,
+    "controverso": 0.01,
+    "emergente": 0,
+    "especulacao": 0.01
    },
-   "confidence": 0.94
+   "confidence": 0.98
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.12
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.44
+   "noul": 0.94
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.34
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0.15,
-    "consenso": 0.71,
-    "emergente": 0.14
+    "consenso": 1,
+    "controverso": 0,
+    "emergente": 0,
+    "especulacao": 0
    },
-   "confidence": 0.62
+   "confidence": 0.99
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.16
   },
-  "ia_5": {
+  "encaixe_4": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.44
   },
-  "marca_5": {
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.12,
-    "controverso": 0.14,
-    "consenso": 0.74,
-    "especulacao": 0
+    "especulacao": 0,
+    "emergente": 0.32,
+    "consenso": 0.62,
+    "controverso": 0.06
    },
-   "confidence": 0.65
+   "confidence": 0.49
   },
-  "disputa_5": {
+  "tecnico_6": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.05
   },
-  "encaixe_5": {
+  "disputa_6": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.5
   },
-  "ambigua_6": {
+  "encaixe_6": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.56
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.41
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "controverso": 0.01,
     "especulacao": 0,
-    "consenso": 0.99
+    "emergente": 0.39,
+    "consenso": 0.55,
+    "controverso": 0.05
    },
-   "confidence": 0.98
+   "confidence": 0.4
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.4
   },
   "encaixe_7": {
    "type": "noul",
    "noul": 0.92
   },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.49
+  },
   "ambigua_8": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.08
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0.01,
+    "consenso": 0.97,
+    "controverso": 0.02
+   },
+   "confidence": 0.96
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.46
   }
  },
- "custo_usd": 0.0072
+ "custo_usd": 0.00242
 }

@@ -1,15 +1,21 @@
 {
  "id": "selecao-adversa",
  "tipo": "licao",
- "criado": "2026-09-27T15:39:47",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T19:15:40",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um artigo curto sobre carros usados foi recusado por três revistas de economia. Uma delas teria dito que, se aquilo estivesse certo, a economia seria diferente. Em 2001, a mesma ideia rendeu um terço do Prêmio Nobel a George Akerlof.",
+  "gancho": "Um artigo curto sobre carros usados foi recusado por três revistas de economia. Uma delas teria dito que, se aquilo estivesse certo, a economia seria diferente. Em 2001, a mesma ideia rendeu um terço do Prêmio Nobel a George Akerlof. O conceito se chama seleção adversa: um mecanismo simples que pode fazer um mercado inteiro desmoronar.",
   "telas": [
    {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Num pátio de carros usados, cada veículo tem uma história. O vendedor a conhece. O comprador não.",
+    "fonte": 1
+   },
+   {
     "tipo": "texto",
-    "html": "<p>No mercado de carros usados, o vendedor sabe se aquele carro específico é bom ou é um <strong>lemon</strong>: um usado que parece bom por fora e esconde defeito sério. O comprador não sabe. Ele só conhece a qualidade média esperada dos carros à venda.</p>"
+    "html": "<p>No mercado de carros usados, o vendedor sabe se aquele carro específico é bom ou é um <strong>lemon</strong>: um usado que parece bom por fora e esconde defeito sério. O comprador não sabe. Ele só conhece a qualidade média dos carros à venda.</p>"
    },
    {
     "tipo": "figura",
@@ -43,6 +49,12 @@
     "legenda": "O mecanismo, passo a passo, se repete e se retroalimenta.",
     "marca": "consenso",
     "fonte": 2
+   },
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Numa seguradora, o cliente sabe mais sobre a própria saúde do que a empresa. Essa assimetria é a porta de entrada para a seleção adversa.",
+    "fonte": 4
    },
    {
     "tipo": "pergunta",
@@ -91,12 +103,6 @@
     "porque": "Quem compra passa a ser, em média, mais doente. O prêmio único precisa subir para cobrir esse risco maior, o que pode afastar ainda mais os saudáveis. As seguradoras respondem com triagem, como questionários e carências."
    },
    {
-    "tipo": "texto",
-    "html": "<p>No crédito, o banco não sabe a capacidade de pagamento do tomador. Subir os juros afasta os projetos seguros e atrai os arriscados. A partir de certo ponto, o retorno esperado do banco cai. Por isso ele prefere recusar crédito a apenas cobrar juros mais altos.</p>",
-    "marca": "consenso",
-    "fonte": 3
-   },
-   {
     "tipo": "comparar",
     "a": "Sinalização",
     "b": "Triagem",
@@ -126,16 +132,20 @@
  },
  "erros": [],
  "avisos": [
-  "tela 1: 45 palavras (máximo 40)",
-  "tela 2: legenda com mais de 25 palavras",
-  "tela 5: marca sem fonte",
-  "tela 7: 46 palavras (máximo 40)"
+  "gancho com mais de 45 palavras",
+  "tela 2: 44 palavras (máximo 40)",
+  "tela 3: legenda com mais de 25 palavras",
+  "tela 7: marca sem fonte"
  ],
  "alertas_jev": [],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.81
+  },
   "interesse": {
    "type": "score",
-   "score": 2.78,
+   "score": 3.02,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -145,125 +155,174 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.22,
-    "3": 0.75,
-    "4": 0.02
+    "1": 0,
+    "2": 0.05,
+    "3": 0.88,
+    "4": 0.07
    },
-   "confidence": 0.78
+   "confidence": 0.9
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.44
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.04
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.05
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.82
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.21
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.05
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.34
   },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0.01,
-    "controverso": 0.01,
-    "consenso": 0.96,
-    "especulacao": 0.02
-   },
-   "confidence": 0.94
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.05
   },
-  "encaixe_3": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.9
+   "noul": 0.39
   },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.1
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.27
-  },
-  "marca_5": {
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.01,
-    "emergente": 0,
     "consenso": 0.98,
-    "especulacao": 0.01
+    "especulacao": 0.01,
+    "emergente": 0,
+    "controverso": 0.01
    },
-   "confidence": 0.98
+   "confidence": 0.97
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.05
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.7
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.44
   },
   "ambigua_6": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.1
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.3
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.04,
-    "controverso": 0.06,
-    "consenso": 0.88,
-    "especulacao": 0.02
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
    },
-   "confidence": 0.84
+   "confidence": 0.99
   },
-  "disputa_7": {
+  "tecnico_7": {
    "type": "noul",
    "noul": 0.1
   },
-  "ia_8": {
+  "disputa_7": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.08
   },
-  "marca_8": {
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_9": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "controverso": 0.01,
-    "emergente": 0.02,
+    "especulacao": 0.01,
     "consenso": 0.96,
-    "especulacao": 0.01
+    "emergente": 0.02
    },
-   "confidence": 0.94
+   "confidence": 0.95
   },
-  "disputa_8": {
+  "tecnico_9": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.12
   },
-  "encaixe_8": {
+  "disputa_9": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.06
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.93
   }
  },
- "custo_usd": 0.00096
+ "custo_usd": 0.00266
 }

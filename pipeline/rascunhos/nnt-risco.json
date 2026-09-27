@@ -1,15 +1,18 @@
 {
  "id": "nnt-risco",
  "tipo": "licao",
- "criado": "2026-09-27T16:29:41",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:22:43",
+ "modelo": "reaproveitada+deepseek-v4-pro+editor",
  "rodadas": 3,
  "licao": {
-  "gancho": "Um anúncio diz que um remédio reduz o risco de infarto em 36%. A pessoa pensa: quase um terço a menos. Mas no estudo, 2,67% do grupo controle teve infarto, contra 1,65% do grupo tratado, em 3,3 anos. A queda absoluta foi de pouco mais de 1 ponto percentual.",
+  "gancho": "Um anúncio diz que um remédio reduz o risco de infarto em 36%. A pessoa pensa: quase um terço a menos. Mas no estudo o que caiu foram 1,02 pontos percentuais, e foi preciso tratar 98 pessoas por 3,3 anos para evitar um único infarto. O que explica essa diferença é uma medida chamada NNT.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>O risco relativo compara proporções: 1,65 dividido por 2,67 dá 0,62, uma redução relativa de cerca de 36%. O número parece grande, mas não diz quantas pessoas precisam ser tratadas.</p>"
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Gráficos como este mostram o efeito de um tratamento. O NNT resume esse efeito em uma pergunta simples: quantas pessoas precisam ser tratadas para que uma se beneficie?",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "comparar",
@@ -18,8 +21,8 @@
     "linhas": [
      {
       "aspecto": "O que mede",
-      "a": "quantas vezes o risco muda em termos proporcionais",
-      "b": "diferença direta entre as taxas de eventos"
+      "a": "a proporção entre as taxas dos dois grupos",
+      "b": "a diferença direta entre as taxas dos dois grupos"
      },
      {
       "aspecto": "No exemplo",
@@ -32,7 +35,21 @@
       "b": "pode parecer pequena e desanimadora"
      }
     ],
-    "legenda": "Mesmo estudo, duas formas de olhar para a mesma diferença."
+    "legenda": "Mesmo estudo, duas formas de olhar para a mesma diferença nos dados.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "estimar",
+    "q": "No estudo do anúncio, quantas pessoas precisaram ser tratadas por 3,3 anos para evitar um infarto?",
+    "unidade": "pessoas",
+    "min": 1,
+    "max": 1000,
+    "escala": "log",
+    "resposta": 98,
+    "legenda": "98 pessoas. A queda absoluta foi de 1,02 ponto percentual, e 1 dividido por 0,0102 dá 98. Esse é o NNT.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
@@ -43,90 +60,97 @@
      "10, porque o risco final é 5%"
     ],
     "correta": 1,
-    "porque": "A redução absoluta é 10% menos 5%, igual a 5 pontos percentuais. O NNT é 1 dividido por 0,05, que dá 20. Em média, 20 pessoas tratadas para evitar um evento adicional."
-   },
-   {
-    "tipo": "estimar",
-    "q": "No estudo citado, quantas pessoas precisaram ser tratadas por 3,3 anos para evitar um infarto?",
-    "unidade": "pessoas",
-    "min": 1,
-    "max": 1000,
-    "escala": "log",
-    "resposta": 98,
-    "legenda": "98 pessoas. A redução absoluta foi de 1,02 ponto percentual, e 1 dividido por 0,0102 dá 98.",
+    "porque": "A redução absoluta é 10% menos 5%, igual a 5 pontos percentuais. O NNT é 1 dividido por 0,05, que dá 20. Em média, 20 pessoas tratadas para evitar um evento a mais.",
     "marca": "consenso",
     "fonte": 1
-   },
-   {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "1988",
-      "texto": "Laupacis, Sackett e Roberts descrevem o NNT"
-     },
-     {
-      "nome": "Anos seguintes",
-      "texto": "O NNT passa a ser usado em ensaios clínicos"
-     },
-     {
-      "nome": "Hoje",
-      "texto": "O NNT é comum em diretrizes e decisões clínicas"
-     }
-    ],
-    "legenda": "O NNT surgiu para comunicar eficácia de intervenções. O NNH faz o mesmo para danos.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>O NNT não é uma propriedade fixa do remédio. Ele depende do risco de base da pessoa e do tempo de observação.</p>"
    },
    {
     "tipo": "comparar",
-    "a": "Até 90 minutos",
-    "b": "271 a 360 minutos",
+    "a": "População de baixo risco",
+    "b": "População de alto risco",
     "linhas": [
      {
-      "aspecto": "NNT para benefício no AVC",
+      "aspecto": "Risco no controle",
+      "a": "2,67%",
+      "b": "20%"
+     },
+     {
+      "aspecto": "Redução absoluta",
+      "a": "1,02 ponto percentual",
+      "b": "7,2 pontos percentuais"
+     },
+     {
+      "aspecto": "NNT",
+      "a": "98",
+      "b": "cerca de 14"
+     }
+    ],
+    "legenda": "O NNT muda com o risco de base. A redução relativa de 36% é a mesma nos dois casos, mas o benefício absoluto é bem diferente.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Tratamento rápido (até 90 min)",
+    "b": "Tratamento tardio (271 a 360 min)",
+    "linhas": [
+     {
+      "aspecto": "NNT no AVC",
       "a": "3,6",
       "b": "19,3"
      },
      {
-      "aspecto": "Tempo de início do tratamento",
-      "a": "mais cedo",
-      "b": "mais tarde"
+      "aspecto": "Pessoas tratadas para um benefício a mais",
+      "a": "cerca de 4",
+      "b": "cerca de 19"
      }
     ],
-    "legenda": "Mesmo tratamento, janelas de tempo diferentes, relações benefício-dano muito distintas.",
+    "legenda": "O NNT do mesmo tratamento para AVC varia com a janela de tempo. Quanto mais cedo, menor o NNT e maior o benefício.",
     "marca": "consenso",
     "fonte": 3
    },
    {
     "tipo": "pergunta",
-    "q": "Por que o NNT muda para o mesmo remédio em populações diferentes?",
+    "q": "Por que o risco relativo pode enganar mais que o NNT?",
     "alts": [
-     "Porque o remédio age de forma diferente em cada pessoa",
-     "Porque o NNT é o inverso da redução absoluta, que depende do risco de base",
-     "Porque o risco relativo deixa de valer quando o risco basal é alto"
+     "Porque o NNT é calculado com uma fórmula que ignora o grupo controle",
+     "Porque o risco relativo não informa quantas pessoas tratadas se beneficiam de fato",
+     "Porque o risco relativo só funciona para doenças cardiovasculares"
     ],
     "correta": 1,
-    "porque": "Se o risco no controle fosse 20% e a redução relativa se mantivesse em 36%, a queda absoluta seria 7,2 pontos percentuais e o NNT cairia para cerca de 14. O risco relativo pode ser constante, mas o NNT não."
+    "porque": "Uma redução relativa de 50% pode significar cair de 2 para 1 evento em 100 pessoas. O efeito é grande em termos relativos, mas o NNT é 100. Faltou o 'traduzindo em gente', que o NNT entrega.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pontos",
+    "valor": 2,
+    "frase": "estudos clínicos de cada 100 reportam o NNT diretamente.",
+    "legenda": "Em uma revisão de cinco grandes revistas médicas, apenas 8 de 359 ensaios publicaram o NNT. A grande maioria divulgou apenas o risco relativo.",
+    "marca": "consenso",
+    "fonte": 6
    }
   ],
-  "fecho": "O NNT depende de o risco relativo ser constante, o que nem sempre é verdade. Em meta-análises, essa suposição foi testada e a concordância foi alta, mas não é garantia universal. Entender isso ajuda a ler estudos com desconfiança saudável."
+  "fecho": "Tão importante quanto saber o benefício é saber o dano. O NNH diz quantas pessoas tratar para causar um evento adverso, e a razão entre NNH e NNT mostra se o remédio ajuda mais do que atrapalha."
  },
  "erros": [],
  "avisos": [
   "gancho com mais de 45 palavras"
  ],
  "alertas_jev": [
-  "tela 4: o tipo visual não combina com o conteúdo (0.19); troque de tipo ou use texto",
-  "tela 5: soa como IA (0.55)"
+  "tela 1: soa como IA (0.56)",
+  "tela 3: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto",
+  "tela 7: resposta óbvia, acerta quem não leu (0.61)",
+  "tela 8: o tipo visual não combina com o conteúdo (0.33); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.9,
+   "score": 2.99,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -137,77 +161,123 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.1,
-    "3": 0.9,
-    "4": 0
+    "2": 0.04,
+    "3": 0.93,
+    "4": 0.03
    },
-   "confidence": 0.91
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.56
   },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.31
-  },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.29
-  },
-  "disputa_2": {
-   "type": "noul",
-   "noul": 0.18
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.94
-  },
-  "ambigua_3": {
-   "type": "noul",
-   "noul": 0.09
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.26
-  },
-  "marca_4": {
+  "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.97,
-    "especulacao": 0.02,
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
     "controverso": 0
    },
-   "confidence": 0.96
+   "confidence": 0.99
   },
-  "disputa_4": {
+  "tecnico_1": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.11
   },
-  "encaixe_4": {
+  "disputa_1": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.1
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 0.99
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "controverso": 0,
+    "emergente": 0.01,
+    "consenso": 0.98
+   },
+   "confidence": 0.97
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.08
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.55
+   "noul": 0.21
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "especulacao": 0,
     "emergente": 0,
-    "consenso": 0.99,
-    "especulacao": 0.01,
+    "consenso": 1,
     "controverso": 0
    },
-   "confidence": 0.99
+   "confidence": 1
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.38
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.12
   },
   "encaixe_5": {
    "type": "noul",
@@ -215,39 +285,70 @@
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.44
+   "noul": 0.22
   },
-  "disputa_6": {
-   "type": "noul",
-   "noul": 0.23
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.28
-  },
-  "marca_7": {
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.98,
+    "emergente": 0,
     "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.61
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.6,
+    "especulacao": 0.03,
+    "consenso": 0.36,
     "controverso": 0.01
    },
-   "confidence": 0.98
+   "confidence": 0.47
   },
-  "disputa_7": {
+  "tecnico_8": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.18
   },
-  "encaixe_7": {
+  "disputa_8": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.37
   },
-  "ambigua_8": {
+  "encaixe_8": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.33
   }
  },
- "custo_usd": 0.01294
+ "custo_usd": 0.00368
 }

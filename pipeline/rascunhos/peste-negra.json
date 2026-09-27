@@ -1,15 +1,23 @@
 {
  "id": "peste-negra",
  "tipo": "licao",
- "criado": "2026-09-27T16:29:22",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:22:34",
+ "modelo": "reaproveitada",
  "rodadas": 2,
  "licao": {
-  "gancho": "Em 1348, Florença tinha entre 110 mil e 120 mil habitantes. Três anos depois, tinha cerca de 50 mil.",
+  "gancho": "Em 1348, Florença tinha entre 110 mil e 120 mil habitantes. Três anos depois, tinha cerca de 50 mil. A Peste Negra não matou apenas pessoas: matou um modo de organizar a economia.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Entre 1347 e 1351, a Peste Negra matou entre 30% e 60% da população europeia. A causa era a bactéria <strong>Yersinia pestis</strong>, transmitida por pulgas que viviam em ratos.</p>",
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Miniatura medieval retrata o sepultamento de vítimas da Peste Negra. Em poucos anos, a Europa perdeu entre um terço e metade da sua população.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "A causa era a bactéria Yersinia pestis, vista aqui nos espinhos do intestino de uma pulga. A pulga picava ratos infetados e depois as pessoas.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -22,34 +30,6 @@
     "escala": "linear",
     "resposta": 80,
     "legenda": "Os registos fiscais sugerem que 80% dos habitantes da cidade morreram.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "Rato infetado",
-      "texto": "A pulga ingere sangue com a bactéria."
-     },
-     {
-      "nome": "Pulga",
-      "texto": "A bactéria multiplica-se no intestino e bloqueia-o."
-     },
-     {
-      "nome": "Pessoa",
-      "texto": "A pulga, esfomeada, pica com mais agressividade e regurgita bactérias."
-     }
-    ],
-    "legenda": "O mecanismo de transmissão foi estabelecido em 1898 por Paul-Louis Simond.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "pontos",
-    "valor": 50,
-    "frase": "dos habitantes de Paris morreram.",
-    "legenda": "As estimativas variam muito conforme a região.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -79,6 +59,26 @@
     "fonte": 3
    },
    {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Morre muita gente",
+      "texto": "Falta quem trabalhe a terra."
+     },
+     {
+      "nome": "Sobe o preço do trabalho",
+      "texto": "Camponeses podem escolher onde e por quanto trabalhar."
+     },
+     {
+      "nome": "Cai o poder dos senhores",
+      "texto": "Sem conseguir prender o trabalhador, a servidão perde força."
+     }
+    ],
+    "legenda": "A servidão enfraqueceu por razões econômicas, não por decreto. Em Essex, os camponeses passaram a escolher onde trabalhar.",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
     "tipo": "pergunta",
     "q": "Por que a servidão perdeu força depois da Peste Negra?",
     "alts": [
@@ -90,26 +90,9 @@
     "porque": "A escassez de trabalhadores dava poder de escolha aos camponeses. A servidão enfraqueceu por razões econômicas, não por decreto."
    },
    {
-    "tipo": "linha_tempo",
-    "eventos": [
-     {
-      "ano": 1343,
-      "texto": "A peste chega à Crimeia"
-     },
-     {
-      "ano": 1347,
-      "texto": "Chega à Sicília em outubro, transportada por navios genoveses"
-     },
-     {
-      "ano": 1348,
-      "texto": "Em junho já está em Inglaterra"
-     },
-     {
-      "ano": 1351,
-      "texto": "O surto termina"
-     }
-    ],
-    "legenda": "A doença espalhou-se rapidamente pelas rotas marítimas.",
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "O impacto não foi uniforme. Regiões como a Europa central e oriental continuaram a crescer, enquanto a Escandinávia e a França sofreram quebras profundas.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -122,7 +105,7 @@
      "Compararam os sintomas com os de epidemias modernas"
     ],
     "correta": 1,
-    "porque": "Em 2010 e 2011, o ADN antigo de esqueletos de vítimas confirmou a ligação entre a bactéria e a peste medieval."
+    "porque": "Em 2010 e 2011, equipas extraíram ADN da bactéria de esqueletos de vítimas, confirmando a ligação."
    }
   ],
   "fecho": "A Peste Negra não foi a única crise que reorganizou a economia europeia. A Pequena Era do Gelo e a crise do século XVII também deixaram marcas profundas."
@@ -130,15 +113,17 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 2: o tipo visual não combina com o conteúdo (0.23); troque de tipo ou use texto",
-  "tela 4: soa como IA (0.55)",
-  "tela 4: marcada consenso, JEV diz controverso (0.66)",
-  "tela 4: o tipo visual não combina com o conteúdo (0.21); troque de tipo ou use texto"
+  "tela 3: marcada consenso, JEV diz controverso (0.62)",
+  "tela 8: a pergunta depende de algo que a lição ainda não mostrou (0.06)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.9
+  },
   "interesse": {
    "type": "score",
-   "score": 2.95,
+   "score": 3.08,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -149,26 +134,30 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.08,
-    "3": 0.89,
-    "4": 0.03
+    "2": 0.01,
+    "3": 0.9,
+    "4": 0.09
    },
-   "confidence": 0.9
+   "confidence": 0.91
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.32
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "controverso": 0.01,
-    "consenso": 0.99,
-    "especulacao": 0
+    "consenso": 0.84,
+    "emergente": 0.01,
+    "especulacao": 0.03,
+    "controverso": 0.12
    },
-   "confidence": 0.98
+   "confidence": 0.78
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
@@ -176,127 +165,155 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.29
   },
   "marca_2": {
    "type": "choice",
-   "choice": "controverso",
-   "probabilities": {
-    "emergente": 0.14,
-    "controverso": 0.57,
-    "consenso": 0.05,
-    "especulacao": 0.24
-   },
-   "confidence": 0.43
-  },
-  "disputa_2": {
-   "type": "noul",
-   "noul": 0.32
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.23
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.28
-  },
-  "marca_3": {
-   "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.01,
-    "emergente": 0,
-    "consenso": 0.98,
-    "especulacao": 0.01
-   },
-   "confidence": 0.97
-  },
-  "disputa_3": {
-   "type": "noul",
-   "noul": 0.08
-  },
-  "encaixe_3": {
-   "type": "noul",
-   "noul": 0.9
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.55
-  },
-  "marca_4": {
-   "type": "choice",
-   "choice": "controverso",
-   "probabilities": {
+    "consenso": 0.96,
+    "controverso": 0.03,
     "emergente": 0.01,
-    "controverso": 0.66,
-    "consenso": 0.01,
-    "especulacao": 0.32
+    "especulacao": 0
    },
-   "confidence": 0.55
+   "confidence": 0.95
   },
-  "disputa_4": {
-   "type": "noul",
-   "noul": 0.59
-  },
-  "encaixe_4": {
+  "tecnico_2": {
    "type": "noul",
    "noul": 0.21
   },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "consenso": 0.01,
+    "controverso": 0.62,
+    "emergente": 0.17,
+    "especulacao": 0.2
+   },
+   "confidence": 0.48
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.72
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.9,
+    "controverso": 0.07,
+    "emergente": 0.02,
+    "especulacao": 0.01
+   },
+   "confidence": 0.86
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "ia_5": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.35
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.09,
-    "emergente": 0.01,
-    "consenso": 0.89,
-    "especulacao": 0.01
+    "controverso": 0.13,
+    "consenso": 0.84,
+    "especulacao": 0.01,
+    "emergente": 0.02
    },
-   "confidence": 0.86
+   "confidence": 0.78
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.26
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.95
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.5
   },
   "ambigua_6": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.06
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.32
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.06,
-    "emergente": 0.03,
-    "consenso": 0.86,
-    "controverso": 0.05
+    "controverso": 0.23,
+    "consenso": 0.54,
+    "especulacao": 0.04,
+    "emergente": 0.19
    },
-   "confidence": 0.83
+   "confidence": 0.39
   },
-  "disputa_7": {
+  "tecnico_7": {
    "type": "noul",
    "noul": 0.06
   },
-  "encaixe_7": {
+  "disputa_7": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.15
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.41
   },
   "ambigua_8": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.19
   }
  },
- "custo_usd": 0.00675
+ "custo_usd": 0.02384
 }

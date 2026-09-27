@@ -1,46 +1,49 @@
 {
  "id": "maillard",
  "tipo": "licao",
- "criado": "2026-09-27T16:17:25",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:21:40",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Aquele cheiro de pão saindo do forno, a casquinha dourada do frango assado e o sabor de um bife grelhado vêm todos da mesma química: o calor encontrando proteínas e açúcares.",
+  "gancho": "Aquele cheiro de pão saindo do forno, a casquinha dourada do frango assado e o sabor de um bife grelhado vêm todos da mesma química: a reação de Maillard, que acontece quando o calor encontra proteínas e açúcares.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A casca dourada do pão é feita de melanoidinas, polímeros castanhos que a reação de Maillard produz.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "As marcas escuras do bife grelhado vêm da mesma reação: aminoácidos da carne mais açúcar, em calor de grelha.",
+    "marca": "consenso",
+    "fonte": 1
+   },
    {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "União",
-      "texto": "o grupo amino do aminoácido encontra o grupo carbonila do açúcar e libera água"
+      "texto": "Aminoácido e açúcar se encontram e liberam água"
      },
      {
-      "nome": "Rearranjo",
-      "texto": "a molécula instável se reorganiza no rearranjo de Amadori e vira uma cetosamina"
+      "nome": "Criação",
+      "texto": "Forma-se uma molécula instável que logo se reorganiza"
      },
      {
-      "nome": "Ramificação",
-      "texto": "a partir daí a reação se divide em vários caminhos ao mesmo tempo"
+      "nome": "Transformação",
+      "texto": "A molécula se rearranja e abre caminho para várias reações"
      },
      {
-      "nome": "Produtos",
-      "texto": "surgem redutonas, fragmentos de aroma e polímeros castanhos chamados melanoidinas"
+      "nome": "Efeito",
+      "texto": "Surgem centenas de compostos: os que dão cor, aroma e sabor"
      }
     ],
     "legenda": "O mecanismo geral foi proposto por John E. Hodge em 1953 e é aceito até hoje.",
     "marca": "consenso",
     "fonte": 2
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que pão, café e chocolate têm aromas tão diferentes, se todos passam pela mesma reação?",
-    "alts": [
-     "O resultado muda conforme os aminoácidos, açúcares, temperatura, tempo e presença de ar",
-     "Cada alimento usa uma reação química completamente diferente",
-     "O aroma vem do açúcar que sobrou depois do cozimento"
-    ],
-    "correta": 0,
-    "porque": "A reação é uma rede com centenas de caminhos. Cada alimento tem sua combinação de reagentes e condições, e por isso gera um conjunto próprio de moléculas de aroma."
    },
    {
     "tipo": "comparar",
@@ -58,12 +61,12 @@
       "b": "escurecimento dos açúcares"
      },
      {
-      "aspecto": "Quando acontece",
-      "a": "acelera entre 140 e 165 °C",
+      "aspecto": "Quando domina",
+      "a": "entre 140 e 165 °C",
       "b": "em temperaturas mais altas"
      }
     ],
-    "legenda": "São processos separados, mas acontecem ao mesmo tempo em muitos alimentos.",
+    "legenda": "Em muitos alimentos os dois processos acontecem ao mesmo tempo, mas são reações diferentes.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -85,22 +88,20 @@
     "porque": "Estudos mediram níveis até três vezes maiores de produtos de Maillard no colágeno da pele de diabéticos do que em não diabéticos. O diabetes funciona como um envelhecimento químico acelerado."
    },
    {
-    "tipo": "linha_tempo",
-    "eventos": [
-     {
-      "ano": 1912,
-      "texto": "Louis-Camille Maillard descreve o fenômeno, tentando reproduzir a síntese de proteínas no laboratório"
-     },
-     {
-      "ano": 1953,
-      "texto": "John E. Hodge propõe o mecanismo que ainda hoje é a base do entendimento da reação"
-     },
-     {
-      "ano": 1990,
-      "texto": "pesquisadores mostram que a reação também acontece dentro do corpo, entre glicose e colágeno"
-     }
+    "tipo": "pergunta",
+    "q": "Por que pão, café e chocolate têm aromas tão diferentes, se todos passam pela reação de Maillard?",
+    "alts": [
+     "A combinação de aminoácidos, açúcares, temperatura e tempo muda de um alimento para outro",
+     "Cada um desses alimentos usa uma reação química completamente diferente",
+     "O aroma vem do açúcar que sobrou depois do cozimento"
     ],
-    "legenda": "Mais de um século entre ver o fenômeno e entender o mecanismo.",
+    "correta": 0,
+    "porque": "A reação de Maillard é uma rede com centenas de caminhos. Cada alimento tem sua combinação própria de ingredientes e condições, e por isso gera um conjunto distinto de moléculas de aroma."
+   },
+   {
+    "tipo": "foto",
+    "foto": 6,
+    "legenda": "Em turfeiras ácidas, corpos preservados escurecem por um processo semelhante, de forma muito lenta.",
     "marca": "consenso",
     "fonte": 2
    }
@@ -108,12 +109,22 @@
   "fecho": "Se essa reação acontece devagar dentro do corpo, o que faz uma enzima acelerar uma reação sem se gastar? Isso tem nome: catálise e energia de ativação."
  },
  "erros": [],
- "avisos": [],
- "alertas_jev": [],
+ "avisos": [
+  "tela 7: duas perguntas seguidas"
+ ],
+ "alertas_jev": [
+  "tela 3: soa como IA (0.53)",
+  "tela 6: resposta óbvia, acerta quem não leu (0.66)",
+  "tela 7: resposta óbvia, acerta quem não leu (0.65)"
+ ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.97
+  },
   "interesse": {
    "type": "score",
-   "score": 2.95,
+   "score": 2.99,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -124,108 +135,182 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.06,
-    "3": 0.93,
-    "4": 0.01
+    "2": 0.03,
+    "3": 0.95,
+    "4": 0.02
    },
-   "confidence": 0.94
+   "confidence": 0.96
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.5
+   "noul": 0.24
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
     "consenso": 1,
+    "emergente": 0,
     "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.29
+  },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.03
   },
-  "encaixe_1": {
+  "ia_2": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.24
   },
-  "ambigua_2": {
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.17
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.03
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.53
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 1,
     "emergente": 0,
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 1
+    "controverso": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.17
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.04
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.95
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.28
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.99,
+    "consenso": 1,
+    "emergente": 0,
     "especulacao": 0,
     "controverso": 0
    },
-   "confidence": 0.97
+   "confidence": 1
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.33
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.15
   },
-  "ambigua_5": {
+  "encaixe_4": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.95
   },
-  "ia_6": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.29
   },
-  "marca_6": {
+  "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.99,
     "especulacao": 0,
+    "consenso": 0.99,
+    "emergente": 0.01,
     "controverso": 0
    },
-   "confidence": 0.98
+   "confidence": 0.99
   },
-  "disputa_6": {
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.66
+  },
+  "ambigua_6": {
    "type": "noul",
    "noul": 0.06
   },
-  "encaixe_6": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.62
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.65
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.24,
+    "consenso": 0.31,
+    "emergente": 0.35,
+    "controverso": 0.1
+   },
+   "confidence": 0.14
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.08
   }
  },
- "custo_usd": 0.01364
+ "custo_usd": 0.00323
 }

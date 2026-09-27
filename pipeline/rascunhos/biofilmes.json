@@ -1,15 +1,22 @@
 {
  "id": "biofilmes",
  "tipo": "licao",
- "criado": "2026-09-27T15:38:47",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T19:14:49",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. Mesma espécie, mesmo remédio, resultado oposto.",
+  "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. O motivo não é uma mutação: é o jeito de viver em comunidade, chamado biofilme.",
   "telas": [
    {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A placa nos dentes é um biofilme: uma comunidade bacteriana grudada numa superfície.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
     "tipo": "texto",
-    "html": "<p>A placa que se forma nos dentes depois de um dia sem escovar é um <strong>biofilme</strong>: bactérias que grudam numa superfície e se envolvem numa matriz que elas mesmas produzem.</p>"
+    "html": "<p>Um <strong>biofilme</strong> são bactérias que aderem a uma superfície e se envolvem numa matriz que elas mesmas produzem, feita de açúcares, proteínas e DNA.</p>"
    },
    {
     "tipo": "estimar",
@@ -22,6 +29,13 @@
     "legenda": "Cerca de mil vezes. E a bactéria não mudou de genes: mudou de jeito de viver.",
     "marca": "consenso",
     "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Micrografia de um biofilme: as células aparecem agrupadas e protegidas pela matriz extracelular.",
+    "marca": "consenso",
+    "fonte": 3
    },
    {
     "tipo": "camadas",
@@ -59,14 +73,6 @@
     "porque": "Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção é do arranjo, não dos genes."
    },
    {
-    "tipo": "pontos",
-    "valor": 65,
-    "frase": "infecções microbianas estão associadas a biofilmes.",
-    "legenda": "Estimativa do CDC e do NIH, agências de saúde dos Estados Unidos.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
     "tipo": "comparar",
     "a": "Solta",
     "b": "Em biofilme",
@@ -90,6 +96,13 @@
     "legenda": "Mesma espécie nas duas colunas."
    },
    {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Bactérias em comunidade usam sinais químicos para coordenar a formação do biofilme, um processo chamado quorum sensing.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
     "tipo": "pergunta",
     "q": "Uma infecção numa prótese de quadril volta sempre que o antibiótico acaba. O que isso sugere?",
     "alts": [
@@ -105,15 +118,15 @@
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [
-  "tela 2: o tipo visual não combina com o conteúdo (0.35); troque de tipo ou use texto",
-  "tela 5: soa como IA (0.53)",
-  "tela 5: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto"
- ],
+ "alertas_jev": [],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 3.06,
+   "score": 3.05,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -125,83 +138,122 @@
     "0": 0,
     "1": 0,
     "2": 0.01,
-    "3": 0.91,
-    "4": 0.08
+    "3": 0.93,
+    "4": 0.06
    },
-   "confidence": 0.93
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.2
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_1": {
    "type": "noul",
    "noul": 0.05
   },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.85
+  },
   "ia_2": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.31
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "consenso": 0.97,
-    "emergente": 0.02,
-    "controverso": 0.01
-   },
-   "confidence": 0.97
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.19
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.35
+   "noul": 0.05
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.27
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "emergente": 0.02,
     "especulacao": 0,
-    "consenso": 0.99,
-    "emergente": 0.01,
+    "consenso": 0.98,
     "controverso": 0
    },
-   "confidence": 0.98
+   "confidence": 0.97
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.19
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.27
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.57
   },
-  "ambigua_4": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.16
+   "noul": 0.34
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.91
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.53
+   "noul": 0.28
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0,
-    "controverso": 0
+    "controverso": 0,
+    "consenso": 0.99,
+    "emergente": 0.01
    },
    "confidence": 0.99
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.15
   },
   "disputa_5": {
    "type": "noul",
@@ -209,24 +261,75 @@
   },
   "encaixe_5": {
    "type": "noul",
+   "noul": 0.97
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.97
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_8": {
+   "type": "noul",
    "noul": 0.29
   },
-  "ia_6": {
+  "disputa_8": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.05
   },
-  "disputa_6": {
+  "encaixe_8": {
    "type": "noul",
-   "noul": 0.17
+   "noul": 0.73
   },
-  "encaixe_6": {
+  "respondivel_9": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.93
   },
-  "ambigua_7": {
+  "obvia_9": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.34
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.09
   }
  },
- "custo_usd": 0.00592
+ "custo_usd": 0.00274
 }

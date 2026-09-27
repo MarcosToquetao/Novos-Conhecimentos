@@ -1,12 +1,17 @@
 {
  "id": "el-nino",
  "tipo": "licao",
- "criado": "2026-09-27T16:27:54",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:14:11",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
   "gancho": "Em 1892, pescadores peruanos deram um nome à corrente quente que aparecia perto da costa no fim do ano: El Niño, o Menino, porque chegava perto do Natal. O nome pegou e hoje batiza um fenômeno que mexe com a chuva em quatro continentes.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Pescadores artesanais na costa do Peru, onde o fenômeno foi observado pela primeira vez."
+   },
    {
     "tipo": "comparar",
     "a": "Leste do Pacífico",
@@ -31,6 +36,11 @@
     "legenda": "Em condições normais, os ventos alísios empurram a água quente para o oeste. A costa da América do Sul fica com água fria subindo do fundo.",
     "marca": "consenso",
     "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O mapa animado mostra as áreas mais quentes (vermelho) e mais frias (azul) na superfície do Pacífico."
    },
    {
     "tipo": "etapas",
@@ -121,6 +131,13 @@
     ],
     "correta": 1,
     "porque": "Cada país usa um limiar diferente. Os Estados Unidos consideram 0,5 °C na região Niño 3.4; o Peru usa 0,4 °C na região Niño 1+2 por três meses."
+   },
+   {
+    "tipo": "foto",
+    "foto": 5,
+    "legenda": "Cientista segura um testemunho de coral. As bandas de crescimento anual dos corais revelam que o ENOS existe há pelo menos 130 mil anos.",
+    "marca": "consenso",
+    "fonte": 8
    }
   ],
   "fecho": "O El Niño aquece a água na superfície. E o que acontece quando essa água quente afunda e viaja pelo fundo dos oceanos? Isso tem nome: circulação termohalina."
@@ -128,12 +145,17 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 4: o tipo visual não combina com o conteúdo (0.47); troque de tipo ou use texto"
+  "tela 3: o tipo visual não combina com o conteúdo (0.43); troque de tipo ou use texto",
+  "tela 6: o tipo visual não combina com o conteúdo (0.44); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.92
+  },
   "interesse": {
    "type": "score",
-   "score": 2.9,
+   "score": 2.91,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -144,26 +166,19 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.1,
-    "3": 0.9,
+    "2": 0.09,
+    "3": 0.91,
     "4": 0
    },
-   "confidence": 0.91
+   "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.24
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0
-   },
-   "confidence": 1
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.04
   },
   "disputa_1": {
    "type": "noul",
@@ -171,85 +186,183 @@
   },
   "encaixe_1": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.9
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.27
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 1,
     "controverso": 0,
     "especulacao": 0,
-    "consenso": 1,
     "emergente": 0
    },
    "confidence": 1
   },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.31
+  },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.04
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.86
+   "noul": 0.93
   },
-  "ambigua_3": {
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "tecnico_3": {
    "type": "noul",
    "noul": 0.08
   },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.43
+  },
   "ia_4": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.33
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 1,
     "controverso": 0,
     "especulacao": 0,
-    "consenso": 1,
     "emergente": 0
    },
    "confidence": 1
   },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.17
+  },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.05
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.47
+   "noul": 0.89
   },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.26
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.08,
-    "especulacao": 0,
-    "consenso": 0.91,
-    "emergente": 0.01
-   },
-   "confidence": 0.89
-  },
-  "disputa_5": {
-   "type": "noul",
-   "noul": 0.39
-  },
-  "encaixe_5": {
+  "respondivel_5": {
    "type": "noul",
    "noul": 0.94
   },
-  "ambigua_6": {
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.89,
+    "emergente": 0.01,
+    "especulacao": 0,
+    "controverso": 0.1
+   },
+   "confidence": 0.85
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.87,
+    "emergente": 0.11,
+    "especulacao": 0,
+    "controverso": 0.02
+   },
+   "confidence": 0.82
+  },
+  "tecnico_9": {
    "type": "noul",
    "noul": 0.12
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.91
   }
  },
- "custo_usd": 0.01329
+ "custo_usd": 0.0156
 }

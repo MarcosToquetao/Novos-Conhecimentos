@@ -1,12 +1,22 @@
 {
  "id": "maquina-turing",
  "tipo": "licao",
- "criado": "2026-09-27T15:46:09",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:21:56",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Seu celular e a máquina de fita de 1936 conseguem calcular exatamente as mesmas coisas. A diferença está na velocidade, não no que é possível.",
+  "gancho": "Em 1936, Alan Turing propôs uma máquina que nunca existiu no mundo real: um dispositivo imaginário com uma fita infinita. Só o que ele fez foi responder a pergunta mais espinhosa da matemática da época. Seu celular e essa máquina de fita de 1936 conseguem calcular exatamente as mesmas coisas. A diferença está na velocidade, não no que é possível computar.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O matemático Alan Turing em 1936, ano em que propôs o conceito da máquina de Turing."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Representação visual de uma fita de dados sendo lida e alterada por um cabeçote de processamento."
+   },
    {
     "tipo": "etapas",
     "etapas": [
@@ -57,17 +67,21 @@
     "fonte": 2
    },
    {
-    "tipo": "pergunta",
-    "q": "O problema da parada não tem solução hoje porque a tecnologia ainda não é boa o suficiente?",
-    "alts": [
-     "Sim, com computadores quânticos será resolvido",
-     "Não, é uma prova matemática de impossibilidade",
-     "Sim, basta aumentar a memória disponível"
-    ],
-    "correta": 1,
-    "porque": "Turing provou que nenhum procedimento algorítmico geral pode decidir, para todo par de máquina e entrada, se ela para. A limitação é lógica, não de hardware.",
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "O matemático alemão David Hilbert, responsável por formular o problema da decisão na lógica matemática."
+   },
+   {
+    "tipo": "estimar",
+    "q": "Em 1928, David Hilbert lançou o Entscheidungsproblem: algum procedimento mecânico decide a verdade de qualquer afirmação matemática? Quantos anos se passaram até Turing responder 'não' com sua máquina?",
+    "unidade": "anos",
+    "min": 1,
+    "max": 50,
+    "escala": "linear",
+    "resposta": 8,
+    "legenda": "Oito anos. Em 1936, Turing usou seu modelo de fita para mostrar que o problema da parada não tem solução, respondendo negativamente a Hilbert.",
     "marca": "consenso",
-    "fonte": 1
+    "fonte": 7
    },
    {
     "tipo": "etapas",
@@ -107,30 +121,6 @@
     "fonte": 1
    },
    {
-    "tipo": "camadas",
-    "camadas": [
-     {
-      "nome": "Problemas decidíveis",
-      "nota": "têm algoritmo que sempre termina com resposta certa"
-     },
-     {
-      "nome": "Problemas indecidíveis",
-      "nota": "nenhum algoritmo pode resolvê-los em geral"
-     },
-     {
-      "nome": "Problema da parada",
-      "nota": "exemplo clássico de indecidível"
-     }
-    ],
-    "eixo": {
-     "topo": "decidível",
-     "base": "indecidível"
-    },
-    "legenda": "O problema da parada delimita o que é computável. Ferramentas de análise de código contornam o limite com regras específicas, não com uma solução geral.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
     "tipo": "pergunta",
     "q": "Computadores quânticos conseguem calcular coisas que uma máquina de Turing não consegue?",
     "alts": [
@@ -147,16 +137,23 @@
   "fecho": "Se a máquina de Turing define o limite do que é computável, o que acontece quando dois computadores precisam concordar sobre a mesma verdade sem confiar um no outro? Isso tem nome: consenso distribuído."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras",
+  "tela 9: duas perguntas seguidas"
+ ],
  "alertas_jev": [
-  "tela 1: soa como IA (0.56)",
-  "tela 2: soa como IA (0.52)",
-  "tela 6: soa como IA (0.52)"
+  "tela 6: o tipo visual não combina com o conteúdo (0.38); troque de tipo ou use texto",
+  "tela 7: soa como IA (0.53)",
+  "tela 9: a pergunta depende de algo que a lição ainda não mostrou (0.31)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.91
+  },
   "interesse": {
    "type": "score",
-   "score": 2.81,
+   "score": 3.01,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -166,117 +163,181 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.18,
-    "3": 0.79,
-    "4": 0.02
+    "1": 0,
+    "2": 0.05,
+    "3": 0.88,
+    "4": 0.07
    },
-   "confidence": 0.81
+   "confidence": 0.9
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.37
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "consenso": 0.99,
-    "especulacao": 0.01,
-    "controverso": 0
-   },
-   "confidence": 0.99
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
    "noul": 0.05
   },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.95
-  },
   "ia_2": {
    "type": "noul",
-   "noul": 0.52
+   "noul": 0.44
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "consenso": 0.98,
-    "especulacao": 0.01,
-    "controverso": 0.01
-   },
-   "confidence": 0.98
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.04
   },
-  "encaixe_2": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.47
   },
-  "ambigua_3": {
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 0.99
+   },
+   "confidence": 0.98
+  },
+  "tecnico_3": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.13
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.92
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.5
+   "noul": 0.46
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "especulacao": 0.03,
     "emergente": 0,
-    "consenso": 1,
-    "especulacao": 0,
-    "controverso": 0
+    "controverso": 0.01,
+    "consenso": 0.96
    },
-   "confidence": 1
+   "confidence": 0.95
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.14
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.18
+   "noul": 0.15
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.95
   },
-  "ambigua_5": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.35
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.14
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.52
+   "noul": 0.45
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
     "consenso": 1,
-    "especulacao": 0,
-    "controverso": 0
+    "controverso": 0,
+    "emergente": 0,
+    "especulacao": 0
    },
    "confidence": 1
   },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.24
+  },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.24
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.79
+   "noul": 0.38
   },
-  "ambigua_7": {
+  "ia_7": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.53
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.1
   }
  },
- "custo_usd": 0.00629
+ "custo_usd": 0.02279
 }

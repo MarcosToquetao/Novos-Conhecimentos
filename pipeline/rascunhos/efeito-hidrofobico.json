@@ -1,124 +1,151 @@
 {
  "id": "efeito-hidrofobico",
  "tipo": "licao",
- "criado": "2026-09-27T15:45:08",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "criado": "2026-09-27T19:19:57",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 3,
  "licao": {
-  "gancho": "O azeite sobe na água e todos aprendem que as duas se repelem. Mas dissolver metano em água libera calor, e nada que se repele esquenta o outro ao se aproximar.",
+  "gancho": "O azeite sobe na água e todos aprendem que as duas se repelem. Mas dissolver metano em água libera calor, e nada que se repele esquenta o outro ao se aproximar. Esse fenômeno se chama efeito hidrofóbico, e o protagonista não é o óleo: é a água.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Coloque azeite na água: as fases se separam e a fronteira fica nítida. A escola diz que as moléculas apolares e as de água se repelem. Metano e água, porém, se atraem fracamente.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A separação entre óleo e água não vem de repulsão entre as moléculas, mas de um custo que a água impõe ao se reorganizar."
    },
    {
     "tipo": "estimar",
-    "q": "Se a entalpia de hidratação do metano é −11,5 kJ/mol, qual é a energia livre de Gibbs a 25 °C?",
+    "q": "Para dissolver metano em água a 25 °C, a variação de entalpia é de -11,5 kJ/mol. A energia livre total, porém, é de +8,3 kJ/mol. Qual é o custo entrópico (-TΔS) que impede a dissolução?",
     "unidade": "kJ/mol",
-    "min": -20,
-    "max": 20,
+    "min": 0,
+    "max": 50,
     "escala": "linear",
-    "resposta": 8.3,
-    "legenda": "Positiva: a dissolução não acontece sozinha, apesar da entalpia favorável.",
+    "resposta": 19.8,
+    "legenda": "O custo é de +19,8 kJ/mol. A energia liberada não cobre o preço que a água cobra em perda de arranjos.",
     "marca": "consenso",
     "fonte": 7
    },
    {
-    "tipo": "figura",
-    "fig": "hidrofobico-termo",
-    "legenda": "A entalpia é negativa para todos os hidrocarbonetos. A oposição inteira vem do termo −TΔS, grande e positivo.",
-    "marca": "consenso",
-    "fonte": 8
-   },
-   {
     "tipo": "pergunta",
-    "q": "Se a entalpia é favorável, por que o metano não se dissolve?",
+    "q": "Se dissolver metano em água libera calor, por que ele quase não se dissolve?",
     "alts": [
      "Porque as moléculas de água e metano se repelem",
-     "Porque a água ao redor perde arranjos possíveis, e essa perda de entropia supera o ganho de energia",
+     "Porque a perda de entropia da água supera o ganho de energia",
      "Porque a molécula de metano é grande demais para caber entre as moléculas de água"
     ],
     "correta": 1,
-    "porque": "A água contorna o metano mantendo suas ligações, mas em menos orientações. O custo de entropia da água torna o processo desfavorável."
+    "porque": "A água ao redor do metano perde arranjos possíveis. Esse custo de entropia (+19,8 kJ/mol) é maior que o ganho de calor (-11,5 kJ/mol), e o processo não acontece sozinho."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Moléculas de água fazem e desfazem ligações de hidrogênio o tempo todo, explorando muitos arranjos. Essa liberdade é o que está em jogo.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "Molécula apolar na água",
-      "texto": "A água ao redor forma uma camada com orientações restritas."
+      "texto": "A água ao redor se ajeita para manter as ligações, mas com orientações mais restritas. A entropia local diminui."
      },
      {
       "nome": "Duas moléculas apolares se aproximam",
-      "texto": "As camadas restritas se fundem, reduzindo a superfície exposta."
+      "texto": "As camadas restritas se fundem, reduzindo a superfície total exposta à água."
      },
      {
       "nome": "Água é liberada",
-      "texto": "As moléculas de água voltam ao volume e recuperam liberdade de orientação."
+      "texto": "As moléculas de água voltam ao volume do líquido e recuperam sua liberdade de orientação. A entropia total do sistema sobe."
      }
     ],
-    "legenda": "A entropia total sobe: a água empurra as moléculas apolares a se agregarem.",
+    "legenda": "A água empurra as moléculas apolares a se agregarem. O ganho de entropia da água é maior que a perda de entropia do soluto.",
     "marca": "consenso",
     "fonte": 3
    },
    {
-    "tipo": "pontos",
-    "valor": 72,
-    "frase": "mJ/m² é a tensão superficial da água a 25 °C, o custo para criar interface no regime grande.",
-    "legenda": "Para superfícies acima de 1 nm, o custo hidrofóbico se aproxima do produto da área pela tensão superficial.",
+    "tipo": "comparar",
+    "a": "Regime pequeno (abaixo de 1 nm)",
+    "b": "Regime grande (acima de 1 nm)",
+    "linhas": [
+     {
+      "aspecto": "Rede de ligações de H",
+      "a": "preservada, contorna o soluto",
+      "b": "rompida, forma interface"
+     },
+     {
+      "aspecto": "Termo dominante",
+      "a": "entropia (perda de arranjos)",
+      "b": "entalpia (quebra de ligações)"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "metano, gás nobre",
+      "b": "gota de óleo, superfície de proteína"
+     }
+    ],
+    "legenda": "O mecanismo muda com o tamanho. Na escala das proteínas, pedaços de superfície podem estar nos dois regimes ao mesmo tempo.",
     "marca": "consenso",
     "fonte": 4
    },
    {
-    "tipo": "comparar",
-    "a": "Moléculas separadas",
-    "b": "Moléculas juntas",
-    "linhas": [
-     {
-      "aspecto": "Superfície exposta à água",
-      "a": "total das duas",
-      "b": "uma só, menor"
-     },
-     {
-      "aspecto": "Água restrita ao redor",
-      "a": "duas camadas",
-      "b": "uma camada compartilhada"
-     },
-     {
-      "aspecto": "Entropia da água",
-      "a": "baixa",
-      "b": "alta"
-     }
-    ],
-    "legenda": "Juntar as moléculas libera água para o volume, onde ela recupera liberdade de orientação.",
-    "marca": "consenso",
-    "fonte": 3
-   },
-   {
     "tipo": "pergunta",
-    "q": "Por que o efeito hidrofóbico é chamado de força, se não é uma força?",
+    "q": "O que acontece com a camada de água ao redor de duas moléculas apolares quando elas se juntam?",
     "alts": [
-     "Porque é uma atração direta entre moléculas apolares",
-     "Porque é uma energia livre média que depende do solvente e desaparece sem água",
-     "Porque é uma repulsão entre água e soluto"
+     "A camada dobra de tamanho para envolver as duas",
+     "A superfície total diminui e parte da água retorna ao volume, ganhando liberdade",
+     "Nada, porque a água não interage com moléculas apolares"
     ],
     "correta": 1,
-    "porque": "O efeito hidrofóbico é um potencial de força média: uma energia livre efetiva que inclui todas as configurações do solvente. Sem água, ele não existe."
+    "porque": "Juntas, as moléculas compartilham a camada. A água liberada volta a ter muitos arranjos disponíveis, e a entropia total do sistema aumenta."
+   },
+   {
+    "tipo": "figura",
+    "fig": "hidrofobico-termo",
+    "legenda": "Para todos os hidrocarbonetos medidos (metano, etano, butano, benzeno), a entalpia é favorável (barras azuis) e a oposição inteira vem do termo entrópico (barras vermelhas).",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Dobramento de proteínas",
+      "texto": "As partes apolares se escondem no interior, longe da água."
+     },
+     {
+      "nome": "Formação de membranas",
+      "texto": "Lipídios se organizam sozinhos em bicamadas, com as caudas apolares protegidas."
+     },
+     {
+      "nome": "Ação do sabão",
+      "texto": "Detergentes formam micelas que escondem a gordura e mostram apenas a superfície polar."
+     }
+    ],
+    "legenda": "Em todos os casos, é o ganho de entropia da água ao liberar sua camada restrita que dirige o processo.",
+    "marca": "consenso",
+    "fonte": 2
    }
   ],
-  "fecho": "A água é tão estranha que suas ligações de hidrogênio explicam desde o gelo que flutua até o dobramento das proteínas. Vale entender por que ela é assim."
+  "fecho": "A mesma água que empurra o óleo para fora também dobra cada proteína do seu corpo. Esse poder vem das ligações de hidrogênio que ela forma, quebra e reforma o tempo todo."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
  "alertas_jev": [
-  "tela 1: trata de disputa ou evidência contestada (0.85); lição só ensina o núcleo estabelecido",
-  "tela 2: o tipo visual não combina com o conteúdo (0.20); troque de tipo ou use texto",
-  "tela 6: o tipo visual não combina com o conteúdo (0.26); troque de tipo ou use texto"
+  "tela 1: trata de disputa ou evidência contestada (0.77); lição só ensina o núcleo estabelecido",
+  "tela 2: técnico demais para leigo (0.87)",
+  "tela 2: o tipo visual não combina com o conteúdo (0.32); troque de tipo ou use texto",
+  "tela 9: o tipo visual não combina com o conteúdo (0.49); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.94
+  },
   "interesse": {
    "type": "score",
-   "score": 2.88,
+   "score": 3.01,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -128,72 +155,30 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.13,
-    "3": 0.83,
-    "4": 0.03
+    "1": 0,
+    "2": 0.04,
+    "3": 0.9,
+    "4": 0.06
    },
-   "confidence": 0.85
+   "confidence": 0.91
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.35
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.16
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.85
+   "noul": 0.77
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.28
   },
   "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 0.97,
-    "emergente": 0.01,
-    "especulacao": 0.01,
-    "controverso": 0.01
-   },
-   "confidence": 0.97
-  },
-  "disputa_2": {
-   "type": "noul",
-   "noul": 0.4
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.2
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.47
-  },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 0.96,
-    "emergente": 0.02,
-    "especulacao": 0,
-    "controverso": 0.02
-   },
-   "confidence": 0.95
-  },
-  "disputa_3": {
-   "type": "noul",
-   "noul": 0.32
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.07
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.33
-  },
-  "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
@@ -204,64 +189,169 @@
    },
    "confidence": 0.98
   },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.98,
+    "emergente": 0.01,
+    "especulacao": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.97
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.96,
+    "emergente": 0.01,
+    "especulacao": 0,
+    "controverso": 0.03
+   },
+   "confidence": 0.95
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.34
+  },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.18
+   "noul": 0.19
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.92
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.29
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.93,
-    "emergente": 0.05,
+    "consenso": 0.88,
+    "controverso": 0.03,
     "especulacao": 0,
-    "controverso": 0.02
+    "emergente": 0.09
    },
-   "confidence": 0.9
+   "confidence": 0.83
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.58
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.13
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.91
   },
-  "ia_7": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.96
   },
-  "marca_7": {
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "consenso": 0.94,
+    "controverso": 0.04,
     "especulacao": 0,
-    "consenso": 0.99,
-    "emergente": 0,
-    "controverso": 0.01
+    "emergente": 0.02
    },
-   "confidence": 0.99
+   "confidence": 0.92
   },
-  "disputa_7": {
+  "tecnico_8": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.45
   },
-  "encaixe_7": {
+  "disputa_8": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.23
   },
-  "ambigua_8": {
+  "ia_9": {
    "type": "noul",
-   "noul": 0.18
+   "noul": 0.28
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.95,
+    "controverso": 0.04,
+    "especulacao": 0,
+    "emergente": 0.01
+   },
+   "confidence": 0.94
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.49
   }
  },
- "custo_usd": 0.00787
+ "custo_usd": 0.0043
 }

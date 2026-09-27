@@ -1,12 +1,19 @@
 {
  "id": "lentes-gravitacionais",
  "tipo": "licao",
- "criado": "2026-09-27T16:28:55",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:21:43",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Em 1919, durante um eclipse solar, astrônomos viram estrelas perto do Sol parecerem deslocadas. A luz delas tinha sido curvada pela massa do Sol.",
+  "gancho": "Em 1919, durante um eclipse solar, astrônomos viram estrelas perto do Sol parecerem deslocadas. A luz delas tinha sido curvada pela massa do Sol. O fenômeno ganhou nome: lentes gravitacionais.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Um anel de Einstein quase perfeito: a galáxia vermelha no centro distorce a luz da galáxia azul atrás dela. A massa age como uma lente no espaço.",
+    "marca": "consenso",
+    "fonte": 1
+   },
    {
     "tipo": "comparar",
     "a": "Lente ótica",
@@ -29,20 +36,27 @@
    },
    {
     "tipo": "texto",
-    "html": "<p>O Sol age como uma lente: sua massa distorce o espaço-tempo, e a luz das estrelas segue essa curvatura. O desvio aparece perto do disco solar.</p>",
+    "html": "<p>Quando a fonte, a lente e o observador se alinham perfeitamente, a imagem da fonte vira um anel ao redor da lente: o anel de Einstein. Se o alinhamento não é perfeito, vemos arcos ou múltiplas imagens.</p>",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "O que acontece quando a fonte, a lente e o observador estão perfeitamente alinhados?",
+    "q": "Qual destas situações mostra que a distorção vem da lente gravitacional, e não de um defeito da imagem?",
     "alts": [
-     "A imagem da fonte some atrás da lente",
-     "A imagem vira um anel ao redor da lente",
-     "A fonte parece mais próxima"
+     "Uma única galáxia alongada, sem outras por perto",
+     "Vários arcos ao redor de um mesmo aglomerado, todos com o centro apontando para ele",
+     "Uma galáxia com formato de anel, mas sem nenhuma outra galáxia no centro"
     ],
     "correta": 1,
-    "porque": "Esse anel é o anel de Einstein. Se o alinhamento não é perfeito, vemos arcos ou múltiplas imagens."
+    "porque": "Arcos múltiplos e concêntricos mostram que a massa do aglomerado está distorcendo a luz das galáxias de fundo. É a assinatura de uma lente forte."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O aglomerado Abell 1689: cada arco azul é uma galáxia distante cuja luz foi distorcida pela massa do aglomerado. Lente forte em ação.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "comparar",
@@ -52,7 +66,7 @@
      {
       "aspecto": "Efeito visível",
       "a": "anéis, arcos, múltiplas imagens",
-      "b": "distorção de poucos por cento, invisível a olho nu"
+      "b": "distorção de poucos por cento"
      },
      {
       "aspecto": "Como se mede",
@@ -65,45 +79,29 @@
       "b": "distribuição de matéria escura"
      }
     ],
-    "legenda": "Três classes de lente gravitacional, mas aqui contrastamos as duas principais. A microlente se distingue pela variação temporal do brilho, sem distorção de forma.",
+    "legenda": "Duas classes de lente. A forte é visível; a fraca exige estatística. A terceira, microlente, mostra variação de brilho.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "pergunta",
-    "q": "Na microlente, o que o astrônomo observa?",
-    "alts": [
-     "A imagem da fonte se distorce em um arco",
-     "O brilho da fonte muda com o tempo, sem distorção de forma",
-     "Aparecem múltiplas imagens separadas por segundos de arco"
-    ],
-    "correta": 1,
-    "porque": "Na microlente, uma estrela passa na frente de outra e amplifica temporariamente o brilho. Não há distorção de forma, só variação de brilho."
-   },
-   {
-    "tipo": "estimar",
-    "q": "Quantas galáxias o levantamento KiDS-450 usou para medir a lente fraca?",
-    "unidade": "milhões de galáxias",
-    "min": 1,
-    "max": 100,
-    "escala": "log",
-    "resposta": 15,
-    "legenda": "Cerca de 15 milhões de galáxias. Esse número mostra a escala dos levantamentos de lente fraca para extrair um sinal pequeno.",
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Microlente: o brilho da estrela de fundo aumenta e depois diminui, sem distorção de forma. A causadora é uma estrela que passou na frente.",
     "marca": "consenso",
-    "fonte": 6
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Como as lentes gravitacionais ajudam a medir a constante de Hubble?",
+    "q": "Por que as lentes gravitacionais enxergam matéria escura?",
     "alts": [
-     "Pelo desvio da luz da estrela",
-     "Pelo atraso no tempo de chegada entre múltiplas imagens",
-     "Pela distorção do fundo cósmico de micro-ondas"
+     "Porque a matéria escura brilha no infravermelho quando distorcida",
+     "Porque a luz é desviada por toda a massa, e não só pela que brilha",
+     "Porque a matéria escura emite raios-x que a lente concentra"
     ],
     "correta": 1,
-    "porque": "Em 1964, Refsdal mostrou que o atraso entre imagens múltiplas depende da geometria do sistema e da velocidade de expansão do universo. Medir esse atraso dá a constante de Hubble.",
+    "porque": "A curvatura do espaço-tempo depende da massa total, visível e escura. Mapeando a distorção, os astrônomos mapeiam também a matéria que não brilha.",
     "marca": "consenso",
-    "fonte": 4
+    "fonte": 1
    },
    {
     "tipo": "linha_tempo",
@@ -122,7 +120,7 @@
      },
      {
       "ano": 2000,
-      "texto": "Primeira detecção de cisalhamento cósmico por Bacon, Refregier e Ellis"
+      "texto": "Primeira detecção de cisalhamento cósmico"
      }
     ],
     "legenda": "Marcos na história das lentes gravitacionais.",
@@ -134,10 +132,12 @@
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [
-  "tela 6: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto"
- ],
+ "alertas_jev": [],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.96
+  },
   "interesse": {
    "type": "score",
    "score": 2.73,
@@ -159,91 +159,130 @@
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.28
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
     "especulacao": 0,
+    "controverso": 0,
     "emergente": 0,
-    "controverso": 0
+    "consenso": 1
    },
-   "confidence": 0.99
+   "confidence": 1
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.08
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.95
+   "noul": 0.04
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.42
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
-    "emergente": 0,
+    "especulacao": 0,
     "controverso": 0,
-    "especulacao": 0
+    "emergente": 0,
+    "consenso": 1
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.05
-  },
-  "ambigua_3": {
-   "type": "noul",
    "noul": 0.07
   },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.34
-  },
-  "marca_4": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 1,
-    "emergente": 0,
-    "controverso": 0,
-    "especulacao": 0
-   },
-   "confidence": 1
-  },
-  "disputa_4": {
-   "type": "noul",
-   "noul": 0.05
-  },
-  "encaixe_4": {
+  "encaixe_2": {
    "type": "noul",
    "noul": 0.95
   },
-  "ambigua_5": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.29
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.75
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.04
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.35
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.99,
+    "consenso": 1,
+    "controverso": 0,
     "especulacao": 0,
-    "emergente": 0.01,
-    "controverso": 0
+    "emergente": 0
    },
-   "confidence": 0.98
+   "confidence": 1
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.24
   },
   "disputa_6": {
    "type": "noul",
@@ -251,35 +290,70 @@
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.94
   },
-  "ambigua_7": {
+  "ia_7": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.24
   },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.28
-  },
-  "marca_8": {
+  "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
+    "consenso": 1,
     "controverso": 0,
     "especulacao": 0,
-    "consenso": 0.99
+    "emergente": 0
    },
-   "confidence": 0.98
+   "confidence": 1
   },
-  "disputa_8": {
+  "tecnico_7": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.12
   },
-  "encaixe_8": {
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.65
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.99,
+    "controverso": 0,
+    "especulacao": 0,
+    "emergente": 0.01
+   },
+   "confidence": 0.99
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_9": {
    "type": "noul",
    "noul": 0.96
   }
  },
- "custo_usd": 0.00724
+ "custo_usd": 0.00196
 }

@@ -1,9 +1,9 @@
 {
  "id": "reduflacao",
  "tipo": "licao",
- "criado": "2026-09-27T18:20:26",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:23:10",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
   "gancho": "Você compra o mesmo creme de sempre, paga o preço de sempre, e o pote acaba antes do fim do mês. No supermercado nada mudou, mas a embalagem encolheu. Isso é reduflação: o preço por quilo sobe sem que a etiqueta anuncie.",
   "telas": [
@@ -15,26 +15,33 @@
     "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Isso é <strong>reduflação</strong>: a empresa diminui a quantidade do produto e mantém ou aumenta o preço. O número na etiqueta mal muda, mas o preço por quilo sobe.</p>",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Se o preço na etiqueta não mudou, o produto ficou mais barato?",
-    "alts": [
-     "Sim, o preço é o mesmo, então não houve aumento",
-     "Não: a embalagem menor faz o preço por quilo ou litro subir, mesmo com a etiqueta igual",
-     "Só se o governo obrigar a avisar na embalagem"
-    ],
-    "correta": 1,
-    "porque": "A comparação certa é o preço por unidade de peso ou volume. Um pacote menor pelo mesmo preço significa mais caro por quilo."
-   },
-   {
     "tipo": "foto",
     "foto": 1,
-    "legenda": "Frascos do mesmo tamanho, mas o antigo trazia 100 cápsulas e o novo traz 90. A diferença passa despercebida.",
+    "legenda": "Frascos do mesmo tamanho. O antigo trazia 100 cápsulas, o novo traz 90. A diferença passa despercebida.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Custos sobem",
+      "texto": "O trigo, o frete ou a energia ficam mais caros para a empresa."
+     },
+     {
+      "nome": "Subir preço é arriscado",
+      "texto": "Num mercado competitivo, o cliente pode trocar de marca se a etiqueta subir."
+     },
+     {
+      "nome": "Embalagem encolhe",
+      "texto": "A empresa reduz as gramas ou os mililitros e mantém o preço da etiqueta."
+     },
+     {
+      "nome": "Preço por quilo sobe",
+      "texto": "O índice da prateleira fica igual, mas o custo real para o consumidor aumenta."
+     }
+    ],
+    "legenda": "A empresa repassa o aumento de custo, mas não pelo número grande que todo mundo vê.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -62,6 +69,17 @@
     "legenda": "As duas elevam o preço por unidade, mas só uma aparece no número da etiqueta.",
     "marca": "consenso",
     "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Se o preço na etiqueta não mudou, o produto ficou mais barato?",
+    "alts": [
+     "Sim, o preço é o mesmo, então não houve aumento",
+     "Não: a embalagem menor faz o preço por quilo ou litro subir, mesmo com a etiqueta igual",
+     "Só se o governo obrigar a avisar na embalagem"
+    ],
+    "correta": 1,
+    "porque": "A comparação certa é o preço por unidade de peso ou volume. Um pacote menor pelo mesmo preço significa mais caro por quilo."
    },
    {
     "tipo": "comparar",
@@ -98,13 +116,41 @@
     ],
     "correta": 1,
     "porque": "A reduflação diminui o tamanho ou a quantidade do produto. A skimpflation diminui a qualidade ou o conteúdo, mantendo o preço."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Compra",
+      "texto": "O consumidor compra o pacote de sempre, confiando no preço e na aparência."
+     },
+     {
+      "nome": "Uso",
+      "texto": "Em casa, o produto acaba mais rápido. A mudança é pequena demais para notar na prateleira."
+     },
+     {
+      "nome": "Descoberta",
+      "texto": "O consumidor percebe a diferença e sente desconfiança e insatisfação."
+     },
+     {
+      "nome": "Reação",
+      "texto": "Parte dos consumidores troca de marca; outros deixam de comprar."
+     }
+    ],
+    "legenda": "O consumidor descobre a reduflação pelo bolso, não pelo olho.",
+    "marca": "consenso",
+    "fonte": 5
    }
   ],
   "fecho": "A reduflação é um aumento de preço escondido. Entender como a inflação comum se mede, e por que ela não capta esse truque, é o próximo passo."
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 3: soa como IA (0.54)",
+  "tela 8: soa como IA (0.51)",
+  "tela 8: marcada consenso, JEV diz especulacao (0.75)"
+ ],
  "jev": {
   "gancho_diz": {
    "type": "noul",
@@ -112,7 +158,7 @@
   },
   "interesse": {
    "type": "score",
-   "score": 2.97,
+   "score": 3.01,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -123,150 +169,146 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.06,
-    "3": 0.91,
-    "4": 0.03
+    "2": 0.03,
+    "3": 0.93,
+    "4": 0.04
    },
-   "confidence": 0.93
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.25
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.64,
-    "emergente": 0.04,
     "controverso": 0.01,
-    "especulacao": 0.31
+    "consenso": 0.62,
+    "especulacao": 0.33,
+    "emergente": 0.04
    },
-   "confidence": 0.52
+   "confidence": 0.5
   },
   "tecnico_1": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.06
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.18
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.85
+   "noul": 0.16
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.44
+   "noul": 0.25
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.98,
-    "emergente": 0.01,
-    "controverso": 0,
-    "especulacao": 0.01
+    "controverso": 0.01,
+    "consenso": 0.57,
+    "especulacao": 0.39,
+    "emergente": 0.03
    },
-   "confidence": 0.96
+   "confidence": 0.43
   },
   "tecnico_2": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.06
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.12
   },
-  "respondivel_3": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.54
   },
-  "obvia_3": {
-   "type": "noul",
-   "noul": 0.31
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "consenso": 0.68,
+    "especulacao": 0.29,
+    "emergente": 0.02
+   },
+   "confidence": 0.57
   },
-  "ambigua_3": {
+  "tecnico_3": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.12
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.91
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.45
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.58,
-    "emergente": 0.04,
-    "controverso": 0.01,
-    "especulacao": 0.37
+    "controverso": 0.02,
+    "consenso": 0.93,
+    "especulacao": 0.03,
+    "emergente": 0.02
    },
-   "confidence": 0.44
+   "confidence": 0.9
   },
   "tecnico_4": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.12
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.23
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.83
+   "noul": 0.95
   },
-  "ia_5": {
+  "respondivel_5": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.96
   },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.04,
-    "emergente": 0.03,
-    "consenso": 0.91,
-    "especulacao": 0.02
-   },
-   "confidence": 0.88
-  },
-  "tecnico_5": {
+  "obvia_5": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.29
   },
-  "disputa_5": {
+  "ambigua_5": {
    "type": "noul",
-   "noul": 0.23
-  },
-  "encaixe_5": {
-   "type": "noul",
-   "noul": 0.94
+   "noul": 0.08
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.35
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.03,
-    "emergente": 0.14,
     "consenso": 0.54,
-    "especulacao": 0.29
+    "especulacao": 0.33,
+    "controverso": 0.02,
+    "emergente": 0.11
    },
    "confidence": 0.38
   },
   "tecnico_6": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.08
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.11
   },
   "encaixe_6": {
    "type": "noul",
@@ -274,16 +316,43 @@
   },
   "respondivel_7": {
    "type": "noul",
-   "noul": 0.89
+   "noul": 0.91
   },
   "obvia_7": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.21
   },
   "ambigua_7": {
    "type": "noul",
    "noul": 0.1
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "especulacao",
+   "probabilities": {
+    "consenso": 0.17,
+    "especulacao": 0.75,
+    "controverso": 0.01,
+    "emergente": 0.07
+   },
+   "confidence": 0.67
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.93
   }
  },
- "custo_usd": 0.01172
+ "custo_usd": 0.00192
 }

@@ -1,85 +1,77 @@
 {
  "id": "reconsolidacao",
  "tipo": "licao",
- "criado": "2026-09-27T15:47:28",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "criado": "2026-09-27T19:23:23",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 3,
  "licao": {
-  "gancho": "Um rato já tinha aprendido a temer um som. Dias depois, os cientistas tocaram o som de novo e, logo em seguida, bloquearam a produção de proteínas no cérebro dele. O medo sumiu. O mesmo bloqueio, sem tocar o som antes, não mudou nada.",
+  "gancho": "Um rato já tinha aprendido a temer um som. Dias depois, os cientistas tocaram o som de novo e, logo em seguida, bloquearam a produção de proteínas no cérebro dele. O medo sumiu. O mesmo bloqueio, sem tocar o som antes, não mudou nada. Esse fenômeno se chama reconsolidação: a descoberta de que o ato de lembrar reabre uma janela temporária que torna a memória vulnerável a alterações.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Câmara de condicionamento onde ratos aprendem a associar um som a um choque. Foi nesse tipo de ambiente que surgiu a evidência da reconsolidação."
+   },
    {
     "tipo": "etapas",
     "etapas": [
      {
       "nome": "Memória nova",
-      "texto": "Frágil e instável logo depois de formada."
+      "texto": "Frágil e instável logo depois de formada, por algumas horas."
      },
      {
       "nome": "Consolidação",
-      "texto": "Em algumas horas, estabiliza e vira duradoura."
+      "texto": "Fica estável e duradoura. O modelo clássico parava aqui."
      },
      {
       "nome": "Reativação",
-      "texto": "Lembrar reabre uma janela de instabilidade por algumas horas."
+      "texto": "Lembrar reabre uma janela de instabilidade que dura horas."
      },
      {
       "nome": "Reconsolidação",
-      "texto": "A memória precisa ser fixada de novo para permanecer estável."
+      "texto": "Exige uma nova síntese de proteínas para a memória voltar ao estado estável."
      }
     ],
-    "legenda": "Lembrar não é leitura neutra: torna a memória temporariamente instável.",
+    "legenda": "Lembrar não é abrir um livro: é reescrevê-lo. A cada reativação, a memória precisa ser fixada de novo.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "comparar",
-    "a": "Sem reativar",
-    "b": "Reativando antes",
+    "a": "Bloqueio sem reativar",
+    "b": "Bloqueio após reativar",
     "linhas": [
      {
-      "aspecto": "Bloqueio de proteínas",
-      "a": "a memória permanece intacta",
-      "b": "a memória praticamente desaparece"
+      "aspecto": "Ação",
+      "a": "Inibir a síntese de proteínas em repouso",
+      "b": "Inibir a síntese de proteínas logo depois de tocar o som"
      },
      {
-      "aspecto": "Momento",
-      "a": "sem o som antes",
-      "b": "som tocado imediatamente antes"
+      "aspecto": "Resultado",
+      "a": "A memória de medo permanece intacta",
+      "b": "A memória de medo praticamente desaparece"
      }
     ],
-    "legenda": "Em ratos, bloquear a síntese de proteínas na amígdala só afeta a memória se ela for reativada antes.",
+    "legenda": "O simples ato de lembrar torna a memória vulnerável a interferências que antes não surtiam efeito.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Qual foi a condição necessária para o bloqueio de proteínas apagar a memória de medo dos ratos?",
+    "q": "Qual foi a condição necessária para o bloqueio de proteínas enfraquecer a memória de medo dos ratos?",
     "alts": [
-     "O bloqueio precisava ser feito logo depois do choque, antes da consolidação",
-     "A memória precisava ser reativada com o som imediatamente antes do bloqueio",
-     "O bloqueio precisava ser repetido todos os dias por várias semanas"
+     "O bloqueio foi feito logo depois do choque, antes da consolidação inicial",
+     "A memória foi reativada com o som imediatamente antes do bloqueio",
+     "O bloqueio foi repetido diariamente por várias semanas"
     ],
     "correta": 1,
-    "porque": "Se o bloqueio fosse feito sem reativar a memória, nada acontecia. Só a combinação de lembrar e bloquear proteínas abria a janela para interferir.",
+    "porque": "Se o bloqueio fosse feito dias depois, sem tocar o som, a memória ficava intacta. Só a combinação de reativação e bloqueio abria a janela de interferência.",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Nenhum inibidor de síntese proteica como o usado em ratos é seguro para pessoas. A adaptação clínica usa o <strong>propranolol</strong>, um beta-bloqueador já aprovado, que bloqueia receptores adrenérgicos envolvidos na carga emocional da memória.</p>",
-    "marca": "consenso",
-    "fonte": 4
-   },
-   {
-    "tipo": "pergunta",
-    "q": "No ensaio clínico de Brunet e colegas, o que mudou nos pacientes tratados com propranolol antes de reativar a memória traumática?",
-    "alts": [
-     "Eles esqueceram os fatos do que aconteceu",
-     "Eles continuaram lembrando os fatos, mas com menos sofrimento emocional ao recordar",
-     "Eles deixaram de sentir medo em qualquer situação nova"
-    ],
-    "correta": 1,
-    "porque": "O tratamento afeta principalmente a carga emocional associada à lembrança, não o conteúdo factual. Os pacientes ainda sabem o que aconteceu, mas relatam menos angústia fisiológica e psicológica.",
-    "fonte": 2
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O propranolol, um beta-bloqueador já aprovado para pressão alta, é a adaptação clínica segura que interfere na reconsolidação da carga emocional da memória."
    },
    {
     "tipo": "comparar",
@@ -88,48 +80,64 @@
     "linhas": [
      {
       "aspecto": "Intervenção",
-      "a": "anisomicina na amígdala",
-      "b": "propranolol antes de reativar a memória"
+      "a": "Bloqueio direto de síntese proteica na amígdala",
+      "b": "Comprimido de propranolol antes da sessão"
      },
      {
-      "aspecto": "Efeito",
-      "a": "resposta de medo praticamente desaparece",
-      "b": "redução da carga emocional da lembrança"
-     },
-     {
-      "aspecto": "O que permanece",
-      "a": "a associação som-choque some",
-      "b": "o conteúdo factual da memória continua"
+      "aspecto": "Resultado",
+      "a": "Resposta de medo condicionada desaparece",
+      "b": "Redução significativa dos sintomas de estresse pós-traumático (TEPT)"
      }
     ],
-    "legenda": "O mecanismo é o mesmo: interferir na reconsolidação durante a janela aberta pela reativação.",
+    "legenda": "O princípio é o mesmo: interferir na janela de reconsolidação aberta pela reativação deliberada da memória alvo.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "pontos",
-    "valor": 60,
-    "frase": "adultos com TEPT de longa duração participaram do ensaio clínico randomizado de Brunet e colegas.",
-    "legenda": "O grupo que recebeu propranolol antes da reativação teve redução significativa dos sintomas, comparado ao placebo.",
-    "marca": "consenso",
-    "fonte": 2
+    "tipo": "pergunta",
+    "q": "O que mudou nos pacientes tratados com propranolol no ensaio de Brunet e colegas?",
+    "alts": [
+     "Eles esqueceram os fatos do que aconteceu no trauma",
+     "Perderam a capacidade de sentir medo em situações futuras",
+     "Continuaram lembrando os fatos, mas com menos sofrimento ao recordar"
+    ],
+    "correta": 2,
+    "porque": "O protocolo afeta a carga emocional da lembrança específica que foi reativada. O paciente sabe o que aconteceu, mas a angústia fisiológica ao recordar diminui.",
+    "fonte": 5
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que as meta-análises de ensaios clínicos mostram sobre o efeito do propranolol na reconsolidação?",
+    "alts": [
+     "O efeito é idêntico ao observado em ratos de laboratório",
+     "Mostram um efeito real de redução de sintomas, mas de magnitude variável entre estudos",
+     "Não encontraram nenhum efeito significativo em humanos"
+    ],
+    "correta": 1,
+    "porque": "A evidência é positiva, mas a magnitude do efeito é sensível a detalhes do protocolo, como o momento exato da reativação e da administração da droga.",
+    "fonte": 3
    }
   ],
   "fecho": "Se lembrar reabre a memória para ser reescrita, o que acontece quando a lembrança é ativada e depois testada várias vezes? Isso se chama efeito de teste, e tem a ver com o próximo conceito do acervo."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras",
+  "tela 8: duas perguntas seguidas"
+ ],
  "alertas_jev": [
-  "tela 1: soa como IA (0.55)",
-  "tela 4: marcada consenso, JEV diz emergente (0.68)",
-  "tela 6: marcada consenso, JEV diz emergente (0.79)",
-  "tela 7: marcada consenso, JEV diz emergente (0.85)",
-  "tela 7: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto"
+  "tela 6: marcada consenso, JEV diz emergente (0.88)",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.43)",
+  "tela 8: a pergunta depende de algo que a lição ainda não mostrou (0.08)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 3,
+   "score": 3.03,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -140,131 +148,153 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.05,
-    "3": 0.91,
-    "4": 0.04
+    "2": 0.02,
+    "3": 0.93,
+    "4": 0.05
    },
-   "confidence": 0.92
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.55
+   "noul": 0.29
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0.05,
-    "controverso": 0.06,
-    "especulacao": 0,
-    "consenso": 0.89
-   },
-   "confidence": 0.86
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.12
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.9
+   "noul": 0.08
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.48
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.03,
-    "controverso": 0.01,
-    "especulacao": 0,
-    "consenso": 0.96
+    "emergente": 0.05,
+    "controverso": 0.06,
+    "consenso": 0.89,
+    "especulacao": 0
    },
-   "confidence": 0.94
+   "confidence": 0.84
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.19
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.18
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.92
   },
-  "ambigua_3": {
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.07,
+    "controverso": 0.04,
+    "consenso": 0.89,
+    "especulacao": 0
+   },
+   "confidence": 0.85
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.97
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "ambigua_4": {
    "type": "noul",
    "noul": 0.05
   },
-  "ia_4": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.48
   },
-  "marca_4": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "emergente": 0.68,
-    "controverso": 0.1,
-    "especulacao": 0,
-    "consenso": 0.22
-   },
-   "confidence": 0.56
-  },
-  "disputa_4": {
+  "tecnico_5": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.23
   },
-  "ambigua_5": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.17
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.4
   },
   "marca_6": {
    "type": "choice",
    "choice": "emergente",
    "probabilities": {
-    "emergente": 0.79,
-    "controverso": 0.12,
-    "especulacao": 0.01,
-    "consenso": 0.08
+    "emergente": 0.88,
+    "especulacao": 0,
+    "consenso": 0.02,
+    "controverso": 0.1
    },
-   "confidence": 0.73
+   "confidence": 0.85
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.23
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.16
   },
   "encaixe_6": {
    "type": "noul",
    "noul": 0.94
   },
-  "ia_7": {
+  "respondivel_7": {
    "type": "noul",
    "noul": 0.43
   },
-  "marca_7": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "emergente": 0.85,
-    "controverso": 0.14,
-    "especulacao": 0,
-    "consenso": 0.01
-   },
-   "confidence": 0.81
-  },
-  "disputa_7": {
+  "obvia_7": {
    "type": "noul",
-   "noul": 0.13
+   "noul": 0.38
   },
-  "encaixe_7": {
+  "ambigua_7": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.1
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.18
   }
  },
- "custo_usd": 0.0068
+ "custo_usd": 0.00639
 }

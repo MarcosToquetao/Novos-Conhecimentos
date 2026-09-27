@@ -1,15 +1,16 @@
 {
  "id": "perspectiva-renascimento",
  "tipo": "licao",
- "criado": "2026-09-27T16:29:17",
- "modelo": "deepseek-flash",
+ "criado": "2026-09-27T19:22:21",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Você olha um quadro do século XV e tem a impressão de ver uma praça através de uma janela. As pedras do chão recuam, as casas encolhem. Essa sensação não é natural: foi construída com régua e compasso.",
+  "gancho": "Você olha um quadro do século XV e tem a impressão de ver uma praça através de uma janela. As pedras do chão recuam, as casas encolhem e todas as linhas fogem para um ponto no horizonte. Essa sensação não é natural: foi construída com régua e compasso, usando um método chamado perspectiva linear.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>A <strong>perspectiva linear</strong> é um método geométrico para representar profundidade numa superfície plana. Linhas paralelas convergem para um ponto de fuga na linha do horizonte.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Pintura do século XV de uma praça urbana. As linhas do chão e dos edifícios convergem para um ponto de fuga, criando a ilusão de profundidade."
    },
    {
     "tipo": "estimar",
@@ -19,44 +20,9 @@
     "max": 10,
     "escala": "linear",
     "resposta": 0.5,
-    "legenda": "Metade. Essa relação óptica é a base de todo o sistema.",
+    "legenda": "Metade. Essa relação óptica simples é a base de todo o sistema.",
     "marca": "consenso",
     "fonte": 2
-   },
-   {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "Alhazen, ano 1000",
-      "texto": "Demonstra que a luz se projeta em forma cônica no olho."
-     },
-     {
-      "nome": "Brunelleschi, 1415-1420",
-      "texto": "Em Florença, usa um espelho para comparar pintura e edifício real."
-     },
-     {
-      "nome": "Alberti, 1435",
-      "texto": "Publica Della Pittura e explica o método com triângulos semelhantes."
-     },
-     {
-      "nome": "Piero della Francesca, c. 1474",
-      "texto": "Em De Prospectiva Pingendi, mostra como representar sólidos em qualquer posição."
-     }
-    ],
-    "legenda": "A técnica nasceu de uma base óptica e foi codificada por artistas e matemáticos.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que a mesa redonda, vista de lado, parece uma elipse achatada?",
-    "alts": [
-     "Porque o artista escolheu distorcer a forma",
-     "Por causa do escorço: a redução das dimensões na direção da linha de visão",
-     "Porque a mesa está longe e perde detalhes"
-    ],
-    "correta": 1,
-    "porque": "O escorço é o que faz o espaço pictórico parecer contínuo. Sem ele, as figuras pareceriam recortadas e flutuantes."
    },
    {
     "tipo": "comparar",
@@ -79,52 +45,92 @@
       "b": "espaço contínuo e mensurável"
      }
     ],
-    "legenda": "A técnica mudou a própria ideia de imagem.",
+    "legenda": "A técnica não só melhorou o desenho: ela mudou a própria ideia do que uma imagem pode ser.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "curva",
-    "forma": "linear",
-    "eixo_x": "distância",
-    "eixo_y": "tamanho na imagem",
-    "marco": {
-     "x": 0.5,
-     "rotulo": "dobro da distância, metade do tamanho"
-    },
-    "legenda": "A relação entre distância e tamanho aparente é a base do método.",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Alhazen, ano 1000",
+      "texto": "Demonstra que a luz se projeta em forma cônica no olho humano."
+     },
+     {
+      "nome": "Brunelleschi, 1415-1420",
+      "texto": "Em Florença, usa um espelho para comparar sua pintura com o edifício real."
+     },
+     {
+      "nome": "Alberti, 1435",
+      "texto": "Publica Della Pittura e explica o método com triângulos semelhantes."
+     },
+     {
+      "nome": "Piero della Francesca, c. 1474",
+      "texto": "Em De Prospectiva Pingendi, mostra como representar sólidos em qualquer posição."
+     }
+    ],
+    "legenda": "A técnica nasceu de uma base óptica e foi codificada por artistas e matemáticos ao longo de quatro séculos.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "A Catedral de Florença, cidade onde Brunelleschi demonstrou o método. A compreensão da geometria permitiu construir a cúpula e pintar o espaço com a mesma lógica."
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a perspectiva linear funciona melhor vista de um ponto específico?",
+    "q": "O que é o escorço e por que ele é essencial para a perspectiva?",
     "alts": [
-     "Porque o quadro foi pintado para ser visto de qualquer ângulo",
-     "Porque o cérebro corrige automaticamente qualquer desvio",
-     "Porque pequenos desvios do centro de projeção produzem distorções perceptíveis"
+     "É uma técnica de sombreamento para dar volume aos objetos",
+     "É a redução das dimensões de um objeto na direção da linha de visão, que faz o espaço parecer contínuo",
+     "É o nome dado ao ponto de fuga principal de uma pintura"
     ],
-    "correta": 2,
-    "porque": "Estudos mostram que a hipótese de que o cérebro compensa o ponto de vista não se confirmou. A percepção sofre transformações previsíveis quando o observador se move."
+    "correta": 1,
+    "porque": "O escorço faz uma mesa redonda parecer uma elipse quando vista de lado. Sem ele, as figuras pareceriam recortadas e flutuantes, como em muitas pinturas medievais."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Bebês de 5 mese e de 7 mese reagem do mesmo jeito à profundidade em uma pintura?",
+    "alts": [
+     "Sim, a percepção de profundidade já nasce pronta",
+     "Não, bebês de 7 meses já reagem a pistas de profundidade, mas os de 5 não",
+     "Não, bebês de 5 mese são mais sensíveis do que os de 7"
+    ],
+    "correta": 1,
+    "porque": "A capacidade de usar informações como perspectiva linear e gradientes de textura se desenvolve por volta dos 7 meses. Aos 5 meses, essa sensibilidade ainda não apareçe."
+   },
+   {
+    "tipo": "foto",
+    "foto": 4,
+    "legneda": "Pintura da montanha Sainte-Victoire de Paul Cézanne. Ele frequentemente desafiava as regras da perspectiva tadiciona, alterando o ponto de vista durate a pintura."
    },
    {
     "tipo": "texto",
-    "html": "<p>Artistas nem sempre seguem as regras ao pé da letra. Cézanne mudava o ponto de vista durante a pintura. Em paisagens, a parte central costuma aparecer ampliada e a periférica comprimida, comparadas a uma foto da mesma cena.</p>"
+    "html": "<p>Esttudos comparam pinturas de paisagens com fotos das mesmas cenas e encontram diferenças: na obra, a parte central do campo visual costuma aparcer ampliada e a periférica comprimida.</p>"
    }
   ],
   "fecho": "Como uma pintura consegue enganar o olho a ponto de parecer um objeto real? Isso tem nome: trompe-l'œil."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "gancho com mais de 45 palavras",
+  "tela 7: duas perguntas seguidas"
+ ],
  "alertas_jev": [
-  "tela 1: soa como IA (0.53)",
-  "tela 2: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto",
-  "tela 6: o tipo visual não combina com o conteúdo (0.43); troque de tipo ou use texto"
+  "tela 2: o tipo visual não combina com o conteúdo (0.32); troque de tipo ou use texto",
+  "tela 6: a pergunta depende de algo que a lição ainda não mostrou (0.45)",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.05)",
+  "tela 9: soa como IA (0.57)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 2.97,
+   "score": 2.95,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -135,34 +141,42 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.05,
-    "3": 0.94,
+    "2": 0.06,
+    "3": 0.93,
     "4": 0.01
    },
-   "confidence": 0.95
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.53
+   "noul": 0.36
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.05
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.39
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "consenso": 1,
+    "controverso": 0,
     "emergente": 0,
-    "controverso": 0
+    "consenso": 1,
+    "especulacao": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.23
   },
   "disputa_2": {
    "type": "noul",
@@ -170,93 +184,122 @@
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.32
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.48
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.01,
-    "consenso": 0.97,
-    "emergente": 0,
-    "controverso": 0.02
+    "controverso": 0.06,
+    "emergente": 0.02,
+    "consenso": 0.78,
+    "especulacao": 0.14
    },
-   "confidence": 0.95
+   "confidence": 0.7
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.08
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.91
   },
-  "ambigua_4": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.3
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.07,
+    "emergente": 0.01,
+    "consenso": 0.88,
+    "especulacao": 0.04
+   },
+   "confidence": 0.84
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.96
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.37
   },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.15,
-    "consenso": 0.79,
-    "emergente": 0.01,
-    "controverso": 0.05
-   },
-   "confidence": 0.73
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.06
   },
-  "encaixe_5": {
+  "respondivel_6": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.45
   },
-  "ia_6": {
+  "obvia_6": {
    "type": "noul",
-   "noul": 0.49
+   "noul": 0.41
   },
-  "marca_6": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0,
-    "controverso": 0
-   },
-   "confidence": 1
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.13
   },
-  "disputa_6": {
+  "respondivel_7": {
    "type": "noul",
    "noul": 0.05
   },
-  "encaixe_6": {
+  "obvia_7": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.32
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.27
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.28
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.26
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.24
   }
  },
- "custo_usd": 0.00671
+ "custo_usd": 0.00314
 }

@@ -1,139 +1,157 @@
 {
  "id": "dunning-kruger",
  "tipo": "licao",
- "criado": "2026-09-27T15:44:20",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "criado": "2026-09-27T19:19:27",
+ "modelo": "reaproveitada+deepseek-v4-pro+editor",
+ "rodadas": 3,
  "licao": {
-  "gancho": "Você já viu o gráfico: a linha da confiança sobe até um pico chamado 'Monte Estúpido', despenca e sobe devagar. Esse gráfico não está em nenhum artigo científico. Foi desenhado por um consultor em 2014.",
+  "gancho": "Por que pessoas que acabaram de fazer uma prova de raciocínio e foram mal costumam achar que foram bem? Em 1999, dois psicólogos testaram essa intuição com quatro experimentos simples e descobriram algo mais específico do que a internet repete.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>O efeito Dunning-Kruger virou piada de internet, mas o estudo original de 1999 não mediu o que a fama diz. Ele comparou médias de grupos, não pessoas.</p>"
-   },
-   {
-    "tipo": "estimar",
-    "q": "No estudo original, quem ficou no quartil de pior desempenho estimou estar em qual percentil, em média?",
-    "unidade": "percentil",
-    "min": 0,
-    "max": 100,
-    "escala": "linear",
-    "resposta": 58,
-    "legenda": "O grupo mais fraco se achava na média (percentil 58). Ninguém se achava gênio.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "comparar",
-    "a": "Quartil inferior",
-    "b": "Quartil superior",
-    "linhas": [
-     {
-      "aspecto": "Desempenho real (estudo de humor)",
-      "a": "percentil 12",
-      "b": "percentil 88"
-     },
-     {
-      "aspecto": "Autoavaliação média",
-      "a": "percentil 58",
-      "b": "percentil 62"
-     },
-     {
-      "aspecto": "Erro",
-      "a": "superestimou muito",
-      "b": "subestimou pouco"
-     }
-    ],
-    "legenda": "Nenhum grupo, em média, se estimou acima do percentil 74.",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Desafios visuais como este, de um teste de inteligência fluida (Matrizes Progressivas de Raven), são um dos caminhos que a psicologia usa para medir raciocínio abstrato, parecido com o que Kruger e Dunning avaliaram."
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
-      "nome": "Medir duas coisas",
-      "texto": "desempenho real e autoavaliação de cada pessoa"
+      "nome": "Todo mundo faz o teste",
+      "texto": "Estudantes de Cornell fizeram provas de humor, lógica e gramática."
      },
      {
-      "nome": "Dividir em quartis",
-      "texto": "grupos do pior ao melhor desempenho"
+      "nome": "Cada um se autoavalia",
+      "texto": "Depois, estimaram quantas questões acertaram e em que percentil ficaram."
      },
      {
-      "nome": "Comparar médias",
-      "texto": "autoavaliação média dentro de cada grupo"
+      "nome": "Grupos por desempenho",
+      "texto": "Os pesquisadores dividiram os participantes em quatro grupos, do pior ao melhor desempenho real."
+     },
+     {
+      "nome": "Médias revelam o padrão",
+      "texto": "Compararam a média de autoavaliação de cada grupo com o desempenho real médio do grupo."
      }
     ],
-    "legenda": "Esse desenho pode criar o padrão mesmo sem nenhuma psicologia envolvida.",
+    "legenda": "O efeito Dunning-Kruger surgiu da comparação da média de autoavaliação de quatro grupos, e não de um gráfico contínuo.",
     "marca": "consenso",
-    "fonte": 5
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Desempenho real (quartil inferior)",
+    "b": "Desempenho que o grupo estimou",
+    "linhas": [
+     {
+      "aspecto": "Estudo de humor",
+      "a": "percentil 12",
+      "b": "percentil 58"
+     },
+     {
+      "aspecto": "Estudo de lógica",
+      "a": "percentil 12",
+      "b": "percentil 68"
+     },
+     {
+      "aspecto": "Estudo de gramática",
+      "a": "percentil 10",
+      "b": "percentil 67"
+     }
+    ],
+    "legenda": "Em média, quem foi mal superestimou o próprio desempenho, mas ninguém se achou brilhante: as estimativas ficaram perto da média.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Por que dados totalmente aleatórios produzem o mesmo padrão de 'os piores se superestimam'?",
+    "q": "Por que é importante saber que o estudo original comparou médias de grupos, e não pessoas individuais?",
     "alts": [
-     "Porque o computador simula personalidades humanas",
-     "Porque erro de medição e regressão à média criam esse padrão sozinhos",
-     "Porque as pessoas nos dados aleatórios são incompetentes de verdade"
+     "Porque é ilegal avaliar uma pessoa por vez em psicologia",
+     "Porque padrões que aparecem em médias de grupo nem sempre valem para cada pessoa do grupo",
+     "Porque os computadores de 1999 não conseguiam fazer gráficos de dispersão"
     ],
     "correta": 1,
-    "porque": "Quando você seleciona os extremos de uma medida imperfeita e compara com outra medida correlacionada, os extremos regridem à média. É pura estatística.",
-    "marca": "consenso",
-    "fonte": 5
+    "porque": "Um padrão nas médias dos quartis (os de baixo superestimam, os de cima subestimam) não prova que *todas* as pessoas incompetentes se superestimam. É um erro comum de interpretação."
    },
    {
-    "tipo": "camadas",
-    "camadas": [
+    "tipo": "texto",
+    "html": "<p>No estudo original, nenhum grupo se colocou acima do percentil 74. O grupo mais fraco não se achou genial: achou que estava na média.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Participantes com baixo desempenho",
+    "b": "Participantes com alto desempenho",
+    "linhas": [
      {
-      "nome": "Superfície",
-      "nota": "muito oxigênio, células se dividindo"
+      "aspecto": "Base para se autoavaliar",
+      "a": "Não sabem o que estão errando",
+      "b": "Sabem os atalhos que usaram para acertar"
      },
      {
-      "nome": "Meio",
-      "nota": "menos oxigênio, crescimento lento"
-     },
-     {
-      "nome": "Fundo",
-      "nota": "quase sem oxigênio, células quase paradas"
+      "aspecto": "Efeito na estimativa",
+      "a": "Superestimam o próprio percentil",
+      "b": "Subestimam levemente o próprio percentil"
      }
     ],
-    "eixo": {
-     "topo": "mais oxigênio",
-     "base": "menos oxigênio"
-    },
-    "legenda": "Muitos antibióticos atacam células em divisão. As do fundo quase não se dividem e passam ilesas.",
+    "legenda": "A explicação original é um 'déficit duplo': errar a tarefa e errar ao não perceber que está errando.",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Qual é a leitura mais defensável hoje sobre o efeito Dunning-Kruger?",
+    "q": "No Estudo 3, os participantes puderam corrigir provas de colegas. O que aconteceu com a autoavaliação de quem tinha ido mal?",
     "alts": [
-     "O efeito não existe, é só erro estatístico",
-     "Existe um viés metacognitivo real, mas bem menor do que a fama sugere",
-     "O efeito é forte e explica por que os incompetentes se acham gênios"
+     "A autoavaliação caiu drasticamente, porque eles viram como os outros foram melhores",
+     "A autoavaliação subiu, porque corrigir os outros aumenta a confiança de qualquer um",
+     "A autoavaliação praticamente não mudou, mesmo depois de verem o trabalho de quem foi melhor"
     ],
-    "correta": 1,
-    "porque": "Sobram um artefato estatístico relevante e um núcleo real pequeno. O erro do senso comum é achar que o grupo mais fraco se via no topo.",
+    "correta": 2,
+    "porque": "O grupo de desempenho baixo manteve a autoavaliação quase inalterada. Já o grupo de alto desempenho, ao ver as provas dos outros, ajustou a própria estimativa para cima."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Antes do treino",
+      "texto": "O quarto de pior desempenho superestimava seu percentil em cerca de 40 pontos."
+     },
+     {
+      "nome": "Treino de lógica",
+      "texto": "Parte dos participantes do grupo inferior recebeu um treino breve de raciocínio lógico."
+     },
+     {
+      "nome": "Depois do treino",
+      "texto": "Eles melhoraram o desempenho real e a capacidade de calibrar a própria autoavaliação."
+     }
+    ],
+    "legenda": "O Estudo 4 mostrou que treinar a habilidade melhora a metacognição, um argumento contra a explicação puramente estatística.",
     "marca": "consenso",
-    "fonte": 10
+    "fonte": 1
    }
   ],
-  "fecho": "Se o efeito é tão frágil, por que ele parece tão óbvio? A resposta pode estar em outro lugar: como nossa atenção seleciona o que confirma o que já achamos. Isso tem nome: viés de confirmação."
+  "fecho": "Se o cérebro pode corrigir a própria avaliação com treino, o que mais ele esconde de si mesmo? A atenção seletiva faz a gente ignorar coisas bem na frente dos olhos. O fenômeno tem nome: cegueira desatencional."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "tela 1: legenda com mais de 25 palavras"
+ ],
  "alertas_jev": [
-  "tela 1: trata de disputa ou evidência contestada (0.96); lição só ensina o núcleo estabelecido",
-  "tela 2: trata de disputa ou evidência contestada (0.84); lição só ensina o núcleo estabelecido",
-  "tela 2: o tipo visual não combina com o conteúdo (0.43); troque de tipo ou use texto",
-  "tela 3: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
-  "tela 4: trata de disputa ou evidência contestada (0.91); lição só ensina o núcleo estabelecido"
+  "tela 2: trata de disputa ou evidência contestada (0.72); lição só ensina o núcleo estabelecido",
+  "tela 3: trata de disputa ou evidência contestada (0.76); lição só ensina o núcleo estabelecido",
+  "tela 4: resposta óbvia, acerta quem não leu (0.75)",
+  "tela 5: trata de disputa ou evidência contestada (0.79); lição só ensina o núcleo estabelecido",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.17)",
+  "tela 8: trata de disputa ou evidência contestada (0.72); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.82
+  },
   "interesse": {
    "type": "score",
-   "score": 2.97,
+   "score": 2.95,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -145,119 +163,178 @@
     "0": 0,
     "1": 0,
     "2": 0.06,
-    "3": 0.91,
-    "4": 0.03
+    "3": 0.92,
+    "4": 0.02
    },
-   "confidence": 0.92
+   "confidence": 0.93
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.33
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.16
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.17
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.33
   },
   "marca_2": {
    "type": "choice",
-   "choice": "controverso",
+   "choice": "consenso",
    "probabilities": {
-    "emergente": 0.18,
-    "especulacao": 0.02,
-    "consenso": 0.36,
-    "controverso": 0.44
+    "controverso": 0.02,
+    "emergente": 0.01,
+    "consenso": 0.96,
+    "especulacao": 0.01
    },
-   "confidence": 0.25
+   "confidence": 0.95
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.14
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.84
+   "noul": 0.72
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.92
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.27
   },
   "marca_3": {
    "type": "choice",
-   "choice": "controverso",
+   "choice": "consenso",
    "probabilities": {
-    "emergente": 0.21,
-    "especulacao": 0.05,
-    "consenso": 0.27,
-    "controverso": 0.47
+    "controverso": 0.06,
+    "emergente": 0.06,
+    "consenso": 0.87,
+    "especulacao": 0.01
    },
-   "confidence": 0.29
+   "confidence": 0.83
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.21
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.89
+   "noul": 0.76
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.9
+   "noul": 0.88
   },
-  "ia_4": {
+  "respondivel_4": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.82
   },
-  "marca_4": {
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.75
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_5": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "emergente": 0.31,
-    "especulacao": 0.18,
-    "consenso": 0.22,
-    "controverso": 0.29
+    "controverso": 0.02,
+    "emergente": 0.11,
+    "consenso": 0.86,
+    "especulacao": 0.01
    },
-   "confidence": 0.07
+   "confidence": 0.81
   },
-  "disputa_4": {
+  "tecnico_5": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.13
   },
-  "encaixe_4": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.93
-  },
-  "ambigua_5": {
-   "type": "noul",
-   "noul": 0.17
+   "noul": 0.79
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.42
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.03,
-    "especulacao": 0.06,
-    "consenso": 0.89,
-    "controverso": 0.02
+    "especulacao": 0.08,
+    "emergente": 0.13,
+    "consenso": 0.57,
+    "controverso": 0.22
    },
-   "confidence": 0.85
+   "confidence": 0.44
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.16
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.24
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.95
+   "noul": 0.91
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.3
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.25
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.03,
+    "emergente": 0.53,
+    "consenso": 0.33,
+    "controverso": 0.11
+   },
+   "confidence": 0.37
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.72
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.93
   }
  },
- "custo_usd": 0.00822
+ "custo_usd": 0.00632
 }

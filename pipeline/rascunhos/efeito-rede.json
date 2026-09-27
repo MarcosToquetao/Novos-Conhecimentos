@@ -1,17 +1,16 @@
 {
  "id": "efeito-rede",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:10",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:19:40",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um telefone sozinho no mundo não serve para nada. Com dois, já dá para conversar. Com milhões, o aparelho vira ferramenta essencial. O valor de cada telefone depende de quantos outros telefones existem.",
+  "gancho": "Um telefone sozinho no mundo não serve para nada. Com dois, já dá para conversar. Com milhões, o aparelho vira ferramenta essencial. O valor de cada telefone depende de quantos outros telefones existem. Esse é o efeito de rede.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Esse é o <strong>efeito de rede</strong>: o quanto um produto vale para você aumenta conforme mais gente usa o mesmo produto ou algo compatível.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O valor de um telefone está no aparelho e em quantas outras pessoas também têm um."
    },
    {
     "tipo": "comparar",
@@ -39,6 +38,13 @@
     "fonte": 2
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Cartão Visa: quanto mais portadores, mais lojas aceitam; quanto mais lojas, mais valioso é ter o cartão.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
     "tipo": "etapas",
     "etapas": [
      {
@@ -52,13 +58,9 @@
      {
       "nome": "Ciclo de feedback",
       "texto": "Cada novo usuário torna o produto mais atraente, atraindo mais usuários."
-     },
-     {
-      "nome": "Mercado dominado",
-      "texto": "O ciclo pode levar a um mercado dominado por um único produto, ou mesmo a um monopólio."
      }
     ],
-    "legenda": "O caminho até o domínio de mercado não é automático.",
+    "legenda": "O caminho até a massa crítica e o ciclo que se retroalimenta.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -74,74 +76,72 @@
     "porque": "A massa crítica é o ponto em que o valor da rede passa a compensar o custo. A partir daí o ciclo se retroalimenta."
    },
    {
-    "tipo": "pergunta",
-    "q": "Por que o teclado QWERTY continua sendo usado se não é o desenho mais eficiente?",
-    "alts": [
-     "Porque as pessoas não sabem digitar em outro teclado",
-     "Porque se estabeleceu cedo e o custo de trocar é alto",
-     "Porque é exigido por lei"
-    ],
-    "correta": 1,
-    "porque": "As expectativas se confirmam sozinhas e podem trancar o mercado num produto que não é necessariamente o melhor."
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Um mercado com efeitos de rede sempre acaba em monopólio?",
-    "alts": [
-     "Sim, porque a rede maior sempre vence",
-     "Não, depende de três condições: utilidade da rede superar a diferenciação, alto custo de adotar mais de uma rede e alto custo de trocar de rede",
-     "Sim, mas só em setores de tecnologia"
-    ],
-    "correta": 1,
-    "porque": "Se alguma dessas condições falhar, vários produtos podem coexistir, como no mercado de mensagens instantâneas nos Estados Unidos."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Medir a força de uma rede exige separar duas coisas: o tamanho da base instalada e o impacto de um usuário adicional sobre a demanda. Um estudo com videogames mostrou que esse impacto pode ser assimétrico: a Nintendo tinha efeito de rede mais forte por usuário, mesmo com base menor.</p>",
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "O teclado QWERTY venceu cedo e prendeu o mercado. Trocar de padrão custa caro, mesmo que existam desenhos mais rápidos.",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que explica o teclado QWERTY continuar dominante mesmo não sendo o desenho mais eficiente?",
+    "alts": [
+     "Falta de criatividade dos engenheiros",
+     "As pessoas se acostumaram e é o único layout que sabem usar",
+     "Ganhou o mercado cedo, e o alto custo de troca tranca os usuários nesse padrão"
+    ],
+    "correta": 2,
+    "porque": "As expectativas dos usuários se confirmam sozinhas e podem trancar o mercado num produto que não é o melhor. Trocar o padrão QWERTY significaria reaprender a digitar."
    },
    {
     "tipo": "comparar",
-    "a": "Base instalada",
-    "b": "Força da rede",
+    "a": "Custos de troca baixos",
+    "b": "Custos de troca altos",
     "linhas": [
      {
-      "aspecto": "O que é",
-      "a": "número de usuários que já adotaram o produto",
-      "b": "impacto de um usuário adicional sobre a demanda"
+      "aspecto": "No mercado",
+      "a": "vários produtos podem coexistir",
+      "b": "o mercado tende a se concentrar em um só"
      },
      {
-      "aspecto": "Exemplo no estudo de videogames",
-      "a": "Nintendo tinha base de clientes menor que a Sega",
-      "b": "Nintendo tinha efeito de rede mais forte por usuário adicional"
+      "aspecto": "Exemplo",
+      "a": "mensagens instantâneas nos EUA",
+      "b": "teclado QWERTY"
      },
      {
-      "aspecto": "Por que importa",
-      "a": "mostra o tamanho atual da rede",
-      "b": "mostra o potencial de crescimento"
+      "aspecto": "Motivo",
+      "a": "o usuário pode usar vários apps sem dificuldade",
+      "b": "trocar todo o ecossistema é caro e inconveniente"
      }
     ],
-    "legenda": "Separar tamanho de força ajuda a medir efeitos de rede.",
+    "legenda": "Altos custos de troca são uma das condições para um monopólio de rede.",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um mercado com efeitos de rede sempre vira um monopólio?",
+    "alts": [
+     "Sim, porque o produto com mais usuários sempre vence",
+     "Não, depende de três condições: a utilidade da rede precisa superar a diferenciação, o custo de adotar mais de uma rede precisa ser alto e o custo de trocar de rede precisa ser alto",
+     "Sim, mas apenas em setores de tecnologia da informação"
+    ],
+    "correta": 1,
+    "porque": "Se alguma dessas condições falhar, vários produtos podem coexistir. O mercado de mensagens instantâneas nos Estados Unidos permaneceu com vários concorrentes justamente por isso."
    }
   ],
   "fecho": "Como a estrutura da rede social muda a velocidade com que uma inovação se espalha? Isso tem nome: difusão de inovações."
  },
- "erros": [
-  "só 3 telas visuais de 8 (pelo menos metade)"
- ],
- "avisos": [
-  "tela 5: duas perguntas seguidas",
-  "tela 6: duas perguntas seguidas",
-  "tela 7: 50 palavras (máximo 40)"
- ],
+ "erros": [],
+ "avisos": [],
  "alertas_jev": [
-  "tela 3: soa como IA (0.56)",
-  "tela 7: marcada consenso, JEV diz emergente (0.70)"
+  "tela 9: a pergunta depende de algo que a lição ainda não mostrou (0.34)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.96
+  },
   "interesse": {
    "type": "score",
    "score": 2.81,
@@ -155,26 +155,19 @@
    "probabilities": {
     "0": 0,
     "1": 0.01,
-    "2": 0.19,
+    "2": 0.18,
     "3": 0.8,
-    "4": 0
+    "4": 0.01
    },
    "confidence": 0.83
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.33
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "emergente": 0.01,
-    "consenso": 0.99,
-    "controverso": 0
-   },
-   "confidence": 0.99
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
@@ -182,18 +175,22 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.25
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "emergente": 0.01,
     "consenso": 0.99,
-    "controverso": 0
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0.01
    },
    "confidence": 0.98
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_2": {
    "type": "noul",
@@ -201,85 +198,144 @@
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.94
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.2
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.08,
-    "emergente": 0.15,
-    "consenso": 0.64,
-    "controverso": 0.13
+    "consenso": 0.97,
+    "especulacao": 0.01,
+    "controverso": 0.01,
+    "emergente": 0.01
    },
-   "confidence": 0.52
+   "confidence": 0.96
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.05
   },
-  "encaixe_3": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.84
+   "noul": 0.48
   },
-  "ambigua_4": {
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.74,
+    "especulacao": 0.1,
+    "controverso": 0.05,
+    "emergente": 0.11
+   },
+   "confidence": 0.65
+  },
+  "tecnico_4": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.1
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.81
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.36
   },
   "ambigua_5": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.07
   },
-  "ambigua_6": {
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.53,
+    "controverso": 0.31,
+    "especulacao": 0.13,
+    "emergente": 0.03
+   },
+   "confidence": 0.37
+  },
+  "tecnico_6": {
    "type": "noul",
    "noul": 0.09
   },
-  "ia_7": {
+  "disputa_6": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.29
   },
-  "marca_7": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "especulacao": 0.07,
-    "emergente": 0.7,
-    "consenso": 0.12,
-    "controverso": 0.11
-   },
-   "confidence": 0.6
-  },
-  "disputa_7": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.73
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.15
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.26
   },
   "marca_8": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.05,
-    "emergente": 0.49,
-    "consenso": 0.39,
-    "controverso": 0.07
+    "consenso": 0.68,
+    "especulacao": 0.07,
+    "emergente": 0.09,
+    "controverso": 0.16
    },
-   "confidence": 0.34
+   "confidence": 0.57
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.13
   },
   "encaixe_8": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.96
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.12
   }
  },
- "custo_usd": 0.00861
+ "custo_usd": 0.00305
 }

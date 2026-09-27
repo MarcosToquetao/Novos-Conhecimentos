@@ -1,23 +1,39 @@
 {
  "id": "tragedia-comuns",
  "tipo": "licao",
- "criado": "2026-09-27T15:48:39",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:23:50",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "O pastor que aumenta o próprio rebanho fica com todo o lucro. O custo, o pasto degradado, ele divide com os vizinhos. Por isso a tragédia se repete sem ninguém ser ganancioso: basta a conta ser essa.",
+  "gancho": "Em 1968, um ecologista publicou um artigo na Science que se tornaria um dos mais citados das ciências sociais. A imagem era simples: um pasto aberto a todos. Cada pastor ganha mais um animal, o pasto se degrada, e a ruína é o destino de todos. Mas há séculos comunidades reais escapam dessa conta.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O problema começa com uma cena familiar: gado e ovelhas em um pasto compartilhado. Cada pastor, agindo racionalmente, põe mais um animal, pois o lucro é só dele e o prejuízo no pasto é dividido entre todos."
+   },
    {
     "tipo": "figura",
     "fig": "comuns-matriz",
-    "legenda": "Cada um escolhe explorar, mesmo sem saber o que o outro vai fazer. O resultado conjunto é pior do que se cooperassem.",
+    "legenda": "A estrutura de incentivos em sua forma mais simples. Explorar é a melhor resposta individual, e o resultado conjunto é pior para todos. A tragédia não depende de ninguém ser mal-intencionado.",
     "marca": "consenso",
     "fonte": 1
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Elinor Ostrom foi verificar: estudou sistemas de irrigação como esta acequia em Santa Fé, onde comunidades gerenciam a água por regras próprias, sem depender de privatização ou controle estatal."
+   },
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "A vila de Törbel, nos Alpes suíços, gere coletivamente suas pastagens com regras documentadas desde 1224. Séculos de uso sustentável sem a tragédia prevista por Hardin.",
+    "fonte": 2
+   },
+   {
     "tipo": "comparar",
-    "a": "Acesso livre",
-    "b": "Propriedade comum",
+    "a": "Acesso livre (Hardin modelou isso)",
+    "b": "Propriedade comum (Ostrom estudou isso)",
     "linhas": [
      {
       "aspecto": "Quem pode usar",
@@ -35,27 +51,8 @@
       "b": "Uso sustentável por séculos"
      }
     ],
-    "legenda": "Hardin tratou as duas como a mesma coisa. A diferença decide se o recurso se esgota ou dura.",
+    "legenda": "Hardin colapsou acesso livre e propriedade comum. A diferença é o que decide o resultado.",
     "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "linha_tempo",
-    "eventos": [
-     {
-      "ano": 1224,
-      "texto": "Regras de pastagem comunal em Törbel, Suíça, são documentadas"
-     },
-     {
-      "ano": 1968,
-      "texto": "Hardin publica A tragédia dos comuns na Science"
-     },
-     {
-      "ano": 2009,
-      "texto": "Ostrom recebe o Nobel de Economia"
-     }
-    ],
-    "legenda": "Séculos antes do artigo de Hardin, comunidades já geriam pastos e água de forma sustentável, sem Estado nem propriedade privada.",
     "fonte": 2
    },
    {
@@ -63,7 +60,7 @@
     "etapas": [
      {
       "nome": "Fronteiras claras",
-      "texto": "Quem tem direito de uso e o limite físico do recurso são definidos."
+      "texto": "Quem tem direito e o limite do recurso são definidos."
      },
      {
       "nome": "Regras locais",
@@ -75,14 +72,14 @@
      },
      {
       "nome": "Monitoramento",
-      "texto": "Usuários observam o cumprimento e respondem uns aos outros."
+      "texto": "Os próprios usuários observam o cumprimento das regras."
      },
      {
       "nome": "Sanções graduadas",
-      "texto": "A primeira infração recebe punição leve."
+      "texto": "A primeira infração recebe punição leve, não uma pena severa que quebre a relação social."
      }
     ],
-    "legenda": "Princípios recorrentes nos sistemas que duraram. Os dois últimos são os mais associados ao sucesso.",
+    "legenda": "Princípios recorrentes nos sistemas que duraram. Monitoramento e sanções são os mais associados ao sucesso.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -90,9 +87,9 @@
     "tipo": "pergunta",
     "q": "Por que a tragédia dos comuns acontece mesmo quando todos são racionais e bem-intencionados?",
     "alts": [
-     "Porque ninguém se importa com o pasto",
+     "Porque as pessoas são egoístas e não se importam com os outros",
      "Porque o benefício de usar mais é individual e o custo é dividido entre todos",
-     "Porque faltam leis que proíbam o uso excessivo"
+     "Porque a persuasão moral falha em convencer as pessoas"
     ],
     "correta": 1,
     "porque": "A estrutura de incentivos faz cada um ganhar inteiro e pagar só uma fração do prejuízo. O resultado coletivo é pior, sem precisar de ninguém malvado."
@@ -101,29 +98,37 @@
     "tipo": "pergunta",
     "q": "O que os casos estudados por Ostrom mostram com mais precisão?",
     "alts": [
-     "Que Hardin estava errado em todos os casos, e a tragédia nunca acontece",
-     "Que as condições supostas por Hardin (sem regras, sem comunicação, sem monitoramento) descrevem um caso particular, não todos",
-     "Que a privatização é sempre a melhor solução para evitar o colapso"
+     "Que Hardin estava errado e a tragédia nunca acontece na vida real",
+     "Que as condições supostas por Hardin descrevem um caso particular, e muitos bens comuns reais têm regras que mudam o resultado",
+     "Que a solução é sempre privatizar o recurso para evitar o colapso"
     ],
     "correta": 1,
-    "porque": "Ostrom não negou o modelo de Hardin. Mostrou que ele descreve recursos de acesso livre, enquanto bens comuns reais quase sempre têm regras internas, e essas regras mudam o resultado."
+    "porque": "Ostrom não negou o modelo de Hardin. Mostrou que ele descreve acesso livre, enquanto bens comuns reais quase sempre têm regras internas que resolvem o problema sem Estado nem mercado."
    }
   ],
-  "fecho": "Por que a ameaça de punição leve muda o comportamento sem precisar de polícia? Isso tem nome: punição altruísta. É o que Fehr e Gächter mostraram em laboratório."
+  "fecho": "Quando um pastor descumpre a regra e os outros o punem, mesmo com custo pessoal, a cooperação se mantém. Isso tem nome: punição altruísta. É o que Fehr e Gächter demonstraram em laboratório."
  },
  "erros": [],
  "avisos": [
-  "tela 6: duas perguntas seguidas"
+  "gancho com mais de 45 palavras",
+  "tela 1: legenda com mais de 25 palavras",
+  "tela 2: legenda com mais de 25 palavras",
+  "tela 8: duas perguntas seguidas"
  ],
  "alertas_jev": [
-  "tela 1: soa como IA (0.60)",
-  "tela 2: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
-  "tela 3: trata de disputa ou evidência contestada (0.88); lição só ensina o núcleo estabelecido"
+  "tela 2: soa como IA (0.64)",
+  "tela 3: trata de disputa ou evidência contestada (0.81); lição só ensina o núcleo estabelecido",
+  "tela 4: trata de disputa ou evidência contestada (0.86); lição só ensina o núcleo estabelecido",
+  "tela 5: trata de disputa ou evidência contestada (0.91); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.91
+  },
   "interesse": {
    "type": "score",
-   "score": 2.93,
+   "score": 2.97,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -134,97 +139,149 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.08,
-    "3": 0.91,
-    "4": 0.01
+    "2": 0.05,
+    "3": 0.93,
+    "4": 0.02
    },
-   "confidence": 0.93
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.6
+   "noul": 0.29
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.03,
-    "controverso": 0.23,
-    "emergente": 0.05,
-    "consenso": 0.69
-   },
-   "confidence": 0.59
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.28
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.64
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0.09,
-    "emergente": 0.16,
-    "consenso": 0.75
+    "controverso": 0.1,
+    "consenso": 0.86,
+    "especulacao": 0.02,
+    "emergente": 0.02
    },
-   "confidence": 0.65
+   "confidence": 0.81
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.89
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.96
+   "noul": 0.21
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.24
   },
-  "disputa_3": {
-   "type": "noul",
-   "noul": 0.88
-  },
-  "encaixe_3": {
-   "type": "noul",
-   "noul": 0.95
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.49
-  },
-  "marca_4": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "especulacao": 0.01,
-    "controverso": 0.06,
-    "emergente": 0.55,
-    "consenso": 0.38
-   },
-   "confidence": 0.4
-  },
-  "disputa_4": {
-   "type": "noul",
-   "noul": 0.2
-  },
-  "encaixe_4": {
-   "type": "noul",
-   "noul": 0.55
-  },
-  "ambigua_5": {
+  "tecnico_3": {
    "type": "noul",
    "noul": 0.06
   },
-  "ambigua_6": {
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.81
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.07,
+    "consenso": 0.79,
+    "especulacao": 0,
+    "emergente": 0.14
+   },
+   "confidence": 0.73
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "consenso": 0.44,
+    "controverso": 0.06,
+    "especulacao": 0.01,
+    "emergente": 0.49
+   },
+   "confidence": 0.32
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.97
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "ambigua_8": {
    "type": "noul",
    "noul": 0.08
   }
  },
- "custo_usd": 0.0094
+ "custo_usd": 0.00175
 }

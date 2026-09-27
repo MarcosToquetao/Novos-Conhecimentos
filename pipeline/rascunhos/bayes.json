@@ -1,0 +1,280 @@
+{
+ "id": "bayes",
+ "tipo": "licao",
+ "criado": "2026-09-27T19:18:25",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Em 1978, pesquisadores de Harvard fizeram uma pergunta a 60 médicos: um exame que detecta uma doença rara deu positivo. Qual a chance real de a pessoa estar doente? A resposta mais comum foi 95%. A correta era aproximadamente 2%. O erro não está na aritmética, está em confundir o que o exame vê com o que ele significa.",
+  "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A pergunta que derrubou 60 médicos de Harvard: um teste positivo para uma doença que atinge 1 em 1.000 pessoas e gera 5% de falsos positivos. Quase ninguém acertou.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Sensibilidade do exame",
+    "b": "Valor preditivo positivo",
+    "linhas": [
+     {
+      "aspecto": "O que mede",
+      "a": "Chance de positivo, se a pessoa está doente",
+      "b": "Chance de a pessoa estar doente, se o teste deu positivo"
+     },
+     {
+      "aspecto": "Do que depende",
+      "a": "Apenas da qualidade do exame",
+      "b": "Da qualidade do exame e de quão comum é a doença"
+     },
+     {
+      "aspecto": "No exemplo de Harvard",
+      "a": "100%",
+      "b": "2%"
+     }
+    ],
+    "legenda": "A pergunta que você responde (sensibilidade ou valor preditivo) muda completamente o resultado. A maioria das pessoas intuitivamente responde à pergunta errada.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "figura",
+    "fig": "bayes-icones",
+    "legenda": "Por que a chance é de apenas 2%? De 1.000 pessoas testadas, 1 tem a doença e testa positivo. Das 999 saudáveis, cerca de 50 também testam positivo. A maioria dos alarmes é falsa.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O mesmo raciocínio na mamografia: câncer de mama atinge 1% das mulheres. Com uma taxa de acerto de 90% e 9% de falsos positivos, um resultado positivo indica apenas 9% de chance real de câncer.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma pessoa sem sintomas faz um exame de rastreamento e o resultado é positivo. Um médico aplica o mesmo exame em outra pessoa que já chegou com o sintoma típico da doença. O que muda na interpretação do resultado?",
+    "alts": [
+     "Nada,um resultado positivo é igualmente preocupante para as duas",
+     "O resoltado positivo é um alarme mais forte para a pessoa que já tinha o sintoma",
+     "A qualidade do exame caiu para a segunda pessoa porque o sintoma atrapalhou"
+    ],
+    "correta": 1,
+    "porque": "Quem já tem sintoma parte de uma probabilidade inicial (taxa-bas) maior de estar doente. A mesma evidência (o teste positivo) atualiza um número que já era mais alto. A conclusão final é diferente para as duas situações."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um novo teste tem razão de verossimilhança de exatamente 1. Isso significa que o resultado do teste é igualmente provável em pessoas doentes e saudáveis. O que esse teste fêz com a suspeita inicial do médio?",
+    "alts": [
+     "Aumentoua probabilidade",
+     "Reduziu a probabilidade",
+     "Não alterou nada"
+    ],
+    "correta": 2,
+    "porque": "Multiplicar a chance inicial por 1 não a modifica. Um teste com razão de verossimilhança 1 equivale, do ponto de vista informacional, a não ter feito o teste.",
+    "marca": "consenso"
+   },
+   {
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "A 'falácia do promotor' é essa confusão em tribunais: a raridade de um perfil de DNÃ (1 em 10 milhôes) não é a chance de inoscência do réu. A chance inicial de ele ser o autor geralmente é muito menor, o que muda a conclusão."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um sistema de segurançaa procura uma ameaça raríssima (1 em 1 milhão) com 99,99% de precisão em milhões de pessoas. O que acontece?",
+    "alts": [
+     "Quase todos os alarmes serão verdadeiros, porque a precisão é altíssima",
+     "A maioria esmagadora dos alarmes será falsa, porque a amaça é extreamente rara",
+     "O sistemaa para de funcionar com tantos dados"
+    ],
+    "correta": 1,
+    "porque": "Mesmo com uma taxa de erro ínfima, aplicada a milhões de pessoas saudáveis, o número absoluto de falsos positivos supera em muito o de verdadeiros. A raridade do evento é o fator dominante."
+   }
+  ],
+  "fecho": "O Teorema de Bayes mostra como a sua crença anterior (a prevalênccia) e a forçça da nova evidênccia (o resultado do exame) se combinam. No famoso Problem a de Monty Hall, a chance muda de forma igualmente contraintuitivva quando uma porta é aberta: sua decisão inicial e a nova informação têm pesos diferentes na probabilidade final."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras",
+  "tela 3: legenda com mais de 25 palavras",
+  "tela 4: legenda com mais de 25 palavras",
+  "tela 6: marca sem fonte",
+  "tela 6: duas perguntas seguidas",
+  "tela 7: legenda com mais de 25 palavras"
+ ],
+ "alertas_jev": [
+  "tela 7: trata de disputa ou evidência contestada (0.70); lição só ensina o núcleo estabelecido"
+ ],
+ "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "interesse": {
+   "type": "score",
+   "score": 3.22,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.01,
+    "3": 0.76,
+    "4": 0.23
+   },
+   "confidence": 0.8
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.24,
+    "controverso": 0.02,
+    "emergente": 0.01,
+    "consenso": 0.73
+   },
+   "confidence": 0.64
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 0.99
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "controverso": 0.01,
+    "emergente": 0,
+    "consenso": 0.98
+   },
+   "confidence": 0.98
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.82
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.62
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.7
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.17
+  }
+ },
+ "custo_usd": 0.00702
+}

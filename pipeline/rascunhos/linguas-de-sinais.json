@@ -1,12 +1,19 @@
 {
  "id": "linguas-de-sinais",
  "tipo": "licao",
- "criado": "2026-09-27T15:40:55",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:16:02",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Quem olha uma conversa em língua de sinais sem saber sinalizar tende a achar que são gestos soltos. Um linguista americano, em 1960, mostrou que eram regras.",
+  "gancho": "Quem olha uma conversa em língua de sinais sem saber sinalizar tende a achar que são gestos soltos. Um linguista americano, em 1960, mostrou que eram regras. Línguas de sinais são línguas naturais completas, com gramática própria em todos os níveis.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "William Stokoe, o professor que iniciou o estudo científico das línguas de sinais ao descrever a estrutura da ASL em 1960.",
+    "marca": "consenso",
+    "fonte": 1
+   },
    {
     "tipo": "figura",
     "fig": "sinais-parametros",
@@ -63,37 +70,58 @@
     "fonte": 13
    },
    {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Estabelecer pontos no espaço",
+      "texto": "O sinalizante associa cada pessoa ou objeto a um ponto à sua frente"
+     },
+     {
+      "nome": "Mover o verbo entre os pontos",
+      "texto": "O verbo direcional se desloca do ponto do sujeito até o ponto do objeto"
+     },
+     {
+      "nome": "A direção carrega a concordância",
+      "texto": "Eu dou a você vai num sentido; você dá a mim vai no sentido oposto"
+     }
+    ],
+    "legenda": "O movimento do verbo no espaço marca quem faz o quê, como afixos de concordância numa língua falada.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
     "tipo": "pergunta",
     "q": "Em Libras, como o sinalizante indica que \"eu dou a você\" e não \"você dá a mim\"?",
     "alts": [
      "Pela ordem dos sinais na frase",
      "Pela direção do movimento do verbo, do ponto que representa quem dá até o ponto que representa quem recebe",
-     "Pela expressão facial de quem está sinalizando"
+     "Pelo tamanho do movimento da mão"
     ],
     "correta": 1,
     "porque": "O verbo direcional se move entre pontos no espaço que representam as pessoas. Isso é concordância gramatical, análoga a afixos em línguas faladas."
    },
    {
-    "tipo": "camadas",
-    "camadas": [
+    "tipo": "comparar",
+    "a": "Na fala",
+    "b": "Na língua de sinais",
+    "linhas": [
      {
-      "nome": "Sobrancelhas levantadas",
-      "nota": "marca pergunta de sim ou não"
+      "aspecto": "Expressão facial",
+      "a": "opcional, transmite emoção",
+      "b": "obrigatória, pode ser gramática"
      },
      {
-      "nome": "Sobrancelhas franzidas",
-      "nota": "marca pergunta com pronome interrogativo"
+      "aspecto": "Sobrancelhas levantadas",
+      "a": "surpresa",
+      "b": "pergunta de sim ou não"
      },
      {
-      "nome": "Configuração facial específica",
-      "nota": "marca orações condicionais (se... então)"
+      "aspecto": "Sem a marcação",
+      "a": "a frase continua correta",
+      "b": "a frase fica agramatical"
      }
     ],
-    "eixo": {
-     "topo": "feito com o rosto",
-     "base": "gramática obrigatória"
-    },
-    "legenda": "Expressões não manuais não são só emoção: tirar a marcação exigida deixa a frase agramatical.",
+    "legenda": "Nas línguas de sinais, parte do que o rosto faz é sintaxe, não emoção.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -109,13 +137,17 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 3: trata de disputa ou evidência contestada (0.66); lição só ensina o núcleo estabelecido",
-  "tela 4: o tipo visual não combina com o conteúdo (0.42); troque de tipo ou use texto"
+  "tela 4: trata de disputa ou evidência contestada (0.65); lição só ensina o núcleo estabelecido",
+  "tela 5: o tipo visual não combina com o conteúdo (0.42); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.83,
+   "score": 2.89,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -126,88 +158,131 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.17,
-    "3": 0.83,
+    "2": 0.11,
+    "3": 0.89,
     "4": 0
    },
-   "confidence": 0.85
+   "confidence": 0.91
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.32
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
     "consenso": 1,
-    "controverso": 0,
-    "emergente": 0
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.13
   },
-  "ambigua_2": {
+  "encaixe_1": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.81
   },
-  "ia_3": {
+  "ia_2": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.27
   },
-  "marca_3": {
+  "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
     "consenso": 1,
-    "controverso": 0,
-    "emergente": 0
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
    },
-   "confidence": 0.99
+   "confidence": 1
   },
-  "disputa_3": {
+  "tecnico_2": {
    "type": "noul",
-   "noul": 0.66
+   "noul": 0.2
   },
-  "encaixe_3": {
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "respondivel_3": {
    "type": "noul",
    "noul": 0.89
   },
-  "ia_4": {
+  "obvia_3": {
    "type": "noul",
    "noul": 0.35
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.28
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.07,
-    "consenso": 0.46,
-    "controverso": 0.19,
-    "emergente": 0.28
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
    },
-   "confidence": 0.28
+   "confidence": 0.99
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.53
+   "noul": 0.65
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.92
   },
-  "ambigua_5": {
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.07,
+    "consenso": 0.63,
+    "emergente": 0.15,
+    "controverso": 0.15
+   },
+   "confidence": 0.51
+  },
+  "tecnico_5": {
    "type": "noul",
    "noul": 0.12
   },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.42
+  },
   "ia_6": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.21
   },
   "marca_6": {
    "type": "choice",
@@ -215,38 +290,85 @@
    "probabilities": {
     "especulacao": 0,
     "consenso": 1,
-    "controverso": 0,
-    "emergente": 0
+    "emergente": 0,
+    "controverso": 0
    },
-   "confidence": 0.99
+   "confidence": 1
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.12
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.47
+   "noul": 0.07
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.86
+   "noul": 0.93
   },
-  "ia_7": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.96
   },
-  "marca_7": {
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.02,
-    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
     "emergente": 0,
-    "consenso": 0.98
+    "controverso": 0
    },
-   "confidence": 0.96
+   "confidence": 0.99
   },
-  "disputa_7": {
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.99,
+    "especulacao": 0.01,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 0.98
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "disputa_9": {
    "type": "noul",
    "noul": 0.13
   }
  },
- "custo_usd": 0.0091
+ "custo_usd": 0.01651
 }

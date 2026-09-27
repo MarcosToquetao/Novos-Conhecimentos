@@ -1,12 +1,17 @@
 {
  "id": "homunculo-cortical",
  "tipo": "licao",
- "criado": "2026-09-27T15:39:19",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:20:40",
+ "modelo": "reaproveitada+editor",
  "rodadas": 2,
  "licao": {
   "gancho": "O homenzinho deformado com mãos e lábios gigantes, esticado sobre o cérebro, aparece em quase todo livro de neurociência. Ele foi desenhado com base em cirurgias dos anos 1930. Mas exames recentes mostram que a organização real é bem mais bagunçada.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Representação ilustrada do homúnculo sensorial, mostrando a proporção das partes do corpo mapeadas no córtex cerebral."
+   },
    {
     "tipo": "estimar",
     "q": "Nos anos 1930 e 1940, Wilder Penfield estimulou o cérebro exposto de quantos pacientes para construir o mapa do homúnculo?",
@@ -132,18 +137,23 @@
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 1: o tipo visual não combina com o conteúdo (0.32); troque de tipo ou use texto",
-  "tela 3: soa como IA (0.52)",
-  "tela 3: marcada consenso, JEV diz emergente (0.93)",
-  "tela 3: trata de disputa ou evidência contestada (0.80); lição só ensina o núcleo estabelecido",
-  "tela 7: soa como IA (0.61)",
-  "tela 7: trata de disputa ou evidência contestada (0.69); lição só ensina o núcleo estabelecido",
-  "tela 7: o tipo visual não combina com o conteúdo (0.23); troque de tipo ou use texto"
+  "tela 1: soa como IA (0.61)",
+  "tela 2: o tipo visual não combina com o conteúdo (0.33); troque de tipo ou use texto",
+  "tela 4: marcada consenso, JEV diz emergente (0.92)",
+  "tela 4: trata de disputa ou evidência contestada (0.80); lição só ensina o núcleo estabelecido",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.10)",
+  "tela 8: soa como IA (0.64)",
+  "tela 8: trata de disputa ou evidência contestada (0.65); lição só ensina o núcleo estabelecido",
+  "tela 8: o tipo visual não combina com o conteúdo (0.21); troque de tipo ou use texto"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "interesse": {
    "type": "score",
-   "score": 2.95,
+   "score": 2.96,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -162,127 +172,175 @@
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.61
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.02,
-    "consenso": 0.9,
-    "emergente": 0.07,
-    "especulacao": 0.01
-   },
-   "confidence": 0.86
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.09
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.6
-  },
-  "encaixe_1": {
-   "type": "noul",
-   "noul": 0.32
+   "noul": 0.14
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.33
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "emergente": 0.04,
     "controverso": 0.01,
-    "consenso": 0.91,
-    "emergente": 0.08,
+    "consenso": 0.95,
+    "especulacao": 0
+   },
+   "confidence": 0.93
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.58
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.14,
+    "controverso": 0.02,
+    "consenso": 0.84,
+    "especulacao": 0
+   },
+   "confidence": 0.79
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.92,
+    "controverso": 0,
+    "consenso": 0.08,
     "especulacao": 0
    },
    "confidence": 0.88
   },
-  "disputa_2": {
+  "tecnico_4": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.16
   },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.83
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.52
-  },
-  "marca_3": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "controverso": 0,
-    "consenso": 0.07,
-    "emergente": 0.93,
-    "especulacao": 0
-   },
-   "confidence": 0.9
-  },
-  "disputa_3": {
+  "disputa_4": {
    "type": "noul",
    "noul": 0.8
   },
-  "encaixe_3": {
+  "encaixe_4": {
    "type": "noul",
    "noul": 0.96
   },
-  "ambigua_4": {
+  "respondivel_5": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.94
   },
-  "ia_5": {
+  "obvia_5": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.33
   },
-  "marca_5": {
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "consenso": 0.93,
-    "emergente": 0.07,
-    "especulacao": 0
+    "especulacao": 0,
+    "consenso": 0.95,
+    "emergente": 0.05,
+    "controverso": 0
    },
-   "confidence": 0.91
+   "confidence": 0.93
   },
-  "disputa_5": {
+  "tecnico_6": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.11
   },
-  "encaixe_5": {
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "encaixe_6": {
    "type": "noul",
    "noul": 0.95
   },
-  "ambigua_6": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.1
   },
-  "ia_7": {
+  "obvia_7": {
    "type": "noul",
-   "noul": 0.61
+   "noul": 0.28
   },
-  "marca_7": {
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.64
+  },
+  "marca_8": {
    "type": "choice",
    "choice": "emergente",
    "probabilities": {
+    "especulacao": 0,
     "emergente": 0.99,
     "controverso": 0,
-    "consenso": 0.01,
-    "especulacao": 0
+    "consenso": 0.01
    },
-   "confidence": 0.99
+   "confidence": 0.98
   },
-  "disputa_7": {
+  "tecnico_8": {
    "type": "noul",
-   "noul": 0.69
+   "noul": 0.13
   },
-  "encaixe_7": {
+  "disputa_8": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.65
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.21
   }
  },
- "custo_usd": 0.00748
+ "custo_usd": 0.00318
 }

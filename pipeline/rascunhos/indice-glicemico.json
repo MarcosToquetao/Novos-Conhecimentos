@@ -1,118 +1,127 @@
 {
  "id": "indice-glicemico",
  "tipo": "licao",
- "criado": "2026-09-27T15:36:31",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:21:14",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
   "gancho": "A melancia tem índice glicêmico alto, perto de 72. Quem olha a tabela e corta a fruta pode estar fazendo o oposto do que a própria medida sugere.",
   "telas": [
    {
-    "tipo": "figura",
-    "fig": "gi-curvas",
-    "legenda": "O índice é a razão entre as áreas sob as curvas de duas horas, não entre os picos.",
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Para ingerir 50 g de carboidrato de melancia, a porção padrão do teste, é preciso consumir quase 700 gramas. Uma fatia normal pesa bem menos, e mal move a glicemia.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "estimar",
-    "q": "Quantos gramas de melancia seria preciso comer para ingerir os 50 g de carboidrato do teste?",
-    "unidade": "gramas",
-    "min": 50,
-    "max": 2000,
-    "escala": "log",
-    "resposta": 700,
-    "legenda": "Cerca de 700 gramas de polpa. Uma fatia normal quase não move a glicemia.",
+    "q": "Qual é a carga glicêmica de uma fatia comum de melancia?",
+    "unidade": "",
+    "min": 0,
+    "max": 30,
+    "escala": "linear",
+    "resposta": 8,
+    "legenda": "Carga glicêmica é o índice multiplicado pela quantidade real de carboidrato na porção. Apesar do índice alto, a porção tem pouco carboidrato.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>O teste usa 50 g de carboidrato disponível, não 50 g do alimento. Para corrigir isso criaram a carga glicêmica: índice vezes carboidrato da porção, dividido por 100.</p>",
+    "tipo": "figura",
+    "fig": "gi-curvas",
+    "legenda": "O índice não mede o pico, mas a área total sob a curva de glicose durante duas horas. Dois alimentos com curvas muito diferentes podem ter o mesmo índice.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "pontos",
-    "valor": 18,
-    "frase": "de 63 adultos saudáveis seriam classificados como 'alto' para o mesmo pão branco.",
-    "legenda": "Outros 23 caíram em 'médio' e 22 em 'baixo'. O mesmo alimento, as três categorias.",
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O pão branco é o padrão de referência. Mas a mesma fatia pode ter efeito *baixo*, *médio* ou *alto* em pessoas diferentes.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "figura",
     "fig": "gi-dispersao",
-    "legenda": "Cada ponto é uma pessoa. A média 62 descreve bem só uma minoria dos participantes.",
+    "legenda": "Cada ponto é uma pessoa comendo o mesmo pão. A média é 62. Os valores individuais vão de 35 a 103, cobrindo todas as categorias do índice.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Um app diz que o pão branco tem índice 62, classificação 'médio'. O que esse número permite concluir sobre a sua glicemia depois de comer esse pão?",
+    "q": "O que acontece se você usar o valor de tabela para escolher entre dois alimentos muito parecidos?",
     "alts": [
-     "Que a sua resposta vai ficar perto da média, com pequena variação",
-     "Quase nada: a variação entre pessoas vai de 35 a 103, cobrindo as três categorias",
-     "Que o pão é seguro para quem tem diabetes tipo 2"
+     "A pequena diferença no índice reflete uma diferença real na sua resposta",
+     "Você provavelmente não sentirá nenhum efeito",
+     "A diferença provavelmente é menor que a variação natural do seu próprio corpo e não significa nada na prática"
     ],
-    "correta": 1,
-    "porque": "O valor de tabela é uma média de médias sob condições que ninguém reproduz. A medida tem ruído da mesma ordem que o sinal que se quer detectar.",
+    "correta": 2,
+    "porque": "A variação é da mesma ordem que o sinal. É útil para diferenciar categorias amplas, como leguminosas de pão branco, mas não para escolher entre dois pães."
+   },
+   {
+    "tipo": "foto",
+    "foto": 5,
+    "legenda": "Alimentos de baixo índice costumam ser ricos em fibras e pouco processados. A velocidade de digestão mais lenta é uma propriedade real desses alimentos.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
    },
    {
     "tipo": "comparar",
-    "a": "Categorias amplas",
-    "b": "Dois itens específicos",
+    "a": "Baixo índice glicêmico",
+    "b": "Alto índice glicêmico",
     "linhas": [
      {
-      "aspecto": "Comparar leguminosas com pão branco",
-      "a": "funciona razoavelmente",
-      "b": "não se aplica"
+      "aspecto": "Exemplos",
+      "a": "leguminosas, grãos integrais, frutas",
+      "b": "pão branco, flocos de milho, arroz branco"
      },
      {
-      "aspecto": "Escolher entre dois pães parecidos",
-      "a": "não se aplica",
-      "b": "a diferença cai dentro do ruído"
+      "aspecto": "Efeito em diabetes tipo 2",
+      "a": "reduz a hemoglobina glicada em 0,3 a 0,5 ponto percentual",
+      "b": "pior controle glicêmico"
      },
      {
-      "aspecto": "Orientação individual",
-      "a": "serve como referência geral",
-      "b": "é impraticável"
+      "aspecto": "Confundimento",
+      "a": "também são mais ricos em fibras e menos processados",
+      "b": "também são mais processados e menos nutritivos"
      }
     ],
-    "legenda": "O conceito de que alimentos diferem na velocidade de digestão é correto. O problema é o uso da medida caso a caso.",
+    "legenda": "O efeito é modesto e pode vir de outros atributos do alimento. Isolar a culpa do índice glicêmico é difícil.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Em diabetes tipo 2, o que ensaios clínicos mostram sobre dietas de baixo índice glicêmico?",
+    "q": "Se alguém sem diabetes seguir uma dieta de baixo índice glicêmico, qual é o benefício mais garantido?",
     "alts": [
-     "Reduzem a hemoglobina glicada em 0,3 a 0,5 ponto, efeito modesto",
-     "Não têm efeito mensurável sobre a glicemia",
-     "São superiores a medicamentos no controle glicêmico"
+     "Vai prevenir infarto e derrame, pois os estudos são conclusivos",
+     "Vai emagrecer mais rápido do que com qualquer outra dieta",
+     "Vai consumir menos alimentos ultraprocessados e mais fibras, melhorando a qualidade da dieta"
     ],
-    "correta": 0,
-    "porque": "O efeito é real e consistente, mas menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.",
-    "marca": "consenso",
-    "fonte": 2
+    "correta": 2,
+    "porque": "Em pessoas sem diabetes, a evidência para prevenção de doenças ou perda de peso é fraca. O benefício mais claro é trocar ultraprocessados por alimentos de verdade."
    }
   ],
-  "fecho": "Por que dois estudos de nutrição sobre o mesmo alimento chegam a conclusões opostas? Tem a ver com o que cada desenho consegue isolar."
+  "fecho": "Quando uma manchete anuncia um superalimento com baixo índice glicêmico, desconfie. Muitas vezes o efeito some quando se controla o que o estudo não controlou. Veja Por que estudos de nutrição se contradizem."
  },
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 2: trata de disputa ou evidência contestada (0.74); lição só ensina o núcleo estabelecido",
-  "tela 2: o tipo visual não combina com o conteúdo (0.41); troque de tipo ou use texto",
-  "tela 4: trata de disputa ou evidência contestada (0.64); lição só ensina o núcleo estabelecido",
-  "tela 7: trata de disputa ou evidência contestada (0.76); lição só ensina o núcleo estabelecido"
+  "tela 1: trata de disputa ou evidência contestada (0.74); lição só ensina o núcleo estabelecido",
+  "tela 2: o tipo visual não combina com o conteúdo (0.36); troque de tipo ou use texto",
+  "tela 4: trata de disputa ou evidência contestada (0.73); lição só ensina o núcleo estabelecido",
+  "tela 5: trata de disputa ou evidência contestada (0.67); lição só ensina o núcleo estabelecido",
+  "tela 8: trata de disputa ou evidência contestada (0.85); lição só ensina o núcleo estabelecido",
+  "tela 9: resposta óbvia, acerta quem não leu (0.80)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.76
+  },
   "interesse": {
    "type": "score",
-   "score": 2.91,
+   "score": 2.9,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -123,68 +132,80 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.09,
-    "3": 0.9,
+    "2": 0.1,
+    "3": 0.89,
     "4": 0.01
    },
    "confidence": 0.91
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.23
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "consenso": 1,
     "controverso": 0,
-    "especulacao": 0
+    "emergente": 0.01,
+    "especulacao": 0.01,
+    "consenso": 0.98
    },
-   "confidence": 0.99
+   "confidence": 0.97
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.31
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.74
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.35
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.04,
-    "consenso": 0.91,
     "controverso": 0.01,
-    "especulacao": 0.04
+    "emergente": 0.01,
+    "especulacao": 0,
+    "consenso": 0.98
    },
-   "confidence": 0.87
+   "confidence": 0.97
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.47
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.74
+   "noul": 0.5
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.36
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.48
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.03,
-    "consenso": 0.92,
-    "controverso": 0.05,
-    "especulacao": 0
+    "controverso": 0.09,
+    "emergente": 0.05,
+    "especulacao": 0.03,
+    "consenso": 0.83
    },
-   "confidence": 0.89
+   "confidence": 0.77
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.4
   },
   "disputa_3": {
    "type": "noul",
@@ -192,77 +213,124 @@
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.41
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.12,
-    "consenso": 0.82,
-    "controverso": 0.04,
-    "especulacao": 0.02
+    "controverso": 0.02,
+    "emergente": 0.32,
+    "especulacao": 0,
+    "consenso": 0.66
    },
-   "confidence": 0.77
+   "confidence": 0.53
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.14
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.64
-  },
-  "encaixe_4": {
-   "type": "noul",
-   "noul": 0.68
+   "noul": 0.73
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.25
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.07,
-    "consenso": 0.9,
-    "controverso": 0.02,
-    "especulacao": 0.01
+    "especulacao": 0.01,
+    "emergente": 0.31,
+    "consenso": 0.65,
+    "controverso": 0.03
    },
-   "confidence": 0.88
+   "confidence": 0.55
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.18
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.55
+   "noul": 0.67
+  },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.38
   },
   "ambigua_6": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.19
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.39
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.06,
-    "especulacao": 0,
-    "consenso": 0.88,
-    "controverso": 0.06
+    "especulacao": 0.01,
+    "emergente": 0.03,
+    "consenso": 0.95,
+    "controverso": 0.01
    },
-   "confidence": 0.83
+   "confidence": 0.93
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.11
   },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.76
+   "noul": 0.29
   },
-  "encaixe_7": {
+  "ia_8": {
    "type": "noul",
-   "noul": 0.87
+   "noul": 0.35
   },
-  "ambigua_8": {
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.27,
+    "emergente": 0.32,
+    "consenso": 0.4,
+    "especulacao": 0.01
+   },
+   "confidence": 0.2
+  },
+  "tecnico_8": {
    "type": "noul",
-   "noul": 0.16
+   "noul": 0.38
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "respondivel_9": {
+   "type": "noul",
+   "noul": 0.77
+  },
+  "obvia_9": {
+   "type": "noul",
+   "noul": 0.8
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.15
   }
  },
- "custo_usd": 0.00592
+ "custo_usd": 0.00275
 }

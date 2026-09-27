@@ -1,17 +1,21 @@
 {
  "id": "endossimbiose",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:14",
- "modelo": "deepseek-flash",
+ "criado": "2026-09-27T19:21:34",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Toda célula do seu corpo tem centenas de mitocôndrias. Cada uma carrega uma pequena molécula de DNA circular, que você herdou só da sua mãe e que se parece com o DNA de uma bactéria.",
+  "gancho": "Toda célula do seu corpo tem centenas de mitocôndrias. Cada uma carrega uma pequena molécula de DNA circular, que você herdou só da sua mãe e que se parece com o DNA de uma bactéria. A explicação está numa ideia que passou décadas no limbo antes de virar consenso.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Mitocôndrias e cloroplastos descêm de bactérias que foram engolidas por outra célula e nunca mais saíram. É a <strong>teoria endossimbiótica</strong>.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Uma célula com mitocôndrias e suas moléculas de DNA circular em destaque. Esse DNA circular é uma herança direta das bactérias que deram origem a essas organelas."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Micrografia eletrônica mostrando bactérias alojadas no interior de uma célula eucariótica. É um instantâneo do que pode ter acontecido há bilhões de anos."
    },
    {
     "tipo": "comparar",
@@ -44,26 +48,26 @@
     "fonte": 2
    },
    {
-    "tipo": "estimar",
-    "q": "Quantos pares de bases tem o genoma da mitocôndria humana?",
-    "unidade": "pares de bases",
-    "min": 1000,
-    "max": 1000000,
-    "escala": "log",
-    "resposta": 16000,
-    "legenda": "Cerca de 16 mil pares de bases, contra mais de 6 milhões numa alfa-proteobactéria livre.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "ciclo",
+    "tipo": "etapas",
     "etapas": [
-     "A célula hospedeira engole a bactéria",
-     "A bactéria passa a viver dentro dela",
-     "Genes da bactéria migram para o núcleo",
-     "A bactéria perde os genes que não usa mais"
+     {
+      "nome": "Captura",
+      "texto": "Uma célula engole uma bactéria, que passa a viver em seu interior."
+     },
+     {
+      "nome": "Migração de genes",
+      "texto": "A maior parte do DNA da bactéria é transferida para o núcleo da hospedeira."
+     },
+     {
+      "nome": "Dependência",
+      "texto": "A bactéria perde os genes que não precisa mais, como os de sobrevivência livre."
+     },
+     {
+      "nome": "Organela",
+      "texto": "A bactéria se torna uma organela: mitocôndria ou cloroplasto."
+     }
     ],
-    "legenda": "O processo é gradual: o simbionte vira organela à medida que perde autonomia.",
+    "legenda": "A transformação de bactéria em organela é gradual e irreversível.",
     "marca": "consenso",
     "fonte": 2
    },
@@ -82,11 +86,11 @@
     "tipo": "pergunta",
     "q": "Uma célula perde seus cloroplastos por falta de luz. O que acontece?",
     "alts": [
-     "A célula não consegue fabricar novos cloroplastos e precisa capturá-los de novo",
+     "A célula usa outras organelas para substituir a fotossíntese",
      "A célula fabrica cloroplastos a partir de suas próprias membranas",
-     "A célula transforma mitocôndrias em cloroplastos"
+     "A célula não consegue fabricar novos cloroplastos"
     ],
-    "correta": 0,
+    "correta": 2,
     "porque": "Cloroplastos só se formam a partir de outros cloroplastos, por fissão binária. Sem eles, a célula não consegue produzi-los do zero."
    },
    {
@@ -97,25 +101,22 @@
       "texto": "O botânico russo Konstantin Mereschkowski propõe que a célula complexa nasceu de uma fusão."
      },
      {
-      "ano": 1967,
-      "texto": "Lynn Margulis defende a ideia com evidências microbiológicas, após anos de rejeição."
-     },
-     {
       "ano": 1961,
       "texto": "Hans Ris usa microscopia eletrônica para mostrar que cloroplastos e cianobactérias se parecem."
      },
      {
-      "ano": 2015,
-      "texto": "Uma revisão contabiliza mais de 20 versões diferentes da teoria endossimbiótica."
+      "ano": 1967,
+      "texto": "Lynn Margulis defende a ideia com evidências microbiológicas, após anos de rejeição."
      }
     ],
-    "legenda": "Da proposta inicial à aceitação ampla.",
+    "legenda": "Da proposta inicial, rejeitada por décadas, à aceitação como consenso na biologia.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Nem toda proposta de Margulis resistiu. Flagelos e cílios não vieram de bactérias: essas estruturas não têm DNA nem semelhança com bactérias.</p>",
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "A ameba Paulinella chromatophora abriga um cromatóforo derivado de cianobactéria. Seu genoma já encolheu para 1 milhão de bases, um terço do genoma da bactéria livre mais próxima.",
     "marca": "consenso",
     "fonte": 2
    }
@@ -124,18 +125,21 @@
  },
  "erros": [],
  "avisos": [
+  "gancho com mais de 45 palavras",
   "tela 6: duas perguntas seguidas"
  ],
  "alertas_jev": [
-  "tela 3: o tipo visual não combina com o conteúdo (0.42); troque de tipo ou use texto",
-  "tela 4: o tipo visual não combina com o conteúdo (0.14); troque de tipo ou use texto",
-  "tela 6: gabarito suspeito (0.56)",
-  "tela 8: trata de disputa ou evidência contestada (0.86); lição só ensina o núcleo estabelecido"
+  "tela 7: trata de disputa ou evidência contestada (0.85); lição só ensina o núcleo estabelecido",
+  "tela 8: marcada consenso, JEV diz emergente (0.67)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.86
+  },
   "interesse": {
    "type": "score",
-   "score": 3.04,
+   "score": 3.14,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -146,53 +150,35 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.03,
-    "3": 0.9,
-    "4": 0.07
+    "2": 0.01,
+    "3": 0.84,
+    "4": 0.15
    },
-   "confidence": 0.92
+   "confidence": 0.87
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.35
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 1,
-    "emergente": 0,
-    "especulacao": 0,
-    "controverso": 0
-   },
-   "confidence": 1
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.17
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.08
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.45
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 1,
-    "emergente": 0,
-    "especulacao": 0,
-    "controverso": 0
-   },
-   "confidence": 1
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.19
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.08
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.95
+   "noul": 0.14
   },
   "ia_3": {
    "type": "noul",
@@ -202,94 +188,126 @@
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "controverso": 0,
     "consenso": 1,
-    "emergente": 0,
     "especulacao": 0,
-    "controverso": 0
+    "emergente": 0
    },
    "confidence": 0.99
   },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.34
+  },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.08
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.95
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.45
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.95,
-    "emergente": 0.02,
+    "controverso": 0.01,
+    "consenso": 0.96,
     "especulacao": 0.02,
-    "controverso": 0.01
+    "emergente": 0.01
    },
-   "confidence": 0.94
+   "confidence": 0.95
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.15
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.09
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.96
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.37
   },
   "ambigua_5": {
    "type": "noul",
    "noul": 0.06
   },
+  "respondivel_6": {
+   "type": "noul",
+   "noul": 0.58
+  },
+  "obvia_6": {
+   "type": "noul",
+   "noul": 0.24
+  },
   "ambigua_6": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.28
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.33
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "controverso": 0,
+    "emergente": 0.01,
     "consenso": 0.99,
-    "emergente": 0,
-    "especulacao": 0,
-    "controverso": 0.01
+    "especulacao": 0
    },
-   "confidence": 0.98
+   "confidence": 0.99
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_7": {
    "type": "noul",
-   "noul": 0.57
+   "noul": 0.85
   },
   "encaixe_7": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.94
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.24
   },
   "marca_8": {
    "type": "choice",
-   "choice": "consenso",
+   "choice": "emergente",
    "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.93,
-    "especulacao": 0.02,
-    "controverso": 0.04
+    "controverso": 0.01,
+    "emergente": 0.67,
+    "consenso": 0.32,
+    "especulacao": 0
    },
-   "confidence": 0.9
+   "confidence": 0.55
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.29
   },
   "disputa_8": {
    "type": "noul",
-   "noul": 0.86
+   "noul": 0.18
   }
  },
- "custo_usd": 0.007
+ "custo_usd": 0.00315
 }

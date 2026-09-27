@@ -1,17 +1,16 @@
 {
  "id": "ikigai",
  "tipo": "licao",
- "criado": "2026-09-27T15:45:52",
- "modelo": "deepseek-flash",
- "rodadas": 2,
+ "criado": "2026-09-27T19:21:23",
+ "modelo": "reaproveitada+deepseek-v4-pro+editor",
+ "rodadas": 3,
  "licao": {
-  "gancho": "Quatro círculos se cruzam. Paixão, talento, necessidade do mundo e dinheiro. No centro, a palavra \"ikigai\". O desenho parece sabedoria japonesa antiga, mas foi feito na Espanha em 2011 com outra palavra no meio.",
+  "gancho": "Quatro círculos se cruzam. Paixão, talento, necessidade do mundo e dinheiro. No centro, a palavra \"ikigai\". O desenho parece sabedoria japonesa antiga, mas foi feito na Espanha em 2011 com outra palavra no meio. Aquilo que os japoneses chamam de ikigai é bem mais simples e não cabe num diagrama.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>O diagrama de quatro círculos nasceu em Barcelona. Andrés Zuzunaga desenhou em 2011 um gráfico de propósito de vida, com legendas em espanhol e a palavra <strong>propósito</strong> no centro. Nada de Japão.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Esse diagrama de Venn não tem nada de japonês. Foi desenhado por um astrólogo espanhol, Andrés Zuzunaga, com a palavra \"propósito\" no centro."
    },
    {
     "tipo": "etapas",
@@ -21,109 +20,131 @@
       "texto": "Zuzunaga desenha os quatro círculos. O centro diz \"propósito\"."
      },
      {
-      "nome": "2012",
-      "texto": "O gráfico aparece no livro de Borja Vilaseca e circula em espanhol."
-     },
-     {
       "nome": "2014",
       "texto": "Marc Winn troca a palavra do centro por \"ikigai\" e publica no blog."
      },
      {
       "nome": "2016",
-      "texto": "O diagrama entra num livro de milhões de exemplares e vira sabedoria japonesa."
+      "texto": "O diagrama entra num livro que vende milhões de cópias e vira sabedoria japonesa."
      }
     ],
-    "legenda": "A troca de uma palavra no centro bastou para mudar a origem do desenho."
+    "legenda": "A troca de uma palavra no centro bastou para mudar a origem do desenho.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "texto",
-    "html": "<p>Em japonês, <strong>ikigai</strong> junta <em>iki</em> (viver) e <em>kai</em> (aquilo que compensa). Significa \"o que faz a vida valer a pena\". É palavra do dia a dia: o neto, a horta, o coral da igreja.</p>",
+    "html": "<p>Em japonês, <strong>ikigai</strong> junta <em>iki</em> (viver) e <em>kai</em> (aquilo que compensa). Significa \"o que faz a vida valer a pena\". É palavra do dia a dia. Uma pessoa diz que o neto é seu ikigai, ou a horta, ou o coral da igreja.</p>",
     "marca": "consenso",
     "fonte": 5
    },
    {
     "tipo": "comparar",
     "a": "O diagrama",
-    "b": "O uso japonês",
+    "b": "O ikigai japonês",
     "linhas": [
      {
       "aspecto": "Origem",
-      "a": "Barcelona, 2011",
-      "b": "palavra corrente, livro de 1966"
+      "a": "Espanha, 2011",
+      "b": "Japão, palavra corrente, livro de 1966"
      },
      {
-      "aspecto": "Papel do dinheiro",
-      "a": "um dos quatro requisitos",
-      "b": "ausente da definição"
+      "aspecto": "Dinheiro",
+      "a": "requisito essencial",
+      "b": "não aparece na definição"
      },
      {
       "aspecto": "Quantos",
       "a": "um só, no centro",
-      "b": "vários ao mesmo tempo, e mudam"
+      "b": "vários ao mesmo tempo: uma pessoa, um lugar, um trabalho, um passatempo"
      }
     ],
-    "legenda": "Duas coisas diferentes com o mesmo nome."
+    "legenda": "Duas ideias diferentes que passaram a dividir o mesmo nome."
    },
    {
-    "tipo": "figura",
-    "fig": "nenhuma"
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "A psiquiatra Mieko Kamiya entrevistou pacientes desse sanatório, pessoas que tinham perdido saúde e liberdade. O livro que escreveu pergunta: como alguém que perdeu tudo reconstrói uma razão para viver?"
    },
    {
-    "tipo": "texto",
-    "html": "<p>A psiquiatra Mieko Kamiya escreveu o livro de referência em 1966. Ela entrevistou pacientes com hanseníase num sanatório, pessoas que tinham perdido saúde e liberdade. A pergunta do livro: como alguém que perdeu tudo reconstrói uma razão para continuar.</p>",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Objeto",
+      "texto": "aquilo que dá sentido: uma pessoa, uma tarefa, uma crença"
+     },
+     {
+      "nome": "Sentimento",
+      "texto": "a sensação de que a vida tem sentido (ikigai-kan)"
+     },
+     {
+      "nome": "Perda",
+      "texto": "o que arranca o ikigai: doença, luto, culpa, ruína dos planos"
+     },
+     {
+      "nome": "Reconstrução",
+      "texto": "encontrar um novo ikigai depois de perder tudo"
+     }
+    ],
+    "legenda": "As duas distinções que organizam o livro de Kamiya: objeto e sentimento são coisas diferentes, e a pergunta central é sobre perda e reconstrução.",
     "marca": "consenso",
     "fonte": 6
    },
    {
     "tipo": "pergunta",
-    "q": "O que a formulação japonesa do ikigai exige que a pessoa tenha?",
+    "q": "O que o diagrama exige que a pessoa tenha para ter ikigai?",
     "alts": [
-     "Um trabalho que una paixão, talento, utilidade e salário",
-     "Dinheiro suficiente para viver com conforto",
-     "Alguma fonte de sentido, que pode ser uma pessoa, uma tarefa ou uma crença"
+     "Pelo menos uma fonte de sentido, como um hobby ou um relacionamento",
+     "Dinheiro, porque sem ele a pessoa não vive bem",
+     "Quatro coisas ao mesmo tempo: paixão, talento, utilidade e remuneração"
     ],
     "correta": 2,
-    "porque": "Nos estudos japoneses, ikigai é qualquer coisa que faça a vida valer a pena. Vem no plural, sem exigência de remuneração."
+    "porque": "O diagrama define ikigai como a interseção dos quatro círculos. Quem não tem os quatro juntos, não tem o centro."
    },
    {
     "tipo": "pergunta",
     "q": "Uma pessoa aposentada e sem trabalho remunerado não teria ikigai segundo o diagrama. O que isso revela?",
     "alts": [
-     "Que aposentados realmente perdem o sentido da vida",
+     "Que aposentados frequentemente perdem o sentido da vida",
      "Que a definição por interseção exclui exatamente a população em que Kamiya estudou o conceito",
-     "Que o diagrama foi traduzido errado do japonês"
+     "Que o diagrama foi mal traduzido do japonês"
     ],
     "correta": 1,
-    "porque": "O diagrama exige as quatro condições ao mesmo tempo. Quem não é pago pelo que faz fica sem centro, justamente o grupo de onde o conceito veio."
+    "porque": "Kamiya formulou o ikigai a partir de doentes e isolados. O diagrama, ao exigir remuneração, deixa de fora justamente quem inspirou a pesquisa original."
    },
    {
     "tipo": "texto",
-    "html": "<p>Kamiya separou o <strong>objeto</strong> do ikigai, aquilo que dá sentido, do <strong>sentimento</strong> de que a vida tem sentido. Podem se descolar: alguém tem muito do primeiro e pouco do segundo, ou o contrário.</p>",
+    "html": "<p>A pergunta japonesa não é \"como unir paixão, talento e salário?\". É \"o que ainda faz esta vida valer a pena?\". Pode ser uma pessoa, uma tarefa, uma crença. Não é interseção, é lista aberta.</p>",
     "marca": "consenso",
     "fonte": 6
    }
   ],
-  "fecho": "Se o sentido da vida não é algo que se acha, mas algo que se negocia com o que existe em volta, o que isso faz com a ideia de buscar um chamado único? A antropologia tem outros nomes para esse ponto de vista."
+  "fecho": "Se o sentido é negociado com o que existe em volta, em vez de estar pronto para ser achado, isso muda tudo. A antropologia tem outro nome para essa maneira de ver: descrição densa."
  },
- "erros": [
-  "só 3 telas visuais de 9 (pelo menos metade)",
-  "fecho: estrutura «não é X, mas Y»"
- ],
+ "erros": [],
  "avisos": [
-  "tela 8: duas perguntas seguidas",
-  "tela 9: mais de um negrito"
+  "gancho com mais de 45 palavras",
+  "tela 3: 43 palavras (máximo 40)",
+  "tela 8: duas perguntas seguidas"
  ],
  "alertas_jev": [
-  "tela 1: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
+  "tela 1: trata de disputa ou evidência contestada (0.93); lição só ensina o núcleo estabelecido",
+  "tela 2: marcada consenso, JEV diz especulacao (0.66)",
   "tela 2: trata de disputa ou evidência contestada (0.88); lição só ensina o núcleo estabelecido",
-  "tela 4: trata de disputa ou evidência contestada (0.85); lição só ensina o núcleo estabelecido",
-  "tela 5: soa como IA (0.55)",
-  "tela 9: marcada consenso, JEV diz especulacao (0.91)"
+  "tela 4: trata de disputa ou evidência contestada (0.87); lição só ensina o núcleo estabelecido",
+  "tela 6: marcada consenso, JEV diz especulacao (0.81)",
+  "tela 6: o tipo visual não combina com o conteúdo (0.34); troque de tipo ou use texto",
+  "tela 9: marcada consenso, JEV diz especulacao (0.62)",
+  "tela 9: trata de disputa ou evidência contestada (0.88); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.89
+  },
   "interesse": {
    "type": "score",
-   "score": 3.03,
+   "score": 3.12,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -134,34 +155,42 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.02,
-    "3": 0.92,
-    "4": 0.06
+    "2": 0.01,
+    "3": 0.86,
+    "4": 0.13
    },
-   "confidence": 0.93
+   "confidence": 0.89
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.24
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.33,
-    "emergente": 0.18,
-    "consenso": 0.44,
-    "controverso": 0.05
-   },
-   "confidence": 0.26
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.89
+   "noul": 0.93
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.35
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "especulacao",
+   "probabilities": {
+    "especulacao": 0.66,
+    "controverso": 0.04,
+    "consenso": 0.2,
+    "emergente": 0.1
+   },
+   "confidence": 0.54
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_2": {
    "type": "noul",
@@ -173,65 +202,101 @@
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.17
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.21,
-    "controverso": 0.02,
-    "emergente": 0.01,
-    "consenso": 0.76
+    "especulacao": 0.28,
+    "controverso": 0.03,
+    "consenso": 0.67,
+    "emergente": 0.02
    },
-   "confidence": 0.68
+   "confidence": 0.56
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.16
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.32
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.85
+   "noul": 0.87
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.95
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.55
+   "noul": 0.3
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.16
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.41
   },
   "marca_6": {
    "type": "choice",
-   "choice": "consenso",
+   "choice": "especulacao",
    "probabilities": {
-    "especulacao": 0.35,
-    "emergente": 0.08,
-    "consenso": 0.55,
-    "controverso": 0.02
+    "emergente": 0.1,
+    "controverso": 0.03,
+    "consenso": 0.05,
+    "especulacao": 0.81
    },
-   "confidence": 0.4
+   "confidence": 0.75
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.17
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.58
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.15
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.19
   },
   "ambigua_8": {
    "type": "noul",
@@ -239,23 +304,27 @@
   },
   "ia_9": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.3
   },
   "marca_9": {
    "type": "choice",
    "choice": "especulacao",
    "probabilities": {
-    "emergente": 0.05,
-    "consenso": 0.01,
-    "especulacao": 0.91,
-    "controverso": 0.03
+    "emergente": 0.12,
+    "especulacao": 0.62,
+    "consenso": 0.22,
+    "controverso": 0.04
    },
-   "confidence": 0.88
+   "confidence": 0.49
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_9": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.88
   }
  },
- "custo_usd": 0.00862
+ "custo_usd": 0.00418
 }

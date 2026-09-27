@@ -1,26 +1,27 @@
 {
  "id": "tunelamento-quantico",
  "tipo": "licao",
- "criado": "2026-09-27T15:38:03",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:24:00",
+ "modelo": "reaproveitada",
  "rodadas": 2,
  "licao": {
-  "gancho": "Imagine uma bola dentro de um vale. Para sair, ela precisa de energia suficiente para subir a colina. Se não tem, volta. Partículas subatômicas fazem diferente: atravessam a barreira sem energia extra.",
+  "gancho": "Imagine uma bola presa num vale. Para sair, ela precisa de energia suficiente para subir a colina. Se não tem, volta. Partículas subatômicas fazem diferente: atravessam a barreira sem ganhar energia extra. Isso é o tunelamento quântico.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Na física clássica, uma partícula com energia menor que a barreira não pode atravessá-la. Na mecânica quântica, existe uma probabilidade maior que zero de encontrá-la do outro lado. Isso é o tunelamento quântico.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Uma partícula clássica fica presa no vale. Uma partícula quântica pode aparecer do outro lado da barreira."
    },
    {
     "tipo": "curva",
     "forma": "queda",
-    "eixo_x": "dentro da barreira",
-    "eixo_y": "amplitude da função de onda",
+    "eixo_x": "distância dentro da barreira",
+    "eixo_y": "probabilidade de encontrar a partícula",
     "marco": {
      "x": 0.5,
-     "rotulo": "meia barreira"
+     "rotulo": "meio da barreira"
     },
-    "legenda": "Dentro da barreira, a amplitude decai exponencialmente. Não zera de repente: sobra um pouco do outro lado, e é essa sobra que permite o tunelamento.",
+    "legenda": "Dentro da barreira, a chance de encontrar a partícula cai rápido, mas não zera. Se a barreira for fina, sobra uma chance pequena, porém real, do outro lado.",
     "marca": "consenso",
     "fonte": 17
    },
@@ -28,12 +29,36 @@
     "tipo": "pergunta",
     "q": "O que acontece com a energia da partícula durante o tunelamento?",
     "alts": [
-     "A partícula ganha energia emprestada para pular a barreira",
+     "Ela pega energia emprestada e depois devolve",
      "A energia total permanece a mesma antes e depois",
-     "A partícula perde energia ao atravessar"
+     "Ela perde energia ao atravessar"
     ],
     "correta": 1,
-    "porque": "A energia total medida antes e depois é a mesma. O que muda é a posição onde a partícula é encontrada, com uma probabilidade calculável."
+    "porque": "A energia medida antes e depois é idêntica. O tunelamento muda a posição onde a partícula é encontrada, não a sua energia."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "1. Partícula presa",
+      "texto": "Dentro do núcleo, a partícula alfa é segurada pela força nuclear forte."
+     },
+     {
+      "nome": "2. Barreira eletrostática",
+      "texto": "Para sair, precisa vencer a repulsão elétrica do resto do núcleo, uma barreira de energia."
+     },
+     {
+      "nome": "3. Tunelamento",
+      "texto": "Mesmo com energia menor que a altura da barreira, a partícula alfa tem uma chance de atravessá-la."
+     },
+     {
+      "nome": "4. Emissão",
+      "texto": "A partícula aparece do lado de fora. Foi isso que Gamow, Gurney e Condon explicaram em 1928."
+     }
+    ],
+    "legenda": "O decaimento alfa, um quebra-cabeça de décadas, foi a primeira vitória da ideia de tunelamento.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "comparar",
@@ -48,92 +73,80 @@
      {
       "aspecto": "Energia da partícula alfa",
       "a": "8,78 MeV",
-      "b": "4,2 MeV"
+      "b": "cerca de 4,2 MeV"
      }
     ],
-    "legenda": "Uma diferença de pouco mais que o dobro na energia da partícula alfa corresponde a mais de vinte ordens de grandeza na meia-vida.",
+    "legenda": "A energia da partícula alfa do urânio é só um pouco mais que o dobro da do polônio. Mas sua meia-vida é mais de vinte ordens de grandeza maior. Essa sensibilidade extrema é a assinatura do tunelamento.",
     "marca": "consenso",
     "fonte": 12
+   },
+   {
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "Um pacote de ondas quânticas encontra uma barreira e parte dele tunela para o outro lado. É esse 'vazamento' que explica o fenômeno."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o tunelamento é essencial para o Sol brilhar?",
+    "alts": [
+     "Porque ele aumenta a temperatura do núcleo para milhões de graus",
+     "Porque permite que prótons se fundam mesmo sem energia clássica suficiente para vencer a repulsão elétrica",
+     "Porque ele cria a força gravitacional que comprime o núcleo solar"
+    ],
+    "correta": 1,
+    "porque": "No núcleo do Sol, a 15 milhões de graus, a energia dos prótons é baixa demais para vencer a repulsão entre eles pela física clássica. O tunelamento torna a fusão possível.",
+    "marca": "consenso",
+    "fonte": 11
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
-      "nome": "Partícula alfa no núcleo",
-      "texto": "presa pela força nuclear forte"
+      "nome": "Ponta do microscópio",
+      "texto": "Uma agulha metálica muito fina varre a superfície de uma amostra."
      },
      {
-      "nome": "Barreira coulombiana",
-      "texto": "repulsão elétrica do resto do núcleo"
+      "nome": "Lacuna de vácuo",
+      "texto": "Uma distância minúscula, de poucos átomos, separa a ponta da superfície."
      },
      {
-      "nome": "Tunelamento",
-      "texto": "atravessa a barreira mesmo sem energia suficiente"
+      "nome": "Corrente de tunelamento",
+      "texto": "Elétrons tunelam através do vácuo. A corrente é extremamente sensível à distância."
      },
      {
-      "nome": "Emissão",
-      "texto": "a partícula aparece do lado de fora"
+      "nome": "Imagem atômica",
+      "texto": "O aparelho ajusta a altura da ponta para manter a corrente constante, revelando o relevo de átomos individuais."
      }
     ],
-    "legenda": "Gamow, Gurney e Condon explicaram o decaimento alfa em 1928 com esse mecanismo.",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "comparar",
-    "a": "Clássico",
-    "b": "Quântico",
-    "linhas": [
-     {
-      "aspecto": "Atravessar barreira",
-      "a": "impossível sem energia suficiente",
-      "b": "possível com probabilidade menor que 1"
-     },
-     {
-      "aspecto": "Energia da partícula",
-      "a": "precisa ser maior que a barreira",
-      "b": "pode ser menor que a barreira"
-     },
-     {
-      "aspecto": "Dependência",
-      "a": "não se aplica",
-      "b": "probabilidade cai exponencialmente com largura, altura e massa"
-     }
-    ],
-    "legenda": "Mesma situação física, regras diferentes."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>O microscópio de tunelamento de varredura usa uma corrente de elétrons que atravessa uma lacuna de vácuo. Essa corrente varia exponencialmente com a distância, permitindo imagear átomos individuais.</p>",
+    "legenda": "O microscópio de tunelamento de varredura, inventado em 1981, transformou tunelamento quântico em imagens de átomos. Binnig e Rohrer ganharam o Nobel de Física por isso em 1986.",
     "marca": "consenso",
     "fonte": 6
    },
    {
-    "tipo": "pergunta",
-    "q": "Por que o tunelamento é relevante para a fusão no Sol?",
-    "alts": [
-     "Porque aumenta a energia dos prótons",
-     "Porque permite que prótons atravessem a barreira coulombiana mesmo com energia térmica insuficiente",
-     "Porque faz os prótons se moverem mais rápido"
-    ],
-    "correta": 1,
-    "porque": "A temperatura do núcleo solar é baixa demais para vencer a barreira classicamente. O tunelamento, combinado com a cauda da distribuição de Maxwell-Boltzmann, torna a fusão possível.",
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Imagem de átomos de ouro obtida por um microscópio de tunelamento. Cada protuberância é um átomo individual. Um aparelho que só funciona por causa do tunelamento quântico.",
     "marca": "consenso",
-    "fonte": 11
+    "fonte": 6
    }
   ],
-  "fecho": "O tunelamento é um exemplo de como a mecânica quântica desafia a intuição. Outro fenômeno igualmente estranho é o emaranhamento quântico, onde partículas se correlacionam de forma que desafia a noção de realidade local."
+  "fecho": "O tunelamento é um dos pilares da mecânica quântica. Outro fenômeno igualmente estranho, e que depende dele para existir em certos dispositivos, é a supercondutividade."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "tela 5: legenda com mais de 25 palavras"
+ ],
  "alertas_jev": [
-  "tela 1: soa como IA (0.51)",
-  "tela 6: soa como IA (0.51)"
+  "tela 3: a pergunta depende de algo que a lição ainda não mostrou (0.32)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.97
+  },
   "interesse": {
    "type": "score",
-   "score": 2.96,
+   "score": 2.95,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -144,34 +157,42 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.06,
-    "3": 0.92,
+    "2": 0.07,
+    "3": 0.91,
     "4": 0.02
    },
-   "confidence": 0.94
+   "confidence": 0.93
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.51
+   "noul": 0.44
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.08
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.04
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.39
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "emergente": 0,
-    "especulacao": 0,
     "consenso": 1,
+    "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.29
   },
   "disputa_2": {
    "type": "noul",
@@ -179,53 +200,69 @@
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.8
+   "noul": 0.83
+  },
+  "respondivel_3": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "obvia_3": {
+   "type": "noul",
+   "noul": 0.38
   },
   "ambigua_3": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.15
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.27
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "emergente": 0,
-    "especulacao": 0,
     "consenso": 1,
+    "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.28
+  },
   "disputa_4": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.1
   },
   "encaixe_4": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.94
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.22
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "emergente": 0,
-    "especulacao": 0,
     "consenso": 1,
+    "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.57
+  },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.05
   },
   "encaixe_5": {
    "type": "noul",
@@ -233,39 +270,78 @@
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.51
+   "noul": 0.36
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.28
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.04
   },
-  "encaixe_6": {
+  "respondivel_7": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.5
   },
-  "ia_7": {
+  "obvia_7": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.42
   },
-  "marca_7": {
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
     "emergente": 0,
-    "especulacao": 0,
-    "controverso": 0
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
    },
    "confidence": 1
   },
-  "disputa_7": {
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.03
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "disputa_9": {
    "type": "noul",
    "noul": 0.04
-  },
-  "ambigua_8": {
-   "type": "noul",
-   "noul": 0.05
   }
  },
- "custo_usd": 0.01038
+ "custo_usd": 0.00474
 }

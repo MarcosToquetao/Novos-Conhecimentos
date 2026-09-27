@@ -1,28 +1,16 @@
 {
  "id": "overfitting",
  "tipo": "licao",
- "criado": "2026-09-27T16:31:00",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:22:20",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Um modelo de computador que prevê o que o cliente vai comprar pode acertar todos os dados de compras passadas e errar feio em qualquer compra futura. Por quê? Porque ele decorou os horários específicos, que nunca mais vão se repetir.",
+  "gancho": "Um modelo de computador que prevê o que o cliente vai comprar pode acertar todos os dados de compras passadas e errar feio em qualquer compra futura. Por quê? Porque ele decorou os horários específicos, que nunca mais vão se repetir. Isso se chama sobreajuste.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Isso é <strong>sobreajuste</strong>: o modelo se ajusta tão bem aos dados de treino que captura o ruído, o acaso, e não o padrão real.</p>"
-   },
-   {
-    "tipo": "curva",
-    "forma": "u",
-    "eixo_x": "complexidade do modelo",
-    "eixo_y": "erro em dados novos",
-    "marco": {
-     "x": 0.5,
-     "rotulo": "equilíbrio"
-    },
-    "legenda": "O erro em dados novos cai e depois sobe. O ponto ótimo fica no meio, entre subajuste e sobreajuste.",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "A linha reta captura a tendência geral; a curva complexa tenta conectar todos os pontos, inclusive o ruído."
    },
    {
     "tipo": "comparar",
@@ -45,7 +33,7 @@
       "b": "decora ruído e flutuações"
      }
     ],
-    "legenda": "O erro total se decompõe em viés, variância e ruído irredutível.",
+    "legenda": "O erro total se decompõe em viés, variância e ruído irredutível. O ponto ótimo fica no equilíbrio entre os dois.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -61,24 +49,14 @@
     "porque": "O sobreajuste ocorre quando o modelo aprende os desvios causados por erros de medição ou acaso, e não a tendência real."
    },
    {
-    "tipo": "comparar",
-    "a": "Treino",
-    "b": "Teste",
-    "linhas": [
-     {
-      "aspecto": "Dados usados",
-      "a": "usados para ajustar o modelo",
-      "b": "não vistos pelo modelo"
-     },
-     {
-      "aspecto": "Desempenho em sobreajuste",
-      "a": "muito alto",
-      "b": "muito baixo"
-     }
-    ],
-    "legenda": "Se o desempenho no treino é muito melhor que no teste, há sobreajuste.",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Um exemplo extremo: a curva tenta passar por todos os pontos de ruído, deixando de fora a tendência geral dos dados."
+   },
+   {
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "O erro no treino cai sempre, mas o erro em dados novos passa a subir a partir de certo ponto. É ali que se deve parar."
    },
    {
     "tipo": "etapas",
@@ -96,65 +74,62 @@
       "texto": "Meça o desempenho nos dados reservados."
      }
     ],
-    "legenda": "Comparar desempenho no treino e no teste revela sobreajuste.",
+    "legenda": "Comparar desempenho no treino e no teste revela sobreajuste. É a validação cruzada.",
     "marca": "consenso",
     "fonte": 2
-   },
-   {
-    "tipo": "camadas",
-    "camadas": [
-     {
-      "nome": "Regularização",
-      "nota": "penaliza parâmetros irrelevantes"
-     },
-     {
-      "nome": "Early stopping",
-      "nota": "para o treino no momento certo"
-     },
-     {
-      "nome": "Dropout",
-      "nota": "remove neurônios aleatoriamente durante o treino"
-     },
-     {
-      "nome": "Poda",
-      "nota": "simplifica redes após o treino"
-     }
-    ],
-    "eixo": {
-     "topo": "menos complexo",
-     "base": "mais simples"
-    },
-    "legenda": "Técnicas para reduzir o sobreajuste e tornar o modelo mais suave.",
-    "marca": "consenso",
-    "fonte": 1
    },
    {
     "tipo": "pergunta",
     "q": "Um modelo tem erro baixíssimo no treino, mas erro alto em dados novos. O que fazer?",
     "alts": [
-     "Treinar por mais tempo",
-     "Aumentar a complexidade do modelo",
-     "Usar validação cruzada para detectar e corrigir o sobreajuste"
+     "Treinar por mais tempo, porque o modelo ainda não aprendeu tudo",
+     "Aumentar a complexidade para capturar melhor os detalhes",
+     "Usar validação cruzada para detectar o sobreajuste e simplificar o modelo ou parar o treino antes"
     ],
     "correta": 2,
-    "porque": "A validação cruzada é a ferramenta principal para detectar sobreajuste, comparando o desempenho no treino com o desempenho no teste."
+    "porque": "Treinar mais ou aumentar a complexidade só piora. O early stopping interrompe o treino no momento em que o erro em dados novos para de cair."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Bom modelo",
+    "b": "Modelo sobreajustado",
+    "linhas": [
+     {
+      "aspecto": "Erro no treino",
+      "a": "baixo",
+      "b": "baixíssimo"
+     },
+     {
+      "aspecto": "Erro em dados novos",
+      "a": "baixo",
+      "b": "alto"
+     },
+     {
+      "aspecto": "O que aprendeu",
+      "a": "a tendência",
+      "b": "os exemplos de cor"
+     }
+    ],
+    "legenda": "Acertar o treino não é sinal de qualidade. O que importa é o desempenho em dados que o modelo nunca viu.",
+    "marca": "consenso",
+    "fonte": 1
    }
   ],
-  "fecho": "Como saber se um modelo realmente aprendeu ou só decorou? A resposta está na convexidade e otimização, que ajudam a encontrar o ponto de equilíbrio."
+  "fecho": "Como saber se um modelo realmente aprendeu ou só decorou? A resposta está na validação cruzada. Mas para treinar de forma eficiente é preciso encontrar o ponto mais baixo de uma função de erro. Isso tem a ver com convexidade e otimização."
  },
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 2: soa como IA (0.56)",
-  "tela 3: soa como IA (0.56)",
-  "tela 6: soa como IA (0.53)",
-  "tela 7: soa como IA (0.57)",
-  "tela 7: o tipo visual não combina com o conteúdo (0.45); troque de tipo ou use texto"
+  "tela 2: soa como IA (0.62)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.95
+  },
   "interesse": {
    "type": "score",
-   "score": 2.84,
+   "score": 2.81,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -165,15 +140,19 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.16,
-    "3": 0.84,
+    "2": 0.19,
+    "3": 0.81,
     "4": 0
    },
-   "confidence": 0.86
+   "confidence": 0.84
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.41
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.13
   },
   "disputa_1": {
    "type": "noul",
@@ -181,127 +160,133 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.62
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.01,
     "emergente": 0,
-    "controverso": 0,
-    "consenso": 1,
-    "especulacao": 0
+    "consenso": 0.99
    },
    "confidence": 0.99
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.59
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.08
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.81
   },
-  "ia_3": {
+  "respondivel_3": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.9
   },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "controverso": 0.01,
-    "consenso": 0.99,
-    "especulacao": 0
-   },
-   "confidence": 0.99
-  },
-  "disputa_3": {
+  "obvia_3": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.33
   },
-  "encaixe_3": {
+  "ambigua_3": {
    "type": "noul",
-   "noul": 0.85
+   "noul": 0.18
   },
-  "ambigua_4": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.19
+   "noul": 0.42
   },
-  "ia_5": {
+  "tecnico_4": {
    "type": "noul",
-   "noul": 0.5
+   "noul": 0.15
   },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "controverso": 0,
-    "consenso": 1,
-    "especulacao": 0
-   },
-   "confidence": 1
-  },
-  "disputa_5": {
+  "disputa_4": {
    "type": "noul",
    "noul": 0.07
   },
-  "encaixe_5": {
+  "ia_5": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.43
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.1
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.53
+   "noul": 0.5
   },
   "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "controverso": 0,
     "consenso": 1,
-    "especulacao": 0
-   },
-   "confidence": 1
-  },
-  "disputa_6": {
-   "type": "noul",
-   "noul": 0.05
-  },
-  "encaixe_6": {
-   "type": "noul",
-   "noul": 0.95
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.57
-  },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
     "emergente": 0,
-    "consenso": 1,
     "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
-  "disputa_7": {
+  "tecnico_6": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.19
   },
-  "encaixe_7": {
+  "disputa_6": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.06
   },
-  "ambigua_8": {
+  "encaixe_6": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.93
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.91
   }
  },
- "custo_usd": 0.00648
+ "custo_usd": 0.00171
 }

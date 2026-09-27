@@ -130,103 +130,104 @@ Conceito: Biofilmes (Biologia). Fontes do documento usadas: 1 Stewart e Costerto
 
 ```json
 {
- "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. Mesma espécie, mesmo remédio, resultado oposto.",
- "telas": [
-  {
-   "tipo": "texto",
-   "html": "<p>A placa que se forma nos dentes depois de um dia sem escovar é um <strong>biofilme</strong>: bactérias que grudam numa superfície e se envolvem numa gosma que elas mesmas produzem.</p>"
-  },
-  {
-   "tipo": "estimar",
-   "q": "Num cateter, quantas vezes mais tobramicina é preciso para vencer a Pseudomonas em biofilme, comparada à mesma bactéria solta?",
-   "unidade": "vezes",
-   "min": 1,
-   "max": 10000,
-   "escala": "log",
-   "resposta": 1000,
-   "legenda": "Cerca de mil vezes. E a bactéria não mudou de genes: mudou de jeito de viver.",
-   "marca": "consenso",
-   "fonte": 1
-  },
-  {
-   "tipo": "camadas",
-   "camadas": [
+  "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. Mesma espécie, mesmo remédio, resultado oposto.",
+  "telas": [
     {
-     "nome": "Superfície",
-     "nota": "muito oxigênio, células se dividindo"
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "A placa que se forma nos dentes depois de um dia sem escovar é um biofilme: bactérias grudadas numa superfície, presas numa gosma que elas mesmas fabricam."
     },
     {
-     "nome": "Meio",
-     "nota": "menos oxigênio, crescimento lento"
+      "tipo": "estimar",
+      "q": "Num cateter, quantas vezes mais tobramicina é preciso para vencer a Pseudomonas em biofilme, comparada à mesma bactéria solta?",
+      "unidade": "vezes",
+      "min": 1,
+      "max": 10000,
+      "escala": "log",
+      "resposta": 1000,
+      "legenda": "Cerca de mil vezes. E a bactéria não mudou de genes: mudou de jeito de viver.",
+      "marca": "consenso",
+      "fonte": 1
     },
     {
-     "nome": "Fundo",
-     "nota": "quase sem oxigênio, células quase paradas"
+      "tipo": "camadas",
+      "camadas": [
+        {
+          "nome": "Superfície",
+          "nota": "muito oxigênio, células se dividindo"
+        },
+        {
+          "nome": "Meio",
+          "nota": "menos oxigênio, crescimento lento"
+        },
+        {
+          "nome": "Fundo",
+          "nota": "quase sem oxigênio, células quase paradas"
+        }
+      ],
+      "eixo": {
+        "topo": "mais oxigênio",
+        "base": "menos oxigênio"
+      },
+      "legenda": "Muitos antibióticos atacam células em divisão. As do fundo quase não se dividem e passam ilesas.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Por que essas bactérias aguentam tanto antibiótico?",
+      "alts": [
+        "Sofreram mutações que as tornaram resistentes",
+        "O modo de vida em comunidade as protege, e a proteção some se forem separadas",
+        "O antibiótico não consegue entrar em nenhuma parte do biofilme"
+      ],
+      "correta": 1,
+      "porque": "Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção é do arranjo, não dos genes."
+    },
+    {
+      "tipo": "pontos",
+      "valor": 65,
+      "frase": "infecções microbianas estão associadas a biofilmes.",
+      "legenda": "Estimativa do CDC e do NIH, agências de saúde dos Estados Unidos.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "comparar",
+      "a": "Solta",
+      "b": "Em biofilme",
+      "linhas": [
+        {
+          "aspecto": "Antibiótico",
+          "a": "morre com a dose normal",
+          "b": "aguenta doses muito maiores"
+        },
+        {
+          "aspecto": "Crescimento",
+          "a": "todas se dividem",
+          "b": "o fundo quase para"
+        },
+        {
+          "aspecto": "Proteção",
+          "a": "nenhuma",
+          "b": "matriz de açúcares, proteínas e DNA"
+        }
+      ],
+      "legenda": "Mesma espécie nas duas colunas."
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma infecção numa prótese de quadril volta sempre que o antibiótico acaba. O que isso sugere?",
+      "alts": [
+        "A dose foi baixa e basta aumentar",
+        "Um biofilme na prótese protege células que sobrevivem ao tratamento",
+        "A bactéria é de uma espécie nova"
+      ],
+      "correta": 1,
+      "porque": "O antibiótico mata as células ativas, mas as do fundo, quase paradas, sobrevivem e repovoam tudo. Muitas vezes é preciso retirar a prótese."
     }
-   ],
-   "eixo": {
-    "topo": "mais oxigênio",
-    "base": "menos oxigênio"
-   },
-   "legenda": "Muitos antibióticos atacam células em divisão. As do fundo quase não se dividem e passam ilesas.",
-   "marca": "consenso",
-   "fonte": 3
-  },
-  {
-   "tipo": "pergunta",
-   "q": "Por que essas bactérias aguentam tanto antibiótico?",
-   "alts": [
-    "Sofreram mutações que as tornaram resistentes",
-    "O modo de vida em comunidade as protege, e a proteção some se forem separadas",
-    "O antibiótico não consegue entrar em nenhuma parte do biofilme"
-   ],
-   "correta": 1,
-   "porque": "Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção é do arranjo, não dos genes."
-  },
-  {
-   "tipo": "pontos",
-   "valor": 65,
-   "frase": "infecções microbianas estão associadas a biofilmes.",
-   "legenda": "Estimativa do CDC e do NIH, agências de saúde dos Estados Unidos.",
-   "marca": "consenso",
-   "fonte": 2
-  },
-  {
-   "tipo": "comparar",
-   "a": "Solta",
-   "b": "Em biofilme",
-   "linhas": [
-    {
-     "aspecto": "Antibiótico",
-     "a": "morre com a dose normal",
-     "b": "aguenta doses muito maiores"
-    },
-    {
-     "aspecto": "Crescimento",
-     "a": "todas se dividem",
-     "b": "o fundo quase para"
-    },
-    {
-     "aspecto": "Proteção",
-     "a": "nenhuma",
-     "b": "matriz de açúcares, proteínas e DNA"
-    }
-   ],
-   "legenda": "Mesma espécie nas duas colunas."
-  },
-  {
-   "tipo": "pergunta",
-   "q": "Uma infecção numa prótese de quadril volta sempre que o antibiótico acaba. O que isso sugere?",
-   "alts": [
-    "A dose foi baixa e basta aumentar",
-    "Um biofilme na prótese protege células que sobrevivem ao tratamento",
-    "A bactéria é de uma espécie nova"
-   ],
-   "correta": 1,
-   "porque": "O antibiótico mata as células ativas, mas as do fundo, quase paradas, sobrevivem e repovoam tudo. Muitas vezes é preciso retirar a prótese."
-  }
- ],
- "fecho": "Como bactérias soltas sabem que chegou a hora de virar comunidade? Elas contam umas às outras. Isso tem nome: quorum sensing."
+  ],
+  "fecho": "Como bactérias soltas sabem que chegou a hora de virar comunidade? Elas contam umas às outras. Isso tem nome: quorum sensing."
 }
 ```
 

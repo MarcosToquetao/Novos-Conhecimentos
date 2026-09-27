@@ -1,15 +1,16 @@
 {
  "id": "efeito-doppler",
  "tipo": "licao",
- "criado": "2026-09-27T16:29:20",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:19:24",
+ "modelo": "reaproveitada",
  "rodadas": 2,
  "licao": {
-  "gancho": "Uma ambulância passa na rua com a sirene ligada. Enquanto ela se aproxima, o som parece mais agudo. Depois que se afasta, fica mais grave. Nada mudou no aparelho que produz o som.",
+  "gancho": "Uma ambulância passa na rua com a sirene ligada. Enquanto ela se aproxima, o som parece mais agudo. Depois que se afasta, fica mais grave. Nada mudou no aparelho que produz o som. O efeito Doppler explica o porquê.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Christian Doppler descreveu o efeito em 1842: a frequência que você percebe depende do movimento relativo entre a fonte e você. Em 1845, Buys Ballot pôs trompetistas num vagão puxado por uma locomotiva e ouviu o tom subir na aproximação e cair no afastamento.</p>",
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "O físico Hippolyte Fizeau mostrou em 1848 que o efeito também vale para ondas eletromagnéticas, como a luz.",
     "marca": "consenso",
     "fonte": 1
    },
@@ -100,8 +101,15 @@
     "fonte": 1
    },
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "O espectro se desloca para o azul se a estrela se aproxima, e para o vermelho se ela se afasta. Cada elemento químico deixa uma assinatura digital de luz.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
     "tipo": "pergunta",
-    "q": "Uma estrela tem linhas espectrais deslocadas para o vermelho. O que isso indica?",
+    "q": "Uma estrela tem linhas espectrais deslocadas para o vermelho. O que isso indica com mais certeza?",
     "alts": [
      "A estrela está se afastando de nós",
      "A estrela esfriou e mudou de cor",
@@ -131,8 +139,26 @@
     "fonte": 4
    },
    {
-    "tipo": "texto",
-    "html": "<p>No ultrassom Doppler, o aparelho mede a velocidade do sangue usando a componente do movimento ao longo do feixe.</p>",
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Feixe de ultrassom",
+      "nota": "emitido pelo aparelho"
+     },
+     {
+      "nome": "Vaso sanguíneo",
+      "nota": "hemácias se movendo em direção ao feixe ou se afastando"
+     },
+     {
+      "nome": "Sinal de retorno",
+      "nota": "frequência muda conforme a velocidade do sangue ao longo do feixe"
+     }
+    ],
+    "eixo": {
+     "topo": "aparelho de ultrassom",
+     "base": "dentro do corpo"
+    },
+    "legenda": "O ultrassom Doppler mede a velocidade do sangue usando o efeito. O feixe precisa estar o mais paralelo possível ao fluxo.",
     "marca": "consenso",
     "fonte": 1
    }
@@ -140,14 +166,19 @@
   "fecho": "Quando a velocidade fica alta, a fórmula clássica não serve mais. O que muda na relatividade restrita, e por que o tempo de quem se move passa diferente?"
  },
  "erros": [],
- "avisos": [
-  "tela 1: 44 palavras (máximo 40)"
+ "avisos": [],
+ "alertas_jev": [
+  "tela 3: técnico demais para leigo (0.70)",
+  "tela 8: técnico demais para leigo (0.74)"
  ],
- "alertas_jev": [],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.92
+  },
   "interesse": {
    "type": "score",
-   "score": 2.68,
+   "score": 2.61,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -158,26 +189,30 @@
    "probabilities": {
     "0": 0,
     "1": 0.02,
-    "2": 0.29,
-    "3": 0.69,
+    "2": 0.35,
+    "3": 0.63,
     "4": 0
    },
-   "confidence": 0.73
+   "confidence": 0.67
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.18
+   "noul": 0.28
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0,
     "emergente": 0,
-    "consenso": 1
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
    },
    "confidence": 1
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_1": {
    "type": "noul",
@@ -185,18 +220,22 @@
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.29
+   "noul": 0.26
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0,
     "emergente": 0,
-    "consenso": 1
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
    },
    "confidence": 1
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.18
   },
   "disputa_2": {
    "type": "noul",
@@ -204,30 +243,42 @@
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.9
+   "noul": 0.95
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.31
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0,
     "emergente": 0,
-    "consenso": 1
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
    },
    "confidence": 1
   },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.7
+  },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.07
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.91
+   "noul": 0.92
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.39
   },
   "ambigua_4": {
    "type": "noul",
@@ -235,73 +286,120 @@
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.29
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "controverso": 0,
     "emergente": 0,
-    "consenso": 1
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
    },
    "confidence": 1
   },
-  "disputa_5": {
-   "type": "noul",
-   "noul": 0.09
-  },
-  "encaixe_5": {
-   "type": "noul",
-   "noul": 0.93
-  },
-  "ambigua_6": {
-   "type": "noul",
-   "noul": 0.08
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.28
-  },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "controverso": 0,
-    "emergente": 0,
-    "consenso": 1
-   },
-   "confidence": 1
-  },
-  "disputa_7": {
+  "tecnico_5": {
    "type": "noul",
    "noul": 0.26
   },
-  "encaixe_7": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.7
+   "noul": 0.07
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.13
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.28
   },
   "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "emergente": 0,
-    "consenso": 1,
     "controverso": 0,
+    "consenso": 1,
     "especulacao": 0
    },
    "confidence": 1
   },
+  "tecnico_8": {
+   "type": "noul",
+   "noul": 0.74
+  },
   "disputa_8": {
    "type": "noul",
+   "noul": 0.34
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.8
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "disputa_9": {
+   "type": "noul",
    "noul": 0.04
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.92
   }
  },
- "custo_usd": 0.00763
+ "custo_usd": 0.00221
 }

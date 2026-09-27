@@ -1,12 +1,17 @@
 {
  "id": "hegel-fenomenologia",
  "tipo": "licao",
- "criado": "2026-09-27T15:35:12",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:20:31",
+ "modelo": "reaproveitada+editor",
  "rodadas": 2,
  "licao": {
   "gancho": "Você já ouviu que Hegel pensava em «tese, antítese e síntese»? Hegel nunca escreveu essa fórmula. Ela vem de Fichte e foi popularizada por comentadores do século XIX.",
   "telas": [
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Página de título da primeira edição da Fenomenologia do Espírito publicada em 1807"
+   },
    {
     "tipo": "figura",
     "fig": "hegel-movimento",
@@ -92,13 +97,21 @@
   ],
   "fecho": "Se a racionalidade é esse espaço de normas que se transformam, o que acontece quando as normas de uma sociedade entram em choque com o que ela efetivamente faz? É o que a Fenomenologia chama de espírito alienado de si mesmo."
  },
- "erros": [],
+ "erros": [
+  "só 4 telas visuais (pelo menos 5)"
+ ],
  "avisos": [],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.16)"
+ ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.55
+  },
   "interesse": {
    "type": "score",
-   "score": 2.53,
+   "score": 2.62,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -108,94 +121,138 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.03,
-    "2": 0.41,
-    "3": 0.56,
+    "1": 0.02,
+    "2": 0.34,
+    "3": 0.64,
     "4": 0
    },
-   "confidence": 0.6
+   "confidence": 0.68
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.23
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0,
-    "especulacao": 0.32,
-    "consenso": 0.56,
-    "controverso": 0.11
-   },
-   "confidence": 0.42
-  },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.11
-  },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.47
-  },
-  "marca_2": {
-   "type": "choice",
-   "choice": "especulacao",
-   "probabilities": {
-    "emergente": 0,
-    "controverso": 0.08,
-    "consenso": 0.43,
-    "especulacao": 0.49
-   },
-   "confidence": 0.32
-  },
-  "disputa_2": {
-   "type": "noul",
-   "noul": 0.09
-  },
-  "ambigua_3": {
+  "tecnico_1": {
    "type": "noul",
    "noul": 0.06
   },
-  "ia_4": {
+  "disputa_1": {
    "type": "noul",
-   "noul": 0.48
+   "noul": 0.14
   },
-  "marca_4": {
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.52,
+    "emergente": 0,
+    "especulacao": 0.42,
+    "controverso": 0.06
+   },
+   "confidence": 0.35
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_3": {
    "type": "choice",
    "choice": "especulacao",
    "probabilities": {
+    "consenso": 0.43,
     "emergente": 0,
-    "controverso": 0.05,
-    "consenso": 0.44,
-    "especulacao": 0.51
+    "especulacao": 0.52,
+    "controverso": 0.05
    },
-   "confidence": 0.34
+   "confidence": 0.35
   },
-  "disputa_4": {
+  "tecnico_3": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.24
   },
-  "encaixe_4": {
+  "disputa_3": {
    "type": "noul",
-   "noul": 0.88
+   "noul": 0.1
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.06
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.45
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.52,
+    "emergente": 0,
+    "especulacao": 0.45,
+    "controverso": 0.03
+   },
+   "confidence": 0.35
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.45
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.08
   },
   "encaixe_5": {
    "type": "noul",
+   "noul": 0.88
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_6": {
+   "type": "noul",
    "noul": 0.9
   },
-  "ambigua_6": {
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "ambigua_7": {
    "type": "noul",
    "noul": 0.12
   }
  },
- "custo_usd": 0.00633
+ "custo_usd": 0.00263
 }

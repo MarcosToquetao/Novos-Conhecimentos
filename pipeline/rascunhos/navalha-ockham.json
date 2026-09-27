@@ -1,102 +1,130 @@
 {
  "id": "navalha-ockham",
  "tipo": "licao",
- "criado": "2026-09-27T15:46:53",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T19:14:54",
+ "modelo": "reaproveitada+deepseek-v4-pro",
  "rodadas": 3,
  "licao": {
-  "gancho": "Todo mundo já ouviu a frase «entidades não devem ser multiplicadas além do necessário», atribuída a Guilherme de Ockham. O problema: ele nunca a escreveu.",
+  "gancho": "A frase «entidades não devem ser multiplicadas além do necessário» é atribuída a Guilherme de Ockham. Mas essas palavras exatas não aparecem em nenhum texto dele. A ideia, no entanto, é real e virou uma base da ciência moderna.",
   "telas": [
    {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Guilherme de Ockham, frade franciscano do século 14. Ele usava princípios de economia explicativa, mas a frase latina mais famosa é de um autor bem posterior.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Manuscrito medieval. A pesquisa histórica mostra que a máxima foi escrita por John Punch, um comentarista de 1639, quase 300 anos depois de Ockham.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
     "tipo": "comparar",
-    "a": "O que Ockham escreveu",
-    "b": "O que se atribui a ele",
+    "a": "Princípio (a ideia)",
+    "b": "Frase famosa (a citação)",
     "linhas": [
      {
-      "aspecto": "Formulação",
-      "a": "princípios contextuais, sem fórmula única",
-      "b": "«Entia non sunt multiplicanda...»"
+      "aspecto": "Origem",
+      "a": "textos de Ockham (século 14)",
+      "b": "John Punch (1639)"
      },
      {
-      "aspecto": "Onde aparece",
-      "a": "em argumentos específicos",
-      "b": "em nenhum texto sobrevivente"
+      "aspecto": "Forma",
+      "a": "princípios dispersos em argumentos específicos",
+      "b": "uma máxima latina única e resumida"
      }
     ],
-    "legenda": "Ockham usava a ideia, mas não a máxima resumida.",
-    "fonte": 1,
+    "legenda": "Ockham aplicava a ideia de economia explicativa. A versão de frase pronta que o tornou famoso veio de um frade irlandês séculos depois.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A navalha de Ockham é uma <strong>heurística</strong>: entre explicações que dão conta dos mesmos fatos, prefira a que exige menos suposições. É uma regra prática, não uma lei da natureza.</p>",
     "marca": "consenso"
    },
    {
-    "tipo": "texto",
-    "html": "<p>Mesmo corrigindo a atribuição, o princípio continua valendo: entre explicações que dão conta igualmente bem dos mesmos fatos, prefira a que exige menos suposições. É uma <strong>heurística</strong>, não uma garantia de verdade.</p>"
-   },
-   {
     "tipo": "pergunta",
-    "q": "Um médico tem duas hipóteses para os sintomas de um paciente: gripe ou doença rara. Ele decide investigar primeiro a gripe. Isso é um uso correto da navalha de Ockham?",
+    "q": "Um médico tem duas hipóteses para os sintomas de um paciente: gripe ou uma doença autoimune rara. Ele decide investigar primeiro a gripe, sem descartar a segunda hipótese. Isso é um uso correto da navalha?",
     "alts": [
-     "Não, porque a doença rara pode ser a verdadeira",
-     "Sim, porque ele está ordenando a investigação pela hipótese mais provável, sem descartar a outra",
-     "Não, porque a navalha de Ockham só vale para teorias científicas, não para diagnóstico"
+     "Sim, é uma heurística para ordenar a investigação, sem eliminar outras possibilidades.",
+     "Não, pois a navalha de Ockham diz que a mais simples é a verdadeira, então a doença rara está descartada.",
+     "Não, a navalha de Ockham não se aplica a diagnósticos médicos, apenas a teorias científicas."
     ],
-    "correta": 1,
-    "porque": "A navalha é uma regra prática para decidir por onde começar, não um veredito sobre qual hipótese é verdadeira."
+    "correta": 0,
+    "porque": "A navalha é uma regra de priorização, não de eliminação. Ela sugere começar pelo caminho mais provável, sem descartar outras hipóteses que precisem de mais investigação.",
+    "marca": "consenso"
    },
    {
-    "tipo": "texto",
-    "html": "<p>O que dá base rigorosa à navalha hoje não é a filosofia medieval, é a teoria da informação. Solomonoff, Kolmogorov e Chaitin formalizaram a ideia de que hipóteses mais compactas merecem mais peso inicial.</p>"
+    "tipo": "foto",
+    "foto": 3,
+    "legenda": "Uma curva complexa passa por todos os pontos. Uma reta mostra a tendência geral. A mais complexa pode capturar ruído, não o padrão, e errar feio em dados novos.",
+    "marca": "consenso",
+    "fonte": 3
    },
    {
     "tipo": "etapas",
     "etapas": [
      {
-      "nome": "Dados observados",
-      "texto": "uma sequência de resultados, como preços de ações ou pixels de uma imagem"
+      "nome": "Dados",
+      "texto": "uma sequência de observações, como preços de ações ou imagens"
      },
      {
-      "nome": "Complexidade de Kolmogorov",
-      "texto": "o tamanho da menor descrição capaz de gerar essa sequência"
+      "nome": "Complexidade",
+      "texto": "o tamanho do menor programa capaz de gerar esses dados exatamente"
      },
      {
       "nome": "Princípio MDL",
-      "texto": "um bom modelo comprime os dados, incluindo o custo de descrever o próprio modelo"
+      "texto": "um bom modelo comprime os dados, somando o tamanho do modelo com o dos dados comprimidos"
      },
      {
-      "nome": "Seleção de modelos",
-      "texto": "entre modelos que se ajustam igualmente bem, prefira o que precisa de menos informação para ser especificado"
+      "nome": "Seleção",
+      "texto": "entre dois modelos que se ajustam bem, escolha o que precisa de menos informação para ser descrito"
      }
     ],
-    "legenda": "O princípio do comprimento mínimo de descrição (MDL) formaliza matematicamente a preferência por simplicidade.",
+    "legenda": "O comprimento mínimo de descrição (MDL) formaliza a navalha de Ockham para computadores e estatísticos escolherem modelos.",
     "marca": "consenso",
     "fonte": 3
    },
    {
     "tipo": "pergunta",
-    "q": "Por que um modelo muito complexo pode se sair mal em dados novos, mesmo acertando todos os dados de treino?",
+    "q": "Por que um modelo estatístico muito complexo pode ser pior que um mais simples?",
     "alts": [
-     "Porque ele captura ruído específico dos dados de treino em vez do padrão real",
-     "Porque modelos complexos são sempre mais lentos de calcular",
-     "Porque a navalha de Ockham proíbe modelos com muitos parâmetros"
+     "Sua complexidade pode explicar os erros aleatórios dos dados de treino, falhando em prever dados novos.",
+     "A navalha de Ockham define que apenas modelos simples são considerados científicos.",
+     "Modelos complexos não têm parâmetros ajustáveis para se adaptar a padrões reais."
     ],
     "correta": 0,
-    "porque": "É o sobreajuste (overfitting). O MDL penaliza a complexidade excessiva justamente para evitar isso."
+    "porque": "É o sobreajuste. O modelo decora as oscilações específicas da amostra, em vez de aprender o padrão geral. A versão moderna da navalha penaliza essa complexidade desnecessária.",
+    "marca": "consenso",
+    "fonte": 3
    }
   ],
-  "fecho": "A navalha de Ockham é uma ferramenta de desempate entre teorias. Mas o que faz uma teoria ser científica? Isso tem nome: falseabilidade, o critério de Popper."
+  "fecho": "A navalha de Ockham é uma ferramenta de desempate entre teorias. Mas o que faz uma teoria ser científica? Karl Popper propôs um critério famoso para isso: a falseabilidade."
  },
- "erros": [
-  "só 2 telas visuais de 6 (pelo menos metade)"
+ "erros": [],
+ "avisos": [
+  "tela 4: marca sem fonte",
+  "tela 5: marca sem fonte"
  ],
- "avisos": [],
  "alertas_jev": [
-  "tela 1: trata de disputa ou evidência contestada (0.94); lição só ensina o núcleo estabelecido",
-  "tela 2: soa como IA (0.52)",
-  "tela 4: soa como IA (0.54)"
+  "tela 1: trata de disputa ou evidência contestada (0.85); lição só ensina o núcleo estabelecido",
+  "tela 2: trata de disputa ou evidência contestada (0.91); lição só ensina o núcleo estabelecido",
+  "tela 3: trata de disputa ou evidência contestada (0.88); lição só ensina o núcleo estabelecido",
+  "tela 4: soa como IA (0.52)",
+  "tela 7: soa como IA (0.51)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.92
+  },
   "interesse": {
    "type": "score",
-   "score": 2.82,
+   "score": 2.79,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -106,83 +134,195 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.18,
+    "1": 0,
+    "2": 0.2,
     "3": 0.8,
-    "4": 0.01
+    "4": 0
    },
-   "confidence": 0.84
+   "confidence": 0.82
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.36
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.03,
-    "emergente": 0,
-    "consenso": 0.95,
-    "controverso": 0.02
+    "emergente": 0.01,
+    "controverso": 0.04,
+    "consenso": 0.85,
+    "especulacao": 0.1
    },
-   "confidence": 0.94
+   "confidence": 0.79
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.05
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.85
   },
   "encaixe_1": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.73
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.52
+   "noul": 0.31
   },
-  "disputa_2": {
-   "type": "noul",
-   "noul": 0.22
-  },
-  "ambigua_3": {
-   "type": "noul",
-   "noul": 0.35
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.54
-  },
-  "disputa_4": {
-   "type": "noul",
-   "noul": 0.32
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.5
-  },
-  "marca_5": {
+  "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.02,
-    "emergente": 0.05,
-    "consenso": 0.85,
-    "controverso": 0.08
+    "controverso": 0.12,
+    "emergente": 0.02,
+    "consenso": 0.81,
+    "especulacao": 0.05
    },
-   "confidence": 0.8
+   "confidence": 0.75
   },
-  "disputa_5": {
+  "tecnico_2": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.06
   },
-  "encaixe_5": {
+  "disputa_2": {
    "type": "noul",
-   "noul": 0.65
+   "noul": 0.91
   },
-  "ambigua_6": {
+  "encaixe_2": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.76
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.04,
+    "emergente": 0.01,
+    "consenso": 0.92,
+    "especulacao": 0.03
+   },
+   "confidence": 0.89
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.88
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.07,
+    "emergente": 0.02,
+    "consenso": 0.86,
+    "especulacao": 0.05
+   },
+   "confidence": 0.83
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "respondivel_5": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "obvia_5": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0.01,
+    "consenso": 0.97,
+    "controverso": 0.01
+   },
+   "confidence": 0.96
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.79
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0.04,
+    "consenso": 0.92,
+    "controverso": 0.04
+   },
+   "confidence": 0.89
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.83
+  },
+  "respondivel_8": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "obvia_8": {
+   "type": "noul",
+   "noul": 0.6
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.06
   }
  },
- "custo_usd": 0.00948
+ "custo_usd": 0.00412
 }

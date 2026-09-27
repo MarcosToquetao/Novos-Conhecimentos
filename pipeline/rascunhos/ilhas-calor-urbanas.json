@@ -1,15 +1,18 @@
 {
  "id": "ilhas-calor-urbanas",
  "tipo": "licao",
- "criado": "2026-09-27T16:30:03",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 3,
+ "criado": "2026-09-27T19:20:53",
+ "modelo": "reaproveitada+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Quem sai do centro de São Paulo ao anoitecer e dirige alguns quilômetros até a periferia sente a temperatura cair. Mesma cidade, mesma noite, alguns graus de diferença.",
+  "gancho": "Quem sai do centro de São Paulo ao anoitecer e dirige alguns quilômetros até a periferia sente a temperatura cair. Mesma cidade, mesma noite, alguns graus de diferença. Esse contraste tem nome: ilha de calor urbana.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Essa diferença tem nome: ilha de calor urbana. É o contraste entre a temperatura do núcleo construído e a das áreas rurais ao redor. Costuma ser maior depois do pôr do sol do que durante o dia.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Mapa térmico de satélite de Beer Sheva: o vermelho concentrado no centro mostra a ilha de calor. A temperatura cai conforme se afasta para a periferia.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "comparar",
@@ -37,17 +40,16 @@
     "fonte": 7
    },
    {
-    "tipo": "pergunta",
-    "q": "Ao anoitecer, o que faz o centro da cidade esfriar mais devagar que o campo?",
-    "alts": [
-     "O calor residual dos carros e do ar-condicionado",
-     "As superfícies quentes liberam energia devagar, e os prédios bloqueiam a perda de calor para o céu",
-     "A cidade tem mais nuvens, que seguram o calor"
-    ],
-    "correta": 1,
-    "porque": "O calor residual das atividades humanas existe, mas é contribuinte secundário. A causa principal é a modificação das superfícies: asfalto e concreto guardam calor e a geometria urbana dificulta a perda para o céu.",
+    "tipo": "estimar",
+    "q": "Quanto calor o concreto consegue guardar em comparação com o mesmo volume de ar?",
+    "unidade": "vezes",
+    "min": 1,
+    "max": 10000,
+    "escala": "log",
+    "resposta": 2000,
+    "legenda": "Cerca de duas mil vezes. Por isso o centro demora horas para esfriar depois que a periferia já está fresca.",
     "marca": "consenso",
-    "fonte": 1
+    "fonte": 2
    },
    {
     "tipo": "etapas",
@@ -62,7 +64,7 @@
      },
      {
       "nome": "Noite",
-      "texto": "A cidade esfria devagar: superfícies quentes liberam energia e prédios bloqueiam a perda radiativa."
+      "texto": "A cidade esfria devagar: superfícies quentes liberam energia e prédios bloqueiam a perda de calor para o céu."
      }
     ],
     "legenda": "Sequência que explica por que a ilha de calor de dossel é mais forte à noite.",
@@ -70,61 +72,89 @@
     "fonte": 6
    },
    {
-    "tipo": "estimar",
-    "q": "Quanto calor o concreto consegue guardar em comparação com o mesmo volume de ar?",
-    "unidade": "vezes",
-    "min": 1,
-    "max": 100000,
-    "escala": "log",
-    "resposta": 2000,
-    "legenda": "Cerca de duas mil vezes. Por isso o centro demora horas para esfriar depois que a periferia já está fresca.",
+    "tipo": "pergunta",
+    "q": "Ao anoitecer, o que faz o centro da cidade esfriar mais devagar que o campo?",
+    "alts": [
+     "O calor residual dos carros e do ar-condicionado",
+     "As superfícies quentes liberam energia devagar, e os prédios bloqueiam a perda de calor para o céu",
+     "A cidade tem mais nuvens, que seguram o calor"
+    ],
+    "correta": 1,
+    "porque": "O calor residual das atividades humanas existe, mas é contribuinte secundário. A causa principal é a modificação das superfícies: asfalto e concreto guardam calor e a geometria urbana dificulta a perda para o céu.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
    },
    {
-    "tipo": "pontos",
-    "valor": 40,
-    "frase": "do aumento de temperatura urbana vêm de telhados escuros.",
-    "legenda": "Telhados escuros respondem por quase 40% do aumento em relação ao entorno.",
+    "tipo": "comparar",
+    "a": "Campo ao anoitecer",
+    "b": "Cidade ao anoitecer",
+    "linhas": [
+     {
+      "aspecto": "Vegetação e solo",
+      "a": "úmido, perde calor rápido por radiação",
+      "b": "substituídos por asfalto e concreto impermeáveis"
+     },
+     {
+      "aspecto": "Resfriamento",
+      "a": "evapotranspiração das plantas ajuda a resfriar",
+      "b": "sem vegetação, some a sombra e a evapotranspiração"
+     },
+     {
+      "aspecto": "Vento",
+      "a": "circula livremente, resfriando por convecção",
+      "b": "prédios bloqueiam o vento, reduzindo a convecção"
+     }
+    ],
+    "legenda": "O que a cidade tira do lugar ajuda a segurar o calor.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Um estudo de ilha de calor de superfície usou satélite em 419 grandes cidades. O que ele encontrou?",
+    "q": "Um estudo com 419 grandes cidades do mundo mediu a ilha de calor de superfície. O que ele mostrou sobre os mecanismos de dia e de noite?",
     "alts": [
-     "A intensidade é igual em todas as cidades, cerca de 1,5 °C",
-     "A intensidade de dia e de noite não tem correlação, sinal de que os mecanismos são diferentes",
-     "A ilha de calor é mais intensa de noite também nas medições por satélite"
+     "A intensidade de dia e de noite são sempre parecidas",
+     "De dia a intensidade é maior, e não há correlação com a intensidade noturna",
+     "O calor residual da cidade é o que mais pesa nos dois períodos"
     ],
     "correta": 1,
-    "porque": "A média diurna foi de 1,5 °C e a noturna de 1,1 °C. A falta de correlação mostra que de dia pesa a diferença de vegetação, e de noite pesam albedo e iluminação.",
+    "porque": "A intensidade média foi de 1,5 °C de dia e 1,1 °C à noite. A falta de correlação entre as duas sugere que operam mecanismos diferentes: de dia a diferença de vegetação, de noite albedo e iluminação.",
     "marca": "consenso",
     "fonte": 7
    },
    {
-    "tipo": "pontos",
-    "valor": 28,
-    "frase": "a mais de precipitação mensal em uma faixa de 32 a 64 km depois da cidade.",
-    "legenda": "A ilha de calor também altera o ciclo da água, aumentando a chuva a favor do vento.",
+    "tipo": "pergunta",
+    "q": "Um estudo com 32 cidades chinesas estimou a área de influência da ilha de calor. Qual o tamanho dessa área em relação à mancha urbana?",
+    "alts": [
+     "É praticamente igual ao tamanho da cidade",
+     "De 2,3 a 3,9 vezes o tamanho da mancha urbana",
+     "É menor que a cidade, concentrada no centro"
+    ],
+    "correta": 1,
+    "porque": "O efeito se estende por uma área muito maior que a cidade em si, com queda exponencial em direção ao campo. Ignorar essa extensão subestima a intensidade do fenômeno.",
     "marca": "consenso",
-    "fonte": 1
+    "fonte": 8
    }
   ],
   "fecho": "Se o problema é o desenho da cidade, o desenho também pode ser a solução. É disso que trata a arquitetura bioclimática, que projeta para lidar com o clima local."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "tela 8: duas perguntas seguidas"
+ ],
  "alertas_jev": [
-  "tela 6: marcada consenso, JEV diz emergente (0.78)",
-  "tela 6: o tipo visual não combina com o conteúdo (0.23); troque de tipo ou use texto",
-  "tela 8: marcada consenso, JEV diz emergente (0.77)",
-  "tela 8: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto"
+  "tela 3: o tipo visual não combina com o conteúdo (0.26); troque de tipo ou use texto",
+  "tela 7: a pergunta depende de algo que a lição ainda não mostrou (0.17)",
+  "tela 8: a pergunta depende de algo que a lição ainda não mostrou (0.05)"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.97
+  },
   "interesse": {
    "type": "score",
-   "score": 2.91,
+   "score": 2.92,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -135,19 +165,34 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.1,
-    "3": 0.89,
+    "2": 0.08,
+    "3": 0.91,
     "4": 0.01
    },
-   "confidence": 0.91
+   "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.29
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "tecnico_1": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_1": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.07
   },
   "ia_2": {
    "type": "noul",
@@ -157,39 +202,70 @@
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.98,
-    "controverso": 0.01,
     "emergente": 0.01,
+    "controverso": 0.01,
+    "consenso": 0.98,
     "especulacao": 0
    },
    "confidence": 0.97
   },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.17
+  },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.37
   },
   "encaixe_2": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.94
   },
-  "ambigua_3": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.14
+   "noul": 0.31
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 0.99
+  },
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.26
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.35
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 1,
-    "controverso": 0,
     "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
     "especulacao": 0
    },
-   "confidence": 1
+   "confidence": 0.99
+  },
+  "tecnico_4": {
+   "type": "noul",
+   "noul": 0.1
   },
   "disputa_4": {
    "type": "noul",
@@ -199,79 +275,69 @@
    "type": "noul",
    "noul": 0.95
   },
-  "ia_5": {
+  "respondivel_5": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.96
   },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 1,
-    "controverso": 0,
-    "emergente": 0,
-    "especulacao": 0
-   },
-   "confidence": 0.99
-  },
-  "disputa_5": {
+  "obvia_5": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.33
   },
-  "encaixe_5": {
+  "ambigua_5": {
    "type": "noul",
-   "noul": 0.67
+   "noul": 0.09
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.43
+   "noul": 0.33
   },
   "marca_6": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "consenso": 0.13,
-    "controverso": 0.06,
-    "emergente": 0.78,
-    "especulacao": 0.03
+    "controverso": 0,
+    "emergente": 0,
+    "especulacao": 0,
+    "consenso": 1
    },
-   "confidence": 0.71
+   "confidence": 0.99
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.29
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.07
   },
   "encaixe_6": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.96
+  },
+  "respondivel_7": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "obvia_7": {
+   "type": "noul",
+   "noul": 0.29
   },
   "ambigua_7": {
    "type": "noul",
    "noul": 0.28
   },
-  "ia_8": {
+  "respondivel_8": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.05
   },
-  "marca_8": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "emergente": 0.77,
-    "consenso": 0.19,
-    "especulacao": 0.01,
-    "controverso": 0.03
-   },
-   "confidence": 0.7
-  },
-  "disputa_8": {
+  "obvia_8": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.29
   },
-  "encaixe_8": {
+  "ambigua_8": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.2
   }
  },
- "custo_usd": 0.01299
+ "custo_usd": 0.00322
 }

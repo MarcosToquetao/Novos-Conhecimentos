@@ -1,15 +1,23 @@
 {
  "id": "cascata-trofica",
  "tipo": "licao",
- "criado": "2026-09-27T15:41:31",
- "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "criado": "2026-09-27T19:18:47",
+ "modelo": "reaproveitada+deepseek-v4-pro+editor",
+ "rodadas": 3,
  "licao": {
   "gancho": "Um vídeo com mais de 43 milhões de visualizações conta que os lobos devolvidos a Yellowstone mudaram até o curso dos rios. A parte mais espetacular dessa história é hoje uma das afirmações mais contestadas da ecologia.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Uma <strong>cascata trófica</strong> acontece quando uma mudança num nível da cadeia alimentar se propaga dois níveis abaixo. O sumiço de um predador libera o herbívoro, que devasta as plantas.</p>"
+    "tipo": "foto",
+    "foto": 1,
+    "legenda": "Lobos caçando um cervo-canadense em Yellowstone. A reintrodução do predador desencadeou uma série de mudanças ecológicas, mas o mecanismo principal ainda é debatido."
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "Uma lontra-marinha repousa num bosque de kelp, na costa do Alasca, onde está um dos exemplos mais claros de cascata trófica.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "comparar",
@@ -19,39 +27,34 @@
      {
       "aspecto": "Ouriços-do-mar",
       "a": "poucos",
-      "b": "se multiplicam sem controle"
+      "b": "se multiplicam"
      },
      {
       "aspecto": "Florestas de kelp",
       "a": "densas",
       "b": "destruídas"
-     },
-     {
-      "aspecto": "Causa",
-      "a": "a lontra come ouriço",
-      "b": "a lontra foi caçada até sumir"
      }
     ],
-    "legenda": "Ilhas do Alasca comparadas com e sem lontras-marinhas. Este é o exemplo de referência da cascata trófica.",
+    "legenda": "A lontra come ouriço, que come kelp. Este é o exemplo de referência do conceito de cascata trófica.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "O que torna o caso das lontras-marinhas o exemplo de referência?",
+    "q": "O que torna o caso das lontras-marinhas um exemplo de referência para a ciência?",
     "alts": [
-     "A lontra é um predador maior que o lobo",
-     "A comparação é direta: ilhas com e sem o predador, e o mecanismo é fácil de observar",
-     "As lontras foram reintroduzidas pelo mesmo programa dos lobos"
+     "A lontra é um animal mais estudado que o lobo",
+     "A comparação entre ilhas com e sem o predador é direta e o mecanismo é fácil de observar",
+     "Aconteceu num ecossistema aquático, que é mais simples que um terrestre"
     ],
     "correta": 1,
-    "porque": "Onde havia lontra, havia poucos ouriços e kelp denso. Onde ela sumiu, os ouriços devastaram a base da cadeia. O mecanismo é visível."
+    "porque": "Onde havia lontra, havia poucos ouriços e kelp denso. Onde ela sumiu, os ouriços devastaram a base da cadeia. O mecanismo é direto e visível."
    },
    {
     "tipo": "camadas",
     "camadas": [
      {
-      "nome": "Predador de topo",
+      "nome": "Predador",
       "nota": "lobo, lontra, puma"
      },
      {
@@ -67,19 +70,19 @@
      "topo": "nível trófico mais alto",
      "base": "nível trófico mais baixo"
     },
-    "legenda": "A cascata trófica conecta três níveis: uma mudança no predador afeta o herbívoro e, dois níveis abaixo, a planta.",
+    "legenda": "Uma cascata trófica conecta três níveis de uma cadeia alimentar: a mudança no predador se propaga até a planta.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "estimar",
-    "q": "Em Yellowstone, quantos cervos-canadenses havia na parte norte do parque em 1994, antes da volta dos lobos?",
+    "q": "Em 1994, antes da volta dos lobos, quantos cervos-canadenses havia só na parte norte do Parque de Yellowstone?",
     "unidade": "cervos",
     "min": 1000,
     "max": 50000,
     "escala": "log",
     "resposta": 19045,
-    "legenda": "Em 2013, o censo de inverno chegou a 3.915 cervos. Menos cervos, mais vegetação: uma cascata por contagem, não só por medo.",
+    "legenda": "Em 2013, esse número caiu para 3.915. Menos bocas comendo folha é um caminho mais simples para a recuperação da vegetação.",
     "marca": "consenso",
     "fonte": 17
    },
@@ -88,73 +91,59 @@
     "etapas": [
      {
       "nome": "Lobos voltam",
-      "texto": "31 lobos soltos a partir de 1995."
+      "texto": "31 lobos são soltos em Yellowstone a partir de 1995."
      },
      {
       "nome": "Menos cervos",
-      "texto": "Censo cai de 19.045 para 3.915 em 2013."
+      "texto": "A população de cervos cai de 19.045 para 3.915 em 2013."
      },
      {
-      "nome": "Vegetação recupera",
-      "texto": "Salgueiros e choupos voltam a crescer nas margens."
+      "nome": "Salgueiros voltam",
+      "texto": "Com a herbivoria reduzida, a vegetação nas margens dos rios se recupera."
      },
      {
-      "nome": "Castores voltam",
-      "texto": "Colônias sobem de 1 para 12 entre 1996 e 2009."
+      "nome": "Castores surgem",
+      "texto": "Com alimento e material, as colônias de castor sobem de 1 para 12 até 2009."
      }
     ],
-    "legenda": "A sequência é medida. O que segue em discussão é o peso de cada elo.",
+    "legenda": "A sequência de eventos é bem documentada e não está em disputa. O que se discute é o peso de cada elo.",
     "marca": "consenso",
     "fonte": 8
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a versão popular da história de Yellowstone, a do medo, é contestada?",
+    "q": "A recuperação dos salgueiros prova que foi o medo dos cervos pelos lobos que salvou as árvores?",
     "alts": [
-     "Porque os lobos não caçam cervos de verdade",
-     "Porque estudos diretos não acharam efeito forte do medo sobre o comportamento dos cervos",
-     "Porque a cascata trófica não existe em lugar nenhum"
+     "Sim, é a prova definitiva do mecanismo do medo",
+     "Não, porque o número total de cervos caiu muito no mesmo período, o que por si só já reduz a herbivoria",
+     "Sim, porque os cervos passaram a evitar os vales mesmo onde não havia lobos caçando"
     ],
     "correta": 1,
-    "porque": "Estudos que rastrearam lobos e cervos juntos acharam encontros raros e sem efeito sobre a condição física dos cervos. O mecanismo do medo, sozinho, não se sustentou."
+    "porque": "Menos cervos significa menos plantas comidas, um efeito de densidade. Para atribuir a recuperação ao medo, seria preciso mostrar que o comportamento dos cervos mudou em áreas de risco, e estudos diretos não confirmaram isso de forma forte."
    },
    {
-    "tipo": "pontos",
-    "valor": 52,
-    "frase": "de cada 100 pontos da queda na proporção de filhotes de cervo podem ser explicados só pelos lobos, no máximo, mesmo supondo que nenhum filhote morreria de outra causa.",
-    "legenda": "O resto vem de ursos-pardos, ursos-negros, pumas e caça esportiva fora do parque.",
-    "marca": "consenso",
-    "fonte": 7
-   },
-   {
-    "tipo": "curva",
-    "forma": "saturacao",
-    "eixo_x": "Tempo desde a reintrodução dos lobos",
-    "eixo_y": "Número de colônias de castores",
-    "marco": {
-     "x": 0.6,
-     "rotulo": "12 colônias em 2009"
-    },
-    "legenda": "As colônias de castor passaram de 1 para 12 em 13 anos. A direção da mudança não é contestada.",
+    "tipo": "foto",
+    "foto": 4,
+    "legenda": "Uma represa de castores num rio de Yellowstone. O retorno das colônias é uma mudança ecológica real que se seguiu à queda na população de cervos.",
     "marca": "consenso",
     "fonte": 8
    }
   ],
-  "fecho": "E quando uma espécie de fora chega a um ecossistema e ocupa o topo da cadeia? Isso tem nome: espécies invasoras."
+  "fecho": "E quando uma espécie de fora chega a um ecossistema e vira o novo predador de topo? Isso tem nome: espécies invasoras."
  },
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 1: soa como IA (0.56)",
-  "tela 6: marcada consenso, JEV diz controverso (0.68)",
-  "tela 6: trata de disputa ou evidência contestada (0.74); lição só ensina o núcleo estabelecido",
-  "tela 8: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
-  "tela 8: o tipo visual não combina com o conteúdo (0.31); troque de tipo ou use texto"
+  "tela 1: trata de disputa ou evidência contestada (0.93); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
+  "gancho_diz": {
+   "type": "noul",
+   "noul": 0.8
+  },
   "interesse": {
    "type": "score",
-   "score": 3.15,
+   "score": 3.2,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -166,91 +155,111 @@
     "0": 0,
     "1": 0,
     "2": 0.01,
-    "3": 0.83,
-    "4": 0.16
+    "3": 0.78,
+    "4": 0.21
    },
-   "confidence": 0.86
+   "confidence": 0.82
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.56
+   "noul": 0.38
   },
-  "disputa_1": {
+  "tecnico_1": {
    "type": "noul",
    "noul": 0.09
   },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.93
+  },
   "ia_2": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.33
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
     "emergente": 0,
-    "controverso": 0.02,
-    "consenso": 0.98
+    "controverso": 0.01,
+    "especulacao": 0,
+    "consenso": 0.99
    },
-   "confidence": 0.97
+   "confidence": 0.98
+  },
+  "tecnico_2": {
+   "type": "noul",
+   "noul": 0.07
   },
   "disputa_2": {
    "type": "noul",
    "noul": 0.1
   },
-  "encaixe_2": {
+  "ia_3": {
    "type": "noul",
-   "noul": 0.96
+   "noul": 0.23
   },
-  "ambigua_3": {
-   "type": "noul",
-   "noul": 0.1
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.4
-  },
-  "marca_4": {
+  "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.87,
-    "controverso": 0.12,
-    "emergente": 0.01,
-    "especulacao": 0
+    "emergente": 0,
+    "controverso": 0.01,
+    "especulacao": 0,
+    "consenso": 0.99
    },
-   "confidence": 0.82
+   "confidence": 0.98
   },
-  "disputa_4": {
+  "tecnico_3": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "disputa_3": {
    "type": "noul",
    "noul": 0.09
   },
-  "encaixe_4": {
+  "encaixe_3": {
    "type": "noul",
-   "noul": 0.93
+   "noul": 0.96
+  },
+  "respondivel_4": {
+   "type": "noul",
+   "noul": 0.62
+  },
+  "obvia_4": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.17
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.31
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.68,
-    "controverso": 0.22,
-    "emergente": 0.09,
-    "especulacao": 0.01
+    "emergente": 0.01,
+    "controverso": 0.23,
+    "especulacao": 0,
+    "consenso": 0.76
    },
-   "confidence": 0.56
+   "confidence": 0.67
+  },
+  "tecnico_5": {
+   "type": "noul",
+   "noul": 0.14
   },
   "disputa_5": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.09
   },
   "encaixe_5": {
    "type": "noul",
-   "noul": 0.64
+   "noul": 0.92
   },
   "ia_6": {
    "type": "noul",
@@ -258,73 +267,89 @@
   },
   "marca_6": {
    "type": "choice",
-   "choice": "controverso",
+   "choice": "consenso",
    "probabilities": {
-    "consenso": 0.21,
-    "controverso": 0.68,
-    "emergente": 0.11,
-    "especulacao": 0
+    "emergente": 0.03,
+    "especulacao": 0.01,
+    "consenso": 0.7,
+    "controverso": 0.26
    },
-   "confidence": 0.57
+   "confidence": 0.6
+  },
+  "tecnico_6": {
+   "type": "noul",
+   "noul": 0.14
   },
   "disputa_6": {
    "type": "noul",
-   "noul": 0.74
+   "noul": 0.37
   },
   "encaixe_6": {
    "type": "noul",
+   "noul": 0.52
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.05,
+    "controverso": 0.33,
+    "consenso": 0.61,
+    "especulacao": 0.01
+   },
+   "confidence": 0.5
+  },
+  "tecnico_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "encaixe_7": {
+   "type": "noul",
    "noul": 0.96
   },
-  "ambigua_7": {
-   "type": "noul",
-   "noul": 0.16
-  },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.38
-  },
-  "marca_8": {
-   "type": "choice",
-   "choice": "controverso",
-   "probabilities": {
-    "emergente": 0.37,
-    "controverso": 0.52,
-    "especulacao": 0.04,
-    "consenso": 0.07
-   },
-   "confidence": 0.37
-  },
-  "disputa_8": {
+  "respondivel_8": {
    "type": "noul",
    "noul": 0.89
   },
-  "encaixe_8": {
+  "obvia_8": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.36
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.2
   },
   "ia_9": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.25
   },
   "marca_9": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.19,
-    "controverso": 0.05,
-    "especulacao": 0.01,
-    "consenso": 0.75
+    "emergente": 0.06,
+    "controverso": 0.14,
+    "consenso": 0.79,
+    "especulacao": 0.01
    },
-   "confidence": 0.67
+   "confidence": 0.71
+  },
+  "tecnico_9": {
+   "type": "noul",
+   "noul": 0.06
   },
   "disputa_9": {
    "type": "noul",
-   "noul": 0.14
-  },
-  "encaixe_9": {
-   "type": "noul",
-   "noul": 0.72
+   "noul": 0.16
   }
  },
- "custo_usd": 0.00907
+ "custo_usd": 0.00868
 }
