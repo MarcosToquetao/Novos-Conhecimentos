@@ -18,6 +18,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">A placa que se acumula nos dentes quando alguém deixa de escovar por um dia é um exemplo cotidiano de <strong>biofilme</strong>: uma comunidade de bactérias que, em vez de flutuar livremente num líquido, se organiza, adere a uma superfície e se envolve numa matriz própria, formada principalmente por açúcares complexos, proteínas e material genético liberado pelas próprias células. Essa matriz funciona como uma espécie de estrutura urbana construída pela comunidade bacteriana: protege, organiza o acesso a nutrientes e cria microambientes internos diferentes, dependendo da profundidade dentro do biofilme.</p>
 
+[[FOTO:1]]
+
 <p>Biofilmes não são uma curiosidade rara. Aparecem em canos de água, em rochas de rio, na superfície de próteses médicas, em cateteres, em pulmões de pacientes com certas doenças crônicas e em feridas que não cicatrizam. A pesquisa moderna sobre biofilmes começou a se consolidar nos anos 1970, com o trabalho pioneiro do microbiologista Bill Costerton, que ajudou a estabelecer que esse modo de crescimento em comunidade, e não a bactéria isolada e solta, é a forma predominante em que a maioria das bactérias realmente vive na natureza.</p>
 
 <h3>Por que isso importa tanto para medicina</h3>
@@ -39,6 +41,8 @@ aprofundamento: { minutos: 30, html: `
 
 <p>A resistência aumentada de bactérias em biofilme não vem de uma causa única, mas da combinação de pelo menos três mecanismos que atuam em conjunto. Primeiro, a matriz extracelular funciona como uma barreira física parcial, retardando (embora raramente impedindo por completo) a penetração de certos antibióticos até as camadas mais profundas do biofilme. Segundo, dentro do biofilme existe estratificação metabólica: células na superfície, com mais acesso a oxigênio e nutrientes, crescem ativamente, enquanto células nas camadas mais profundas entram num estado de crescimento lento ou quase estacionário, e a maioria dos antibióticos convencionais foi desenvolvida para matar bactérias em crescimento ativo, sendo bem menos eficaz contra células metabolicamente dormentes.<sup class="cit"><a href="#f3">3</a></sup></p>
 
+[[FOTO:2]]
+
 <h3>Células persistentes: um fenômeno à parte, mas relacionado</h3>
 
 <p>Uma pequena subpopulação de células, tanto dentro quanto fora de biofilmes, entra num estado especial chamado <strong>persistência</strong>: essas células não são geneticamente resistentes (seus descendentes, se voltarem a crescer normalmente, voltam a ser tão sensíveis ao antibiótico quanto a população original), mas entram numa espécie de dormência profunda, frequentemente mediada por sistemas de toxina-antitoxina, que as torna temporariamente tolerantes a praticamente qualquer antibiótico que dependa de processos celulares ativos para funcionar.<sup class="cit"><a href="#f4">4</a></sup> Biofilmes tendem a ter uma proporção maior de células persistentes do que populações planctônicas, o que contribui para a chamada "resiliência" de infecções crônicas: mesmo depois de um curso de antibiótico eliminar a maior parte da população, uma pequena fração de persistentes pode sobreviver e reconstituir a infecção depois que o tratamento termina.</p>
@@ -58,6 +62,8 @@ aprofundamento: { minutos: 30, html: `
 <h3>Coordenação da comunidade: uma menção necessária</h3>
 
 <p>Parte da organização interna de um biofilme depende de comunicação química entre as próprias bactérias, um fenômeno chamado quorum sensing (sinalização de quórum), em que a comunidade "detecta" sua própria densidade populacional e ajusta comportamentos coletivos, como a própria produção da matriz, de acordo com isso. Esse mecanismo de comunicação bacteriana é, ele mesmo, um tópico extenso o suficiente para merecer tratamento próprio, mas vale registrar que a formação e a manutenção de um biofilme maduro dependem, em boa medida, dessa coordenação química entre células vizinhas.</p>
+
+[[FOTO:3]]
 ` },
 
 extensao: { minutos: 60, html: `
@@ -255,7 +261,9 @@ fontes: [
   { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Biofilm', com panorama geral de formação, estrutura e relevância ecológica e médica.", url: "https://en.wikipedia.org/wiki/Biofilm" },
   { n: 14, tipo: "fonte primária", ref: "'Microbial Biofilm: A Review on Formation, Infection, Antibiotic Resistance, Control Measures, and Innovative Treatment'.", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10305407/" },
   { n: 15, tipo: "fonte primária", ref: "'The role of nanocomposites against biofilm infections in humans', sobre abordagens terapêuticas emergentes baseadas em nanotecnologia.", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10011468/" }
-]
+],
+
+fotos: [{"n": 1, "arquivo": "img/c/biofilmes/1.webp", "legenda": "Acúmulo de placa bacteriana, um tipo de biofilme, aderido ao esmalte dos dentes.", "alt": "Placa bacteriana acumulada visivelmente sobre dentes humanos.", "autor": "Jost Jahn", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Plaque-Tooth.jpg", "gif": false, "w": 419, "h": 271}, {"n": 2, "arquivo": "img/c/biofilmes/2.webp", "legenda": "Micrografia eletrônica exibindo células bacterianas agrupadas e protegidas pela matriz extracelular de um biofilme.", "alt": "Micrografia eletrônica mostrando bactérias aderidas a uma superfície e envolvidas por matriz extracelular.", "autor": "Krzysztof A. Zacharski", "licenca": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Mixed-culture_biofilm.jpg", "gif": false, "w": 800, "h": 600}, {"n": 3, "arquivo": "img/c/biofilmes/3.webp", "legenda": "Esquema ilustrando como bactérias detectam sua densidade populacional para ativar comportamentos coletivos.", "alt": "Diagrama comparando densidade bacteriana baixa e alta, ilustrando o mecanismo de sinalização celular.", "autor": "explorebiology", "licenca": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:XBio_illustration_%E2%80%93_Quorum_Sensing.png", "gif": false, "w": 800, "h": 533}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

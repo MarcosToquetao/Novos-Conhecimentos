@@ -22,6 +22,8 @@ nucleo: { minutos: 15, html: `
 
 <p>Qualquer corda ou coluna de ar vibrando produz, além da frequência fundamental, uma série de harmônicos em múltiplos inteiros dela: 2×, 3×, 4×, 5×, e assim por diante. Dois sons soam consonantes quando seus harmônicos coincidem em boa medida, e isso acontece quando a razão entre suas frequências é dada por números inteiros pequenos.</p>
 
+[[FOTO:1]]
+
 <div class="tabela-env">
 <table>
 <thead><tr><th>Intervalo</th><th>Razão</th><th>Sensação</th></tr></thead>
@@ -41,6 +43,8 @@ nucleo: { minutos: 15, html: `
 
 <p>Os pitagóricos construíram a escala empilhando quintas puras. Suba doze quintas (dó, sol, ré, lá, mi, si, fá♯, dó♯, sol♯, ré♯, lá♯, mi♯) e você deveria voltar ao dó, sete oitavas acima. É o "círculo das quintas".</p>
 
+[[FOTO:2]]
+
 <p>Só que não fecha. Doze quintas puras dão (3/2)¹² e sete oitavas dão 2⁷. Fazendo a conta:</p>
 
 <div class="formula">
@@ -59,6 +63,8 @@ nucleo: { minutos: 15, html: `
 <p>Como o erro não pode ser eliminado, todo sistema de afinação decide <em>onde colocá-lo</em>. Três estratégias marcaram a história:</p>
 
 <p>Entonação justa: deixa alguns intervalos perfeitamente puros, e por isso outros ficam horrendos. Existe um intervalo, o "lobo", tão desafinado que é inutilizável. Funciona se você tocar sempre na mesma tonalidade.</p>
+
+[[FOTO:3]]
 
 <p>Temperamentos desiguais: distribuem o erro de forma desigual, deixando as tonalidades mais usadas quase puras e empurrando o erro para as raras. Cada tonalidade ganha um caráter sonoro distinto. Dominaram os séculos XVII e XVIII.</p>
 
@@ -305,4 +311,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "A disputa entre história e estética", "html": "<p>A parte histórica do argumento, que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada, é bem documentada e amplamente aceita. A parte estética, que a harmonia foi \"arruinada\", é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois.</p><p>Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>"}, {"tema": "Qual temperamento Bach usava", "html": "<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class=\"cit\"><a href=\"#f3\">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa.</p><p>Não sabemos, e a divergência entre especialistas é grande.</p>"}, {"tema": "Consonância entre biologia e cultura", "html": "<p>Há um debate empírico sobre quanto da preferência por consonância é biológico e quanto é aprendido. Um estudo de 2016 com os Tsimane', na Amazônia boliviana, relatou que participantes com pouca exposição à música ocidental não mostraram preferência por consonância sobre dissonância, embora distinguissem os estímulos. O resultado é frequentemente citado como evidência de que a preferência é cultural.</p><p>Vale registrar as ressalvas: amostra pequena, dificuldade de tradução de tarefas e discussão metodológica ativa sobre o que exatamente foi medido. O que parece razoavelmente firme é que a <em>capacidade de discriminar</em> razões simples tem base perceptiva, enquanto a <em>preferência</em> por elas é modulada por exposição.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/temperamento-igual/1.webp", "legenda": "Uma onda estacionária oscila criando pontos fixos e áreas de maior movimento", "alt": "Representação animada de uma onda estacionária com pontos de nó fixos.", "autor": "Lucas Vieira", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Standing_wave.gif", "gif": true, "w": 480, "h": 160}, {"n": 2, "arquivo": "img/c/temperamento-igual/2.webp", "legenda": "Diagrama do círculo das quintas mostrando a relação entre as diferentes notas musicais.", "alt": "O diagrama circular das quintas com notas musicais em notação ocidental e persa.", "autor": "Mohammad Shadfar", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Circle_OF_Fifths.jpg", "gif": false, "w": 800, "h": 800}, {"n": 3, "arquivo": "img/c/temperamento-igual/3.webp", "legenda": "Cravo de estilo flamengo com teclado antigo, instrumento frequentemente afinado com temperamentos desiguais.", "alt": "Um cravo antigo aberto mostrando o teclado.", "autor": "Ratigan (instrument et photo)", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Clavecin_flamand.png", "gif": false, "w": 643, "h": 789}],
 };

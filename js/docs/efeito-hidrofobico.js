@@ -21,6 +21,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Coloque azeite na água e espere. As duas fases se separam, o azeite sobe, a fronteira fica nítida. A explicação que quase todo mundo recebe na escola é que moléculas apolares e moléculas de água se repelem, ou que uma "odeia" a outra. Essa explicação está errada em um ponto verificável: não existe repulsão entre elas. Uma molécula de metano e uma molécula de água se atraem, fracamente, como quaisquer duas moléculas vizinhas.</p>
 
+[[FOTO:1]]
+
 <p>Há um fato experimental que derruba a versão escolar de uma vez. Dissolver metano em água a 25 graus <strong>libera calor</strong>. O processo é exotérmico. Se energia fosse o único critério, o metano deveria se dissolver com prazer. Ele não se dissolve: a solubilidade do metano em água é ridícula. Alguma outra coisa está cobrando o preço.</p>
 
 <h3>Como químicos decidem se algo acontece sozinho</h3>
@@ -35,9 +37,13 @@ nucleo: { minutos: 15, html: `
 
 <p>Uma molécula de água no meio do líquido está cercada por outras moléculas de água e forma ligações de hidrogênio com as vizinhas. Essas ligações não são fixas: elas se quebram e se refazem em picossegundos, e cada molécula tem uma grande variedade de orientações compatíveis com manter suas ligações. Muitos arranjos disponíveis significa entropia alta.</p>
 
+[[FOTO:2]]
+
 <p>Agora coloque uma molécula de metano no meio. O metano não faz ligação de hidrogênio. Ele ocupa espaço e não oferece nada em troca. As moléculas de água que ficam ao redor não perdem suas ligações: elas se ajeitam de modo a apontar todas as ligações para os lados, mantendo a rede intacta contornando o intruso. Só que essa acomodação exige orientações mais específicas. O leque de arranjos possíveis encolhe.</p>
 
 <p>Henry Frank e Marjorie Evans descreveram isso em 1945 e deram um apelido que pegou: a água ao redor do soluto apolar formaria pequenos "icebergs", regiões mais organizadas do que a água comum.<sup class="cit"><a href="#f1">1</a></sup> A imagem é boa como intuição inicial e problemática como descrição literal, e voltaremos a isso.</p>
+
+[[FOTO:3]]
 
 <div class="marca consenso">
 <span class="rot">O ponto central</span>
@@ -411,4 +417,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "O gelo ao redor de moléculas de água", "html": "<p>A ideia de que a água forma uma gaiola de gelo em volta de moléculas que não se dissolvem vem de uma inferência termodinâmica de 1945, não de uma observação direta: os pesquisadores mediram a entropia e propuseram uma estrutura para explicá-la. Setenta anos depois, a espectroscopia ainda não fechou a questão. Grdadolnik, Merzel e Avbelj mediram o deslocamento para o vermelho do estiramento O−D de água pesada perto de metano, etano, criptônio e xenônio e calcularam de 10 a 15 ligações de hidrogênio do tipo gelo por molécula de metano, o que sustenta a visão clássica.<sup class=\"cit\"><a href=\"#f13\">13</a></sup></p><p>Outros experimentos apontam para outro lado. Com Raman de curva resolvida de 0 a 100 °C, Davis e colaboradores viram ordem tetraédrica aumentada só em temperaturas baixas, e ela some ao aquecer.<sup class=\"cit\"><a href=\"#f14\">14</a></sup> Difração de nêutrons em metanol com água atribuiu a anomalia à mistura incompleta, e não a gaiolas rígidas.<sup class=\"cit\"><a href=\"#f15\">15</a></sup> Ressonância magnética mostrou retardo real da dinâmica da água perto de xenônio, mas de magnitude modesta.<sup class=\"cit\"><a href=\"#f16\">16</a></sup> O sinal termodinâmico não está em dúvida. A metáfora do gelo está.</p>"}, {"tema": "\"Água estruturada\" é expressão disputada", "html": "<p>Se os termos \"água estruturada\" e \"formador de estrutura\" devem continuar em uso é uma controvérsia genuína. Quem os defende aponta os deslocamentos espectroscópicos e a ordem tetraédrica medida. Quem se opõe aponta que a mesma termodinâmica aparece em modelos sem ordenamento orientacional algum, baseados apenas no custo de abrir cavidade num líquido de moléculas pequenas.<sup class=\"cit\"><a href=\"#f11\">11</a></sup></p><p>O impasse é de fundo: um número termodinâmico não determina de forma única o retrato molecular que o produziu. É essa subdeterminação que mantém o debate aberto.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/efeito-hidrofobico/1.webp", "legenda": "Óleo e água em um copo ilustrando a separação física entre as duas fases.", "alt": "Gotas de óleo flutuando na água dentro de um copo de vidro.", "autor": "Linda116", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Oil_and_water_don%27t_mix.png", "gif": false, "w": 501, "h": 422}, {"n": 2, "arquivo": "img/c/efeito-hidrofobico/2.webp", "legenda": "Moléculas de água conectadas por ligações de hidrogênio que se formam e quebram constantemente no estado líquido.", "alt": "Representação de várias moléculas de água conectadas por ligações de hidrogênio em um ambiente simulado.", "autor": "Thomas Splettstoesser (www.scistyle.com)", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Liquid_water_hydrogen_bond.png", "gif": false, "w": 800, "h": 664}, {"n": 3, "arquivo": "img/c/efeito-hidrofobico/3.webp", "legenda": "Iceberg flutuando em águas calmas sob um dia de céu azul.", "alt": "Um grande iceberg azulado flutuando em um lago com montanhas ao fundo.", "autor": "IlyaHaykinson", "licenca": "CC BY 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:Glacial_iceberg_in_Argentina.jpg", "gif": false, "w": 800, "h": 600}],
 };

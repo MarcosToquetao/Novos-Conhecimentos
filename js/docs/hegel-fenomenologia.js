@@ -28,6 +28,8 @@ nucleo: { minutos: 15, html: `
 
 <p>A saída de Hegel: em vez de investigar previamente <em>se</em> podemos conhecer, acompanhar o conhecimento em ação e observar como ele corrige a si mesmo. É isso que a <em>Fenomenologia do Espírito</em> (1807) faz. Ela não é um sistema de conclusões: é a narrativa de uma sequência de tentativas fracassadas de conhecer, cada uma fracassando de um modo específico que gera a tentativa seguinte.</p>
 
+[[FOTO:1]]
+
 <h3>Como o movimento realmente funciona</h3>
 
 <figure class="figura">[[FIG:hegel-movimento]]<figcaption>O ciclo real. Não há um "opositor externo" que traz a antítese. A contradição surge de dentro: a consciência aplica o seu próprio critério e descobre que o objeto que ela mesma constituiu não o satisfaz.</figcaption></figure>
@@ -284,4 +286,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "O que Hegel realmente quis dizer", "html": "<p>Uma leitura influente propõe que a <em>Fenomenologia do espírito</em> não faz afirmações metafísicas sobre a estrutura da realidade. Nessa interpretação, o livro descreve apenas formas de experiência que se corrigem sozinhas.</p><p>Essa leitura é contestada. Críticos argumentam que ela transforma Hegel num pragmatista aceitável e ignora as afirmações ontológicas explícitas da <em>Ciência da Lógica</em>. A disputa é hoje uma das principais fraturas dos estudos hegelianos. Quem lê uma exposição segura sobre o assunto deve saber que ela toma partido sem avisar.</p>"}, {"tema": "Hegel e o aprendizado por erro", "html": "<p>Uma literatura recente compara a dialética hegeliana a processos de aprendizado por correção de erro, inclusive em sistemas artificiais: um modelo com critério interno gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso.</p><p>A analogia estrutural é sugestiva, mas é analogia. Não há continuidade histórica nem tese demonstrada. Hegel insiste que o processo é normativo e social, não algorítmico, e é aí que a comparação se rompe.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/hegel-fenomenologia/1.webp", "legenda": "Página de título da primeira edição da Fenomenologia do Espírito publicada em 1807", "alt": "Página de título da primeira edição original de 1807 da obra Fenomenologia do Espírito de Hegel", "autor": "The original uploader was Nihil Kainer at German Wikipedia.", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Ph%C3%A4nomenologie_des_Geistes.jpg", "gif": false, "w": 573, "h": 847}],
 };

@@ -18,6 +18,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em novembro de 1935, o físico austríaco Erwin Schrödinger publicou um artigo com um experimento mental que se tornaria a imagem mais famosa da física quântica.<sup class="cit"><a href="#f1">1</a></sup> A versão popular: um gato é colocado numa caixa fechada junto de um mecanismo ligado a um átomo radioativo. Se o átomo decair, um martelo quebra um frasco de veneno e o gato morre. Se não decair, o gato continua vivo. Como o decaimento do átomo é um evento quântico, regido por probabilidade, a mecânica quântica descreveria o átomo (e, por extensão, o gato) como estando numa combinação dos dois estados, "decaído e não decaído", até que alguém abra a caixa e observe. Popularmente, isso é resumido como "o gato está vivo e morto ao mesmo tempo até ser observado".</p>
 
+[[FOTO:1]]
+
 <p>Essa versão popular inverte a intenção do próprio Schrödinger. Ele não estava propondo que o gato realmente estivesse nesse estado duplo. Estava fazendo o oposto: usando o absurdo óbvio de um gato vivo-e-morto para mostrar que havia algo errado, ou pelo menos incompleto, na forma como a interpretação dominante da época (hoje chamada de interpretação de Copenhague) descrevia o que acontece entre uma medição e outra.<sup class="cit"><a href="#f1">1</a></sup> Para Schrödinger, era claro que um gato de verdade está vivo ou morto, nunca as duas coisas, quer alguém esteja olhando ou não. O experimento é, no vocabulário da lógica, uma <em>reductio ad absurdum</em>: leve uma ideia às últimas consequências para mostrar que ela não pode estar certa do jeito que foi formulada.</p>
 
 <div class="marca consenso">
@@ -265,6 +267,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Interpretações ainda sem maioria", "html": "<p>Um levantamento formal de opinião entre físicos e filósofos especializados em fundamentos da mecânica quântica, conduzido por Maximilian Schlosshauer, Johannes Kofler e Anton Zeilinger em 2013, encontrou respostas divididas entre as diferentes interpretações, sem que nenhuma reunisse maioria clara entre os participantes.<sup class=\"cit\"><a href=\"#f9\">9</a></sup> Isso é um dado de opinião sobre uma linha de pesquisa, não uma confirmação de qual interpretação descreve a realidade.</p>\n<p>O que está em aberto é a interpretação sobre o que as previsões dizem a respeito da realidade entre uma medição e outra. As previsões numéricas da mecânica quântica são extremamente bem testadas e concordam com o experimento em todas as situações já checadas, mas até o momento elas não decidem sozinhas essa pergunta interpretativa.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/gato-schrodinger/1.webp", "legenda": "O físico austríaco Erwin Schrödinger, autor do experimento mental sobre o estado quântico de um gato.", "alt": "Retrato de rosto de Erwin Schrödinger usando óculos redondos.", "autor": "Unknown authorUnknown author", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Erwin_Schr%C3%B6dinger_-_Narodowe_Archiwum_Cyfrowe_(1-E-939).jpg", "gif": false, "w": 800, "h": 1105}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

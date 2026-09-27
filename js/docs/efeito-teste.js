@@ -42,6 +42,8 @@ nucleo: { minutos: 5, html: `
 
 <h3>Testar não é avaliar</h3>
 <p>Na sala de aula, o efeito de teste aparece quando os quizzes valem pouco ou nada. Em um curso universitário, estudantes que faziam quizzes semanais tiveram desempenho melhor nas provas do que os que apenas reliam o material<sup class="cit"><a href="#f4">4</a></sup>. Quizzes com perguntas abertas, que exigem escrever a resposta, produziram ganhos maiores que quizzes de múltipla escolha<sup class="cit"><a href="#f4">4</a></sup>.</p>
+
+[[FOTO:1]]
 <p>O formato do teste importa menos que o ato de recuperar. Testes de múltipla escolha, abertos ou mesmo com consulta ao material geraram retenção semelhante em um estudo<sup class="cit"><a href="#f5">5</a></sup>. O que muda é o tipo de pergunta: se o teste final pede transferência para situações novas, treinar com perguntas de aplicação prepara melhor do que lembrar fatos isolados<sup class="cit"><a href="#f6">6</a></sup>.</p>
 <p>Há um detalhe que costuma enganar quem estuda. No mesmo experimento com testes abertos e com consulta, os participantes previram que lembrariam mais depois de reler várias vezes, mesmo quando o teste tinha fortalecido mais a memória de longo prazo<sup class="cit"><a href="#f5">5</a></sup>. A sensação de fluência da releitura convence o estudante de que está aprendendo, e ele escolhe a estratégia que parece funcionar, não a que funciona. Esse erro de julgamento ajuda a explicar por que tanta gente estuda do jeito menos eficaz.</p>
 
@@ -384,4 +386,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Adaptação do efeito de teste a materiais muito complexos", "html": "<p>Há uma linha de pesquisa ativa sobre se o efeito de teste se mantém quando o material tem muitos elementos interagindo, como em problemas de física ou textos filosóficos densos. Estudos iniciais sugerem que o efeito pode diminuir ou desaparecer nesses casos<sup class=\"cit\"><a href=\"#f9\">9</a></sup>, mas outras pesquisas mostram que testar com perguntas de compreensão e aplicação ainda ajuda<sup class=\"cit\"><a href=\"#f2\">2</a></sup>. A questão não está resolvida.</p>"}, {"tema": "Viés cultural nos estudos sobre efeito de teste", "html": "<p>A maior parte das pesquisas foi feita em países ocidentais, industrializados, com populações escolarizadas e de renda alta<sup class=\"cit\"><a href=\"#f2\">2</a></sup>. Não se sabe se os mesmos resultados se aplicam a outros contextos culturais e educacionais. Essa é uma questão em aberto que pesquisadores têm apontado como prioridade.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/efeito-teste/1.webp", "legenda": "Estudantes em uma sala de aula respondendo a um questionário escolar.", "alt": "Estudantes em uma sala de aula fazendo um teste ou quiz escolar.", "autor": "chia ying Yang", "licenca": "CC BY 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:English_Quiz_in_Taichung_Municipal_Chu-Jen_Junior_High_School_20070816.jpg", "gif": false, "w": 800, "h": 533}],
 };

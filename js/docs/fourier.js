@@ -18,6 +18,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1807, Joseph Fourier entregou à Academia de Ciências de Paris um trabalho sobre um problema mundano: como o calor se espalha dentro de uma barra de metal. O trabalho foi rejeitado. Lagrange, Laplace e Legendre, três dos maiores matemáticos da época, estavam na banca. Lagrange objetou a uma afirmação que Fourier fazia de passagem e que parecia absurda: que <em>qualquer</em> função, inclusive uma com quinas e saltos, pode ser escrita como uma soma de senos e cossenos, que são as curvas mais suaves que existem.<sup class="cit"><a href="#f1">1</a></sup></p>
 
+[[FOTO:1]]
+
 <p>Fourier estava errado na formulação exata (o "qualquer" precisava de condições) e certo no que importava. Quinze anos depois publicou o resultado como livro,<sup class="cit"><a href="#f2">2</a></sup> e a ideia se tornou uma das ferramentas mais usadas da ciência aplicada. Vale a pena entender por quê, e o motivo não é matemático: é conceitual.</p>
 
 <h3>A ideia central em uma frase</h3>
@@ -28,6 +30,8 @@ nucleo: { minutos: 15, html: `
 
 <p>A metáfora que costuma ser usada é o prisma. Luz branca entra, e do outro lado saem as cores separadas. O prisma não <em>acrescenta</em> as cores: elas já estavam lá, misturadas, e o prisma apenas as organizou por frequência. A transformada de Fourier faz o mesmo com qualquer sinal.</p>
 
+[[FOTO:2]]
+
 <div class="marca consenso">
 <span class="rot">Onde a metáfora do prisma engana</span>
 <p>O prisma sugere que a decomposição é um fato físico sobre a luz. Não é o caso da transformada. Decompor em senos é uma <em>escolha</em> de sistema de coordenadas, não uma descoberta sobre a natureza do sinal. Você poderia decompor o mesmo sinal em ondaletas (wavelets), em polinômios de Chebyshev ou em qualquer outra base. Senos venceram porque têm uma propriedade especial que a próxima seção explica, não porque são "o que o sinal realmente é".</p>
@@ -36,6 +40,8 @@ nucleo: { minutos: 15, html: `
 <h3>Dois retratos do mesmo objeto</h3>
 
 <p>Pense num acorde tocado ao piano. Um microfone registra uma única curva ondulada: pressão do ar em função do tempo. Essa curva contém tudo, mas não responde diretamente à pergunta "quais notas foram tocadas?". A transformada devolve outro retrato do mesmo evento: quais frequências estão presentes e com que força.</p>
+
+[[FOTO:3]]
 
 <figure class="figura">[[FIG:fourier-dominios]]<figcaption>Em cima, o sinal como o tempo o entrega. Embaixo, o mesmo sinal como frequências. Nenhuma informação foi perdida nem criada: são duas coordenadas do mesmo ponto. A transformada inversa reconstrói o de cima a partir do de baixo, exatamente.</figcaption></figure>
 
@@ -48,6 +54,8 @@ nucleo: { minutos: 15, html: `
 <h3>O caso mais bonito: você já viu uma transformada de Fourier</h3>
 
 <p>Quando raios X atravessam um cristal, o padrão de manchas que aparece no detector <em>é</em>, com boa aproximação, a transformada de Fourier da distribuição de densidade eletrônica do cristal.<sup class="cit"><a href="#f3">3</a></sup> A natureza faz a transformada; o cristalógrafo precisa apenas fazer a inversa para recuperar a estrutura da molécula. A imagem 51 de Rosalind Franklin, que mostrou a hélice do DNA, é literalmente um espectro de Fourier: o padrão em X é a assinatura de uma hélice no domínio da frequência espacial.</p>
+
+[[FOTO:4]]
 
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
@@ -312,4 +320,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Métodos de detecção de ritmos em genes", "html": "<p>Em análises de expressão gênica ao longo do dia, diferentes algoritmos de detecção de periodicidade aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. É uma controvérsia metodológica ativa: não há consenso sobre qual método controla adequadamente o erro tipo I.</p><p>O problema não está na transformada de Fourier em si, e sim no teste de significância construído sobre ela. Estudos comparativos mostram essa discrepância, mas ainda não há um padrão acordado para decidir qual lista está certa. Está em aberto.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/fourier/1.webp", "legenda": "Retrato do matemático Joseph Fourier.", "alt": "Um retrato gravado de Joseph Fourier.", "autor": "Amédée Félix Barthélemy Geille / After Julien-Léopold Boilly", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Fourier.jpg", "gif": false, "w": 800, "h": 978}, {"n": 2, "arquivo": "img/c/fourier/2.webp", "legenda": "Animação de um feixe de luz branca sendo decomposto em diferentes frequências coloridas ao passar por um prisma.", "alt": "Animação de ondas de luz sendo separadas ao passar por um prisma.", "autor": "Lucas Vieira", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Light_dispersion_conceptual_waves.gif", "gif": true, "w": 480, "h": 360}, {"n": 3, "arquivo": "img/c/fourier/3.webp", "legenda": "Forma de onda complexa de um acorde de piano mostrando a variação da pressão sonora ao longo do tempo.", "alt": "Representação gráfica da variação da pressão sonora de um acorde de piano ao longo do tempo.", "autor": "Em3rgent0rdr", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:C-major-piano-chord-waveform.png", "gif": false, "w": 800, "h": 378}, {"n": 4, "arquivo": "img/c/fourier/4.webp", "legenda": "Padrão de difração de raios X do DNA ao lado de sua estrutura molecular em dupla hélice.", "alt": "Padrão de difração de raios X ao lado de um modelo molecular da dupla hélice do DNA.", "autor": "File:Bdna cropped.gif: *Bdna.gif: Spiffistan derivative work: Jahobr (talk) File:ABDNAxrgpj.jpg: I.C. Baianu et al. deri", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:X-ray-diffraction-pattern-and-DNA-molecule.jpg", "gif": false, "w": 800, "h": 488}],
 };

@@ -36,6 +36,8 @@ nucleo: { minutos: 15, html: `
 
 <p>Na descrição moderna, uma força não é uma influência misteriosa atravessando o vazio. É uma <strong>troca de partículas mediadoras</strong>. Duas partículas interagem porque trocam entre si um quantum do campo correspondente.</p>
 
+[[FOTO:1]]
+
 <div class="tabela-env">
 <table>
 <thead><tr><th>Interação</th><th>Mediador</th><th>Alcance</th><th>Intensidade relativa</th></tr></thead>
@@ -53,6 +55,8 @@ nucleo: { minutos: 15, html: `
 <div class="marca consenso">
 <span class="rot">Consenso estabelecido</span>
 <p>As três primeiras interações estão descritas pelo Modelo Padrão da física de partículas, testado com precisão extraordinária: algumas previsões conferidas até a décima segunda casa decimal. Os bósons W e Z foram detectados em 1983, e o bóson de Higgs em 2012, ambos com massas próximas do previsto. Não há resultado experimental sólido que contradiga o Modelo Padrão dentro de seu domínio de aplicação.</p>
+
+[[FOTO:2]]
 </div>
 
 <div class="marca consenso">
@@ -282,4 +286,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Gravidade quântica", "html": "<p>Como juntar a relatividade geral com a mecânica quântica é uma linha de pesquisa aberta, sem resposta estabelecida. Uma leitura diz que é preciso uma estrutura nova, como cordas, gravidade quântica em loop ou geometria não comutativa. Outra leitura diz que a relatividade geral já é uma teoria efetiva válida abaixo da escala de Planck, e que a pergunta \"quantizar a gravidade\" pode estar mal formulada.</p><p>Até hoje nenhuma das propostas fez uma previsão testável e distintiva que tenha sido verificada, então o ponto de disputa continua ativo.</p>"}, {"tema": "Argumentos antrópicos após o LHC", "html": "<p>A ausência de supersimetria no LHC reabriu uma hipótese explicitamente especulativa: talvez existam muitos universos com valores diferentes de parâmetros, e observadores só possam existir naqueles em que os valores permitem química e estrutura.</p><p>O problema é que, se a teoria não faz previsões testáveis distinguíveis, resta discutir se ela é ciência ou metafísica. Esse debate segue ativo e não resolvido, com gente séria dos dois lados.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/quatro-forcas/1.webp", "legenda": "Representação animada da interação entre quarks através da troca de glúons no interior de um nêutron.", "alt": "Quarks e glúons em interação dentro de um nêutron.", "autor": "Qashqaiilove", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Neutron_QCD_Animation.gif", "gif": true, "w": 480, "h": 447}, {"n": 2, "arquivo": "img/c/quatro-forcas/2.webp", "legenda": "Simulação de colisão de prótons detectada no experimento CMS, revelando evidências do bóson de Higgs.", "alt": "Simulação computacional de uma colisão de partículas produzindo um bóson de Higgs.", "autor": "Lucas Taylor / CERN", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:CMS_Higgs-event.jpg", "gif": false, "w": 800, "h": 738}],
 };

@@ -19,7 +19,11 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Uma raiz fina de planta tem cerca de 0,2 a 2 milímetros de diâmetro. Uma hifa de fungo, o filamento que forma o corpo do fungo no solo, tem entre 2 e 10 micrômetros, cerca de cem vezes mais fina. Essa diferença de escala é o começo da história. O fósforo se difunde muito devagar no solo, e a raiz esgota rapidamente o fósforo disponível na fina camada de terra ao seu redor. Além dessa zona esgotada, a raiz não alcança. A hifa alcança.</p>
 
+[[FOTO:1]]
+
 <p>Praticamente todas as plantas terrestres resolvem esse problema terceirizando a busca. Elas alojam fungos dentro ou em volta das raízes e pagam por isso em carboidrato produzido na fotossíntese. A estrutura formada pela raiz e pelo fungo juntos se chama <strong>micorriza</strong>, palavra que junta o grego para fungo e para raiz.</p>
+
+[[FOTO:2]]
 
 <h3>O que cada parceiro entrega</h3>
 
@@ -47,6 +51,8 @@ nucleo: { minutos: 15, html: `
 <p>Como um mesmo fungo pode colonizar mais de uma planta ao mesmo tempo, é fisicamente possível que duas árvores estejam ligadas pelo mesmo micélio. A esse arranjo se dá o nome técnico de <strong>rede micorrízica comum</strong>. A expressão "wood wide web" apareceu em 1997, na capa da revista <em>Nature</em>, acompanhando um estudo de Suzanne Simard e colegas.<sup class="cit"><a href="#f2">2</a></sup></p>
 
 <p>O experimento de 1997 marcou bétulas com carbono-13 e carbono-14 e pseudotsugas (o Douglas-fir) com o outro isótopo, em campo, e mediu quanto de cada marca aparecia na planta vizinha. Houve movimento nos dois sentidos, com saldo líquido a favor da pseudotsuga, correspondendo em média a cerca de 6% do carbono que ela havia captado por fotossíntese. O artigo é real, o resultado foi publicado e o dado existe.</p>
+
+[[FOTO:3]]
 
 <p>O que aconteceu depois foi a expansão dessa observação em uma narrativa muito maior: árvores-mãe reconhecendo suas mudas, enviando açúcar para as filhotes, transmitindo sinais de alerta contra insetos, uma floresta funcionando como um organismo cooperativo. Essa narrativa circulou em livros de grande público, documentários e palestras.</p>
 
@@ -94,7 +100,11 @@ aprofundamento: { minutos: 30, html: `
 
 <p><strong>Micorrizas arbusculares</strong>, abreviadas como AM. O fungo penetra a parede celular da raiz e forma dentro da célula uma estrutura ramificada chamada <em>arbúsculo</em> (do latim para arbustinho), que é a superfície onde a troca acontece. Os fungos envolvidos pertencem ao grupo Glomeromycotina, são poucas centenas de espécies descritas, e não sobrevivem sem hospedeiro. Predominam em gramíneas, culturas agrícolas, florestas tropicais e boa parte das plantas herbáceas. Um levantamento global publicado em 2026 estimou que fungos arbusculares se associam a cerca de 70% das espécies de plantas e que os solos superficiais do planeta contêm da ordem de 1,1 x 10^17 quilômetros de hifas vivas, com biomassa em torno de 300 megatoneladas.<sup class="cit"><a href="#f10">10</a></sup></p>
 
+[[FOTO:4]]
+
 <p><strong>Ectomicorrizas</strong>, abreviadas como ECM. O fungo não entra na célula. Ele envolve a ponta da raiz com um <em>manto</em> de hifas e cresce entre as células da raiz formando a chamada <em>rede de Hartig</em>. Os fungos são majoritariamente Basidiomycota e Ascomycota, incluindo boa parte dos cogumelos visíveis de floresta temperada. São milhares de espécies, associadas a uma fração pequena das plantas em número de espécies mas enorme em biomassa: pinheiros, abetos, faias, carvalhos, bétulas, eucaliptos, dipterocarpáceas.<sup class="cit"><a href="#f13">13</a></sup></p>
+
+[[FOTO:5]]
 
 <div class="tabela-env">
 <table>
@@ -412,4 +422,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Redes de micorrizas: o que está em disputa", "html": "<p>A troca de nutrientes minerais por carbono entre uma planta e seu fungo é consenso. O que está em disputa é outra coisa: se existe uma rede contínua e persistente ligando árvores em pé no campo, e se o fluxo de recursos por ela é grande o bastante para mudar o destino de uma muda.</p><p>Sobre isso, a evidência de campo é escassa, os resultados variam de positivos a negativos, e os autores da revisão concluem que o conhecimento atual é esparso demais para orientar decisões de manejo florestal.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/micorrizas/1.webp", "legenda": "Hifas e estruturas de fungos micorrízicos no interior de células de uma raiz vegetal.", "alt": "Microscopia ótica mostrando filamentos fúngicos (hifas) e estruturas dentro de uma raiz vegetal.", "autor": "Rajarshi Rit (https://orcid.org/0000-0003-3122-5926)", "licenca": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Vesicular_Arbuscular_Mycorrhizae_40X0031_03.jpg", "gif": false, "w": 800, "h": 600}, {"n": 2, "arquivo": "img/c/micorrizas/2.webp", "legenda": "Representação tridimensional de uma raiz vegetal em simbiose com uma rede de fungos micorrízicos.", "alt": "Representação tridimensional animada de uma raiz colonizada por fungos micorrízicos.", "autor": "Scivit", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Arbuscular_mycorrhizal_root_tuber.GIF", "gif": true, "w": 480, "h": 384}, {"n": 3, "arquivo": "img/c/micorrizas/3.webp", "legenda": "Floresta mista com abetos e bétulas, espécies estudadas nas conexões subterrâneas entre árvores.", "alt": "Caminho em uma floresta com árvores mistas, incluindo abetos-de-Douglas e bétulas.", "autor": "Jim Champion", "licenca": "CC BY-SA 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:Sloden_Inclosure,_New_Forest_-_geograph.org.uk_-_81095.jpg", "gif": false, "w": 640, "h": 480}, {"n": 4, "arquivo": "img/c/micorrizas/4.webp", "legenda": "Células da raiz de planta contendo estruturas fúngicas ramificadas chamadas arbúsculos onde ocorre a troca de nutrientes.", "alt": "Células da raiz de uma planta contendo estruturas ramificadas de fungos chamadas arbúsculos.", "autor": "Msturmel", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Arbuscular_mycorrhiza_microscope.jpg", "gif": false, "w": 800, "h": 600}, {"n": 5, "arquivo": "img/c/micorrizas/5.webp", "legenda": "Raízes de pinheiro com ramificações características causadas por fungos do gênero Scleroderma.", "alt": "Imagens de raízes infectadas por fungos do gênero Scleroderma, apresentando ramificações características.", "autor": "Marc-André Selosse", "licenca": "CC0", "pagina": "https://commons.wikimedia.org/wiki/File:Ectomycorhizae_of_Scleroderma_on_Pinus_(China).png", "gif": false, "w": 800, "h": 607}],
 };

@@ -20,6 +20,8 @@ nucleo: { minutos: 15, html: `
 
 <p>O resultado ficou famoso como o <strong>homúnculo cortical</strong>: um desenho de um corpo humano distorcido, esticado sobre essa faixa do cérebro, com mãos, lábios e língua enormes (porque ocupam uma área desproporcionalmente grande do mapa, refletindo o controle fino e preciso que temos sobre elas) e tronco, pernas e costas minúsculos (porque exigem controle motor bem menos refinado).<sup class="cit"><a href="#f1">1</a></sup> A imagem apareceu no livro de Penfield e Theodore Rasmussen, <em>The Cerebral Cortex of Man</em>, publicado em 1950, e desde então é reproduzida em praticamente todo livro introdutório de neurociência.</p>
 
+[[FOTO:1]]
+
 <div class="marca consenso">
 <span class="rot">O que continua sólido</span>
 <p>Que diferentes partes do corpo são representadas por diferentes regiões do córtex motor e sensorial, e que essa representação é desproporcional ao tamanho físico da parte do corpo (refletindo a precisão do controle motor ou a densidade de receptores sensoriais, não o tamanho anatômico), é um achado bem estabelecido e amplamente replicado desde o trabalho original de Penfield. Isso não mudou.</p>
@@ -262,6 +264,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Limites do mapa somato-cognitivo", "html": "<p>A extensão exata da rede de ação somato-cognitiva e sua relação causal com controle motor voluntário versus regulação fisiológica automática são questões ainda ativas de pesquisa, sem síntese teórica final amplamente aceita. O que existe hoje é uma correção empírica bem estabelecida ao mapa clássico, não uma teoria unificada que substitua o modelo de Penfield com igual poder explicativo e pedagógico.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/homunculo-cortical/1.webp", "legenda": "Representação ilustrada do homúnculo sensorial, mostrando a proporção das partes do corpo mapeadas no córtex cerebral.", "alt": "Desenho esquemático de um corpo humano distorcido sobre uma seção do córtex cerebral com legendas em português.", "autor": "Original work: OpenStax College Derivative work: Ederporto", "licenca": "CC BY 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:1421_Sensory_Homunculus_-_PT.png", "gif": false, "w": 800, "h": 792}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

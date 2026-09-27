@@ -32,6 +32,8 @@ nucleo: { minutos: 15, html: `
 <h3>Por que a política real raramente parece assim</h3>
 
 <p>Se o teorema estivesse certo sobre o mundo real sem qualificação, seria de esperar que partidos concorrentes em qualquer democracia bipartidária convergissem para posições quase idênticas, moderadas e centristas. Isso claramente não descreve boa parte da política contemporânea, marcada, em muitos países, por polarização crescente entre partidos, não convergência. A explicação não é que o teorema esteja "errado" matematicamente, é que as condições que ele exige raramente se aplicam com exatidão à política real, algo que também ajuda a explicar muita coisa sobre por que ela funciona do jeito que funciona.</p>
+
+[[FOTO:1]]
 ` },
 
 aprofundamento: { minutos: 30, html: `
@@ -58,6 +60,8 @@ aprofundamento: { minutos: 30, html: `
 <h3>O papel específico das eleições primárias</h3>
 
 <p>Uma explicação popular para a polarização política é que eleições primárias (em que apenas eleitores de um partido escolhem seu candidato, tipicamente mais ideológicos que o eleitorado geral) empurrariam candidatos para posições mais extremas do que a lógica do eleitor mediano geral preveria. A pesquisa mais recente sobre esse mecanismo específico, porém, mostra um quadro mais nuançado: primárias sozinhas não são suficientes para gerar polarização, sendo necessária a presença de outros fatores complementares (como eleitores motivados por posição ideológica, não apenas por probabilidade de vitória) para que esse efeito apareça de forma robusta.<sup class="cit"><a href="#f6">6</a></sup></p>
+
+[[FOTO:2]]
 ` },
 
 extensao: { minutos: 60, html: `
@@ -254,6 +258,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "O que resta do teorema do eleitor mediano", "html": "<p>Há debate genuíno sobre quanto valor explicativo resta ao teorema do eleitor mediano, já que suas condições ideais quase nunca se aplicam por completo. Uma leitura sustenta que ele continua útil como caso de referência: um ponto de partida teórico que ajuda a entender, por contraste, por que a política real dele diverge, como um físico usa um modelo de atrito zero sabendo que o atrito real nunca é zero.</p><p>Outra leitura, mais cética, argumenta que, falhando as condições de forma tão sistemática, o teorema tem pouco poder preditivo sobre o comportamento eleitoral concreto e serve mais como exercício de elegância matemática. Não há consenso definitivo sobre qual leitura é mais correta.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/eleitor-mediano/1.webp", "legenda": "Gráfico mostra o aumento da distância ideológica entre partidos políticos americanos entre 1879 e 2010.", "alt": "Gráfico mostrando o afastamento ideológico entre partidos americanos ao longo do tempo.", "autor": "Chris hare84", "licenca": "CC BY 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:NOMINATE_polarization.jpg", "gif": false, "w": 800, "h": 515}, {"n": 2, "arquivo": "img/c/eleitor-mediano/2.webp", "legenda": "Pessoas votam em cabines individuais durante um dia de eleição primária.", "alt": "Pessoas sentadas em cabines individuais votando em um ginásio.", "autor": "Lorie Shaull", "licenca": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Voters_inside_Maslowski_Wellness_%26_Research_Center_on_Primary_Election_Day,_Aug._11,_2026_in_Wadena.jpg", "gif": false, "w": 800, "h": 533}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

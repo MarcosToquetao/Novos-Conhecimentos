@@ -81,6 +81,8 @@ a<sub>1X</sub> / a<sub>1Y</sub> &lt; a<sub>2X</sub> / a<sub>2Y</sub>
 
 <p>Repare que os níveis absolutos desaparecem completamente. Multiplique todos os custos de Portugal por dez, tornando-o dez vezes menos produtivo em tudo: a desigualdade não muda, e o padrão de especialização também não. Isso captura formalmente a ideia central: produtividade absoluta é irrelevante para o padrão de comércio.</p>
 
+[[FOTO:3]]
+
 <p>Produtividade absoluta determina outra coisa, e é importante não confundir: ela determina o <strong>nível de salários</strong>. Um país menos produtivo em tudo não fica sem comércio: ele comercia com salários mais baixos. Essa é a resposta padrão a duas objeções simétricas e ambas equivocadas: "não podemos competir com países de mão de obra barata" e "países pobres não têm o que oferecer".</p>
 
 <h3>Quem ganha e quem perde dentro do país</h3>
@@ -108,6 +110,8 @@ a<sub>1X</sub> / a<sub>1Y</sub> &lt; a<sub>2X</sub> / a<sub>2Y</sub>
 <h3>A ressalva do próprio Samuelson</h3>
 
 <p>Em 2004, Samuelson, que havia dedicado a carreira a defender o livre comércio, publicou um artigo mostrando que existe um caso em que um país pode ficar <strong>permanentemente pior</strong> com o comércio.<sup class="cit"><a href="#f2">2</a></sup></p>
+
+[[FOTO:4]]
 
 <p>O mecanismo: se o país B tem um ganho de produtividade justamente no setor em que o país A tinha vantagem comparativa, os termos de troca de A pioram. A perde mais com a deterioração dos preços relativos do que ganha com os produtos mais baratos. Não é um argumento protecionista: Samuelson observa que barreiras comerciais tornariam a situação ainda pior. É um argumento sobre os limites de uma afirmação que vinha sendo feita de forma incondicional.</p>
 ` },
@@ -284,4 +288,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "As premissas do modelo de Ricardo", "html": "<p>O modelo de vantagem comparativa de Ricardo é uma ferramenta lógica, mas sua aplicação ao mundo real depende de premissas específicas. Ele supõe pleno emprego, realocação de trabalho sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. A validade ou não dessas premissas é uma questão empírica, e a magnitude com que falham em cada contexto ainda é debatida por economistas.</p>\n<p>Essa é uma linha de pesquisa ativa: medir o grau de afastamento das premissas e as consequências para os resultados previstos. Não há consenso sobre quão relevantes são esses desvios para o desenho de políticas comerciais.</p>"}, {"tema": "Industrialização sob proteção", "html": "<p>Um debate em aberto na economia diz respeito a evidências históricas sobre estratégias de industrialização. Países como Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul desenvolveram indústrias sob proteção tarifária substancial antes de adotar o livre comércio. Porém, críticos argumentam que há viés de seleção: para cada caso de sucesso como a Coreia do Sul, existem vários exemplos de substituição de importações que resultaram em indústrias ineficientes e dependentes de subsídios.</p>\n<p>A pergunta empírica central ainda sem resposta consensual é: sob quais condições institucionais a proteção promove aprendizado tecnológico em vez de captura de renda? Pesquisas continuam investigando essa relação, mas não há veredito definitivo.</p>"}],
+
+fotos: [{"n": 3, "arquivo": "img/c/vantagem-comparativa/3.webp", "legenda": "O economista David Ricardo, formulador do conceito de vantagem comparativa no comércio internacional.", "alt": "Retrato do economista David Ricardo, responsável pela teoria da vantagem comparativa.", "autor": "Thomas Phillips", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg", "gif": false, "w": 620, "h": 800}, {"n": 4, "arquivo": "img/c/vantagem-comparativa/4.webp", "legenda": "O economista Paul Samuelson em fotografia tirada na década de 1970.", "alt": "Retrato em close do economista Paul Samuelson segurando um lápis.", "autor": "Gotfryd, Bernard, photographer", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Paul_A._Samuelson,_economist,_edited.jpg", "gif": false, "w": 800, "h": 571}],
 };

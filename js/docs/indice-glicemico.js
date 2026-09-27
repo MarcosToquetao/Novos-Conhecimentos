@@ -38,6 +38,8 @@ nucleo: { minutos: 15, html: `
 
 <p>A melancia tem índice glicêmico alto, em torno de 72. Mas para ingerir 50 g de carboidrato de melancia seria preciso comer cerca de 700 gramas de polpa. Uma fatia normal quase não move a glicemia.</p>
 
+[[FOTO:1]]
+
 <p>Para corrigir isso criou-se a <strong>carga glicêmica</strong>, que multiplica o índice pela quantidade de carboidrato efetivamente presente na porção:</p>
 
 <div class="formula">
@@ -50,6 +52,8 @@ CG = IG × (gramas de carboidrato na porção) ÷ 100
 <h3>O problema sério: o número não descreve quase ninguém</h3>
 
 <p>Em 2016, Nirupa Matthan e colaboradores fizeram algo que a literatura anterior não tinha feito com esse rigor: mediram o índice glicêmico do mesmo pão branco, sob protocolo padronizado, em 63 adultos saudáveis, com repetições na mesma pessoa.<sup class="cit"><a href="#f2">2</a></sup></p>
+
+[[FOTO:2]]
 
 <figure class="figura">[[FIG:gi-dispersao]]<figcaption>Cada ponto é uma pessoa. A média oficial, 62, classificação "médio", descreve razoavelmente bem uma minoria dos participantes. O mesmo alimento foi simultaneamente de baixo, médio e alto índice glicêmico, dependendo de quem comeu.</figcaption></figure>
 
@@ -98,6 +102,8 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Se a resposta varia tanto entre pessoas, a saída óbvia seria personalizar. Em 2015, Zeevi e colaboradores publicaram na <em>Cell</em> um estudo com cerca de 800 participantes, monitoramento contínuo de glicose e um modelo de aprendizado de máquina que incorporava dados clínicos, antropométricos e de microbiota.<sup class="cit"><a href="#f3">3</a></sup></p>
 
+[[FOTO:3]]
+
 <p>O modelo previa respostas glicêmicas individuais melhor que a contagem de carboidratos, e uma intervenção-piloto com dietas personalizadas mostrou melhora em relação a dietas convencionais. O trabalho é frequentemente citado como fundação da nutrição de precisão. Deu origem, ainda, a uma indústria de serviços comerciais baseados em sensores contínuos de glicose.</p>
 
 
@@ -106,6 +112,8 @@ aprofundamento: { minutos: 15, html: `
 <p>Deixando de lado a medida e olhando o desfecho: dietas de baixo índice glicêmico melhoram algum resultado clínico?</p>
 
 <p>Em diabetes tipo 2, revisões sistemáticas com meta-análise indicam redução de hemoglobina glicada da ordem de 0,3 a 0,5 ponto percentual em comparação com dietas de alto índice glicêmico. É um efeito real, estatisticamente consistente e clinicamente modesto: menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.</p>
+
+[[FOTO:4]]
 
 <p>Em prevenção de doença cardiovascular e em controle de peso na população geral, a evidência é mais fraca e menos consistente. Estudos observacionais mostram associações; ensaios randomizados mostram efeitos pequenos e frequentemente não significativos.</p>
 
@@ -117,6 +125,8 @@ aprofundamento: { minutos: 15, html: `
 <h3>O confundimento que quase invalida a interpretação causal</h3>
 
 <p>Este é o ponto que um revisor levantaria primeiro. Alimentos de baixo índice glicêmico são, em larguíssima maioria, também alimentos ricos em fibras, minimamente processados, mais saciantes e com maior densidade de micronutrientes. Leguminosas, verduras, grãos integrais e frutas inteiras.</p>
+
+[[FOTO:5]]
 
 <p>Quando um estudo observa melhor desfecho em quem come alimentos de baixo índice glicêmico, existem pelo menos quatro explicações concorrentes: a resposta glicêmica mais lenta, o teor de fibra, o menor grau de processamento, ou a saciedade maior que reduz a ingestão total. Essas variáveis andam juntas, e separá-las exige desenhos experimentais que raramente são executados: dietas isocalóricas com fibra controlada e diferença isolada de índice glicêmico.</p>
 ` },
@@ -302,4 +312,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "A confiabilidade dos sensores de glicose", "html": "<p>Uma crítica publicada no <em>AJCN</em> em 2024 questiona a base dos modelos que relacionam refeições a respostas glicêmicas. O ponto de partida é um achado específico: sensores contínuos de glicose deram respostas não confiáveis a refeições idênticas apresentadas em duplicata em adultos sem diabetes.<sup class=\"cit\"><a href=\"#f4\">4</a></sup></p><p>Ainda é uma linha de pesquisa em disputa. Se o instrumento não reproduz o próprio resultado com a mesma refeição na mesma pessoa, um modelo treinado sobre esses dados aprende em parte ruído. A crítica não derruba a ideia de personalização, mas coloca um ônus de prova sobre quem vende produtos baseados nela.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/indice-glicemico/1.webp", "legenda": "Metade de uma melancia sendo medida em uma balança de cozinha para ilustrar a porção consumida.", "alt": "Metade de uma melancia sobre uma fita métrica.", "autor": "Downtowngal", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Immature_watermelon_half.jpg", "gif": false, "w": 800, "h": 942}, {"n": 2, "arquivo": "img/c/indice-glicemico/2.webp", "legenda": "Pão branco fatiado sobre uma tábua de madeira.", "alt": "Um pão branco cortado em fatias sobre uma tábua de madeira.", "autor": "Mike Finn", "licenca": "CC BY 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:Tin_Loaf_-_one_slash_in_the_crust.jpg", "gif": false, "w": 800, "h": 533}, {"n": 3, "arquivo": "img/c/indice-glicemico/3.webp", "legenda": "Homem com sensor de glicose aplicado ao braço e bomba de insulina acoplada à cintura", "alt": "Um homem com um sensor de monitoramento de glicose aplicado em seu braço.", "autor": "Medtd1", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Diabetic_Type_1_adult_man_with_insulin_pump_and_CGM_sensor.jpg", "gif": false, "w": 800, "h": 1201}, {"n": 4, "arquivo": "img/c/indice-glicemico/4.webp", "legenda": "Técnico de laboratório processa amostras de sangue em um analisador clínico para realização de exames.", "alt": "Um técnico de laboratório manuseando tubos de ensaio contendo amostras de sangue em um analisador automatizado.", "autor": "Goleisureintl", "licenca": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:NABL_Accredited_Clinical_Pathology_Laboratory_in_Kharghar_Navi_Mumbai_Diagnostic_Services.jpg", "gif": false, "w": 800, "h": 450}, {"n": 5, "arquivo": "img/c/indice-glicemico/5.webp", "legenda": "Colheres contendo diferentes tipos de leguminosas e grãos integrais.", "alt": "Colheres de madeira contendo variedades de leguminosas e grãos secos.", "autor": "Dina Said. This photograph was made by Dina Said and released under the license(s) stated below. You are free to use it ", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Egyptian_Grains.jpg", "gif": false, "w": 800, "h": 942}],
 };

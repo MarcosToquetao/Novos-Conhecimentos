@@ -17,6 +17,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1960, um professor de inglês chamado William Stokoe publicou um pequeno estudo sobre a língua de sinais americana (American Sign Language, ASL) que quase ninguém na linguística notou na hora.<sup class="cit"><a href="#f1">1</a></sup> Stokoe dava aula numa universidade para surdos, a Gallaudet, e reparou em algo que os próprios colegas ouvintes da instituição não levavam a sério: os sinais que os alunos trocavam entre si não eram gestos soltos imitando objetos. Eles se combinavam segundo regras. Trocar uma peça da combinação trocava o significado de um jeito sistemático, do mesmo modo que trocar um fonema muda uma palavra falada. Stokoe tratou a ASL como língua e descreveu sua estrutura interna. Hoje isso é tratado como o início da linguística das línguas de sinais como campo científico.</p>
 
+[[FOTO:1]]
+
 <p>A tese que esse campo estabeleceu, e que hoje é consenso sólido entre linguistas, pode ser resumida assim: línguas de sinais são línguas naturais completas. Têm som zero, mas têm tudo o que uma língua falada tem: um inventário de unidades menores que se combinam (o equivalente aos fonemas), regras de formação de palavras (morfologia), regras de combinação de frases (sintaxe), e a capacidade de expressar qualquer coisa que uma língua falada expressa, do relatório meteorológico à poesia à demonstração matemática.</p>
 
 <div class="marca consenso">
@@ -354,4 +356,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "O debate sobre oralismo e bimodalismo envolve valores, não só ciência", "html": "<p>A camada científica desse debate, sobre o custo de atrasar a exposição a uma primeira língua acessível, está razoavelmente bem estabelecida pelas linhas de evidência de período crítico discutidas acima. Mas o debate público sobre oralismo e bimodalismo carrega, além disso, camadas de valor genuinamente em disputa e historicamente carregadas: quanto peso dar à preferência da família (majoritariamente ouvinte) por integração linguística e cultural na língua falada majoritária, quanto peso dar à autonomia da criança surda e ao acesso a uma comunidade e cultura surda própria, e como avaliar tecnologias como o implante coclear, que para alguns representam ampliação de possibilidades e para outros, dentro de parte do movimento surdo, representam uma continuação da lógica de que a surdez é um déficit a corrigir em vez de uma diferença a acomodar. Este texto descreve as posições envolvidas; não tem como função arbitrar esse desacordo de valores.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/linguas-de-sinais/1.webp", "legenda": "William Stokoe, o professor que iniciou o estudo científico das línguas de sinais.", "alt": "Retrato em preto e branco de William Stokoe.", "autor": "The original uploader was BrianRiley at English Wikipedia.", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:William_C_Stokoe_Jr.tif", "gif": false, "w": 800, "h": 566}],
 };

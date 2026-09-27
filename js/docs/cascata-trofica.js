@@ -18,6 +18,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Existe um vídeo chamado "How Wolves Change Rivers", com narração do jornalista George Monbiot sobre uma fala dele no TED, que já passou de 43 milhões de visualizações desde que foi publicado em fevereiro de 2014.<sup class="cit"><a href="#f3">3</a></sup> A história que ele conta: lobos foram reintroduzidos em Yellowstone em 1995, depois de 70 anos ausentes. Os lobos reduziram e amedrontaram os cervos-canadenses (elks), que pararam de pastar sem parar nas margens dos rios. As árvores voltaram a crescer. Os castores voltaram, construíram represas, e as represas mudaram o curso físico dos rios. Uma reintrodução de predador teria reorganizado uma paisagem inteira, até a geografia dela.</p>
 
+[[FOTO:1]]
+
 <p>É uma história bonita, e parte dela é real. Só que a parte mais espetacular, a de que o medo dos lobos por si só mudou o comportamento dos cervos-canadenses o suficiente para salvar as árvores e desviar rios, é hoje uma das afirmações mais contestadas da ecologia, com artigos publicados discutindo isso ainda em 2025 e 2026.</p>
 
 <h3>O conceito em si é sólido</h3>
@@ -25,6 +27,8 @@ nucleo: { minutos: 15, html: `
 <p>Antes de entrar na parte disputada, vale separar o que está por trás da história: o conceito de <strong>cascata trófica</strong>. Uma cadeia alimentar tem níveis, os chamados níveis tróficos: plantas, herbívoros que comem plantas, predadores que comem herbívoros. Uma cascata trófica acontece quando uma mudança num nível (normalmente a chegada ou o sumiço de um predador de topo) se propaga por pelo menos dois níveis abaixo dele, mudando também a quantidade de plantas.</p>
 
 <p>O exemplo mais bem documentado da ciência não envolve lobos. Envolve lontras-marinhas, ouriços-do-mar e florestas de kelp (um tipo de alga gigante) na costa do Alasca. James Estes e John Palmisano compararam ilhas com e sem lontras-marinhas em 1974 e encontraram um padrão limpo: onde havia lontra, havia poucos ouriços e florestas de kelp densas; onde a lontra tinha sido caçada até sumir, os ouriços se multiplicavam sem controle e destruíam o kelp.<sup class="cit"><a href="#f2">2</a></sup> A lontra come ouriço, o ouriço come kelp, tirar a lontra da equação libera o ouriço para devastar a base da cadeia. Esse é o exemplo de referência que qualquer ecólogo usa para explicar cascata trófica, porque a comparação é direta e o mecanismo (lontra come ouriço) é fácil de observar.</p>
+
+[[FOTO:2]]
 
 <div class="marca consenso">
 <span class="rot">O que é consenso científico</span>
@@ -36,6 +40,8 @@ nucleo: { minutos: 15, html: `
 <p>O problema não é se lobos podem, em princípio, desencadear uma cascata trófica. É se foi exatamente isso, e apenas isso, que aconteceu em Yellowstone, e se o mecanismo foi o medo mudando o comportamento dos cervos, como o vídeo sugere.</p>
 
 <p>Pesquisadores que foram medir isso diretamente encontraram complicações logo de início. Um estudo de 2010 testou especificamente se os choupos-tremedores (aspens, uma árvore central na história) cresciam mais em áreas onde os cervos corriam mais risco de encontrar lobos. Não encontraram esse padrão: os choupos continuavam sendo comidos praticamente do mesmo jeito, independente do risco de predação do local, e não estavam se recuperando de forma consistente, mesmo com lobos de volta havia 15 anos.<sup class="cit"><a href="#f5">5</a></sup></p>
+
+[[FOTO:3]]
 
 <p>Outro estudo, de 2013, tentou medir diretamente o quanto os cervos realmente encontravam lobos no dia a dia. Mesmo nas áreas de maior risco, um cervo cruzava com um lobo a uma distância de risco em média uma vez a cada nove dias. E, apesar de uma variação de 20 vezes na frequência desses encontros entre indivíduos, isso não tinha relação nenhuma com a quantidade de gordura corporal ou com a taxa de gravidez dos cervos.<sup class="cit"><a href="#f6">6</a></sup> Se o medo dos lobos estivesse mudando a fisiologia dos cervos na escala que a história popular sugere, esperaria-se ver esse efeito, e ele não apareceu.</p>
 
@@ -87,6 +93,8 @@ aprofundamento: { minutos: 30, html: `
 <h3>O que de fato mudou, sem disputa sobre a direção</h3>
 
 <p>Vale separar o que é medido com razoável confiança (a direção da mudança) do que é disputado (a força exata da mudança e o mecanismo). O censo de inverno da população de cervos-canadenses na parte norte do parque caiu de 19.045 animais em 1994, ano anterior à soltura dos lobos, para uma mínima de 3.915 em 2013.<sup class="cit"><a href="#f17">17</a></sup> O número de colônias de castor na mesma região subiu de 1 em 1996 para 12 em 2009, à medida que salgueiros voltaram a crescer o suficiente para servir de alimento e material de construção.<sup class="cit"><a href="#f8">8</a></sup> Essas duas direções (menos cervo, mais castor) não são contestadas. O que é contestado é o quanto disso é atribuível especificamente aos lobos, versus a outros predadores, à caça e a mudanças climáticas que também afetam o crescimento de salgueiro e choupo de forma independente.</p>
+
+[[FOTO:4]]
 ` },
 
 extensao: { minutos: 60, html: `
@@ -311,6 +319,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Cascata trófica em Yellowstone", "html": "<p>Em 1995 e 1996, lobos foram reintroduzidos no Parque Nacional de Yellowstone, nos Estados Unidos. Desde então, a população de cervos-canadenses caiu e, em algumas áreas, a vegetação ribeirinha se recuperou, com salgueiros e choupos-tremedores voltando a crescer. O que ainda está em aberto é o mecanismo por trás dessa recuperação: ecólogos discutem se o medo dos cervos alterou o comportamento deles ou se a simples redução no número de cervos explica o efeito.</p><p>Além disso, a magnitude da recuperação da vegetação é incerta. Estudos com métodos diferentes chegam a estimativas que variam bastante, e não há consenso sobre o quão grande foi a mudança. Ainda não é possível afirmar qual mecanismo predomina nem o tamanho exato do efeito.</p>"}, {"tema": "Disputa sobre a magnitude do efeito", "html": "<p>Duas equipes de ecólogos que estudam o mesmo parque com dados em parte sobrepostos chegaram a estimativas de magnitude que diferem por um fator de quase dez para os choupos-tremedores: 152 vezes contra 17,5 vezes. A diferença não significa que um lado está errado, mas mostra como decisões de análise estatística, como contar uma medição repetida do mesmo local ou calcular uma linha de base, podem alterar drasticamente o tamanho do efeito relatado.</p><p>Esse debate de magnitude continua em aberto mais de uma década depois da reintrodução dos lobos. Ainda não há uma resposta definitiva sobre o quão grande foi a recuperação da vegetação ribeirinha.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/cascata-trofica/1.webp", "legenda": "Matilha de lobos caçando um cervo-canadense em ambiente nevado no Parque Nacional de Yellowstone.", "alt": "Matilha de lobos perseguindo um cervo na neve.", "autor": "Doug Smith", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Wolves_and_elk_(cropped).jpg", "gif": false, "w": 800, "h": 485}, {"n": 2, "arquivo": "img/c/cascata-trofica/2.webp", "legenda": "Uma lontra-marinha repousa sobre a superfície da água em uma floresta de algas kelp.", "alt": "Uma lontra-marinha boiando na superfície da água entre algas (kelp).", "autor": "Robert Schwemmer/NOAA", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Sea_otter_kelp_forest_Chumash_Heritage_National_Marine_Sanctuary.PNG", "gif": false, "w": 800, "h": 517}, {"n": 3, "arquivo": "img/c/cascata-trofica/3.webp", "legenda": "Área protegida por cerca em Yellowstone para monitorar o crescimento de choupos diante da herbivoria por cervos.", "alt": "Área cercada contendo árvores, usada para estudos de herbivoria.", "autor": "NPS/Jim Peaco", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Crystal_Bench_wolf_pen_(f74c649b-1dd8-b71b-0b21-adc4598bfa9d).jpg", "gif": false, "w": 800, "h": 495}, {"n": 4, "arquivo": "img/c/cascata-trofica/4.webp", "legenda": "Represa de galhos construída por castores em um rio", "alt": "Uma represa feita de troncos e galhos construída por castores em um rio.", "autor": "Versageek", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Beaver_Dam_Bantam_River_1.jpg", "gif": false, "w": 800, "h": 462}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

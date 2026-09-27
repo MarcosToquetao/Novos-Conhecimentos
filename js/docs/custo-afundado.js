@@ -33,6 +33,8 @@ nucleo: { minutos: 15, html: `
 
 <p>O que passou a ser questionado, mais recentemente, não é se o padrão de comportamento existe, mas se ele é sempre, e só, um <em>erro</em> de raciocínio. Pesquisadores encontraram um comportamento parecido em ratos e camundongos: animais que já haviam "investido" tempo esperando por uma recompensa continuavam esperando mais do que animais que ainda não tinham investido esse tempo, um padrão interpretado, por décadas, como evidência de que o efeito do custo afundado é tão profundo que aparece até em cérebros bem mais simples que o humano.<sup class="cit"><a href="#f4">4</a></sup></p>
 
+[[FOTO:1]]
+
 <p>Um estudo de 2022 revisitou essa interpretação com um modelo computacional detalhado e encontrou algo diferente: o mesmo padrão de comportamento nos animais pode surgir de um processo de decisão inteiramente racional (continuar esperando porque, estatisticamente, o tempo já investido é informação real sobre a chance de a recompensa ainda vir), sem precisar de nenhum "viés de custo afundado" separado.<sup class="cit"><a href="#f4">4</a></sup> Isso não anula o experimento humano de Arkes e Blumer, mas mostra que atribuir automaticamente qualquer persistência após investimento a um "erro" psicológico pode estar pulando uma etapa.</p>
 
 <h3>Como aplicar isso na prática, sem exagerar</h3>
@@ -266,7 +268,9 @@ fontes: [
   { n: 13, tipo: "fonte primária", ref: "Pesquisa sobre custo afundado em decisões de investimento financeiro e vieses de portfólio.", url: "https://www.sciencedirect.com/science/article/pii/S0167268122002268" },
   { n: 14, tipo: "fonte primária", ref: "'Beating Irrationality: Does Delegating to IT Alleviate the Sunk Cost Effect?', estudo sobre estratégias para reduzir a influência de custos afundados em decisões de negócio.", url: "https://arxiv.org/pdf/1110.2096" },
   { n: 15, tipo: "divulgação", ref: "Leadership IQ. 'The Sunk Cost Fallacy', com exemplos aplicados a decisões organizacionais.", url: "https://www.leadershipiq.com/blogs/leadershipiq/the-sunk-cost-fallacy" }
-]
+],
+
+fotos: [{"n": 1, "arquivo": "img/c/custo-afundado/1.webp", "legenda": "Um rato em um tubo de vidro, ambiente típico de experimentos comportamentais com animais.", "alt": "Um rato dentro de um tubo de vidro transparente.", "autor": "Garry Knight from London, England", "licenca": "CC BY 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:British_Wildlife_Centre_Apr_2015_-_Rat_in_Glass_Tube_(17331455266).jpg", "gif": false, "w": 800, "h": 533}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

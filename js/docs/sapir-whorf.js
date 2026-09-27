@@ -18,6 +18,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Comecemos pelo problema de atribuição. Nem Edward Sapir nem Benjamin Lee Whorf formularam algo que eles chamassem de "hipótese Sapir-Whorf". Os dois nunca coescreveram sobre o tema. O rótulo foi cunhado por terceiros nos anos 1950, e a formulação nítida em "versão forte" e "versão fraca" também é obra de comentadores posteriores.</p>
 
+[[FOTO:1]]
+
 <p>Isso não é detalhe bibliográfico. A hipótese entrou na cultura já como uma caricatura, e é essa caricatura que a maioria das pessoas conhece, inclusive muitos dos que a defendem.</p>
 
 <h3>As duas versões</h3>
@@ -77,6 +79,8 @@ aprofundamento: { minutos: 15, html: `
 <p><strong>Gênero gramatical.</strong> Falantes de línguas com gênero atribuem adjetivos correlacionados ao gênero da palavra: "ponte" é feminina em alemão e masculina em espanhol, e falantes descrevem pontes com adjetivos estereotipicamente correspondentes. O efeito é replicável, mas há discussão sobre quanto depende de a tarefa ser conduzida em inglês, forçando tradução, o que introduz ativação linguística explícita.</p>
 
 <p><strong>Números em pirahã.</strong> A língua pirahã, na Amazônia, teria apenas termos para "um", "dois" e "muitos", ou, segundo análise posterior, apenas termos relativos de quantidade. Peter Gordon relatou em 2004 que falantes falhavam em tarefas de correspondência exata acima de três, e o caso foi amplamente divulgado como demonstração de determinismo linguístico.</p>
+
+[[FOTO:2]]
 
 <div class="marca consenso">
 <span class="rot">O que esse caso realmente mostra</span>
@@ -284,4 +288,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Qual causa qual", "html": "<p>Uma das dúvidas em aberto é a direção da causalidade. Comunidades que usam referencial absoluto costumam viver em terreno aberto, com marcos geográficos estáveis, e a navegação faz parte da rotina. Talvez a língua venha da prática, e não o contrário.</p><p>Separar as duas hipóteses exigiria encontrar variação natural entre língua e ambiente, o que é raro. Ainda não há dados que decidam a questão.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/sapir-whorf/1.webp", "legenda": "Retrato do linguista Benjamin Lee Whorf, um dos principais nomes associados à hipótese da relatividade linguística.", "alt": "Retrato em preto e branco de Benjamin Lee Whorf.", "autor": "Bachrach Studios", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Benjamin_Lee_Whorf_by_Bachrach.jpg", "gif": false, "w": 800, "h": 1718}, {"n": 2, "arquivo": "img/c/sapir-whorf/2.webp", "legenda": "Família pirahã navegando em uma canoa pelo rio Maici, na Amazônia.", "alt": "Uma família indígena pirahã em uma pequena canoa remando em um rio na Amazônia.", "autor": "Caleb Everett (Q123207261)", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:A_Pirah%C3%A3_family.jpg", "gif": false, "w": 800, "h": 533}],
 };

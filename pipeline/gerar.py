@@ -10,6 +10,8 @@ Uso
   python pipeline/gerar.py conceito <id> [<id> ...] [--seco] [--retomar]   documento novo a partir de fontes reais (Wikipédia + OpenAlex)
   python pipeline/gerar.py dossie <id> [<id> ...]   só baixa e mostra o dossiê de fontes (pipeline/dossies/)
   python pipeline/gerar.py imagens <id> [<id> ...] [--seco]   fotos e GIFs livres do Wikimedia Commons, escolhidos por um modelo de visão
+  python pipeline/gerar.py refazer [<id> ...]      corrige as lições existentes com as regras atuais, as fotos e a nota do editor
+  (qualquer comando aceita --openrouter: DeepSeek pelo OpenRouter em vez da API direta)
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
   python pipeline/gerar.py fronteira <id>... | --todas [--seco]   caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
   python pipeline/gerar.py triagem                JEV marca termos do catálogo sem respaldo suficiente (não apaga)
@@ -85,7 +87,29 @@ def agora():
     return datetime.datetime.now().isoformat(timespec="seconds")
 
 
+ROTA = "deepseek"   # --openrouter troca para os mesmos modelos pelo OpenRouter (mais barato em set/2026 e usa o outro saldo)
+NO_OPENROUTER = {FLASH: "deepseek/deepseek-v4.1-flash", PRO: "deepseek/deepseek-v4-pro"}
+
+
+def via_openrouter(modelo, sistema, usuario, etapa, alvo, max_tokens, pensar):
+    corpo = {"model": NO_OPENROUTER[modelo], "max_tokens": max_tokens, "response_format": {"type": "json_object"},
+             "reasoning": {"enabled": pensar}, "usage": {"include": True},
+             "messages": [{"role": "system", "content": sistema}, {"role": "user", "content": usuario}]}
+    for _ in range(3):
+        r = post("https://openrouter.ai/api/v1/chat/completions", corpo, chave("OPENROUTER_API_KEY"))
+        u = r.get("usage", {})
+        registrar_custo(etapa, alvo, corpo["model"], u.get("cost", 0), u)
+        texto = re.sub(r"^```(json)?|```$", "", (r["choices"][0]["message"].get("content") or "").strip())
+        try:
+            return json.loads(texto), u.get("cost", 0)
+        except json.JSONDecodeError:
+            print(f"  resposta sem json válido de {corpo['model']}, tentando de novo")
+    raise RuntimeError(f"{corpo['model']} não devolveu json válido para {alvo}.")
+
+
 def deepseek(modelo, sistema, usuario, etapa, alvo, max_tokens=8000, pensar=False):
+    if ROTA == "openrouter":
+        return via_openrouter(modelo, sistema, usuario, etapa, alvo, max_tokens, pensar)
     corpo = {"model": modelo, "max_tokens": max_tokens,
              "response_format": {"type": "json_object"},
              "thinking": {"type": "enabled" if pensar else "disabled"},
@@ -467,18 +491,28 @@ def prompts_licao(id_, idx):
     return sistema, usuario, doc
 
 
-def gerar_licao(id_, idx, seco=False, revisao_pro=True):
+def gerar_licao(id_, idx, seco=False, revisao_pro=True, partida=None, extras=()):
+    """partida: uma lição já feita (rascunho ou publicada) para corrigir em vez de gerar do zero.
+    extras: problemas vindos de fora das checagens (nota do editor, fotos não usadas)."""
     sistema, usuario, doc = prompts_licao(id_, idx)
     if seco:
         tok = (len(sistema) + len(usuario)) / 3.2
         print(f"{id_}: ~{tok:,.0f} tokens de entrada, ~3.000 de saída, "
               f"~US$ {(tok * 0.30 + 3000 * 1.20) / 1e6 * (1 if pico() else .5):.4f} no Flash ({'pico' if pico() else 'fora do pico'})")
         return
-    print(f"{id_}: gerando com {FLASH}")
-    L, custo = deepseek(FLASH, sistema, usuario, "licao", id_)
+    if partida is None:
+        print(f"{id_}: gerando com {FLASH}")
+        L, custo = deepseek(FLASH, sistema, usuario, "licao", id_)
+        modelo = FLASH
+    else:
+        L, custo, modelo = partida, 0, "reaproveitada"
     erros, avisos = checar_licao(L, doc)
     alertas, bruto = portao_jev(L, doc["termo"], id_)
-    rodada, modelo = 1, FLASH
+    alertas += list(extras)
+    if partida is not None and not erros and not alertas:
+        print(f"{id_}: continua como está")
+        return None
+    rodada = 1
     # até duas reescritas com o Pro: a primeira para erros e alertas, a segunda só se ainda restarem erros
     while revisao_pro and rodada < 3 and (erros or (alertas and rodada == 1)):
         print(f"  {len(erros)} erro(s), {len(alertas)} alerta(s) do JEV: reescrevendo trechos com {PRO}")
@@ -501,7 +535,7 @@ def gerar_licao(id_, idx, seco=False, revisao_pro=True):
         e2, a2 = checar_licao(L2, doc)
         if len(e2) > len(erros):
             break
-        L, erros, avisos, modelo = L2, e2, a2, f"{FLASH}+{PRO}"
+        L, erros, avisos, modelo = L2, e2, a2, (f"{FLASH}+{PRO}" if partida is None else f"reaproveitada+{PRO}")
         alertas, bruto = portao_jev(L, doc["termo"], id_)
     RASC.mkdir(exist_ok=True)
     rasc = {"id": id_, "tipo": "licao", "criado": agora(), "modelo": modelo, "rodadas": rodada,
@@ -529,6 +563,29 @@ def publicar_licao(id_, L):
         arq.write_text(original, encoding="utf-8")
         raise RuntimeError("build.js falhou:\n" + r.stdout[-2000:])
     return r.stdout.strip().splitlines()[-2:]
+
+
+def refazer_licao(id_, idx):
+    """Parte do rascunho (ou da lição publicada) e só corrige o que as checagens atuais, as fotos novas
+    e a nota do editor apontam. Lição limpa não gasta nada além do JEV."""
+    doc = documento(id_)
+    arq = RASC / f"{id_}.json"
+    L = json.loads(arq.read_text(encoding="utf-8"))["licao"] if arq.exists() else doc.get("licao")
+    if not L:
+        return gerar_licao(id_, idx)
+    L = {k: L[k] for k in ("gancho", "telas", "fecho") if k in L}
+    for t in L["telas"]:
+        t.pop("svg", None)
+    extras = []
+    if doc.get("fotos") and not any(t.get("tipo") == "foto" for t in L["telas"]):
+        extras.append("o documento tem fotos reais e a lição não usa nenhuma: troque de 1 a 3 telas de texto ou fracas por telas foto, a primeira logo depois do gancho")
+    nv = sum(t.get("tipo") in VISUAIS for t in L["telas"])
+    if nv < 5:
+        extras.append(f"só {nv} telas visuais: a regra é pelo menos 5")
+    nota = next((a for a in reversed(avaliacoes()) if a.get("id") == id_ and a.get("tipo") == "licao" and a.get("comentario")), None)
+    if nota:
+        extras.append("nota do editor sobre esta lição: " + " ".join(nota["comentario"].split()))
+    return gerar_licao(id_, idx, partida=L, extras=extras)
 
 
 # ── grafo do acervo ─────────────────────────────────────────────────────
@@ -1101,8 +1158,17 @@ def miniatura(bruto):
 
 
 def visao(conteudo, alvo):
+    for tentativa in range(2):   # resposta cortada acontece; na segunda falha, o trecho fica sem imagem
+        try:
+            return _visao(conteudo, alvo)
+        except (json.JSONDecodeError, KeyError) as e:
+            print(f"  {alvo}: resposta do modelo de visão ilegível ({e.__class__.__name__}), tentativa {tentativa + 1}")
+    return {}
+
+
+def _visao(conteudo, alvo):
     r = post("https://openrouter.ai/api/v1/chat/completions",
-             {"model": VISAO, "messages": [{"role": "user", "content": conteudo}], "max_tokens": 1500,
+             {"model": VISAO, "messages": [{"role": "user", "content": conteudo}], "max_tokens": 3000,
               "response_format": {"type": "json_object"}, "usage": {"include": True}}, chave("OPENROUTER_API_KEY"))
     registrar_custo("visao", alvo, VISAO, r.get("usage", {}).get("cost", 0), r.get("usage", {}))
     texto = r["choices"][0]["message"].get("content") or "{}"
@@ -1272,6 +1338,9 @@ def main():
     if not a:
         sys.exit(__doc__)
     cmd, flags, ids = a[0], {x for x in a if x.startswith("--")}, [x for x in a[1:] if not x.startswith("--")]
+    global ROTA
+    if "--openrouter" in flags:
+        ROTA = "openrouter"
     if cmd == "licao":
         idx = indice()
         if "--todas" in flags:
@@ -1300,13 +1369,25 @@ def main():
         if cmd == "conceito" and "--seco" not in flags:
             print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-1])
     elif cmd == "imagens":
-        for i in ids:
+        def um(i):
             try:
                 gerar_imagens(i, seco="--seco" in flags)
-            except RuntimeError as e:
-                print(f"  {i}: falhou ({e})")
+            except Exception as e:   # uma imagem problemática não derruba o lote
+                print(f"  {i}: falhou ({e!r})")
+        with concurrent.futures.ThreadPoolExecutor(4) as ex:
+            list(ex.map(um, ids or [c["id"] for c in indice()["conceitos"] if c["doc"]]))
         if "--seco" not in flags:
             print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-1])
+    elif cmd == "refazer":
+        idx = indice()
+        alvos = ids or [c["id"] for c in idx["conceitos"] if c["doc"]]
+        def um(i):
+            try:
+                refazer_licao(i, idx)
+            except RuntimeError as e:
+                print(f"  {i}: falhou ({e}); rode de novo depois")
+        with concurrent.futures.ThreadPoolExecutor(4) as ex:
+            list(ex.map(um, alvos))
     elif cmd == "grafo":
         gerar_grafo(seco="--seco" in flags)
     elif cmd == "triagem":

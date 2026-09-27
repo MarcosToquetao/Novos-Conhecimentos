@@ -33,6 +33,8 @@ nucleo: { minutos: 15, html: `
 
 <p>Essa descoberta abriu uma linha de pesquisa clínica real: em vez de bloquear totalmente a síntese de proteínas (algo inviável e perigoso em humanos), pesquisadores testaram um remédio já aprovado e seguro, o propranolol (um beta-bloqueador usado normalmente para pressão alta e ansiedade), administrado logo antes de a pessoa reativar deliberadamente uma memória traumática, em sessões terapêuticas estruturadas. A ideia: interferir especificamente na reconsolidação da carga emocional daquela memória, sem apagar o conteúdo factual dela.<sup class="cit"><a href="#f4">4</a></sup></p>
 
+[[FOTO:2]]
+
 <div class="marca consenso">
 <span class="rot">O que a mídia costuma exagerar</span>
 <p>Manchetes sobre esse tipo de tratamento costumam usar a expressão "remédio que apaga memórias". Isso é impreciso de um jeito importante: as pessoas tratadas continuam lembrando dos fatos do que aconteceu. O que muda, segundo os próprios pesquisadores da área, é a intensidade da resposta emocional e fisiológica associada à lembrança (o medo, a angústia, os sintomas de ansiedade ao recordar), não a existência da lembrança factual em si.<sup class="cit"><a href="#f5">5</a></sup></p>
@@ -44,11 +46,15 @@ aprofundamento: { minutos: 30, html: `
 
 <p>Nader, Schafe e LeDoux usaram o chamado condicionamento de medo pavloviano: ratos aprendem a associar um som neutro a um choque elétrico leve, e passam a "congelar" (parar de se mover, uma resposta de medo mensurável) só de ouvir o som, mesmo sem o choque. Depois de a memória estar consolidada, os pesquisadores injetavam anisomicina, um inibidor de síntese de proteínas, diretamente na amígdala basolateral, tanto em ratos que tinham acabado de ouvir o som de novo (reativação) quanto em ratos que não tinham. Só o primeiro grupo perdeu a resposta de medo condicionada.<sup class="cit"><a href="#f1">1</a></sup> Isso isolou, com bastante precisão, que era a combinação específica de reativação mais bloqueio de síntese proteica, e não qualquer um dos dois fatores isoladamente, que interferia na memória.</p>
 
+[[FOTO:1]]
+
 <h3>Do bloqueio total de proteínas ao propranolol em humanos</h3>
 
 <p>Nenhum inibidor de síntese proteica como o usado em ratos é seguro para uso em pessoas. A adaptação clínica usa o propranolol, que age num sistema diferente, mas relacionado: bloqueia receptores adrenérgicos envolvidos na consolidação (e reconsolidação) da carga emocional de memórias, um mecanismo já conhecido desde estudos mais antigos sobre como a adrenalina fortalece memórias emocionalmente intensas no momento em que são formadas.</p>
 
 <p>Alain Brunet e colegas conduziram um ensaio clínico randomizado, duplo-cego e controlado por placebo, com 60 adultos com transtorno de estresse pós-traumático de longa duração, publicado no <em>American Journal of Psychiatry</em> em 2018.<sup class="cit"><a href="#f2">2</a></sup> Os participantes tomavam propranolol ou placebo cerca de 90 minutos antes de uma sessão semanal de reativação da memória traumática, por seis semanas seguidas. O grupo tratado com propranolol apresentou redução estatisticamente significativa nos sintomas de TEPT, medidos por uma escala clínica padronizada, comparado ao grupo placebo.<sup class="cit"><a href="#f2">2</a></sup></p>
+
+[[FOTO:3]]
 
 <div class="tabela-env">
 <table>
@@ -265,7 +271,9 @@ fontes: [
   { n: 13, tipo: "fonte primária", ref: "Estudo sobre reconsolidação seletiva: memórias diretamente reativadas, mas não memórias associadas indiretamente, sofrem reconsolidação na amígdala.", url: "https://www.pnas.org/doi/10.1073/pnas.0507168103" },
   { n: 14, tipo: "reportagem", ref: "Psychiatric News (American Psychiatric Association). 'Propranolol Combined With Reactivation Therapy May Reduce PTSD Symptoms', cobertura do ensaio de Brunet e colegas para a comunidade psiquiátrica.", url: "https://psychiatryonline.org/doi/10.1176/appi.pn.2018.pp2a2" },
   { n: 15, tipo: "enciclopédia", ref: "MDPI Encyclopedia. Verbete sobre o uso de propranolol em transtorno de estresse pós-traumático, com resumo de mecanismos e evidência clínica.", url: "https://encyclopedia.pub/entry/26909" }
-]
+],
+
+fotos: [{"n": 1, "arquivo": "img/c/reconsolidacao/1.webp", "legenda": "Câmara de condicionamento utilizada em experimentos científicos para medir a resposta de medo em camundongos.", "alt": "Uma câmara experimental usada para estudos de condicionamento de medo em animais.", "autor": "Bd008", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Fear_conditioning_for_mice.jpeg", "gif": false, "w": 800, "h": 672}, {"n": 2, "arquivo": "img/c/reconsolidacao/2.webp", "legenda": "Embalagens de propranolol, medicamento utilizado para atenuar a carga emocional de memórias traumáticas.", "alt": "Três embalagens de cartela de remédio indicando propranolol de 10mg e 80mg.", "autor": "Whispyhistory", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Propranolol_tablets_(UK).jpg", "gif": false, "w": 800, "h": 708}, {"n": 3, "arquivo": "img/c/reconsolidacao/3.webp", "legenda": "Terapeuta conversa com paciente durante sessão de psicoterapia realizada em consultório.", "alt": "Terapeuta sentado à frente de um paciente deitado em um divã.", "autor": "Mike Renlund", "licenca": "CC BY 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:A_session_with_a_psychotherapist_(751707089).jpg", "gif": false, "w": 800, "h": 600}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

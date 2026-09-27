@@ -20,6 +20,8 @@ nucleo: { minutos: 15, html: `
 
 <p>Essa ideia tem quase trezentos anos. Quem a formulou primeiro foi Richard Cantillon, um banqueiro irlandês radicado em Paris, num livro chamado <em>Essai sur la Nature du Commerce en Général</em>, escrito por volta de 1730. Cantillon nunca viu seu livro publicado: foi assassinado em 1734 por um ex-cozinheiro demitido, que roubou e incendiou sua casa. O manuscrito sobreviveu por pouco e só foi publicado, postumamente, em 1755.<sup class="cit"><a href="#f1">1</a></sup></p>
 
+[[FOTO:1]]
+
 <h3>Contra qual ideia essa tese se choca</h3>
 
 <p>Para entender por que essa ideia é interessante, ajuda saber contra o que ela se choca: a suposição de <strong>moeda neutra</strong>. Numa versão simplificada de livro-texto, dobrar a quantidade de dinheiro na economia simplesmente dobra todos os preços, na mesma hora, para todo mundo, sem mudar nada de real (quem era rico continua rico na mesma proporção, quem era pobre continua pobre na mesma proporção). Cantillon apontou que isso ignora o tempo e o caminho: a moeda nova não chove igualmente sobre a economia inteira num instante só, ela é gasta por alguém primeiro, depois por outro alguém, e assim por diante, e cada parada dessa cadeia é uma chance de ganhar ou perder poder de compra real.</p>
@@ -277,6 +279,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Efeito Cantillon", "html": "<p>O efeito Cantillon descreve a ideia de que quem recebe dinheiro novo primeiro se beneficia mais do que quem recebe depois. Fora da economia austríaca e da comunidade cripto, o termo raramente aparece no vocabulário padrão de cursos de macroeconomia ou em modelos de bancos centrais. Nesses contextos, o debate costuma ser tratado sob outros nomes, como canais de transmissão da política monetária e efeitos distributivos, sem adotar o enquadramento específico de Cantillon nem a conclusão de que a política monetária seria, no fundo, uma transferência de renda para quem está mais perto do poder.</p><p>Isso não significa que a ideia esteja errada. Significa que ela circula mais como posição de escola de pensamento do que como resultado testado e aceito de forma ampla. Boa parte do que se lê online vem de fontes já comprometidas com uma dessas duas tradições, o que torna a hipótese uma linha de pesquisa em aberto, com evidência ainda limitada.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/efeito-cantillon/1.webp", "legenda": "Página de rosto da edição original de 1755 do livro Essai sur la Nature du Commerce en Général.", "alt": "Página de rosto da edição de 1755 do livro de Cantillon.", "autor": "Unknown authorUnknown author", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Cover_of_%22Essai_Sur_La_Nature_du_Commerce_en_G%C3%A9n%C3%A9ral%22_by_Richard_Cantillon.jpg", "gif": false, "w": 645, "h": 1024}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

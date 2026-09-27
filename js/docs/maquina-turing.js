@@ -18,11 +18,17 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Em 1936, o matemático britânico Alan Turing propôs uma máquina que nunca foi construída fisicamente e nunca precisou ser: um dispositivo imaginário, hoje chamado de <strong>máquina de Turing</strong>, com uma fita infinitamente longa dividida em células, um cabeçote que lê e escreve símbolos numa célula de cada vez, e uma tabela pequena e finita de regras simples: dependendo do símbolo lido e do "estado" atual da máquina, ela escreve um novo símbolo, se move uma célula para a esquerda ou direita, e muda para outro estado.<sup class="cit"><a href="#f1">1</a></sup></p>
 
+[[FOTO:2]]
+
+[[FOTO:1]]
+
 <p>Isso parece simples demais para importar. A descoberta central de Turing foi que esse mecanismo minúsculo, com regras tão básicas, é capaz de executar qualquer processo que mereça o nome de "cálculo" ou "algoritmo", no sentido mais geral possível. Não é uma calculadora limitada a operações aritméticas: com a fita e as regras certas, uma máquina de Turing pode, em princípio, simular qualquer procedimento passo a passo bem definido que um matemático humano conseguiria seguir com papel e lápis, dado tempo suficiente.</p>
 
 <h3>O problema que Turing estava tentando resolver</h3>
 
 <p>Turing não inventou essa máquina por curiosidade abstrata. Em 1928, o matemático alemão David Hilbert havia formulado o que chamou de "problema principal da lógica matemática", o <em>Entscheidungsproblem</em> (problema da decisão): existe algum procedimento mecânico, aplicável a qualquer afirmação matemática, capaz de determinar se ela é verdadeira ou falsa?<sup class="cit"><a href="#f7">7</a></sup> Para responder a essa pergunta de forma rigorosa, era preciso primeiro definir com precisão matemática o que "procedimento mecânico" sequer significa, algo que, até então, era tratado de forma intuitiva. A máquina de Turing foi a resposta: uma definição matemática exata do que significa "computar algo passo a passo", contra a qual qualquer alegação de "existe um procedimento mecânico para isso" poderia, finalmente, ser testada com rigor.</p>
+
+[[FOTO:3]]
 
 <div class="marca consenso">
 <span class="rot">O que é aceito sem disputa</span>
@@ -254,6 +260,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "A versão física da tese de Church-Turing", "html": "<p>Esta é uma linha de pesquisa teórica, não um resultado estabelecido. A tese de Church-Turing física afirma que nenhum sistema físico real consegue calcular além do que uma máquina de Turing calcula. Diferente da tese matemática original, que trata do significado de algoritmo, esta é uma afirmação empírica sobre o universo, e por isso poderia ser falsa se alguma física nova permitisse algo diferente.<sup class=\"cit\"><a href=\"#f4\">4</a></sup></p><p>Foram exploradas propostas de hipercomputação, que usariam processos hipotéticos como tarefas supertarefa, computação com buracos negros ou processos retrocausais. Essas ideias dependem de suposições físicas sem qualquer evidência experimental de viabilidade até hoje, o que as mantém no território da especulação teórica, não da física estabelecida.<sup class=\"cit\"><a href=\"#f4\">4</a></sup></p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/maquina-turing/1.webp", "legenda": "O matemático Alan Turing em 1936, ano em que propôs o conceito da máquina de Turing.", "alt": "Retrato fotográfico de Alan Turing jovem em 1936.", "autor": "Unknown photographer", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Alan_Turing_(1912-1954)_in_1936_at_Princeton_University.jpg", "gif": false, "w": 733, "h": 745}, {"n": 2, "arquivo": "img/c/maquina-turing/2.webp", "legenda": "Representação visual de uma fita de dados sendo lida e alterada por um cabeçote de processamento.", "alt": "Representação gráfica de uma fita com um cabeçote de leitura e escrita e um estado definido.", "autor": "Wdvorak", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Turing_Maschine.gif", "gif": true, "w": 480, "h": 178}, {"n": 3, "arquivo": "img/c/maquina-turing/3.webp", "legenda": "O matemático alemão David Hilbert, responsável por formular o problema da decisão na lógica matemática.", "alt": "Retrato em preto e branco do matemático alemão David Hilbert.", "autor": "Unknown authorUnknown author", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:David_Hilbert,_1907.jpg", "gif": false, "w": 800, "h": 1144}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

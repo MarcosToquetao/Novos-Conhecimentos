@@ -29,7 +29,11 @@ nucleo: { minutos: 15, html: `
 
 <p>Elizabeth Loftus, já conhecida por décadas de pesquisa sobre a maleabilidade do testemunho ocular, e Jacqueline Pickrell foram além das palavras isoladas: tentaram implantar, em adultos, a lembrança de um episódio inteiro que nunca aconteceu, ficar perdido num shopping center por volta dos 5 anos de idade.<sup class="cit"><a href="#f3">3</a></sup> Usando um parente mais velho para "confirmar" o episódio fictício junto com três lembranças reais, uma fração relevante dos participantes passou a relatar, com detalhes próprios inventados, uma lembrança do episódio que jamais existiu.<sup class="cit"><a href="#f3">3</a></sup></p>
 
+[[FOTO:1]]
+
 <p>O motivo declarado da pesquisa não era um exercício acadêmico abstrato. Nos anos 1980 e 1990, tribunais nos Estados Unidos viram uma onda de processos baseados em "memórias recuperadas" de abuso na infância, muitas vezes emergidas durante terapia. Loftus queria testar, com rigor experimental, se era possível implantar uma lembrança inteira e falsa em alguém, como forma de questionar se toda memória "recuperada" em terapia era necessariamente confiável.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+[[FOTO:2]]
 
 <div class="marca consenso">
 <span class="rot">Um ponto que exige cuidado</span>
@@ -49,6 +53,8 @@ aprofundamento: { minutos: 30, html: `
 <h3>O desenho experimental do estudo do shopping</h3>
 
 <p>Loftus e Pickrell recrutaram 24 participantes, cada um pareado com um parente mais velho (geralmente um dos pais ou um irmão mais velho) que ajudava a fornecer detalhes de três episódios reais da infância do participante. Um quarto episódio, fictício (perder-se num shopping por volta dos 5 anos, chorar, ser ajudado por uma senhora mais velha e finalmente reencontrar a família), era inserido junto dos três reais, sempre "confirmado" pelo parente como tendo de fato acontecido. Em entrevistas subsequentes, cerca de um quarto dos participantes passou a relatar lembrar do episódio fictício, alguns acrescentando detalhes sensoriais e emocionais próprios que não faziam parte da história original fornecida pelos pesquisadores.<sup class="cit"><a href="#f3">3</a></sup></p>
+
+[[FOTO:3]]
 
 <div class="tabela-env">
 <table>
@@ -263,7 +269,9 @@ fontes: [
   { n: 13, tipo: "crítica", ref: "Andrews, B. et al. 'Lost in the Mall? Interrogating Judgements of False Memory'. <em>Applied Cognitive Psychology</em>, 2024.", url: "https://onlinelibrary.wiley.com/doi/10.1002/acp.70012" },
   { n: 14, tipo: "reportagem acadêmica", ref: "'Current state of \"lost in the mall\": implications for expert testimony and forensic assessment of memory'.", url: "https://www.tandfonline.com/doi/full/10.1080/13218719.2025.2556461" },
   { n: 15, tipo: "divulgação", ref: "Medium (Jeff Barlatier). '\"Lost in the Mall\": How a Simple Story Shook Our Confidence in Memory', resumo acessível do histórico do estudo e seu impacto cultural.", url: "https://medium.com/@jeffreybarlatier/lost-in-the-mall-how-a-simple-story-shook-our-confidence-in-memory-db0299312d48" }
-]
+],
+
+fotos: [{"n": 1, "arquivo": "img/c/memoria-falsa/1.webp", "legenda": "A psicóloga Elizabeth Loftus, principal pesquisadora sobre a maleabilidade da memória humana.", "alt": "Elizabeth Loftus em um evento.", "autor": "BDEngler", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Elizabeth_Loftus-TAM_9-July_2011.JPG", "gif": false, "w": 800, "h": 1200}, {"n": 2, "arquivo": "img/c/memoria-falsa/2.webp", "legenda": "Advogada apresentando argumentos diante de juízes em uma audiência judicial.", "alt": "Juízes e advogados em uma audiência judicial formal.", "autor": "COD Newsroom", "licenca": "CC BY 2.0", "pagina": "https://commons.wikimedia.org/wiki/File:IL_3rd_District_App._Court_hearing_oral_arguments_at_College_of_DuPage_campus_on_Feb._27,_2024_(53570240779).jpg", "gif": false, "w": 800, "h": 533}, {"n": 3, "arquivo": "img/c/memoria-falsa/3.webp", "legenda": "Interior de um shopping center com múltiplos andares, escadas rolantes e lojas.", "alt": "Vista interior de vários níveis de um shopping center com escadas rolantes.", "autor": "Basile Morin", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Large_interior_view_of_Plaza_Singapura_Shopping_mall_Orchard_Road_Singapore.jpg", "gif": false, "w": 800, "h": 533}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

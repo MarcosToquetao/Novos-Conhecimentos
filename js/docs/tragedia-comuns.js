@@ -18,6 +18,8 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">Garrett Hardin publicou na <em>Science</em>, em 1968, um artigo que se tornou um dos textos mais citados das ciências sociais.<sup class="cit"><a href="#f1">1</a></sup> A imagem é simples: um pasto aberto a todos os pastores de uma vila. Cada pastor, agindo racionalmente, decide acrescentar mais um animal ao rebanho.</p>
 
+[[FOTO:1]]
+
 <p>A conta que ele faz é a seguinte: o benefício do animal adicional (sua carne, seu leite) é inteiramente dele. O custo, um pouco mais de pasto degradado, é dividido entre todos. Se há vinte pastores, ele arca com um vinte avos do prejuízo e fica com a totalidade do lucro. A decisão racional é clara: acrescentar o animal.</p>
 
 <p>E é clara para todos os pastores, simultaneamente. Cada um acrescenta. O pasto colapsa. Hardin: "A ruína é o destino para o qual todos os homens correm, cada um perseguindo seu próprio interesse numa sociedade que acredita na liberdade dos bens comuns. A liberdade num bem comum traz a ruína para todos."</p>
@@ -34,7 +36,11 @@ nucleo: { minutos: 15, html: `
 
 <p>Ostrom fez algo que o debate teórico não estava fazendo: foi verificar. Ao longo de décadas, ela e colaboradores documentaram e compararam centenas de sistemas reais de recursos compartilhados: sistemas de irrigação nas Filipinas e na Espanha, pastagens comunais na Suíça, florestas no Japão e no Nepal, pesqueiras na Turquia e no Sri Lanka.<sup class="cit"><a href="#f2">2</a></sup></p>
 
+[[FOTO:2]]
+
 <p>O achado central: <strong>muitos desses sistemas funcionaram de forma sustentável por séculos</strong>, sem privatização e sem controle estatal. Os pastos comunais de Törbel, nos Alpes suíços, são geridos coletivamente com regras documentadas desde 1224. As <em>huertas</em> de Valência distribuem água por regras comunitárias que atravessaram mais de quinhentos anos e três regimes políticos.</p>
+
+[[FOTO:3]]
 
 <p>Ostrom recebeu o Nobel de Economia em 2009, a primeira mulher a recebê-lo, e uma cientista política num prêmio de economia.</p>
 
@@ -281,4 +287,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Preferências sociais são debate aberto", "html": "<p>Uma linha de pesquisa investiga se humanos têm preferências sociais genuínas, como reciprocidade e aversão à desigualdade, que não caberiam no modelo do agente puramente egoísta. A hipótese rival é que os efeitos observados em experimentos dependem muito do contexto e da demanda característica dos testes, enfraquecendo com repetição, anonimato e valores monetários altos.</p><p>Não há confirmação de qual leitura é correta. Meta-análises indicam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam, algo comum na literatura após a crise de replicação <sup class=\"cit\"><a href=\"#f1\">1</a></sup>.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/tragedia-comuns/1.webp", "legenda": "Gado e ovelhas pastando livremente em uma área comum de terra.", "alt": "Rebanho de gado e ovelhas pastando em área aberta.", "autor": "Fulani215", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Sheep_and_cattle_grazing_in_a_forest,_Nigeria.jpg", "gif": false, "w": 800, "h": 533}, {"n": 2, "arquivo": "img/c/tragedia-comuns/2.webp", "legenda": "Acequia em Santa Fé, um sistema de irrigação comunitário tradicional usado para distribuir água em áreas áridas.", "alt": "Acequia tradicional, um canal de irrigação em área urbana.", "autor": "Netherzone", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Acequia_Madre_(Santa_Fe)_June_2022.jpg", "gif": false, "w": 800, "h": 1067}, {"n": 3, "arquivo": "img/c/tragedia-comuns/3.webp", "legenda": "Vila de Törbel, nos Alpes suíços, onde pastagens comunais são geridas coletivamente há séculos.", "alt": "Vista aproximada da vila de Törbel, destacando casas e áreas verdes.", "autor": "Daniel Reust", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:T%C3%B6rbel_im_Fr%C3%BChling_2025.jpg", "gif": false, "w": 800, "h": 449}],
 };

@@ -36,6 +36,8 @@ nucleo: { minutos: 15, html: `
 
 <p><strong>Fechamento.</strong> O sistema visual completa contornos ausentes. É por isso que três formas recortadas produzem um triângulo que não existe, e por isso logotipos podem sugerir formas com muito menos traço do que pareceria necessário.</p>
 
+[[FOTO:1]]
+
 <p><strong>Continuidade.</strong> Preferimos ler traçados que seguem em curva suave a traçados que fazem quinas. É a base do alinhamento: uma coluna de elementos alinhados é lida como uma unidade porque o olho segue a linha implícita.</p>
 
 <p><strong>Região comum.</strong> Elementos dentro de uma mesma fronteira fechada formam grupo, e este princípio <em>sobrepõe-se à proximidade</em>. É a razão de existirem cards: uma moldura pode reagrupar elementos contra a distância entre eles.</p>
@@ -45,6 +47,8 @@ nucleo: { minutos: 15, html: `
 <h3>Figura e fundo</h3>
 
 <p>Antes de agrupar, o sistema visual decide o que é objeto e o que é espaço vazio. Essa decisão é involuntária, quase sempre inequívoca e ocasionalmente ambígua: o vaso de Rubin, que alterna entre taça e dois perfis, é o exemplo clássico.</p>
+
+[[FOTO:2]]
 
 <p>Em interface, o que determina a leitura de figura é sobretudo: área menor tende a virar figura; região cercada tende a virar figura; e a parte que aparenta estar à frente ganha. Sombra, elevação e contraste são as ferramentas com que se manipula isso.</p>
 
@@ -74,6 +78,8 @@ aprofundamento: { minutos: 15, html: `
 <h3>A teoria original está morta</h3>
 
 <p>Os gestaltistas não pararam na descrição. Wolfgang Köhler propôs uma explicação neurofisiológica: campos elétricos contínuos no córtex que se organizariam por dinâmica de campo, produzindo isomorfismo entre a estrutura da experiência e a estrutura da atividade cerebral.</p>
+
+[[FOTO:3]]
 
 <p>Essa hipótese foi refutada experimentalmente nos anos 1950. Lashley, Sperry e colaboradores inseriram lâminas metálicas e fios condutores no córtex visual de animais para curto-circuitar os campos hipotéticos. A percepção permaneceu intacta.<sup class="cit"><a href="#f2">2</a></sup></p>
 
@@ -279,4 +285,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Simplicidade contra probabilidade na leitura visual", "html": "<p>Há mais de setenta anos se discute se a leitura visual agrupa elementos pelo arranjo mais simples ou pelo mais provável. A disputa não foi resolvida. Autores mostraram que, sob certas condições, as duas explicações fazem as mesmas previsões, o que levanta a possibilidade de a pergunta estar mal colocada.</p><p>É uma hipótese em debate, não um fato estabelecido. Para quem projeta interfaces, o efeito prático é pequeno. A distinção serve para não tratar como consolidada uma explicação que segue em disputa entre pesquisadores.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/gestalt-design/1.webp", "legenda": "O quadrado de Kanizsa: os recortes nos círculos fazem o cérebro criar um quadrado branco que não existe realmente.", "alt": "Quatro círculos com recortes em ângulo dispostos de forma a criar um quadrado branco imaginário no centro.", "autor": "JimmyToad", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Kanizsa_square.jpg", "gif": false, "w": 800, "h": 800}, {"n": 2, "arquivo": "img/c/gestalt-design/2.webp", "legenda": "Exemplo clássico de figura e fundo no qual se pode ver um vaso ou dois rostos humanos perfilados.", "alt": "Representação clássica do vaso de Rubin em alto contraste (preto e branco).", "autor": "autor desconhecido", "licenca": "CC BY-SA 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Facevase.png", "gif": false, "w": 501, "h": 482}, {"n": 3, "arquivo": "img/c/gestalt-design/3.webp", "legenda": "Retrato do psicólogo Wolfgang Köhler, um dos fundadores da psicologia da Gestalt.", "alt": "Retrato em preto e branco do psicólogo Wolfgang Köhler.", "autor": "Historical Library, Swartmore College /The National Academies Press", "licenca": "CC BY-SA 2.5", "pagina": "https://commons.wikimedia.org/wiki/File:Wolfgang_K%C3%B6hler.jpg", "gif": false, "w": 376, "h": 454}],
 };

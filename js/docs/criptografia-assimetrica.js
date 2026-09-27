@@ -30,10 +30,14 @@ camadas: {
 nucleo: { minutos: 4, html: `
 <p class="abre">Dois primos querem trocar cartas secretas. Eles combinam antes uma senha e trocam mensagens cifradas com ela. O problema aparece quando um deles quer falar com um desconhecido: como combinar a senha sem se encontrar? Em 1976, Whitfield Diffie e Martin Hellman mostraram que dá para fazer isso em plena praça pública<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. A ideia é separar a chave em duas: uma que pode ser mostrada para todo mundo e outra que fica só com o dono.</p>
 
+[[FOTO:1]]
+
 <h3>A separação que resolve o problema</h3>
 <p>Até os anos 1970, todos os sistemas de cifra usavam uma chave só, chamada simétrica: a mesma senha tranca e destranca, e as duas pessoas precisam conhecê-la de antemão<sup class="cit"><a href="#f2">2</a></sup>. Isso exige um encontro secreto ou um mensageiro de confiança para cada par de pessoas, o que fica impraticável quando o número de usuários cresce<sup class="cit"><a href="#f2">2</a></sup>.</p>
 <p>A chave pública quebra essa exigência. Cada pessoa gera um par: uma chave pública, que ela publica em um site ou diretório, e uma chave privada, que ela guarda<sup class="cit"><a href="#f1">1</a></sup>. Quem quer mandar uma mensagem tranca o texto com a chave pública do destinatário. Só a chave privada correspondente abre aquilo<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Não importa quem viu ou copiou a chave pública: sem a privada, a mensagem continua ilegível.</p>
 <p>Uma analogia comum é a caixa de correio<sup class="cit"><a href="#f1">1</a></sup>. O endereço é público; qualquer um pode chegar e depositar uma carta pela fenda. Mas só quem tem a chave abre a portinhola e lê o que está dentro. A caixa em si não esconde o fato de que alguém deixou algo ali, mas esconde o conteúdo.</p>
+
+[[FOTO:2]]
 
 <h3>Como a conta difícil garante o segredo</h3>
 <p>A chave privada não é guardada em um cofre no servidor. Ela é calculada a partir de um número secreto, e a chave pública é derivada dele por uma operação matemática<sup class="cit"><a href="#f1">1</a></sup>. O truque é que essa operação é fácil de fazer em um sentido, mas impraticável de desfazer.</p>
@@ -47,6 +51,8 @@ nucleo: { minutos: 4, html: `
 
 <h3>O custo de usar em tudo</h3>
 <p>As contas assimétricas são bem mais pesadas que as simétricas. Por isso quase nunca se cifra um arquivo inteiro com chave pública<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. O que se faz é usar a chave pública só para combinar uma chave simétrica temporária, e depois trocar os dados com essa chave, que é rápida<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. É o que PGP, SSH e TLS fazem, e por isso são chamados de sistemas híbridos<sup class="cit"><a href="#f2">2</a></sup>.</p>
+
+[[FOTO:3]]
 <p>Um exemplo prático: o navegador se conecta a um site, recebe a chave pública do servidor, combina uma chave de sessão e a partir daí a conversa inteira corre cifrada com a chave simétrica<sup class="cit"><a href="#f2">2</a></sup>. Sem esse passo, cada página demoraria muito mais para carregar.</p>
 ` },
 
@@ -69,7 +75,11 @@ aprofundamento: { minutos: 3, html: `
 </tbody>
 </table>
 <p>As curvas elípticas surgiram nos anos 1980, com Neal Koblitz e Victor Miller<sup class="cit"><a href="#f1">1</a></sup>. São matematicamente mais complexas, mas entregam segurança parecida com chaves bem menores e operações mais rápidas<sup class="cit"><a href="#f1">1</a></sup>. Isso importa em aparelhos pequenos, como sensores e etiquetas de identificação por rádio<sup class="cit"><a href="#f3">3</a></sup><sup class="cit"><a href="#f4">4</a></sup>.</p>
+
+[[FOTO:4]]
 <p>A história também tem uma parte secreta. Em 1970, James Ellis, do centro de comunicações britânico GCHQ, imaginou a ideia, mas não viu como implementá-la<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Em 1973, Clifford Cocks criou o que hoje chamamos de RSA, e em 1974 Malcolm Williamson desenvolveu a troca de chaves Diffie-Hellman<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Nada disso saiu do sigilo militar até 1997, quando o governo britânico liberou os documentos<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. A descoberta pública veio em 1976, com Diffie e Hellman, e em 1978, com Rivest, Shamir e Adleman<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>.</p>
+
+[[FOTO:5]]
 <p>O padrão de hash também mudou com o tempo. Algoritmos como MD5 e SHA-1 se mostraram vulneráveis a mensagens substitutas com o mesmo resumo<sup class="cit"><a href="#f1">1</a></sup>. Hoje o padrão para uso criptográfico é o SHA-2<sup class="cit"><a href="#f1">1</a></sup>.</p>
 ` },
 
@@ -393,4 +403,6 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Computação quântica", "html": "<p>Muitos algoritmos assimétricos usados hoje são considerados vulneráveis a ataques com computadores quânticos, e novos esquemas resistentes estão sendo desenvolvidos<sup class=\"cit\"><a href=\"#f2\">2</a></sup>. Ainda não existe um computador quântico capaz de quebrar essas chaves em uso real. O que há são propostas de algoritmos pós-quânticos, algumas em fase de padronização e adoção inicial<sup class=\"cit\"><a href=\"#f2\">2</a></sup>.</p>"}, {"tema": "Vazamento contínuo de memória", "html": "<p>Uma linha de pesquisa estuda esquemas de chave pública que continuam seguros mesmo quando um invasor consegue ler pedaços da memória secreta ao longo do tempo, desde que a chave seja trocada periodicamente<sup class=\"cit\"><a href=\"#f7\">7</a></sup>. É um problema em aberto, e as construções existentes ainda são recentes.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/criptografia-assimetrica/1.webp", "legenda": "Diagrama ilustra o uso de uma chave pública para criptografar um documento e uma privada para descriptografá-lo.", "alt": "Diagrama simples mostrando o uso de uma chave pública para criptografar e uma privada para descriptografar.", "autor": "MarcT0K (icons by JGraph)", "licenca": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Asymmetric_encryption_scheme.png", "gif": false, "w": 800, "h": 375}, {"n": 2, "arquivo": "img/c/criptografia-assimetrica/2.webp", "legenda": "Uma caixa de correio fixada em parede com fenda para depósito e fechadura para acesso ao conteúdo.", "alt": "Uma caixa de correio moderna fixada em uma parede de tijolos, com fenda superior e uma fechadura central.", "autor": "Matti Blume", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Post_box_Nordbrief,_Ribnitz-Damgarten_(DSC04840).JPG", "gif": false, "w": 800, "h": 1067}, {"n": 3, "arquivo": "img/c/criptografia-assimetrica/3.webp", "legenda": "Ícone de cadeado verde na barra de endereços do navegador indicando uma conexão segura HTTPS.", "alt": "Ícone de cadeado verde na barra de endereços do navegador indicando HTTPS.", "autor": "Yuri Samoilov", "licenca": "CC BY 3.0", "pagina": "https://commons.wikimedia.org/wiki/File:Https_Browser_(66747481).jpeg", "gif": false, "w": 800, "h": 533}, {"n": 4, "arquivo": "img/c/criptografia-assimetrica/4.webp", "legenda": "Representação gráfica de uma curva elíptica e sua respectiva equação matemática.", "alt": "Uma curva matemática suave, traçada sobre eixos cartesianos, acompanhada pela sua equação correspondente.", "autor": "Jacob Rus", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Weierstrass_cubic_curve_related_to_the_Dixon_elliptic_functions.png", "gif": false, "w": 800, "h": 876}, {"n": 5, "arquivo": "img/c/criptografia-assimetrica/5.webp", "legenda": "O matemático Clifford Cocks, que desenvolveu os princípios da criptografia RSA antes de sua descoberta pública.", "alt": "Retrato do matemático Clifford Cocks.", "autor": "Royal Society uploader", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Clifford-Cocks-FRS.jpg", "gif": false, "w": 800, "h": 1200}],
 };

@@ -18,7 +18,11 @@ camadas: {
 nucleo: { minutos: 15, html: `
 <p class="abre">"Entia non sunt multiplicanda praeter necessitatem", entidades não devem ser multiplicadas além do necessário. Essa frase em latim é citada em incontáveis livros de lógica e ciência como a formulação original da navalha de Ockham, atribuída ao frade franciscano inglês Guilherme de Ockham, que viveu no século 14. Há um problema: essas palavras exatas não aparecem em nenhum texto sobrevivente de Ockham. A formulação popular mais conhecida do princípio foi, na verdade, escrita por um filósofo bem posterior, o franciscano irlandês John Punch, num comentário sobre a obra de Duns Scotus publicado em 1639, quase trezentos anos depois da morte de Ockham.<sup class="cit"><a href="#f1">1</a></sup></p>
 
+[[FOTO:1]]
+
 <p>Isso não significa que Ockham não tenha nada a ver com a ideia. Ele de fato usava, com frequência, princípios de economia explicativa parecidos em seus próprios escritos filosóficos, só que em formulações diferentes e mais específicas ao contexto de cada argumento, não como uma máxima geral resumida numa única frase latina memorável. O próprio termo "navalha de Ockham" só passou a ser usado séculos depois da morte dele, e boa parte da fama do princípio associado a seu nome vem justamente da frequência e da eficácia com que ele o aplicava em debates específicos, não de uma única citação canônica que ele tivesse escrito.<sup class="cit"><a href="#f1">1</a></sup></p>
+
+[[FOTO:2]]
 
 <div class="marca consenso">
 <span class="rot">O que sobra, mesmo corrigindo a atribuição</span>
@@ -60,6 +64,8 @@ aprofundamento: { minutos: 30, html: `
 <h3>Por que essa formalização importa na prática</h3>
 
 <p>Em estatística e aprendizado de máquina, um modelo complexo demais pode se ajustar perfeitamente aos dados de treino observados, mas se sair mal em dados novos, um problema chamado <strong>sobreajuste</strong> (<em>overfitting</em>). O princípio do comprimento mínimo de descrição, e formalismos relacionados baseados em complexidade de Kolmogorov, dão uma justificativa matemática precisa para penalizar a complexidade excessiva de um modelo, não porque "simples é sempre melhor" por razões estéticas, mas porque modelos desnecessariamente complexos tendem a capturar ruído específico dos dados de treino, em vez do padrão real e generalizável.</p>
+
+[[FOTO:3]]
 ` },
 
 extensao: { minutos: 60, html: `
@@ -256,6 +262,8 @@ fontes: [
 ],
 
 fronteira: [{"tema": "Simplicidade segundo qual critério", "html": "<p>Um problema filosófico genuíno e ainda discutido é que \"simplicidade\" não tem uma definição única e universalmente aceita fora dos formalismos matemáticos específicos, como complexidade de Kolmogorov, que por sua vez depende da escolha de uma linguagem de descrição de referência. Duas pessoas podem discordar sinceramente sobre qual de duas teorias é \"mais simples\", dependendo do que cada uma considera uma suposição básica aceitável e do que considera uma complicação adicional.</p><p>Isso significa que invocar a navalha de Ockham numa discussão filosófica ou científica informal, sem especificar precisamente qual noção de simplicidade está em jogo, pode facilmente virar um argumento vazio, em que cada lado afirma que sua própria posição é \"a mais simples\".</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/navalha-ockham/1.webp", "legenda": "Página de manuscrito medieval em latim com letras manuscritas e ilustrações decorativas.", "alt": "Uma página de manuscrito medieval contendo texto denso, letras capitulares decoradas e notas marginais.", "autor": "autor desconhecido", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:Aristotle_latin_manuscript.jpg", "gif": false, "w": 800, "h": 1102}, {"n": 2, "arquivo": "img/c/navalha-ockham/2.webp", "legenda": "Esboço medieval de Guilherme de Ockham com a inscrição frater Occham iste.", "alt": "Esboço medieval de Guilherme de Ockham com a inscrição frater Occham iste.", "autor": "Unknown authorUnknown author", "licenca": "Public domain", "pagina": "https://commons.wikimedia.org/wiki/File:William_of_Occam_-_Sketch_-_Frater_Occham_iste,_1341.jpg", "gif": false, "w": 678, "h": 632}, {"n": 3, "arquivo": "img/c/navalha-ockham/3.webp", "legenda": "Uma curva complexa captura todos os pontos de dados enquanto uma linha simples representa o padrão geral", "alt": "Um gráfico exibindo uma reta simples e uma curva complexa passando por pontos de dados sobre um plano cartesiano.", "autor": "GongonR", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Overfitting_regression.png", "gif": false, "w": 800, "h": 690}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }
