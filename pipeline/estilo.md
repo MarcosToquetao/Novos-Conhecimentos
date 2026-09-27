@@ -34,7 +34,7 @@ Numa lição só existem duas marcas:
 - `consenso`: amplamente replicado, aceito na área, presente em revisões e livros-texto.
 - `emergente`: evidência séria e replicada em mais de um estudo independente, mas recente. Use pouco.
 
-Afirmação controversa ou especulativa não entra na lição, nem com marca. Se o documento de origem tem um trecho assim, deixe-o de fora. Classifique com rigor: popularidade não é consenso.
+Afirmação controversa ou especulativa não entra na lição, nem com marca. No documento de aprofundamento ela só pode aparecer na seção final «Onde a ciência ainda pesquisa» (campo `fronteira`), dita claramente como linha de pesquisa, hipótese ou dado sem confirmação, com a evidência que existe hoje. Se o documento de origem tem um trecho assim, deixe-o de fora. Classifique com rigor: popularidade não é consenso.
 
 ## Registro de linguagem
 

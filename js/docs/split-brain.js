@@ -60,7 +60,7 @@ nucleo: { minutos: 15, html: `
 
 <p>Duas cautelas que acompanham qualquer inferência por lesão. A primeira: mostrar que uma estrutura é necessária não é o mesmo que mostrar que ela é a sede da função. Cortar o cabo de força apaga a lâmpada sem que o cabo produza luz. A segunda: cérebros lesionados se reorganizam. O que se mede anos depois da cirurgia inclui tudo o que o paciente aprendeu a fazer para compensar.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Onde começa a interpretação</span>
 <p>De "os dois hemisférios processam informação separadamente" para "existem duas consciências dentro deste crânio" há um salto grande. O primeiro enunciado descreve dados. O segundo é uma tese sobre experiência subjetiva, e experiência subjetiva não é medida diretamente: ela é inferida a partir de relato verbal e de comportamento. Como um dos hemisférios não fala, o relato verbal só vem de um lado. A leitura das duas consciências foi dominante por décadas e continua defendida por pesquisadores sérios, mas é interpretação, não observação.</p>
 </div>
@@ -141,10 +141,6 @@ aprofundamento: { minutos: 30, html: `
 <li><strong>Falseabilidade.</strong> A crítica metodológica mais dura: sinalização cruzada não tem definição operacional precisa. Sem especificar que canais, com que capacidade e em que prazo, a hipótese explica qualquer resultado depois do fato e não proíbe nenhum antes.</li>
 </ul>
 
-<div class="marca controverso">
-<span class="rot">Estado da disputa</span>
-<p>Em 2020, doze pesquisadores dos dois lados, incluindo Pinto, de Haan, Lamme, Corballis, Volz, Marzi, Bayne e Seth, assinaram uma revisão conjunta. O que conseguiram acordar: a percepção é claramente dividida, o controle da resposta parece amplamente unificado, e "o conjunto de evidências é insuficiente" para decidir se a consciência se divide ou não.<sup class="cit"><a href="#f5">5</a></sup> Eles fecham pedindo paradigmas novos e testagem padronizada enquanto ainda houver pacientes disponíveis para estudo. Um artigo de revisão que termina admitindo que a questão central está aberta é um sinal de saúde do campo, não de fraqueza.</p>
-</div>
 
 <p>Uma última observação sobre o que <em>não</em> está em disputa entre as partes: nenhum dos lados afirma que o hemisfério esquerdo é lógico e o direito é criativo. Essa não é uma das posições do debate. É uma deformação popular, e o aprofundamento seguinte mostra de onde ela veio.</p>
 ` },
@@ -166,10 +162,6 @@ extensao: { minutos: 60, html: `
 <li>Se a explicação por sinalização cruzada ou por vias subcorticais estiver correta, nenhuma das duas teorias precisa mudar nada, e o resultado de Pinto vira um episódio metodológico.</li>
 </ul>
 
-<div class="marca especulacao">
-<span class="rot">Onde a filosofia entra, e onde deve parar</span>
-<p>Há posições intermediárias sérias na literatura filosófica: modelos de alternância (a consciência unificada oscilaria entre os hemisférios conforme a tarefa), modelos de unidade parcial ou em camadas, e a tese de que a pergunta "quantos sujeitos existem aí?" pode não ter resposta determinada. Nenhuma dessas propostas gerou até agora uma previsão experimental que as separe umas das outras nos dados disponíveis. São contribuições legítimas para clarificar o que a pergunta significa, e não devem ser lidas como resultados.</p>
-</div>
 
 <h3>Quantos pacientes sustentam tudo isso</h3>
 
@@ -414,5 +406,7 @@ fontes: [
   { n: 12, tipo: "revisão", ref: "Pinto, Y., de Haan, E. H. F. &amp; Lamme, V. A. F. 'The Split-Brain phenomenon revisited: A single conscious agent with split perception'. <em>Trends in Cognitive Sciences</em> 21(11):835–851, 2017. Inclui o levantamento dos pacientes bem documentados.", url: "https://doi.org/10.1016/j.tics.2017.09.003" },
   { n: 13, tipo: "artigo", ref: "Santander, T., Bekir, S., Paul, T., Simonson, J. M., Wiemer, V. M., Skinner, H. E., Hopf, J. L., Rada, A., Woermann, F. G., Kalbhenn, T., Giesbrecht, B., Bien, C. G., Sporns, O., Gazzaniga, M. S., Volz, L. J. &amp; Miller, M. B. 'Full interhemispheric integration sustained by a fraction of posterior callosal fibers'. <em>PNAS</em> 122(43):e2520190122, 2025.", url: "https://doi.org/10.1073/pnas.2520190122" },
   { n: 14, tipo: "artigo", ref: "Nielsen, J. A., Zielinski, B. A., Ferguson, M. A., Lainhart, J. E. &amp; Anderson, J. S. 'An Evaluation of the Left-Brain vs. Right-Brain Hypothesis with Resting State Functional Connectivity Magnetic Resonance Imaging'. <em>PLoS ONE</em> 8(8):e71275, 2013. Teste direto do mito da lateralização de personalidade.", url: "https://doi.org/10.1371/journal.pone.0071275" }
-]
+],
+
+fronteira: [{"tema": "O que a divisão da consciência realmente mostra", "html": "<p>Desde os primeiros estudos com pacientes de cérebro dividido, o resultado que ninguém disputa é o seguinte: a percepção fica claramente dividida entre os hemisférios, mas o controle da resposta motora e da fala parece amplamente unificado, como se um lado soubesse e o outro agisse.<sup class=\"cit\"><a href=\"#f5\">5</a></sup> O que segue em aberto é a pergunta central: isso significa que existem duas consciências ou apenas uma consciência com acesso restrito?</p><p>Doze pesquisadores que defendem posições opostas assinaram uma revisão conjunta em 2020 e concluíram que \"o conjunto de evidências é insuficiente\" para decidir essa questão.<sup class=\"cit\"><a href=\"#f5\">5</a></sup> Eles pedem paradigmas novos e testagem padronizada, porque ainda existem poucos pacientes disponíveis para estudo.</p>"}, {"tema": "Modelos filosóficos ainda sem teste experimental", "html": "<p>Na literatura filosófica existem posições intermediárias que tentam descrever o que se passa com pacientes de cérebro dividido: a ideia de que a consciência unificada alterna entre os hemisférios conforme a tarefa, a de que há uma unidade parcial ou em camadas, e a hipótese de que a pergunta \"quantos sujeitos existem aí?\" talvez não tenha resposta determinada.</p><p>Nenhuma dessas propostas gerou até agora uma previsão que permita separá-las nos dados disponíveis. São contribuições para tornar mais clara a pergunta, e continuam sendo linhas de investigação conceitual, não resultados.</p>"}],
 };

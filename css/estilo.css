@@ -69,8 +69,8 @@ button { font: inherit; color: inherit; }
 /* Nenhum transform na .tela: criaria bloco de contenção e quebraria o position:fixed. */
 .tela { display: none; padding: 0 1rem 7.5rem; }
 .tela.ativa { display: block; }
-.envelope { max-width: var(--col); margin: 0 auto; display: grid; gap: 1rem; }
-.envelope-largo { max-width: 46rem; margin: 0 auto; display: grid; gap: 1rem; }
+.envelope { max-width: var(--col); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.envelope-largo { max-width: 46rem; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
 
 .barra {
   display: flex; align-items: center; justify-content: space-between; gap: .6rem;
@@ -301,3 +301,12 @@ th { font: 500 .7rem var(--mono); letter-spacing: .06em; text-transform: upperca
   .tela { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* ── Onde a ciência ainda pesquisa ──────────────────────────────────── */
+/* Separada do corpo por fio tracejado: visualmente fora do que é garantido. */
+.fronteira { border-top: 1px dashed var(--especulacao); margin-top: 2.6rem; padding-top: 1rem; }
+.fronteira .sintese-rot { color: var(--especulacao); }
+.fronteira-aviso { font: .8rem/1.55 var(--mono); color: var(--tinta-2); margin: 0 0 1.4rem; }
+.fronteira-item { margin-bottom: 1.6rem; }
+.fronteira-item h3 { font-size: 1.1rem; margin: .7rem 0 .4rem; }
+.fronteira-item .leitura p { color: var(--tinta-2); }

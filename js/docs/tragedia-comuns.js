@@ -89,10 +89,6 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Acrescentar a possibilidade de punir quem não coopera, mesmo a custo para quem pune, eleva a cooperação ainda mais e a torna estável ao longo de muitas rodadas. Este é o achado de Fehr e Gächter sobre punição altruísta.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">Ponto em disputa</span>
-<p>A interpretação desses resultados é debatida. Uma leitura: humanos têm preferências sociais genuínas (reciprocidade, aversão à desigualdade) que não estão no modelo do agente puramente egoísta. Outra leitura: os efeitos são fortemente dependentes de contexto experimental e demanda característica, e diminuem com repetição, anonimato e valores monetários altos. Meta-análises confirmam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam, um padrão comum na literatura pós-crise de replicação.</p>
-</div>
 
 <h3>Onde a solução comunitária não funciona</h3>
 
@@ -131,7 +127,7 @@ extensao: { minutos: 30, html: `
 
 <p>O modelo teve consequências materiais. Governos usaram o argumento para nacionalizar florestas e pesqueiras geridas comunalmente, em nome da conservação. Em vários casos documentados no Nepal, na Índia e na África Oriental, a nacionalização destruiu regras locais de manejo funcionais e converteu propriedade comum em acesso livre <em>de facto</em>, produzindo exatamente a degradação que se queria evitar.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Uma qualificação necessária</span>
 <p>Nada disso significa que o mecanismo de Hardin seja irreal. Colapso de pesqueiras por sobrepesca é bem documentado: o caso do bacalhau do Grand Banks, no Canadá, levou ao fim de uma indústria de quinhentos anos e ao desemprego de dezenas de milhares de pessoas em 1992, e o estoque não se recuperou plenamente. O ponto não é que Hardin errou sobre o mecanismo. É que ele errou ao tratar um caso particular como lei geral, e ao concluir que só existiam dois remédios possíveis.</p>
 </div>
@@ -282,5 +278,7 @@ fontes: [
   { n: 4, tipo: "artigo", ref: "Ostrom, E. 'Polycentric systems for coping with collective action and global environmental change'. <em>Global Environmental Change</em> 20(4):550-557, 2010.", url: "https://doi.org/10.1016/j.gloenvcha.2010.07.004" },
   { n: 5, tipo: "artigo", ref: "Frischmann, B., Marciano, A. &amp; Ramello, G. 'Retrospectives: Tragedy of the Commons after 50 Years'. <em>Journal of Economic Perspectives</em> 33(4):211-228, 2019: avaliação da recepção e dos usos indevidos do artigo de Hardin.", url: "https://doi.org/10.1257/jep.33.4.211" },
   { n: 6, tipo: "artigo", ref: "Cox, M., Arnold, G. &amp; Villamayor-Tomás, S. 'A review of design principles for community-based natural resource management'. <em>Ecology and Society</em> 15(4):38, 2010: teste empírico dos princípios de Ostrom em 91 estudos.", url: "https://doi.org/10.5751/ES-03704-150438" }
-]
+],
+
+fronteira: [{"tema": "Preferências sociais são debate aberto", "html": "<p>Uma linha de pesquisa investiga se humanos têm preferências sociais genuínas, como reciprocidade e aversão à desigualdade, que não caberiam no modelo do agente puramente egoísta. A hipótese rival é que os efeitos observados em experimentos dependem muito do contexto e da demanda característica dos testes, enfraquecendo com repetição, anonimato e valores monetários altos.</p><p>Não há confirmação de qual leitura é correta. Meta-análises indicam que os efeitos existem e são robustos, mas com tamanhos menores do que os primeiros estudos sugeriam, algo comum na literatura após a crise de replicação <sup class=\"cit\"><a href=\"#f1\">1</a></sup>.</p>"}],
 };

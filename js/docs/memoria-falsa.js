@@ -31,7 +31,7 @@ nucleo: { minutos: 15, html: `
 
 <p>O motivo declarado da pesquisa não era um exercício acadêmico abstrato. Nos anos 1980 e 1990, tribunais nos Estados Unidos viram uma onda de processos baseados em "memórias recuperadas" de abuso na infância, muitas vezes emergidas durante terapia. Loftus queria testar, com rigor experimental, se era possível implantar uma lembrança inteira e falsa em alguém, como forma de questionar se toda memória "recuperada" em terapia era necessariamente confiável.<sup class="cit"><a href="#f3">3</a></sup></p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Um ponto que exige cuidado</span>
 <p>Loftus foi explícita ao afirmar que o estudo do shopping não provava que toda memória de abuso infantil relatada em terapia fosse falsa. O estudo mostrava que é possível implantar uma lembrança inteiramente inventada em algumas pessoas, sob condições específicas, não que memórias de eventos traumáticos reais sejam, em geral, pouco confiáveis. Usar esse estudo para descartar automaticamente qualquer relato de abuso é uma extrapolação que vai além do que a pesquisa demonstrou, e foi, de fato, um uso indevido comum do achado em disputas judiciais daquela época.</p>
 </div>

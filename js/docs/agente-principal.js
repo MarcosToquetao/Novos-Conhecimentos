@@ -66,10 +66,6 @@ extensao: { minutos: 60, html: `
 
 <p>Lucian Bebchuk e Jesse Fried, num livro influente de 2004, propuseram uma leitura alternativa e mais cética da remuneração executiva vinculada a desempenho, chamada de teoria do <strong>poder gerencial</strong> (<em>managerial power</em>).<sup class="cit"><a href="#f4">4</a></sup> Segundo essa visão, em muitas empresas de capital pulverizado, o executivo principal tem influência real sobre a composição e o funcionamento do próprio conselho de administração, o órgão que formalmente deveria fiscalizá-lo e negociar sua remuneração de forma independente. Nesses casos, os pacotes de remuneração, mesmo vinculados nominalmente a metas de desempenho, tenderiam a refletir menos um contrato ótimo negociado a distância e mais o limite do que o próprio executivo consegue extrair sem gerar indignação pública ou de acionistas, o que os autores chamam de "restrição de indignação" (<em>outrage constraint</em>).</p>
 
-<div class="marca controverso">
-<span class="rot">Duas leituras concorrentes, ambas com apoio empírico parcial</span>
-<p>A teoria de agência clássica (Jensen e Meckling) trata a remuneração vinculada a desempenho como solução ao problema de agência entre acionistas e executivos. A teoria do poder gerencial (Bebchuk e Fried) trata boa parte dessa mesma remuneração como sintoma de um problema de agência mais profundo, entre acionistas e o próprio conselho de administração que deveria representá-los. As duas leituras não são mutuamente excludentes: é possível que a remuneração vinculada a desempenho funcione parcialmente como alinhamento de incentivos e, ao mesmo tempo, seja parcialmente capturada pelo poder de influência do executivo sobre seu próprio processo de avaliação. Separar quanto de cada mecanismo está em jogo, numa empresa específica, é uma pergunta empírica difícil, não resolvida de forma unânime pela literatura.</p>
-</div>
 
 <h3>Por que o problema nunca desaparece por completo</h3>
 
@@ -256,7 +252,9 @@ fontes: [
   { n: 13, tipo: "fonte primária", ref: "'Understanding CEO pay: A test of two pay-to-performance sensitivity measures with alternative measures of alignment and influence'.", url: "https://sciencedirect.com/science/article/pii/S0148296396002834" },
   { n: 14, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Principal-agent problem', com panorama geral das aplicações do conceito em diferentes áreas.", url: "https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem" },
   { n: 15, tipo: "fonte primária", ref: "'Search for Optimal CEO Compensation: Theory and Empirical Evidence', sobre desenho de contratos de remuneração executiva em mercados com fricções de busca.", url: "https://econen.sufe.edu.cn/_upload/article/files/d3/34/c6aa75294353b29e32728df8b04e/072e1daf-06de-46bb-896b-95366a75c171.pdf" }
-]
+],
+
+fronteira: [{"tema": "Remuneração de executivos: incentivo ou captura", "html": "<p>A teoria de agência clássica (Jensen e Meckling) trata a remuneração vinculada a desempenho como solução ao problema de agência entre acionistas e executivos. A teoria do poder gerencial (Bebchuk e Fried) trata boa parte dessa mesma remuneração como sintoma de um problema de agência mais profundo, entre acionistas e o próprio conselho de administração que deveria representá-los.<sup class=\"cit\"><a href=\"#fN\">1</a></sup></p><p>As duas leituras não são mutuamente excludentes: é possível que a remuneração vinculada a desempenho funcione parcialmente como alinhamento de incentivos e, ao mesmo tempo, seja parcialmente capturada pelo poder de influência do executivo sobre seu próprio processo de avaliação. Separar quanto de cada mecanismo está em jogo, numa empresa específica, é uma pergunta empírica difícil, não resolvida de forma unânime pela literatura.<sup class=\"cit\"><a href=\"#fN\">2</a></sup></p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

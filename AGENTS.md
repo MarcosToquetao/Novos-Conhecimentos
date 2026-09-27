@@ -17,7 +17,7 @@ O usuário não quer temas controversos ou especulativos: dão a impressão de q
 - Tema novo só entra se o núcleo for conhecimento aceito (livro-texto, evidência replicada, fato documentado).
 - Lições só usam as marcas `consenso` e `emergente`. `build.js` e `gerar.py` barram as outras.
 - `python pipeline/gerar.py triagem` pede ao JEV uma nota para cada termo do catálogo. O editor decide o que sai na aba «Curadoria do catálogo» da tela de revisão, e as decisões vão para `pipeline/curadoria.jsonl`. **Ainda não foram aplicadas.**
-- Os documentos longos antigos ainda têm caixas «controverso»/«especulação». O que fazer com eles está pendente de decisão do usuário.
+- No Aprofundar, o que não é garantido mora só na seção final **«Onde a ciência ainda pesquisa»** (campo `fronteira: [{tema, html}]`), com carimbo «Em pesquisa» e aviso explícito. O build barra caixas `marca controverso`/`marca especulacao` no corpo. `python pipeline/gerar.py fronteira <id>` converte: ressalva estabelecida vira `consenso`, questão em aberto vai para a seção (na dúvida, vai para a seção). Os 32 documentos já foram convertidos.
 
 ## Arquitetura
 
@@ -51,6 +51,7 @@ Chaves em `.env` na raiz (no `.gitignore`): `DEEPSEEK_API_KEY`, `OPENROUTER_API_
 python pipeline/gerar.py licao <id>... | --todas   Flash gera, checagens barram, JEV fiscaliza, V4 Pro reescreve o que foi sinalizado
 python pipeline/gerar.py grafo                     subáreas e ligações do acervo (JEV corta as fracas)
 python pipeline/gerar.py triagem                   JEV marca termos sem respaldo suficiente
+python pipeline/gerar.py fronteira <id>|--todas    caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
 python pipeline/gerar.py aprender                  notas do editor viram regras no estilo.md
 python pipeline/gerar.py status | teste            fila, sequência, custo | autoteste das checagens
 python pipeline/revisar.py                         http://localhost:8766/pipeline/revisar.html
@@ -79,6 +80,7 @@ python pipeline/revisar.py                         http://localhost:8766/pipelin
 - `camadas.{nucleo, aprofundamento, extensao}.{minutos, html}`;
 - `sintese.{definicoes[{termo,def}], lembrar[], confusoes[{erro,correcao}], numeros[]}`;
 - `flashcards[{f,v}]` (mín. 12), `prova[{camada,q,alts[],correta,porque}]` (mín. 10), `fontes[{n,tipo,ref,url}]` (mín. 15, reais e verificáveis);
+- `fronteira` (uma linha JSON, opcional): `[{tema, html}]`, as linhas de pesquisa em aberto, renderizadas depois das camadas;
 - `licao` (uma linha JSON, escrita pelo pipeline):
 
 ```

@@ -8,6 +8,7 @@ Uso
   python pipeline/gerar.py licao <id> [<id> ...] [--seco] [--sem-revisao-pro]
   python pipeline/gerar.py licao --todas          lições para todo documento sem lição nem rascunho
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
+  python pipeline/gerar.py fronteira <id>... | --todas [--seco]   caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
   python pipeline/gerar.py triagem                JEV marca termos do catálogo sem respaldo suficiente (não apaga)
   python pipeline/gerar.py aprender               resume suas notas em regras novas no estilo.md
   python pipeline/gerar.py status                 fila, sequência de aprovações e custo gasto
@@ -443,6 +444,68 @@ def triagem():
         print(f"  {risco(k):.0%}  {'[TEM DOC] ' if termo[k][1] else ''}{termo[k][0]} ({k})")
 
 
+# ── fronteira: caixas controverso/especulação viram "onde a ciência ainda pesquisa" ──
+CAIXA = re.compile(r'<div class="marca (controverso|especulacao)">(.*?)</div>\n?', re.S)
+
+
+def fronteira(id_, seco=False):
+    """Classifica cada caixa controverso/especulação do documento (JEV): ressalva com base
+    estabelecida continua no texto como consenso; questão em aberto sai do texto e vira item
+    da seção final, reescrito pelo Flash para ler sozinho e sinalizado como linha de pesquisa."""
+    arq = RAIZ / "js" / "docs" / f"{id_}.js"
+    js = arq.read_text(encoding="utf-8")
+    caixas = list(CAIXA.finditer(js))
+    if not caixas:
+        return
+    doc = documento(id_)
+    estado = {"conceito": doc["termo"], "caixas": {f"c{i}": texto_puro(m.group(2)) for i, m in enumerate(caixas)}}
+    perg = {f"c{i}": {"type": "choice", "instructions": f"O que é o trecho caixas.c{i}?",
+                      "criteria": {"ressalva": "esclarecimento, limite de uma analogia ou correção de um equívoco comum, com base estabelecida na área",
+                                   "aberto": "questão em aberto, hipótese, disputa entre especialistas ou dado sem confirmação"}}
+            for i in range(len(caixas))}
+    r = jev(estado, perg, "jev-fronteira", id_)
+    # na dúvida, vai para a seção de pesquisa: carimbar disputa como consenso é o erro caro
+    alerta = re.compile(r"disput|controv|especula|hipótese|debate|em aberto|contest|incert", re.I)
+    tipos = ["ressalva" if r.get(f"c{i}", {}).get("probabilities", {}).get("ressalva", 0) >= 0.8
+             and not alerta.search(texto_puro(m.group(2)).splitlines()[0]) else "aberto"
+             for i, m in enumerate(caixas)]
+    print(f"{id_}: " + ", ".join(f"{texto_puro(m.group(2)).splitlines()[0][:50]} → {t}" for m, t in zip(caixas, tipos)))
+    if seco:
+        return
+    abertas = [m.group(2) for m, t in zip(caixas, tipos) if t == "aberto"]
+    itens = []
+    if abertas:
+        sistema = estilo() + "\n\n## Tarefa\n\nReescreva cada trecho em aberto de um documento de estudo como item independente da seção " \
+            "«Onde a ciência ainda pesquisa». Cada item: tema (título curto, só a primeira letra maiúscula) e html (um ou dois parágrafos <p>). " \
+            "Deixe claro no próprio texto que é linha de pesquisa, hipótese ou dado sem confirmação, e qual evidência existe hoje. " \
+            "Mantenha exatamente as marcações <sup class=\"cit\"><a href=\"#fN\">N</a></sup> que aparecem no trecho. Não invente fonte nem dado. " \
+            'Responda somente com json: {"itens": [{"tema": "...", "html": "<p>...</p>"}]}, um item por trecho, na mesma ordem.'
+        usuario = f"Conceito: {doc['termo']} ({doc['area']})\n\n" + "\n\n".join(f"Trecho {i + 1}:\n{t.strip()}" for i, t in enumerate(abertas))
+        saida, _ = deepseek(FLASH, sistema, usuario, "fronteira", id_, max_tokens=6000)
+        itens = saida.get("itens", [])
+        erros, fontes = [], {f["n"] for f in doc.get("fontes", [])}
+        for k, it in enumerate(itens):
+            checar_texto(f"item {k + 1}", it.get("tema", "") + " " + it.get("html", ""), erros)
+            erros += [f"item {k + 1}: fonte {n} inexistente" for n in re.findall(r'href="#f(\d+)"', it.get("html", "")) if int(n) not in fontes]
+        if erros or len(itens) != len(abertas):
+            print(f"  não apliquei: {len(itens)} itens para {len(abertas)} trechos; {erros}")
+            return
+    # aplica de trás para frente para os índices continuarem válidos
+    for m, t in reversed(list(zip(caixas, tipos))):
+        novo = m.group(0).replace(f'class="marca {m.group(1)}"', 'class="marca consenso"', 1) if t == "ressalva" else ""
+        js = js[:m.start()] + novo + js[m.end():]
+    if itens:
+        linha = "fronteira: " + json.dumps(itens, ensure_ascii=False) + ","
+        if re.search(r"^fronteira: .*$", js, re.M):
+            js = re.sub(r"^fronteira: .*$", lambda _: linha, js, count=1, flags=re.M)
+        else:
+            fim = js.rindex("\n};")
+            antes = js[:fim].rstrip()
+            js = antes + ("" if antes.endswith(",") else ",") + "\n\n" + linha + js[fim:]
+    arq.write_text(js, encoding="utf-8")
+    print(f"  {tipos.count('ressalva')} ressalva(s) viraram consenso, {len(itens)} item(ns) na seção de pesquisa")
+
+
 # ── aprendizado e status ────────────────────────────────────────────────
 def aprender():
     avs = avaliacoes()
@@ -521,6 +584,15 @@ def main():
         gerar_grafo(seco="--seco" in flags)
     elif cmd == "triagem":
         triagem()
+    elif cmd == "fronteira":
+        alvos = sorted(x.stem for x in (RAIZ / "js" / "docs").glob("*.js")) if "--todas" in flags else ids
+        for i in alvos:
+            try:
+                fronteira(i, seco="--seco" in flags)
+            except RuntimeError as e:
+                print(f"  {i}: falhou ({e})")
+        if "--seco" not in flags:
+            print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-2:])
     elif cmd == "aprender":
         aprender()
     elif cmd == "status":

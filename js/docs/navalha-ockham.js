@@ -67,10 +67,6 @@ extensao: { minutos: 60, html: `
 
 <p>A história da ciência tem exemplos claros de casos em que a explicação mais simples disponível numa época acabou sendo superada por uma explicação mais complexa, porque a evidência acumulada simplesmente não cabia na versão simples. O modelo geocêntrico do sistema solar, com a Terra no centro, é mais simples de imaginar intuitivamente do que o modelo heliocêntrico com órbitas elípticas, mas precisou de camadas cada vez mais complicadas de "epiciclos" para continuar prevendo corretamente o movimento dos planetas, até que o modelo heliocêntrico, apesar de menos intuitivo à primeira vista, se revelou mais simples <em>no sentido formal</em> (menos parâmetros ajustados arbitrariamente) e mais correto. O ponto não é que simplicidade estava errada, é que a simplicidade aparente e intuitiva de uma explicação nem sempre coincide com sua simplicidade formal ou com sua correção.</p>
 
-<div class="marca controverso">
-<span class="rot">Simplicidade segundo qual critério, exatamente?</span>
-<p>Um problema filosófico genuíno e ainda discutido é que "simplicidade" não tem uma definição única e universalmente aceita fora dos formalismos matemáticos específicos, como complexidade de Kolmogorov (que, por sua vez, depende da escolha de uma linguagem de descrição de referência). Duas pessoas podem discordar sinceramente sobre qual de duas teorias é "mais simples", dependendo do que cada uma considera uma suposição básica aceitável e do que considera uma complicação adicional. Isso significa que invocar a navalha de Ockham numa discussão filosófica ou científica informal, sem especificar precisamente qual noção de simplicidade está em jogo, pode facilmente virar um argumento vazio, em que cada lado afirma que sua própria posição é "a mais simples".</p>
-</div>
 
 <h3>Como usar o princípio sem cair nas armadilhas comuns</h3>
 
@@ -257,7 +253,9 @@ fontes: [
   { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Kolmogorov complexity', com definição formal e aplicações em teoria da informação.", url: "https://en.wikipedia.org/wiki/Kolmogorov_complexity" },
   { n: 14, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Solomonoff's theory of inductive inference', com detalhamento técnico do formalismo.", url: "https://en.wikipedia.org/wiki/Solomonoff%27s_theory_of_inductive_inference" },
   { n: 15, tipo: "revisão acadêmica", ref: "'Improving Deep Learning through Automatic Programming', sobre aplicações contemporâneas de princípios de compressão e simplicidade em modelos de aprendizado de máquina.", url: "https://arxiv.org/pdf/1807.02816" }
-]
+],
+
+fronteira: [{"tema": "Simplicidade segundo qual critério", "html": "<p>Um problema filosófico genuíno e ainda discutido é que \"simplicidade\" não tem uma definição única e universalmente aceita fora dos formalismos matemáticos específicos, como complexidade de Kolmogorov, que por sua vez depende da escolha de uma linguagem de descrição de referência. Duas pessoas podem discordar sinceramente sobre qual de duas teorias é \"mais simples\", dependendo do que cada uma considera uma suposição básica aceitável e do que considera uma complicação adicional.</p><p>Isso significa que invocar a navalha de Ockham numa discussão filosófica ou científica informal, sem especificar precisamente qual noção de simplicidade está em jogo, pode facilmente virar um argumento vazio, em que cada lado afirma que sua própria posição é \"a mais simples\".</p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

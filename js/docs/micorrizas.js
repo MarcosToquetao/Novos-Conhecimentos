@@ -80,12 +80,8 @@ nucleo: { minutos: 15, html: `
 
 <p>Sobre o segundo ponto, a revisão examinou 593 artigos que citavam sete trabalhos sobre a estrutura dessas redes e 1.083 artigos que citavam onze trabalhos sobre a função delas. A proporção de citações que atribuíam ao trabalho original uma conclusão que ele não sustentava cresceu ao longo do tempo, chegando a cerca de um quarto no caso da estrutura e a cerca de metade no caso da função.</p>
 
-<div class="marca controverso">
-<span class="rot">A distinção a manter</span>
-<p>Nada disso põe em dúvida a simbiose. A troca de nutrientes minerais por carbono entre uma planta e seu fungo é consenso. O que está em disputa é outra coisa: se existe uma rede contínua e persistente ligando árvores em pé no campo, e se o fluxo de recursos por ela é grande o bastante para mudar o destino de uma muda. Sobre isso, a evidência de campo é escassa, os resultados variam de positivos a negativos, e os autores da revisão concluem que o conhecimento atual é esparso demais para orientar decisões de manejo florestal.</p>
-</div>
 
-<div class="marca especulacao">
+<div class="marca consenso">
 <span class="rot">O degrau seguinte</span>
 <p>A leitura de que árvores "conversam", "reconhecem parentes" ou "cuidam" das mudas atribui intenção e direcionamento a um sistema para o qual nem sequer se demonstrou o fluxo. É uma hipótese que ninguém testou em campo com controle adequado, não um achado. Um grupo grande de fisiologistas vegetais e engenheiros florestais publicou em 2024 uma crítica direta a esse vocabulário, argumentando que a personificação de plantas custa objetividade sem ganho real de compreensão.<sup class="cit"><a href="#f4">4</a></sup></p>
 </div>
@@ -137,7 +133,7 @@ aprofundamento: { minutos: 30, html: `
 
 <p>Segundo, o tratamento de malha grossa não retira só as raízes: ele retira a competição das raízes vizinhas. Uma muda dentro de um cilindro que exclui raízes de árvores adultas está livre da disputa por água e nutrientes com o vizinho grande. Se ela cresce mais, isso pode ser alívio de competição e não presente vindo pela rede. Quando os autores olharam apenas os estudos que incluíam também um tratamento sem malha alguma, capaz de estimar esse efeito de raiz, restaram treze estudos e vinte e oito experimentos. Em cinco deles, algo em torno de 18%, apareceu efeito positivo significativo atribuível à rede e não integralmente anulado pelo efeito negativo das raízes.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">O ponto metodológico central</span>
 <p>A dificuldade não é medir se algo se move. É atribuir causalmente o desempenho da muda à passagem de recursos por um micélio compartilhado, quando o tratamento experimental que supostamente isola a rede altera simultaneamente a competição radicular, a estrutura física do solo, o fluxo de água e a comunidade fúngica local. Enquanto essas variáveis mudarem juntas, o experimento não separa a hipótese das alternativas.</p>
 </div>
@@ -207,7 +203,7 @@ extensao: { minutos: 60, html: `
 
 <p>Há um cenário alternativo que é mais compatível com a biologia do fungo e que raramente aparece nas versões populares. O fungo pode se comportar como parasita parcial: colonizar a muda sombreada, que produz pouco carbono, e usá-la como ponto de acesso enquanto se sustenta com o carbono das árvores grandes. Nesse caso, a muda conectada não recebe subsídio; ela paga um custo. Robinson e colegas notam que o padrão de campo mais comum, mudas indo mal perto de árvores grandes, é consistente tanto com competição direta quanto com esse cenário, e não com o de subsídio.<sup class="cit"><a href="#f4">4</a></sup></p>
 
-<div class="marca especulacao">
+<div class="marca consenso">
 <span class="rot">Sobre "comunicação" entre árvores</span>
 <p>Existem trabalhos de laboratório e de casa de vegetação em que plantas atacadas por herbívoros parecem induzir respostas de defesa em plantas vizinhas conectadas por micélio. A revisão de 2023 não encontrou evidência de campo revisada por pares de que árvores adultas transmitam sinais de defesa preferencialmente à própria prole. Além disso, mesmo que a indução ocorra, chamar de comunicação exige demonstrar que o sinal é emitido, que a emissão é vantajosa para quem emite, e que o receptor evoluiu para respondê-lo. Nenhuma dessas três condições foi estabelecida para árvores em floresta. Compostos que vazam de um tecido danificado e são detectados por outro organismo são vazamento, não mensagem.</p>
 </div>
@@ -413,5 +409,7 @@ fontes: [
   { n: 11, tipo: "artigo", ref: "Lutz, S. et al. 'Soil microbiome indicators can predict crop growth response to large-scale inoculation with arbuscular mycorrhizal fungi'. <em>Nature Microbiology</em> 8:2277-2289, 2023. Ensaio em 54 lavouras suíças.", url: "https://doi.org/10.1038/s41564-023-01520-w" },
   { n: 12, tipo: "artigo", ref: "Koziol, L., McKenna, T.P. &amp; Bever, J.D. 'Meta-analysis reveals globally sourced commercial mycorrhizal inoculants fall short'. <em>New Phytologist</em> 246:821-827, 2025.", url: "https://doi.org/10.1111/nph.20278" },
   { n: 13, tipo: "revisão", ref: "Brundrett, M.C. &amp; Tedersoo, L. 'Evolutionary history of mycorrhizal symbioses and global host plant diversity'. <em>New Phytologist</em> 220:1108-1115, 2018. Distribuição dos tipos de micorriza entre as plantas.", url: "https://doi.org/10.1111/nph.14976" }
-]
+],
+
+fronteira: [{"tema": "Redes de micorrizas: o que está em disputa", "html": "<p>A troca de nutrientes minerais por carbono entre uma planta e seu fungo é consenso. O que está em disputa é outra coisa: se existe uma rede contínua e persistente ligando árvores em pé no campo, e se o fluxo de recursos por ela é grande o bastante para mudar o destino de uma muda.</p><p>Sobre isso, a evidência de campo é escassa, os resultados variam de positivos a negativos, e os autores da revisão concluem que o conhecimento atual é esparso demais para orientar decisões de manejo florestal. <sup class=\"cit\"><a href=\"#fN\">N</a></sup></p>"}],
 };

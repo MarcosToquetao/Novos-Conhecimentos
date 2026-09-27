@@ -65,10 +65,6 @@ extensao: { minutos: 60, html: `
 
 <p>Uma pergunta recorrente, especialmente com o avanço recente de computadores quânticos: eles conseguem calcular coisas que uma máquina de Turing clássica não consegue calcular, em princípio? A resposta aceita hoje é não. Computadores quânticos podem, para certos problemas específicos, encontrar a resposta muito mais rápido que computadores clássicos (uma vantagem de velocidade, não de capacidade fundamental), mas não resolvem nenhum problema que seja comprovadamente indecidível para uma máquina de Turing clássica, como o problema da parada. A evidência disponível não sustenta a ideia de que tecnologias quânticas permitam "hipercomputação" (calcular além do que a tese de Church-Turing prevê como possível).<sup class="cit"><a href="#f8">8</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">A versão física da tese, ainda em debate filosófico</span>
-<p>Existe uma versão mais forte e mais especulativa da tese de Church-Turing, às vezes chamada de tese de Church-Turing física, que afirma que nenhum sistema físico real, de qualquer natureza, jamais será capaz de calcular além do que uma máquina de Turing calcula. Diferente da tese original (sobre o que "algoritmo" significa matematicamente), essa versão é uma afirmação empírica sobre o universo físico, e por isso, em princípio, poderia ser falsa se alguma nova física ainda desconhecida permitisse algo diferente. Propostas de "hipercomputação" (usando processos físicos hipotéticos como tarefas supertarefa, computação com buracos negros, ou processos retrocausais) foram exploradas teoricamente, mas dependem de suposições físicas que, até hoje, carecem de qualquer evidência experimental de viabilidade, o que mantém essas propostas no território da especulação teórica, não da física estabelecida.<sup class="cit"><a href="#f4">4</a></sup></p>
-</div>
 
 <h3>Por que a discussão sobre hipercomputação continua relevante</h3>
 
@@ -255,7 +251,9 @@ fontes: [
   { n: 13, tipo: "fonte primária", ref: "Church, A. 'An Unsolvable Problem of Elementary Number Theory'. <em>American Journal of Mathematics</em> 58(2):345-363, 1936. Formulação independente e equivalente à de Turing, via cálculo lambda.", url: "https://www.jstor.org/stable/2371045" },
   { n: 14, tipo: "revisão acadêmica", ref: "'The Church-Turing thesis: Still valid after all these years?'. <em>Applied Mathematics and Computation</em>.", url: "https://www.sciencedirect.com/science/article/abs/pii/S0096300305008374" },
   { n: 15, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Church-Turing thesis', com panorama das diferentes formulações e do debate sobre hipercomputação.", url: "https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis" }
-]
+],
+
+fronteira: [{"tema": "A versão física da tese de Church-Turing", "html": "<p>Esta é uma linha de pesquisa teórica, não um resultado estabelecido. A tese de Church-Turing física afirma que nenhum sistema físico real consegue calcular além do que uma máquina de Turing calcula. Diferente da tese matemática original, que trata do significado de algoritmo, esta é uma afirmação empírica sobre o universo, e por isso poderia ser falsa se alguma física nova permitisse algo diferente.<sup class=\"cit\"><a href=\"#f4\">4</a></sup></p><p>Foram exploradas propostas de hipercomputação, que usariam processos hipotéticos como tarefas supertarefa, computação com buracos negros ou processos retrocausais. Essas ideias dependem de suposições físicas sem qualquer evidência experimental de viabilidade até hoje, o que as mantém no território da especulação teórica, não da física estabelecida.<sup class=\"cit\"><a href=\"#f4\">4</a></sup></p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

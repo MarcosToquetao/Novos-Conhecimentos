@@ -61,10 +61,6 @@ nucleo: { minutos: 15, html: `
 <p>O teorema é matematicamente válido e não há controvérsia sobre sua correção interna. Dadas as premissas do modelo, a conclusão segue necessariamente. É um dos poucos resultados formais da economia que praticamente nenhum economista contesta <em>como teorema</em>.</p>
 </div>
 
-<div class="marca controverso">
-<span class="rot">E onde a controvérsia realmente está</span>
-<p>Quase toda a disputa sobre comércio internacional é sobre as <em>premissas</em>, não sobre a lógica. O modelo de Ricardo supõe pleno emprego, trabalho que se realoca sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. Cada uma dessas suposições falha em algum grau no mundo real, e a magnitude dessas falhas é uma questão empírica, não ideológica.</p>
-</div>
 
 <h3>O que o teorema realmente afirma</h3>
 
@@ -141,10 +137,6 @@ extensao: { minutos: 30, html: `
 
 <p>Este é o núcleo do argumento da indústria nascente, formulado já por Alexander Hamilton e Friedrich List no século XIX, e retomado por Ha-Joon Chang e Dani Rodrik.<sup class="cit"><a href="#f4">4</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">Controvérsia empírica genuína, ainda aberta</span>
-<p>Os defensores do argumento apontam que Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul industrializaram-se sob proteção substancial, e só depois adotaram o livre comércio. Os críticos apontam viés de seleção: para cada Coreia do Sul há vários casos de substituição de importações que produziram indústrias ineficientes e permanentemente dependentes de subsídio. A questão empírica real não é "proteção funciona?", mas "sob quais condições institucionais a proteção produz aprendizado em vez de captura de renda?" Essa pergunta não tem resposta consensual.</p>
-</div>
 
 <h3>Nova teoria do comércio: por que países parecidos comerciam tanto</h3>
 
@@ -289,5 +281,7 @@ fontes: [
   { n: 4, tipo: "livro", ref: "Chang, H.-J. <em>Chutando a Escada: A Estratégia do Desenvolvimento em Perspectiva Histórica</em>. Editora Unesp, 2004: defesa histórica do argumento da indústria nascente.", url: "" },
   { n: 5, tipo: "artigo", ref: "Krugman, P. 'Ricardo's Difficult Idea', 1996: ensaio sobre por que a vantagem comparativa é tão persistentemente mal compreendida, inclusive por intelectuais.", url: "https://web.mit.edu/krugman/www/ricardo.htm" },
   { n: 6, tipo: "livro", ref: "Rodrik, D. <em>Straight Talk on Trade</em>. Princeton University Press, 2017: avaliação crítica e interna à profissão sobre o que a teoria sustenta e o que não sustenta.", url: "" }
-]
+],
+
+fronteira: [{"tema": "As premissas do modelo de Ricardo", "html": "<p>O modelo de vantagem comparativa de Ricardo é uma ferramenta lógica, mas sua aplicação ao mundo real depende de premissas específicas. Ele supõe pleno emprego, realocação de trabalho sem custo entre setores, capital imóvel entre países, tecnologia fixa e ausência de economias de escala. A validade ou não dessas premissas é uma questão empírica, e a magnitude com que falham em cada contexto ainda é debatida por economistas.</p>\n<p>Essa é uma linha de pesquisa ativa: medir o grau de afastamento das premissas e as consequências para os resultados previstos. Não há consenso sobre quão relevantes são esses desvios para o desenho de políticas comerciais.</p>"}, {"tema": "Industrialização sob proteção", "html": "<p>Um debate em aberto na economia diz respeito a evidências históricas sobre estratégias de industrialização. Países como Reino Unido, Estados Unidos, Alemanha, Japão e Coreia do Sul desenvolveram indústrias sob proteção tarifária substancial antes de adotar o livre comércio<sup class=\"cit\"><a href=\"#fN\">N</a></sup>. Porém, críticos argumentam que há viés de seleção: para cada caso de sucesso como a Coreia do Sul, existem vários exemplos de substituição de importações que resultaram em indústrias ineficientes e dependentes de subsídios.</p>\n<p>A pergunta empírica central ainda sem resposta consensual é: sob quais condições institucionais a proteção promove aprendizado tecnológico em vez de captura de renda? Pesquisas continuam investigando essa relação, mas não há veredito definitivo.</p>"}],
 };

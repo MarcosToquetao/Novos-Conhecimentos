@@ -55,7 +55,7 @@ nucleo: { minutos: 15, html: `
 <p>As três primeiras interações estão descritas pelo Modelo Padrão da física de partículas, testado com precisão extraordinária: algumas previsões conferidas até a décima segunda casa decimal. Os bósons W e Z foram detectados em 1983, e o bóson de Higgs em 2012, ambos com massas próximas do previsto. Não há resultado experimental sólido que contradiga o Modelo Padrão dentro de seu domínio de aplicação.</p>
 </div>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Onde a linguagem engana</span>
 <p>Chamar a gravidade de "força" é, na relatividade geral, uma imprecisão. Einstein a descreve como curvatura do espaço-tempo: um corpo em queda livre não sofre força alguma, apenas segue a trajetória mais reta disponível num espaço curvo. Contar quatro forças é uma classificação prática, não uma afirmação de que os quatro fenômenos são do mesmo tipo ontológico. Essa diferença de estatuto é exatamente o núcleo do problema de unificação.</p>
 </div>
@@ -87,10 +87,6 @@ aprofundamento: { minutos: 15, html: `
 
 <p>O problema técnico central: quando se tenta quantizar a gravidade da forma que funcionou para as outras forças, as contas divergem. Aparecem infinitos que, ao contrário do que acontece no Modelo Padrão, não podem ser absorvidos por um número finito de parâmetros ajustáveis. A teoria é <em>não renormalizável</em>, o que significa que perde poder preditivo em energias altas.</p>
 
-<div class="marca controverso">
-<span class="rot">Ponto de disputa ativa</span>
-<p>Não há acordo sobre o que isso significa. Uma leitura: a gravidade quântica exige uma estrutura nova (cordas, gravidade quântica em loop, geometria não comutativa). Outra leitura: a relatividade geral é uma teoria efetiva perfeitamente válida abaixo da escala de Planck, e a busca por "quantizar a gravidade" pode ser uma pergunta mal formulada. Nenhuma das propostas fez, até hoje, uma previsão testável e distintiva que tenha sido verificada.</p>
-</div>
 
 <h3>Quanto a gravidade é fraca, concretamente</h3>
 
@@ -108,7 +104,7 @@ extensao: { minutos: 30, html: `
 
 <p>Mas GUTs fazem uma previsão indireta e testável: se quarks e léptons pertencem a uma mesma família, deve existir um processo que converta um no outro. Isso implica que o <strong>próton decai</strong>.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Onde a previsão foi testada e falhou</span>
 <p>O modelo GUT mais simples, o SU(5) mínimo de Georgi e Glashow (1974), previa um tempo de vida do próton em torno de 10³¹ anos. O detector Super-Kamiokande buscou o canal dominante previsto (próton → pósitron + píon neutro) e não observou nenhum evento, estabelecendo um limite inferior superior a 10³³ anos.<sup class="cit"><a href="#f2">2</a></sup> O SU(5) mínimo está <strong>experimentalmente excluído</strong>. Versões supersimétricas e outras variantes preveem tempos de vida mais longos e permanecem em aberto, mas décadas de busca sem detecção positiva enfraqueceram consideravelmente o entusiasmo original.</p>
 </div>
@@ -136,10 +132,6 @@ extensao: { minutos: 30, html: `
 
 <p>A supersimetria foi a resposta favorita por três décadas: novas partículas cancelariam as correções automaticamente, sem ajuste fino. O LHC procurou essas partículas nas faixas de massa previstas e não as encontrou.</p>
 
-<div class="marca especulacao">
-<span class="rot">Especulação, explicitamente</span>
-<p>A ausência de supersimetria no LHC reabriu argumentos antrópicos: talvez existam muitos universos com valores diferentes de parâmetros, e observadores só possam existir naqueles em que os valores permitem química e estrutura. O problema epistemológico é sério: se a teoria não faz previsões testáveis distintivas, resta discutir se ela é ciência ou metafísica. Esse debate está ativo e não resolvido, e envolve gente séria dos dois lados.</p>
-</div>
 
 <h3>Onde as quatro forças aparecem na sua escala</h3>
 
@@ -287,5 +279,7 @@ fontes: [
   { n: 4, tipo: "livro", ref: "Griffiths, D. <em>Introduction to Elementary Particles</em>. 2ª ed., Wiley-VCH, 2008. Tratamento didático da unificação eletrofraca e da cromodinâmica quântica.", url: "" },
   { n: 5, tipo: "livro", ref: "Wilczek, F. <em>The Lightness of Being: Mass, Ether, and the Unification of Forces</em>. Basic Books, 2008. Sobre a origem da massa dos hádrons, por um dos autores da liberdade assintótica.", url: "" },
   { n: 6, tipo: "divulgação", ref: "Carroll, S. <em>The Particle at the End of the Universe</em>. Dutton, 2012. Mecanismo de Higgs e quebra de simetria em linguagem acessível, com honestidade sobre o que segue em aberto.", url: "" }
-]
+],
+
+fronteira: [{"tema": "Gravidade quântica", "html": "<p>Como juntar a relatividade geral com a mecânica quântica é uma linha de pesquisa aberta, sem resposta estabelecida. Uma leitura diz que é preciso uma estrutura nova, como cordas, gravidade quântica em loop ou geometria não comutativa. Outra leitura diz que a relatividade geral já é uma teoria efetiva válida abaixo da escala de Planck, e que a pergunta \"quantizar a gravidade\" pode estar mal formulada.<sup class=\"cit\"><a href=\"#fN\">N</a></sup></p><p>Até hoje nenhuma das propostas fez uma previsão testável e distintiva que tenha sido verificada, então o ponto de disputa continua ativo.</p>"}, {"tema": "Argumentos antrópicos após o LHC", "html": "<p>A ausência de supersimetria no LHC reabriu uma hipótese explicitamente especulativa: talvez existam muitos universos com valores diferentes de parâmetros, e observadores só possam existir naqueles em que os valores permitem química e estrutura.<sup class=\"cit\"><a href=\"#fN\">N</a></sup></p><p>O problema é que, se a teoria não faz previsões testáveis distinguíveis, resta discutir se ela é ciência ou metafísica. Esse debate segue ativo e não resolvido, com gente séria dos dois lados.</p>"}],
 };

@@ -28,7 +28,7 @@ nucleo: { minutos: 15, html: `
 
 <p>A metáfora que costuma ser usada é o prisma. Luz branca entra, e do outro lado saem as cores separadas. O prisma não <em>acrescenta</em> as cores: elas já estavam lá, misturadas, e o prisma apenas as organizou por frequência. A transformada de Fourier faz o mesmo com qualquer sinal.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Onde a metáfora do prisma engana</span>
 <p>O prisma sugere que a decomposição é um fato físico sobre a luz. Não é o caso da transformada. Decompor em senos é uma <em>escolha</em> de sistema de coordenadas, não uma descoberta sobre a natureza do sinal. Você poderia decompor o mesmo sinal em ondaletas (wavelets), em polinômios de Chebyshev ou em qualquer outra base. Senos venceram porque têm uma propriedade especial que a próxima seção explica, não porque são "o que o sinal realmente é".</p>
 </div>
@@ -134,7 +134,7 @@ extensao: { minutos: 30, html: `
 
 <p>Isso tem consequência prática direta: filtros aplicados de forma abrupta no domínio da frequência produzem oscilações em torno de bordas na imagem reconstruída. Em ressonância magnética isso aparece como <em>ringing artifact</em>; em áudio, como um "pré-eco". Por isso, na prática, se usam janelas suaves em vez de cortes retos.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Ponto frequentemente mal compreendido</span>
 <p>O fenômeno de Gibbs é às vezes descrito como "falha da série de Fourier". Não é. A série converge corretamente no sentido L², e converge para o valor médio nos pontos de salto. O que não converge <em>uniformemente</em> é a sequência de somas parciais. A diferença entre modos de convergência não é preciosismo: é o que separa uma expectativa correta de uma incorreta sobre o que o algoritmo vai devolver.</p>
 </div>
@@ -167,10 +167,6 @@ extensao: { minutos: 30, html: `
 
 <p>Historicamente isso produziu literatura inteira sobre ciclos econômicos, climáticos e biológicos que não sobreviveram a testes de significância adequados. Duas salvaguardas mínimas: comparar o pico contra a distribuição esperada sob a hipótese nula de ruído (frequentemente ruído vermelho, não branco, em séries naturais) e corrigir para o fato de que você está testando muitas frequências simultaneamente.</p>
 
-<div class="marca controverso">
-<span class="rot">Controvérsia metodológica real</span>
-<p>Em análise de séries temporais biológicas, como expressão gênica circadiana, há disputa ativa sobre quais métodos de detecção de periodicidade controlam adequadamente o erro tipo I. Estudos comparativos mostram que diferentes algoritmos aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. O problema não é a transformada: é o teste de significância construído em cima dela.</p>
-</div>
 
 <h3>Fechando o círculo: o que a transformada realmente é</h3>
 
@@ -313,5 +309,7 @@ fontes: [
   { n: 5, tipo: "artigo", ref: "Cooley, J. W. &amp; Tukey, J. W. 'An algorithm for the machine calculation of complex Fourier series'. <em>Mathematics of Computation</em> 19(90):297–301, 1965.", url: "https://doi.org/10.1090/S0025-5718-1965-0178586-1" },
   { n: 6, tipo: "curso", ref: "Osgood, B. <em>The Fourier Transform and its Applications</em> (EE261), Stanford University. Notas de aula completas, incluindo tratamento do fenômeno de Gibbs e da amostragem.", url: "https://see.stanford.edu/Course/EE261" },
   { n: 7, tipo: "livro", ref: "Bracewell, R. <em>The Fourier Transform and Its Applications</em>. 3ª ed., McGraw-Hill, 2000. Referência padrão em engenharia, com tratamento cuidadoso de convolução e amostragem.", url: "" }
-]
+],
+
+fronteira: [{"tema": "Métodos de detecção de ritmos em genes", "html": "<p>Em análises de expressão gênica ao longo do dia, diferentes algoritmos de detecção de periodicidade aplicados aos mesmos dados produzem listas de genes rítmicos que se sobrepõem muito menos do que se esperaria. É uma controvérsia metodológica ativa: não há consenso sobre qual método controla adequadamente o erro tipo I.</p><p>O problema não está na transformada de Fourier em si, e sim no teste de significância construído sobre ela. Estudos comparativos mostram essa discrepância, mas ainda não há um padrão acordado para decidir qual lista está certa. Está em aberto.</p>"}],
 };

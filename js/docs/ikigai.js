@@ -129,16 +129,6 @@ aprofundamento: { minutos: 30, html: `
 
 <p>Nos estudos de Ohsaki e do JACC a exposição foi medida por uma única pergunta, do tipo "você tem ikigai na sua vida?", com três opções de resposta. Os modelos de Sone ajustaram para idade, sexo, estado civil, escolaridade, situação de trabalho, saúde autoavaliada, estresse mental percebido, dor, capacidade funcional, índice de massa corporal, tabagismo, consumo de álcool, tempo de caminhada, horas de sono e histórico de hipertensão, diabetes, doença renal, doença hepática, úlcera, artrite e osteoporose.<sup class="cit"><a href="#f14">14</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">A força dessa evidência é objeto de disputa</span>
-<p>O padrão de associação é grande, replicado em coortes independentes e sobrevive a ajustes extensos. Isso não resolve a questão causal, por cinco motivos que os próprios autores registram.</p>
-<p><strong>Causalidade reversa.</strong> Doença ainda não diagnosticada reduz o ânimo antes de matar. Tanno separou os cinco primeiros anos do resto do seguimento e Miyazaki excluiu óbitos precoces, o que atenua o problema sem eliminá-lo em condições de curso longo.</p>
-<p><strong>Confundimento residual.</strong> Depressão é o candidato óbvio: reduz ikigai relatado e aumenta mortalidade. Sone registra como limitação a ausência de dados sobre prevalência de doença mental na coorte. Ajustar por saúde autoavaliada, por sua vez, é ambíguo, porque ela pode ser confundidor e mediador ao mesmo tempo.</p>
-<p><strong>Medida única e estática.</strong> Uma pergunta, respondida uma vez. Sone aponta que não há informação sobre mudanças no ikigai durante o seguimento, e portanto nenhuma análise de exposição variável no tempo.</p>
-<p><strong>Seleção.</strong> Em Ohsaki, os 2.939 participantes que não responderam à pergunta tinham indicadores de saúde piores no início.</p>
-<p><strong>Modificação de efeito sem mecanismo claro.</strong> Okuzono encontrou associações mais fortes em homens e em pessoas de nível socioeconômico alto; Miyazaki encontrou o efeito apenas entre não empregados. Achados de subgrupo desse tipo pedem replicação antes de virarem explicação.</p>
-<p>Um ponto separado, e que costuma se perder: nenhum desses estudos testou o diagrama. Todos mediram uma pergunta única de autorrelato sobre ter ou não ikigai. A evidência epidemiológica não sustenta a estrutura de quatro círculos, porque essa estrutura nunca foi a variável medida.</p>
-</div>
 
 <h3>Medir um conceito culturalmente específico</h3>
 
@@ -175,21 +165,11 @@ extensao: { minutos: 60, html: `
 
 <p>O estudo de Miyazaki e colaboradores, dentro da coorte JACC, estratificou a associação entre ikigai e mortalidade cardiovascular por situação de trabalho. A associação inversa apareceu entre pessoas sem emprego, com HR entre 0,69 e 0,78 conforme sexo e nível de ikigai, e não apareceu entre empregados, incluindo trabalhadores de meio período, autônomos e donas de casa.<sup class="cit"><a href="#f16">16</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">Leitura em disputa</span>
-<p>Esse achado não demonstra que ser pago prejudica o ikigai, e usá-lo assim seria repetir o erro que o documento inteiro descreve. Pelo menos quatro leituras competem. Primeira: entre empregados, o emprego já fornece estrutura, rotina e vínculo, de modo que o ikigai relatado acrescenta pouca informação e a associação se dilui. Segunda: entre não empregados existe mais variação real na exposição, o que aumenta o poder de detectar diferença. Terceira: quem está fora do mercado de trabalho por doença tem simultaneamente menos ikigai e maior risco, e o ajuste pode não ter removido isso. Quarta: é um achado de subgrupo em uma coorte, ainda sem replicação independente.</p>
-<p>O que o resultado sustenta, com cautela, é uma afirmação negativa: não há evidência de que o vínculo entre ikigai e desfechos de saúde dependa de a fonte de sentido ser remunerada. Isso basta para tirar do círculo do dinheiro qualquer pretensão de estar apoiado na literatura.</p>
-</div>
 
 <h3>A cadeia de autoridade por trás do diagrama</h3>
 
 <p>Vale seguir de onde o gráfico tira sua credibilidade. Winn chegou à palavra por uma palestra de Dan Buettner no TED, de 2009, sobre as regiões de longevidade excepcional que ele chamou de zonas azuis, entre elas Okinawa.<sup class="cit"><a href="#f20">20</a></sup> A autoridade do diagrama, portanto, se apoia numa afirmação demográfica sobre longevidade japonesa.</p>
 
-<div class="marca controverso">
-<span class="rot">A base demográfica das zonas azuis está sob contestação</span>
-<p>O demógrafo Saul Newman argumenta que regiões com concentração anômala de idades extremas coincidem com regiões de registro civil ruim, e atribui parte dos recordes a erro de cadastro e a fraude previdenciária. O trabalho recebeu o Ig Nobel de demografia em 2024 e circula como preprint, sem revisão por pares concluída no repositório em que está depositado.<sup class="cit"><a href="#f21">21</a></sup><sup class="cit"><a href="#f22">22</a></sup> Demógrafos ligados ao projeto Blue Zones responderam publicamente contestando o argumento. O estado da questão é disputa aberta, não refutação estabelecida.</p>
-<p>Para o assunto deste documento, a conclusão é modesta e suficiente: cada elo da cadeia que dá autoridade ao diagrama é mais fraco do que o elo seguinte supõe. Uma palestra de divulgação sustenta um post de blog, que sustenta um best-seller, que sustenta uma prática de recursos humanos, e o dado demográfico da ponta está em discussão.</p>
-</div>
 
 <h3>Três controvérsias abertas e o que resolveria cada uma</h3>
 
@@ -199,10 +179,6 @@ extensao: { minutos: 60, html: `
 
 <p><strong>3. O diagrama alterou o uso japonês da palavra?</strong> Conceitos exportados às vezes retornam à cultura de origem já modificados. Se isso ocorreu com ikigai, seria um caso de manual.</p>
 
-<div class="marca especulacao">
-<span class="rot">Hipótese, sem dado que a sustente aqui</span>
-<p>É plausível que a popularidade internacional do diagrama tenha empurrado parte do público japonês, sobretudo em contexto corporativo e editorial, a tratar ikigai como assunto de carreira. Plausível não é demonstrado, e este documento não localizou medição do fenômeno. O que resolveria: linguística de corpus sobre textos japoneses, comparando as colocações da palavra antes e depois de 2016; e pesquisas de opinião pedindo a japoneses que definam ikigai, com atenção à faixa etária e à exposição a material em inglês. Enquanto isso, o registro disponível é que a página oficial do governo japonês descreve o conceito de forma ampla, sem qualquer diagrama.<sup class="cit"><a href="#f5">5</a></sup></p>
-</div>
 
 <h3>Os limites do conceito quando exportado</h3>
 
@@ -410,5 +386,7 @@ fontes: [
   { n: 21, tipo: "preprint", ref: "Newman, S. J. 'Supercentenarian and remarkable age records exhibit patterns indicative of clerical errors and pension fraud'. bioRxiv, 2019 a 2024. Preprint, sem revisão por pares concluída.", url: "https://doi.org/10.1101/704080" },
   { n: 22, tipo: "notícia institucional", ref: "University College London. 'UCL demographer's work debunking Blue Zone regions of exceptional lifespans wins Ig Nobel prize'. UCL Institute of Education, setembro de 2024.", url: "https://www.ucl.ac.uk/ioe/news/2024/sep/ucl-demographers-work-debunking-blue-zone-regions-exceptional-lifespans-wins-ig-nobel-prize" },
   { n: 23, tipo: "entrevista", ref: "Kemp, N. 'How the Andrés Zuzunaga Venn Diagram Became Ikigai'. The Ikigai Podcast, episódio 7. Entrevista com Zuzunaga sobre a criação e a apropriação do gráfico.", url: "https://ikigaitribe.com/ikigai/podcast07/" }
-]
+],
+
+fronteira: [{"tema": "Limites da evidência sobre ikigai e mortalidade", "html": "<p>O vínculo entre ter ikigai e viver mais aparece em coortes japonesas, com associação forte e replicada. Ainda não há como afirmar que o ikigai causa saúde melhor, e os próprios autores listam cinco problemas. Doença não diagnosticada pode reduzir o ânimo antes de matar; depressão pode interferir nos dois lados; o ikigai foi medido por uma única pergunta, uma vez só, sem acompanhar mudanças; quem não respondeu tinha saúde pior no início; e os efeitos em subgrupos, como homens ou pessoas de nível socioeconômico alto, precisam de replicação. Nenhum desses estudos testou o diagrama de quatro círculos: a variável medida foi só ter ou não ikigai.</p>"}, {"tema": "Ikigai e trabalho remunerado: leituras possíveis", "html": "<p>Um achado de que o ikigai se associa à saúde apenas entre não empregados não prova que ser pago prejudica o ikigai. Quatro leituras competem. Entre empregados, o trabalho já dá estrutura e vínculo, então o ikigai acrescenta pouca informação. Entre não empregados há mais variação na exposição, o que facilita detectar diferença. Doença pode reduzir tanto o ikigai quanto aumentar o risco, e os ajustes podem não remover isso. E é um achado de subgrupo em uma coorte, sem replicação independente. O que se pode dizer é que não há evidência de que o vínculo com a saúde dependa de a fonte de sentido ser remunerada. Isso tira do círculo do dinheiro qualquer pretensão de apoio na literatura.</p>"}, {"tema": "Zonas azuis sob contestação demográfica", "html": "<p>O demógrafo Saul Newman argumenta que regiões com muitos idosos extremos coincidem com registro civil ruim, e atribui parte dos recordes a erro de cadastro e fraude previdenciária. O trabalho recebeu o Ig Nobel de demografia em 2024 e está em preprint, sem revisão por pares concluída no repositório.<sup class=\"cit\"><a href=\"#f21\">21</a></sup><sup class=\"cit\"><a href=\"#f22\">22</a></sup> Demógrafos ligados ao projeto Blue Zones responderam contestando. A questão está em disputa aberta, não em refutação estabelecida. Para o ikigai, a consequência é modesta: cada elo que dá autoridade ao diagrama é mais fraco do que o seguinte supõe, e o dado demográfico na ponta está em discussão.</p>"}, {"tema": "Efeito do diagrama no Japão: hipótese sem medição", "html": "<p>É plausível que a popularidade internacional do diagrama tenha levado parte do público japonês, sobretudo no mundo corporativo e editorial, a tratar ikigai como questão de carreira. Plausível não é demonstrado, e não há medição disponível. O que resolveria: análise de corpus de textos japoneses comparando usos da palavra antes e depois de 2016; e pesquisas de opinião pedindo a japoneses que definam ikigai, com atenção à idade e ao contato com material em inglês. Por ora, o registro é que a página oficial do governo japonês descreve o conceito de forma ampla, sem diagrama.<sup class=\"cit\"><a href=\"#f5\">5</a></sup></p>"}],
 };

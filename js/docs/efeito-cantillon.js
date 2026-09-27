@@ -33,10 +33,6 @@ nucleo: { minutos: 15, html: `
 
 <p>Vale nomear onde o efeito Cantillon é discutido com mais frequência, porque isso ajuda a calibrar o quanto ele representa consenso acadêmico ou posição de escola de pensamento. Ele é um pilar central da <strong>escola austríaca de economia</strong>, tradição que inclui Ludwig von Mises e Friedrich Hayek, e que constrói toda uma teoria de ciclos econômicos em cima da ideia de que expansão de crédito distorce investimentos antes que os preços se ajustem por completo.<sup class="cit"><a href="#f4">4</a></sup><sup class="cit"><a href="#f5">5</a></sup> Mais recentemente, ele também virou argumento central da comunidade de criptomoedas, especialmente entre defensores do Bitcoin, que apontam o fornecimento fixo de 21 milhões de moedas como uma forma de eliminar esse problema, num contraste às vezes chamado de "efeito Nakamoto" contra o efeito Cantillon do dinheiro estatal.<sup class="cit"><a href="#f11">11</a></sup><sup class="cit"><a href="#f12">12</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">O que está em disputa</span>
-<p>Fora desses dois círculos (economia austríaca e comunidade cripto), o efeito Cantillon raramente aparece como vocabulário padrão em cursos de macroeconomia de universidades ou em modelos de bancos centrais, que preferem falar em "canais de transmissão da política monetária" e "efeitos distributivos", sem necessariamente adotar o enquadramento específico de Cantillon nem a conclusão de que isso torna a política monetária, no fundo, uma forma de transferência de renda para quem está mais perto do poder. Isso não significa que a ideia esteja errada. Significa que ela circula muito mais como posição de escola de pensamento do que como resultado testado e aceito de forma ampla, e que boa parte do que se lê sobre ela online vem de fontes já comprometidas com uma dessas duas tradições.</p>
-</div>
 
 <h3>Como avaliar essa afirmação quando ela aparece</h3>
 
@@ -86,7 +82,7 @@ extensao: { minutos: 60, html: `
 
 <p>É interessante notar como duas comunidades politicamente distantes chegam a versões parecidas dessa crítica por caminhos diferentes. A crítica de "por que Wall Street recebe socorro financeiro e você não", publicada por pesquisadores ligados à Universidade de Chicago em tom de análise de política pública, usa a lógica do efeito Cantillon para questionar resgates a instituições financeiras em crises, um argumento que atravessa o espectro político e aparece tanto em críticas de esquerda a bancos quanto em críticas libertárias ao Estado.<sup class="cit"><a href="#f13">13</a></sup> Já a comunidade de criptomoedas usa a mesma lógica de um jeito propositivo: se o problema é que alguém controla o ponto de injeção de dinheiro novo, uma moeda com oferta matematicamente fixa e sem autoridade central emissora, como o Bitcoin, eliminaria estruturalmente esse ponto de injeção privilegiado.<sup class="cit"><a href="#f11">11</a></sup></p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">O limite dessa proposta específica</span>
 <p>Vale registrar, com o mesmo ceticismo aplicado ao resto deste documento, que a promessa de que uma oferta fixa de moeda "resolve" o efeito Cantillon também merece escrutínio. Ela troca o problema da distribuição de moeda nova pelo problema da distribuição inicial de posse do ativo (quem já possui a criptomoeda antes de sua adoção ampla se beneficia de forma estruturalmente parecida a quem estava perto do ponto de injeção num sistema tradicional), e não elimina outros canais de desigualdade econômica que não têm relação com a oferta de moeda. Essa proposta específica não tem, até o momento, corpo de evidência empírica independente comparável ao que existe para o caso da política monetária de bancos centrais tradicionais.</p>
 </div>
@@ -278,7 +274,9 @@ fontes: [
   { n: 13, tipo: "reportagem", ref: "ProMarket (Stigler Center, University of Chicago Booth School of Business). 'The Cantillon Effect: Why Wall Street Gets a Bailout and You Don't'.", url: "https://www.promarket.org/2020/04/13/the-cantillon-effect-why-wall-street-gets-a-bailout-and-you-dont/" },
   { n: 14, tipo: "divulgação", ref: "Positive Money. 'QE or not to QE? Soaring inequality shows it's time for a new macroeconomic approach'.", url: "https://positivemoney.org/uk/archive/qe-or-not-to-qe-soaring-inequality-proves-its-time-for-a-new-macroeconomic-approach/" },
   { n: 15, tipo: "reportagem institucional", ref: "International Monetary Fund, Finance &amp; Development. 'The Very Model of Modern Monetary Policy', sobre a repercussão do trabalho de Kaplan, Moll e Violante.", url: "https://www.imf.org/en/publications/fandd/issues/2023/03/modern-monetary-policy-kaplan-moll-violante" }
-]
+],
+
+fronteira: [{"tema": "Efeito Cantillon", "html": "<p>O efeito Cantillon descreve a ideia de que quem recebe dinheiro novo primeiro se beneficia mais do que quem recebe depois. Fora da economia austríaca e da comunidade cripto, o termo raramente aparece no vocabulário padrão de cursos de macroeconomia ou em modelos de bancos centrais. Nesses contextos, o debate costuma ser tratado sob outros nomes, como canais de transmissão da política monetária e efeitos distributivos, sem adotar o enquadramento específico de Cantillon nem a conclusão de que a política monetária seria, no fundo, uma transferência de renda para quem está mais perto do poder.</p><p>Isso não significa que a ideia esteja errada. Significa que ela circula mais como posição de escola de pensamento do que como resultado testado e aceito de forma ampla. Boa parte do que se lê online vem de fontes já comprometidas com uma dessas duas tradições, o que torna a hipótese uma linha de pesquisa em aberto, com evidência ainda limitada.</p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

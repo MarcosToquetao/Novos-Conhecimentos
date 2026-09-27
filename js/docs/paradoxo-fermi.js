@@ -45,10 +45,6 @@ nucleo: { minutos: 15, html: `
 
 <p>A pergunta que interessa de verdade não é só "existe um filtro?". É: <strong>onde ele está</strong>, em relação a nós. Se o filtro já ficou para trás, alguma das etapas iniciais é que era a barreira rara, e o fato de já a termos vencido é um golpe de sorte. Nesse caso, o futuro é relativamente aberto: já passamos pela parte difícil. Se o filtro ainda está à nossa frente, algo entre onde estamos agora e a colonização interestelar é o obstáculo quase intransponível, o que sugere que a maioria das civilizações tecnológicas não sobrevive para atravessá-lo, e nós talvez também não sobrevivamos.</p>
 
-<div class="marca controverso">
-<span class="rot">Por que isso importa e por que ninguém sabe a resposta</span>
-<p>Não existe hoje forma de medir diretamente onde está o Grande Filtro. As duas hipóteses, filtro atrás e filtro à frente, são compatíveis com todos os dados que temos até agora, porque os dados até agora se resumem a "não vimos ninguém". Qualquer afirmação categórica de que "certamente já passamos" ou "certamente ainda vem por aí" está indo além do que a evidência sustenta.</p>
-</div>
 
 <h3>Ausência de evidência não é evidência de ausência, mas também não é nada</h3>
 
@@ -80,10 +76,6 @@ aprofundamento: { minutos: 30, html: `
 
 <p><strong>L</strong>, o tempo, em anos, durante o qual essa civilização continua emitindo sinais detectáveis antes de desaparecer, se destruir, parar de transmitir ou mudar de tecnologia de um jeito que deixe de ser detectável do modo que buscamos hoje. É o termo mais especulativo de todos, porque depende de prever o futuro de civilizações tecnológicas, algo que nem sequer conseguimos fazer com segurança para a nossa própria.</p>
 
-<div class="marca especulacao">
-<span class="rot">Por que o resultado final varia tanto</span>
-<p>R*, f<sub>p</sub> e n<sub>e</sub> hoje têm base observacional razoável. f<sub>l</sub>, f<sub>i</sub>, f<sub>c</sub> e L continuam sendo, essencialmente, palpites, cada um podendo variar por várias ordens de grandeza dependendo de quem faz a conta. Multiplicar sete números, dos quais quatro têm incerteza de várias ordens de grandeza cada, produz um resultado final cuja incerteza é maior do que a soma das partes. Diferentes astrônomos, usando a mesma equação e sendo igualmente racionais, chegam a estimativas de N que vão de "menos de um" a "milhões". Isso não é falha da equação: é a equação mostrando com fidelidade o tamanho da nossa ignorância.</p>
-</div>
 
 <h3>Biossinatura e tecnossinatura</h3>
 
@@ -121,10 +113,6 @@ extensao: { minutos: 60, html: `
 
 <p>Em 1975, o astrofísico Michael Hart publicou um argumento influente: mesmo com naves relativamente lentas, muito abaixo da velocidade da luz, uma civilização decidida a colonizar a galáxia levaria algo entre alguns milhões e algumas dezenas de milhões de anos para alcançar todos os sistemas estelares, um intervalo pequeno frente aos bilhões de anos de idade da galáxia.<sup class="cit"><a href="#f5">5</a></sup> Em 1980, o físico Frank Tipler estendeu o argumento propondo que bastaria uma única civilização enviar sondas capazes de se autorreplicar usando material dos sistemas que visitam, as chamadas <strong>sondas de von Neumann</strong>, para que a colonização se espalhasse de forma exponencial e cobrisse a galáxia inteira num piscar de olhos em escala cósmica.<sup class="cit"><a href="#f6">6</a></sup> A conclusão de Tipler, que deu nome ao que hoje se chama de conjectura de Hart-Tipler, foi que a ausência completa de qualquer sonda ou vestígio de colonização é evidência de que não existem, e talvez nunca tenham existido, outras civilizações tecnológicas inteligentes na galáxia.</p>
 
-<div class="marca controverso">
-<span class="rot">Por que essa conclusão forte é contestada</span>
-<p>Críticos apontam vários pontos fracos: o argumento supõe que colonizar é um objetivo universal de qualquer civilização avançada, o que é uma suposição sobre motivação, não um fato físico; supõe que sondas autorreplicantes são tecnicamente viáveis em qualquer escala temporal razoável, o que ninguém provou nem refutou; e supõe que colonização, uma vez iniciada, seria total e permanente, sem colapsos, pausas ou desistências no meio do caminho. Nenhuma dessas suposições é absurda, mas nenhuma é estabelecida, e a conclusão de Tipler depende de todas elas se sustentarem ao mesmo tempo.</p>
-</div>
 
 <h3>Grabby aliens: a proposta de Hanson e colegas em 2021</h3>
 
@@ -132,7 +120,7 @@ extensao: { minutos: 60, html: `
 
 <p>Se esse tipo de expansão em grande escala é real, o modelo prevê que civilizações silenciosas só conseguem surgir em "bolhas" de espaço ainda não tomadas por vizinhos expansionistas, e que o fato de existirmos agora, relativamente cedo, é exatamente o que se esperaria observar sob essa hipótese, porque civilizações que surgem tarde demais já encontrariam o espaço ocupado. O modelo é matematicamente elegante e gerou previsões numéricas específicas sobre quando a humanidade poderia esperar encontrar sinais de expansão alienígena, algo entre alguns milhões e um bilhão de anos no futuro, segundo os próprios autores.</p>
 
-<div class="marca especulacao">
+<div class="marca consenso">
 <span class="rot">O que levar a sério, e o que não</span>
 <p>O modelo de Hanson e colegas é um argumento estatístico bem construído, publicado em revista com revisão por pares, mas repousa sobre suposições fortes: que expansão cósmica em grande escala e de forma permanentemente visível é o comportamento padrão de civilizações avançadas, e que a nossa posição temporal no universo deve ser tratada como uma amostra aleatória para fins de inferência (um tipo de raciocínio antrópico). Ambas as suposições são discutíveis. Tratar o resultado como previsão confiável sobre quando "eles" vão aparecer seria dar a um modelo especulativo um peso que a comunidade científica, incluindo os próprios autores, não afirma que ele tenha.</p>
 </div>
@@ -360,5 +348,7 @@ fontes: [
   { n: 14, tipo: "artigo", ref: "Haqq-Misra, J., Kopparapu, R. K. &amp; Schwieterman, E. W. 'Observational Constraints on the Great Filter'. <em>Astrobiology</em> 20(11):1350-1355, 2020. Proposta de usar biossinaturas e tecnossinaturas futuras para restringir onde está o Grande Filtro.", url: "https://doi.org/10.1089/ast.2019.2154" },
   { n: 15, tipo: "artigo", ref: "Equipe do Breakthrough Listen. 'A Novel Technosignature Search in the Breakthrough Listen Green Bank Telescope Archive'. <em>The Astronomical Journal</em>, 2025. Exemplo de busca recente de tecnossinaturas com métodos de aprendizado de máquina.", url: "https://iopscience.iop.org/article/10.3847/1538-3881/adbc5e" },
   { n: 16, tipo: "revisão", ref: "Wikipedia. 'Great Filter'. Verbete de referência geral sobre as nove etapas evolutivas propostas por Hanson e candidatos discutidos na literatura.", url: "https://en.wikipedia.org/wiki/Great_Filter" }
-]
+],
+
+fronteira: [{"tema": "Onde está o Grande Filtro", "html": "<p>Não existe hoje forma de medir diretamente onde está o Grande Filtro. As duas hipóteses, filtro atrás e filtro à frente, são compatíveis com todos os dados que temos até agora, porque os dados até agora se resumem a \"não vimos ninguém\". Qualquer afirmação categórica de que \"certamente já passamos\" ou \"certamente ainda vem por aí\" está indo além do que a evidência sustenta.</p>"}, {"tema": "Quantos civilizações existem na Via Láctea", "html": "<p>R*, f<sub>p</sub> e n<sub>e</sub> hoje têm base observacional razoável. f<sub>l</sub>, f<sub>i</sub>, f<sub>c</sub> e L continuam sendo, essencialmente, palpites, cada um podendo variar por várias ordens de grandeza dependendo de quem faz a conta. Multiplicar sete números, dos quais quatro têm incerteza de várias ordens de grandeza cada, produz um resultado final cuja incerteza é maior do que a soma das partes. Diferentes astrônomos, usando a mesma equação e sendo igualmente racionais, chegam a estimativas de N que vão de \"menos de um\" a \"milhões\". Isso não é falha da equação: é a equação mostrando com fidelidade o tamanho da nossa ignorância.</p>"}, {"tema": "Críticas ao argumento de Tipler", "html": "<p>Críticos apontam vários pontos fracos: o argumento supõe que colonizar é um objetivo universal de qualquer civilização avançada, o que é uma suposição sobre motivação, não um fato físico; supõe que sondas autorreplicantes são tecnicamente viáveis em qualquer escala temporal razoável, o que ninguém provou nem refutou; e supõe que colonização, uma vez iniciada, seria total e permanente, sem colapsos, pausas ou desistências no meio do caminho. Nenhuma dessas suposições é absurda, mas nenhuma é estabelecida, e a conclusão de Tipler depende de todas elas se sustentarem ao mesmo tempo.</p>"}],
 };

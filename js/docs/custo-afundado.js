@@ -77,7 +77,7 @@ extensao: { minutos: 60, html: `
 
 <p>Uma linha de pesquisa mais recente em economia comportamental propõe algo ainda mais contraintuitivo: para uma pessoa com viés de presente (que tende a subvalorizar recompensas futuras em relação a recompensas imediatas), sentir uma resistência psicológica a abandonar um investimento já feito pode funcionar como um <strong>dispositivo de compromisso</strong> útil, ajudando essa pessoa a persistir em projetos que, calculado com cuidado, valem a pena no longo prazo, mas que ela mesma abandonaria cedo demais se avaliasse cada momento isoladamente.<sup class="cit"><a href="#f5">5</a></sup> Segundo essa análise, a sensibilidade ao custo afundado tem um efeito líquido positivo sobre o bem-estar de agentes com viés de presente, mesmo reconhecendo que o mesmo mecanismo também produz os casos claros de persistência ineficiente que a literatura clássica documentou.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Até onde essa reinterpretação vai</span>
 <p>Essa linha de pesquisa não afirma que toda escalada de comprometimento é, no fundo, boa ideia disfarçada. Ela propõe que o mecanismo psicológico por trás da sensibilidade a custos afundados pode ter uma função adaptativa em certos contextos (conter o abandono precioce de projetos valiosos), ao mesmo tempo em que gera custos reais em outros (manter projetos genuinamente ruins). Separar esses dois casos na prática, sem o benefício da visão retrospectiva, continua sendo difícil, e é exatamente por isso que a etiqueta "falácia" precisa ser usada com mais cuidado do que o senso comum sugere.</p>
 </div>

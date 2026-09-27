@@ -65,10 +65,6 @@ aprofundamento: { minutos: 30, html: `
 </table>
 </div>
 
-<div class="marca controverso">
-<span class="rot">Por que isso ainda divide fisicamente</span>
-<p>Um levantamento formal de opinião entre físicos e filósofos especializados em fundamentos da mecânica quântica, conduzido por Maximilian Schlosshauer, Johannes Kofler e Anton Zeilinger em 2013, encontrou respostas divididas entre as diferentes interpretações, sem que nenhuma reunisse maioria clara entre os participantes.<sup class="cit"><a href="#f9">9</a></sup> Isso não significa que a mecânica quântica em si seja incerta: as previsões numéricas da teoria são extremamente bem testadas e concordam com o experimento em todas as situações já checadas. O que está em aberto é a interpretação sobre o que essas previsões dizem a respeito da realidade entre uma medição e outra, uma pergunta que, até o momento, as próprias previsões da teoria não conseguem decidir sozinhas.</p>
-</div>
 ` },
 
 extensao: { minutos: 60, html: `
@@ -266,7 +262,9 @@ fontes: [
   { n: 13, tipo: "fonte primária", ref: "Ghirardi, G. C., Rimini, A. &amp; Weber, T. 'Unified dynamics for microscopic and macroscopic systems'. <em>Physical Review D</em> 34:470, 1986. Artigo original da teoria de colapso objetivo (GRW).", url: "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.34.470" },
   { n: 14, tipo: "fonte primária", ref: "Fuchs, C. A., Mermin, N. D. &amp; Schack, R. 'An introduction to QBism with an application to the locality of quantum mechanics'. <em>American Journal of Physics</em> 82:749, 2014.", url: "https://pubs.aip.org/aapt/ajp/article/82/8/749/1042162" },
   { n: 15, tipo: "divulgação", ref: "Physics World / Institute of Physics. Reportagens sobre a criação de estados de superposição em laboratório e o significado real do experimento de Schrödinger.", url: "https://physicsworld.com/a/schrodingers-cat-lives-longer-than-ever/" }
-]
+],
+
+fronteira: [{"tema": "Interpretações ainda sem maioria", "html": "<p>Um levantamento formal de opinião entre físicos e filósofos especializados em fundamentos da mecânica quântica, conduzido por Maximilian Schlosshauer, Johannes Kofler e Anton Zeilinger em 2013, encontrou respostas divididas entre as diferentes interpretações, sem que nenhuma reunisse maioria clara entre os participantes.<sup class=\"cit\"><a href=\"#f9\">9</a></sup> Isso é um dado de opinião sobre uma linha de pesquisa, não uma confirmação de qual interpretação descreve a realidade.</p>\n<p>O que está em aberto é a interpretação sobre o que as previsões dizem a respeito da realidade entre uma medição e outra. As previsões numéricas da mecânica quântica são extremamente bem testadas e concordam com o experimento em todas as situações já checadas, mas até o momento elas não decidem sozinhas essa pergunta interpretativa.</p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

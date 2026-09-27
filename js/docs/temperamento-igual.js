@@ -124,10 +124,6 @@ cents = 1200 · log<sub>2</sub>(f<sub>2</sub> / f<sub>1</sub>)
 
 <p>Ross Duffin argumentou, em <em>How Equal Temperament Ruined Harmony</em>, que a adoção universal do temperamento igual empobreceu a harmonia ocidental e que a prática histórica é hoje mal representada mesmo por conjuntos que se dizem "historicamente informados".<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">Ponto controverso</span>
-<p>A parte histórica do argumento, que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada, é bem documentada e amplamente aceita. A parte estética, que a harmonia foi "arruinada", é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois. Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>
-</div>
 ` },
 
 extensao: { minutos: 30, html: `
@@ -139,10 +135,6 @@ extensao: { minutos: 30, html: `
 
 <p>O que Bach demonstrava com as 24 tonalidades era que <em>todas eram tocáveis</em>, o que temperamentos anteriores não permitiam. Isso é compatível com temperamento igual e também com vários temperamentos desiguais.</p>
 
-<div class="marca controverso">
-<span class="rot">Estado atual da questão</span>
-<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class="cit"><a href="#f3">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa. Não sabemos, e a divergência entre especialistas é grande.</p>
-</div>
 
 <h3>Quem realmente toca em temperamento igual</h3>
 
@@ -178,10 +170,6 @@ extensao: { minutos: 30, html: `
 <li><strong>Música clássica indiana</strong> teoriza 22 <em>shrutis</em> por oitava, com entonação ajustada ao contexto do raga.</li>
 </ul>
 
-<div class="marca controverso">
-<span class="rot">Sobre universalidade</span>
-<p>Há um debate empírico sobre quanto da preferência por consonância é biológico e quanto é aprendido. Um estudo de 2016 com os Tsimane', na Amazônia boliviana, relatou que participantes com pouca exposição à música ocidental não mostraram preferência por consonância sobre dissonância, embora distinguissem os estímulos. O resultado é frequentemente citado como evidência de que a preferência é cultural. Vale registrar as ressalvas: amostra pequena, dificuldade de tradução de tarefas e discussão metodológica ativa sobre o que exatamente foi medido. O que parece razoavelmente firme é que a <em>capacidade de discriminar</em> razões simples tem base perceptiva, enquanto a <em>preferência</em> por elas é modulada por exposição.</p>
-</div>
 
 <h3>O resumo, e o que ele ensina fora da música</h3>
 
@@ -314,5 +302,7 @@ fontes: [
   { n: 4, tipo: "livro", ref: "Sethares, W. A. <em>Tuning, Timbre, Spectrum, Scale</em>. 2ª ed., Springer, 2005. Relação formal entre espectro do instrumento e escala consonante, incluindo tradições não ocidentais.", url: "" },
   { n: 5, tipo: "artigo", ref: "McDermott, J. H., Schultz, A. F., Undurraga, E. A. &amp; Godoy, R. A. 'Indifference to dissonance in native Amazonians reveals cultural variation in music perception'. <em>Nature</em> 535:547–550, 2016.", url: "https://doi.org/10.1038/nature18635" },
   { n: 6, tipo: "livro", ref: "Isacoff, S. <em>Temperamento: Como a Música se Tornou um Campo de Batalha</em>. Record, 2001. História acessível da disputa sobre afinação, com viés declaradamente favorável ao temperamento igual.", url: "" }
-]
+],
+
+fronteira: [{"tema": "A disputa entre história e estética", "html": "<p>A parte histórica do argumento, que o temperamento igual não era padrão antes do século XIX e que sua adoção foi gradual e disputada, é bem documentada e amplamente aceita. A parte estética, que a harmonia foi \"arruinada\", é uma avaliação de valor, e críticos apontam que ela subestima o que se ganhou: a modulação irrestrita e o cromatismo que definem Chopin, Wagner e tudo que veio depois.</p><p>Vale distinguir a tese historiográfica, forte, da tese estética, que é opinião informada e não resultado.</p>"}, {"tema": "Qual temperamento Bach usava", "html": "<p>Qual temperamento Bach usava permanece sem resposta consensual.<sup class=\"cit\"><a href=\"#f3\">3</a></sup> Bradley Lehman propôs em 2005 que o ornamento decorativo na folha de rosto do manuscrito codifica uma prescrição de afinação; a proposta recebeu tanto elogios quanto críticas severas. John O'Donnell (2006) e John Francis (2007) leram o mesmo ornamento de maneiras diferentes, chegando a temperamentos distintos. Há inclusive disputa sobre se o ornamento codifica alguma coisa.</p><p>Não sabemos, e a divergência entre especialistas é grande.</p>"}, {"tema": "Consonância entre biologia e cultura", "html": "<p>Há um debate empírico sobre quanto da preferência por consonância é biológico e quanto é aprendido. Um estudo de 2016 com os Tsimane', na Amazônia boliviana, relatou que participantes com pouca exposição à música ocidental não mostraram preferência por consonância sobre dissonância, embora distinguissem os estímulos. O resultado é frequentemente citado como evidência de que a preferência é cultural.</p><p>Vale registrar as ressalvas: amostra pequena, dificuldade de tradução de tarefas e discussão metodológica ativa sobre o que exatamente foi medido. O que parece razoavelmente firme é que a <em>capacidade de discriminar</em> razões simples tem base perceptiva, enquanto a <em>preferência</em> por elas é modulada por exposição.</p>"}],
 };

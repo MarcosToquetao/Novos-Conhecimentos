@@ -68,6 +68,13 @@ function validar(id, d) {
   if (fontes.size < 15) a(`fontes: ${fontes.size} (mínimo 15)`);
   if (!d.sintese) a("sem síntese");
 
+  /* o que não é garantido mora só na seção «Onde a ciência ainda pesquisa», nunca no meio do texto */
+  if (/class="marca (controverso|especulacao)"/.test(texto)) e("caixa controverso/especulação no texto: rode gerar.py fronteira");
+  (d.fronteira || []).forEach((it, i) => {
+    if (!it.tema || !it.html) e(`fronteira[${i}] sem tema ou html`);
+    for (const m of (it.html || "").matchAll(/href="#f(\d+)"/g)) if (!fontes.has(+m[1])) e(`fronteira[${i}] cita [${m[1]}] sem fonte`);
+  });
+
   if (d.licao) {
     const L = d.licao, telas = L.telas || [];
     if (!L.gancho) e("licao sem gancho");

@@ -239,6 +239,12 @@ function htmlDocumento(c) {
     const cam = d.camadas[k]; if (!cam) return;
     h += `<section class="camada"><p class="camada-rot"><span>${String(i + 1).padStart(2, "0")}</span> ${ROTULO_CAMADA[k]} · ~${minutosDeLeitura(cam.html)} min</p><div class="leitura">${cam.html}</div></section>`;
   });
+  if ((d.fronteira || []).length) {
+    h += `<section class="fronteira"><p class="sintese-rot">Onde a ciência ainda pesquisa</p>
+      <p class="fronteira-aviso">O que vem a seguir não é conhecimento garantido: são linhas de pesquisa, hipóteses e dados ainda sem confirmação. Leia como pergunta em aberto, não como fato.</p>` +
+      d.fronteira.map(it => `<div class="fronteira-item"><span class="carimbo especulacao">Em pesquisa</span><h3>${it.tema}</h3><div class="leitura">${it.html}</div></div>`).join("") +
+      `</section>`;
+  }
   if (d.sintese) {
     const s = d.sintese;
     h += `<section class="sintese"><p class="sintese-rot">Síntese</p>`;

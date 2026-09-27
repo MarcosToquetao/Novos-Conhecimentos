@@ -65,10 +65,6 @@ extensao: { minutos: 60, html: `
 
 <p>O resultado de McKelvey merece atenção extra porque é surpreendentemente forte, e não apenas "o modelo simples deixa de funcionar direito". Em espaços de decisão com duas ou mais dimensões, e usando regras de votação por maioria simples, o teorema mostra que, partindo de qualquer posição de política pública, existe uma sequência de propostas, cada uma vencendo a anterior por maioria de votos, que consegue levar o resultado final a qualquer outra posição imaginável no espaço de políticas, incluindo posições extremamente distantes ou até absurdas para a maioria dos eleitores individualmente.<sup class="cit"><a href="#f5">5</a></sup> Isso sugere que, em princípio, sistemas de votação majoritária multidimensional são, matematicamente, muito mais instáveis e manipuláveis do que a intuição sugere, algo que ajuda a explicar por que instituições políticas reais (regras de agenda, comitês, procedimentos legislativos formais) desempenham um papel crucial em produzir estabilidade que a votação majoritária pura, sozinha, não garante.</p>
 
-<div class="marca controverso">
-<span class="rot">Se o modelo simples falha tanto, ele ainda serve para algo?</span>
-<p>Existe debate genuíno sobre quanto valor explicativo resta ao teorema do eleitor mediano, dado que suas condições ideais quase nunca se aplicam integralmente. Uma posição argumenta que o teorema continua sendo uma ferramenta útil como caso de referência, um ponto de partida teórico que ajuda a entender, por contraste, por que a política real diverge dele (e por quanto), do mesmo jeito que um físico usa um modelo de "atrito zero" mesmo sabendo que o atrito real nunca é zero. Outra posição, mais cética, argumenta que, uma vez que as condições do modelo falham de forma tão sistemática (multidimensionalidade quase sempre presente, informação sempre incompleta), o teorema tem pouco poder preditivo real sobre comportamento eleitoral concreto, servindo mais como exercício de elegância matemática do que como ferramenta empírica. Não há consenso definitivo sobre qual dessas leituras é mais correta.</p>
-</div>
 
 <h3>Reduzindo dimensões: por que a política às vezes parece mais simples do que a teoria prevê</h3>
 
@@ -255,7 +251,9 @@ fontes: [
   { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Median voter theorem', com panorama histórico e das principais críticas ao modelo.", url: "https://en.wikipedia.org/wiki/Median_voter_theorem" },
   { n: 14, tipo: "fonte primária", ref: "'Beyond the Median Voter Theorem: A New Framework for Ideological Positioning'.", url: "https://arxiv.org/pdf/2502.06562" },
   { n: 15, tipo: "fonte primária", ref: "'A walk down the middle lane of the Median Voter Theorem's Origins', revisão histórica sobre a origem e desenvolvimento do teorema.", url: "https://wiredspace.wits.ac.za/bitstreams/dca16f0f-5103-478d-ade5-87cf4be6911e/download" }
-]
+],
+
+fronteira: [{"tema": "O que resta do teorema do eleitor mediano", "html": "<p>Há debate genuíno sobre quanto valor explicativo resta ao teorema do eleitor mediano, já que suas condições ideais quase nunca se aplicam por completo. Uma leitura sustenta que ele continua útil como caso de referência: um ponto de partida teórico que ajuda a entender, por contraste, por que a política real dele diverge, como um físico usa um modelo de atrito zero sabendo que o atrito real nunca é zero.</p><p>Outra leitura, mais cética, argumenta que, falhando as condições de forma tão sistemática, o teorema tem pouco poder preditivo sobre o comportamento eleitoral concreto e serve mais como exercício de elegância matemática. Não há consenso definitivo sobre qual leitura é mais correta.</p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

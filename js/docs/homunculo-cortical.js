@@ -77,10 +77,6 @@ extensao: { minutos: 60, html: `
 
 <p>Esse é um padrão recorrente na história da neurociência: um primeiro mapeamento, feito com a melhor tecnologia disponível numa época, tende a retratar uma estrutura como mais fixa, discreta e ordenada do que ela realmente é. Trabalhos posteriores, com métodos mais sensíveis, quase sempre revelam mais sobreposição, mais dinamismo e mais dependência de contexto do que o mapa original sugeria. Isso não é peculiar ao homúnculo cortical: é a mesma lógica por trás de revisões em outras áreas da neurociência, da localização de funções de linguagem à compreensão de como memórias são armazenadas e reativadas.</p>
 
-<div class="marca controverso">
-<span class="rot">O que ainda não está fechado</span>
-<p>A extensão exata da rede de ação somato-cognitiva, sua relação causal com controle motor voluntário versus regulação fisiológica automática, e até que ponto o "mosaico" descrito em 2026 se generaliza para outras regiões do córtex além da faixa motora primária são questões ainda ativas de pesquisa, sem uma síntese teórica final aceita amplamente. O que existe hoje é uma correção empírica bem estabelecida ao mapa clássico, não ainda uma teoria unificada e completa que substitua o modelo de Penfield por igual poder explicativo e pedagógico.</p>
-</div>
 
 <h3>Como reescrever a lição sem jogar fora a imagem</h3>
 
@@ -263,7 +259,9 @@ fontes: [
   { n: 13, tipo: "enciclopédia", ref: "Wikipedia. Verbete 'Cortical homunculus', com histórico do desenho e revisões posteriores.", url: "https://en.wikipedia.org/wiki/Cortical_homunculus" },
   { n: 14, tipo: "reportagem científica", ref: "Sciety. Cobertura e avaliações públicas do preprint 'A mosaic of whole-body representations in human motor cortex'.", url: "https://sciety.org/articles/activity/10.1101/2024.09.14.613041" },
   { n: 15, tipo: "reportagem", ref: "Cobertura sobre reconstrução da organização somatotópica do trato corticoespinhal com técnicas modernas de tractografia.", url: "https://arxiv.org/pdf/2306.05623" }
-]
+],
+
+fronteira: [{"tema": "Limites do mapa somato-cognitivo", "html": "<p>A extensão exata da rede de ação somato-cognitiva e sua relação causal com controle motor voluntário versus regulação fisiológica automática são questões ainda ativas de pesquisa, sem síntese teórica final amplamente aceita. O que existe hoje é uma correção empírica bem estabelecida ao mapa clássico, não uma teoria unificada que substitua o modelo de Penfield com igual poder explicativo e pedagógico.</p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

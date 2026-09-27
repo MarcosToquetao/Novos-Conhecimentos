@@ -43,10 +43,6 @@ nucleo: { minutos: 15, html: `
 
 <p>Agora troque "altura medida duas vezes por uma fita ruim" por "desempenho real numa prova" e "desempenho que a pessoa acha que teve". A autoavaliação é uma medida barulhenta: depende de humor, de quanto a pessoa gosta de se gabar, de quão bem ela entende a própria prova, de fatores que nada têm a ver com competência real. Se você pegar quem tirou nota baixa na prova de verdade e comparar com o que essas mesmas pessoas disseram sobre si, uma parte do "elas se acharam melhores do que são" pode ser só esse mesmo efeito de régua ruim, e não um traço psicológico chamado "os incompetentes não se conhecem".</p>
 
-<div class="marca controverso">
-<span class="rot">O ponto em disputa, resumido para quem está começando</span>
-<p>Ninguém discute que o gráfico popular do Monte Estúpido é uma invenção sem base nos dados. O que está em disputa, entre pesquisadores sérios, é quanto do padrão que Kruger e Dunning mediram em 1999 reflete algo real sobre como as pessoas julgam a própria competência, e quanto é um artefato de como a comparação foi calculada e desenhada. A resposta, com base no que se sabe hoje, é: uma parte é real, mas bem menor do que a fama do efeito sugere, e uma parte considerável é artefato estatístico.</p>
-</div>
 
 <h3>Como isso deveria mudar a forma de ler manchetes de ciência do comportamento</h3>
 
@@ -132,10 +128,6 @@ extensao: { minutos: 60, html: `
 
 <p>Um ponto que se perde com frequência: mesmo nas leituras mais céticas quanto ao tamanho do efeito, a assimetria entre subestimação e superestimação tende a aparecer de novo em meta-análises sobre calibração e sobre o efeito difícil-fácil (<em>hard-easy effect</em>), descrito por Sarah Lichtenstein e Baruch Fischhoff já nos anos 1970: em tarefas difíceis, as pessoas em geral tendem à superconfiança; em tarefas fáceis, à subconfiança.<sup class="cit"><a href="#f11">11</a></sup> Isso é um fenômeno anterior e mais amplo do que o desenho específico de Kruger e Dunning, e ajuda a explicar por que uma versão modesta e assimétrica do padrão continua aparecendo mesmo em análises que eliminam a autocorrelação: pessoas com baixo desempenho estão, quase por definição, enfrentando uma tarefa que se revelou difícil para elas, o que empurra a confiança para cima por um mecanismo diferente do "déficit metacognitivo específico dos incompetentes".</p>
 
-<div class="marca controverso">
-<span class="rot">Debate em aberto</span>
-<p>Não há consenso sobre quanto do "núcleo genuíno" que sobra depois de remover o artefato de autocorrelação é, na verdade, uma manifestação do efeito difícil-fácil mais geral, e quanto é algo específico sobre competência e metacognição como Kruger e Dunning propuseram originalmente. Separar as duas coisas exigiria desenhos experimentais que ainda não foram feitos de forma definitiva, e é uma das perguntas abertas mais interessantes da área.</p>
-</div>
 
 <h3>O problema da amostra: só estudantes universitários dos Estados Unidos</h3>
 
@@ -352,5 +344,7 @@ fontes: [
   { n: 14, tipo: "vídeo", ref: "IFLScience. 'The Dunning-Kruger Effect: How Does It Affect Us, And Does It Even Exist?'. Cobertura de divulgação científica sobre a controvérsia estatística.", url: "https://www.iflscience.com/the-dunningkruger-effect-how-does-it-affect-us-and-does-it-even-exist-60281" },
   { n: 15, tipo: "notícia institucional", ref: "The Decision Lab. Verbete sobre o efeito Dunning-Kruger, com resumo do estudo original e de críticas metodológicas posteriores.", url: "https://thedecisionlab.com/biases/dunning-kruger-effect" },
   { n: 16, tipo: "documento oficial", ref: "American Psychological Association PsycNET. Registro do artigo original de Kruger e Dunning (1999) e de sua réplica de 2002 na base de dados oficial da APA.", url: "https://psycnet.apa.org/record/1999-15054-002" }
-]
+],
+
+fronteira: [{"tema": "Quanto do efeito Dunning-Kruger é real", "html": "<p>Ninguém discute que o gráfico popular do chamado Monte da Estupidez foi inventado, sem base nos dados originais. A linha de pesquisa atual tenta medir outra coisa: quanto do padrão observado por Kruger e Dunning em 1999 reflete algo real sobre como as pessoas julgam a própria competência, e quanto é consequência de como a comparação foi calculada e desenhada.</p><p>O que existe hoje é uma hipótese em disputa. Uma parte do padrão parece real, mas menor do que a fama do efeito sugere, e uma parte considerável parece ser artefato estatístico da autocorrelação entre desempenho e autoavaliação. Não há confirmação definitiva de quanto cabe a cada lado.</p>"}, {"tema": "Falta separar competência de dificuldade da tarefa", "html": "<p>Depois de descontar o artefato de autocorrelação, sobra um núcleo cuja origem ainda não está clara. Uma hipótese é que ele seja só uma manifestação do efeito difícil-fácil, que aparece em qualquer tarefa em que as pessoas ruins erram mais e por isso se superestimam mais. Outra hipótese, a de Kruger e Dunning, é que haja algo específico sobre competência e a capacidade de julgar a própria competência, a metacognição.</p><p>Separar as duas explicações exigiria desenhos experimentais que ainda não foram feitos de forma definitiva. Por isso a pergunta segue aberta, sem resposta confirmada.</p>"}],
 };

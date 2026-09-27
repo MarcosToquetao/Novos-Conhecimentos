@@ -44,7 +44,7 @@ nucleo: { minutos: 15, html: `
 
 <p>O termo alemão para o resultado é <em>Aufhebung</em>: uma palavra que, no uso comum, significa simultaneamente cancelar, preservar e elevar. Hegel explora deliberadamente essa ambiguidade. A figura seguinte cancela a anterior enquanto conserva o que ela tinha de correto, num nível mais abrangente.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Onde as traduções atrapalham</span>
 <p><em>Aufhebung</em> é traduzida em português por "suprassunção", "superação" e "supressão", e nenhuma carrega os três sentidos simultaneamente. "Superação" perde o cancelamento; "supressão" perde a conservação. Ao ler comentários sobre Hegel, vale sempre checar qual sentido o autor está privilegiando. Muitas divergências interpretativas se dissolvem quando se percebe que os intérpretes traduziram a palavra de modos diferentes.</p>
 </div>
@@ -95,10 +95,6 @@ aprofundamento: { minutos: 15, html: `
 
 <p>Nesta leitura, dizer que o espírito se realiza na história é dizer que as normas pelas quais os humanos se avaliam mutuamente são produto histórico e se transformam quando entram em contradição com a prática efetiva. Não é uma tese de metafísica pesada. É uma tese sobre a estrutura social da racionalidade.</p>
 
-<div class="marca controverso">
-<span class="rot">Disputa interpretativa em curso</span>
-<p>Essa leitura "não metafísica" é vigorosamente contestada. Críticos argumentam que ela higieniza Hegel, transformando-o num pragmatista aceitável e ignorando que a <em>Ciência da Lógica</em> faz afirmações ontológicas explícitas e ambiciosas sobre a estrutura do real. A disputa é hoje a principal fratura dos estudos hegelianos, e um leitor iniciante deveria saber que qualquer exposição segura sobre "o que Hegel realmente quis dizer" está tomando partido sem avisar.</p>
-</div>
 
 <h3>Por que o livro é tão difícil, tecnicamente</h3>
 
@@ -140,7 +136,7 @@ extensao: { minutos: 30, html: `
 
 <p><strong>Popper: historicismo e irracionalismo.</strong> Em <em>A Sociedade Aberta e seus Inimigos</em>, Popper acusa Hegel de rejeitar a lógica formal, de justificar o Estado prussiano e de fundar o totalitarismo moderno. É a crítica mais influente no mundo anglófono e a menos bem sustentada textualmente.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Sobre a crítica de Popper</span>
 <p>Historiadores da filosofia, inclusive não hegelianos, documentaram que Popper trabalhou com citações truncadas, atribuiu a Hegel posições de discípulos e ignorou o contexto de passagens políticas. A acusação de que Hegel rejeita o princípio de não contradição é insustentável: a "contradição" hegeliana é inadequação performativa, não conjunção de A e não-A. Isso não significa que Hegel esteja livre de crítica política: sua filosofia do direito tem passagens genuinamente problemáticas, e há debate sério sobre elas. Significa apenas que a versão de Popper não é uma boa fonte para saber o que Hegel disse.</p>
 </div>
@@ -161,10 +157,6 @@ extensao: { minutos: 30, html: `
 
 <p>O segundo conselho: leia com um comentário ao lado desde o início. Isso não é fraqueza: a densidade referencial do texto torna a leitura solitária improdutiva para quem não conhece o contexto de 1807. Terceiro: aceite não entender partes inteiras na primeira passagem. O próprio movimento do livro pressupõe que o leitor refaça o percurso.</p>
 
-<div class="marca especulacao">
-<span class="rot">Uma observação especulativa, marcada como tal</span>
-<p>Existe uma literatura recente que aproxima a dialética hegeliana de processos de aprendizado por correção de erro, incluindo em sistemas artificiais: um modelo com um critério interno que gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso. A analogia estrutural é sugestiva e ocasionalmente iluminadora. Mas é analogia, não continuidade histórica nem tese demonstrada. Hegel insiste que o processo é normativo e social, não algorítmico, e é precisamente aí que a comparação se rompe.</p>
-</div>
 ` }
 },
 
@@ -289,5 +281,7 @@ fontes: [
   { n: 4, tipo: "comentário", ref: "Pippin, R. <em>Hegel's Idealism: The Satisfactions of Self-Consciousness</em>. Cambridge University Press, 1989. Formulação clássica da leitura não metafísica.", url: "" },
   { n: 5, tipo: "comentário", ref: "Pinkard, T. <em>Hegel's Phenomenology: The Sociality of Reason</em>. Cambridge University Press, 1994. Comentário seção a seção, com ênfase na dimensão social das normas.", url: "" },
   { n: 6, tipo: "comentário", ref: "Houlgate, S. <em>The Hegel Reader</em> e <em>An Introduction to Hegel</em>. Blackwell. Entrada acessível que discute explicitamente as distorções mais comuns, inclusive a de Popper.", url: "" }
-]
+],
+
+fronteira: [{"tema": "O que Hegel realmente quis dizer", "html": "<p>Uma leitura influente propõe que a <em>Fenomenologia do espírito</em> não faz afirmações metafísicas sobre a estrutura da realidade. Nessa interpretação, o livro descreve apenas formas de experiência que se corrigem sozinhas.</p><p>Essa leitura é contestada. Críticos argumentam que ela transforma Hegel num pragmatista aceitável e ignora as afirmações ontológicas explícitas da <em>Ciência da Lógica</em>. A disputa é hoje uma das principais fraturas dos estudos hegelianos. Quem lê uma exposição segura sobre o assunto deve saber que ela toma partido sem avisar.</p>"}, {"tema": "Hegel e o aprendizado por erro", "html": "<p>Uma literatura recente compara a dialética hegeliana a processos de aprendizado por correção de erro, inclusive em sistemas artificiais: um modelo com critério interno gera previsões, falha, e reorganiza o critério a partir do modo específico do fracasso.</p><p>A analogia estrutural é sugestiva, mas é analogia. Não há continuidade histórica nem tese demonstrada. Hegel insiste que o processo é normativo e social, não algorítmico, e é aí que a comparação se rompe.</p>"}],
 };

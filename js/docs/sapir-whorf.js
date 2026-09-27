@@ -49,7 +49,7 @@ nucleo: { minutos: 15, html: `
 
 <figure class="figura">[[FIG:whorf-fronteira]]<figcaption>O desenho experimental e o que aconteceu depois. O resultado de 2007 tornou-se a evidência mais citada em favor da relatividade linguística. A replicação de 2020 conta outra história.</figcaption></figure>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">O achado não se replicou</span>
 <p>Um estudo publicado na <em>Cognition</em> em 2020 tentou reproduzir o efeito e <strong>não encontrou a vantagem de tempo de reação</strong> na fronteira sinij/goluboj, nem em monolíngues nem em bilíngues.<sup class="cit"><a href="#f3">3</a></sup> Os autores concluem que os "azuis russos" são menos bem estruturados do que se supunha: a fronteira mostrou-se instável e sensível a manipulações de frequência, ao contrário da fronteira azul/verde. O efeito categórico apareceu em tarefas que exigiam categorização explícita, e não em discriminação perceptiva pura.</p>
 </div>
@@ -71,10 +71,6 @@ aprofundamento: { minutos: 15, html: `
 <p>Três razões metodológicas. Primeira: o efeito aparece em tarefas não linguísticas, o que enfraquece a explicação de que é apenas estratégia verbal. Segunda: os tamanhos de efeito são grandes e comportamentalmente visíveis, não diferenças de dezenas de milissegundos. Terceira: foi replicado em populações independentes em vários continentes. Compare com o caso da cor (efeitos pequenos, dependentes de tarefa, com replicação instável) e a diferença de qualidade de evidência fica clara.</p>
 </div>
 
-<div class="marca controverso">
-<span class="rot">A objeção da direção causal</span>
-<p>Mesmo aqui, resta uma dúvida séria: a língua causa o hábito cognitivo, ou ambos derivam do ambiente e da prática cultural? Comunidades com referencial absoluto vivem tipicamente em terreno aberto com marcos geográficos estáveis, e a navegação é parte da vida diária. A língua pode ser consequência da prática, não causa do modo de pensar. Separar essas hipóteses exigiria variação natural entre língua e ecologia que raramente existe. Isso torna a inferência causal genuinamente difícil, não apenas incerta.</p>
-</div>
 
 <h3>Um efeito robusto e um caso mal contado</h3>
 
@@ -82,7 +78,7 @@ aprofundamento: { minutos: 15, html: `
 
 <p><strong>Números em pirahã.</strong> A língua pirahã, na Amazônia, teria apenas termos para "um", "dois" e "muitos", ou, segundo análise posterior, apenas termos relativos de quantidade. Peter Gordon relatou em 2004 que falantes falhavam em tarefas de correspondência exata acima de três, e o caso foi amplamente divulgado como demonstração de determinismo linguístico.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">O que esse caso realmente mostra</span>
 <p>Trabalhos posteriores complicam a leitura simples. Frank e colaboradores (2008) mostraram que os pirahã executam bem tarefas de correspondência um-a-um; o que falta é a capacidade de <em>memorizar</em> cardinalidades exatas sem rótulos: é uma tese sobre ferramentas de memória, não sobre limites do pensamento. Some-se a isso que praticamente toda a documentação da língua vem de um único pesquisador, cujas afirmações teóricas mais amplas são contestadas por outros linguistas de campo. É um caso em que a base empírica é fina demais para sustentar o peso que lhe foi atribuído.</p>
 </div>
@@ -114,7 +110,7 @@ extensao: { minutos: 30, html: `
 </table>
 </div>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Um caso instrutivo de correlação transcultural</span>
 <p>Um estudo de 2013 relatou que falantes de línguas que não marcam gramaticalmente o futuro poupam mais e cuidam melhor da saúde, e o resultado teve enorme repercussão. Reanálises posteriores mostraram que línguas não são observações independentes: elas se agrupam por famílias e por proximidade geográfica, e quando se corrige a estrutura filogenética e o parentesco cultural, a associação enfraquece drasticamente ou desaparece. É o problema de Galton, formulado na antropologia no século XIX e redescoberto periodicamente. Vale como alerta geral para qualquer correlação entre traço linguístico e comportamento agregado.</p>
 </div>
@@ -285,5 +281,7 @@ fontes: [
   { n: 5, tipo: "artigo", ref: "Frank, M. C., Everett, D. L., Fedorenko, E. &amp; Gibson, E. 'Number as a cognitive technology: evidence from Pirahã language and cognition'. <em>Cognition</em> 108(3):819–824, 2008.", url: "https://doi.org/10.1016/j.cognition.2008.04.007" },
   { n: 6, tipo: "livro", ref: "McWhorter, J. <em>The Language Hoax: Why the World Looks the Same in Any Language</em>. Oxford University Press, 2014. Crítica sistemática, útil como contraponto declarado ao entusiasmo whorfiano.", url: "" },
   { n: 7, tipo: "livro", ref: "Deutscher, G. <em>Through the Language Glass</em>. Metropolitan Books, 2010. Exposição equilibrada da história da hipótese e da evidência sobre cor e espaço.", url: "" }
-]
+],
+
+fronteira: [{"tema": "Qual causa qual", "html": "<p>Uma das dúvidas em aberto é a direção da causalidade. Comunidades que usam referencial absoluto costumam viver em terreno aberto, com marcos geográficos estáveis, e a navegação faz parte da rotina. Talvez a língua venha da prática, e não o contrário.</p><p>Separar as duas hipóteses exigiria encontrar variação natural entre língua e ambiente, o que é raro. Ainda não há dados que decidam a questão.</p>"}],
 };

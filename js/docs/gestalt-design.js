@@ -97,10 +97,6 @@ aprofundamento: { minutos: 15, html: `
 </table>
 </div>
 
-<div class="marca controverso">
-<span class="rot">Ponto controverso</span>
-<p>A disputa entre simplicidade e probabilidade tem mais de setenta anos e não foi resolvida. Há argumentos formais de que, sob certas condições, as duas fazem previsões equivalentes, o que sugere que a pergunta pode estar mal colocada. Para quem projeta interfaces isso não muda nada de prático; mas importa para não repetir como fato explicações que são hipóteses em disputa.</p>
-</div>
 
 <h3>Aplicação: diagnosticar uma tela em três passos</h3>
 
@@ -120,7 +116,7 @@ extensao: { minutos: 30, html: `
 
 <p>Tentativas formais de resolver isso existem (teoria da codificação estrutural, comprimento mínimo de descrição) e produzem previsões testáveis em domínios restritos. Mas a versão que circula em livros de design, "o cérebro prefere a forma mais simples", permanece vazia como enunciada.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Uma crítica que vale generalizar</span>
 <p>Um princípio que explica qualquer resultado possível não explica nada. Sempre que você encontrar uma "lei" formulada de modo que nenhuma observação poderia contradizê-la, essa é razão suficiente para desconfiar, independentemente da área. A pergunta diagnóstica é simples: <em>que observação, se ocorresse, mostraria que esse princípio está errado?</em> Se não houver resposta, você está diante de uma descrição disfarçada de explicação.</p>
 </div>
@@ -135,7 +131,7 @@ extensao: { minutos: 30, html: `
 
 <p><strong>O que varia mais ainda:</strong> a chamada percepção holística versus analítica. Uma literatura influente sugeria que participantes do Leste Asiático processam cenas de forma mais contextual e ocidentais de forma mais focada no objeto.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Estado atual dessa literatura</span>
 <p>Estudos originais relataram efeitos grandes. Replicações posteriores, com amostras maiores e pré-registro, encontraram efeitos consistentemente menores e às vezes ausentes. O padrão é o mesmo de várias áreas da psicologia social e cognitiva após a crise de replicação: o fenômeno provavelmente existe, mas com magnitude bem menor e mais dependente de tarefa do que os primeiros artigos sugeriam. Tratar esses achados como base para decisões de localização de produto é, hoje, difícil de sustentar.</p>
 </div>
@@ -280,5 +276,7 @@ fontes: [
   { n: 4, tipo: "livro", ref: "Ware, C. <em>Information Visualization: Perception for Design</em>. 4ª ed., Morgan Kaufmann, 2020. Tradução dos achados perceptivos em recomendações de projeto, com atenção a limites.", url: "" },
   { n: 5, tipo: "livro", ref: "Palmer, S. E. <em>Vision Science: Photons to Phenomenology</em>. MIT Press, 1999. Tratamento acadêmico de agrupamento, figura-fundo e da hierarquia entre princípios.", url: "" },
   { n: 6, tipo: "livro", ref: "Johnson, J. <em>Designing with the Mind in Mind</em>. 3ª ed., Morgan Kaufmann, 2020. Aplicação direta ao design de interface, com cuidado ao separar achado de explicação.", url: "" }
-]
+],
+
+fronteira: [{"tema": "Simplicidade contra probabilidade na leitura visual", "html": "<p>Há mais de setenta anos se discute se a leitura visual agrupa elementos pelo arranjo mais simples ou pelo mais provável. A disputa não foi resolvida. Autores mostraram que, sob certas condições, as duas explicações fazem as mesmas previsões, o que levanta a possibilidade de a pergunta estar mal colocada.<sup class=\"cit\"><a href=\"#fN\">N</a></sup></p><p>É uma hipótese em debate, não um fato estabelecido. Para quem projeta interfaces, o efeito prático é pequeno. A distinção serve para não tratar como consolidada uma explicação que segue em disputa entre pesquisadores.</p>"}],
 };

@@ -107,10 +107,6 @@ chance posterior = chance prior × razão de verossimilhança
 
 <p><strong>Posição 2: o formato é que é ruim.</strong> Gigerenzer e colaboradores mostraram que apresentar o mesmo problema em frequências naturais ("10 em 1.000") em vez de probabilidades condicionais ("1%") eleva drasticamente a taxa de acerto, inclusive entre médicos. O erro seria um artefato de representação, não da cognição.<sup class="cit"><a href="#f2">2</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">Ponto controverso</span>
-<p>As duas posições não são inteiramente incompatíveis, e o debate segue ativo há mais de trinta anos. O que é bem estabelecido: a mudança de formato produz melhora grande e replicável. O que é disputado: se isso demonstra que a cognição é "bayesiana em frequências" por adaptação evolutiva, ou apenas que reduzir a carga de memória de trabalho ajuda em qualquer tarefa. A segunda explicação é mais parcimoniosa e tem ganhado terreno.</p>
-</div>
 
 <h3>Onde isso aparece fora da medicina</h3>
 
@@ -156,7 +152,7 @@ extensao: { minutos: 30, html: `
 
 <p>Um exemplo do próprio Pearl: observar que pessoas que tomam certo remédio se recuperam mais não permite concluir que o remédio funciona, porque quem toma pode ser sistematicamente diferente de quem não toma. Bayes atualiza corretamente a crença sobre o que você <em>verá</em>; não atualiza a crença sobre o que aconteceria se você <em>mudasse</em> quem toma. Confundir os dois é a raiz de boa parte das controvérsias em epidemiologia observacional.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Onde o entusiasmo bayesiano exagera</span>
 <p>Há uma literatura crescente descrevendo o cérebro como um "motor de inferência bayesiana". As versões fortes dessa tese (de que o córtex implementa literalmente atualização bayesiana ótima) são difíceis de falsear: com liberdade suficiente na escolha do prior e da função de custo, quase qualquer comportamento pode ser reescrito como "bayesiano ótimo em relação a algum prior". Uma teoria que acomoda qualquer observação não está fazendo previsões arriscadas. As versões fracas (o cérebro combina expectativa e evidência de forma sensível à confiabilidade de cada uma) têm apoio experimental sólido em integração multissensorial.</p>
 </div>
@@ -285,5 +281,7 @@ fontes: [
   { n: 4, tipo: "artigo", ref: "Ioannidis, J. P. A. 'Why most published research findings are false'. <em>PLoS Medicine</em> 2(8):e124, 2005.", url: "https://doi.org/10.1371/journal.pmed.0020124" },
   { n: 5, tipo: "livro", ref: "Pearl, J. &amp; Mackenzie, D. <em>The Book of Why: The New Science of Cause and Effect</em>. Basic Books, 2018. A escada da causalidade e os limites da inferência associativa.", url: "" },
   { n: 6, tipo: "livro", ref: "McGrayne, S. B. <em>The Theory That Would Not Die</em>. Yale University Press, 2011. História do teorema, de Bayes e Laplace a Turing e à estatística contemporânea.", url: "" }
-]
+],
+
+fronteira: [{"tema": "Reformatação de problemas e o debate sobre a mente bayesiana", "html": "<p>Mudar o formato de um problema de probabilidade, apresentando-o em frequências em vez de porcentagens, melhora muito o desempenho das pessoas, e esse efeito é replicável. A explicação para isso ainda é debatida. Uma hipótese defende que a cognição é <sup class=\"cit\"><a href=\"#fN\">N</a></sup></p>"}],
 };

@@ -39,10 +39,6 @@ nucleo: { minutos: 15, html: `
 
 <p>Outro estudo, de 2013, tentou medir diretamente o quanto os cervos realmente encontravam lobos no dia a dia. Mesmo nas áreas de maior risco, um cervo cruzava com um lobo a uma distância de risco em média uma vez a cada nove dias. E, apesar de uma variação de 20 vezes na frequência desses encontros entre indivíduos, isso não tinha relação nenhuma com a quantidade de gordura corporal ou com a taxa de gravidez dos cervos.<sup class="cit"><a href="#f6">6</a></sup> Se o medo dos lobos estivesse mudando a fisiologia dos cervos na escala que a história popular sugere, esperaria-se ver esse efeito, e ele não apareceu.</p>
 
-<div class="marca controverso">
-<span class="rot">O que está em disputa</span>
-<p>Ninguém discute que lobos voltaram a Yellowstone em 1995 e 1996, que a população de cervos-canadenses caiu bastante desde então, e que em algumas áreas a vegetação ribeirinha (salgueiros, choupos-tremedores) se recuperou. O que está em disputa, entre ecólogos que estudam o mesmo parque com métodos diferentes, é o mecanismo (foi o medo mudando o comportamento dos cervos, ou simplesmente menos cervos no total?) e principalmente a magnitude: o quanto essa recuperação de fato aconteceu, e se ela é tão grande quanto os artigos mais citados afirmam.</p>
-</div>
 
 <h3>O que realmente parece ter acontecido</h3>
 
@@ -106,10 +102,6 @@ extensao: { minutos: 60, html: `
 
 <p>Ao mesmo tempo, um estudo separado, com dados de 20 anos (2001 a 2020) sobre o volume de copa dos salgueiros ribeirinhos, relatou um aumento médio de aproximadamente 1.500% no volume de copa, com uma razão logarítmica (log10) de 1,21, valor que os autores compararam a uma meta-análise global de cascatas tróficas em vários ecossistemas do planeta, posicionando Yellowstone entre os 18% mais fortes do mundo em magnitude de cascata.<sup class="cit"><a href="#f12">12</a></sup> Outro grupo de pesquisadores publicou um comentário argumentando que a evidência sustenta a existência de uma cascata trófica em Yellowstone, mas não sustenta a magnitude relatada, apontando problemas de análise estatística semelhantes aos do caso dos choupos.<sup class="cit"><a href="#f13">13</a></sup></p>
 
-<div class="marca controverso">
-<span class="rot">Por que registrar uma disputa sem resolução</span>
-<p>Duas equipes de ecólogos respeitados, estudando o mesmo parque com dados em parte sobrepostos, chegaram a estimativas de magnitude que diferem por um fator de quase dez (152 vezes contra 17,5 vezes, no caso dos choupos). Isso não significa que um lado está mentindo. Mostra como decisões de análise estatística, aparentemente técnicas (como contar uma medição repetida do mesmo local, ou como calcular uma linha de base), podem mudar drasticamente o tamanho de um efeito relatado. A pessoa que só assistiu ao vídeo de 2014 não tem como saber que esse debate de magnitude segue em aberto onze anos depois.</p>
-</div>
 
 <h3>Por que a versão popular resiste tão bem</h3>
 
@@ -316,7 +308,9 @@ fontes: [
   { n: 15, tipo: "notícia institucional", ref: "Oregon State University Newsroom. 'Yellowstone transformed 15 years after the return of wolves', sobre o trabalho de Ripple e Beschta.", url: "https://news.oregonstate.edu/news/yellowstone-transformed-15-years-after-return-wolves" },
   { n: 16, tipo: "reportagem", ref: "Science.org. 'Predation, not fear of wolves, keeps elk from denuding Yellowstone', cobertura do estudo de Brice, Larsen, Stahler e MacNulty (2024).", url: "https://www.science.org/content/article/predation-not-fear-wolves-keeps-elk-denuding-yellowstone" },
   { n: 17, tipo: "fonte primária", ref: "'History and Status of Wild Ungulate Populations on the Northern Yellowstone Range'. Síntese de censos oficiais de inverno da população de cervos-canadenses, incluindo a contagem de 19.045 em 1994 e a mínima de 3.915 em 2013.", url: "https://www.sciencedirect.com/science/article/pii/S0190052818300750" }
-]
+],
+
+fronteira: [{"tema": "Cascata trófica em Yellowstone", "html": "<p>Em 1995 e 1996, lobos foram reintroduzidos no Parque Nacional de Yellowstone, nos Estados Unidos. Desde então, a população de cervos-canadenses caiu e, em algumas áreas, a vegetação ribeirinha se recuperou, com salgueiros e choupos-tremedores voltando a crescer. O que ainda está em aberto é o mecanismo por trás dessa recuperação: ecólogos discutem se o medo dos cervos alterou o comportamento deles ou se a simples redução no número de cervos explica o efeito.<sup class=\"cit\"><a href=\"#fN\">N</a></sup></p><p>Além disso, a magnitude da recuperação da vegetação é incerta. Estudos com métodos diferentes chegam a estimativas que variam bastante, e não há consenso sobre o quão grande foi a mudança. Ainda não é possível afirmar qual mecanismo predomina nem o tamanho exato do efeito.</p>"}, {"tema": "Disputa sobre a magnitude do efeito", "html": "<p>Duas equipes de ecólogos que estudam o mesmo parque com dados em parte sobrepostos chegaram a estimativas de magnitude que diferem por um fator de quase dez para os choupos-tremedores: 152 vezes contra 17,5 vezes.<sup class=\"cit\"><a href=\"#fN\">N</a></sup> A diferença não significa que um lado está errado, mas mostra como decisões de análise estatística, como contar uma medição repetida do mesmo local ou calcular uma linha de base, podem alterar drasticamente o tamanho do efeito relatado.</p><p>Esse debate de magnitude continua em aberto mais de uma década depois da reintrodução dos lobos. Ainda não há uma resposta definitiva sobre o quão grande foi a recuperação da vegetação ribeirinha.</p>"}],
 };
 
 if (typeof module !== "undefined") { module.exports = { CONTEUDOS }; }

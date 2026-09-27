@@ -33,7 +33,7 @@ nucleo: { minutos: 15, html: `
 
 <p>Essa descoberta abriu uma linha de pesquisa clínica real: em vez de bloquear totalmente a síntese de proteínas (algo inviável e perigoso em humanos), pesquisadores testaram um remédio já aprovado e seguro, o propranolol (um beta-bloqueador usado normalmente para pressão alta e ansiedade), administrado logo antes de a pessoa reativar deliberadamente uma memória traumática, em sessões terapêuticas estruturadas. A ideia: interferir especificamente na reconsolidação da carga emocional daquela memória, sem apagar o conteúdo factual dela.<sup class="cit"><a href="#f4">4</a></sup></p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">O que a mídia costuma exagerar</span>
 <p>Manchetes sobre esse tipo de tratamento costumam usar a expressão "remédio que apaga memórias". Isso é impreciso de um jeito importante: as pessoas tratadas continuam lembrando dos fatos do que aconteceu. O que muda, segundo os próprios pesquisadores da área, é a intensidade da resposta emocional e fisiológica associada à lembrança (o medo, a angústia, os sintomas de ansiedade ao recordar), não a existência da lembrança factual em si.<sup class="cit"><a href="#f5">5</a></sup></p>
 </div>

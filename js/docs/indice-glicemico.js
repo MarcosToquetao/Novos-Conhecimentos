@@ -65,7 +65,7 @@ CG = IG × (gramas de carboidrato na porção) ÷ 100
 
 <p>A conclusão dos autores foi direta: o índice glicêmico tem utilidade limitada como ferramenta para prever o efeito de um alimento sobre a glicemia, e é impraticável para rotulagem ou para diretrizes no nível individual.</p>
 
-<div class="marca controverso">
+<div class="marca consenso">
 <span class="rot">Como ler esse resultado com precisão</span>
 <p>Isso não significa que o índice glicêmico seja uma invenção sem base. O conceito subjacente, segundo o qual alimentos diferem na velocidade de digestão e absorção, é fisiologicamente correto e bem estabelecido. O que o estudo mostra é que a <em>medida</em> tem ruído da mesma ordem de grandeza que o <em>sinal</em> que se quer detectar. Uma quantidade com essa relação sinal-ruído pode ser útil para comparar categorias amplas de alimentos e é inadequada para decidir entre dois itens específicos.</p>
 </div>
@@ -100,10 +100,6 @@ aprofundamento: { minutos: 15, html: `
 
 <p>O modelo previa respostas glicêmicas individuais melhor que a contagem de carboidratos, e uma intervenção-piloto com dietas personalizadas mostrou melhora em relação a dietas convencionais. O trabalho é frequentemente citado como fundação da nutrição de precisão. Deu origem, ainda, a uma indústria de serviços comerciais baseados em sensores contínuos de glicose.</p>
 
-<div class="marca controverso">
-<span class="rot">A crítica metodológica é séria</span>
-<p>Uma crítica publicada no <em>AJCN</em> em 2024, sob o título "garbage in → garbage out", questiona a base do empreendimento a partir de um achado específico: Hengist e colaboradores mostraram que sensores contínuos de glicose fornecem respostas <strong>não confiáveis a refeições idênticas apresentadas em duplicata</strong> em adultos sem diabetes.<sup class="cit"><a href="#f4">4</a></sup> Se o instrumento de medida não reproduz o próprio resultado com a mesma refeição na mesma pessoa, um modelo treinado sobre esses dados está aprendendo, em parte, ruído. O argumento não refuta a ideia de personalização, mas coloca um ônus de prova sobre quem vende produtos baseados nela.</p>
-</div>
 
 <h3>O que os ensaios clínicos mostram</h3>
 
@@ -303,5 +299,7 @@ fontes: [
   { n: 4, tipo: "artigo", ref: "'Personalized nutrition by prediction of glycemic responses: garbage in → garbage out'. <em>American Journal of Clinical Nutrition</em>, 2024, crítica baseada na baixa reprodutibilidade de sensores contínuos em refeições duplicadas (Hengist et al.).", url: "https://pubmed.ncbi.nlm.nih.gov/39755431/" },
   { n: 5, tipo: "artigo", ref: "Hengist, A. et al. 'Imprecision nutrition? Intraindividual variability of glucose responses to duplicate presented meals in adults without diabetes'. <em>American Journal of Clinical Nutrition</em>, 2024.", url: "https://ajcn.nutrition.org/article/S0002-9165(24)00814-1/abstract" },
   { n: 6, tipo: "crítica", ref: "Wolever, T. M. S. 'Personalized nutrition by prediction of glycaemic responses: fact or fantasy?'. <em>European Journal of Clinical Nutrition</em> 70:411-413, 2016.", url: "https://www.nature.com/articles/ejcn201631" }
-]
+],
+
+fronteira: [{"tema": "A confiabilidade dos sensores de glicose", "html": "<p>Uma crítica publicada no <em>AJCN</em> em 2024 questiona a base dos modelos que relacionam refeições a respostas glicêmicas. O ponto de partida é um achado específico: sensores contínuos de glicose deram respostas não confiáveis a refeições idênticas apresentadas em duplicata em adultos sem diabetes.<sup class=\"cit\"><a href=\"#f4\">4</a></sup></p><p>Ainda é uma linha de pesquisa em disputa. Se o instrumento não reproduz o próprio resultado com a mesma refeição na mesma pessoa, um modelo treinado sobre esses dados aprende em parte ruído. A crítica não derruba a ideia de personalização, mas coloca um ônus de prova sobre quem vende produtos baseados nela.</p>"}],
 };
