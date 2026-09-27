@@ -123,9 +123,9 @@ Cada conceito é uma ficha de biblioteca.
   - a leitura é editorial e plana.
 - **Não voltar ao que o usuário rejeitou:** o azulejo arredondado, a pílula, o hero centralizado e o painel de «número grande + rótulo».
 
-## Métricas (pendente do usuário)
+## Métricas
 
-Em `js/app.js`, `GOATCOUNTER` e `FORMULARIO` estão vazios. O usuário precisa criar a conta no goatcounter.com e o Google Form. Os eventos já disparam: `primeira-visita`, `voltou-dia-N`, `licao-iniciada`, `licao-concluida`, `compartilhou`, `aprofundou`, `mais-uma-ficha`.
+Ligadas desde 27/09/2026. Painel: https://novosconhecimentos.goatcounter.com. Formulário: https://forms.gle/D3anJ3VayYxtWMzz6 (botão na tela de resultado). Eventos: `primeira-visita`, `voltou-dia-N`, `licao-iniciada`, `licao-concluida`, `compartilhou`, `aprofundou`, `mais-uma-ficha`.
 
 ## Validação antes de dar por terminado
 

@@ -7,8 +7,8 @@
 
 /* Métricas e feedback: preencha para ligar. GOATCOUNTER é o endereço do seu
    site no goatcounter.com (ex.: "https://novosconhecimentos.goatcounter.com/count"). */
-const GOATCOUNTER = "";
-const FORMULARIO = "";
+const GOATCOUNTER = "https://novosconhecimentos.goatcounter.com/count";
+const FORMULARIO = "https://forms.gle/D3anJ3VayYxtWMzz6";
 const INICIO = Date.UTC(2026, 8, 1);   /* dia da ficha nº 1 */
 
 /* ── Estado persistente ────────────────────────────────────────────── */
