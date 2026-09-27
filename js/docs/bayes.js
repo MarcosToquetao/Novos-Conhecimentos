@@ -283,5 +283,5 @@ fontes: [
   { n: 6, tipo: "livro", ref: "McGrayne, S. B. <em>The Theory That Would Not Die</em>. Yale University Press, 2011. História do teorema, de Bayes e Laplace a Turing e à estatística contemporânea.", url: "" }
 ],
 
-fronteira: [{"tema": "Reformatação de problemas e o debate sobre a mente bayesiana", "html": "<p>Mudar o formato de um problema de probabilidade, apresentando-o em frequências em vez de porcentagens, melhora muito o desempenho das pessoas, e esse efeito é replicável. A explicação para isso ainda é debatida. Uma hipótese defende que a cognição é <sup class=\"cit\"><a href=\"#fN\">N</a></sup></p>"}],
+fronteira: [{"tema": "Reformatação de problemas e o debate sobre a mente bayesiana", "html": "<p>Mudar o formato de um problema de probabilidade, apresentando-o em frequências em vez de porcentagens, melhora muito o desempenho das pessoas, e esse efeito é replicável. A explicação para isso ainda é debatida. Uma hipótese diz que a mente humana se adaptou a raciocinar com contagens de casos. Outra, mais simples, diz que o formato em frequências só reduz a carga sobre a memória de trabalho, e essa segunda explicação tem ganhado terreno.</p>"}],
 };

@@ -57,6 +57,7 @@ function validar(id, d) {
 
   const fontes = new Set((d.fontes || []).map(f => f.n));
   const texto = Object.values(d.camadas || {}).map(c => c.html || "").join("");
+  if (/#f[^0-9]/.test(texto + JSON.stringify(d.fronteira || []))) e("citação sem número (href=\"#f...\" sem dígito)");
   for (const m of texto.matchAll(/href="#f(\d+)"/g)) if (!fontes.has(+m[1])) e(`citação [${m[1]}] sem fonte correspondente`);
   for (const m of texto.matchAll(/\[\[FIG:([a-z0-9\-]+)\]\]/g)) if (!FIGURAS[m[1]]) e(`figura ${m[1]} não existe em figuras.js`);
 

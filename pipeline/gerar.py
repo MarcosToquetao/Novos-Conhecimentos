@@ -594,7 +594,7 @@ def fronteira(id_, seco=False):
         sistema = estilo() + "\n\n## Tarefa\n\nReescreva cada trecho em aberto de um documento de estudo como item independente da seção " \
             "«Onde a ciência ainda pesquisa». Cada item: tema (título curto, só a primeira letra maiúscula) e html (um ou dois parágrafos <p>). " \
             "Deixe claro no próprio texto que é linha de pesquisa, hipótese ou dado sem confirmação, e qual evidência existe hoje. " \
-            "Mantenha exatamente as marcações <sup class=\"cit\"><a href=\"#fN\">N</a></sup> que aparecem no trecho. Não invente fonte nem dado. " \
+            "Copie sem mudar as marcações de citação <sup class=\"cit\">...</sup> que aparecem no trecho, com o mesmo número. Não crie citação nova, não invente fonte nem dado. " \
             'Responda somente com json: {"itens": [{"tema": "...", "html": "<p>...</p>"}]}, um item por trecho, na mesma ordem.'
         usuario = f"Conceito: {doc['termo']} ({doc['area']})\n\n" + "\n\n".join(f"Trecho {i + 1}:\n{t.strip()}" for i, t in enumerate(abertas))
         saida, _ = deepseek(FLASH, sistema, usuario, "fronteira", id_, max_tokens=6000)
@@ -603,6 +603,8 @@ def fronteira(id_, seco=False):
         for k, it in enumerate(itens):
             checar_texto(f"item {k + 1}", it.get("tema", "") + " " + it.get("html", ""), erros)
             erros += [f"item {k + 1}: fonte {n} inexistente" for n in re.findall(r'href="#f(\d+)"', it.get("html", "")) if int(n) not in fontes]
+            if re.search(r'href="#f\D', it.get("html", "")):
+                erros.append(f"item {k + 1}: citação sem número")
         if erros or len(itens) != len(abertas):
             print(f"  não apliquei: {len(itens)} itens para {len(abertas)} trechos; {erros}")
             return
