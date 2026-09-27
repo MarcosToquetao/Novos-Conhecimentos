@@ -1,0 +1,43 @@
+{"id": "nnt-risco", "quando": "2026-09-27T16:14:35", "resultado": "barrado", "notas": ["prova: números que não aparecem no documento: 50, 200"], "usd": 0.01339}
+{"id": "maillard", "quando": "2026-09-27T16:14:36", "resultado": "barrado", "notas": ["prova: números que não aparecem no documento: 80, 120, 200"], "usd": 0.01021}
+{"id": "nnt-risco", "quando": "2026-09-27T16:16:12", "resultado": "barrado", "notas": ["nucleo: números que não aparecem no dossiê: 200", "conexão 3: estrutura «não é X, mas Y»"], "usd": 0.00797}
+{"id": "maillard", "quando": "2026-09-27T16:16:17", "resultado": "publicado", "notas": [], "usd": 0.00833}
+{"id": "mera-exposicao", "quando": "2026-09-27T16:17:45", "resultado": "publicado", "notas": ["2 questão(ões) cortadas por gabarito discutível"], "usd": 0.00858}
+{"id": "lacos-fracos", "quando": "2026-09-27T16:17:46", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00486}
+{"id": "bauhaus", "quando": "2026-09-27T16:17:47", "resultado": "publicado", "notas": ["3 questão(ões) cortadas por gabarito discutível"], "usd": 0.00991}
+{"id": "perspectiva-renascimento", "quando": "2026-09-27T16:17:53", "resultado": "barrado", "notas": ["aprofundamento: estrutura «não é X, mas Y»"], "usd": 0.01198}
+{"id": "realismo-magico", "quando": "2026-09-27T16:17:56", "resultado": "barrado", "notas": ["aprofundamento: estrutura «não é X, mas Y»"], "usd": 0.01225}
+{"id": "habeas-corpus", "quando": "2026-09-27T16:18:09", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.01555}
+{"id": "simpson-paradoxo", "quando": "2026-09-27T16:18:29", "resultado": "publicado", "notas": [], "usd": 0.0064}
+{"id": "overfitting", "quando": "2026-09-27T16:18:35", "resultado": "publicado", "notas": ["2 questão(ões) cortadas por gabarito discutível"], "usd": 0.01027}
+{"id": "efeito-rede", "quando": "2026-09-27T16:18:36", "resultado": "publicado", "notas": [], "usd": 0.01155}
+{"id": "nnt-risco", "quando": "2026-09-27T16:18:39", "resultado": "barrado", "notas": ["aprofundamento: números que não aparecem no dossiê: 50, 100, 200", "extensao: números que não aparecem no dossiê: 100"], "usd": 0.01068}
+{"id": "regressao-media", "quando": "2026-09-27T16:19:04", "resultado": "publicado", "notas": [], "usd": 0.01379}
+{"id": "el-nino", "quando": "2026-09-27T16:19:10", "resultado": "publicado", "notas": ["2 questão(ões) cortadas por gabarito discutível"], "usd": 0.00963}
+{"id": "tectonica-placas", "quando": "2026-09-27T16:19:25", "resultado": "publicado", "notas": [], "usd": 0.01366}
+{"id": "peste-negra", "quando": "2026-09-27T16:19:31", "resultado": "barrado", "notas": ["nucleo: números que não aparecem no dossiê: 130"], "usd": 0.01248}
+{"id": "trocas-colombianas", "quando": "2026-09-27T16:19:42", "resultado": "publicado", "notas": [], "usd": 0.01291}
+{"id": "imprensa-gutenberg", "quando": "2026-09-27T16:19:57", "resultado": "publicado", "notas": [], "usd": 0.01688}
+{"id": "endossimbiose", "quando": "2026-09-27T16:20:01", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.01186}
+{"id": "tardigrados", "quando": "2026-09-27T16:20:10", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00837}
+{"id": "consonancia-dissonancia-fisica", "quando": "2026-09-27T16:20:21", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00632}
+{"id": "convergencia-evolutiva", "quando": "2026-09-27T16:20:24", "resultado": "barrado", "notas": ["fronteira 2: expressão proibida «mas também»"], "usd": 0.0124}
+{"id": "relogio-circadiano", "quando": "2026-09-27T16:20:38", "resultado": "publicado", "notas": [], "usd": 0.01454}
+{"id": "gerrymandering", "quando": "2026-09-27T16:20:48", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00928}
+{"id": "haber-bosch", "quando": "2026-09-27T16:21:11", "resultado": "publicado", "notas": [], "usd": 0.01214}
+{"id": "problema-monty-hall", "quando": "2026-09-27T16:21:20", "resultado": "barrado", "notas": ["aprofundamento: números que não aparecem no dossiê: 30, 31, 61"], "usd": 0.01257}
+{"id": "criptografia-assimetrica", "quando": "2026-09-27T16:21:21", "resultado": "barrado", "notas": ["prova: expressão proibida «mas também»"], "usd": 0.01556}
+{"id": "efeito-doppler", "quando": "2026-09-27T16:21:28", "resultado": "barrado", "notas": ["aprofundamento: estrutura «não é X, mas Y»"], "usd": 0.01135}
+{"id": "lentes-gravitacionais", "quando": "2026-09-27T16:21:34", "resultado": "publicado", "notas": [], "usd": 0.0104}
+{"id": "acidificacao-oceanos", "quando": "2026-09-27T16:21:45", "resultado": "publicado", "notas": ["4 questão(ões) cortadas por gabarito discutível"], "usd": 0.01801}
+{"id": "efeito-teste", "quando": "2026-09-27T16:22:03", "resultado": "publicado", "notas": ["2 questão(ões) cortadas por gabarito discutível"], "usd": 0.01011}
+{"id": "realismo-magico", "quando": "2026-09-27T16:24:07", "resultado": "barrado", "notas": ["JEV: núcleo com risco de não ter respaldo ({'emergente': 0, 'controverso': 0.37, 'estabelecido': 0.62, 'especulativo': 0.01})"], "usd": 0.00267}
+{"id": "efeito-doppler", "quando": "2026-09-27T16:24:08", "resultado": "publicado", "notas": [], "usd": 0.0026}
+{"id": "perspectiva-renascimento", "quando": "2026-09-27T16:24:08", "resultado": "publicado", "notas": ["2 questão(ões) cortadas por gabarito discutível"], "usd": 0.00266}
+{"id": "peste-negra", "quando": "2026-09-27T16:24:09", "resultado": "publicado", "notas": ["2 questão(ões) cortadas por gabarito discutível"], "usd": 0.00278}
+{"id": "nnt-risco", "quando": "2026-09-27T16:24:17", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00518}
+{"id": "problema-monty-hall", "quando": "2026-09-27T16:24:23", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00288}
+{"id": "convergencia-evolutiva", "quando": "2026-09-27T16:24:24", "resultado": "barrado", "notas": ["síntese: expressão proibida «mas também»", "prova: expressão proibida «mas também»"], "usd": 0.00675}
+{"id": "criptografia-assimetrica", "quando": "2026-09-27T16:24:57", "resultado": "publicado", "notas": [], "usd": 0.00484}
+{"id": "convergencia-evolutiva", "quando": "2026-09-27T16:26:00", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.00826}
+{"id": "ilhas-calor-urbanas", "quando": "2026-09-27T16:26:24", "resultado": "publicado", "notas": ["1 questão(ões) cortadas por gabarito discutível"], "usd": 0.01515}

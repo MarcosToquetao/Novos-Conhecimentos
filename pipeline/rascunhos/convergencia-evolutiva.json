@@ -1,0 +1,265 @@
+{
+ "id": "convergencia-evolutiva",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:29:37",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "O olho do polvo e o olho humano têm lentes, íris e retina que formam imagens nítidas. Mas seus últimos ancestrais comuns tinham, no máximo, uma mancha fotossensível.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Isso é convergência evolutiva: linhagens diferentes chegam à mesma solução de forma independente. O olho tipo câmera surgiu uma vez no ramo dos moluscos e outra no ramo dos vertebrados.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Análogas",
+    "b": "Homólogas",
+    "linhas": [
+     {
+      "aspecto": "Função",
+      "a": "a mesma",
+      "b": "pode ser diferente"
+     },
+     {
+      "aspecto": "Origem",
+      "a": "distinta",
+      "b": "compartilhada"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "asas de morcegos e aves",
+      "b": "ossos dos membros anteriores"
+     }
+    ],
+    "legenda": "Semelhança de função não indica parentesco próximo."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Pressão parecida",
+      "texto": "Ambientes ou modos de vida semelhantes impõem desafios semelhantes."
+     },
+     {
+      "nome": "Variação",
+      "texto": "Mutações surgem ao acaso nas linhagens."
+     },
+     {
+      "nome": "Seleção",
+      "texto": "Mutações vantajosas se espalham."
+     },
+     {
+      "nome": "Mesma solução",
+      "texto": "Linhagens distintas chegam a soluções funcionais equivalentes."
+     }
+    ],
+    "legenda": "A seleção natural canaliza a variação para resultados parecidos.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Golfinhos e ictiossauros têm corpo fusiforme e nadadeiras. O que isso indica?",
+    "alts": [
+     "Descendem de um ancestral aquático comum",
+     "São parentes próximos que herdaram a forma do corpo",
+     "Linhagens distintas convergiram para a mesma solução hidrodinâmica"
+    ],
+    "correta": 2,
+    "porque": "Golfinhos são mamíferos com ancestrais terrestres; ictiossauros eram répteis. As nadadeiras surgiram de órgãos diferentes."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Reconstruir a filogenia",
+      "texto": "Assume-se inicialmente que não houve convergência, traçando o parentesco."
+     },
+     {
+      "nome": "Comparar semelhança com distância",
+      "texto": "Se parentes distantes são muito parecidos num caráter, isso sugere convergência."
+     },
+     {
+      "nome": "Separar convergência de estase",
+      "texto": "Métodos quantificam a força da convergência e descartam estagnação evolutiva."
+     }
+    ],
+    "legenda": "Como os cientistas detectam convergência evolutiva.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Cracas e lapas se parecem, mas cracas são crustáceos e lapas são moluscos. Como os cientistas sabem?",
+    "alts": [
+     "Reconstroem a filogenia e comparam semelhança com parentesco",
+     "Observam qual delas vive em água doce",
+     "Medem o tamanho do corpo"
+    ],
+    "correta": 0,
+    "porque": "A filogenia mostra que cracas são mais próximas de lagostas, apesar da aparência."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Café",
+    "b": "Chá",
+    "linhas": [
+     {
+      "aspecto": "Origem da cafeína",
+      "a": "genes NMT por duplicação",
+      "b": "genes NMT por duplicação"
+     },
+     {
+      "aspecto": "Parentesco genético",
+      "a": "não relacionado ao cacau",
+      "b": "não relacionado ao cacau"
+     }
+    ],
+    "legenda": "A cafeína surgiu independentemente em café, cacau e chá.",
+    "marca": "consenso",
+    "fonte": 4
+   }
+  ],
+  "fecho": "Se a convergência mostra que ambientes parecidos moldam soluções parecidas, o que isso diz sobre o quanto a evolução é previsível? Isso conecta com a seleção natural e com os limites impostos pela física e pelo desenvolvimento."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 3: soa como IA (0.70)",
+  "tela 5: soa como IA (0.61)",
+  "tela 7: soa como IA (0.54)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.99,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.04,
+    "3": 0.93,
+    "4": 0.03
+   },
+   "confidence": 0.94
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "controverso": 0.03,
+    "especulacao": 0,
+    "consenso": 0.96
+   },
+   "confidence": 0.95
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.7
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 0.99
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.61
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.06,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 0.9400000000000001
+   },
+   "confidence": 0.91
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.88
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.2,
+    "controverso": 0.06,
+    "especulacao": 0.02,
+    "consenso": 0.72
+   },
+   "confidence": 0.63
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.88
+  }
+ },
+ "custo_usd": 0.00684
+}

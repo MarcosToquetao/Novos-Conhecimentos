@@ -1,0 +1,285 @@
+{
+ "id": "efeito-rede",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:10",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Um telefone sozinho no mundo não serve para nada. Com dois, já dá para conversar. Com milhões, o aparelho vira ferramenta essencial. O valor de cada telefone depende de quantos outros telefones existem.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Esse é o <strong>efeito de rede</strong>: o quanto um produto vale para você aumenta conforme mais gente usa o mesmo produto ou algo compatível.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Efeito direto",
+    "b": "Efeito indireto",
+    "linhas": [
+     {
+      "aspecto": "O que cresce",
+      "a": "usuários do mesmo produto",
+      "b": "um grupo complementar"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "telefone, WhatsApp",
+      "b": "sistema operacional e desenvolvedores"
+     },
+     {
+      "aspecto": "Como funciona",
+      "a": "mais gente usa, mais valor para todos",
+      "b": "mais usuários atraem mais softwares, que atraem mais usuários"
+     }
+    ],
+    "legenda": "Os dois tipos de efeito de rede.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Poucos usuários",
+      "texto": "Ninguém quer ser o primeiro a adotar algo que só será útil quando muitos usarem."
+     },
+     {
+      "nome": "Massa crítica",
+      "texto": "O valor obtido passa a ser maior ou igual ao preço pago."
+     },
+     {
+      "nome": "Ciclo de feedback",
+      "texto": "Cada novo usuário torna o produto mais atraente, atraindo mais usuários."
+     },
+     {
+      "nome": "Mercado dominado",
+      "texto": "O ciclo pode levar a um mercado dominado por um único produto, ou mesmo a um monopólio."
+     }
+    ],
+    "legenda": "O caminho até o domínio de mercado não é automático.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que é massa crítica num produto com efeito de rede?",
+    "alts": [
+     "O número de usuários a partir do qual o valor supera o preço pago",
+     "O número máximo de usuários que a rede suporta",
+     "O momento em que a empresa começa a lucrar"
+    ],
+    "correta": 0,
+    "porque": "A massa crítica é o ponto em que o valor da rede passa a compensar o custo. A partir daí o ciclo se retroalimenta."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o teclado QWERTY continua sendo usado se não é o desenho mais eficiente?",
+    "alts": [
+     "Porque as pessoas não sabem digitar em outro teclado",
+     "Porque se estabeleceu cedo e o custo de trocar é alto",
+     "Porque é exigido por lei"
+    ],
+    "correta": 1,
+    "porque": "As expectativas se confirmam sozinhas e podem trancar o mercado num produto que não é necessariamente o melhor."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um mercado com efeitos de rede sempre acaba em monopólio?",
+    "alts": [
+     "Sim, porque a rede maior sempre vence",
+     "Não, depende de três condições: utilidade da rede superar a diferenciação, alto custo de adotar mais de uma rede e alto custo de trocar de rede",
+     "Sim, mas só em setores de tecnologia"
+    ],
+    "correta": 1,
+    "porque": "Se alguma dessas condições falhar, vários produtos podem coexistir, como no mercado de mensagens instantâneas nos Estados Unidos."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Medir a força de uma rede exige separar duas coisas: o tamanho da base instalada e o impacto de um usuário adicional sobre a demanda. Um estudo com videogames mostrou que esse impacto pode ser assimétrico: a Nintendo tinha efeito de rede mais forte por usuário, mesmo com base menor.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "comparar",
+    "a": "Base instalada",
+    "b": "Força da rede",
+    "linhas": [
+     {
+      "aspecto": "O que é",
+      "a": "número de usuários que já adotaram o produto",
+      "b": "impacto de um usuário adicional sobre a demanda"
+     },
+     {
+      "aspecto": "Exemplo no estudo de videogames",
+      "a": "Nintendo tinha base de clientes menor que a Sega",
+      "b": "Nintendo tinha efeito de rede mais forte por usuário adicional"
+     },
+     {
+      "aspecto": "Por que importa",
+      "a": "mostra o tamanho atual da rede",
+      "b": "mostra o potencial de crescimento"
+     }
+    ],
+    "legenda": "Separar tamanho de força ajuda a medir efeitos de rede.",
+    "marca": "consenso",
+    "fonte": 3
+   }
+  ],
+  "fecho": "Como a estrutura da rede social muda a velocidade com que uma inovação se espalha? Isso tem nome: difusão de inovações."
+ },
+ "erros": [
+  "só 3 telas visuais de 8 (pelo menos metade)"
+ ],
+ "avisos": [
+  "tela 5: duas perguntas seguidas",
+  "tela 6: duas perguntas seguidas",
+  "tela 7: 50 palavras (máximo 40)"
+ ],
+ "alertas_jev": [
+  "tela 3: soa como IA (0.56)",
+  "tela 7: marcada consenso, JEV diz emergente (0.70)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.81,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.19,
+    "3": 0.8,
+    "4": 0
+   },
+   "confidence": 0.83
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0.01,
+    "consenso": 0.99,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0.01,
+    "consenso": 0.99,
+    "controverso": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.08,
+    "emergente": 0.15,
+    "consenso": 0.64,
+    "controverso": 0.13
+   },
+   "confidence": 0.52
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.84
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.07,
+    "emergente": 0.7,
+    "consenso": 0.12,
+    "controverso": 0.11
+   },
+   "confidence": 0.6
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.05,
+    "emergente": 0.49,
+    "consenso": 0.39,
+    "controverso": 0.07
+   },
+   "confidence": 0.34
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.94
+  }
+ },
+ "custo_usd": 0.00861
+}

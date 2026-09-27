@@ -1,0 +1,321 @@
+{
+ "id": "haber-bosch",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:28:34",
+ "modelo": "deepseek-flash",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "O ar que você respira é 78% nitrogênio. Mesmo assim, quase metade do nitrogênio no seu corpo passou por uma fábrica antes de chegar até você.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Os dois átomos de nitrogênio do ar são unidos por uma ligação tripla muito forte. A molécula é quase inerte: quebrá-la consome muita energia.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "estimar",
+    "q": "Em 1909, quanto de amônia Fritz Haber conseguiu produzir por hora na bancada, em mililitros?",
+    "unidade": "mL por hora",
+    "min": 1,
+    "max": 10000,
+    "escala": "log",
+    "resposta": 125,
+    "legenda": "Cerca de 125 mL por hora. Quatro anos depois, a primeira fábrica já produzia 20 toneladas por dia.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "curva",
+    "forma": "saturacao",
+    "eixo_x": "temperatura",
+    "eixo_y": "velocidade da reação",
+    "marco": {
+     "x": 0.7,
+     "rotulo": "450 °C"
+    },
+    "legenda": "No frio o equilíbrio favorece a amônia, mas a reação trava. O catalisador sobe essa curva sem mudar onde ela termina.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual é o papel do ferro no reator?",
+    "alts": [
+     "Aumenta a quantidade final de amônia no equilíbrio",
+     "Acelera a reação oferecendo um caminho de menor energia de ativação",
+     "Impede que a amônia se decompra de volta"
+    ],
+    "correta": 1,
+    "porque": "O catalisador muda a velocidade, não a posição do equilíbrio. Sem ele, a reação seria lenta demais na temperatura em que o equilíbrio ainda rende amônia."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Pressão baixa",
+    "b": "Pressão alta",
+    "linhas": [
+     {
+      "aspecto": "Moléculas gasosas",
+      "a": "4 viram 2, o sistema encolhe",
+      "b": "o encolhimento é favorecido"
+     },
+     {
+      "aspecto": "Amônia formada",
+      "a": "pouco produto",
+      "b": "mais produto no equilíbrio"
+     },
+     {
+      "aspecto": "Equipamento",
+      "a": "vasos simples",
+      "b": "vasos caros e resistentes"
+     }
+    ],
+    "legenda": "Na prática, a indústria usa cerca de 200 atmosferas para equilibrar rendimento e custo.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pontos",
+    "valor": 15,
+    "frase": "N de cada 100 moléculas de gás saem do reator como amônia numa única passagem.",
+    "legenda": "Os gases que não reagiram são reciclados. Com o reciclo, a conversão global chega a 97%.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1909,
+      "texto": "Haber produz amônia no laboratório, a 125 mL por hora."
+     },
+     {
+      "ano": 1913,
+      "texto": "A primeira fábrica, em Oppau, começa a operar."
+     },
+     {
+      "ano": 1914,
+      "texto": "A produção chega a 20 toneladas por dia."
+     }
+    ],
+    "legenda": "Carl Bosch, da BASF, transformou a bancada de Haber numa indústria.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma equipe propõe esfriar o reator para 200 °C, onde o equilíbrio favorece muito mais a amônia. Por que isso não é feito?",
+    "alts": [
+     "Porque a amônia se decompõe no frio",
+     "Porque a reação fica lenta demais e a fábrica produziria pouco por hora",
+     "Porque o ferro não catalisa abaixo de 400 °C"
+    ],
+    "correta": 1,
+    "porque": "O equilíbrio realmente melhora no frio, mas a velocidade despenca. A indústria prefere 450 °C com catalisador a um equilíbrio ótimo que ninguém alcança a tempo."
+   },
+   {
+    "tipo": "pontos",
+    "valor": 40,
+    "frase": "N de cada 100 pessoas no mundo devem sua alimentação ao processo Haber-Bosch.",
+    "legenda": "Cerca de 80% da amônia produzida vai para fertilizantes.",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "A reação de Haber-Bosch é um caso de equilíbrio químico, mas nem todo sistema obedece ao Princípio de Le Chatelier como esperado. As exceções existem, e são o próximo assunto."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto",
+  "tela 6: o tipo visual não combina com o conteúdo (0.28); troque de tipo ou use texto",
+  "tela 9: o tipo visual não combina com o conteúdo (0.24); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.09,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.87,
+    "4": 0.11
+   },
+   "confidence": 0.88
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "especulacao": 0.02,
+    "consenso": 0.97,
+    "emergente": 0
+   },
+   "confidence": 0.97
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0.01,
+    "consenso": 0.99,
+    "emergente": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.97
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.04,
+    "emergente": 0.02,
+    "consenso": 0.91,
+    "especulacao": 0.03
+   },
+   "confidence": 0.88
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_9": {
+   "type": "noul",
+   "noul": 0.24
+  }
+ },
+ "custo_usd": 0.00724
+}

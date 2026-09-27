@@ -43,7 +43,7 @@ Quem lê sobre um assunto fora da própria área não tem como saber se o texto 
 
 <p align="center"><img src="docs/img/acervo.svg" alt="Mapa do acervo: 347 conceitos agrupados em oito regiões do conhecimento" width="80%"></p>
 
-São 347 conceitos em oito regiões, de Vida a Ideias, ligados pelo que um ajuda a entender do outro. No app, o mapa começa apagado e acende conforme você lê. Hoje 32 conceitos têm ficha completa, e as lições curtas entram aos poucos, depois de passar por revisão.
+São 347 conceitos em oito regiões, de Vida a Ideias, ligados pelo que um ajuda a entender do outro. No app, o mapa começa apagado e acende conforme você lê. Hoje 62 conceitos têm ficha completa, de habeas corpus a lentes gravitacionais, e as lições curtas entram aos poucos, depois de passar por revisão.
 
 ## No celular
 
@@ -75,7 +75,7 @@ flowchart LR
     H -->|rejeitada, com motivo| G
 ```
 
-Cada lição custa em torno de um centavo de dólar para gerar. As notas da revisão viram regras novas no guia de estilo (`pipeline/estilo.md`), e o gerador melhora a cada rodada.
+Os conceitos novos nascem de um dossiê de fontes reais (Wikipédia e os artigos mais citados do OpenAlex): o modelo só pode citar o que está no dossiê, e todo número do texto precisa aparecer nele. Cada conceito completo custa em torno de um centavo de dólar para gerar, e cada lição também. As notas da revisão viram regras novas no guia de estilo (`pipeline/estilo.md`), e o gerador melhora a cada rodada.
 
 Para rodar localmente:
 

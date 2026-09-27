@@ -1,0 +1,295 @@
+{
+ "id": "endossimbiose",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:14",
+ "modelo": "deepseek-flash",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Toda célula do seu corpo tem centenas de mitocôndrias. Cada uma carrega uma pequena molécula de DNA circular, que você herdou só da sua mãe e que se parece com o DNA de uma bactéria.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Mitocôndrias e cloroplastos descêm de bactérias que foram engolidas por outra célula e nunca mais saíram. É a <strong>teoria endossimbiótica</strong>.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Bactéria livre ancestral",
+    "b": "Organela atual",
+    "linhas": [
+     {
+      "aspecto": "Genoma",
+      "a": "mais de 6 milhões de pares de bases",
+      "b": "16 mil (mitocôndria) a 200 mil (cloroplasto)"
+     },
+     {
+      "aspecto": "Forma do DNA",
+      "a": "circular",
+      "b": "circular"
+     },
+     {
+      "aspecto": "Divisão",
+      "a": "fissão binária",
+      "b": "fissão binária"
+     },
+     {
+      "aspecto": "Ribossomos",
+      "a": "tipo bacteriano",
+      "b": "tipo bacteriano"
+     }
+    ],
+    "legenda": "O genoma encolheu, mas as marcas de bactéria continuaram.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "estimar",
+    "q": "Quantos pares de bases tem o genoma da mitocôndria humana?",
+    "unidade": "pares de bases",
+    "min": 1000,
+    "max": 1000000,
+    "escala": "log",
+    "resposta": 16000,
+    "legenda": "Cerca de 16 mil pares de bases, contra mais de 6 milhões numa alfa-proteobactéria livre.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "ciclo",
+    "etapas": [
+     "A célula hospedeira engole a bactéria",
+     "A bactéria passa a viver dentro dela",
+     "Genes da bactéria migram para o núcleo",
+     "A bactéria perde os genes que não usa mais"
+    ],
+    "legenda": "O processo é gradual: o simbionte vira organela à medida que perde autonomia.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que as mitocôndrias são consideradas bactérias que viraram parte da célula?",
+    "alts": [
+     "Porque têm DNA circular, ribossomos bacterianos e se dividem por fissão binária",
+     "Porque foram vistas engolindo outras bactérias",
+     "Porque têm o mesmo tamanho de uma célula eucariótica"
+    ],
+    "correta": 0,
+    "porque": "As organelas guardam marcas de bactéria: DNA circular, ribossomos do tipo bacteriano e divisão por fissão binária."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma célula perde seus cloroplastos por falta de luz. O que acontece?",
+    "alts": [
+     "A célula não consegue fabricar novos cloroplastos e precisa capturá-los de novo",
+     "A célula fabrica cloroplastos a partir de suas próprias membranas",
+     "A célula transforma mitocôndrias em cloroplastos"
+    ],
+    "correta": 0,
+    "porque": "Cloroplastos só se formam a partir de outros cloroplastos, por fissão binária. Sem eles, a célula não consegue produzi-los do zero."
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1905,
+      "texto": "O botânico russo Konstantin Mereschkowski propõe que a célula complexa nasceu de uma fusão."
+     },
+     {
+      "ano": 1967,
+      "texto": "Lynn Margulis defende a ideia com evidências microbiológicas, após anos de rejeição."
+     },
+     {
+      "ano": 1961,
+      "texto": "Hans Ris usa microscopia eletrônica para mostrar que cloroplastos e cianobactérias se parecem."
+     },
+     {
+      "ano": 2015,
+      "texto": "Uma revisão contabiliza mais de 20 versões diferentes da teoria endossimbiótica."
+     }
+    ],
+    "legenda": "Da proposta inicial à aceitação ampla.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Nem toda proposta de Margulis resistiu. Flagelos e cílios não vieram de bactérias: essas estruturas não têm DNA nem semelhança com bactérias.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   }
+  ],
+  "fecho": "Como a primeira célula complexa surgiu? Essa é uma das perguntas que a química prebiótica tenta responder."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 6: duas perguntas seguidas"
+ ],
+ "alertas_jev": [
+  "tela 3: o tipo visual não combina com o conteúdo (0.42); troque de tipo ou use texto",
+  "tela 4: o tipo visual não combina com o conteúdo (0.14); troque de tipo ou use texto",
+  "tela 6: gabarito suspeito (0.56)",
+  "tela 8: trata de disputa ou evidência contestada (0.86); lição só ensina o núcleo estabelecido"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.04,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.03,
+    "3": 0.9,
+    "4": 0.07
+   },
+   "confidence": 0.92
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.95,
+    "emergente": 0.02,
+    "especulacao": 0.02,
+    "controverso": 0.01
+   },
+   "confidence": 0.94
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.99,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.98
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "consenso": 0.93,
+    "especulacao": 0.02,
+    "controverso": 0.04
+   },
+   "confidence": 0.9
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.86
+  }
+ },
+ "custo_usd": 0.007
+}

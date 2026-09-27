@@ -1,0 +1,291 @@
+{
+ "id": "imprensa-gutenberg",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:14",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1450, copiar um livro na Europa levava meses de trabalho de um escriba. Cinquenta anos depois, uma única prensa imprimia 3.600 páginas num dia.",
+  "telas": [
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Prensa de parafuso",
+      "texto": "já usada para espremer uvas e azeitonas"
+     },
+     {
+      "nome": "Tipo móvel",
+      "texto": "cada letra numa peça separada"
+     },
+     {
+      "nome": "Livro em cadernos",
+      "texto": "folhas costuradas, no lugar de rolos"
+     },
+     {
+      "nome": "Papel de moinho",
+      "texto": "produzido com água desde 1282"
+     },
+     {
+      "nome": "Liga de chumbo, estanho e antimônio",
+      "texto": "tipos duráveis e precisos"
+     },
+     {
+      "nome": "Molde de mão",
+      "texto": "fundia cada letra a partir de uma matriz"
+     }
+    ],
+    "legenda": "Gutenberg não inventou a impressão: juntou quatro tecnologias existentes com duas invenções próprias.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Alfabeto latino",
+    "b": "Escrita chinesa",
+    "linhas": [
+     {
+      "aspecto": "Caracteres",
+      "a": "algumas dezenas",
+      "b": "milhares"
+     },
+     {
+      "aspecto": "Tipos móveis",
+      "a": "poucas peças",
+      "b": "conjunto enorme e caro"
+     },
+     {
+      "aspecto": "Custo",
+      "a": "a economia da prensa fechava",
+      "b": "processo encarecia"
+     }
+    ],
+    "legenda": "Com poucos sinais diferentes, fabricar tipos em série sai mais barato.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "estimar",
+    "q": "Quantas impressões por dia útil fazia uma prensa por volta de 1600?",
+    "unidade": "impressões",
+    "min": 10,
+    "max": 5000,
+    "escala": "log",
+    "resposta": 3600,
+    "legenda": "De 1.500 a 3.600 por dia, contra cerca de quarenta da impressão com blocos de madeira.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pontos",
+    "valor": 20,
+    "frase": "milhões de exemplares foram impressos até 1500.",
+    "legenda": "Em cinquenta anos, as prensas da Europa Ocidental produziram mais de vinte milhões de livros.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "A Igreja criou licenças e um índice de livros proibidos. Por que a censura funcionou só em parte?",
+    "alts": [
+     "Porque a Igreja não tinha autoridade para proibir livros",
+     "Porque o equipamento era portátil e o impressor perseguido mudava de cidade",
+     "Porque os livros eram todos em latim e ninguém entendia"
+    ],
+    "correta": 1,
+    "porque": "A prensa podia ser desmontada e levada para outro lugar. O impressor perseguido continuava imprimindo em outra cidade."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "A chance a mais de uma cidade adotar o protestantismo, quando tinha prensa, caiu de 52 pontos até 1530 para 29 até 1600. O que essa queda sugere?",
+    "alts": [
+     "A prensa pesou mais na fase inicial da Reforma, antes que a política assumisse o comando",
+     "As prensas pararam de funcionar no fim do século XVI",
+     "O protestantismo perdeu força porque ninguém mais lia"
+    ],
+    "correta": 0,
+    "porque": "O efeito da prensa era maior no começo. Depois, laços pessoais, rotas comerciais e decisões políticas passaram a pesar mais."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Antes da prensa",
+    "b": "Depois da prensa",
+    "linhas": [
+     {
+      "aspecto": "Cópias",
+      "a": "cada uma diferente da outra",
+      "b": "exemplares idênticos"
+     },
+     {
+      "aspecto": "Citação",
+      "a": "difícil, sem numeração",
+      "b": "páginas numeradas e índices"
+     },
+     {
+      "aspecto": "Autoria",
+      "a": "muitas vezes desconhecida",
+      "b": "nome do autor ganha peso"
+     }
+    ],
+    "legenda": "A uniformidade dos exemplares mudou o jeito de ler e de citar.",
+    "marca": "consenso",
+    "fonte": 2
+   }
+  ],
+  "fecho": "Com exemplares idênticos circulando, os estudiosos começaram a comparar achados e criticar uns aos outros por escrito. É o começo do que hoje chamamos de ciência moderna."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 6: duas perguntas seguidas"
+ ],
+ "alertas_jev": [
+  "tela 1: trata de disputa ou evidência contestada (0.64); lição só ensina o núcleo estabelecido",
+  "tela 3: o tipo visual não combina com o conteúdo (0.39); troque de tipo ou use texto",
+  "tela 4: o tipo visual não combina com o conteúdo (0.18); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.02,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.03,
+    "3": 0.92,
+    "4": 0.05
+   },
+   "confidence": 0.93
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.96,
+    "especulacao": 0.01,
+    "controverso": 0.03
+   },
+   "confidence": 0.94
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.64
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "consenso": 0.86,
+    "especulacao": 0.12,
+    "controverso": 0.01
+   },
+   "confidence": 0.82
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.07,
+    "consenso": 0.68,
+    "especulacao": 0.1,
+    "controverso": 0.15
+   },
+   "confidence": 0.57
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.03,
+    "consenso": 0.69,
+    "especulacao": 0.07,
+    "controverso": 0.21
+   },
+   "confidence": 0.6
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.09,
+    "especulacao": 0.16,
+    "consenso": 0.63,
+    "controverso": 0.12
+   },
+   "confidence": 0.51
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.95
+  }
+ },
+ "custo_usd": 0.00741
+}

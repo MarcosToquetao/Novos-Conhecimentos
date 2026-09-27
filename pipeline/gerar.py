@@ -7,6 +7,8 @@ e deixa rascunhos para revisão humana em pipeline/revisar.py.
 Uso
   python pipeline/gerar.py licao <id> [<id> ...] [--seco] [--sem-revisao-pro]
   python pipeline/gerar.py licao --todas          lições para todo documento sem lição nem rascunho
+  python pipeline/gerar.py conceito <id> [<id> ...] [--seco] [--retomar]   documento novo a partir de fontes reais (Wikipédia + OpenAlex)
+  python pipeline/gerar.py dossie <id> [<id> ...]   só baixa e mostra o dossiê de fontes (pipeline/dossies/)
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
   python pipeline/gerar.py fronteira <id>... | --todas [--seco]   caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
   python pipeline/gerar.py triagem                JEV marca termos do catálogo sem respaldo suficiente (não apaga)
@@ -16,7 +18,7 @@ Uso
 
 Chaves em .env na raiz: DEEPSEEK_API_KEY=...  OPENROUTER_API_KEY=...
 """
-import datetime, json, pathlib, re, subprocess, sys, time, urllib.error, urllib.request
+import concurrent.futures, datetime, json, pathlib, re, subprocess, sys, threading, time, urllib.error, urllib.parse, urllib.request
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 PIPE = RAIZ / "pipeline"
@@ -69,8 +71,11 @@ def pico():
     return h.weekday() < 5 and (1 <= h.hour < 4 or 6 <= h.hour < 10)
 
 
+_trava, _trava_log = threading.Lock(), threading.Lock()
+
+
 def registrar_custo(etapa, alvo, modelo, usd, uso):
-    with CUSTOS.open("a", encoding="utf-8") as f:
+    with _trava_log, CUSTOS.open("a", encoding="utf-8") as f:
         f.write(json.dumps({"quando": agora(), "etapa": etapa, "alvo": alvo, "modelo": modelo,
                             "usd": round(usd, 6), "uso": uso}, ensure_ascii=False) + "\n")
 
@@ -96,8 +101,8 @@ def deepseek(modelo, sistema, usuario, etapa, alvo, max_tokens=8000, pensar=Fals
         try:
             return json.loads(texto), usd
         except json.JSONDecodeError:
-            print(f"  resposta sem json válido de {modelo}, tentando de novo")
-    sys.exit(f"{modelo} não devolveu json válido para {alvo}.")
+            print(f"  resposta sem json válido de {modelo} ({r['choices'][0].get('finish_reason')}, {u.get('completion_tokens')} tokens), tentando de novo")
+    raise RuntimeError(f"{modelo} não devolveu json válido para {alvo}.")
 
 
 def jev(estado, perguntas, etapa, alvo):
@@ -148,6 +153,7 @@ def texto_puro(html):
     html = re.sub(r"<svg.*?</svg>", " [figura] ", html, flags=re.S)
     html = re.sub(r'<sup class="cit"><a href="#f(\d+)">\d+</a></sup>', r" [\1]", html)
     html = re.sub(r'<div class="marca (\w+)">', r"\n[marca: \1] ", html)
+    html = re.sub(r"</t[dh]>", " | ", html)   # células de tabela não podem grudar ("1/3" + "1/3" viraria "1/31/3")
     html = re.sub(r"</(p|h3|li|div|tr)>", "\n", html)
     html = re.sub(r"<[^>]+>", "", html)
     html = html.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
@@ -624,6 +630,378 @@ def fronteira(id_, seco=False):
     print(f"  {tipos.count('ressalva')} ressalva(s) viraram consenso, {len(itens)} item(ns) na seção de pesquisa")
 
 
+# ── conceito novo: dossiê de fontes reais → documento → síntese e prova ──
+DOSSIES = PIPE / "dossies"
+UA = {"User-Agent": "NovosConhecimentos/1.0 (https://github.com/marcostoquetao/Novos-Conhecimentos)"}
+
+
+def get(url, params):
+    req = urllib.request.Request(url + "?" + urllib.parse.urlencode(params), headers=UA)
+    for t in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.loads(r.read())
+        except (urllib.error.URLError, TimeoutError) as e:
+            if t == 2:
+                raise RuntimeError(f"Sem resposta de {url}: {e}")
+            time.sleep(3)
+
+
+def wiki(lang, titulo=None, busca=None):
+    api = f"https://{lang}.wikipedia.org/w/api.php"
+    if busca:
+        r = get(api, {"action": "query", "list": "search", "srsearch": busca, "srlimit": 1, "format": "json"})
+        hits = r["query"]["search"]
+        if not hits:
+            return None
+        titulo = hits[0]["title"]
+    r = get(api, {"action": "query", "prop": "extracts|langlinks", "explaintext": 1, "redirects": 1,
+                  "lllang": "en", "titles": titulo, "format": "json"})
+    pg = next(iter(r["query"]["pages"].values()))
+    if "missing" in pg:
+        return None
+    return {"titulo": pg["title"], "texto": pg.get("extract", ""),
+            "en": (pg.get("langlinks") or [{}])[0].get("*"),
+            "url": f"https://{lang}.wikipedia.org/wiki/" + urllib.parse.quote(pg["title"].replace(" ", "_"))}
+
+
+def html_esc(s):
+    return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def openalex(busca, n=14):
+    """Os trabalhos mais citados com a expressão exata no título; se forem poucos, no título ou no resumo."""
+    obras = []
+    for campo in ("title.search", "title_and_abstract.search"):
+        r = get("https://api.openalex.org/works", {
+            "filter": f'{campo}:"{busca}",has_doi:true,has_abstract:true,is_retracted:false',
+            "sort": "cited_by_count:desc", "per_page": n})
+        obras += [w for w in r.get("results", []) if w["id"] not in {o["id"] for o in obras}]
+        if len(obras) >= 8:
+            break
+    saida = []
+    for w in obras[:n]:
+        pos = sorted((p, pal) for pal, ps in (w.get("abstract_inverted_index") or {}).items() for p in ps)
+        autores = [a["author"]["display_name"] for a in w.get("authorships", [])]
+        aut = ", ".join(autores[:4]) + (" et al." if len(autores) > 4 else "")
+        fonte = ((w.get("primary_location") or {}).get("source") or {}).get("display_name") or ""
+        titulo = re.sub(r"<[^>]+>", "", w.get("title") or "")
+        saida.append({"tipo": {"review": "revisão", "book": "livro", "book-chapter": "capítulo"}.get(w.get("type"), "artigo"),
+                      "ref": html_esc(f"{aut}. '{titulo}'.") + (f" <em>{html_esc(fonte)}</em>," if fonte else "") + f" {w.get('publication_year')}.",
+                      "url": w["doi"], "texto": " ".join(p for _, p in pos)[:1500]})
+    return saida
+
+
+def dossie(id_, idx):
+    """Verbetes da Wikipédia (pt e en) e os trabalhos mais citados do OpenAlex sobre o tema.
+    O documento só pode citar itens daqui: as referências vêm dos metadados, nunca do modelo."""
+    arq = DOSSIES / f"{id_}.json"
+    if arq.exists():
+        d = json.loads(arq.read_text(encoding="utf-8"))
+        if not d.get("filtrado"):
+            d = filtrar_dossie(d)
+            arq.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+        return d
+    c = next(c for c in idx["conceitos"] if c["id"] == id_)
+    # o termo do catálogo é descritivo demais para a busca da Wikipédia: o Flash sugere os verbetes e a expressão de busca
+    t, _ = deepseek(FLASH, 'Responda somente com json: {"pt": "título exato do verbete na Wikipédia em português", '
+                    '"en": "título exato do verbete na Wikipédia em inglês", "busca": "o nome do conceito em inglês, em 1 a 3 palavras, como aparece em títulos de artigos científicos (ex.: habeas corpus, Maillard reaction)"}',
+                    f"{c['termo']} ({c['area']}): {c['gancho']}", "dossie", id_, max_tokens=300)
+    # sem busca de reserva: um verbete errado no dossiê é pior do que nenhum
+    pt = t.get("pt") and wiki("pt", titulo=t["pt"])
+    en = (t.get("en") and wiki("en", titulo=t["en"])) or (pt and pt.get("en") and wiki("en", titulo=pt["en"]))
+    itens = []
+    for w, lingua, lim in ((pt, "português", 20000), (en, "inglês", 30000)):
+        if w:
+            itens.append({"tipo": "enciclopédia", "ref": html_esc(f"Wikipédia ({lingua}), verbete '{w['titulo']}'. Consultado em {datetime.date.today():%d/%m/%Y}."),
+                          "url": w["url"], "texto": w["texto"][:lim]})
+    obras = []
+    for b in dict.fromkeys(x for x in (t.get("busca"), en and re.sub(r"\s*\(.*\)$", "", en["titulo"])) if x):
+        obras += [o for o in openalex(b) if o["url"] not in {x["url"] for x in obras}]
+        if len(obras) >= 8:
+            break
+    itens += obras[:14]
+    for n, it in enumerate(itens, 1):
+        it["n"] = n
+    d = filtrar_dossie({"id": id_, "termo": c["termo"], "wiki_pt": pt and pt["titulo"], "wiki_en": en and en["titulo"], "busca": t.get("busca"), "itens": itens})
+    DOSSIES.mkdir(exist_ok=True)
+    arq.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+    return d
+
+
+def filtrar_dossie(d):
+    """A busca por citações traz artigos famosos que só esbarram no tema. O JEV tira os que não tratam do conceito."""
+    obras = {f"a{i}": it for i, it in enumerate(d["itens"]) if it["tipo"] != "enciclopédia"}
+    if obras:
+        r = jev({"conceito": d["termo"], "itens": {k: texto_puro(it["ref"]) + " " + it["texto"][:700] for k, it in obras.items()}},
+                {k: {"type": "noul", "instructions": f"O trabalho itens.{k} trata do conceito (ou do fenômeno central dele), a ponto de servir de fonte para um texto sobre ele?",
+                     "criteria": {"true": "trata do conceito", "false": "outro assunto que só compartilha palavras"}} for k in obras},
+                "jev-dossie", d["id"])
+        fora = {k for k in obras if r.get(k, {}).get("noul", 0) < 0.5}
+        d["itens"] = [it for i, it in enumerate(d["itens"]) if f"a{i}" not in fora]
+        for n, it in enumerate(d["itens"], 1):
+            it["n"] = n
+    d["filtrado"] = True
+    return d
+
+
+def nums_pt(txt):
+    s = set()
+    for m in re.finditer(r"\d+(?:[.\s]\d{3})*(?:,\d+)?", txt):
+        try:
+            s.add(float(m.group(0).replace(".", "").replace(" ", "").replace(",", ".")))
+        except ValueError:
+            pass
+    return s
+
+
+def nums_en(txt):
+    return {float(m.group(0).replace(",", "")) for m in re.finditer(r"\d+(?:,\d{3})*(?:\.\d+)?", txt)}
+
+
+def numeros_sem_respaldo(texto, base):
+    """Números acima de 10 no texto que não aparecem na base (com folga de arredondamento)."""
+    texto = re.sub(r"\[\d+(?:\s*,\s*\d+)*\]", " ", texto)
+    return sorted({v for v in nums_pt(texto) if v > 10 and not any(abs(v - n) <= max(0.5, abs(n) * 0.01) for n in base)})
+
+
+def regras_de_escrita():
+    """As seções do estilo.md que valem para qualquer texto (as de formato da lição ficam de fora)."""
+    partes = re.split(r"\n(?=## )", estilo())
+    return "\n".join(p for p in partes if not p.startswith(("## Formato da lição", "## Exemplo de lição")))
+
+
+CAMADAS = ("nucleo", "aprofundamento", "extensao")
+PEDIDO_DOC = """## Tarefa: o documento longo (Aprofundar)
+
+As regras acima valem aqui. Você escreve o documento de estudo de um conceito. Quem chega aqui fez a lição curta e quer entender de verdade.
+
+Base: use SOMENTE o que está no dossiê da mensagem do usuário (verbetes e resumos de artigos, numerados). Cada afirmação específica (número, data, nome, resultado de estudo) leva logo depois a citação [n] com o número do item do dossiê que a sustenta, por exemplo [3] ou [2, 5]. Nunca escreva número, data ou porcentagem que não esteja no dossiê: se o dossiê não traz o dado, escreva sem ele. Cite pelo menos 8 itens diferentes, e só itens que tratam do assunto.
+
+Camadas, em html:
+- nucleo (800 a 1.200 palavras). Começa com <p class="abre"> trazendo um caso concreto ou uma pergunta. Explica o mecanismo central com exemplos, em 2 a 4 seções <h3> (só a primeira letra maiúscula). Tem uma caixa de consenso.
+- aprofundamento (600 a 1.000 palavras): o modo de pensar da área, detalhes técnicos e como o conhecimento foi estabelecido. Use uma <table> se ela ajudar a comparar.
+- extensao (300 a 600 palavras): pontes com outras áreas e usos práticos.
+
+HTML permitido: p, h3, ul, ol, li, strong, em, table, thead, tbody, tr, th, td. Caixas de marca: <div class="marca consenso"><span class="rot">Rótulo curto</span><p>...</p></div>. Use consenso para o que é aceito na área e emergente para evidência séria e recente. Nenhuma outra marca.
+
+Hipóteses, debates e dados sem confirmação não entram nas camadas. Eles vão para fronteira, com 0 a 3 itens {tema, html}. O texto de cada item diz com clareza que se trata de linha de pesquisa ou questão em aberto, e o que se sabe hoje. Se o dossiê não traz debate relevante, fronteira é [].
+
+Também:
+- subtitulo: 1 ou 2 frases que dizem o que o conceito é e por que importa.
+- prerequisitos: 1 ou 2 frases.
+- conexoes: 3 a 5 itens {termo, relacao}. O termo vem da lista de vizinhos, e a relacao é uma frase concreta.
+
+Responda somente com json: {"subtitulo": "", "prerequisitos": [""], "conexoes": [{"termo": "", "relacao": ""}], "nucleo": "<p class=\\"abre\\">...", "aprofundamento": "", "extensao": "", "fronteira": []}"""
+
+PEDIDO_ESTUDO = """## Tarefa: síntese, flashcards e prova
+
+As regras acima valem aqui. A partir do documento da mensagem do usuário, escreva o material de estudo. Use só o que está no documento, e todo número que você usar precisa estar nele.
+
+Estrutura:
+- sintese.definicoes: 4 a 6 itens {termo, def}.
+- sintese.lembrar: 5 ou 6 frases com o que precisa ficar.
+- sintese.confusoes: 3 a 5 itens {erro, correcao}, sobre onde a intuição costuma errar.
+- sintese.numeros: 3 a 5 frases com os números do documento.
+- flashcards: 12 itens {f, v}. A frente é uma pergunta, e o verso responde em 1 a 3 frases.
+- prova: 12 questões {camada, q, alts, correta, porque}.
+  - camada: 6 de nucleo, 4 de aprofundamento e 2 de extensao.
+  - alts: 4 alternativas plausíveis, com uma única correta.
+  - correta: índice de 0 a 3, variando entre as questões.
+  - porque: explica a resposta certa e o erro da alternativa mais tentadora.
+
+Pergunte sobre compreensão, nunca sobre decoreba de data ou nome.
+
+Responda somente com json: {"sintese": {"definicoes": [], "lembrar": [], "confusoes": [], "numeros": []}, "flashcards": [], "prova": []}"""
+
+
+def checar_doc(A, n_itens, base):
+    erros = []
+    for k in ("subtitulo", *CAMADAS):
+        if not A.get(k):
+            erros.append(f"falta {k}")
+    tudo = {"subtitulo": A.get("subtitulo", ""), **{k: A.get(k, "") for k in CAMADAS},
+            **{f"fronteira {i + 1}": it.get("tema", "") + " " + it.get("html", "") for i, it in enumerate(A.get("fronteira") or [])},
+            **{f"conexão {i + 1}": c.get("relacao", "") for i, c in enumerate(A.get("conexoes") or [])}}
+    for onde, s in tudo.items():
+        checar_texto(onde, re.sub(r"\[\d+(?:\s*,\s*\d+)*\]", "", s), erros)
+        for grupo in re.findall(r"\[(\d+(?:\s*,\s*\d+)*)\]", s):
+            erros += [f"{onde}: cita [{n}], que não existe no dossiê" for n in re.split(r"\s*,\s*", grupo) if not 1 <= int(n) <= n_itens]
+        if re.search(r'class="marca (?!consenso|emergente)', s):
+            erros.append(f"{onde}: marca proibida (só consenso ou emergente)")
+        fora = numeros_sem_respaldo(texto_puro(s), base)
+        if fora:
+            erros.append(f"{onde}: números que não aparecem no dossiê: {', '.join(f'{x:g}' for x in fora)}")
+    if len(A.get("conexoes") or []) < 3:
+        erros.append(f"{len(A.get('conexoes') or [])} conexões (esperado 3 a 5, da lista de vizinhos)")
+    palavras = len(texto_puro(A.get("nucleo", "")).split())
+    if palavras < 600:
+        erros.append(f"nucleo com {palavras} palavras (mínimo 800)")
+    citados = {int(n) for k in CAMADAS for g in re.findall(r"\[(\d+(?:\s*,\s*\d+)*)\]", A.get(k, "")) for n in re.split(r"\s*,\s*", g)}
+    if len(citados) < 6:
+        erros.append(f"só {len(citados)} itens do dossiê citados (mínimo 8)")
+    return erros
+
+
+def checar_estudo(B, base):
+    erros = []
+    s = B.get("sintese") or {}
+    if len(B.get("flashcards") or []) < 12:
+        erros.append(f"{len(B.get('flashcards') or [])} flashcards (esperado 12)")
+    if len(B.get("prova") or []) < 10:
+        erros.append(f"{len(B.get('prova') or [])} questões (esperado 12)")
+    for i, q in enumerate(B.get("prova") or []):
+        if len(q.get("alts") or []) != 4 or not isinstance(q.get("correta"), int) or not 0 <= q["correta"] < 4 or q.get("camada") not in CAMADAS:
+            erros.append(f"prova {i + 1}: malformada (4 alternativas, correta 0 a 3, camada válida)")
+    # nas questões, as alternativas erradas podem ter número fora do documento; o gabarito e a explicação não
+    certas = [{"q": q.get("q"), "porque": q.get("porque"),
+               "certa": q["alts"][q["correta"]] if isinstance(q.get("correta"), int) and 0 <= q["correta"] < len(q.get("alts") or []) else ""}
+              for q in B.get("prova") or []]
+    for onde, s_, conferir in [("síntese", json.dumps(s, ensure_ascii=False), None),
+                               ("flashcards", json.dumps(B.get("flashcards"), ensure_ascii=False), None),
+                               ("prova", json.dumps(B.get("prova"), ensure_ascii=False), json.dumps(certas, ensure_ascii=False))]:
+        checar_texto(onde, s_, erros)
+        fora = numeros_sem_respaldo(conferir or s_, base)
+        if fora:
+            erros.append(f"{onde}: números que não aparecem no documento: {', '.join(f'{x:g}' for x in fora)}")
+    return erros
+
+
+def corrigir(sistema, usuario, obj, erros, id_, etapa, max_tokens):
+    pedido = ("Corrija só os problemas listados e mantenha o resto igual. Se um número não aparece na base, apague o número "
+              "reescrevendo a frase sem ele, ou troque por um número que está na base. Responda com o json completo corrigido.\n\n"
+              "Problemas:\n" + "\n".join(f"- {e}" for e in erros) + "\n\nJson atual:\n" + json.dumps(obj, ensure_ascii=False))
+    return deepseek(FLASH, sistema, usuario + "\n\n" + pedido, etapa, id_, max_tokens=max_tokens)
+
+
+def js_doc(id_, c, A, B, fontes):
+    tl = lambda h: "`\n" + h.strip().replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${") + "\n`"
+    j = lambda x: json.dumps(x, ensure_ascii=False, indent=1)
+    cam = ",\n\n".join(f"{k}: {{ minutos: {max(3, round(len(texto_puro(A[k]).split()) / 180))}, html: {tl(A[k])} }}" for k in CAMADAS)
+    partes = [f'CONTEUDOS["{id_}"] = {{', f"termo: {j(c['termo'])},", f"area: {j(c['area'])},", f"subtitulo: {j(A['subtitulo'])},",
+              f"prerequisitos: {j(A.get('prerequisitos') or [])},", f"conexoes: {j(A.get('conexoes') or [])},", "",
+              f"camadas: {{\n\n{cam}\n\n}},", "", f"sintese: {j(B['sintese'])},", "", f"flashcards: {j(B['flashcards'])},", "",
+              f"prova: {j(B['prova'])},", "", f"fontes: {j(fontes)},"]
+    if A.get("fronteira"):
+        partes += ["", "fronteira: " + json.dumps(A["fronteira"], ensure_ascii=False) + ","]
+    return "\n".join(partes) + "\n};\n"
+
+
+def gerar_conceito(id_, idx, seco=False, retomar=False):
+    """retomar: parte do texto salvo em pipeline/dossies/<id>.saida.json (corrigido à mão pelo editor), sem gerar de novo.
+    Números derivados que o editor conferiu (uma conta feita no texto, por exemplo) vão em "numeros_aceitos" nesse arquivo."""
+    c = next(c for c in idx["conceitos"] if c["id"] == id_)
+    if (RAIZ / "js" / "docs" / f"{id_}.js").exists():
+        return print(f"{id_}: já tem documento")
+    d = dossie(id_, idx)
+    itens = d["itens"]
+    base = set()
+    for it in itens:
+        base |= nums_pt(it["texto"] + " " + it["ref"]) | nums_en(it["texto"] + " " + it["ref"])
+    sistema = regras_de_escrita() + "\n\n" + PEDIDO_DOC
+    usuario = "\n".join([f"Conceito: {c['termo']} ({c['area']})", f"Gancho do catálogo: {c['gancho']}",
+                         f"Vizinhos no acervo, para conexoes: {', '.join(vizinhos(id_, idx))}", "", "Dossiê:"] +
+                        [f"\n[{it['n']}] {texto_puro(it['ref'])}\n{it['texto']}" for it in itens])
+    if seco:
+        tok = (len(sistema) + len(usuario)) / 3.2
+        return print(f"{id_}: dossiê com {len(itens)} itens ({d['wiki_pt']} / {d['wiki_en']}), ~{tok:,.0f} tokens de entrada")
+    print(f"{id_}: escrevendo o documento com {FLASH} ({len(itens)} itens no dossiê)")
+    salvo = json.loads((DOSSIES / f"{id_}.saida.json").read_text(encoding="utf-8")) if retomar else {}
+    base |= set(map(float, salvo.get("numeros_aceitos", [])))
+    if retomar:
+        A, custo = salvo["A"], 0
+    else:
+        A, custo = deepseek(FLASH, sistema, usuario, "conceito", id_, max_tokens=16000)
+    erros = checar_doc(A, len(itens), base)
+    for _ in range(3):
+        if not erros:
+            break
+        print(f"  {id_}: {len(erros)} problema(s) no documento, corrigindo")
+        A2, c2 = corrigir(sistema, usuario, A, erros, id_, "conceito-correcao", 16000)
+        custo += c2
+        e2 = checar_doc(A2, len(itens), base)
+        if len(e2) <= len(erros):
+            A, erros = A2, e2
+    if erros:
+        return registrar_conceito(id_, "barrado", erros, custo, saida={"A": A, "B": locals().get("B")})
+
+    # renumera as fontes na ordem da primeira citação e troca [n] pelo carimbo de citação
+    ordem = []
+    for k in (*CAMADAS, "fronteira"):
+        s = json.dumps(A.get(k), ensure_ascii=False)
+        for g in re.findall(r"\[(\d+(?:\s*,\s*\d+)*)\]", s):
+            ordem += [int(n) for n in re.split(r"\s*,\s*", g) if int(n) not in ordem]
+    novo = {n: i for i, n in enumerate(ordem, 1)}
+    sup = lambda m: "".join(f'<sup class="cit"><a href="#f{novo[int(n)]}">{novo[int(n)]}</a></sup>' for n in re.split(r"\s*,\s*", m.group(1)))
+    cita = lambda s: re.sub(r"\s?\[(\d+(?:\s*,\s*\d+)*)\]", sup, s)
+    for k in CAMADAS:
+        A[k] = cita(A[k])
+    A["fronteira"] = [{"tema": it.get("tema", ""), "html": cita(it.get("html", ""))} for it in A.get("fronteira") or []]
+    tira = lambda s: re.sub(r"\s?(?:\[\d+(?:\s*,\s*\d+)*\])+", "", s)   # fora das camadas não há carimbo de citação
+    A["subtitulo"] = tira(A["subtitulo"])
+    A["prerequisitos"] = [tira(x) for x in A.get("prerequisitos") or []]
+    A["conexoes"] = [{"termo": x.get("termo", ""), "relacao": tira(x.get("relacao", ""))} for x in A.get("conexoes") or []]
+    por_n = {it["n"]: it for it in itens}
+    fontes = [{"n": novo[n], "tipo": por_n[n]["tipo"], "ref": por_n[n]["ref"], "url": por_n[n]["url"]} for n in ordem]
+
+    texto_doc = "\n\n".join(texto_puro(A[k]) for k in CAMADAS)
+    base_doc = nums_pt(texto_doc)
+    sis_b = regras_de_escrita() + "\n\n" + PEDIDO_ESTUDO
+    usu_b = f"Conceito: {c['termo']} ({c['area']})\n\n" + "\n\n".join(f"### Camada {k}\n{texto_puro(re.sub(r'<sup.*?</sup>', '', A[k]))}" for k in CAMADAS)
+    B, c2 = deepseek(FLASH, sis_b, usu_b, "estudo", id_, max_tokens=12000)
+    custo += c2
+    erros = checar_estudo(B, base_doc)
+    if erros:
+        print(f"  {id_}: {len(erros)} problema(s) na síntese ou prova, corrigindo")
+        B2, c2 = corrigir(sis_b, usu_b, B, erros, id_, "estudo-correcao", 12000)
+        custo += c2
+        e2 = checar_estudo(B2, base_doc)
+        if len(e2) <= len(erros):
+            B, erros = B2, e2
+    if erros:
+        return registrar_conceito(id_, "barrado", erros, custo, saida={"A": A, "B": locals().get("B")})
+
+    # JEV: o núcleo é conhecimento estabelecido? alguma questão tem gabarito discutível?
+    prova = B["prova"]
+    estado = {"conceito": c["termo"], "nucleo": texto_puro(A["nucleo"])[:8000],
+              "prova": {f"q{i}": {"q": q["q"], "alts": q["alts"], "gabarito": q["alts"][q["correta"]]} for i, q in enumerate(prova)}}
+    perg = {"status": {"type": "choice", "instructions": "Qual é o status do que o texto nucleo afirma, na área do conceito?",
+                       "criteria": {"estabelecido": "conhecimento aceito, em livro-texto, com evidência replicada ou fato documentado",
+                                    "emergente": "evidência séria e replicada, mas recente",
+                                    "controverso": "afirma como fato algo que especialistas competentes disputam",
+                                    "especulativo": "afirma como fato hipótese sem teste decisivo"}}}
+    perg.update({f"q{i}": {"type": "noul", "instructions": f"A questão prova.q{i} tem gabarito errado ou mais de uma alternativa defensável?",
+                           "criteria": {"true": "gabarito errado ou ambíguo", "false": "uma única alternativa correta e o gabarito está certo"}}
+                 for i in range(len(prova))})
+    r = jev(estado, perg, "jev-conceito", id_)
+    p = r.get("status", {}).get("probabilities", {})
+    if p.get("controverso", 0) + p.get("especulativo", 0) > 0.35:
+        return registrar_conceito(id_, "barrado", [f"JEV: núcleo com risco de não ter respaldo ({p})"], custo, saida={"A": A, "B": B})
+    boas = [q for i, q in enumerate(prova) if r.get(f"q{i}", {}).get("noul", 0) < 0.5]
+    avisos = [f"{len(prova) - len(boas)} questão(ões) cortadas por gabarito discutível"] if len(boas) < len(prova) else []
+    B["prova"] = boas if len(boas) >= 10 else prova
+
+    arq = RAIZ / "js" / "docs" / f"{id_}.js"
+    with _trava:   # um documento por vez no disco, para o build de um não ler o arquivo pela metade do outro
+        arq.write_text(js_doc(id_, c, A, B, fontes), encoding="utf-8")
+        ok = subprocess.run(["node", "build.js", "--checar"], cwd=RAIZ, capture_output=True, text=True)
+        erros = [l.strip() for l in ok.stdout.splitlines() if "ERRO" in l and f" {id_}:" in l] if ok.returncode else []
+        if erros:
+            arq.unlink()
+    if erros:
+        return registrar_conceito(id_, "barrado", erros, custo, saida={"A": A, "B": locals().get("B")})
+    return registrar_conceito(id_, "publicado", avisos, custo, len(fontes), saida={"A": A, "B": B})
+
+
+def registrar_conceito(id_, resultado, notas, custo, n_fontes=0, saida=None):
+    print(f"  {id_}: {resultado} · {n_fontes} fontes · US$ {custo:.4f}" + "".join(f"\n    - {x}" for x in notas))
+    if saida:   # o que o modelo escreveu fica para conferir, mesmo quando barrado
+        (DOSSIES / f"{id_}.saida.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding="utf-8")
+    with _trava_log, (PIPE / "conceitos.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps({"id": id_, "quando": agora(), "resultado": resultado, "notas": notas, "usd": round(custo, 5)}, ensure_ascii=False) + "\n")
+    return resultado
+
+
 # ── aprendizado e status ────────────────────────────────────────────────
 def aprender():
     avs = avaliacoes()
@@ -694,11 +1072,28 @@ def main():
         if "--todas" in flags:
             feitos = {p.stem for p in RASC.glob("*.json")} if RASC.exists() else set()
             ids = [c["id"] for c in idx["conceitos"] if c["doc"] and not c["licao"] and c["id"] not in feitos]
-        for i in ids:
+        def um(i):
             try:
                 gerar_licao(i, idx, seco="--seco" in flags, revisao_pro="--sem-revisao-pro" not in flags)
             except RuntimeError as e:   # uma falha de rede não derruba o lote inteiro
                 print(f"  {i}: falhou ({e}); siga com os outros e rode de novo depois")
+        with concurrent.futures.ThreadPoolExecutor(4) as ex:
+            list(ex.map(um, ids))
+    elif cmd in ("conceito", "dossie"):
+        idx = indice()
+        def um(i):
+            try:
+                if cmd == "dossie":
+                    d = dossie(i, idx)
+                    print(f"{i}: {d['wiki_pt']} / {d['wiki_en']} · {len(d['itens'])} itens · " + " | ".join(texto_puro(x['ref'])[:60] for x in d['itens'][2:6]))
+                else:
+                    gerar_conceito(i, idx, seco="--seco" in flags, retomar="--retomar" in flags)
+            except (RuntimeError, KeyError, StopIteration) as e:   # uma falha não derruba o lote
+                print(f"  {i}: falhou ({e!r}); rode de novo depois")
+        with concurrent.futures.ThreadPoolExecutor(6) as ex:
+            list(ex.map(um, ids))
+        if cmd == "conceito" and "--seco" not in flags:
+            print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-1])
     elif cmd == "grafo":
         gerar_grafo(seco="--seco" in flags)
     elif cmd == "triagem":

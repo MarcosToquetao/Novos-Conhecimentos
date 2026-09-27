@@ -1,0 +1,288 @@
+{
+ "id": "criptografia-assimetrica",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:29:37",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Dois primos combinam uma senha antes de trocar cartas secretas. Mas como combinar a senha com um desconhecido, sem nunca terem se encontrado?",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Até os anos 1970, toda cifra usava a mesma chave para trancar e destrancar. As duas pessoas precisavam combinar a senha antes, num encontro secreto. Em 1976, Diffie e Hellman mostraram que dá para fazer isso em praça pública.</p>"
+   },
+   {
+    "tipo": "comparar",
+    "a": "Chave simétrica",
+    "b": "Par de chaves",
+    "linhas": [
+     {
+      "aspecto": "O que se combina",
+      "a": "uma senha igual para os dois",
+      "b": "o destinatário publica uma chave, guarda outra"
+     },
+     {
+      "aspecto": "Quem consegue cifrar",
+      "a": "só quem sabe a senha",
+      "b": "qualquer um, com a chave pública"
+     },
+     {
+      "aspecto": "Quem consegue decifrar",
+      "a": "só quem sabe a senha",
+      "b": "só o dono da chave privada"
+     }
+    ],
+    "legenda": "O par de chaves acaba com a necessidade de um encontro secreto para cada par de pessoas.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "1. Gerar o par",
+      "texto": "O computador cria uma chave pública e uma chave privada a partir de um número secreto."
+     },
+     {
+      "nome": "2. Publicar",
+      "texto": "Você coloca a chave pública num diretório, como um endereço de e-mail."
+     },
+     {
+      "nome": "3. Trancar",
+      "texto": "Qualquer pessoa pode pegar sua chave pública e cifrar uma mensagem para você."
+     },
+     {
+      "nome": "4. Abrir",
+      "texto": "Só a sua chave privada consegue destrancar a mensagem. Ela fica guardada com você."
+     }
+    ],
+    "legenda": "A chave privada não fica num cofre no servidor. Ela é calculada a partir de um número secreto que só o dono conhece.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "1. Multiplicar",
+      "texto": "Pegue dois primos enormes e multiplique. A conta é rápida."
+     },
+     {
+      "nome": "2. Publicar",
+      "texto": "O produto vira parte da chave pública. Pode ser visto por todos."
+     },
+     {
+      "nome": "3. Fatorar",
+      "texto": "Para achar a chave privada, seria preciso descobrir os dois primos a partir do produto."
+     },
+     {
+      "nome": "4. Desistir",
+      "texto": "Essa conta é lenta demais com a tecnologia atual. O ataque não vale a pena."
+     }
+    ],
+    "legenda": "O truque é uma operação fácil de fazer e impraticável de desfazer.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Cifrar",
+    "b": "Assinar",
+    "linhas": [
+     {
+      "aspecto": "Quem usa qual chave",
+      "a": "qualquer um usa a pública do destinatário",
+      "b": "o dono usa a própria privada"
+     },
+     {
+      "aspecto": "O que garante",
+      "a": "confidencialidade: só o destinatário lê",
+      "b": "origem e integridade: só o dono assinou e nada mudou"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "enviar um e-mail criptografado",
+      "b": "assinar um contrato digital"
+     }
+    ],
+    "legenda": "O mesmo par de chaves serve para duas funções opostas.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Você quer mandar um arquivo grande para alguém. Qual é o uso típico da chave pública nessa tarefa?",
+    "alts": [
+     "Cifrar o arquivo inteiro com a chave pública do destinatário",
+     "Usar a chave pública só para combinar uma chave simétrica temporária, e depois trocar os dados com essa chave",
+     "Assinar o arquivo com a sua chave privada, sem cifrá-lo"
+    ],
+    "correta": 1,
+    "porque": "As contas com chave pública são pesadas. Quase sempre ela só combina uma chave simétrica rápida, que cifra o conteúdo de verdade.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um site publica sua chave pública num diretório. Um atacante copia essa chave. O que ele consegue fazer?",
+    "alts": [
+     "Decifrar as mensagens enviadas ao site",
+     "Nada, sem a chave privada correspondente a mensagem continua ilegível",
+     "Trancar mensagens com essa chave no lugar do site"
+    ],
+    "correta": 1,
+    "porque": "A chave pública pode ser vista e copiada. O que protege é a dificuldade de deduzir a privada a partir dela.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A cifra esconde o conteúdo, mas não esconde quem fala com quem. O cabeçalho da mensagem pode revelar remetente, destinatário, horário e programa usado.</p>"
+   }
+  ],
+  "fecho": "Como saber que aquela chave pública pertence mesmo a quem diz? Esse é o problema que as autoridades certificadoras tentam resolver. E há quem proponha fazer isso sem uma autoridade central, com blockchain."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 7: duas perguntas seguidas"
+ ],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.85,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.15,
+    "3": 0.83,
+    "4": 0.01
+   },
+   "confidence": 0.86
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0.03,
+    "consenso": 0.97,
+    "emergente": 0
+   },
+   "confidence": 0.95
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.12
+  }
+ },
+ "custo_usd": 0.00734
+}

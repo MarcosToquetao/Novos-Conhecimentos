@@ -1,0 +1,237 @@
+{
+ "id": "tardigrados",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:28:10",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Um animal microscópico pode ficar anos sem água, sem comida e sem oxigênio. Basta uma gota d'água para ele voltar a andar.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Esse estado se chama <strong>criptobiose</strong>: o metabolismo despenca, o corpo vira uma bolinha e o bicho espera. Não é morte, é suspensão.</p>"
+   },
+   {
+    "tipo": "estimar",
+    "q": "Na anidrobiose, a que porcentagem do normal cai o metabolismo do tardígrado?",
+    "unidade": "%",
+    "min": 0.0001,
+    "max": 1,
+    "escala": "log",
+    "resposta": 0.01,
+    "legenda": "A água do corpo cai a 1% do normal; o metabolismo fica abaixo de 0,01% do habitual.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Gatilho",
+      "texto": "perda de água, frio, falta de oxigênio, sal ou substâncias"
+     },
+     {
+      "nome": "Suspensão",
+      "texto": "metabolismo quase para, corpo vira tonel"
+     },
+     {
+      "nome": "Reanimação",
+      "texto": "com água, o animal volta a andar e a botar ovos"
+     }
+    ],
+    "legenda": "A criptobiose tem versões conforme o gatilho: anidrobiose, criobiose, anoxibiose, osmobiose, quimobiose.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que protege as células do tardígrado quando a água sai?",
+    "alts": [
+     "Trealose, um açúcar que forma uma película protetora",
+     "Proteínas desordenadas que formam uma matriz vítrea no citoplasma",
+     "Uma casca dura que impede a perda de água"
+    ],
+    "correta": 1,
+    "porque": "Os tardígrados produzem trealose, mas não o suficiente. Quem segura as estruturas celulares são proteínas sem forma fixa que se ligam às membranas.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Seca",
+    "b": "Radiação",
+    "linhas": [
+     {
+      "aspecto": "Proteção",
+      "a": "proteínas desordenadas",
+      "b": "proteína Dsup"
+     },
+     {
+      "aspecto": "Alvo",
+      "a": "membranas celulares",
+      "b": "DNA"
+     },
+     {
+      "aspecto": "Efeito",
+      "a": "evita que estruturas se despedacem",
+      "b": "impede que radicais hidroxila atinjam o DNA"
+     }
+    ],
+    "legenda": "Dois mecanismos diferentes para dois tipos de estresse.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Tardígrados não são extremófilos nem indestrutíveis. Eles toleram condições extremas por períodos curtos, e quanto mais tempo expostos, maior a chance de morrer.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a fama de indestrutível não se sustenta?",
+    "alts": [
+     "Porque eles morrem em qualquer condição extrema",
+     "Porque toleram condições extremas por pouco tempo e com chance crescente de morrer",
+     "Porque só sobrevivem no espaço, não na Terra"
+    ],
+    "correta": 1,
+    "porque": "Eles não são extremófilos: apenas aguentam o estresse por períodos curtos. Quanto mais tempo expostos, maior a chance de morrer.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "ordenar",
+    "q": "Qual é a ordem dos passos para saber se um tardígrado sobreviveu a um estresse?",
+    "itens": [
+     "Submeter o animal ao estresse",
+     "Medir se ele volta a se mexer",
+     "Verificar se ele bota ovos viáveis"
+    ],
+    "porque": "É assim que a área avalia sobrevivência: reanimação e reprodução, não aparência.",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "Essa capacidade de ligar e desligar o metabolismo não é igual para todos. Alguns tardígrados marinhos alternam formas conforme a estação. Isso se chama plasticidade fenotípica."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto",
+  "tela 6: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.22,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.01,
+    "3": 0.76,
+    "4": 0.23
+   },
+   "confidence": 0.8
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.03,
+    "consenso": 0.75,
+    "emergente": 0.21,
+    "especulacao": 0.01
+   },
+   "confidence": 0.65
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "consenso": 0.98,
+    "emergente": 0.02,
+    "especulacao": 0
+   },
+   "confidence": 0.97
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "consenso": 0.6,
+    "emergente": 0.39,
+    "especulacao": 0
+   },
+   "confidence": 0.45
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.07
+  }
+ },
+ "custo_usd": 0.00682
+}

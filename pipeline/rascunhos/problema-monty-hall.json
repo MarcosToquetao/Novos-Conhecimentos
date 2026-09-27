@@ -1,0 +1,269 @@
+{
+ "id": "problema-monty-hall",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:47",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Você escolhe uma porta. O apresentador abre outra, com uma cabra. Ele oferece trocar. A maioria das pessoas decide ficar. A maioria está errada.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Três portas. Uma esconde um carro, duas escondem cabras. Você escolhe a porta 1. O apresentador, que sabe onde está o carro, abre a porta 3 e mostra uma cabra. Vale a pena trocar para a porta 2?</p>"
+   },
+   {
+    "tipo": "estimar",
+    "q": "Depois que o apresentador abre a porta 3, qual a chance de o carro estar na porta 2?",
+    "unidade": "%",
+    "min": 0,
+    "max": 100,
+    "escala": "linear",
+    "resposta": 67,
+    "legenda": "Cerca de 67%, ou 2/3. A chance de estar na porta 1 continua 1/3.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Sempre ficar",
+    "b": "Sempre trocar",
+    "linhas": [
+     {
+      "aspecto": "Ganha quando",
+      "a": "acertou de primeira",
+      "b": "errou de primeira"
+     },
+     {
+      "aspecto": "Chance de acertar",
+      "a": "1/3",
+      "b": "2/3"
+     }
+    ],
+    "legenda": "Se você escolheu uma cabra, o apresentador é obrigado a abrir a outra cabra, e a porta que sobra esconde o carro.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a chance da porta 1 não sobe para 50% depois que a porta 3 é aberta?",
+    "alts": [
+     "Porque o apresentador sempre abre a porta 3",
+     "Porque ele escolhe com base no que sabe: a porta aberta depende da sua escolha inicial",
+     "Porque o carro foi colocado antes de você escolher"
+    ],
+    "correta": 1,
+    "porque": "Se o apresentador abrisse uma porta ao acaso, aí valeria o 50%. Ele usa o conhecimento para nunca abrir a porta do carro."
+   },
+   {
+    "tipo": "pontos",
+    "valor": 13,
+    "frase": "de cada 100 participantes escolheram trocar de porta.",
+    "legenda": "Estudo com 228 participantes. A intuição resiste.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Antes de escolher",
+      "texto": "Cada porta tem 1/3 de chance."
+     },
+     {
+      "nome": "Você escolhe a porta 1",
+      "texto": "A chance dela é 1/3. As outras duas somam 2/3."
+     },
+     {
+      "nome": "Apresentador abre a porta 3",
+      "texto": "Ele sabe onde está o carro e nunca abre a porta premiada."
+     },
+     {
+      "nome": "Porta 2 fechada",
+      "texto": "Os 2/3 que estavam nas duas portas se concentram nela."
+     }
+    ],
+    "legenda": "A porta aberta não é sorteio: o apresentador escolhe uma cabra.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A resposta de 2/3 depende de suposições: o carro é colocado ao acaso; o apresentador sempre abre uma porta com cabra e sempre oferece a troca. Sem isso, o número muda.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O apresentador tem preferência por abrir a porta da direita quando pode escolher, e abriu a porta 3. O que acontece com a chance de trocar?",
+    "alts": [
+     "Cai para 1/2, mas trocar ainda nunca é pior que ficar",
+     "Vira 2/3 do mesmo jeito",
+     "Fica pior que ficar, então é melhor não trocar"
+    ],
+    "correta": 0,
+    "porque": "Se ele sempre abre a direita quando tem escolha, a chance de trocar vira 1/2. Mesmo assim, trocar nunca é pior: a probabilidade de ganhar trocando é sempre pelo menos 1/2.",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "A resposta certa depende de como o apresentador se comporta. Esse é o coração da probabilidade condicional: o que você sabe muda o que você deve acreditar. Bayes formaliza isso."
+ },
+ "erros": [
+  "tela 2: resposta 67 não aparece no documento (número inventado?)"
+ ],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 1: trata de disputa ou evidência contestada (0.66); lição só ensina o núcleo estabelecido",
+  "tela 5: trata de disputa ou evidência contestada (0.61); lição só ensina o núcleo estabelecido",
+  "tela 5: o tipo visual não combina com o conteúdo (0.27); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.97,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.07,
+    "3": 0.89,
+    "4": 0.04
+   },
+   "confidence": 0.91
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.66
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.99,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.99
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.72
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.98,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0.02
+   },
+   "confidence": 0.97
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.65,
+    "emergente": 0.19,
+    "especulacao": 0.14,
+    "controverso": 0.02
+   },
+   "confidence": 0.54
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.61
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.97,
+    "emergente": 0,
+    "especulacao": 0.01,
+    "controverso": 0.02
+   },
+   "confidence": 0.96
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0,
+    "consenso": 0.97,
+    "controverso": 0.02
+   },
+   "confidence": 0.95
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.32
+  }
+ },
+ "custo_usd": 0.00714
+}

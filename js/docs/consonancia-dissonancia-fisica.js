@@ -1,0 +1,373 @@
+CONTEUDOS["consonancia-dissonancia-fisica"] = {
+termo: "Consonância e dissonância: a física do intervalo",
+area: "Música",
+subtitulo: "Consonância e dissonância são o contraste entre sons estáveis e sons tensos que sustenta toda a música tonal. A física das ondas sonoras explica por que alguns intervalos soam ásperos enquanto outros soam fundidos, e mostra que essa percepção começa já no ouvido interno.",
+prerequisitos: [
+ "Saber que som é vibração do ar que chega ao ouvido como uma onda.",
+ "Ter noção de que frequência é a velocidade da vibração, medida em hertz (Hz), e que notas diferentes têm frequências diferentes."
+],
+conexoes: [
+ {
+  "termo": "Temperamento igual",
+  "relacao": "O temperamento igual ajusta as frequências das notas para que todos os intervalos fiquem ligeiramente desafinados das razões simples, o que garante que a mesma escala funcione em qualquer tom."
+ },
+ {
+  "termo": "Timbre e série harmônica",
+  "relacao": "A consonância de um intervalo depende de quais harmônicos as duas notas compartilham, então mudar o timbre de um instrumento altera a aspereza percebida."
+ },
+ {
+  "termo": "Microtonalidade e escalas não ocidentais",
+  "relacao": "Muitas tradições musicais usam intervalos menores que um semitom, como o quarto de tom, que podem gerar batimentos fortes ou serem percebidos como consonantes por ouvintes acostumados."
+ },
+ {
+  "termo": "Batimentos acústicos e afinação por ouvido",
+  "relacao": "Quando duas notas quase coincidem em frequência, o batimento resultante é a pista física que músicos usam para afinar instrumentos de ouvido."
+ }
+],
+
+camadas: {
+
+nucleo: { minutos: 4, html: `
+<p class="abre">Toque um lá e um mi logo acima no piano. O som parece firme, redondo, e você quase ouve as duas notas como uma só. Agora toque o mesmo lá com o si bemol logo acima. O som fica áspero, instável, e o ouvido pede que algo se mova. A diferença entre esses dois intervalos é o contraste entre consonância e dissonância, e ele pode ser medido fisicamente.</p><p>Consonância é o que percebemos como estável e resolvido; dissonância é o que soa tenso e pede continuação<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Esses rótulos existem em praticamente toda tradição musical que tenha melodia e harmonia, embora cada cultura defina quais intervalos caem em cada grupo<sup class="cit"><a href="#f1">1</a></sup>.</p><h3>O que as ondas fazem quando soam juntas</h3><p>Cada nota musical é uma onda sonora com uma frequência, medida em hertz. Quando duas ondas soam ao mesmo tempo, suas amplitudes se somam. Se as cristas coincidem, o som fica mais forte; se uma crista encontra um vale, o som se cancela em parte. Como as duas frequências são diferentes, essa relação de fases muda o tempo todo, e a amplitude resultante sobe e desce em ciclos. Esse fenômeno é a flutuação de amplitude<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>.</p><p>O ouvido percebe essas flutuações de três maneiras, dependendo da velocidade. Até cerca de 20 flutuações por segundo, ouvimos um tremor lento chamado batimento. Entre 20 e 75 a 150 flutuações por segundo, o tremor é rápido demais para ser seguido e vira aspereza, uma sensação de rugosidade no som. Acima disso, o som parece um tom complexo e estável, sem batimento nem aspereza<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>.</p><p>A velocidade da flutuação é igual à diferença entre as duas frequências. Se as notas estão muito próximas, a flutuação é lenta e ouvimos batimento. Se estão na faixa intermediária, ouvimos aspereza. A dissonância sensorial é exatamente essa aspereza, e ela ocorre quando os componentes espectrais das duas notas se sobrepõem dentro de uma mesma faixa do ouvido interno, chamada banda crítica<sup class="cit"><a href="#f1">1</a></sup>.</p><h3>Por que a quinta soa limpa e a segunda menor, não</h3><p>Agora pense nos harmônicos. Uma corda vibrante produz não só a frequência fundamental, mas uma série de frequências múltiplas dela: 2x, 3x, 4x, e assim por diante. Cada nota real é uma mistura desses harmônicos. Quando soam duas notas, seus harmônicos também soam juntos, e alguns coincidem.</p><p>Na quinta justa, a razão de frequências é 3:2. Os harmônicos da nota mais aguda coincidem em grande parte com harmônicos da nota mais grave, então há poucos pares de parciais próximos o suficiente para gerar aspereza. Na segunda menor, a razão é bem mais complexa, e muitos harmônicos das duas notas ficam a pequenas distâncias uns dos outros, caindo dentro da mesma banda crítica. O resultado é aspereza<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>.</p><p>Essa explicação mostra que a dissonância não depende só do intervalo entre as fundamentais. Ela depende também do timbre, porque o timbre é a receita de harmônicos de cada instrumento<sup class="cit"><a href="#f1">1</a></sup>. O mesmo intervalo pode soar mais ou menos áspero em um violino e em um sino, que têm harmônicos diferentes.</p><div class="marca consenso"><span class="rot">Consenso</span><p>A aspereza de um intervalo é gerada por batimentos entre harmônicos que caem dentro da mesma banda crítica do ouvido. Isso é aceito na área e explica por que intervalos com razões de frequência simples, como 2:1 (oitava) e 3:2 (quinta), soam consonantes, enquanto os de razões complexas, como a segunda menor, soam ásperos.</p></div><h3>Nem tudo é física</h3><p>Apesar da base acústica, a definição exata de consonância e dissonância muda com a cultura e o período. No início do Renascimento, a quarta justa era considerada dissonante e precisava ser resolvida<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Hoje ela é chamada de consonância perfeita. Terças e sextas, que hoje soam estáveis, já foram proibidas como dissonâncias<sup class="cit"><a href="#f1">1</a></sup>.</p><p>A estimativa de tensão de um intervalo é mais estável entre ouvintes de formações diferentes do que a estimativa de agradabilidade. Em experimentos, a tensão percebida se correlaciona bem com a consonância mesmo quando a familiaridade cultural e a experiência musical variam, enquanto o prazer sentido muda bastante com a exposição<sup class="cit"><a href="#f3">3</a></sup><sup class="cit"><a href="#f4">4</a></sup>. Ou seja: a aspereza física define o quanto o som parece tenso. O quanto ele parece bonito depende do que você já ouviu.</p>
+` },
+
+aprofundamento: { minutos: 3, html: `
+<p>A pergunta sobre o que torna um intervalo consonante é antiga. Pitágoras observou que razões de números inteiros pequenos, como 2:1 e 3:2, soavam estáveis<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Durante séculos, essa foi a explicação principal. No século XIX, Helmholtz propôs que a dissonância vem do batimento entre harmônicos não coincidentes, e essa ideia se tornou a base da explicação moderna<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>.</p><p>Para testar essa explicação, pesquisadores mediram a atividade do sistema auditivo enquanto ouvintes escutavam intervalos. Registros do tronco encefálico mostraram que intervalos consonantes geram respostas neurais mais fortes e com maior saliência de altura do que intervalos dissonantes. A ordem dessa saliência neural segue a hierarquia que a teoria musical ocidental usa para classificar os intervalos<sup class="cit"><a href="#f5">5</a></sup>. O mesmo padrão aparece em respostas de fibras do nervo auditivo: intervalos consonantes produzem maior periodicidade e menor aspereza do que dissonantes<sup class="cit"><a href="#f6">6</a></sup>.</p><p>Esses resultados não provam que a música ocidental seja natural, mas mostram que a distinção entre consonância e dissonância tem correlato já nas primeiras etapas do processamento auditivo, antes de qualquer aprendizado musical explícito<sup class="cit"><a href="#f5">5</a></sup><sup class="cit"><a href="#f6">6</a></sup>.</p><p>Além das respostas neurais, modelos computacionais tentam prever o quanto um acorde soa consonante a partir de suas propriedades acústicas e culturais. Um modelo que combina aspereza, harmonicidade e familiaridade explica cerca de 62% da variação nas avaliações de ouvintes; uma versão revisada, que troca a medida de harmonicidade por outra e inclui um índice de familiaridade, chega a 73%<sup class="cit"><a href="#f7">7</a></sup><sup class="cit"><a href="#f8">8</a></sup>.</p><p>Esses modelos mostram que a percepção de consonância tem pelo menos quatro componentes: aspereza (ligada à banda crítica), harmonicidade (o quanto os harmônicos se alinham), familiaridade (o quanto o ouvinte já encontrou aquele tipo de som) e envelope espectral (a distribuição de energia entre os harmônicos)<sup class="cit"><a href="#f7">7</a></sup><sup class="cit"><a href="#f8">8</a></sup>.</p><table><thead><tr><th>Componente</th><th>O que mede</th><th>Origem</th></tr></thead><tbody><tr><td>Aspereza</td><td>Batimento entre harmônicos na banda crítica</td><td>Físico<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup></td></tr><tr><td>Harmonicidade</td><td>Alinhamento dos harmônicos com a série harmônica</td><td>Físico<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f7">7</a></sup></td></tr><tr><td>Familiaridade</td><td>Exposição prévia ao tipo de acorde</td><td>Cultural<sup class="cit"><a href="#f3">3</a></sup><sup class="cit"><a href="#f7">7</a></sup><sup class="cit"><a href="#f4">4</a></sup></td></tr><tr><td>Envelope espectral</td><td>Como a energia se distribui entre as frequências</td><td>Físico e perceptivo<sup class="cit"><a href="#f7">7</a></sup></td></tr></tbody></table><p>A distinção entre o que é inato e o que é aprendido aparece em estudos com bebês e com ouvintes de tradições não ocidentais. Bebês recém-nascidos e pessoas fora da cultura musical ocidental conseguem discriminar consonância de dissonância, o que sugere uma base biológica<sup class="cit"><a href="#f9">9</a></sup>. Mas a experiência altera drasticamente a forma como esses sons são processados e sentidos. A familiaridade cultural muda as correlações entre consonância, tensão e prazer<sup class="cit"><a href="#f3">3</a></sup><sup class="cit"><a href="#f4">4</a></sup>. Em um estudo com árabes israelenses, que ouvem tanto música árabe quanto ocidental, os participantes mostraram apenas internalização parcial das hierarquias tonais ocidentais, e até a diferença entre notas dentro e fora da escala foi menos nítida que em ouvintes judeus israelenses<sup class="cit"><a href="#f10">10</a></sup>.</p><p>A especialização do cérebro também depende de treino. Músicos processam quartos de tom de forma diferente de não músicos: em músicos, há especialização do hemisfério esquerdo para esses intervalos muito finos, enquanto em não músicos a atividade fica do lado direito<sup class="cit"><a href="#f11">11</a></sup>.</p><p>Finalmente, a própria noção de dissonância pode ser estendida. Em obras da compositora Sofia Gubaidulina, sons considerados dissonantes se aproximam do ruído branco, e a compositora os usa com função estrutural, resolvendo para consonâncias<sup class="cit"><a href="#f12">12</a></sup>. Isso mostra que a categoria não é fixa nem puramente sensorial: compositores a moldam de acordo com a intenção expressiva.</p>
+` },
+
+extensao: { minutos: 3, html: `
+<p>Entender a física por trás da consonância tem usos práticos. Luthiers e fabricantes de instrumentos ajustam a posição dos trastes ou dos furos para que os harmônicos fiquem alinhados com as notas da escala temperada, reduzindo batimentos indesejados. Em órgãos, o registro Voix céleste é construído com dois tubos ligeiramente desafinados para produzir batimento intencional<sup class="cit"><a href="#f1">1</a></sup>.</p><p>Na música de outras culturas, o batimento e a aspereza são recursos expressivos. O canto ganga da Bósnia, o drone da tambura indiana, o mijwiz do Oriente Médio e o gamelão da Indonésia exploram a aspereza como parte do timbre desejado<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Isso mostra que o que uma cultura evita como desafinação, outra pode cultivar como beleza.</p><p>A distinção entre aspereza e familiaridade também importa na produção musical. Ao misturar instrumentos, o arranjador pode escolher timbres que reforcem a consonância ou que criem tensão. Um acorde de sétima dominante, por exemplo, contém um trítono que gera tensão e pede resolução para a tônica<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. A cadência dominante-tônica funciona em parte por causa desse trítono, que é fisicamente áspero e culturalmente marcado como instável.</p><p>Na tecnologia de áudio, algoritmos de compressão e de síntese precisam levar em conta como o ouvido percebe a aspereza. Codificadores que removem componentes de frequência muito próximas umas das outras exploram o fato de que o ouvido não distingue esses componentes separadamente quando caem na mesma banda crítica. É a mesma física que explica a dissonância, aplicada para economizar dados.</p><p>Por fim, a pesquisa sobre consonância ajuda a entender desordens auditivas. Pessoas com perda auditiva coclear têm a diferença perceptual entre consonância e dissonância comprimida, porque as respostas do nervo auditivo perdem contraste<sup class="cit"><a href="#f6">6</a></sup>. Isso sugere que parte do prazer musical depende da integridade das primeiras etapas do processamento sonoro.</p>
+` }
+
+},
+
+sintese: {
+ "definicoes": [
+  {
+   "termo": "Consonância",
+   "def": "O que percebemos como estável e resolvido quando duas notas soam juntas."
+  },
+  {
+   "termo": "Dissonância",
+   "def": "O que soa tenso e pede continuação, sensação de aspereza no som."
+  },
+  {
+   "termo": "Batimento",
+   "def": "Tremor lento ouvido quando duas frequências próximas geram até cerca de 20 flutuações por segundo."
+  },
+  {
+   "termo": "Aspereza",
+   "def": "Rugosidade percebida quando as flutuações ocorrem entre 20 e 75 a 150 por segundo, faixa que o ouvido não consegue seguir."
+  },
+  {
+   "termo": "Banda crítica",
+   "def": "Faixa do ouvido interno onde componentes espectrais que se sobrepõem geram aspereza."
+  },
+  {
+   "termo": "Harmônicos",
+   "def": "Frequências múltiplas da fundamental que toda nota real produz, formando sua receita de timbre."
+  }
+ ],
+ "lembrar": [
+  "A diferença entre consonância e dissonância pode ser medida fisicamente pela velocidade das flutuações de amplitude entre as ondas.",
+  "A velocidade da flutuação é igual à diferença entre as duas frequências.",
+  "Até 20 flutuações por segundo ouvimos batimento; entre 20 e 75 a 150, ouvimos aspereza; acima disso, um tom estável.",
+  "A dissonância sensorial é a aspereza gerada quando harmônicos das duas notas caem dentro da mesma banda crítica.",
+  "Intervalos com razões de frequência simples, como 2:1 e 3:2, soam consonantes; razões complexas, como a segunda menor, soam ásperas.",
+  "O timbre muda a aspereza do mesmo intervalo, porque cada instrumento tem uma receita de harmônicos diferente."
+ ],
+ "confusoes": [
+  {
+   "erro": "A dissonância depende só do intervalo entre as fundamentais.",
+   "correcao": "Ela depende também do timbre, porque os harmônicos de cada instrumento se sobrepõem de modo diferente."
+  },
+  {
+   "erro": "Consonância e dissonância são categorias fixas, iguais em toda cultura e época.",
+   "correcao": "A definição exata muda com a cultura e o período. A quarta justa já foi dissonante e hoje é consonância perfeita."
+  },
+  {
+   "erro": "O que soa bonito é o mesmo que soa tenso.",
+   "correcao": "A tensão percebida se correlaciona bem com a aspereza física; o prazer sentido muda bastante com a exposição cultural."
+  },
+  {
+   "erro": "Como a explicação é física, a música ocidental seria natural e universal.",
+   "correcao": "Os resultados mostram correlato neural precoce, mas não provam que a hierarquia ocidental seja natural."
+  }
+ ],
+ "numeros": [
+  "A flutuação vira aspereza entre 20 e 75 a 150 por segundo.",
+  "A quinta justa tem razão de frequências 3:2; a oitava, 2:1.",
+  "Um modelo que combina aspereza, harmonicidade e familiaridade explica cerca de 62% da variação nas avaliações; a versão revisada chega a 73%.",
+  "Pessoas com perda auditiva coclear têm a diferença perceptual entre consonância e dissonância comprimida."
+ ]
+},
+
+flashcards: [
+ {
+  "f": "O que acontece com as amplitudes quando duas ondas soam juntas?",
+  "v": "Elas se somam. Quando as cristas coincidem o som fica mais forte, e quando uma crista encontra um vale o som se cancela em parte."
+ },
+ {
+  "f": "O que é a flutuação de amplitude?",
+  "v": "É o sobe e desce cíclico da amplitude resultante, causado pela mudança constante da relação de fases entre duas frequências diferentes."
+ },
+ {
+  "f": "Do que depende a velocidade da flutuação?",
+  "v": "Da diferença entre as duas frequências. Quanto maior a diferença, mais rápida é a flutuação."
+ },
+ {
+  "f": "Como o ouvido percebe as flutuações até cerca de 20 por segundo?",
+  "v": "Como um tremor lento chamado batimento."
+ },
+ {
+  "f": "O que ouvimos quando a flutuação ocorre entre 20 e 75 a 150 por segundo?",
+  "v": "Aspereza, uma sensação de rugosidade. O tremor é rápido demais para ser seguido."
+ },
+ {
+  "f": "O que ouvimos quando a flutuação passa dessa faixa?",
+  "v": "Um tom complexo e estável, sem batimento nem aspereza."
+ },
+ {
+  "f": "O que é a dissonância sensorial?",
+  "v": "É a aspereza que ocorre quando os componentes espectrais das duas notas se sobrepõem dentro da mesma banda crítica do ouvido interno."
+ },
+ {
+  "f": "O que são harmônicos?",
+  "v": "São as frequências múltiplas da fundamental que uma corda vibrante produz, como 2x, 3x, 4x. Toda nota real é uma mistura deles."
+ },
+ {
+  "f": "Por que a quinta justa soa limpa?",
+  "v": "Na razão 3:2, os harmônicos das duas notas coincidem em grande parte, então há poucos pares de parciais próximos o bastante para gerar aspereza."
+ },
+ {
+  "f": "Por que a segunda menor soa áspera?",
+  "v": "Sua razão é complexa e muitos harmônicos das duas notas ficam a pequenas distâncias, caindo dentro da mesma banda crítica."
+ },
+ {
+  "f": "O timbre muda a aspereza de um intervalo?",
+  "v": "Sim. O timbre é a receita de harmônicos do instrumento, então o mesmo intervalo pode soar mais ou menos áspero em um violino e em um sino."
+ },
+ {
+  "f": "A quarta justa sempre foi considerada consonante?",
+  "v": "Não. No início do Renascimento era dissonante e precisava ser resolvida. Hoje é chamada de consonância perfeita."
+ }
+],
+
+prova: [
+ {
+  "camada": "nucleo",
+  "q": "Por que o intervalo de quinta justa soa mais estável que a segunda menor?",
+  "alts": [
+   "Porque a quinta tem frequência mais grave",
+   "Porque na razão 3:2 os harmônicos coincidem em grande parte e geram pouca aspereza",
+   "Porque a segunda menor tem menos harmônicos",
+   "Porque a quinta é tocada com mais força"
+  ],
+  "correta": 1,
+  "porque": "Na quinta, a razão 3:2 faz os harmônicos coincidirem, deixando poucos parciais próximos o bastante para cair na mesma banda crítica. A alternativa A confunde altura com aspereza, que são coisas diferentes."
+ },
+ {
+  "camada": "nucleo",
+  "q": "O que determina a velocidade da flutuação de amplitude entre duas notas?",
+  "alts": [
+   "A soma das duas frequências",
+   "A diferença entre as duas frequências",
+   "O timbre do instrumento",
+   "A intensidade com que as notas são tocadas"
+  ],
+  "correta": 1,
+  "porque": "A velocidade da flutuação é igual à diferença entre as duas frequências. A soma é tentadora, mas não descreve o ciclo de reforço e cancelamento."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Em qual faixa de flutuações o ouvido percebe aspereza?",
+  "alts": [
+   "Até cerca de 20 por segundo",
+   "Entre 20 e 75 a 150 por segundo",
+   "Acima de 200 por segundo",
+   "Somente quando as notas estão na mesma frequência"
+  ],
+  "correta": 1,
+  "porque": "Nessa faixa o tremor é rápido demais para ser seguido e vira aspereza. Até 20 por segundo ainda ouvimos batimento, que é outra sensação."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Por que o mesmo intervalo pode soar mais áspero em um sino do que em um violino?",
+  "alts": [
+   "Porque o sino toca mais alto",
+   "Porque cada instrumento tem uma receita de harmônicos diferente, e isso muda a sobreposição na banda crítica",
+   "Porque o sino tem frequência fundamental mais baixa",
+   "Porque o violino não produz harmônicos"
+  ],
+  "correta": 1,
+  "porque": "O timbre é a receita de harmônicos, e ela altera quantos pares caem na banda crítica. A altura e a intensidade não explicam a aspereza."
+ },
+ {
+  "camada": "nucleo",
+  "q": "O que a aspereza física define, segundo os experimentos citados?",
+  "alts": [
+   "O quanto o som parece bonito",
+   "O quanto o som parece tenso",
+   "O quanto o som é familiar",
+   "O quanto o som é grave"
+  ],
+  "correta": 1,
+  "porque": "A tensão percebida se correlaciona bem com a consonância mesmo variando a cultura e a experiência. O prazer sentido, que muda com a exposição, é outra coisa."
+ },
+ {
+  "camada": "nucleo",
+  "q": "O que os harmônicos de uma corda vibrante são?",
+  "alts": [
+   "Frequências múltiplas da fundamental, como 2x e 3x",
+   "Apenas a frequência fundamental",
+   "Ruídos sem relação com a nota",
+   "Frequências que se cancelam sempre"
+  ],
+  "correta": 0,
+  "porque": "A corda produz a fundamental e uma série de múltiplos dela. A alternativa B ignora que toda nota real é uma mistura desses harmônicos."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "Que componentes um modelo de percepção de consonância combina?",
+  "alts": [
+   "Apenas a frequência fundamental",
+   "Aspereza, harmonicidade e familiaridade",
+   "Apenas o volume e a altura",
+   "Somente a cultura do ouvinte"
+  ],
+  "correta": 1,
+  "porque": "O modelo combina aspereza, harmonicidade e familiaridade. A familiaridade é cultural, enquanto aspereza e harmonicidade vêm das propriedades físicas do som."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "O que estudos com bebês e ouvintes de tradições não ocidentais sugerem?",
+  "alts": [
+   "Que a consonância só é percebida com treino musical",
+   "Que há uma base biológica para discriminar consonância e dissonância, alterada pela experiência",
+   "Que a música ocidental é natural e universal",
+   "Que a dissonância não existe em outras culturas"
+  ],
+  "correta": 1,
+  "porque": "Bebês e ouvintes fora da tradição ocidental discriminam consonância de dissonância, o que sugere base biológica. Mas os resultados não provam que a música ocidental seja natural; a experiência muda como esses sons são processados e sentidos."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "Como a definição de dissonância aparece na obra de Sofia Gubaidulina?",
+  "alts": [
+   "Como algo puramente físico e imutável",
+   "Como categoria moldável, usada com função estrutural e resolvida para consonâncias",
+   "Como algo que os compositores evitam sempre",
+   "Como sinônimo de silêncio"
+  ],
+  "correta": 1,
+  "porque": "Gubaidulina aproxima sons dissonantes do ruído branco e os usa de forma estrutural, resolvendo para consonâncias. Isso mostra que a categoria não é fixa nem só sensorial."
+ },
+ {
+  "camada": "extensao",
+  "q": "Por que o registro Voix céleste de um órgão soa como soa?",
+  "alts": [
+   "Porque tem dois tubos ligeiramente desafinados que produzem batimento intencional",
+   "Porque usa tubos de mesmo comprimento exato",
+   "Porque elimina todos os harmônicos",
+   "Porque toca apenas a fundamental"
+  ],
+  "correta": 0,
+  "porque": "Dois tubos ligeiramente desafinados geram batimento intencional, recurso expressivo construído a partir da mesma física da dissonância. Tubos idênticos não produziriam esse efeito."
+ },
+ {
+  "camada": "extensao",
+  "q": "O que pessoas com perda auditiva coclear apresentam em relação à consonância?",
+  "alts": [
+   "Diferença perceptual entre consonância e dissonância comprimida",
+   "Percepção mais aguda de batimentos",
+   "Nenhuma alteração na audição",
+   "Aumento da aspereza percebida"
+  ],
+  "correta": 0,
+  "porque": "As respostas do nervo auditivo perdem contraste, comprimindo a diferença perceptual. Isso sugere que parte do prazer musical depende da integridade das primeiras etapas do processamento sonoro."
+ }
+],
+
+fontes: [
+ {
+  "n": 1,
+  "tipo": "enciclopédia",
+  "ref": "Wikipédia (português), verbete 'Consonância e dissonância'. Consultado em 27/09/2026.",
+  "url": "https://pt.wikipedia.org/wiki/Conson%C3%A2ncia_e_disson%C3%A2ncia"
+ },
+ {
+  "n": 2,
+  "tipo": "enciclopédia",
+  "ref": "Wikipédia (inglês), verbete 'Consonance and dissonance'. Consultado em 27/09/2026.",
+  "url": "https://en.wikipedia.org/wiki/Consonance_and_dissonance"
+ },
+ {
+  "n": 3,
+  "tipo": "artigo",
+  "ref": "Imre Lahdelma, Tuomas Eerola. 'Cultural familiarity and musical expertise impact the pleasantness of consonance/dissonance but not its perceived tension'. <em>Scientific Reports</em>, 2020.",
+  "url": "https://doi.org/10.1038/s41598-020-65615-8"
+ },
+ {
+  "n": 4,
+  "tipo": "artigo",
+  "ref": "Imre Lahdelma, Tuomas Eerola. 'Exposure impacts the pleasantness of consonance/dissonance but not its perceived tension'. 2019.",
+  "url": "https://doi.org/10.31234/osf.io/fmxpw"
+ },
+ {
+  "n": 5,
+  "tipo": "artigo",
+  "ref": "Gavin M. Bidelman, Ananthanarayan Krishnan. 'Neural Correlates of Consonance, Dissonance, and the Hierarchy of Musical Pitch in the Human Brainstem'. <em>Journal of Neuroscience</em>, 2009.",
+  "url": "https://doi.org/10.1523/jneurosci.3900-09.2009"
+ },
+ {
+  "n": 6,
+  "tipo": "artigo",
+  "ref": "Gavin M. Bidelman, Michael G. Heinz. 'Auditory-nerve responses predict pitch attributes related to musical consonance-dissonance for normal and impaired hearing'. <em>The Journal of the Acoustical Society of America</em>, 2011.",
+  "url": "https://doi.org/10.1121/1.3605559"
+ },
+ {
+  "n": 7,
+  "tipo": "artigo",
+  "ref": "Tuomas Eerola, Imre Lahdelma. 'The Anatomy of Consonance/Dissonance: Evaluating Acoustic and Cultural Predictors Across Multiple Datasets with Chords'. <em>Music &amp; Science</em>, 2021.",
+  "url": "https://doi.org/10.1177/20592043211030471"
+ },
+ {
+  "n": 8,
+  "tipo": "artigo",
+  "ref": "Tuomas Eerola, Imre Lahdelma. 'The Anatomy of Consonance/Dissonance: Evaluating Acoustic and Cultural Predictors Across Multiple Datasets with Chords'. 2020.",
+  "url": "https://doi.org/10.31219/osf.io/6aqhx"
+ },
+ {
+  "n": 9,
+  "tipo": "artigo",
+  "ref": "Paula Virtala, Mari H. Tervaniemi. 'Neurocognition of Major-Minor and Consonance-Dissonance'. <em>Music Perception An Interdisciplinary Journal</em>, 2017.",
+  "url": "https://doi.org/10.1525/mp.2017.34.4.387"
+ },
+ {
+  "n": 10,
+  "tipo": "artigo",
+  "ref": "Roni Granot, Neta B. Maimon. 'Consonance Dissonance and Cadences'. <em>Music Perception An Interdisciplinary Journal</em>, 2023.",
+  "url": "https://doi.org/10.1525/mp.2023.40.4.293"
+ },
+ {
+  "n": 11,
+  "tipo": "artigo",
+  "ref": "Alice Mado Proverbio, Andrea Orlandi, Francesca Pisanu. 'Brain processing of consonance/dissonance in musicians and controls: a hemispheric asymmetry revisited'. <em>European Journal of Neuroscience</em>, 2016.",
+  "url": "https://doi.org/10.1111/ejn.13330"
+ },
+ {
+  "n": 12,
+  "tipo": "artigo",
+  "ref": "Noah Kahrs. 'Consonance, Dissonance, and Formal Proportions in Two Works by Sofia Gubaidulina'. <em>Music Theory Online</em>, 2020.",
+  "url": "https://doi.org/10.30535/mto.26.2.7"
+ },
+ {
+  "n": 13,
+  "tipo": "artigo",
+  "ref": "Yuko Arthurs, Imre Lahdelma, Tuomas Eerola. 'The influence of consonance–dissonance contrasts on perceived pleasantness of concluding tonic chords in short chord sequences'. <em>Psychology of Music</em>, 2026.",
+  "url": "https://doi.org/10.1177/03057356251405848"
+ }
+],
+
+fronteira: [{"tema": "O papel da familiaridade na percepção de consonância", "html": "<p>Quanto da consonância é inato e quanto é aprendido continua em debate. Estudos mostram que a familiaridade cultural afeta drasticamente a agradabilidade, mas não a tensão percebida<sup class=\"cit\"><a href=\"#f3\">3</a></sup><sup class=\"cit\"><a href=\"#f4\">4</a></sup>. A questão de como a exposição molda o sistema auditivo ao longo do tempo ainda não tem resposta fechada.</p>"}, {"tema": "Especialização hemisférica para intervalos microtonais", "html": "<p>Músicos processam quartos de tom com especialização do hemisfério esquerdo, enquanto não músicos usam o direito<sup class=\"cit\"><a href=\"#f11\">11</a></sup>. Se isso reflete um treino específico ou uma predisposição que leva à música ainda é uma questão em aberto.</p>"}, {"tema": "Efeito de contraste entre dissonância e consonância", "html": "<p>Testou-se se uma dissonância antecedente torna a consonância seguinte mais agradável. Os resultados mostraram o oposto: mais dissonância levou a menor agradabilidade da consonância final<sup class=\"cit\"><a href=\"#f13\">13</a></sup>. O mecanismo desse efeito ainda está sendo investigado.</p>"}],
+};

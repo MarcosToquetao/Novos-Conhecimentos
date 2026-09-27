@@ -1,0 +1,307 @@
+{
+ "id": "efeito-doppler",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:29:20",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Uma ambulância passa na rua com a sirene ligada. Enquanto ela se aproxima, o som parece mais agudo. Depois que se afasta, fica mais grave. Nada mudou no aparelho que produz o som.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Christian Doppler descreveu o efeito em 1842: a frequência que você percebe depende do movimento relativo entre a fonte e você. Em 1845, Buys Ballot pôs trompetistas num vagão puxado por uma locomotiva e ouviu o tom subir na aproximação e cair no afastamento.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Fonte parada",
+      "texto": "As cristas saem todas do mesmo ponto e chegam com intervalos iguais."
+     },
+     {
+      "nome": "Fonte se aproxima",
+      "texto": "Cada crista nova sai de um ponto um pouco mais perto de você do que a anterior."
+     },
+     {
+      "nome": "Intervalo menor",
+      "texto": "O tempo entre chegadas diminui, então a frequência percebida sobe."
+     }
+    ],
+    "legenda": "A velocidade da onda no ar não muda. O que muda é o espaçamento entre as cristas que chegam ao seu ouvido.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Passagem perto",
+    "b": "Passagem longe",
+    "linhas": [
+     {
+      "aspecto": "Ângulo entre linha de visada e direção",
+      "a": "gira rápido",
+      "b": "gira devagar"
+     },
+     {
+      "aspecto": "Componente radial",
+      "a": "cai de repente",
+      "b": "cai aos poucos"
+     },
+     {
+      "aspecto": "Tom da sirene",
+      "a": "agudo até a passagem e cai de forma abrupta",
+      "b": "desliza devagar para grave"
+     }
+    ],
+    "legenda": "A componente do movimento ao longo da linha que liga fonte e observador é que importa. Perto, o cosseno do ângulo varia mais rápido.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o tom da sirene desliza aos poucos, em vez de pular de um valor para outro de uma vez?",
+    "alts": [
+     "O aparelho muda de frequência durante a passagem",
+     "O que conta é a componente do movimento ao longo da linha que liga a fonte ao observador, e ela varia de forma contínua",
+     "O ar dentro do carro muda a velocidade do som"
+    ],
+    "correta": 1,
+    "porque": "Só a componente ao longo da linha de visada entra no efeito. Conforme o ângulo gira, essa componente muda devagar ou depressa, e o tom acompanha."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Som",
+    "b": "Luz",
+    "linhas": [
+     {
+      "aspecto": "Meio",
+      "a": "precisa de ar",
+      "b": "não precisa de meio"
+     },
+     {
+      "aspecto": "Velocidades medidas em relação a",
+      "a": "o ar",
+      "b": "o outro corpo, só a velocidade relativa"
+     },
+     {
+      "aspecto": "Fonte se aproxima",
+      "a": "tom mais agudo",
+      "b": "linhas espectrais deslocadas para o azul"
+     },
+     {
+      "aspecto": "Fonte se afasta",
+      "a": "tom mais grave",
+      "b": "linhas deslocadas para o vermelho"
+     }
+    ],
+    "legenda": "Fizeau mostrou em 1848 que o efeito vale para ondas eletromagnéticas. Por isso às vezes se chama efeito Doppler-Fizeau.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma estrela tem linhas espectrais deslocadas para o vermelho. O que isso indica?",
+    "alts": [
+     "A estrela está se afastando de nós",
+     "A estrela esfriou e mudou de cor",
+     "O elemento químico dentro dela mudou"
+    ],
+    "correta": 0,
+    "porque": "Frequência percebida menor significa cor deslocada para o vermelho. O deslocamento das linhas revela a velocidade da estrela."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Transversal",
+      "texto": "Fonte se move perpendicular à linha de visada. A fórmula clássica prevê frequência igual."
+     },
+     {
+      "nome": "Relatividade",
+      "texto": "A dilatação do tempo em alta velocidade causa um desvio pequeno mesmo na transversal."
+     },
+     {
+      "nome": "Medida",
+      "texto": "Em 1963, Kündig usou uma centrífuga rápida e o efeito Mössbauer, e o resultado bateu com a previsão dentro de 1,1%."
+     }
+    ],
+    "legenda": "Em alta velocidade, só a versão relativística do efeito vale. Ela prevê um desvio mesmo quando não há componente radial.",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>No ultrassom Doppler, o aparelho mede a velocidade do sangue usando a componente do movimento ao longo do feixe.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "Quando a velocidade fica alta, a fórmula clássica não serve mais. O que muda na relatividade restrita, e por que o tempo de quem se move passa diferente?"
+ },
+ "erros": [],
+ "avisos": [
+  "tela 1: 44 palavras (máximo 40)"
+ ],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.68,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.02,
+    "2": 0.29,
+    "3": 0.69,
+    "4": 0
+   },
+   "confidence": 0.73
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.18
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.7
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.04
+  }
+ },
+ "custo_usd": 0.00763
+}

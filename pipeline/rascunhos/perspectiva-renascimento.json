@@ -1,0 +1,262 @@
+{
+ "id": "perspectiva-renascimento",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:29:17",
+ "modelo": "deepseek-flash",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Você olha um quadro do século XV e tem a impressão de ver uma praça através de uma janela. As pedras do chão recuam, as casas encolhem. Essa sensação não é natural: foi construída com régua e compasso.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>A <strong>perspectiva linear</strong> é um método geométrico para representar profundidade numa superfície plana. Linhas paralelas convergem para um ponto de fuga na linha do horizonte.</p>"
+   },
+   {
+    "tipo": "estimar",
+    "q": "Se um objeto se afasta o dobro da distância, quantas vezes menor fica sua imagem na retina?",
+    "unidade": "vezes",
+    "min": 0.1,
+    "max": 10,
+    "escala": "linear",
+    "resposta": 0.5,
+    "legenda": "Metade. Essa relação óptica é a base de todo o sistema.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Alhazen, ano 1000",
+      "texto": "Demonstra que a luz se projeta em forma cônica no olho."
+     },
+     {
+      "nome": "Brunelleschi, 1415-1420",
+      "texto": "Em Florença, usa um espelho para comparar pintura e edifício real."
+     },
+     {
+      "nome": "Alberti, 1435",
+      "texto": "Publica Della Pittura e explica o método com triângulos semelhantes."
+     },
+     {
+      "nome": "Piero della Francesca, c. 1474",
+      "texto": "Em De Prospectiva Pingendi, mostra como representar sólidos em qualquer posição."
+     }
+    ],
+    "legenda": "A técnica nasceu de uma base óptica e foi codificada por artistas e matemáticos.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a mesa redonda, vista de lado, parece uma elipse achatada?",
+    "alts": [
+     "Porque o artista escolheu distorcer a forma",
+     "Por causa do escorço: a redução das dimensões na direção da linha de visão",
+     "Porque a mesa está longe e perde detalhes"
+    ],
+    "correta": 1,
+    "porque": "O escorço é o que faz o espaço pictórico parecer contínuo. Sem ele, as figuras pareceriam recortadas e flutuantes."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Antes da perspectiva",
+    "b": "Com perspectiva linear",
+    "linhas": [
+     {
+      "aspecto": "Cena",
+      "a": "vários episódios ao mesmo tempo",
+      "b": "cena única, de um ponto de vista fixo"
+     },
+     {
+      "aspecto": "Tamanho das figuras",
+      "a": "indica importância",
+      "b": "indica distância"
+     },
+     {
+      "aspecto": "Espaço",
+      "a": "figuras empilhadas",
+      "b": "espaço contínuo e mensurável"
+     }
+    ],
+    "legenda": "A técnica mudou a própria ideia de imagem.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "curva",
+    "forma": "linear",
+    "eixo_x": "distância",
+    "eixo_y": "tamanho na imagem",
+    "marco": {
+     "x": 0.5,
+     "rotulo": "dobro da distância, metade do tamanho"
+    },
+    "legenda": "A relação entre distância e tamanho aparente é a base do método.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a perspectiva linear funciona melhor vista de um ponto específico?",
+    "alts": [
+     "Porque o quadro foi pintado para ser visto de qualquer ângulo",
+     "Porque o cérebro corrige automaticamente qualquer desvio",
+     "Porque pequenos desvios do centro de projeção produzem distorções perceptíveis"
+    ],
+    "correta": 2,
+    "porque": "Estudos mostram que a hipótese de que o cérebro compensa o ponto de vista não se confirmou. A percepção sofre transformações previsíveis quando o observador se move."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Artistas nem sempre seguem as regras ao pé da letra. Cézanne mudava o ponto de vista durante a pintura. Em paisagens, a parte central costuma aparecer ampliada e a periférica comprimida, comparadas a uma foto da mesma cena.</p>"
+   }
+  ],
+  "fecho": "Como uma pintura consegue enganar o olho a ponto de parecer um objeto real? Isso tem nome: trompe-l'œil."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 1: soa como IA (0.53)",
+  "tela 2: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto",
+  "tela 6: o tipo visual não combina com o conteúdo (0.43); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.97,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.05,
+    "3": 0.94,
+    "4": 0.01
+   },
+   "confidence": 0.95
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "consenso": 0.97,
+    "emergente": 0,
+    "controverso": 0.02
+   },
+   "confidence": 0.95
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.15,
+    "consenso": 0.79,
+    "emergente": 0.01,
+    "controverso": 0.05
+   },
+   "confidence": 0.73
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.36
+  }
+ },
+ "custo_usd": 0.00671
+}

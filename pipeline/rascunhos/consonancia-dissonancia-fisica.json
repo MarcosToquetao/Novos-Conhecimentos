@@ -1,0 +1,234 @@
+{
+ "id": "consonancia-dissonancia-fisica",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:33",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Toque um lá e o mi logo acima no piano: o som fica firme, redondo, quase uma nota só. Toque o mesmo lá com o si bemol: o som raspa, incomoda, e o ouvido pede que algo se resolva.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Consonância é o que percebemos como <strong>estável e resolvido</strong>. Dissonância é o que soa tenso e pede continuação. Quase toda tradição musical com melodia tem esses dois rótulos, ainda que cada cultura escolha intervalos diferentes para cada grupo.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Batimento",
+      "texto": "Até 20 flutuações por segundo, o ouvido distingue um tremor lento."
+     },
+     {
+      "nome": "Aspereza",
+      "texto": "Entre 20 e 75 a 150 flutuações por segundo, o tremor vira rugosidade."
+     },
+     {
+      "nome": "Tom estável",
+      "texto": "Acima disso, o som parece um tom complexo, sem tremor nem aspereza."
+     }
+    ],
+    "legenda": "A velocidade da flutuação é a diferença entre as duas frequências.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Quinta justa (3:2)",
+    "b": "Segunda menor",
+    "linhas": [
+     {
+      "aspecto": "Razão de frequências",
+      "a": "simples (3:2)",
+      "b": "complexa"
+     },
+     {
+      "aspecto": "Harmônicos",
+      "a": "muitos coincidem",
+      "b": "quase se chocam"
+     },
+     {
+      "aspecto": "Sensação",
+      "a": "limpa, estável",
+      "b": "áspera, tensa"
+     }
+    ],
+    "legenda": "Na quinta, poucos harmônicos caem na mesma banda crítica. Na segunda menor, muitos pares ficam a pequenas distâncias e geram aspereza.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a quinta justa soa limpa e a segunda menor soa áspera?",
+    "alts": [
+     "A quinta tem razão de frequências simples, então poucos harmônicos caem na mesma banda crítica",
+     "A segunda menor tem frequências mais altas, e o ouvido cansa com sons agudos",
+     "A quinta é tocada com mais força pelos instrumentos"
+    ],
+    "correta": 0,
+    "porque": "Razões simples como 3:2 alinham harmônicos; razões complexas deixam muitos pares a pequenas distâncias, gerando aspereza."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Tensão",
+    "b": "Prazer",
+    "linhas": [
+     {
+      "aspecto": "Depende de",
+      "a": "aspereza física",
+      "b": "exposição cultural"
+     },
+     {
+      "aspecto": "Varia com treino",
+      "a": "pouco",
+      "b": "muito"
+     },
+     {
+      "aspecto": "Medida em experimentos",
+      "a": "correlação estável entre ouvintes",
+      "b": "muda bastante entre grupos"
+     }
+    ],
+    "legenda": "A tensão percebida acompanha a aspereza. O quanto o som agrada muda com o que você já ouviu.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um mesmo intervalo soa mais áspero num violino que num sino. O que isso indica?",
+    "alts": [
+     "O violino está desafinado nesse intervalo",
+     "A aspereza depende do timbre, porque cada instrumento tem uma receita diferente de harmônicos",
+     "O ouvido se cansa mais rápido com sons de violino"
+    ],
+    "correta": 1,
+    "porque": "A dissonância não depende só das fundamentais. Os harmônicos de cada instrumento se sobrepõem de modo diferente dentro da banda crítica."
+   }
+  ],
+  "fecho": "Se a aspereza depende dos harmônicos, como um instrumento escolhe quais harmônicos carregar? Isso tem nome: timbre e série harmônica."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 1: soa como IA (0.52)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.89,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.11,
+    "3": 0.88,
+    "4": 0.01
+   },
+   "confidence": 0.9
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.02,
+    "consenso": 0.9,
+    "controverso": 0.07,
+    "especulacao": 0.01
+   },
+   "confidence": 0.86
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.06,
+    "consenso": 0.92,
+    "controverso": 0.02,
+    "especulacao": 0
+   },
+   "confidence": 0.89
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.82
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.02,
+    "consenso": 0.97,
+    "controverso": 0.01,
+    "especulacao": 0
+   },
+   "confidence": 0.96
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.17,
+    "consenso": 0.8,
+    "controverso": 0.03,
+    "especulacao": 0
+   },
+   "confidence": 0.73
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.13
+  }
+ },
+ "custo_usd": 0.00763
+}

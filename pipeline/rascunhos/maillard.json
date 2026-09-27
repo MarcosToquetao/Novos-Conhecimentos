@@ -1,0 +1,231 @@
+{
+ "id": "maillard",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:17:25",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Aquele cheiro de pão saindo do forno, a casquinha dourada do frango assado e o sabor de um bife grelhado vêm todos da mesma química: o calor encontrando proteínas e açúcares.",
+  "telas": [
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "União",
+      "texto": "o grupo amino do aminoácido encontra o grupo carbonila do açúcar e libera água"
+     },
+     {
+      "nome": "Rearranjo",
+      "texto": "a molécula instável se reorganiza no rearranjo de Amadori e vira uma cetosamina"
+     },
+     {
+      "nome": "Ramificação",
+      "texto": "a partir daí a reação se divide em vários caminhos ao mesmo tempo"
+     },
+     {
+      "nome": "Produtos",
+      "texto": "surgem redutonas, fragmentos de aroma e polímeros castanhos chamados melanoidinas"
+     }
+    ],
+    "legenda": "O mecanismo geral foi proposto por John E. Hodge em 1953 e é aceito até hoje.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que pão, café e chocolate têm aromas tão diferentes, se todos passam pela mesma reação?",
+    "alts": [
+     "O resultado muda conforme os aminoácidos, açúcares, temperatura, tempo e presença de ar",
+     "Cada alimento usa uma reação química completamente diferente",
+     "O aroma vem do açúcar que sobrou depois do cozimento"
+    ],
+    "correta": 0,
+    "porque": "A reação é uma rede com centenas de caminhos. Cada alimento tem sua combinação de reagentes e condições, e por isso gera um conjunto próprio de moléculas de aroma."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Maillard",
+    "b": "Caramelização",
+    "linhas": [
+     {
+      "aspecto": "O que reage",
+      "a": "aminoácido e açúcar redutor",
+      "b": "só o açúcar, que se quebra pelo calor"
+     },
+     {
+      "aspecto": "O que produz",
+      "a": "melanoidinas, pirazinas, tióis",
+      "b": "escurecimento dos açúcares"
+     },
+     {
+      "aspecto": "Quando acontece",
+      "a": "acelera entre 140 e 165 °C",
+      "b": "em temperaturas mais altas"
+     }
+    ],
+    "legenda": "São processos separados, mas acontecem ao mesmo tempo em muitos alimentos.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A reação não fica restrita à cozinha. Dentro do corpo, ela acontece devagar entre a glicose e proteínas de longa duração, como o colágeno. Quanto mais tempo uma proteína vive, mais produtos de Maillard se acumulam nela.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Em pessoas com diabetes, o que acelera o acúmulo de produtos de Maillard no colágeno da pele?",
+    "alts": [
+     "A glicose alta no sangue ao longo dos anos",
+     "O calor do corpo, que é maior que o normal",
+     "Uma mutação no colágeno causada pela doença"
+    ],
+    "correta": 0,
+    "porque": "Estudos mediram níveis até três vezes maiores de produtos de Maillard no colágeno da pele de diabéticos do que em não diabéticos. O diabetes funciona como um envelhecimento químico acelerado."
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1912,
+      "texto": "Louis-Camille Maillard descreve o fenômeno, tentando reproduzir a síntese de proteínas no laboratório"
+     },
+     {
+      "ano": 1953,
+      "texto": "John E. Hodge propõe o mecanismo que ainda hoje é a base do entendimento da reação"
+     },
+     {
+      "ano": 1990,
+      "texto": "pesquisadores mostram que a reação também acontece dentro do corpo, entre glicose e colágeno"
+     }
+    ],
+    "legenda": "Mais de um século entre ver o fenômeno e entender o mecanismo.",
+    "marca": "consenso",
+    "fonte": 2
+   }
+  ],
+  "fecho": "Se essa reação acontece devagar dentro do corpo, o que faz uma enzima acelerar uma reação sem se gastar? Isso tem nome: catálise e energia de ativação."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.95,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.06,
+    "3": 0.93,
+    "4": 0.01
+   },
+   "confidence": 0.94
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ambigua_2": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "consenso": 0.99,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 0.97
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "consenso": 0.99,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.95
+  }
+ },
+ "custo_usd": 0.01364
+}

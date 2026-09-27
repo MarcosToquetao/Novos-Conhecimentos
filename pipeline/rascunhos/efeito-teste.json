@@ -1,0 +1,326 @@
+{
+ "id": "efeito-teste",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:48",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Duas pessoas estudam a mesma lista por uma hora. Uma relê quatro vezes. A outra lê uma vez e tenta lembrar nas outras três, sem olhar. No mesmo dia, a primeira lembra mais. Uma semana depois, a segunda lembra bem mais.",
+  "telas": [
+   {
+    "tipo": "comparar",
+    "a": "Relê 4 vezes",
+    "b": "Lê 1 vez e tenta lembrar 3",
+    "linhas": [
+     {
+      "aspecto": "No mesmo dia",
+      "a": "lembra mais",
+      "b": "lembra menos"
+     },
+     {
+      "aspecto": "Uma semana depois",
+      "a": "lembra menos",
+      "b": "lembra bem mais"
+     }
+    ],
+    "legenda": "O esforço de puxar a informação da memória faz com que ela dure mais que a releitura. Isso é o efeito de teste."
+   },
+   {
+    "tipo": "curva",
+    "forma": "u",
+    "eixo_x": "tempo desde o estudo",
+    "eixo_y": "quanto você lembra",
+    "marco": {
+     "x": 0.15,
+     "rotulo": "logo após estudar"
+    },
+    "legenda": "Logo após estudar, quem relê lembra tanto quanto quem testou. A vantagem do teste cresce com o tempo.",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que tentar lembrar sem consultar fortalece mais a memória do que reler?",
+    "alts": [
+     "Porque você passa mais tempo com o material",
+     "Porque o esforço de recuperar constrói múltiplas rotas de acesso à informação",
+     "Porque a releitura cansa e distrai"
+    ],
+    "correta": 1,
+    "porque": "Ao puxar a informação da memória, o cérebro ativa a resposta certa e ideias relacionadas. Isso cria mais caminhos para chegar ao que você quer lembrar depois."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Pistas fortes",
+    "b": "Pistas fracas",
+    "linhas": [
+     {
+      "aspecto": "Exemplo",
+      "a": "Torrada: Pão",
+      "b": "Cesta: Pão"
+     },
+     {
+      "aspecto": "Na hora",
+      "a": "ajudam mais",
+      "b": "ajudam menos"
+     },
+     {
+      "aspecto": "Dias depois",
+      "a": "lembrança pior",
+      "b": "lembrança melhor"
+     }
+    ],
+    "legenda": "Quanto mais difícil lembrar na hora, maior o benefício depois, desde que a lembrança seja bem-sucedida.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Tentativa",
+      "texto": "você gera uma resposta, mesmo errada"
+     },
+     {
+      "nome": "Feedback",
+      "texto": "aparece a resposta correta"
+     },
+     {
+      "nome": "Aprendizado",
+      "texto": "o erro prepara o cérebro para fixar o certo"
+     }
+    ],
+    "legenda": "Até uma tentativa que falha pode ajudar, desde que haja feedback em seguida.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um estudante relê o material várias vezes e sente que está aprendendo bem. Por que essa sensação engana?",
+    "alts": [
+     "Porque ele está lendo rápido demais",
+     "Porque a releitura dá fluência, mas não fortalece a memória de longo prazo como o teste",
+     "Porque o material é complexo demais"
+    ],
+    "correta": 1,
+    "porque": "A releitura faz o conteúdo parecer familiar, e essa fluência convence o estudante de que aprendeu. Mas o esforço de recuperar é o que constrói a retenção duradoura.",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
+    "tipo": "comparar",
+    "a": "Recordação livre",
+    "b": "Reconhecimento",
+    "linhas": [
+     {
+      "aspecto": "O que é",
+      "a": "tentar lembrar sem pistas",
+      "b": "escolher entre opções"
+     },
+     {
+      "aspecto": "Esforço",
+      "a": "maior",
+      "b": "menor"
+     },
+     {
+      "aspecto": "Benefício para a memória",
+      "a": "maior",
+      "b": "menor"
+     }
+    ],
+    "legenda": "Testes que exigem mais esforço de recuperar produzem ganhos maiores.",
+    "marca": "consenso",
+    "fonte": 8
+   },
+   {
+    "tipo": "comparar",
+    "a": "Material simples",
+    "b": "Material complexo",
+    "linhas": [
+     {
+      "aspecto": "Elementos",
+      "a": "poucos e isolados",
+      "b": "muitos e interagindo"
+     },
+     {
+      "aspecto": "Efeito de teste",
+      "a": "presente",
+      "b": "pode diminuir ou sumir"
+     },
+     {
+      "aspecto": "Estratégia",
+      "a": "testar fatos",
+      "b": "testar compreensão"
+     }
+    ],
+    "legenda": "Com material complexo, o esforço de recuperar compete com o esforço de entender. Perguntas de compreensão ajudam.",
+    "marca": "emergente",
+    "fonte": 9
+   }
+  ],
+  "fecho": "E se você tentar responder antes mesmo de estudar? O erro inicial pode preparar o cérebro para prestar atenção na resposta certa. Isso tem nome: efeito de pré-teste."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 5: soa como IA (0.57)",
+  "tela 7: soa como IA (0.52)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.94,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.07,
+    "3": 0.91,
+    "4": 0.02
+   },
+   "confidence": 0.92
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.99,
+    "controverso": 0.01,
+    "especulacao": 0
+   },
+   "confidence": 0.97
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.05,
+    "consenso": 0.93,
+    "controverso": 0.02,
+    "especulacao": 0
+   },
+   "confidence": 0.91
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.1,
+    "consenso": 0.88,
+    "controverso": 0.01,
+    "especulacao": 0.01
+   },
+   "confidence": 0.84
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "controverso": 0.12,
+    "emergente": 0.52,
+    "especulacao": 0.03,
+    "consenso": 0.33
+   },
+   "confidence": 0.37
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.93
+  }
+ },
+ "custo_usd": 0.00708
+}

@@ -1,7 +1,7 @@
 /* sw.js: cache offline do Novos Conhecimentos.
    Estratégia: cache-first para os arquivos do app (são estáticos e versionados),
    com atualização em segundo plano. VERSAO é atualizada sozinha pelo build.js. */
-const VERSAO = "nc-167f09e4";
+const VERSAO = "nc-c5dac25d";
 const ARQUIVOS = [
   "./", "./index.html", "./manifest.json",
   "./css/estilo.css",

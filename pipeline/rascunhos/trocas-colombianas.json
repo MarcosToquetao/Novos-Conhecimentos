@@ -1,0 +1,264 @@
+{
+ "id": "trocas-colombianas",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:27:59",
+ "modelo": "deepseek-flash",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1520, a capital asteca tinha cerca de 200 mil habitantes. No mesmo ano, um vírus para o qual ninguém ali tinha defesa matou muitos deles. Em poucas décadas, a população do México caiu de 20 milhões para pouco mais de um milhão.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p><strong>Intercâmbio colombiano</strong> é o nome do transporte em larga escala de plantas, animais, pessoas e doenças entre os hemisférios, iniciado depois de 1492.</p>"
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Doenças",
+      "nota": "varíola, sarampo, tifo, malária"
+     },
+     {
+      "nome": "Plantas",
+      "nota": "milho, batata, mandioca, tomate"
+     },
+     {
+      "nome": "Animais",
+      "nota": "cavalo, porco, boi, ovelha"
+     },
+     {
+      "nome": "Pessoas",
+      "nota": "europeus e africanos escravizados"
+     }
+    ],
+    "eixo": {
+     "topo": "mais letal",
+     "base": "menos letal"
+    },
+    "legenda": "O que atravessou o Atlântico. A parte mais destrutiva, a das doenças, foi involuntária.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "curva",
+    "forma": "queda",
+    "eixo_x": "tempo após 1492",
+    "eixo_y": "população indígena",
+    "marco": {
+     "x": 0.5,
+     "rotulo": "100 a 150 anos"
+    },
+    "legenda": "Morte de 80% a 95% da população indígena das Américas nas primeiras décadas após o contato.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a população indígena caiu tanto?",
+    "alts": [
+     "As doenças do Velho Mundo encontraram um povo sem defesa imunológica",
+     "Os europeus mataram a maioria em batalhas",
+     "Os indígenas foram expulsos de suas terras"
+    ],
+    "correta": 0,
+    "porque": "Varíola, sarampo e tifo mataram entre 80% e 95% da população em pouco mais de um século. Em Hispaniola, restaram menos de 500 habitantes de pelo menos 500 mil."
+   },
+   {
+    "tipo": "estimar",
+    "q": "Quantos milhões de africanos foram levados à força para as Américas entre 1492 e 1840?",
+    "unidade": "milhões",
+    "min": 1,
+    "max": 20,
+    "escala": "linear",
+    "resposta": 11.7,
+    "legenda": "No mesmo período, 3,4 milhões de europeus migraram para o Novo Mundo, a maioria por vontade própria.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que explica o crescimento do tráfico atlântico de escravizados?",
+    "alts": [
+     "A necessidade de mão de obra para plantar cana, café e arroz",
+     "A resistência africana à malária e febre amarela",
+     "A falta de europeus dispostos a migrar"
+    ],
+    "correta": 0,
+    "porque": "A queda da população indígena abriu espaço para plantações que exigiam muita mão de obra. Os africanos também resistiam melhor a doenças como malária, o que os tornava ainda mais procurados."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A batata, o milho e o tomate mudaram a alimentação do Velho Mundo. A mandioca virou cultura central na África. E cinco das 20 maiores culturas do mundo em 2007 são originárias da América.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pontos",
+    "valor": 25,
+    "frase": "de cada 100 pessoas que aumentaram a população da Afro-Eurásia entre 1700 e 1900 podem ser atribuídas à batata, estimam economistas.",
+    "legenda": "Estimativa de Nunn e Qian: a batata respondeu por 12% a 25% do crescimento populacional e explica 47% do aumento da urbanização.",
+    "marca": "consenso",
+    "fonte": 7
+   }
+  ],
+  "fecho": "Como micróbios e plantas viajaram junto com pessoas e transformaram para sempre a vida na Terra? A Peste Negra e a reorganização econômica mostram que epidemias já haviam redesenhado o mundo antes de 1492."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.37); troque de tipo ou use texto",
+  "tela 3: soa como IA (0.56)",
+  "tela 5: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto",
+  "tela 8: marcada consenso, JEV diz emergente (0.83)",
+  "tela 8: o tipo visual não combina com o conteúdo (0.30); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.1,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.86,
+    "4": 0.12
+   },
+   "confidence": 0.88
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "emergente": 0,
+    "consenso": 0.99,
+    "especulacao": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.03,
+    "controverso": 0.26,
+    "consenso": 0.71,
+    "especulacao": 0
+   },
+   "confidence": 0.61
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.83
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.07,
+    "controverso": 0.26,
+    "consenso": 0.67,
+    "especulacao": 0
+   },
+   "confidence": 0.55
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "emergente": 0.03,
+    "consenso": 0.96,
+    "especulacao": 0
+   },
+   "confidence": 0.94
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "consenso": 0.02,
+    "controverso": 0.14,
+    "especulacao": 0.01,
+    "emergente": 0.83
+   },
+   "confidence": 0.77
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.3
+  }
+ },
+ "custo_usd": 0.00741
+}

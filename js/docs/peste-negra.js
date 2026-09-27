@@ -1,0 +1,353 @@
+CONTEUDOS["peste-negra"] = {
+termo: "Peste Negra e reorganização econômica",
+area: "História",
+subtitulo: "Entre 1347 e 1351, a peste matou algo entre um terço e metade da população europeia. Com menos gente para trabalhar a terra, o preço do trabalho subiu, a servidão perdeu força e a Europa saiu do surto com uma economia diferente da que tinha entrado.",
+prerequisitos: [
+ "A Peste Negra foi uma pandemia de peste bubônica causada pela bactéria Yersinia pestis, que atingiu a Europa entre 1347 e 1351.",
+ "O feudalismo organizava a terra e o trabalho: camponeses presos à terra deviam trabalho e renda ao senhor."
+],
+conexoes: [
+ {
+  "termo": "Feudalismo: estrutura e revisão historiográfica",
+  "relacao": "A Peste Negra desorganizou a relação entre senhores e camponeses que sustentava o sistema feudal, forçando senhores a competir por mão de obra escassa."
+ },
+ {
+  "termo": "Crise do século III em Roma",
+  "relacao": "Outro caso de colapso demográfico súbito que forçou reorganização política e econômica em Roma, mas com causas diferentes das da peste."
+ },
+ {
+  "termo": "Pequena Era do Gelo e crise do século XVII",
+  "relacao": "Mostra como choques climáticos e demográficos combinados podem reconfigurar economias agrárias séculos depois da Peste Negra."
+ },
+ {
+  "termo": "Intercâmbio colombiano",
+  "relacao": "O intercâmbio transferiu doenças entre continentes, repetindo o padrão da Peste Negra: colapso populacional seguido de transformação econômica."
+ }
+],
+
+camadas: {
+
+nucleo: { minutos: 4, html: `
+<p class="abre">Em 1348, Florença tinha entre 110 mil e 120 mil habitantes. Três anos depois, tinha cerca de 50 mil<sup class="cit"><a href="#f1">1</a></sup>. Em Londres, os registros de mortalidade apontam para dezenas de milhares de mortos entre 1346 e 1353<sup class="cit"><a href="#f1">1</a></sup>. A peste não escolheu pobres nem ricos, mas depois de passar deixou um mundo em que a terra valia menos e o trabalho valia mais. A pergunta que os historiadores tentam responder desde então é simples: como uma catástrofe demográfica se transforma numa reorganização econômica que dura séculos?</p><h3>O que aconteceu entre 1347 e 1351</h3><p>A peste chegou à Crimeia em 1343 e à Sicília em outubro de 1347, transportada por navios genoveses<sup class="cit"><a href="#f2">2</a></sup>. Em poucos meses, atingiu Gênova e Veneza, depois Marselha, e em junho de 1348 já estava na Inglaterra<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup>. A doença era causada pela bactéria Yersinia pestis, transmitida por pulgas que viviam em ratos, e sua forma pneumônica podia passar de pessoa para pessoa pelo ar<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup>.</p><p>As estimativas de mortalidade variam muito conforme a região. Para o conjunto da Europa, os historiadores apontam entre 30% e 60% da população<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup>. Em Paris, metade dos habitantes morreu<sup class="cit"><a href="#f2">2</a></sup>. Na cidade do Cairo, mais de um terço dos 600 mil habitantes morreu<sup class="cit"><a href="#f1">1</a></sup>. Em contrapartida, algumas zonas escaparam quase intactas, como o País Basco, partes isoladas da Bélgica e da Holanda, e aldeias alpinas afastadas<sup class="cit"><a href="#f2">2</a></sup>.</p><h3>Por que a economia mudou</h3><p>Com menos gente, a terra ficou relativamente abundante e o trabalho relativamente escasso. É a mecânica central: os senhores precisavam de camponeses para cultivar as terras, e havia menos camponeses disponíveis. Numa economia agrária, isso faz subir o preço do trabalho e descer o preço da terra. O resultado foi um aumento dos salários reais em grande parte da Europa<sup class="cit"><a href="#f3">3</a></sup>.</p><p>O caso inglês mostra o mecanismo com clareza. Em Essex, entre 1350 e 1500, os registros de propriedades e de tribunais mostram mudanças na migração, no casamento e no emprego<sup class="cit"><a href="#f4">4</a></sup>. Os camponeses passaram a poder escolher onde trabalhar e por quanto, algo impensável antes do surto. A servidão, que prendia o camponês à terra, perdeu força por razões econômicas: os senhores não conseguiam mantê-la com tanta facilidade quando a mão de obra era escassa.</p><p>O impacto não foi uniforme. Houve regiões onde a agricultura continuou a crescer sem interrupção, como a Europa central e oriental, a Ibéria e a Irlanda, enquanto a Escandinávia, a França, a Alemanha ocidental, a Grécia e a Itália central sofreram quebras profundas<sup class="cit"><a href="#f1">1</a></sup>. Na Alemanha, havia cerca de 170 mil povoados antes de 1350, e em 1450 eram quase 40 mil a menos<sup class="cit"><a href="#f2">2</a></sup>.</p><h3>O que mudou no longo prazo</h3><p>A população europeia demorou cerca de 200 anos para recuperar o nível anterior ao surto, e algumas regiões só recuperaram no século XIX<sup class="cit"><a href="#f2">2</a></sup>. Nesse intervalo, as instituições mudaram. As universidades se expandiram, as línguas vernáculas ganharam espaço e os Estados começaram a se organizar de outra maneira<sup class="cit"><a href="#f5">5</a></sup>. Os salários reais subiram durante mais de um século, até começarem a descer de novo quando a população voltou a crescer<sup class="cit"><a href="#f3">3</a></sup>.</p><p>Historiadores econômicos veem aí o começo de uma separação dentro da Europa: no noroeste da Europa, sobretudo nos Países Baixos e na Inglaterra, os salários resistiram melhor à queda após 1450 do que no resto do continente<sup class="cit"><a href="#f3">3</a></sup>. A crise demográfica criou condições para que essas regiões acumulassem vantagens que se tornariam visíveis séculos depois.</p><div class="marca consenso"><span class="rot">Consenso</span><p>A Peste Negra matou entre 30% e 60% da população europeia entre 1347 e 1351, foi causada pela bactéria Yersinia pestis e provocou uma escassez de mão de obra que fez subir os salários reais e enfraquecer a servidão em grande parte da Europa.</p></div>
+` },
+
+aprofundamento: { minutos: 3, html: `
+<p>Como é que os historiadores sabem isto? A resposta tem duas partes: como se estabeleceu a causa da doença e como se mediu o impacto econômico.</p><h3>Identificar o agente</h3><p>Durante séculos, ninguém sabia o que causava a peste. O relatório da faculdade de medicina de Paris culpava uma conjunção de planetas em 1345 que teria provocado «uma grande peste no ar»<sup class="cit"><a href="#f2">2</a></sup>. Esta teoria do miasma, do ar contaminado, foi a explicação dominante durante a Idade Média<sup class="cit"><a href="#f2">2</a></sup>.</p><p>A bactéria só foi identificada em 1894, durante uma epidemia em Hong Kong, por Alexandre Yersin<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup>. O mecanismo de transmissão por pulgas foi estabelecido em 1898 por Paul-Louis Simond<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup>. A pulga ingere sangue de um rato infetado, a bactéria multiplica-se no seu intestino e bloqueia-o, e a pulga, esfomeada, pica com mais agressividade e regurgita milhares de bactérias no local da picada<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup>.</p><p>A ligação entre esta bactéria e a Peste Negra medieval foi confirmada por ADN antigo. Em 1998, Drancourt e colegas detetaram ADN de Y. pestis em polpa dentária de um túmulo medieval<sup class="cit"><a href="#f2">2</a></sup>. Outros investigadores questionaram o método<sup class="cit"><a href="#f2">2</a></sup>. Em 2010, Haensch e colegas usaram PCR em esqueletos de valas comuns no norte, centro e sul da Europa e concluíram que a investigação «encerra o debate»<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f6">6</a></sup>. Em 2011, o genoma da bactéria foi reconstruído a partir de vítimas do cemitério de East Smithfield, em Londres, e verificou-se que a estirpe medieval era ancestral da maioria das estirpes modernas<sup class="cit"><a href="#f7">7</a></sup><sup class="cit"><a href="#f8">8</a></sup>.</p><h3>Contar os mortos</h3><table><thead><tr><th>Região</th><th>Mortalidade estimada</th><th>Fonte</th></tr></thead><tbody><tr><td>Europa (conjunto)</td><td>30% a 60%</td><td><sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f1">1</a></sup></td></tr><tr><td>Paris</td><td>cerca de 50%</td><td><sup class="cit"><a href="#f2">2</a></sup></td></tr><tr><td>Florença</td><td>80% em quatro meses (1348)</td><td><sup class="cit"><a href="#f2">2</a></sup></td></tr><tr><td>Cairo</td><td>mais de um terço de 600 mil</td><td><sup class="cit"><a href="#f1">1</a></sup></td></tr><tr><td>Médio Oriente</td><td>cerca de um terço</td><td><sup class="cit"><a href="#f2">2</a></sup></td></tr></tbody></table><p>Os números variam porque não há censos fiáveis. Em Inglaterra, não houve recenseamento entre o Domesday Book de 1086 e o imposto de 1377<sup class="cit"><a href="#f1">1</a></sup>. As estimativas partem muitas vezes de registros de clero e de testamentos<sup class="cit"><a href="#f1">1</a></sup>. Uma equipa usou amostras de pólen de 1250 a 1450 para estimar a produção agrícola antes e depois da peste e encontrou grande variabilidade regional<sup class="cit"><a href="#f1">1</a></sup>.</p><h3>Medir o impacto econômico</h3><p>Şevket Pamuk usou séries de salários reais de diferentes partes da Europa e do Mediterrâneo oriental para mostrar que a era da Peste Negra testemunhou mudanças duradouras no comportamento demográfico, na agricultura, na indústria e no comércio<sup class="cit"><a href="#f3">3</a></sup>. Os salários reais subiram, refletindo aumentos de produtividade. Depois de 1450, surgiu uma diferença salarial entre o noroeste e o resto do continente<sup class="cit"><a href="#f3">3</a></sup>.</p><p>L. R. Poos estudou Essex entre 1350 e 1500 com registros de propriedades, tribunais e testamentos e concluiu que houve mais continuidade do que mudança em alguns aspetos da estrutura social, apesar do colapso populacional<sup class="cit"><a href="#f4">4</a></sup>. Isto mostra que o impacto não foi igual em todo o lado nem em todos os setores.</p><p>Sharon DeWitte e James Wood compararam esqueletos do cemitério de East Smithfield com amostras de cemitérios dinamarqueses não epidémicos e concluíram que a peste não matou indiscriminadamente: foi seletiva em relação à fragilidade pré-existente, embora provavelmente menos seletiva do que a mortalidade normal<sup class="cit"><a href="#f9">9</a></sup>. Um estudo posterior mostrou que houve diferenças significativas na sobrevivência e no risco de morte entre as populações de Londres antes e depois da peste, mas não nas taxas de natalidade<sup class="cit"><a href="#f10">10</a></sup>.</p>
+` },
+
+extensao: { minutos: 3, html: `
+<p>A Peste Negra serve de laboratório para pensar como choques demográficos transformam economias. A lição central estende-se a outros contextos.</p><p>O Intercâmbio Colombiano, depois de 1492, transferiu doenças entre continentes e provocou colapsos populacionais nas Américas com consequências econômicas semelhantes: escassez de mão de obra, reorganização do trabalho e mudanças nas instituições coloniais. O mecanismo é o mesmo que a Peste Negra tornou visível na Europa: quando a população cai de repente, o valor relativo da terra e do trabalho inverte-se.</p><p>Na história econômica, a Peste Negra é usada como caso para testar teorias sobre salários, rendas e desigualdade. A evidência de que os salários reais subiram durante mais de um século depois do surto<sup class="cit"><a href="#f3">3</a></sup> mostra que choques demográficos podem alterar a distribuição do rendimento durante gerações. O facto de a recuperação demográfica ter levado cerca de 200 anos em algumas regiões<sup class="cit"><a href="#f2">2</a></sup> explica por que essas alterações persistiram tanto tempo.</p><p>Na arqueologia e na biologia, a peste é um caso de estudo sobre como agentes patogénicos moldam sociedades. O ADN antigo extraído de dentes e ossos tornou-se uma ferramenta padrão para reconstruir epidemias históricas<sup class="cit"><a href="#f7">7</a></sup><sup class="cit"><a href="#f8">8</a></sup>. A descoberta de que a estirpe medieval é ancestral da maioria das estirpes modernas<sup class="cit"><a href="#f7">7</a></sup> permite seguir a evolução da bactéria ao longo de séculos. A comparação entre esqueletos de cemitérios epidémicos e não epidémicos<sup class="cit"><a href="#f9">9</a></sup> mostra como a paleodemografia pode testar hipóteses sobre quem morre numa epidemia e quem sobrevive.</p><p>Na história institucional, a Peste Negra é o exemplo clássico de como uma catástrofe pode acelerar mudanças que já estavam em curso. David Herlihy argumentou que o surto marcou o início de avanços tecnológicos, com as sociedades a procurar dispositivos que poupassem trabalho depois da perda de população<sup class="cit"><a href="#f5">5</a></sup>. As universidades se expandiram, o cristianismo espalhou-se e as línguas vernáculas ganharam terreno<sup class="cit"><a href="#f5">5</a></sup>. Estas mudanças não foram planeadas por ninguém: resultaram de milhões de decisões individuais tomadas num mundo com menos gente e mais terra disponível.</p>
+` }
+
+},
+
+sintese: {
+ "definicoes": [
+  {
+   "termo": "Peste Negra",
+   "def": "Epidemia de 1347 a 1351 causada pela bactéria Yersinia pestis, transmitida por pulgas de ratos, com forma pneumônica que passa pelo ar."
+  },
+  {
+   "termo": "Yersinia pestis",
+   "def": "Bactéria identificada em 1894 por Alexandre Yersin como o agente da peste."
+  },
+  {
+   "termo": "Servidão",
+   "def": "Sistema que prendia o camponês à terra. Enfraqueceu depois da peste porque havia menos mão de obra disponível."
+  },
+  {
+   "termo": "Salários reais",
+   "def": "Quanto se pode comprar com o salário. Subiram em grande parte da Europa depois do surto e ficaram altos por mais de um século."
+  },
+  {
+   "termo": "Grande divergência",
+   "def": "Vantagem salarial e econômica acumulada pelo noroeste da Europa, sobretudo Países Baixos e Inglaterra, que resistiu melhor à queda dos salários depois de 1450."
+  },
+  {
+   "termo": "Teoria do miasma",
+   "def": "Explicação medieval que culpava o ar contaminado e conjunções de planetas. Foi a visão dominante durante a Idade Média."
+  }
+ ],
+ "lembrar": [
+  "A peste matou entre 30% e 60% da população europeia entre 1347 e 1351.",
+  "Com menos gente, a terra ficou abundante e o trabalho escasso, o que fez subir os salários reais e descer o valor da terra.",
+  "A servidão perdeu força por razões econômicas, porque os senhores não conseguiam manter os camponeses presos à terra.",
+  "A população europeia demorou cerca de 200 anos para recuperar o nível anterior ao surto.",
+  "O impacto não foi uniforme: algumas regiões cresceram sem interrupção enquanto outras sofreram quebras profundas.",
+  "A ligação entre a bactéria e a peste medieval foi confirmada por ADN antigo extraído de dentes e ossos."
+ ],
+ "confusoes": [
+  {
+   "erro": "A peste matou pobres e ricos por igual, sem distinção.",
+   "correcao": "Foi seletiva em relação à fragilidade pré-existente. Os esqueletos de cemitérios epidémicos mostram que quem já estava mais frágil tinha mais risco de morrer."
+  },
+  {
+   "erro": "A peste foi só um desastre demográfico e passou sem deixar mudanças duradouras.",
+   "correcao": "A escassez de mão de obra fez subir os salários reais durante mais de um século e enfraqueceu a servidão em grande parte da Europa."
+  },
+  {
+   "erro": "O impacto econômico foi igual em toda a Europa.",
+   "correcao": "Houve regiões que continuaram a crescer, como a Europa central e oriental, a Ibéria e a Irlanda, e outras com quebras profundas, como a Escandinávia e a França."
+  },
+  {
+   "erro": "Os historiadores sabem a causa da peste desde a Idade Média.",
+   "correcao": "Durante séculos a explicação dominante foi a teoria do miasma. A bactéria só foi identificada em 1894, e a ligação à peste medieval foi confirmada por ADN antigo em 2010 e 2011."
+  },
+  {
+   "erro": "A peste matou tantos europeus porque havia censos precisos que registaram tudo.",
+   "correcao": "Não há censos fiáveis. Em Inglaterra não houve recenseamento entre 1086 e 1377, e as estimativas partem de registros de clero, testamentos e amostras de pólen."
+  }
+ ],
+ "numeros": [
+  "Entre 1347 e 1351, a peste matou entre 30% e 60% da população europeia.",
+  "No Cairo, mais de um terço dos 600 mil habitantes morreu.",
+  "A Alemanha tinha cerca de 170 mil povoados antes de 1350 e em 1450 eram quase 40 mil a menos.",
+  "A população europeia demorou cerca de 200 anos para recuperar o nível anterior ao surto."
+ ]
+},
+
+flashcards: [
+ {
+  "f": "O que causou a Peste Negra?",
+  "v": "A bactéria Yersinia pestis, transmitida por pulgas que viviam em ratos. A forma pneumônica também passava de pessoa para pessoa pelo ar."
+ },
+ {
+  "f": "Qual foi o mecanismo central que mudou a economia depois da peste?",
+  "v": "Com menos gente, a terra ficou relativamente abundante e o trabalho relativamente escasso. Isso fez subir o preço do trabalho e descer o preço da terra."
+ },
+ {
+  "f": "Por que a servidão perdeu força depois da peste?",
+  "v": "Por razões econômicas: com mão de obra escassa, os senhores não conseguiam manter os camponeses presos à terra com tanta facilidade."
+ },
+ {
+  "f": "Quanto tempo a população europeia demorou a recuperar?",
+  "v": "Cerca de 200 anos em muitas regiões, e algumas só recuperaram no século XIX."
+ },
+ {
+  "f": "Como se confirmou que a bactéria Y. pestis causou a peste medieval?",
+  "v": "Por ADN antigo. Em 2010, PCR em esqueletos de valas comuns na Europa, e em 2011 o genoma reconstruído de vítimas de East Smithfield, em Londres."
+ },
+ {
+  "f": "Como a peste chegou à Europa?",
+  "v": "Chegou à Crimeia em 1343 e à Sicília em outubro de 1347, transportada por navios genoveses. Em junho de 1348 já estava na Inglaterra."
+ },
+ {
+  "f": "A peste matou de forma indiscriminada?",
+  "v": "Não. Foi seletiva em relação à fragilidade pré-existente, embora provavelmente menos seletiva do que a mortalidade normal."
+ },
+ {
+  "f": "O impacto econômico foi igual em toda a Europa?",
+  "v": "Não. A Europa central e oriental, a Ibéria e a Irlanda continuaram a crescer. A Escandinávia, a França, a Alemanha ocidental, a Grécia e a Itália central sofreram quebras profundas."
+ },
+ {
+  "f": "O que explica a falta de números precisos sobre a mortalidade?",
+  "v": "Não há censos fiáveis. Em Inglaterra não houve recenseamento entre 1086 e 1377. As estimativas partem de registros de clero, testamentos e amostras de pólen."
+ },
+ {
+  "f": "Que teoria explicava a peste na Idade Média?",
+  "v": "A teoria do miasma, do ar contaminado. O relatório da faculdade de medicina de Paris culpava uma conjunção de planetas em 1345."
+ },
+ {
+  "f": "Quem identificou a bactéria e quando?",
+  "v": "Alexandre Yersin, em 1894, durante uma epidemia em Hong Kong. O mecanismo de transmissão por pulgas foi estabelecido em 1898 por Paul-Louis Simond."
+ },
+ {
+  "f": "O que os salários reais fizeram depois da peste?",
+  "v": "Subiram durante mais de um século. Só começaram a descer de novo quando a população voltou a crescer."
+ }
+],
+
+prova: [
+ {
+  "camada": "nucleo",
+  "q": "Qual é o mecanismo central que liga a catástrofe demográfica à reorganização econômica?",
+  "alts": [
+   "Aumento dos impostos para financiar a reconstrução das cidades",
+   "Escassez de mão de obra que fez subir o preço do trabalho e descer o valor da terra",
+   "Fuga em massa dos senhores para as cidades, deixando as terras abandonadas",
+   "Inflação causada pela emissão de moeda pelos Estados em guerra"
+  ],
+  "correta": 1,
+  "porque": "Com menos gente, a terra ficou abundante e o trabalho escasso, o que fez subir o preço do trabalho e descer o preço da terra. A alternativa mais tentadora é a da fuga dos senhores, mas o documento diz que os senhores precisavam de camponeses para cultivar as terras e não conseguiam manter a servidão."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Como a servidão enfraqueceu depois da peste?",
+  "alts": [
+   "Por uma lei que aboliu o trabalho obrigatório em toda a Europa",
+   "Por causa da migração dos camponeses para as cidades",
+   "Por razões econômicas, porque os senhores não conseguiam manter os camponeses presos à terra com mão de obra escassa",
+   "Por uma revolta camponesa que derrubou os senhores locais"
+  ],
+  "correta": 2,
+  "porque": "A servidão perdeu força por razões econômicas. A alternativa mais tentadora é a das cidades, mas o documento diz que os camponeses passaram a poder escolher onde trabalhar, e não que fugiram para as cidades."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Que região europeia sofreu quebras profundas na agricultura depois da peste?",
+  "alts": [
+   "A Ibéria",
+   "A Irlanda",
+   "A Escandinávia",
+   "A Europa central"
+  ],
+  "correta": 2,
+  "porque": "A Escandinávia, a França, a Alemanha ocidental, a Grécia e a Itália central sofreram quebras profundas. As outras opções, Ibéria, Irlanda e Europa central, continuaram a crescer sem interrupção."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Como se confirmou que a Yersinia pestis causou a Peste Negra medieval?",
+  "alts": [
+   "Por relatos de médicos da época que descrevem os sintomas",
+   "Por ADN antigo extraído de dentes e ossos de vítimas medievais",
+   "Por análises de pulgas preservadas em âmbar",
+   "Por comparação com a peste bubônica moderna"
+  ],
+  "correta": 1,
+  "porque": "A ligação foi confirmada por ADN antigo: em 1998 em polpa dentária, em 2010 por PCR em esqueletos de valas comuns e em 2011 pelo genoma reconstruído. A alternativa mais tentadora é a comparação com a peste moderna, mas o documento diz que a estirpe medieval é ancestral da maioria das estirpes modernas, o que não confirma por si a causa."
+ },
+ {
+  "camada": "nucleo",
+  "q": "O que aconteceu aos salários reais na Europa depois da peste?",
+  "alts": [
+   "Subiram durante mais de um século e só desceram quando a população voltou a crescer",
+   "Caíram porque os senhores baixaram os salários para manter os lucros",
+   "Ficaram iguais porque a oferta e a procura se equilibraram",
+   "Subiram apenas na Inglaterra, onde a servidão foi abolida mais cedo"
+  ],
+  "correta": 0,
+  "porque": "Os salários reais subiram durante mais de um século, até começarem a descer de novo quando a população voltou a crescer. A alternativa mais tentadora é a da queda, mas o documento diz que o preço do trabalho subiu, e não caiu."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "O que era a teoria do miasma?",
+  "alts": [
+   "A ideia de que a peste vinha de pulgas de ratos",
+   "A ideia de que a peste vinha de conjunções de planetas e ar contaminado",
+   "A ideia de que a peste vinha de castigo divino pelos pecados",
+   "A ideia de que a peste vinha de águas estagnadas nas cidades"
+  ],
+  "correta": 1,
+  "porque": "A teoria do miasma culpava o ar contaminado e conjunções de planetas, como a de 1345. A alternativa mais tentadora é o castigo divino, que não aparece no documento como a explicação dominante."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "Por que os números da mortalidade variam tanto entre as regiões?",
+  "alts": [
+   "Porque as fontes históricas mediam a mortalidade de formas diferentes e sem censos fiáveis",
+   "Porque a bactéria era diferente em cada região",
+   "Porque a peste só afetou as cidades grandes",
+   "Porque os historiadores modernos inventaram os números"
+  ],
+  "correta": 0,
+  "porque": "Não há censos fiáveis: na Inglaterra não houve recenseamento entre 1086 e 1377, e as estimativas partem de registros de clero, testamentos e amostras de pólen. A alternativa mais tentadora é a da bactéria diferente, mas o documento diz que a estirpe medieval era ancestral da maioria das estirpes modernas."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "O que a comparação de esqueletos de East Smithfield com cemitérios dinamarqueses não epidémicos mostrou?",
+  "alts": [
+   "Que a peste matou apenas os mais velhos",
+   "Que a peste foi seletiva em relação à fragilidade pré-existente",
+   "Que a peste matou todos de forma igual",
+   "Que a peste não deixou marcas nos ossos"
+  ],
+  "correta": 1,
+  "porque": "DeWitte e Wood concluíram que a peste foi seletiva em relação à fragilidade pré-existente, embora provavelmente menos seletiva do que a mortalidade normal. A alternativa mais tentadora é a da morte igual, que contradiz a evidência paleodemográfica."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "O que significa a origem da grande divergência?",
+  "alts": [
+   "A diferença salarial entre o noroeste da Europa e o resto do continente depois de 1450",
+   "A separação entre a Igreja católica e as igrejas protestantes",
+   "A divisão entre a Europa medieval e a Europa moderna",
+   "A diferença entre a mortalidade nas cidades e no campo"
+  ],
+  "correta": 0,
+  "porque": "A grande divergência é a vantagem salarial e econômica acumulada pelo noroeste da Europa, sobretudo Países Baixos e Inglaterra, que resistiu melhor à queda dos salários depois de 1450. A alternativa mais tentadora é a religiosa, que pertence a outro quadro de análise."
+ },
+ {
+  "camada": "extensao",
+  "q": "O que David Herlihy argumentou sobre a peste?",
+  "alts": [
+   "Que a peste impediu qualquer avanço tecnológico durante séculos",
+   "Que o surto marcou o início de avanços tecnológicos, com as sociedades a procurar dispositivos que poupassem trabalho",
+   "Que a peste foi causada por mudanças climáticas",
+   "Que a peste não teve impacto nas instituições europeias"
+  ],
+  "correta": 1,
+  "porque": "Herlihy argumentou que o surto marcou o início de avanços tecnológicos, com as sociedades a procurar dispositivos que poupassem trabalho depois da perda de população. A alternativa mais tentadora é a do bloqueio tecnológico, que contradiz a ideia de poupança de trabalho."
+ }
+],
+
+fontes: [
+ {
+  "n": 1,
+  "tipo": "enciclopédia",
+  "ref": "Wikipédia (inglês), verbete 'Black Death'. Consultado em 27/09/2026.",
+  "url": "https://en.wikipedia.org/wiki/Black_Death"
+ },
+ {
+  "n": 2,
+  "tipo": "enciclopédia",
+  "ref": "Wikipédia (português), verbete 'Peste Negra'. Consultado em 27/09/2026.",
+  "url": "https://pt.wikipedia.org/wiki/Peste_Negra"
+ },
+ {
+  "n": 3,
+  "tipo": "artigo",
+  "ref": "Şevket Pamuk. 'The Black Death and the origins of the 'Great Divergence' across Europe, 1300-1600'. <em>European Review of Economic History</em>, 2007.",
+  "url": "https://doi.org/10.1017/s1361491607002031"
+ },
+ {
+  "n": 4,
+  "tipo": "livro",
+  "ref": "L. R. Poos. 'A Rural Society after the Black Death'. <em>Cambridge University Press eBooks</em>, 1991.",
+  "url": "https://doi.org/10.1017/cbo9780511522437"
+ },
+ {
+  "n": 5,
+  "tipo": "livro",
+  "ref": "David Herlihy. 'The Black Death and the Transformation of the West'. <em>Harvard University Press eBooks</em>, 1997.",
+  "url": "https://doi.org/10.2307/j.ctvjghwgp"
+ },
+ {
+  "n": 6,
+  "tipo": "artigo",
+  "ref": "Stephanie Haensch, Raffaella Bianucci, Michel Signoli, Minoarisoa Rajerison et al.. 'Distinct Clones of Yersinia pestis Caused the Black Death'. <em>PLoS Pathogens</em>, 2010.",
+  "url": "https://doi.org/10.1371/journal.ppat.1001134"
+ },
+ {
+  "n": 7,
+  "tipo": "artigo",
+  "ref": "Kirsten I. Bos, Verena J. Schuenemann, Geoffrey Brian Golding, Hernán A. Burbano et al.. 'A draft genome of Yersinia pestis from victims of the Black Death'. <em>Nature</em>, 2011.",
+  "url": "https://doi.org/10.1038/nature10549"
+ },
+ {
+  "n": 8,
+  "tipo": "artigo",
+  "ref": "Verena J. Schuenemann, Kirsten I. Bos, Sharon N. DeWitte, Sarah E. Schmedes et al.. 'Targeted enrichment of ancient pathogens yielding the pPCP1 plasmid of Yersinia pestis from victims of the Black Death'. <em>Proceedings of the National Academy of Sciences</em>, 2011.",
+  "url": "https://doi.org/10.1073/pnas.1105107108"
+ },
+ {
+  "n": 9,
+  "tipo": "artigo",
+  "ref": "Sharon N. DeWitte, James W. Wood. 'Selectivity of Black Death mortality with respect to preexisting health'. <em>Proceedings of the National Academy of Sciences</em>, 2008.",
+  "url": "https://doi.org/10.1073/pnas.0705460105"
+ },
+ {
+  "n": 10,
+  "tipo": "artigo",
+  "ref": "Sharon N. DeWitte. 'Mortality Risk and Survival in the Aftermath of the Medieval Black Death'. <em>PLoS ONE</em>, 2014.",
+  "url": "https://doi.org/10.1371/journal.pone.0096513"
+ },
+ {
+  "n": 11,
+  "tipo": "artigo",
+  "ref": "Boris V. Schmid, Ulf Büntgen, William Ryan Easterday, Christian Ginzler et al.. 'Climate-driven introduction of the Black Death and successive plague reintroductions into Europe'. <em>Proceedings of the National Academy of Sciences</em>, 2015.",
+  "url": "https://doi.org/10.1073/pnas.1412887112"
+ }
+],
+
+fronteira: [{"tema": "A origem geográfica da Peste Negra", "html": "<p>Continua em aberto onde surgiu exatamente a estirpe que devastou a Europa. Há evidência genética de Y. pestis em sepulturas de 1338-1339 perto do lago Issyk-Kul, no Quirguistão<sup class=\"cit\"><a href=\"#f1\">1</a></sup>, e alguns investigadores apontam os montes Tian Shan como origem<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. Outros propõem a China, o Curdistão ou a região do Cáspio<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. Não há consenso: a investigação recente nota que as amostragens anteriores tinham viés para a Ásia Oriental e que os registros chineses do século XIV não descrevem com clareza uma pandemia de peste<sup class=\"cit\"><a href=\"#f1\">1</a></sup>.</p>"}, {"tema": "Como a peste se transmitiu dentro da Europa", "html": "<p>O modelo clássico rato-pulga-humano foi desenvolvido para explicar a peste na Índia no século XIX<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. Alguns investigadores propõem que, na Europa medieval, a transmissão principal tenha sido entre pessoas, por pulgas humanas e piolhos do corpo, porque a propagação foi mais rápida do que o modelo dos ratos prevê<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. Outros defendem que o modelo de Simond continua válido e que a peste pneumônica explica a rapidez<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. Nenhuma explicação alternativa alcançou aceitação generalizada<sup class=\"cit\"><a href=\"#f1\">1</a></sup>.</p>"}, {"tema": "Se a peste se tornou endêmica na Europa", "html": "<p>Um estudo de 2015 com 7.711 surtos georreferenciados e 15 séries de anéis de árvores não encontrou apoio para a existência de reservatórios permanentes de peste na Europa medieval, sugerindo reintroduções repetidas a partir da Ásia com um atraso de cerca de 15 anos<sup class=\"cit\"><a href=\"#f11\">11</a></sup>. É uma linha de pesquisa ativa, e o debate sobre se a peste persistiu em roedores europeus durante séculos continua aberto.</p>"}],
+};

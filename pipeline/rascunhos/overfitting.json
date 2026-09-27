@@ -1,0 +1,307 @@
+{
+ "id": "overfitting",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:00",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Um modelo de computador que prevê o que o cliente vai comprar pode acertar todos os dados de compras passadas e errar feio em qualquer compra futura. Por quê? Porque ele decorou os horários específicos, que nunca mais vão se repetir.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Isso é <strong>sobreajuste</strong>: o modelo se ajusta tão bem aos dados de treino que captura o ruído, o acaso, e não o padrão real.</p>"
+   },
+   {
+    "tipo": "curva",
+    "forma": "u",
+    "eixo_x": "complexidade do modelo",
+    "eixo_y": "erro em dados novos",
+    "marco": {
+     "x": 0.5,
+     "rotulo": "equilíbrio"
+    },
+    "legenda": "O erro em dados novos cai e depois sobe. O ponto ótimo fica no meio, entre subajuste e sobreajuste.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Subajuste",
+    "b": "Sobreajuste",
+    "linhas": [
+     {
+      "aspecto": "Viés",
+      "a": "alto",
+      "b": "baixo"
+     },
+     {
+      "aspecto": "Variância",
+      "a": "baixa",
+      "b": "alta"
+     },
+     {
+      "aspecto": "Comportamento",
+      "a": "ignora estrutura importante",
+      "b": "decora ruído e flutuações"
+     }
+    ],
+    "legenda": "O erro total se decompõe em viés, variância e ruído irredutível.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que significa dizer que um modelo decorou os dados de treino?",
+    "alts": [
+     "Que ele aprendeu os padrões gerais",
+     "Que ele capturou ruído e flutuações aleatórias como se fossem regras",
+     "Que ele usou muitos parâmetros"
+    ],
+    "correta": 1,
+    "porque": "O sobreajuste ocorre quando o modelo aprende os desvios causados por erros de medição ou acaso, e não a tendência real."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Treino",
+    "b": "Teste",
+    "linhas": [
+     {
+      "aspecto": "Dados usados",
+      "a": "usados para ajustar o modelo",
+      "b": "não vistos pelo modelo"
+     },
+     {
+      "aspecto": "Desempenho em sobreajuste",
+      "a": "muito alto",
+      "b": "muito baixo"
+     }
+    ],
+    "legenda": "Se o desempenho no treino é muito melhor que no teste, há sobreajuste.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Dividir",
+      "texto": "Separe uma parte dos dados que não será usada no treino."
+     },
+     {
+      "nome": "Treinar",
+      "texto": "Ajuste o modelo apenas com os dados de treino."
+     },
+     {
+      "nome": "Testar",
+      "texto": "Meça o desempenho nos dados reservados."
+     }
+    ],
+    "legenda": "Comparar desempenho no treino e no teste revela sobreajuste.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Regularização",
+      "nota": "penaliza parâmetros irrelevantes"
+     },
+     {
+      "nome": "Early stopping",
+      "nota": "para o treino no momento certo"
+     },
+     {
+      "nome": "Dropout",
+      "nota": "remove neurônios aleatoriamente durante o treino"
+     },
+     {
+      "nome": "Poda",
+      "nota": "simplifica redes após o treino"
+     }
+    ],
+    "eixo": {
+     "topo": "menos complexo",
+     "base": "mais simples"
+    },
+    "legenda": "Técnicas para reduzir o sobreajuste e tornar o modelo mais suave.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um modelo tem erro baixíssimo no treino, mas erro alto em dados novos. O que fazer?",
+    "alts": [
+     "Treinar por mais tempo",
+     "Aumentar a complexidade do modelo",
+     "Usar validação cruzada para detectar e corrigir o sobreajuste"
+    ],
+    "correta": 2,
+    "porque": "A validação cruzada é a ferramenta principal para detectar sobreajuste, comparando o desempenho no treino com o desempenho no teste."
+   }
+  ],
+  "fecho": "Como saber se um modelo realmente aprendeu ou só decorou? A resposta está na convexidade e otimização, que ajudam a encontrar o ponto de equilíbrio."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: soa como IA (0.56)",
+  "tela 3: soa como IA (0.56)",
+  "tela 6: soa como IA (0.53)",
+  "tela 7: soa como IA (0.57)",
+  "tela 7: o tipo visual não combina com o conteúdo (0.45); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.84,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.16,
+    "3": 0.84,
+    "4": 0
+   },
+   "confidence": 0.86
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0.01,
+    "consenso": 0.99,
+    "especulacao": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.85
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.24
+  }
+ },
+ "custo_usd": 0.00648
+}

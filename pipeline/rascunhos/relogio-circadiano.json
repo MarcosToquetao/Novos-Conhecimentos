@@ -1,0 +1,267 @@
+{
+ "id": "relogio-circadiano",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:31:26",
+ "modelo": "deepseek-flash",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Uma célula humana isolada num prato, sem luz e sem comida em horários fixos, continua ligando e desligando genes em ciclos de quase 24 horas. Ela carrega um relógio dentro de si.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Cada célula do corpo tem um <strong>relógio circadiano molecular</strong>: um conjunto de proteínas que interage para gerar um ciclo interno de cerca de um dia. Circadiano vem do latim <em>circa diem</em>, «cerca de um dia».</p>"
+   },
+   {
+    "tipo": "estimar",
+    "q": "Em pessoas isoladas de pistas externas, quantas horas dura em média o dia do relógio interno?",
+    "unidade": "horas",
+    "min": 20,
+    "max": 30,
+    "escala": "linear",
+    "resposta": 24.2,
+    "legenda": "Um pouco mais que as 24 horas do dia solar. A luz ajusta o relógio todo dia.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Ativação",
+      "texto": "CLOCK e BMAL1 se unem e ativam a produção de PER e CRY."
+     },
+     {
+      "nome": "Acúmulo",
+      "texto": "As proteínas PER e CRY crescem no citoplasma e formam complexos."
+     },
+     {
+      "nome": "Frenagem",
+      "texto": "Os complexos voltam ao núcleo e inibem CLOCK:BMAL1, freando a própria produção."
+     }
+    ],
+    "legenda": "Esse ciclo de feedback leva cerca de 24 horas para se completar.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que acontece com os níveis de PER e CRY quando CLOCK:BMAL1 é inibido?",
+    "alts": [
+     "Continuam subindo sem parar",
+     "Param de ser produzidos e caem, até o ciclo recomeçar",
+     "Viram luz e sincronizam a célula"
+    ],
+    "correta": 1,
+    "porque": "A inibição freia a produção, então as proteínas caem. Quando caem o bastante, CLOCK:BMAL1 volta a agir e o ciclo se reinicia."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Cérebro",
+    "b": "Tecidos periféricos",
+    "linhas": [
+     {
+      "aspecto": "Relógio",
+      "a": "núcleo supraquiasmático, cerca de 20.000 neurônios",
+      "b": "presente em quase todos os tecidos"
+     },
+     {
+      "aspecto": "Função",
+      "a": "recebe luz da retina e sincroniza o resto do corpo",
+      "b": "funciona de forma autônoma, ajustado pelo cérebro"
+     },
+     {
+      "aspecto": "Exemplo de efeito",
+      "a": "modula temperatura e hormônios como cortisol e melatonina",
+      "b": "células do coração mudam proliferação e estresse conforme a hora"
+     }
+    ],
+    "legenda": "O relógio central coordena, e cada célula tem o seu.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pontos",
+    "valor": 22,
+    "frase": "de cada 100 genes com mRNA cíclico são dirigidos por transcrição nova.",
+    "legenda": "O resto depende de mecanismos pós-transcricionais, fora do núcleo.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma pessoa acorda todos os dias no mesmo horário, mas a luz do sol que entra pela janela muda com as estações. Como o relógio se ajusta?",
+    "alts": [
+     "Cada célula tem um ciclo fixo que não muda",
+     "A luz é uma via de entrada que ajusta diariamente o oscilador interno",
+     "O relógio para de funcionar e reinicia na próxima noite de sono"
+    ],
+    "correta": 1,
+    "porque": "O relógio roda sozinho, mas as vias de entrada usam a luz para acertar o horário, compensando o fato de o ciclo interno não durar exatamente 24 horas."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O relógio não é só transcrição. Glóbulos vermelhos humanos, que não têm núcleo, mostram ritmos em proteínas redox. Isso sugere que oscilações desse tipo são mais antigas que os circuitos genéticos.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "Quando você dorme, o cérebro consolida memórias. Esse processo também depende da hora do dia. Veja como o sono e a memória se conectam."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.34); troque de tipo ou use texto",
+  "tela 6: marcada consenso, JEV diz emergente (0.73)",
+  "tela 6: o tipo visual não combina com o conteúdo (0.33); troque de tipo ou use texto",
+  "tela 8: marcada consenso, JEV diz emergente (0.70)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.97,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.06,
+    "3": 0.91,
+    "4": 0.03
+   },
+   "confidence": 0.93
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "especulacao": 0,
+    "consenso": 0.98,
+    "emergente": 0.01
+   },
+   "confidence": 0.98
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "controverso": 0.04,
+    "especulacao": 0.06,
+    "consenso": 0.17,
+    "emergente": 0.73
+   },
+   "confidence": 0.64
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0.26,
+    "emergente": 0.7,
+    "controverso": 0.03,
+    "consenso": 0.01
+   },
+   "confidence": 0.61
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.53
+  }
+ },
+ "custo_usd": 0.00428
+}

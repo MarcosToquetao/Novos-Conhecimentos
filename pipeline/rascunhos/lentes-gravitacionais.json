@@ -1,0 +1,285 @@
+{
+ "id": "lentes-gravitacionais",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:28:55",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1919, durante um eclipse solar, astrônomos viram estrelas perto do Sol parecerem deslocadas. A luz delas tinha sido curvada pela massa do Sol.",
+  "telas": [
+   {
+    "tipo": "comparar",
+    "a": "Lente ótica",
+    "b": "Lente gravitacional",
+    "linhas": [
+     {
+      "aspecto": "Foco",
+      "a": "concentra a luz num ponto",
+      "b": "concentra a luz numa linha"
+     },
+     {
+      "aspecto": "Distorção",
+      "a": "maior nas bordas",
+      "b": "maior perto do centro"
+     }
+    ],
+    "legenda": "A distorção da lente gravitacional é maior perto do centro da massa e menor nas bordas, o oposto de uma lente de vidro.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O Sol age como uma lente: sua massa distorce o espaço-tempo, e a luz das estrelas segue essa curvatura. O desvio aparece perto do disco solar.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que acontece quando a fonte, a lente e o observador estão perfeitamente alinhados?",
+    "alts": [
+     "A imagem da fonte some atrás da lente",
+     "A imagem vira um anel ao redor da lente",
+     "A fonte parece mais próxima"
+    ],
+    "correta": 1,
+    "porque": "Esse anel é o anel de Einstein. Se o alinhamento não é perfeito, vemos arcos ou múltiplas imagens."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Lente forte",
+    "b": "Lente fraca",
+    "linhas": [
+     {
+      "aspecto": "Efeito visível",
+      "a": "anéis, arcos, múltiplas imagens",
+      "b": "distorção de poucos por cento, invisível a olho nu"
+     },
+     {
+      "aspecto": "Como se mede",
+      "a": "observação direta de um sistema",
+      "b": "estatística de milhões de galáxias"
+     },
+     {
+      "aspecto": "O que revela",
+      "a": "massa de galáxias e aglomerados",
+      "b": "distribuição de matéria escura"
+     }
+    ],
+    "legenda": "Três classes de lente gravitacional, mas aqui contrastamos as duas principais. A microlente se distingue pela variação temporal do brilho, sem distorção de forma.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Na microlente, o que o astrônomo observa?",
+    "alts": [
+     "A imagem da fonte se distorce em um arco",
+     "O brilho da fonte muda com o tempo, sem distorção de forma",
+     "Aparecem múltiplas imagens separadas por segundos de arco"
+    ],
+    "correta": 1,
+    "porque": "Na microlente, uma estrela passa na frente de outra e amplifica temporariamente o brilho. Não há distorção de forma, só variação de brilho."
+   },
+   {
+    "tipo": "estimar",
+    "q": "Quantas galáxias o levantamento KiDS-450 usou para medir a lente fraca?",
+    "unidade": "milhões de galáxias",
+    "min": 1,
+    "max": 100,
+    "escala": "log",
+    "resposta": 15,
+    "legenda": "Cerca de 15 milhões de galáxias. Esse número mostra a escala dos levantamentos de lente fraca para extrair um sinal pequeno.",
+    "marca": "consenso",
+    "fonte": 6
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Como as lentes gravitacionais ajudam a medir a constante de Hubble?",
+    "alts": [
+     "Pelo desvio da luz da estrela",
+     "Pelo atraso no tempo de chegada entre múltiplas imagens",
+     "Pela distorção do fundo cósmico de micro-ondas"
+    ],
+    "correta": 1,
+    "porque": "Em 1964, Refsdal mostrou que o atraso entre imagens múltiplas depende da geometria do sistema e da velocidade de expansão do universo. Medir esse atraso dá a constante de Hubble.",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1919,
+      "texto": "Eclipse solar confirma a curvatura da luz pela massa do Sol"
+     },
+     {
+      "ano": 1936,
+      "texto": "Einstein quantifica o anel de luz em alinhamento perfeito"
+     },
+     {
+      "ano": 1964,
+      "texto": "Refsdal propõe usar o atraso entre imagens para medir a constante de Hubble"
+     },
+     {
+      "ano": 2000,
+      "texto": "Primeira detecção de cisalhamento cósmico por Bacon, Refregier e Ellis"
+     }
+    ],
+    "legenda": "Marcos na história das lentes gravitacionais.",
+    "marca": "consenso",
+    "fonte": 2
+   }
+  ],
+  "fecho": "Se as lentes revelam matéria escura, como sabemos que ela existe? A resposta envolve curvas de rotação de galáxias e aglomerados. É o próximo passo."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 6: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.73,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.26,
+    "3": 0.73,
+    "4": 0
+   },
+   "confidence": 0.77
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "especulacao": 0,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 1
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.99,
+    "especulacao": 0,
+    "emergente": 0.01,
+    "controverso": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 0.99
+   },
+   "confidence": 0.98
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.96
+  }
+ },
+ "custo_usd": 0.00724
+}

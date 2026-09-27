@@ -1,0 +1,225 @@
+{
+ "id": "mera-exposicao",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:27:11",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Numa turma da Universidade Estadual do Oregon, um estudante passou o semestre inteiro dentro de um saco preto. No começo, os colegas hostilizaram o saco. No fim, tratavam o saco como amigo. Nada foi dito sobre ele. Ele só estava lá, toda aula.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Isso tem nome: <strong>efeito de mera exposição</strong>. A repetição de um estímulo faz você gostar mais dele, sem prêmio, sem argumento, sem perceber a familiaridade que gerou o gosto.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Repetição",
+      "texto": "Você vê o mesmo estímulo várias vezes."
+     },
+     {
+      "nome": "Facilidade",
+      "texto": "O cérebro processa aquilo com menos esforço."
+     },
+     {
+      "nome": "Sensação",
+      "texto": "Essa facilidade vira uma sensação boa."
+     },
+     {
+      "nome": "Gosto",
+      "texto": "Você atribui a sensação ao objeto e conclui que gosta dele."
+     }
+    ],
+    "legenda": "A explicação mais aceita hoje: fluência perceptiva mais interpretação dessa facilidade como sensação boa.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Ponto de partida neutro",
+    "b": "Ponto de partida hostil",
+    "linhas": [
+     {
+      "aspecto": "Efeito da repetição",
+      "a": "vira afeição",
+      "b": "amplifica a hostilidade"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "estudante dentro do saco preto",
+      "b": "pessoa que já odiava alguém passa a odiar mais"
+     }
+    ],
+    "legenda": "A familiaridade não corrige julgamentos negativos. Ela empurra o julgamento para o lado que já estava.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "curva",
+    "forma": "saturacao",
+    "eixo_x": "Número de exposições",
+    "eixo_y": "Preferência",
+    "marco": {
+     "x": 0.5,
+     "rotulo": "Pico entre 10 e 20 exposições"
+    },
+    "legenda": "Gostar sobe até atingir o máximo entre 10 e 20 exposições. Depois, o tédio faz a preferência cair.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o efeito de mera exposição acontece?",
+    "alts": [
+     "Porque o cérebro processa o estímulo repetido com mais facilidade e interpreta essa facilidade como uma sensação boa.",
+     "Porque a repetição associa o estímulo a uma recompensa recebida.",
+     "Porque a pessoa reconhece conscientemente o estímulo e conclui que gosta dele."
+    ],
+    "correta": 0,
+    "porque": "A exposição repetida aumenta a fluência perceptiva. A pessoa sente a facilidade como algo agradável e atribui isso ao objeto, sem perceber o motivo real."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma marca nova quer usar a exposição repetida para melhorar sua imagem. Com base no que o documento mostra, qual estratégia faz mais sentido?",
+    "alts": [
+     "Repetir o anúncio o máximo possível, porque mais exposição sempre melhora a avaliação.",
+     "Concentrar a exposição quando o público ainda não tem opinião formada sobre a marca.",
+     "Evitar qualquer repetição, porque ela sempre gera tédio."
+    ],
+    "correta": 1,
+    "porque": "A exposição ajuda mais quando o produto ou a empresa é novo e desconhecido. Passado o pico entre 10 e 20 apresentações, a preferência pode cair por tédio."
+   }
+  ],
+  "fecho": "Por que somos tão atraídos pelo que já vimos antes? A resposta se conecta a outro atalho mental: a prova social, a tendência de gostar do que os outros já aprovaram."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 6: duas perguntas seguidas"
+ ],
+ "alertas_jev": [
+  "tela 1: soa como IA (0.51)",
+  "tela 2: soa como IA (0.63)",
+  "tela 4: soa como IA (0.51)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.08,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.88,
+    "4": 0.1
+   },
+   "confidence": 0.9
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.63
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.95,
+    "controverso": 0.02,
+    "especulacao": 0,
+    "emergente": 0.03
+   },
+   "confidence": 0.93
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.74,
+    "controverso": 0.09,
+    "especulacao": 0.02,
+    "emergente": 0.15
+   },
+   "confidence": 0.66
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.61,
+    "controverso": 0.14,
+    "especulacao": 0.03,
+    "emergente": 0.22
+   },
+   "confidence": 0.47
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.27
+  }
+ },
+ "custo_usd": 0.01181
+}

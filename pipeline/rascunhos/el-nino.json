@@ -1,0 +1,255 @@
+{
+ "id": "el-nino",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:27:54",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Em 1892, pescadores peruanos deram um nome à corrente quente que aparecia perto da costa no fim do ano: El Niño, o Menino, porque chegava perto do Natal. O nome pegou e hoje batiza um fenômeno que mexe com a chuva em quatro continentes.",
+  "telas": [
+   {
+    "tipo": "comparar",
+    "a": "Leste do Pacífico",
+    "b": "Oeste do Pacífico",
+    "linhas": [
+     {
+      "aspecto": "Superfície",
+      "a": "cerca de 20 °C",
+      "b": "28 a 30 °C"
+     },
+     {
+      "aspecto": "Nível do mar",
+      "a": "cerca de meio metro mais baixo",
+      "b": "cerca de meio metro mais alto"
+     },
+     {
+      "aspecto": "Termoclina",
+      "a": "cerca de 30 metros",
+      "b": "cerca de 140 metros"
+     }
+    ],
+    "legenda": "Em condições normais, os ventos alísios empurram a água quente para o oeste. A costa da América do Sul fica com água fria subindo do fundo.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Alísios enfraquecem",
+      "texto": "Os ventos que sopram de leste para oeste perdem força."
+     },
+     {
+      "nome": "Menos água sobe",
+      "texto": "Na costa da América do Sul, sobe menos água fria do fundo."
+     },
+     {
+      "nome": "Água quente se espalha",
+      "texto": "A água quente acumulada no oeste se desloca para leste."
+     },
+     {
+      "nome": "Diferença diminui",
+      "texto": "A diferença de temperatura entre leste e oeste encolhe."
+     },
+     {
+      "nome": "Vento enfraquece mais",
+      "texto": "A diferença menor enfraquece ainda mais os alísios. O ciclo se reforça."
+     }
+    ],
+    "legenda": "O mecanismo que se alimenta sozinho, descrito por Jacob Bjerknes em 1969.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o El Niño se intensifica depois de começar?",
+    "alts": [
+     "Porque o oceano esquenta sozinho, sem ligação com o vento",
+     "Porque o aquecimento do leste enfraquece os ventos, e ventos fracos esquentam ainda mais o leste",
+     "Porque a água quente do oeste chega toda de uma vez e para o ciclo"
+    ],
+    "correta": 1,
+    "porque": "É o feedback de Bjerknes: o enfraquecimento dos alísios aquece o leste; esse aquecimento reduz a diferença de temperatura e enfraquece ainda mais os ventos. O ciclo só para quando a água quente acumulada no oeste se esgota."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Chuva",
+      "texto": "Diminui na Indonésia, na Índia e no norte da Austrália; aumenta sobre o Pacífico tropical."
+     },
+     {
+      "nome": "Circulação de Walker",
+      "texto": "Enfraquece ou inverte."
+     },
+     {
+      "nome": "Efeitos globais",
+      "texto": "Mais de 1700 estações mostram padrões regionais de chuva ligados ao ENOS em várias partes do globo."
+     }
+    ],
+    "legenda": "No El Niño, a atmosfera responde ao oceano quente. A chuva muda de lugar em quatro continentes.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "comparar",
+    "a": "Estados Unidos",
+    "b": "Peru",
+    "linhas": [
+     {
+      "aspecto": "Região monitorada",
+      "a": "Niño 3.4",
+      "b": "Niño 1+2"
+     },
+     {
+      "aspecto": "Limiar de El Niño",
+      "a": "0,5 °C acima do normal por 3 meses",
+      "b": "0,4 °C acima do normal por 3 meses"
+     }
+    ],
+    "legenda": "Cada país usa um limiar diferente para declarar um evento. Não existe uma definição única.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um país declara El Niño quando a temperatura fica 0,6 °C acima do normal por um mês. Outro exige 0,5 °C por três meses. O que isso mostra?",
+    "alts": [
+     "Um deles está errado",
+     "Não existe uma definição única de El Niño; cada país adota critérios próprios",
+     "O El Niño só existe no Pacífico leste"
+    ],
+    "correta": 1,
+    "porque": "Cada país usa um limiar diferente. Os Estados Unidos consideram 0,5 °C na região Niño 3.4; o Peru usa 0,4 °C na região Niño 1+2 por três meses."
+   }
+  ],
+  "fecho": "O El Niño aquece a água na superfície. E o que acontece quando essa água quente afunda e viaja pelo fundo dos oceanos? Isso tem nome: circulação termohalina."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 4: o tipo visual não combina com o conteúdo (0.47); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.9,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.1,
+    "3": 0.9,
+    "4": 0
+   },
+   "confidence": 0.91
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.08,
+    "especulacao": 0,
+    "consenso": 0.91,
+    "emergente": 0.01
+   },
+   "confidence": 0.89
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.12
+  }
+ },
+ "custo_usd": 0.01329
+}

@@ -1,0 +1,292 @@
+{
+ "id": "habeas-corpus",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:27:14",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 3,
+ "licao": {
+  "gancho": "Imagine que alguém é preso e ninguém explica por quê. Não há juiz, acusação formal nem prazo para soltar. Em muitos lugares, a pessoa pode pedir à Justiça uma ordem simples: que o responsável pela prisão apresente o corpo do preso e diga, na frente de um juiz, qual é a base legal daquela detenção.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Essa ordem é o <strong>habeas corpus</strong>. A frase é latim e quer dizer \"que tenhas o corpo\". O juiz quer ver a pessoa presa e ouvir quem a mantém sob custódia, em vez de aceitar um papel anônimo.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Pedido",
+      "texto": "Qualquer pessoa pode entrar com a ação, mesmo sem advogado, e não precisa ser o próprio preso."
+     },
+     {
+      "nome": "Resposta",
+      "texto": "A autoridade que mantém a custódia precisa explicar a base legal da prisão."
+     },
+     {
+      "nome": "Decisão",
+      "texto": "O juiz verifica se a prisão é legal. Se não for, ordena a soltura imediata ou impede que ela aconteça."
+     }
+    ],
+    "legenda": "O habeas corpus não julga culpa ou inocência. Ele examina apenas se a prisão é legal.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que o habeas corpus decide?",
+    "alts": [
+     "Se a pessoa é culpada ou inocente",
+     "Se a prisão é legal",
+     "Se a pena foi justa"
+    ],
+    "correta": 1,
+    "porque": "O habeas corpus verifica só a legalidade da custódia. Se a lei autoriza a prisão, a ordem não prospera, mesmo que o preso se declare inocente."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Preventivo",
+    "b": "Repressivo",
+    "linhas": [
+     {
+      "aspecto": "Quando é pedido",
+      "a": "antes da prisão, quando há ameaça concreta",
+      "b": "depois que a pessoa já está presa"
+     },
+     {
+      "aspecto": "O que o juiz emite",
+      "a": "salvo-conduto que impede a detenção",
+      "b": "ordem de soltura"
+     }
+    ],
+    "legenda": "As duas formas protegem a liberdade de ir e vir.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1679,
+      "texto": "Habeas Corpus Act. Primeiro texto a codificar o procedimento."
+     },
+     {
+      "ano": 1891,
+      "texto": "Constituição brasileira garante o habeas corpus de forma explícita."
+     },
+     {
+      "ano": 1988,
+      "texto": "Constituição brasileira torna o habeas corpus cláusula pétrea."
+     }
+    ],
+    "legenda": "O Habeas Corpus Act de 1679 foi o primeiro a codificar o procedimento.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Quem pode pedir habeas corpus no Brasil?",
+    "alts": [
+     "Só o preso ou um advogado",
+     "Qualquer pessoa, mesmo sem interesse direto, e o juiz pode conceder de ofício",
+     "Só o Ministério Público"
+    ],
+    "correta": 1,
+    "porque": "A legitimação é amplíssima: qualquer pessoa física ou jurídica, nacional ou estrangeira, mesmo sem interesse direto, pode entrar com o pedido. Um juiz também pode conceder de ofício.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Pedido",
+      "nota": "qualquer pessoa, sem advogado"
+     },
+     {
+      "nome": "Autoridade",
+      "nota": "deve apresentar o preso e a base legal"
+     },
+     {
+      "nome": "Juiz",
+      "nota": "verifica a legalidade e decide"
+     }
+    ],
+    "eixo": {
+     "topo": "quem inicia",
+     "base": "quem decide"
+    },
+    "legenda": "Um caminho de três níveis: do pedido à decisão.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Se o habeas corpus é negado, o preso pode entrar com novo pedido?",
+    "alts": [
+     "Não, a decisão faz coisa julgada",
+     "Sim, se apresentar novas provas ou novos fundamentos",
+     "Só se pagar fiança"
+    ],
+    "correta": 1,
+    "porque": "A decisão que nega habeas corpus não faz coisa julgada. A liberdade não pode ser definitivamente barrada se surgirem elementos novos.",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "Se a prisão é ilegal, o habeas corpus solta. Mas e se o processo for injusto? Aí entra outro direito: o devido processo legal."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
+ "alertas_jev": [
+  "tela 7: soa como IA (0.57)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.97,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.04,
+    "3": 0.94,
+    "4": 0.02
+   },
+   "confidence": 0.95
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "consenso": 0.99,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.99,
+    "especulacao": 0.01,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.03,
+    "consenso": 0.96,
+    "emergente": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.94
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.95,
+    "especulacao": 0.02,
+    "emergente": 0,
+    "controverso": 0.03
+   },
+   "confidence": 0.94
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.57
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.97,
+    "especulacao": 0.03,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 0.95
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.62
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.2
+  }
+ },
+ "custo_usd": 0.01411
+}

@@ -1,0 +1,115 @@
+{
+ "id": "lacos-fracos",
+ "termo": "A força dos laços fracos (Granovetter)",
+ "wiki_pt": null,
+ "wiki_en": "Mark Granovetter",
+ "busca": "strength of weak ties",
+ "itens": [
+  {
+   "tipo": "enciclopédia",
+   "ref": "Wikipédia (inglês), verbete 'Mark Granovetter'. Consultado em 27/09/2026.",
+   "url": "https://en.wikipedia.org/wiki/Mark_Granovetter",
+   "texto": "Mark Sanford Granovetter (; born October 20, 1943) is an American sociologist and a professor emeritus at Stanford University. He is best known for his work in social network theory and economic sociology. His 1973 paper \"The Strength of Weak Ties\" is one of the most frequently cited social science articles of all time.\nAfter earning his PhD in sociology from Harvard University in 1970, Granovetter taught at Johns Hopkins University (1970–73), Harvard (1973–77), Stony Brook University (1977–92) and Northwestern University (1992–95). In 1995 he moved to Stanford, where he subsequently became the Joan Butler Ford Professor in the School of Humanities and Sciences. He retired in 2025.\n\n\n== Early life and education ==\nRaised in Jersey City, New Jersey, Granovetter was the valedictorian of the class of 1961 at Henry Snyder High School.\nGranovetter earned a Bachelor of Arts degree in history at Princeton University (1965) and a PhD in sociology at Harvard University (1970). At Harvard his research was supervised by Harrison White.\n\n\n== Career and research ==\nGranovetter was an assistant professor of social relations at Johns Hopkins University from 1970 to 1973. He then moved to Harvard University, where he was an assistant professor and, later, associate professor in sociology until 1977. He moved to Stony Brook University in 1977, where he eventually became a professor of sociology and stayed until 1992. In 1989, he was the chair of the sociology department at Stony Brook. He was professor of sociology and organization behavior at Northwestern University from 1992 to 1995. In 1995, Granovetter joined Stanford University, where he was the Joan Butler Ford Professor in the School of Humanities and Sciences from at least 2005 until his retirement in 2025. He chaired of the Department of Sociology twice. In 2020, he was elected a member of the National Academy of Sciences.\n\n\n=== The Strength of Weak Ties ===\n\nGranovetter's paper The Strength of Weak Ties is one of the most influential articles in social science, with more than 78,000 citations according to Google Scholar (As of November 2025). Its thesis is that weak ties—acquaintanceships that are not reinforced by many mutual friendships—are especially pivotal in the flow of information.  It has become a core idea in the field of social networks. In marketing, information science, or politics, weak ties enable reaching populations and audiences that are not accessible via strong ties. The concepts and findings of this work were later published in the monograph Getting A Job, an adaptation of Granovetter's doctoral dissertation at Harvard University's Department of Social Relations, with the title: \"Changing Jobs: Channels of Mobility Information in a Suburban Population\" (313 pages).\nIn 1969, Granovetter submitted the paper to American Sociological Review, but it was rejected. Eventually this pioneering research was published in 1973 in the American Journal of Sociology and became the most cited work in the social sciences.\n\n\n=== Economic sociology: Embeddedness ===\nIn the field of economic sociology, Granovetter has been a leader since the publication in 1985 of an article that launched \"new economic sociology\", \"Economic Action and Social Structure: The Problem of Embeddedness\". This article caused Granovetter to be identified with the concept of \"embeddedness\", the idea that economic relations between individuals or firms are embedded in actual social networks and do not exist in an abstract idealized market. The concept of embeddedness originated with Karl Polanyi in his book The Great Transformation, where Polanyi posited that all economies are embedded in social relations and institutions. Granovetter also published a book called Society and Economy (2017).\n\n\n=== \"Tipping points\" and threshold models ===\nGranovetter has done research on a model of how fads are created. Consider a hypothetical mob assuming that each person's decision whether to riot or not is dependent on what everyone else is doing. Instigators will begin rioting even if no one else is, while others need to see a critical number of trouble makers before they riot, too. This threshold is assumed to be distributed to some probability distribution. The outcomes may diverge largely although the initial condition of threshold may only differ very slightly. This threshold model of social behavior was proposed previously by Thomas Schelling and later popularized by Canadian journalist Malcolm Gladwell's book The Tipping Point.\n\n\n=== Security influence ===\nGranovetter's work has influenced researchers in capability-based security. Interactions in these systems can be described using \"Granovetter diagrams\", which illustrate changes in the ties between objects.\n\n\n=== Publications ===\nHis publications include:\n\nGetting A Job: A Study of Contacts and Careers. Cambridge, Mass: Harvard University. 1974. ISBN 978-0-674-35416-6.\nGranovetter, M. (1978). \"Threshold Models of Collective Behavior\". American Journal of Sociology. 83 (6): 1420–1443. doi:10.1086/226707. JSTOR 2778111. S2CID 49314397.\nGranovetter, M. (1983). \"The Strength of Weak Ties: A Network Theory Revisited\". Sociological Theory. 1: 201–233. doi:10.2307/202051. JSTOR 202051.\n- Reprinted in Marsden, Peter V.; Lin, Nan, eds. (1982). Social Structure and Network Analysis. Sage. ISBN 978-0-8039-1888-7.\nGranovetter, M. (1985). \"Economic Action and Social Structure: The Problem of Embeddedness\". American Journal of Sociology. 91 (3): 481–510. doi:10.1086/228311. JSTOR 2780199. S2CID 17242802.\nNohria, Nitin; Eccles, Robert, eds. (1992). \"Problems of Explanation in Economic Sociology\". Networks and Organizations: Structure, Form, and Action. Boston, Mass: Harvard Business School. ISBN 978-0-87584-324-7.\nGranovetter, M. (2005). \"The Impact of Social Structure on Economic Outcomes\". Journal of Economic Perspectives. 19: 33–50. doi:10.1257/0895330053147958.\n\n\n== References ==\n\n\n== External links ==\nWorks by or about Mark Granovetter at the Internet Archive",
+   "n": 1
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Mark S. Granovetter. 'The Strength of Weak Ties'. <em>American Journal of Sociology</em>, 1973.",
+   "url": "https://doi.org/10.1086/225469",
+   "texto": "Analysis of social networks is suggested as a tool for linking micro and macro levels of sociological theory. The procedure is illustrated by elaboration of the macro implications of one aspect of small-scale interaction: the strength of dyadic ties. It is argued that the degree of overlap of two individuals' friendship networks varies directly with the strength of their tie to one another. The impact of this principle on diffusion of influence and information, mobility opportunity, and community organization is explored. Stress is laid on the cohesive power of weak ties. Most network models deal, implicitly, with strong ties, thus confining their applicability to small, well-defined groups. Emphasis on weak ties lends itself to discussion of relations between groups and to analysis of segments of social structure not easily defined in terms of primary groups.",
+   "n": 2
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Mark S. Granovetter. 'The Strength of Weak Ties: A Network Theory Revisited'. <em>Sociological Theory</em>, 1983.",
+   "url": "https://doi.org/10.2307/202051",
+   "texto": "JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide range of content in a trusted digital archive. We use information technology and tools to increase productivity and facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.",
+   "n": 3
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Daniel Z. Levin, Rob Cross. 'The Strength of Weak Ties You Can Trust: The Mediating Role of Trust in Effective Knowledge Transfer'. <em>Management Science</em>, 2004.",
+   "url": "https://doi.org/10.1287/mnsc.1030.0136",
+   "texto": "Research has demonstrated that relationships are critical to knowledge creation and transfer, yet findings have been mixed regarding the importance of relational and structural characteristics of social capital for the receipt of tacit and explicit knowledge. We propose and test a model of two-party (dyadic) knowledge exchange, with strong support in each of the three companies surveyed. First, the link between strong ties and receipt of useful knowledge (as reported by the knowledge seeker) was mediated by competence- and benevolence-based trust. Second, once we controlled for these two trustworthiness dimensions, the structural benefit of weak ties emerged. This finding is consistent with prior research suggesting that weak ties provide access to nonredundant information. Third, competence-based trust was especially important for the receipt of tacit knowledge. We discuss implications for theory and practice.",
+   "n": 4
+  },
+  {
+   "tipo": "artigo",
+   "ref": "James D. Montgomery. 'Job Search and Network Composition: Implications of the Strength-Of-Weak-Ties Hypothesis'. <em>American Sociological Review</em>, 1992.",
+   "url": "https://doi.org/10.2307/2095914",
+   "texto": "Workers find jobs through personal contacts (weak and strong ties) and formal sources. Alternative formulations of the strength-of-weak-ties hypothesis suggest (1) weak ties relay job offers more frequently than strong ties, or (2) weak-tie offers are drawn from a better distribution. A formal model shows that both formulations imply a correlation between network composition and a job seeker's minimum acceptable wage. However, the use of a weak tie is never associated with higher expected wages under the firstformulation, and is only sometimes associated with higher expected wages under the secondformulation. These results suggest that researchers shouldfocus on job seekers' network structures.",
+   "n": 5
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Markus Baer. 'The strength-of-weak-ties perspective on creativity: A comprehensive examination and extension.'. <em>Journal of Applied Psychology</em>, 2010.",
+   "url": "https://doi.org/10.1037/a0018761",
+   "texto": "Disentangling the effects of weak ties on creativity, the present study separated, both theoretically and empirically, the effects of the size and strength of actors' idea networks and examined their joint impact while simultaneously considering the separate, moderating role of network diversity. I hypothesized that idea networks of optimal size and weak strength were more likely to boost creativity when they afforded actors access to a wide range of different social circles. In addition, I examined whether the joint effects of network size, strength, and diversity on creativity were further qualified by the openness to experience personality dimension. As expected, results indicated that actors were most creative when they maintained idea networks of optimal size, weak strength, and high diversity and when they scored high on the openness dimension. The implications of these results are discussed.",
+   "n": 6
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Daniel Z. Levin, Rob Cross, Lisa C. Abrams. 'THE STRENGTH OF WEAK TIES YOU CAN TRUST: THE MEDIATING ROLE OF TRUST IN EFFECTIVE KNOWLEDGE TRANSFER.'. <em>Academy of Management Proceedings</em>, 2002.",
+   "url": "https://doi.org/10.5465/apbpp.2002.7517527",
+   "texto": "Recent research suggests that people obtain complex, useful knowledge from other people with whom they work closely and frequently (i.e., strong ties). Yet there has been only limited systematic empirical work examining why strong ties are important for knowledge transfer. Based on a review of the social network, trust, and knowledge/organizational learning literatures, we propose a model whereby two-party (dyadic) trust mediates the relationship between strong ties and effective knowledge transfer. We tested this model with a two-stage survey in three companies in different countries and found strong support. First, the relationship between strong ties and effective knowledge transfer (as reported by the knowledge receiver) was mediated by competence- and benevolence-based trust. Second, once we controlled for these two dimensions of trust, it was actually weak ties that provided the most useful knowledge. This latter finding is consistent with prior research suggesting that weak ties provide access to non-redundant information. Third, we also found that competence-based trust was especially important for the transfer of complex (tacit) knowledge. Implications are drawn for the social network and knowledge/organizational learning literatures as well as for management practice.",
+   "n": 7
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Karthik Rajkumar, Guillaume Saint-Jacques, Iavor Bojinov, Erik Brynjolfsson et al.. 'A causal test of the strength of weak ties'. <em>Science</em>, 2022.",
+   "url": "https://doi.org/10.1126/science.abl4476",
+   "texto": "The authors analyzed data from multiple large-scale randomized experiments on LinkedIn's People You May Know algorithm, which recommends new connections to LinkedIn members, to test the extent to which weak ties increased job mobility in the world's largest professional social network. The experiments randomly varied the prevalence of weak ties in the networks of over 20 million people over a 5-year period, during which 2 billion new ties and 600,000 new jobs were created. The results provided experimental causal evidence supporting the strength of weak ties and suggested three revisions to the theory. First, the strength of weak ties was nonlinear. Statistical analysis found an inverted U-shaped relationship between tie strength and job transmission such that weaker ties increased job transmission but only to a point, after which there were diminishing marginal returns to tie weakness. Second, weak ties measured by interaction intensity and the number of mutual connections displayed varying effects. Moderately weak ties (measured by mutual connections) and the weakest ties (measured by interaction intensity) created the most job mobility. Third, the strength of weak ties varied by industry. Whereas weak ties increased job mobility in more digital industries, strong ties increased job mobility in less digital industries.",
+   "n": 8
+  },
+  {
+   "tipo": "artigo",
+   "ref": "William T. Liu, Robert W. Duff. 'The Strength in Weak Ties'. <em>Public Opinion Quarterly</em>, 1972.",
+   "url": "https://doi.org/10.1086/268018",
+   "texto": "Although communication may take place more easily among people who share similar attributes and have similar attitudes and beliefs, such communication may be in large measure redundant: no new informtion enters the system. For the diffusion of new information, the existence of some “heterophilous” relationships seems to be a structural prerequisite. The following article offers evidence bearing on this proposition.",
+   "n": 9
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Daniel P. Carpenter, Kevin Esterling, David M. J. Lazer. 'The Strength of Weak Ties in Lobbying Networks'. <em>Journal of Theoretical Politics</em>, 1998.",
+   "url": "https://doi.org/10.1177/0951692898010004003",
+   "texto": "How does policy information flow through Washington `issue networks'? And how does information flow determine which lobbyists get access in policy-making? Drawing upon the `strength of weak ties' argument, the authors argue that policy information passes more through acquaintances (`weak ties') than through close, trusted, contacts (`strong ties'). They support this argument in an analysis of data on lobbying networks in health-care policy-making in the 1970s and 1980s. The statistical analyses show that access to policy-makers in Washington is network-autocorrelated: a lobbyist's access depends upon the access of other lobbyists s/he knows. The results demonstrate the importance of weak ties as a restricted form of `social capital' in policy-making.",
+   "n": 10
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Jane Atterton. 'The ‘Strength of Weak Ties’: Social Networking by Business Owners in the Highlands and Islands of Scotland'. <em>Sociologia Ruralis</em>, 2007.",
+   "url": "https://doi.org/10.1111/j.1467-9523.2007.00435.x",
+   "texto": "Drawing on recent studies of the importance of social networks and embeddedness in affecting the operation of businesses, this article reports the results of an empirical study of the social networks maintained by business owners located in three small towns in the highly peripheral Highlands and Islands of Scotland. Through a combination of a large-scale postal questionnaires and qualitative semi-structured interviews, the study found that, although business owners in all three towns place importance on maintaining embedded ties, there are differences between the towns in terms of the characteristics of the social networks maintained by owners. The respondents suggest several explanations for these differing patterns, including the number of in-migrants in the local area and the cultural characteristics of local people. The article discusses the implications of these patterns for the future development of the businesses and the towns in which they are located. In particular, it is argued that the strength of local social networks maintained by owners in very remote Wick may serve to hamper both their future business development and that of the wider local economy.",
+   "n": 11
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Oliver Huxhold, Katherine L. Fiori, Noah J Webster, Toni C. Antonucci. 'The Strength of Weaker Ties: An Underexplored Resource for Maintaining Emotional Well-Being in Later Life'. <em>The Journals of Gerontology Series B</em>, 2020.",
+   "url": "https://doi.org/10.1093/geronb/gbaa019",
+   "texto": "OBJECTIVES: The purpose of this study was to examine dynamic links between changes in social ties and changes in emotional well-being. METHOD: Trivariate dual-change score models were used to test whether a large number of close ties would be more strongly associated with low levels of depressed affect than a large number of weaker ties, and a large number of weaker ties would be more strongly associated with high levels of positive affect compared to a large number of close ties, across three waves of a large, regionally representative sample of U.S. adults aged 40 and older (N = 802). RESULTS: We found that a greater number of weaker ties was associated with having more close ties over time, and that the number of weaker ties was more strongly predictive of positive age-related changes in both aspects of well-being (i.e., more positive affect and less depressed affect) than the number of close ties. DISCUSSION: Contrary to popular theoretical orientations in gerontology, weaker ties may offer older adults a more effective avenue for promoting emotional well-being over time than close ties, and may have the additional benefit of compensating for losses in the number of close ties.",
+   "n": 12
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Jason P. Greenberg, Roberto M. Fernandez. 'The Strength of Weak Ties in MBA Job Search: A Within--Person Test'. <em>Sociological Science</em>, 2016.",
+   "url": "https://doi.org/10.15195/v3.a14",
+   "texto": "Jason Greenberg, Roberto M. Fernandez Sociological Science, May 18, 2016 DOI 10.15195/v3.a14 Abstract Whether and how social ties create value has inspired substantial research in organizational theory, sociology, and economics.",
+   "n": 13
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Karen Wells. 'The strength of weak ties: the social networks of young separated asylum seekers and refugees in London'. <em>Children s Geographies</em>, 2011.",
+   "url": "https://doi.org/10.1080/14733285.2011.590710",
+   "texto": "This paper is about the social networks of young unaccompanied asylum seekers and refugees in London. It discusses the findings of a 12-month qualitative study using photo elicitation interviews with eight young refugees to explore their social networks. The analysis points to the potential of social networks to provide emotional and material support for young refugees and discusses the extent to which social capital flows through these networks. It explores the importance of place and gender in shaping their entry into and formation of these networks. It concludes that the formation of weak ties particularly to institutional actors is important in providing young refugees with access to material and cultural resources.",
+   "n": 14
+  },
+  {
+   "tipo": "artigo",
+   "ref": "Robert D. Baller, Kelly K. Richardson. 'The “Dark Side” of the Strength of Weak Ties: The Diffusion of Suicidal Thoughts'. <em>Journal of Health and Social Behavior</em>, 2009.",
+   "url": "https://doi.org/10.1177/002214650905000302",
+   "texto": "Granovetter's theory on the strength of weak ties motivates hypotheses on the difusive nature of suicidal thoughts in the friendship networks of adolescents. Using data from the National Longitudinal Study of Adolescent Health, the effects of friends-of-friends attempting suicide on the suicidal thoughts of respondents are estimated. A focus on friends-of-friends permits a test of the weak-ties thesis because respondents are indirectly linked to friends-of-friends by \"open ties\" that are both structurally weak and used as bridges. Results for \"at-risk\" respondents--or those with certain behaviors, statuses, and experiences that create psychological predispositions to suicide-are consistent with Granovetter's theory and thus reveal the \"dark side\" of the strength of weak ties as at-risk respondents are more likely to seriously think about committing suicide when a friend-of-a-friend attempts suicide, controlling for past suicidal thoughts by the respondent and attempts by friends, family, and students in the respondent's school, among other control factors. Barriers to diffusion are also considered.",
+   "n": 15
+  }
+ ],
+ "filtrado": true
+}

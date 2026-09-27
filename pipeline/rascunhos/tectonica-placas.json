@@ -1,0 +1,314 @@
+{
+ "id": "tectonica-placas",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:27:53",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "A cordilheira dos Himalaias cresce alguns centímetros por ano. Ninguém sente, mas a Índia está empurrando a Ásia para cima há milhões de anos.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>A litosfera é a camada externa rígida da Terra. Ela está quebrada em sete ou oito placas principais, que se movem sobre uma camada mais quente e mole, a astenosfera.</p>"
+   },
+   {
+    "tipo": "estimar",
+    "q": "Em média, qual é a velocidade máxima com que duas placas se movem uma em relação à outra?",
+    "unidade": "centímetros por ano",
+    "min": 0,
+    "max": 100,
+    "escala": "linear",
+    "resposta": 10,
+    "legenda": "O movimento relativo entre placas geralmente varia de zero a 10 centímetros por ano. A placa de Nazca chega a 16 centímetros por ano.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Litosfera",
+      "nota": "crosta e parte superior do manto, rígida"
+     },
+     {
+      "nome": "Astenosfera",
+      "nota": "mais quente, flui com facilidade"
+     }
+    ],
+    "eixo": {
+     "topo": "superfície",
+     "base": "interior"
+    },
+    "legenda": "As placas são pedaços da litosfera que deslizam sobre a astenosfera.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Crosta oceânica",
+    "b": "Crosta continental",
+    "linhas": [
+     {
+      "aspecto": "Densidade",
+      "a": "mais densa",
+      "b": "menos densa"
+     },
+     {
+      "aspecto": "Composição",
+      "a": "menos silício, mais elementos pesados",
+      "b": "mais silício"
+     },
+     {
+      "aspecto": "Posição",
+      "a": "geralmente abaixo do nível do mar",
+      "b": "geralmente acima do nível do mar"
+     }
+    ],
+    "legenda": "A diferença de densidade explica por que uma afunda e a outra se eleva.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a crosta oceânica geralmente fica abaixo do nível do mar?",
+    "alts": [
+     "Porque é mais nova e ainda não teve tempo de emergir",
+     "Porque é mais densa, com menos silício e mais elementos pesados",
+     "Porque está sempre coberta por água"
+    ],
+    "correta": 1,
+    "porque": "A composição mais densa faz a crosta oceânica afundar na astenosfera, enquanto a continental flutua mais alto."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Nova crosta",
+      "texto": "Nasce nas dorsais meso-oceânicas, quente e menos densa."
+     },
+     {
+      "nome": "Esfriamento",
+      "texto": "Com o tempo, a crosta esfria, engrossa e fica mais densa."
+     },
+     {
+      "nome": "Subducção",
+      "texto": "A litosfera densa afunda numa zona de subducção."
+     },
+     {
+      "nome": "Puxão",
+      "texto": "Ao afundar, ela puxa o resto da placa. É o slab pull."
+     }
+    ],
+    "legenda": "O slab pull é considerado a maior força motriz do movimento das placas.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual é a principal força que move as placas tectônicas?",
+    "alts": [
+     "Uma força horizontal que empurra as placas a partir da dorsal",
+     "O peso da litosfera antiga e densa que afunda na subducção",
+     "O atrito com a astenosfera"
+    ],
+    "correta": 1,
+    "porque": "A litosfera fria e densa afunda e puxa o resto da placa. A força ligada à elevação da dorsal é secundária."
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1956,
+      "texto": "Trabalhos sobre paleomagnetismo mostram que os continentes se moveram em relação aos polos."
+     },
+     {
+      "ano": 1963,
+      "texto": "Padrões magnéticos simétricos no fundo do oceano confirmam a expansão do fundo marinho."
+     },
+     {
+      "ano": 1970,
+      "texto": "Tanya Atwater usa a tectônica de placas para explicar a geologia da costa oeste da América do Norte."
+     },
+     {
+      "ano": 1974,
+      "texto": "Modelo numérico com dados de terremotos e expansão testa com sucesso a hipótese das placas rígidas."
+     }
+    ],
+    "legenda": "A teoria foi construída a partir de várias linhas de evidência que se encaixaram.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Hoje a tectônica de placas é usada para explicar a geologia de regiões concretas, como a formação das ilhas japonesas, os Variscides na Europa e a orogenia Laramide na América do Norte.</p>"
+   }
+  ],
+  "fecho": "As placas explicam a geologia de regiões específicas. E o que define os biomas terrestres que vemos hoje?"
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.44); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.77,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.23,
+    "3": 0.77,
+    "4": 0
+   },
+   "confidence": 0.8
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.04
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "emergente": 0,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.08
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.84,
+    "emergente": 0.01,
+    "especulacao": 0,
+    "controverso": 0.15
+   },
+   "confidence": 0.78
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "disputa_9": {
+   "type": "noul",
+   "noul": 0.05
+  }
+ },
+ "custo_usd": 0.00802
+}

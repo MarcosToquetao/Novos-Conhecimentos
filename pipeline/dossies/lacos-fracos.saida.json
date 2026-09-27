@@ -1,0 +1,292 @@
+{
+ "A": {
+  "subtitulo": "Granovetter mostrou que a informação que muda a vida de alguém costuma vir de conhecidos distantes, e não dos amigos próximos. A razão é estrutural: os laços fracos são pontes entre grupos que de outro modo não se falam.",
+  "prerequisitos": "Entender que uma rede social pode ser desenhada como pontos ligados por linhas, e que a força de uma ligação depende de tempo, intensidade emocional, intimidade e reciprocidade. Não é preciso saber sociologia.",
+  "conexoes": [
+   {
+    "termo": "Efeitos de rede e vantagem competitiva",
+    "relacao": "A posição de ponte que um laço fraco ocupa é um recurso competitivo: quem conecta dois grupos circula informação que nenhum dos grupos tem sozinho."
+   },
+   {
+    "termo": "Difusão de inovações (Rogers)",
+    "relacao": "Novidades se espalham por contato entre grupos diferentes, e são os laços fracos que levam a novidade de um grupo a outro."
+   },
+   {
+    "termo": "Capital cultural e distinção (Bourdieu)",
+    "relacao": "Acesso a círculos diferentes traz repertório cultural que não circula dentro do próprio grupo, o que aproxima redes de capital."
+   },
+   {
+    "termo": "Profecia autorrealizável",
+    "relacao": "Quem acredita que só amigos próximos ajudam deixa de acionar conhecidos, e a crença se confirma pela omissão."
+   }
+  ],
+  "nucleo": "<p class=\"abre\">Em 1969, um sociólogo recém-formado tentou publicar um artigo sobre como as pessoas arrumam emprego. A revista recusou. O texto saiu quatro anos depois e virou um dos artigos mais citados das ciências sociais<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. A ideia central é simples de enunciar e difícil de aceitar: as pessoas que mudam a nossa vida costumam ser conhecidos distantes.</p><p>Mark Granovetter entrevistou moradores de um subúrbio de Boston que tinham trocado de trabalho havia pouco tempo. Perguntou como cada um havia chegado à vaga. A maioria não soube pelo amigo íntimo nem pelo parente. Soube por alguém com quem topava de vez em quando<sup class=\"cit\"><a href=\"#f1\">1</a></sup><sup class=\"cit\"><a href=\"#f2\">2</a></sup>. O resultado não era coincidência de uma cidade. Era estrutura.</p><h3>Por que o amigo próximo não ajuda</h3><p>Imagine que você e seu melhor amigo tenham quase os mesmos amigos. Faz sentido: quem convive muito acaba apresentando um ao outro. Se ele conhece as mesmas pessoas que você, ele sabe as mesmas vagas, os mesmos boatos, os mesmos problemas. Quando você precisa de uma informação nova, ele repete o que você já tem.</p><p>O conhecido distante é diferente. Ele cresceu em outro bairro, trabalha em outra empresa, torce para outro time. Seu círculo e o dele quase não se tocam. Por isso o que ele sabe não está no seu repertório. Granovetter chamou de <strong>laço fraco</strong> a ligação com pouca intimidade, pouco tempo juntos e pouca reciprocidade. E chamou de <strong>ponte</strong> a ligação que é o único caminho entre dois grupos<sup class=\"cit\"><a href=\"#f2\">2</a></sup>.</p><p>A combinação é o achado: quase toda ponte é um laço fraco. Se dois grupos tivessem vários amigos em comum, eles não seriam dois grupos, seriam um. Laços fortes vivem fechados dentro do mesmo aglomerado. Laços fracos são o que sobra para ligar aglomerados diferentes<sup class=\"cit\"><a href=\"#f2\">2</a></sup><sup class=\"cit\"><a href=\"#f3\">3</a></sup>.</p><h3>O que a ponte carrega</h3><p>Uma vaga de emprego é informação. Só que é uma informação com prazo. Circula por um tempo curto, entre quem já está dentro da empresa, e depois fecha. Quem tem acesso a muitos grupos tem mais chance de ouvir a tempo. Não porque seja mais querido, mas porque está em mais lugares ao mesmo tempo.</p><p>O mesmo vale fora do emprego. Lobby em Washington passava mais por conhecidos do que por contatos íntimos: um lobista ligado a alguém que ninguém no seu círculo conhece chega a gabinetes que os amigos não alcançam<sup class=\"cit\"><a href=\"#f4\">4</a></sup>. Jovens refugiados em Londres conseguiam apoio material e cultural sobretudo por laços fracos com funcionários de instituições, gente que não fazia parte do círculo íntimo<sup class=\"cit\"><a href=\"#f5\">5</a></sup>.</p><div class=\"marca consenso\"><span class=\"rot\">Consenso</span><p>A sobreposição entre dois círculos de amizade cresce conforme a força do laço. Consequência: os laços fracos são os principais responsáveis por conectar grupos separados e por fazer circular informação que não está disponível dentro de um grupo só<sup class=\"cit\"><a href=\"#f2\">2</a></sup>.</p></div><h3>O que a descoberta não diz</h3><p>Fama não é prova. O artigo virou clássico, mas a própria teoria foi ajustada com o tempo. Quando pesquisadores separaram a força do laço do tamanho da rede de ideias, viram que o efeito sobre criatividade depende também de diversidade e de quanto a pessoa é aberta a experiências<sup class=\"cit\"><a href=\"#f6\">6</a></sup>. Trabalhos sobre conhecimento no ambiente de trabalho mostraram que laços fortes transmitem confiança e ajudam em conhecimento complexo; assim que se controla a confiança, o ganho estrutural do laço fraco aparece<sup class=\"cit\"><a href=\"#f7\">7</a></sup><sup class=\"cit\"><a href=\"#f8\">8</a></sup>.</p><p>Em 2022, um experimento em larga escala testou a tese de forma causal. Pesquisadores variaram aleatoriamente a proporção de laços fracos sugeridos pelo algoritmo do LinkedIn para mais de 20 milhões de pessoas, ao longo de 5 anos, com 2 bilhões de novas ligações e 600 mil empregos criados<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. O resultado apoiou a teoria e trouxe três correções. A primeira: o efeito não é linear. Existe um ponto ótimo de fraqueza; passar dele, a ligação fica fraca demais para servir de ponte<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. A segunda: laços medidos por conexões em comum e por intensidade de interação se comportam diferente. A terceira: em indústrias menos digitais, laços fortes transmitem mais vagas<sup class=\"cit\"><a href=\"#f9\">9</a></sup>.</p>",
+  "aprofundamento": "<p>A força de um laço, na formulação de Granovetter, é uma combinação de quatro coisas: tempo gasto juntos, intensidade emocional, intimidade e reciprocidade<sup class=\"cit\"><a href=\"#f2\">2</a></sup>. Nada disso é medido com um número exato. O que o pesquisador faz é ordenar as relações numa escala, de muito próximas a distantes, e olhar a estrutura que resulta.</p><p>O argumento tem uma parte que parece trivial e uma parte que não é. A parte trivial: amigos próximos se conhecem entre si. A parte não trivial: essa simples regularidade obriga os laços fracos a ocupar quase todas as pontes entre grupos. Disso decorre que a informação socialmente útil tem duas rotas, com propriedades diferentes.</p><table><thead><tr><th></th><th>Laço forte</th><th>Laço fraco</th></tr></thead><tbody><tr><td>O que circula</td><td>Confiança, ajuda, conhecimento complexo</td><td>Informação nova, pouco redundante</td></tr><tr><td>Estrutura típica</td><td>Dentro do mesmo grupo</td><td>Ponte entre grupos</td></tr><tr><td>Risco</td><td>Redundância: todos sabem o mesmo</td><td>Pouca confiança, pouca cobrança</td></tr></tbody></table><p>Essa distinção explica por que as pesquisas empíricas às vezes parecem se contradizer. Um estudo em três empresas de países diferentes mostrou que laços fortes estavam associados a conhecimento útil, mas que esse efeito passava pela confiança: quem confia na competência e na boa intenção do outro recebe conhecimento melhor<sup class=\"cit\"><a href=\"#f7\">7</a></sup><sup class=\"cit\"><a href=\"#f8\">8</a></sup>. Quando os autores controlaram a confiança, sobrou um ganho próprio dos laços fracos<sup class=\"cit\"><a href=\"#f7\">7</a></sup><sup class=\"cit\"><a href=\"#f8\">8</a></sup>. As duas coisas são verdadeiras ao mesmo tempo, em dimensões diferentes.</p><p>O caso do emprego também foi refinado. Um modelo formal mostrou que usar um laço fraco não garante salário maior. O que importa é a composição da rede do próprio candidato, ou seja, em quantos grupos diferentes ele está presente<sup class=\"cit\"><a href=\"#f10\">10</a></sup>. A leitura popular da teoria, de que basta ter muitos conhecidos, simplifica demais. O recurso é a posição, não a quantidade.</p><p>O teste mais duro veio com experimentos de campo. O estudo de 2022 usou a aleatorização para separar causa de coincidência: se pessoas com mais laços fracos ganham mais empregos apenas porque são mais sociáveis, o experimento não deveria mostrar nada. Mostrou. E mostrou que o efeito tem forma de U invertido<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. Existe um ponto em que enfraquecer mais o laço não aumenta nada; a ligação fica frouxa demais para carregar informação. O estudo também separou duas medidas de fraqueza, conexões em comum e intensidade de interação, que se comportam de modo distinto<sup class=\"cit\"><a href=\"#f9\">9</a></sup>.</p><p>O lado sombrio também aparece na literatura. Se laços fracos transportam informação entre grupos, transportam qualquer informação, boa ou ruim. Um estudo com adolescentes americanos encontrou que, entre jovens com certas predisposições, a ideação suicida de um amigo de amigo aumentava o pensamento suicida, exatamente a rota prevista pela teoria<sup class=\"cit\"><a href=\"#f11\">11</a></sup>. Outro trabalho mostrou que redes sociais densas em regiões remotas da Escócia podiam atrapalhar o desenvolvimento dos negócios, ao fechar o dono dentro de um círculo de contatos conhecidos<sup class=\"cit\"><a href=\"#f12\">12</a></sup>.</p><p>Para idosos, um estudo longitudinal com adultos de 40 anos ou mais encontrou que o número de laços fracos previa melhor o bem-estar emocional que o número de laços próximos<sup class=\"cit\"><a href=\"#f13\">13</a></sup>. O mecanismo é o mesmo: os conhecidos dão acesso a novidade e a companhia sem a cobrança dos íntimos.</p><p>O que conta como evidência nessa área mudou junto. Nas décadas de 1970 e 1980, predominavam levantamentos e entrevistas, que descrevem associação. Depois vieram modelos formais, que checam se a hipótese é logicamente coerente<sup class=\"cit\"><a href=\"#f10\">10</a></sup>. Nos anos 2000, surveys repetidos em empresas testaram mediação, para saber por qual caminho o efeito passa<sup class=\"cit\"><a href=\"#f7\">7</a></sup><sup class=\"cit\"><a href=\"#f8\">8</a></sup>. A partir de 2022, experimentos aleatorizados em plataformas permitiram afirmar causa, não só correlação<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. Cada degrau deixou a tese mais precisa e menos absoluta.</p>",
+  "extensao": "<p>A ideia de Granovetter atravessa áreas. Em marketing e informação, ela justifica por que campanhas que dependem de amigos próximos alcançam pouca gente nova: os grupos ficam fechados. Para atingir públicos distantes, é preciso passar pelos conhecidos<sup class=\"cit\"><a href=\"#f1\">1</a></sup>. Em política, o mesmo raciocínio aparece no fluxo de informação entre gabinetes, que corre mais por conhecidos do que por aliados íntimos<sup class=\"cit\"><a href=\"#f4\">4</a></sup>.</p><p>Na prática, a teoria sugere uma estratégia simples e frequentemente esquecida: manter contato leve com gente de fora do próprio círculo. Não é buscar quantidade de conexões, porque o efeito tem limite<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. É preservar pontes. Um ex-colega de outro setor, um vizinho de outra área, um conhecido de outra cidade: cada um carrega informação que os amigos próximos não têm.</p><p>Em empresas de conhecimento, o gestor que só reforça equipes fechadas cria grupos inteligentes e isolados entre si. O estudo de 2022 mostrou que o efeito varia por indústria: em setores menos digitais, laços fortes transmitem mais vagas<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. Não existe receita única. O que existe é um diagnóstico estrutural: onde estão as pontes, e quem as ocupa.</p><p>Há também um uso clínico e de políticas públicas. A difusão de inovações depende de heterofilia, ou seja, de contato entre pessoas diferentes<sup class=\"cit\"><a href=\"#f3\">3</a></sup>. Programas que só falam com líderes comunitários podem ficar presos dentro de um grupo. Incluir pessoas com laços fracos para outros grupos amplia o alcance. Jovens refugiados em Londres usaram laços fracos com funcionários de instituições para obter apoio material e cultural, o que sugere que políticas de acolhimento ganham quando criam pontos de contato fora do círculo étnico ou familiar<sup class=\"cit\"><a href=\"#f5\">5</a></sup>.</p><p>Por fim, o conceito conversa com a ideia de profecia autorrealizável. Quem acredita que só amigos próximos ajudam deixa de acionar conhecidos, e assim perde as pontes que poderiam ajudá-lo. A crença se confirma pela omissão, não pela realidade da rede.</p>",
+  "fronteira": [
+   {
+    "tema": "Efeito do laço fraco por indústria",
+    "html": "<p>Os experimentos de 2022 encontraram que laços fracos aumentam a mobilidade em indústrias mais digitais, enquanto laços fortes a aumentam em indústrias menos digitais<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. Ainda não está claro por que essa diferença existe nem se ela se mantém em outros países ou setores. É uma linha de pesquisa em aberto.</p>"
+   },
+   {
+    "tema": "Forma exata da curva entre força do laço e informação",
+    "html": "<p>O mesmo estudo descreveu uma relação em U invertido, com um ponto ótimo de fraqueza<sup class=\"cit\"><a href=\"#f9\">9</a></sup>. Onde exatamente fica esse ponto, e se ele é o mesmo para diferentes tipos de informação, ainda é objeto de investigação.</p>"
+   },
+   {
+    "tema": "Mediação pela confiança",
+    "html": "<p>Estudos em empresas sugerem que a confiança medeia o efeito dos laços fortes sobre o conhecimento útil, e que o ganho dos laços fracos só aparece depois desse controle<sup class=\"cit\"><a href=\"#f7\">7</a></sup><sup class=\"cit\"><a href=\"#f8\">8</a></sup>. Como confiança e estrutura interagem ao longo do tempo é uma questão em aberto.</p>"
+   }
+  ]
+ },
+ "B": {
+  "sintese": {
+   "definicoes": [
+    {
+     "termo": "Laço fraco",
+     "def": "Ligação com pouca intimidade, pouco tempo juntos e pouca reciprocidade."
+    },
+    {
+     "termo": "Ponte",
+     "def": "Ligação que é o único caminho entre dois grupos."
+    },
+    {
+     "termo": "Laço forte",
+     "def": "Relação próxima, com tempo juntos, intensidade emocional, intimidade e reciprocidade."
+    },
+    {
+     "termo": "Força de um laço",
+     "def": "Combinação de tempo gasto juntos, intensidade emocional, intimidade e reciprocidade, ordenada numa escala de muito próxima a distante."
+    },
+    {
+     "termo": "Heterofilia",
+     "def": "Contato entre pessoas diferentes, base para a difusão de inovações."
+    },
+    {
+     "termo": "Efeito em U invertido",
+     "def": "Relação em que enfraquecer mais o laço deixa de aumentar o efeito e passa a reduzir, por ficar fraco demais para carregar informação."
+    }
+   ],
+   "lembrar": [
+    "A maioria das pessoas nos estudos de Granovetter soube de vagas por conhecidos distantes, não por amigos íntimos ou parentes.",
+    "Quase toda ponte entre grupos é um laço fraco, porque se dois grupos tivessem vários amigos em comum seriam um só grupo.",
+    "Laços fortes vivem dentro do mesmo aglomerado; laços fracos ligam aglomerados diferentes.",
+    "O que importa não é a quantidade de conhecidos, e sim a posição da pessoa, ou seja, em quantos grupos diferentes ela está presente.",
+    "O experimento de 2022 no LinkedIn indicou causa, não só correlação, e mostrou que o efeito tem um ponto ótimo de fraqueza.",
+    "Laços fracos transmitem qualquer informação, inclusive a prejudicial, e por isso podem ter efeitos negativos."
+   ],
+   "confusoes": [
+    {
+     "erro": "Ter muitos conhecidos garante mais oportunidades.",
+     "correcao": "O recurso é a posição na rede, em quantos grupos diferentes a pessoa está presente. O efeito do enfraquecimento do laço tem limite."
+    },
+    {
+     "erro": "Laço fraco e laço forte competem: um é bom e o outro é ruim.",
+     "correcao": "Os dois têm propriedades diferentes. Laço forte transmite confiança e conhecimento complexo; laço fraco transmite informação nova e pouco redundante."
+    },
+    {
+     "erro": "Todo laço fraco funciona como ponte.",
+     "correcao": "Só a ligação que é o único caminho entre dois grupos é ponte. Enfraquecer demais a ligação faz ela parar de carregar informação."
+    },
+    {
+     "erro": "Laços fracos só trazem benefícios.",
+     "correcao": "Se transportam informação entre grupos, transportam também informação ruim. Há indícios de efeitos negativos, como no estudo com adolescentes."
+    },
+    {
+     "erro": "O clássico virou fama, então a tese está fechada.",
+     "correcao": "A teoria foi ajustada. Pesquisas mostraram que o efeito depende de diversidade e abertura a experiências, e que o efeito varia por indústria."
+    }
+   ],
+   "numeros": [
+    "O artigo saiu quatro anos depois de ser recusado e virou um dos mais citados das ciências sociais.",
+    "O experimento de 2022 envolveu mais de 20 milhões de pessoas, ao longo de 5 anos, com 2 bilhões de novas ligações e 600 mil empregos criados.",
+    "O experimento de 2022 mostrou que o efeito não é linear e tem forma de U invertido.",
+    "Um estudo longitudinal com adultos de 40 anos ou mais mostrou que o número de laços fracos previa melhor o bem-estar emocional que o número de laços próximos."
+   ],
+   "texto_livre": ""
+  },
+  "flashcards": [
+   {
+    "f": "Por que o amigo próximo costuma ajudar menos a achar uma informação nova?",
+    "v": "Porque o amigo próximo convive com as mesmas pessoas, então sabe as mesmas vagas e os mesmos boatos. Ele repete o que você já tem."
+   },
+   {
+    "f": "O que é um laço fraco na formulação de Granovetter?",
+    "v": "É uma ligação com pouca intimidade, pouco tempo juntos e pouca reciprocidade. Pode ser um conhecido que você encontra de vez em quando."
+   },
+   {
+    "f": "O que é uma ponte?",
+    "v": "É a ligação que funciona como o único caminho entre dois grupos. Na prática, quase toda ponte é um laço fraco."
+   },
+   {
+    "f": "Por que quase toda ponte é um laço fraco?",
+    "v": "Porque se dois grupos tivessem vários amigos em comum eles seriam um só grupo. Os laços fortes ficam fechados dentro do mesmo aglomerado."
+   },
+   {
+    "f": "Como Granovetter definiu a força de um laço?",
+    "v": "Como uma combinação de tempo gasto juntos, intensidade emocional, intimidade e reciprocidade, ordenada numa escala de muito próxima a distante."
+   },
+   {
+    "f": "Qual é a diferença de conteúdo entre laço forte e laço fraco?",
+    "v": "O laço forte circula confiança, ajuda e conhecimento complexo. O laço fraco circula informação nova e pouco redundante."
+   },
+   {
+    "f": "Qual é o risco do laço forte?",
+    "v": "A redundância: todos dentro do grupo sabem as mesmas coisas. O risco do laço fraco é a pouca confiança e a pouca cobrança."
+   },
+   {
+    "f": "O que o estudo de 2022 mudou no argumento?",
+    "v": "Saiu da correlação para a causa, ao variar aleatoriamente a proporção de laços fracos sugeridos. Mostrou que o efeito tem um ponto ótimo de fraqueza."
+   },
+   {
+    "f": "O que significa dizer que o efeito é um U invertido?",
+    "v": "Significa que enfraquecer mais o laço aumenta o efeito só até certo ponto. Passando dele, a ligação fica fraca demais para servir de ponte."
+   },
+   {
+    "f": "Como o estudo de 2022 separou duas medidas de fraqueza?",
+    "v": "Separou as conexões em comum da intensidade de interação. As duas medidas se comportam de modo distinto."
+   },
+   {
+    "f": "O que importa para conseguir mais vagas, segundo o refinamento do caso do emprego?",
+    "v": "A composição da rede do candidato, ou seja, em quantos grupos diferentes ele está presente. O recurso é a posição, não a quantidade de conhecidos."
+   },
+   {
+    "f": "O que mostra o lado sombrio dos laços fracos?",
+    "v": "Como transportam informação entre grupos, transportam também informação ruim. Um estudo com adolescentes achou aumento do pensamento suicida pela rota de amigo de amigo."
+   }
+  ],
+  "prova": [
+   {
+    "camada": "nucleo",
+    "q": "Segundo os estudos de Granovetter, por qual caminho a maioria das pessoas soube da vaga que conseguiu?",
+    "alts": [
+     "Por um parente próximo",
+     "Por um amigo íntimo",
+     "Por um conhecido distante",
+     "Por um colega da mesma equipe"
+    ],
+    "correta": 2,
+    "porque": "A maioria não soube pelo amigo íntimo nem pelo parente, mas por alguém com quem topava de vez em quando. A alternativa do amigo íntimo é a mais tentadora porque parece a fonte natural de ajuda, mas é justamente a que o achado contraria."
+   },
+   {
+    "camada": "nucleo",
+    "q": "Por que o amigo próximo tende a trazer informação redundante?",
+    "alts": [
+     "Porque ele esconde as vagas que conhece",
+     "Porque ele convive com as mesmas pessoas que você",
+     "Porque ele tem menos tempo disponível",
+     "Porque ele não confia na sua competência"
+    ],
+    "correta": 1,
+    "porque": "Quem convive muito acaba apresentando um ao outro, então os dois círculos se sobrepõem e as informações se repetem. A alternativa sobre esconder vagas supõe má intenção, o que a explicação estrutural não afirma."
+   },
+   {
+    "camada": "nucleo",
+    "q": "O que caracteriza uma ponte na rede?",
+    "alts": [
+     "Ser o único caminho entre dois grupos",
+     "Ser a ligação mais íntima da rede",
+     "Ser a ligação com maior reciprocidade",
+     "Ser o contato mais frequente do dia a dia"
+    ],
+    "correta": 0,
+    "porque": "Ponte é a ligação que é o único caminho entre dois grupos. As outras alternativas descrevem propriedades de laços fortes, que costumam ficar fechados dentro do mesmo aglomerado."
+   },
+   {
+    "camada": "nucleo",
+    "q": "O que Granovetter inclui na força de um laço?",
+    "alts": [
+     "Apenas a frequência de mensagens trocadas",
+     "Tempo juntos, intensidade emocional, intimidade e reciprocidade",
+     "Somente o grau de parentesco entre as pessoas",
+     "O número de amigos em comum multiplicado pela renda"
+    ],
+    "correta": 1,
+    "porque": "São quatro componentes ordenados numa escala, de muito próxima a distante. A alternativa da frequência de mensagens é tentadora, mas é só uma parte de uma dimensão, não o conjunto."
+   },
+   {
+    "camada": "nucleo",
+    "q": "Por que laços fortes e laços fracos circulam tipos diferentes de conteúdo?",
+    "alts": [
+     "Porque laços fracos são mais educados",
+     "Porque laços fortes vivem fechados dentro do mesmo grupo e laços fracos ligam grupos diferentes",
+     "Porque laços fortes duram menos tempo",
+     "Porque laços fracos têm mais reciprocidade"
+    ],
+    "correta": 1,
+    "porque": "Laços fortes ficam dentro do mesmo aglomerado, onde todos sabem as mesmas coisas; laços fracos atravessam grupos e trazem o que não está no repertório local. A alternativa da duração troca as propriedades dos dois tipos."
+   },
+   {
+    "camada": "nucleo",
+    "q": "Qual é a consequência do fato de quase toda ponte ser um laço fraco?",
+    "alts": [
+     "Laços fortes bastam para conectar grupos separados",
+     "A informação que liga grupos diferentes passa sobretudo pelos laços fracos",
+     "Quem tem muitos amigos íntimos ouve as vagas primeiro",
+     "Redes fechadas circulam mais informação nova"
+    ],
+    "correta": 1,
+    "porque": "Se quase toda ponte é laço fraco, são esses laços que conectam grupos e fazem circular informação indisponível dentro de um grupo só. A alternativa sobre amigos íntimos é tentadora porque parece senso comum, mas contradiz a estrutura descrita."
+   },
+   {
+    "camada": "aprofundamento",
+    "q": "O que o estudo com três empresas mostrou sobre laços fortes e conhecimento útil?",
+    "alts": [
+     "Que laços fortes não têm nenhum efeito sobre conhecimento",
+     "Que o efeito dos laços fortes passava pela confiança, e restou um ganho próprio dos laços fracos",
+     "Que laços fracos só funcionam em empresas digitais",
+     "Que a confiança não influencia a qualidade do conhecimento recebido"
+    ],
+    "correta": 1,
+    "porque": "Quem confia na competência e na boa intenção do outro recebe conhecimento melhor; ao controlar a confiança, sobrou um ganho próprio dos laços fracos. A alternativa que nega efeito aos laços fortes exagera o achado."
+   },
+   {
+    "camada": "aprofundamento",
+    "q": "O que o modelo formal sobre o caso do emprego indicou?",
+    "alts": [
+     "Que usar um laço fraco garante salário maior",
+     "Que o que importa é a composição da rede do candidato, em quantos grupos ele está presente",
+     "Que o número total de conhecidos é o fator decisivo",
+     "Que parentes são a fonte mais eficaz de vagas"
+    ],
+    "correta": 1,
+    "porque": "O recurso é a posição na rede, não a quantidade de conhecidos. A alternativa sobre usar laço fraco garantir salário maior é a leitura popular da teoria, que o modelo formal refuta."
+   },
+   {
+    "camada": "aprofundamento",
+    "q": "O que o experimento de 2022 permitiu afirmar que os levantamentos anteriores não permitiam?",
+    "alts": [
+     "Que a teoria de Granovetter está totalmente errada",
+     "Que a relação é de causa, e não só de correlação",
+     "Que laços fracos não influenciam a busca por emprego",
+     "Que o efeito é idêntico em todas as indústrias"
+    ],
+    "correta": 1,
+    "porque": "A aleatorização separou causa de coincidência: se pessoas com mais laços fracos ganhassem empregos só por serem mais sociáveis, o experimento não mostraria nada. A alternativa sobre indústrias ignora que o próprio estudo apontou variação por setor."
+   },
+   {
+    "camada": "extensao",
+    "q": "Por que campanhas que dependem só de amigos próximos alcançam pouca gente nova?",
+    "alts": [
+     "Porque amigos próximos não divulgam campanhas",
+     "Porque os grupos ficam fechados e a informação não atravessa para outros grupos",
+     "Porque laços fortes carregam informação com prazo curto",
+     "Porque a heterofilia impede o contato entre iguais"
+    ],
+    "correta": 1,
+    "porque": "Grupos fechados repetem a mesma informação; para atingir públicos distantes é preciso passar pelos conhecidos. A alternativa sobre amigos não divulgarem atribui o problema à vontade individual, e não à estrutura da rede."
+   },
+   {
+    "camada": "extensao",
+    "q": "Qual estratégia a teoria sugere para quem quer manter acesso a informação nova?",
+    "alts": [
+     "Maximizar o número de conexões a qualquer custo",
+     "Fechar o círculo para aumentar a confiança interna",
+     "Preservar pontes com contatos leves de fora do próprio círculo",
+     "Substituir todos os laços fortes por laços fracos"
+    ],
+    "correta": 2,
+    "porque": "Preservar pontes é o ponto: um ex-colega de outro setor ou um conhecido de outra cidade carrega informação que os íntimos não têm. A alternativa de maximizar conexões ignora que o efeito tem limite."
+   }
+  ]
+ }
+}

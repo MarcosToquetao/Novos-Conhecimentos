@@ -48,6 +48,8 @@ A macro-região de cada área (e a cor dela) fica em `MACROS` no `build.js`. Ár
 Chaves em `.env` na raiz (no `.gitignore`): `DEEPSEEK_API_KEY`, `OPENROUTER_API_KEY`.
 
 ```
+python pipeline/gerar.py conceito <id>...          documento novo: dossiê de fontes reais → Flash escreve → checagens + JEV → js/docs
+python pipeline/gerar.py dossie <id>...            só baixa o dossiê (Wikipédia pt/en + OpenAlex, filtrado pelo JEV) em pipeline/dossies/
 python pipeline/gerar.py licao <id>... | --todas   Flash gera, checagens barram, JEV fiscaliza, V4 Pro reescreve o que foi sinalizado
 python pipeline/gerar.py grafo                     subáreas e ligações do acervo (JEV corta as fracas)
 python pipeline/gerar.py triagem                   JEV marca termos sem respaldo suficiente
@@ -59,6 +61,12 @@ python pipeline/revisar.py                         http://localhost:8766/pipelin
 
 - **Modelos.** `deepseek-flash` gera. `deepseek-v4-pro` reescreve só o que foi sinalizado. `typesafe/jev-1.13` (OpenRouter, Decisions API) responde perguntas tipadas: se soa como IA, se a marca bate, se o gabarito é ambíguo, o interesse do gancho, se a ligação do grafo é real. A DeepSeek cobra preço cheio só de 01 a 04h e de 06 a 10h UTC, em dias úteis.
 - **Custo real medido.** Cerca de US$0,007 por lição, com reescrita, e US$0,001 sem reescrita. O grafo inteiro custou menos de US$0,05. O acumulado fica em `pipeline/custos.jsonl`.
+- **Conceito novo (`conceito`).**
+  - O dossiê reúne os verbetes da Wikipédia (pt e en, títulos sugeridos pelo Flash e sem busca de reserva) e os trabalhos mais citados do OpenAlex com a expressão no título. O JEV corta os que não tratam do tema.
+  - O modelo só cita itens do dossiê por [n]. As referências saem dos metadados, nunca do modelo, e todo número acima de 10 precisa aparecer no dossiê (até 3 rodadas de correção).
+  - A síntese e a prova são escritas a partir do texto pronto. O JEV confere o status do núcleo e o gabarito de cada questão.
+  - O documento passa pelo `build.js --checar` antes de ficar. O que o modelo escreveu fica em `pipeline/dossies/<id>.saida.json`, e o resultado em `pipeline/conceitos.jsonl`.
+  - Custo medido: cerca de US$0,01 por documento.
 - **Estilo vivo.** `pipeline/estilo.md` é lido inteiro a cada geração. Ele traz a lista de expressões proibidas, a lição de exemplo e a seção «Regras aprendidas».
 - **Checagens determinísticas** (`checar_licao`):
   - nada de travessão, aspas curvas, emoji, [n] no texto ou a estrutura «não é X, mas Y»;

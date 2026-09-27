@@ -1,0 +1,275 @@
+{
+ "id": "simpson-paradoxo",
+ "tipo": "licao",
+ "criado": "2026-09-27T16:30:58",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1973, a Universidade da Califórnia em Berkeley divulgou os números de admissão da pós-graduação. Homens foram admitidos numa taxa maior que mulheres. Parecia discriminação. Departamento por departamento, o viés era pequeno e em favor das mulheres.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>O paradoxo de Simpson é isso: uma tendência aparece em vários grupos e desaparece ou se inverte quando eles são somados.</p>"
+   },
+   {
+    "tipo": "comparar",
+    "a": "Totais",
+    "b": "Departamento por departamento",
+    "linhas": [
+     {
+      "aspecto": "Admissão",
+      "a": "homens com taxa maior",
+      "b": "viés pequeno em favor das mulheres"
+     },
+     {
+      "aspecto": "Departamentos",
+      "a": "não se vê",
+      "b": "6 contra homens, 4 contra mulheres"
+     }
+    ],
+    "legenda": "O mesmo conjunto de dados apontava para os dois lados.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Inscrições",
+      "texto": "mulheres escolhem mais departamentos concorridos, homens os menos concorridos"
+     },
+     {
+      "nome": "Admissão",
+      "texto": "cada departamento admite por mérito, sem discriminação relevante"
+     },
+     {
+      "nome": "Total",
+      "texto": "a taxa geral favorece os homens porque eles se inscreveram em departamentos com mais vagas"
+     }
+    ],
+    "legenda": "O departamento escolhido é a variável de confusão.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que causou a inversão nos dados de Berkeley?",
+    "alts": [
+     "As mulheres eram candidatas piores",
+     "O departamento escolhido influenciava tanto a admissão quanto o sexo do candidato",
+     "Os homens se inscreveram em maior número"
+    ],
+    "correta": 1,
+    "porque": "O departamento escolhido é uma variável de confusão: afeta a chance de admissão e difere entre homens e mulheres."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Pedras pequenas",
+    "b": "Pedras grandes",
+    "linhas": [
+     {
+      "aspecto": "Tratamento A",
+      "a": "melhor",
+      "b": "melhor"
+     },
+     {
+      "aspecto": "Tratamento B",
+      "a": "pior",
+      "b": "pior"
+     },
+     {
+      "aspecto": "Frequência",
+      "a": "mais usado em casos leves",
+      "b": "mais usado em casos graves"
+     }
+    ],
+    "legenda": "Somando os dois tamanhos, o Tratamento B parece melhor. O tamanho da pedra é a variável de confusão.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "No estudo das pedras nos rins, por que o Tratamento B parece melhor no total?",
+    "alts": [
+     "Porque é realmente mais eficaz em todos os casos",
+     "Porque foi aplicado com mais frequência aos casos leves, que têm melhor prognóstico",
+     "Porque o Tratamento A tem efeitos colaterais graves"
+    ],
+    "correta": 1,
+    "porque": "O Tratamento A foi usado nos casos graves, que já tinham pior prognóstico. Isso puxa a taxa de sucesso para baixo no total."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Confusão",
+      "texto": "um fator afeta grupo e resultado ao mesmo tempo"
+     },
+     {
+      "nome": "Não colapsabilidade",
+      "texto": "as proporções dos subgrupos são muito diferentes"
+     },
+     {
+      "nome": "Efeito",
+      "texto": "médias simples não coincidem com a proporção combinada"
+     }
+    ],
+    "legenda": "Hernán, Clayton e Keiding separam os dois fenômenos por trás do paradoxo.",
+    "marca": "consenso",
+    "fonte": 6
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O paradoxo desaparece se aumentarmos o tamanho da amostra?",
+    "alts": [
+     "Sim, porque com mais dados a verdade aparece",
+     "Não, porque envolve confusão e não colapsabilidade, e esta não some com mais dados",
+     "Só desaparece se usarmos métodos bayesianos"
+    ],
+    "correta": 1,
+    "porque": "A não colapsabilidade é uma propriedade matemática das proporções dos subgrupos, não um erro amostral."
+   }
+  ],
+  "fecho": "Como decidir quando ajustar e quando não ajustar? A resposta vem dos grafos causais. Veja Inferência causal e a escada de Pearl."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 7: soa como IA (0.56)",
+  "tela 7: o tipo visual não combina com o conteúdo (0.25); troque de tipo ou use texto"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.03,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.03,
+    "3": 0.91,
+    "4": 0.06
+   },
+   "confidence": 0.92
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.44
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.02,
+    "especulacao": 0.02,
+    "consenso": 0.96,
+    "emergente": 0
+   },
+   "confidence": 0.95
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.04,
+    "especulacao": 0.05,
+    "consenso": 0.9,
+    "emergente": 0.01
+   },
+   "confidence": 0.88
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "especulacao": 0.05,
+    "consenso": 0.93,
+    "emergente": 0.01
+   },
+   "confidence": 0.9
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.03,
+    "especulacao": 0,
+    "consenso": 0.96,
+    "emergente": 0.01
+   },
+   "confidence": 0.94
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.15
+  }
+ },
+ "custo_usd": 0.00401
+}
