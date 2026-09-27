@@ -8,7 +8,7 @@ const OUT = path.join(RAIZ, "capturas");
 fs.mkdirSync(OUT, { recursive: true });
 
 (async () => {
-  const browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium" });
+  const browser = await chromium.launch();
   const ctx = await browser.newContext({
     viewport: { width: 390, height: 844 },   // iPhone 14 aproximado
     deviceScaleFactor: 2, isMobile: true, hasTouch: true, locale: "pt-BR"
@@ -21,7 +21,7 @@ fs.mkdirSync(OUT, { recursive: true });
   const tiro = async (nome) => { await page.screenshot({ path: path.join(OUT, nome + ".png"), fullPage: false }); };
   const tiroLongo = async (nome) => { await page.screenshot({ path: path.join(OUT, nome + ".png"), fullPage: true }); };
 
-  await page.goto("file://" + path.join(RAIZ, "index.html"));
+  await page.goto(process.env.NC_URL || "http://localhost:8765/");  // rode antes: python -m http.server 8765
   await page.waitForTimeout(400);
   await tiro("01-inicio");
 

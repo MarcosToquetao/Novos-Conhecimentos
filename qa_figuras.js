@@ -2,7 +2,7 @@ const { chromium } = require("playwright");
 const path=require("path"), fs=require("fs");
 const OUT=path.join(__dirname,"capturas","figuras"); fs.mkdirSync(OUT,{recursive:true});
 (async()=>{
-  const b=await chromium.launch({executablePath:"/opt/pw-browsers/chromium"});
+  const b=await chromium.launch();
   const p=await b.newPage({viewport:{width:760,height:900},deviceScaleFactor:2});
   const {FIGURAS}=require("./js/figuras.js");
   const css=fs.readFileSync("css/estilo.css","utf8");

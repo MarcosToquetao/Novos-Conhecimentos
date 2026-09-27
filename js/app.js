@@ -27,31 +27,40 @@ const $  = (s) => document.querySelector(s);
 const $$ = (s) => Array.from(document.querySelectorAll(s));
 const CAMADAS = ["nucleo", "aprofundamento", "extensao"];
 const ROTULO_CAMADA = { nucleo: "Núcleo", aprofundamento: "Aprofundamento", extensao: "Extensão" };
-const ROTULO_MARCA = {
-  consenso: "Consenso estabelecido",
-  emergente: "Abordagem emergente",
-  controverso: "Ponto controverso",
-  especulacao: "Especulação / hipótese"
-};
 
-function prontos() { return CATALOGO.filter(c => CONTEUDOS[c.id]); }
+/* Dados gerados por build.js: o índice chega na abertura, cada documento só quando é usado. */
+let CATALOGO = [];
+const DOCS = {};
+async function doc(id) {
+  if (!DOCS[id]) DOCS[id] = await fetch(`dados/c/${id}.json`).then(r => r.json());
+  return DOCS[id];
+}
+
+function prontos() { return CATALOGO.filter(c => c.doc); }
 function doCatalogo(id) { return CATALOGO.find(c => c.id === id); }
 function agora() { return Date.now(); }
 const DIA = 86400000;
 
-/* ── Navegação entre telas ─────────────────────────────────────────── */
-function ir(idTela) {
+/* ── Navegação entre telas (com botão voltar do navegador) ─────────── */
+function ir(idTela, voltando) {
+  if (!voltando && history.state?.tela !== idTela) history.pushState({ tela: idTela }, "", "#" + idTela.replace("tela-", ""));
   $$(".tela").forEach(t => t.classList.toggle("ativa", t.id === idTela));
   const leitura = idTela === "tela-leitura";
   $("#barra").classList.toggle("oculto", leitura);
   $("#crono-barra").classList.toggle("oculto", !leitura || S.concluida);
   window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
 }
+window.addEventListener("popstate", (ev) => {
+  const alvo = ev.state?.tela || "tela-inicio";
+  if (S.tick && alvo !== "tela-leitura") { clearInterval(S.tick); S.tick = null; soltarTela(); S.concluida = true; }
+  if (alvo === "tela-inicio") pintarInicio();
+  ir(alvo, true);
+});
 
 /* ── Tema ──────────────────────────────────────────────────────────── */
 function aplicarTema() {
   document.documentElement.setAttribute("data-tema", E.tema);
-  const cor = E.tema === "escuro" ? "#161513" : "#FBF9F5";
+  const cor = E.tema === "escuro" ? "#121316" : "#F0EBE1";
   const m = document.querySelector('meta[name="theme-color"]');
   if (m) m.setAttribute("content", cor);
 }
@@ -89,6 +98,7 @@ function sortear() {
 let sorteadoAtual = null;
 
 function animarSorteio(escolhido) {
+  doc(escolhido.id).catch(() => {});   // adianta o download enquanto a roleta gira
   const cands = prontos();
   const roleta = $("#roleta");
   $("#roleta-caixa").classList.remove("oculto");
@@ -108,7 +118,7 @@ function animarSorteio(escolhido) {
 
 function revelar(c) {
   sorteadoAtual = c;
-  const d = CONTEUDOS[c.id];
+  const d = DOCS[c.id];
   $("#roleta-caixa").classList.add("oculto");
   $("#s-area").textContent = c.area;
   $("#s-termo").textContent = c.termo;
@@ -148,14 +158,8 @@ function minutosDeLeitura(html) {
   return Math.max(2, Math.round(palavras / 110 + figuras * 1.5 + formulas * 0.8));
 }
 
-/* Substitui marcadores [[FIG:chave]] pelos SVGs gerados em figuras.js */
-function comFiguras(html) {
-  return html.replace(/\[\[FIG:([a-z0-9\-]+)\]\]/g, (m, k) =>
-    (typeof FIGURAS !== "undefined" && FIGURAS[k]) ? FIGURAS[k] : "");
-}
-
 function htmlDocumento(c, camadas, comFontes) {
-  const d = CONTEUDOS[c.id];
+  const d = DOCS[c.id];   /* as figuras já vêm embutidas pelo build.js */
   let h = "";
 
   h += `<p class="chapeu">${c.area}</p>`;
@@ -179,7 +183,7 @@ function htmlDocumento(c, camadas, comFontes) {
     if (!cam) return;
     h += `<section class="camada">
             <p class="camada-rot"><span>${String(i + 1).padStart(2, "0")}</span> ${ROTULO_CAMADA[k]} · ~${minutosDeLeitura(cam.html)} min de leitura atenta</p>
-            <div class="leitura">${comFiguras(cam.html)}</div>
+            <div class="leitura">${cam.html}</div>
           </section>`;
   });
 
@@ -228,6 +232,9 @@ function tick() {
   $("#crono-num").textContent = fmt(resta);
   $("#crono-num").classList.toggle("alerta", resta <= 120000);
   $("#progresso-i").style.width = Math.min(100, 100 * (1 - resta / total)) + "%";
+  /* registra o tempo realmente passado lendo, não o tempo escolhido */
+  const lidos = Math.round((agora() - S.reg.iniciadoEm) / 60000);
+  if (lidos !== S.reg.minutos) { S.reg.minutos = lidos; salvar(); }
   if (resta <= 0) encerrarTempo();
 }
 async function segurarTela() {
@@ -235,14 +242,16 @@ async function segurarTela() {
 }
 function soltarTela() { try { if (S.wake) { S.wake.release(); S.wake = null; } } catch (e) {} }
 
-function comecar() {
+async function comecar() {
   const c = sorteadoAtual; if (!c) return;
+  try { await doc(c.id); } catch (e) { alert("Não deu para baixar este documento. Confira a conexão e tente de novo."); return; }
   S = {
     id: "s" + agora(), conceito: c.id, tempoMin: E.tempoPreferido,
     fimEm: agora() + E.tempoPreferido * 60000, tick: null,
     camadas: camadasPara(E.tempoPreferido), concluida: false, wake: null, extras: 0
   };
-  E.sessoes.push({ id: S.id, conceito: c.id, termo: c.termo, minutos: S.tempoMin, iniciadoEm: agora(), leuAte: S.camadas[S.camadas.length - 1] });
+  S.reg = { id: S.id, conceito: c.id, termo: c.termo, minutos: 0, iniciadoEm: agora(), leuAte: S.camadas[S.camadas.length - 1] };
+  E.sessoes.push(S.reg);
   salvar();
 
   $("#doc-envelope").innerHTML = htmlDocumento(c, S.camadas, false);
@@ -296,7 +305,7 @@ let provaAtual = { questoes: [], respostas: [], corrigida: false };
 function embaralhar(a) { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
 
 function abrirProva() {
-  const c = doCatalogo(S.conceito); const d = CONTEUDOS[S.conceito];
+  const c = doCatalogo(S.conceito); const d = DOCS[S.conceito];
   const elegiveis = d.prova.filter(q => S.camadas.includes(q.camada));
   provaAtual = { questoes: embaralhar(elegiveis), respostas: new Array(elegiveis.length).fill(null), corrigida: false };
   $("#prova-termo").textContent = c.termo;
@@ -331,8 +340,12 @@ function corrigir() {
   const acertos = qs.reduce((n, q, i) => n + (provaAtual.respostas[i] === q.correta ? 1 : 0), 0);
   const pct = Math.round(100 * acertos / qs.length);
 
+  /* só a primeira prova do dia conta para a revisão espaçada: refazer logo
+     depois de ver o gabarito não prova memória, só inflaria o nível */
+  const hoje = new Date().toDateString();
+  const jaFezHoje = E.provas.some(p => p.conceito === S.conceito && new Date(p.quando).toDateString() === hoje);
   E.provas.push({ conceito: S.conceito, quando: agora(), acertos, total: qs.length, pct });
-  agendarRevisao(S.conceito, pct);
+  if (!jaFezHoje) agendarRevisao(S.conceito, pct);
   salvar();
 
   $("#r-nota").textContent = acertos + "/" + qs.length;
@@ -356,7 +369,7 @@ function corrigir() {
     </div>`;
   }).join("");
 
-  const d = CONTEUDOS[S.conceito];
+  const d = DOCS[S.conceito];
   $("#r-flashcards").innerHTML = (d.flashcards || []).map((f, i) => `
     <div class="card-fc" data-i="${i}">
       <div class="frente">${f.f}</div>
@@ -413,7 +426,7 @@ function baixar(nome, texto, mime) {
 function limparHtml(s) { const d = document.createElement("div"); d.innerHTML = s; return (d.textContent || "").replace(/\s+/g, " ").trim(); }
 
 $("#btn-exportar-fc").addEventListener("click", () => {
-  const d = CONTEUDOS[S.conceito];
+  const d = DOCS[S.conceito];
   const linhas = (d.flashcards || []).map(f =>
     `"${limparHtml(f.f).replace(/"/g, '""')}";"${limparHtml(f.v).replace(/"/g, '""')}";"${d.termo}"`);
   baixar(`flashcards-${S.conceito}.csv`, "﻿" + linhas.join("\n"), "text/csv;charset=utf-8");
@@ -429,7 +442,14 @@ $("#arquivo-import").addEventListener("change", (ev) => {
   fr.onload = () => {
     try {
       const dados = JSON.parse(fr.result);
-      E = Object.assign({}, PADRAO, dados); salvar(); aplicarTema(); pintarInicio(); pintarHistorico();
+      const ok = dados && Array.isArray(dados.sessoes) && Array.isArray(dados.provas) && dados.revisao && typeof dados.revisao === "object";
+      if (!ok) throw new Error("formato");
+      E = Object.assign({}, PADRAO, {
+        tema: dados.tema === "escuro" ? "escuro" : "claro",
+        tempoPreferido: [15, 30, 60].includes(dados.tempoPreferido) ? dados.tempoPreferido : 30,
+        sessoes: dados.sessoes, provas: dados.provas, revisao: dados.revisao
+      });
+      salvar(); aplicarTema(); pintarInicio(); pintarHistorico();
       alert("Progresso importado.");
     } catch (e) { alert("Arquivo inválido."); }
   };
@@ -449,7 +469,7 @@ function pintarInicio() {
     ? Math.round(E.provas.reduce((n, p) => n + p.pct, 0) / E.provas.length) + "%" : "—";
 
   const dev = Object.entries(E.revisao)
-    .filter(([id, r]) => r.proxima && agora() >= r.proxima && CONTEUDOS[id])
+    .filter(([id, r]) => r.proxima && agora() >= r.proxima && doCatalogo(id)?.doc)
     .sort((a, b) => a[1].proxima - b[1].proxima);
   $("#painel-revisao").classList.toggle("oculto", dev.length === 0);
   $("#lista-revisao").innerHTML = dev.map(([id, r]) => {
@@ -471,7 +491,7 @@ function pintarCatalogo(filtro) {
       <div class="meta">
         <span>${c.area}</span><span>·</span>
         <span>dificuldade ${c.dificuldade}/5</span>
-        ${CONTEUDOS[c.id] ? '<span>·</span><span class="tag-pronto">documento pronto</span>' : ""}
+        ${c.doc ? '<span>·</span><span class="tag-pronto">documento pronto</span>' : ""}
       </div>
       <div class="g">${c.gancho}</div>
     </div>`).join("") : `<p class="vazio">Nada encontrado.</p>`;
@@ -504,13 +524,15 @@ $("#cat-busca").addEventListener("input", (e) => pintarCatalogo(e.target.value))
 /* ── Início ────────────────────────────────────────────────────────── */
 aplicarTema();
 marcarTempo(E.tempoPreferido);
+history.replaceState({ tela: "tela-inicio" }, "", location.pathname + location.search);
 pintarInicio();
+fetch("dados/indice.json").then(r => r.json()).then(idx => { CATALOGO = idx.conceitos; pintarInicio(); });
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
 }
 
 /* expõe para depuração no console */
-window.NC = { get estado() { return E; }, CATALOGO, CONTEUDOS };
+window.NC = { get estado() { return E; }, get CATALOGO() { return CATALOGO; }, DOCS };
 
 })();

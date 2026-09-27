@@ -20,9 +20,9 @@ manifest.json, sw.js   PWA: instalação e cache offline (service worker cache-f
 js/app.js              motor: sorteio, cronômetro, leitor, prova, histórico, revisão espaçada
 js/catalogo.js         347 conceitos — SÓ os termos (id, termo, area, dificuldade, gancho)
 js/docs/<id>.js         um arquivo por documento de estudo completo — É A FONTE DA VERDADE
-js/conteudos.js        GERADO por build_conteudos.py a partir de js/docs/*.js — NÃO editar à mão
+dados/                 GERADO por build.js (indice.json + c/<id>.json, figuras embutidas) — NÃO editar à mão
 js/figuras.js          GERADO por build_figuras.py — NÃO editar à mão
-build_conteudos.py     concatena js/docs/*.js → js/conteudos.js
+build.js               valida js/docs/*.js, gera dados/ e atualiza VERSAO do sw.js sozinho
 build_figuras.py       calcula e gera os SVGs → js/figuras.js
 teste.js, qa_figuras.js  scripts de QA em Chromium headless (dev only, não fazem parte do app publicado)
 termos-novos-para-revisar.md  histórico de decisões editoriais sobre o catálogo (o que entrou, o que foi recusado e por quê)
@@ -34,7 +34,7 @@ README.md              guia de publicação e visão geral, ligeiramente desatua
 Depois de criar ou editar qualquer arquivo em `js/docs/`, é obrigatório rodar:
 
 ```bash
-python3 build_conteudos.py
+node build.js
 ```
 
 Depois de criar ou editar qualquer figura em `build_figuras.py`, é obrigatório rodar:
@@ -43,7 +43,7 @@ Depois de criar ou editar qualquer figura em `build_figuras.py`, é obrigatório
 python3 build_figuras.py
 ```
 
-Ambos os scripts têm `node --check` implícito de validação no final (imprimem contagem/tamanho); depois de rodá-los, valide manualmente com `node --check js/conteudos.js` e `node --check js/figuras.js`.
+Ambos os scripts têm `node --check` implícito de validação no final (imprimem contagem/tamanho); depois de rodá-los, valide manualmente com `node build.js --checar` e `node --check js/figuras.js`.
 
 Antes de qualquer publicação, é obrigatório subir a constante `VERSAO` em `sw.js` (hoje `"nc-v4"`), senão os aparelhos que já instalaram o PWA continuam servindo a versão antiga do cache.
 
@@ -213,8 +213,8 @@ node --check js/docs/<id>.js
 grep -o '—' js/docs/<id>.js | wc -l   # deve ser 0
 
 # depois de mexer em js/docs/*.js
-python3 build_conteudos.py
-node --check js/conteudos.js
+node build.js
+node build.js --checar
 
 # depois de mexer em build_figuras.py
 python3 build_figuras.py

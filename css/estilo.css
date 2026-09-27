@@ -452,7 +452,7 @@ th { font-weight: 600; font-size: .74rem; letter-spacing: .06em; text-transform:
   font-size: 2.2rem; margin: 0 auto .9rem; width: 4.6rem; height: 4.6rem;
   display: grid; place-items: center; background: var(--papel-2);
   border: 1px solid var(--linha); border-radius: 14px;
-  transform: rotate(-3deg); box-shadow: 3px 3.5px 0 var(--acento-2);
+  transform: rotate(-3deg); box-shadow: 3px 3.5px 0 var(--acento);
 }
 
 /* ── Prova ──────────────────────────────────────────────────────────── */
