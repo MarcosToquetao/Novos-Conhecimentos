@@ -336,7 +336,9 @@ def checar_licao(L, doc):
 def portao_jev(L, termo, alvo):
     telas = L.get("telas", [])
     estado = {"conceito": termo, "gancho": L.get("gancho", ""), "telas": {}}
-    perg = {"interesse": {"type": "score",
+    perg = {"gancho_diz": {"type": "noul", "instructions": "O gancho diz, em linguagem simples, de que fenômeno ou assunto o conceito trata?",
+                           "criteria": {"true": "a pessoa sabe do que a lição vai falar", "false": "só faz uma pergunta ou provocação solta"}},
+            "interesse": {"type": "score",
                           "instructions": "Para uma pessoa leiga no celular, quanto o gancho desperta vontade de continuar lendo?",
                           "criteria": ["Nenhuma", "Pouca", "Alguma", "Quer ver a próxima tela", "Irresistível"]}}
     for i, t in enumerate(telas, 1):
@@ -355,6 +357,9 @@ def portao_jev(L, termo, alvo):
                                                    "emergente": "evidência séria mas recente ou não consolidada",
                                                    "controverso": "especialistas competentes discordam",
                                                    "especulacao": "hipótese sem teste empírico decisivo"}}
+            perg[f"tecnico_{i}"] = {"type": "noul",
+                                    "instructions": f"O trecho telas.t{i} exige de um leigo notação, fórmula, jargão ou conta de cabeça?",
+                                    "criteria": {"true": "técnico demais para quem é de outra área", "false": "qualquer pessoa curiosa entende"}}
             perg[f"disputa_{i}"] = {"type": "noul",
                                     "instructions": f"O trecho telas.t{i} gira em torno de um debate, controvérsia, mito a desmentir ou evidência contestada?",
                                     "criteria": {"true": "o foco é a disputa, a dúvida ou a desmistificação",
@@ -367,6 +372,14 @@ def portao_jev(L, termo, alvo):
         elif t.get("tipo") == "pergunta":
             estado["telas"][f"t{i}"] = {"pergunta": t.get("q"), "alternativas": t.get("alts"),
                                         "marcada_como_correta": (t.get("alts") or ["?"])[t.get("correta", 0) or 0]}
+            anteriores = ", ".join(f"t{j}" for j in range(1, i)) or "nenhuma"
+            perg[f"respondivel_{i}"] = {"type": "noul",
+                                        "instructions": f"Quem leu só o gancho e as telas anteriores ({anteriores}) consegue responder à pergunta telas.t{i} raciocinando com o que elas mostraram?",
+                                        "criteria": {"true": "a informação necessária já apareceu antes da pergunta",
+                                                     "false": "a resposta depende de algo que a lição ainda não mostrou"}}
+            perg[f"obvia_{i}"] = {"type": "noul",
+                                  "instructions": f"A alternativa certa de telas.t{i} pode ser adivinhada sem ter lido nada, pelo senso comum ou pelo jeito das alternativas?",
+                                  "criteria": {"true": "óbvia: acerta quem não leu", "false": "exige ter entendido a lição"}}
             perg[f"ambigua_{i}"] = {"type": "noul",
                                     "instructions": f"A pergunta telas.t{i} tem problema de gabarito?",
                                     "criteria": {"true": "mais de uma alternativa defensável, ou a marcada como correta está errada",
@@ -381,6 +394,14 @@ def portao_jev(L, termo, alvo):
             alertas.append(f"tela {n}: trata de disputa ou evidência contestada ({v['noul']:.2f}); lição só ensina o núcleo estabelecido")
         elif tipo == "encaixe" and v.get("noul", 1) < 0.5:
             alertas.append(f"tela {n}: o tipo visual não combina com o conteúdo ({v['noul']:.2f}); troque de tipo ou use texto")
+        elif tipo == "respondivel" and v.get("noul", 1) < 0.5:
+            alertas.append(f"tela {n}: a pergunta depende de algo que a lição ainda não mostrou ({v['noul']:.2f})")
+        elif tipo == "obvia" and v.get("noul", 0) > 0.6:
+            alertas.append(f"tela {n}: resposta óbvia, acerta quem não leu ({v['noul']:.2f})")
+        elif tipo == "tecnico" and v.get("noul", 0) > 0.6:
+            alertas.append(f"tela {n}: técnico demais para leigo ({v['noul']:.2f})")
+        elif k == "gancho_diz" and v.get("noul", 1) < 0.5:
+            alertas.append(f"gancho não diz do que o conceito trata ({v['noul']:.2f})")
         elif tipo == "ambigua" and v.get("noul", 0) > LIMIAR["ambigua"]:
             alertas.append(f"tela {n}: gabarito suspeito ({v['noul']:.2f})")
         elif tipo == "marca":
@@ -468,6 +489,10 @@ def gerar_licao(id_, idx, seco=False, revisao_pro=True):
                   "Se um número não aparece no documento, troque por um que aparece ou troque o tipo da tela. "
                   "Se uma tela trata de disputa ou evidência contestada, tire-a e ensine no lugar o núcleo estabelecido do conceito. "
                   "Se o tipo visual não combina, troque de tipo ou use texto. "
+                  "Se uma pergunta depende de algo que a lição ainda não mostrou, mostre esse conteúdo numa tela antes dela ou troque a pergunta por uma que as telas anteriores sustentam. "
+                  "Se a resposta é óbvia, reescreva as alternativas erradas como erros que alguém que leu com pressa cometeria. "
+                  "Se o gancho não diz do que o conceito trata, acrescente uma frase simples dizendo. "
+                  "Se uma tela é técnica demais, troque notação e conta por um caso concreto. "
                   "Responda com o objeto json completo da lição corrigida.\n\nProblemas:\n"
                   + "\n".join(f"- {x}" for x in erros + alertas) + "\n\nLição:\n" + json.dumps(L, ensure_ascii=False))
         L2, c2 = deepseek(PRO, sistema, usuario + "\n\n" + pedido, "revisao", id_)
@@ -1104,8 +1129,9 @@ def gerar_imagens(id_, seco=False):
         "a materializar o que o texto descreve. Escolha de 3 a 5 parágrafos, de preferência espalhados pelo texto. Só onde existe "
         "algo concreto para ver: o próprio organismo ou objeto, seus estados, um lugar, um fenômeno acontecendo, um experimento, uma obra. "
         "Nada de imagem para ideia abstrata, nada de diagrama esquemático (o app já desenha os seus) e retrato de pessoa só se a pessoa for o assunto. "
-        "Para cada um: camada e p (o número do parágrafo), mostrar (em português, o que a imagem ideal mostra), buscas (2 expressões "
-        "curtas em inglês para o Wikimedia Commons, da mais específica para a mais geral) e gif (true se um movimento ou uma sequência "
+        "Para cada um: camada e p (o número do parágrafo), mostrar (em português, o tipo de imagem que serve, sem exigir números nem "
+        "detalhes que uma foto real dificilmente teria), buscas (2 termos de 1 a 3 palavras em inglês, como se procura no Wikimedia Commons: "
+        "o nome do fenômeno, do organismo ou do objeto, por exemplo 'shrinkflation', 'Toblerone', 'tardigrade'; nunca a descrição de uma cena) e gif (true se um movimento ou uma sequência "
         "ajudaria, como um animal andando ou um processo acontecendo). "
         'Responda somente com json: {"lugares": [{"camada": "nucleo", "p": 0, "mostrar": "", "buscas": ["", ""], "gif": false}]}'),
         f"Conceito: {doc['termo']}\n\nParágrafos:\n{lista}", "imagens-plano", id_, max_tokens=1500)
@@ -1116,7 +1142,9 @@ def gerar_imagens(id_, seco=False):
     fotos, usadas = [], set()
     for lug in lugares:
         cands = []
-        for b in lug.get("buscas", [])[:2]:
+        dossie_ = DOSSIES / f"{id_}.json"
+        nome_en = json.loads(dossie_.read_text(encoding="utf-8")).get("busca") if dossie_.exists() else None
+        for b in list(dict.fromkeys(lug.get("buscas", [])[:2] + ([nome_en] if nome_en else []))):   # o nome do conceito sempre entra
             cands += [c for c in commons(b, n=4) if c["titulo"] not in {x["titulo"] for x in cands}]
         # GIF sempre entra na disputa, na frente, para não ser cortado pelo limite de candidatas
         gifs = [c for c in commons(lug["buscas"][-1], gif=True, n=3) if c["bytes"] < 12e6]   # a busca mais geral: GIF é raro

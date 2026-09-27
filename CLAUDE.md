@@ -104,7 +104,7 @@ Tipos de tela e campos (especificação completa, com quando usar cada um, em `p
 - `etapas` (anima uma por vez), `camadas`, `pontos` (grade 10×10), `ordenar` (vale ponto), `comparar`, `linha_tempo`, `ciclo`;
 - `curva` (só forma qualitativa, sem números).
 
-**Todo número de uma tela visual** (resposta de estimar, valor de pontos, ano) precisa aparecer no documento: `checar_licao` confere. O JEV confere, a cada tela, se o tipo visual combina com o conteúdo e se a tela gira em torno de disputa. A lição só ensina o núcleo estabelecido.
+**Todo número de uma tela visual** (resposta de estimar, valor de pontos, ano) precisa aparecer no documento: `checar_licao` confere. O JEV confere, a cada tela, se o tipo visual combina com o conteúdo, se a tela gira em torno de disputa e se é técnica demais para leigo. Em cada pergunta, confere se ela pode ser respondida com as telas anteriores e se a resposta é óbvia. No gancho, confere se ele diz do que o conceito trata. A lição só ensina o núcleo estabelecido.
 
 Figuras: `[[FIG:chave]]` no html. Toda chave precisa de uma função em `build_figuras.py`, registrada em `FIG`. Diagramas quantitativos são calculados, nunca desenhados à mão.
 

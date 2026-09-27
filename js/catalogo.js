@@ -392,6 +392,7 @@ const CATALOGO = [
   { id:"agente-principal", termo:"Problema agente-principal", area:"Economia", dificuldade:3, gancho:"Quem decide raramente é quem arca com a consequência. Metade dos desenhos institucionais existe para lidar com isso." },
   { id:"doenca-holandesa", termo:"Doença holandesa", area:"Economia", dificuldade:3, gancho:"Exportar muita commodity valoriza a moeda e sufoca a indústria. Diagnóstico recorrente no Brasil e disputado em cada aplicação." },
   { id:"armadilha-liquidez", termo:"Armadilha da liquidez", area:"Economia", dificuldade:4, gancho:"Quando o juro chega perto de zero, a política monetária perde tração. O que fazer então divide macroeconomistas até hoje." },
+  { id:"reduflacao", termo:"Reduflação", area:"Economia", dificuldade:1, gancho:"O pacote custa o mesmo, mas vem com menos dentro. É aumento de preço disfarçado, e dá trabalho para quem mede a inflação." },
   { id:"efeito-cantillon", termo:"Efeito Cantillon", area:"Economia", dificuldade:3, gancho:"Dinheiro novo não chega a todos ao mesmo tempo, e quem recebe primeiro compra a preços velhos. A tese é antiga e a evidência, disputada." },
 
   /* ── Computação (complemento) ─────────────────────────────────────── */

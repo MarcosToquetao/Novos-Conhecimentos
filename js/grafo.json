@@ -2869,5 +2869,14 @@
 "lentes-gravitacionais",
 "efeito-doppler"
 ]
+},
+"reduflacao": {
+"sub": "macroeconomia",
+"liga": [
+"inflacao-mecanismos",
+"economia-comportamental",
+"assimetria-informacao",
+"precificacao-psicologica"
+]
 }
 }

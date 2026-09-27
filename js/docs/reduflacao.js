@@ -1,0 +1,395 @@
+CONTEUDOS["reduflacao"] = {
+termo: "Reduflação",
+area: "Economia",
+subtitulo: "Quando o preço do pacote fica igual mas o conteúdo diminui, o preço por quilo sobe escondido. É uma forma de inflação que a pessoa sente no mercado e que dá trabalho para medir nos índices oficiais.",
+prerequisitos: [
+ "Entender que inflação é a alta do nível geral de preços e que o poder de compra do dinheiro cai ao longo do tempo. Nenhuma conta além de comparar dois preços é exigida."
+],
+conexoes: [
+ {
+  "termo": "Inflação: mecanismos e disputas",
+  "relacao": "A reduflação é uma resposta das empresas à alta de custos quando subir o preço de etiqueta é arriscado demais."
+ },
+ {
+  "termo": "Economia comportamental e nudges",
+  "relacao": "A redução pequena demais para ser notada explora o limite da percepção humana, o mesmo que os nudges usam a favor do consumidor."
+ },
+ {
+  "termo": "Assimetria de informação e o mercado de limões",
+  "relacao": "O fabricante sabe que encolheu o pacote e o comprador não, e essa diferença de informação é o que sustenta a prática."
+ },
+ {
+  "termo": "Ancoragem e precificação psicológica",
+  "relacao": "O preço antigo funciona como âncora: a pessoa compara com o número que já conhece e não percebe que a quantidade mudou."
+ }
+],
+
+camadas: {
+
+nucleo: { minutos: 4, html: `
+<p class="abre">Você compra o mesmo creme para barrar de sempre, paga o preço de sempre, chega em casa e o pote acaba antes do fim do mês. Nada mudou no supermercado, mas a embalagem encolheu. Em Portugal, um creme de 450 gramas custava 3,19 euros em março de 2022 em três redes de supermercado. Em novembro do mesmo ano, a embalagem tinha 400 gramas e custava 3,49 euros<sup class="cit"><a href="#f1">1</a></sup>. O preço por quilo subiu 23,2%, embora o número na etiqueta tenha mudado pouco aos olhos de quem compra sempre o mesmo item<sup class="cit"><a href="#f1">1</a></sup>.</p><p>Esse é o mecanismo da reduflação: a empresa reduz a quantidade do produto e mantém ou aumenta o preço, de modo que o preço por quilo ou por litro sobe sem que a etiqueta anuncie aumento<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>.</p><h3>O que exatamente encolhe</h3><p>Reduflação é o aumento do preço por unidade de peso ou volume causado pela diminuição do tamanho ou da quantidade do item vendido<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Há uma irmã dessa prática chamada de skimpflation, que é reduzir a qualidade do produto ou do serviço mantendo o preço, como trocar ingredientes ou diminuir a frequência de limpeza de um hotel<sup class="cit"><a href="#f2">2</a></sup>. A reduflação mexe no tamanho; a skimpflation mexe no conteúdo.</p><p>Os exemplos são de tipos variados. Em 2016, a Toblerone reduziu a barra britânica de 170 para 150 gramas, aumentando o espaço entre os triângulos de chocolate, e a versão de 400 gramas caiu para 360<sup class="cit"><a href="#f2">2</a></sup>. Em 2021, a General Mills encolheu a caixa família de cereal de 19,3 para 18,1 onças, mantendo o preço médio de 2,99 dólares nos Estados Unidos<sup class="cit"><a href="#f2">2</a></sup>. Em 2025, a edição digital do PlayStation 5 passou de 1 terabyte para 825 gigabytes de armazenamento interno, sem anúncio e pelo mesmo preço<sup class="cit"><a href="#f2">2</a></sup>.</p>
+
+[[FOTO:1]]<h3>Por que as empresas escolhem esse caminho</h3><p>Quando os custos de produção sobem, a empresa precisa repassar o aumento para não perder margem. Em mercados competitivos, subir o preço direto é arriscado, porque o cliente pode trocar de marca. Nessas condições, as empresas costumam aumentar o preço de forma indireta, encolhendo o produto<sup class="cit"><a href="#f2">2</a></sup>.</p><p>O economista Vivek Moorthy descreveu esse comportamento antes mesmo de existir a palavra reduflação, usando a ideia de um acordo tácito de confiança e justiça: os consumidores aceitam que a empresa responda a um aumento de custo, mas não a um aumento de demanda. Para não perder clientes fiéis, as empresas de bens de consumo costumam encolher o produto em vez de subir o preço<sup class="cit"><a href="#f2">2</a></sup>.</p><p>Há também uma razão de percepção. Consumidores reagem mais a aumentos de preço do que a reduções de embalagem, e alguns preferem um pacote menor pelo preço antigo a pagar mais pelo pacote antigo<sup class="cit"><a href="#f2">2</a></sup>. Em experimentos de psicologia, a diferença mínima perceptível é uma proporção fixa do estímulo original: mudanças pequenas o bastante passam despercebidas<sup class="cit"><a href="#f2">2</a></sup>. Uma redução discreta de tamanho fica abaixo desse limite e quase ninguém nota na hora da compra.</p><div class="marca consenso"><span class="rot">O que a área aceita</span><p>A reduflação é uma adaptação das empresas à alta de custos quando subir o preço de etiqueta é arriscado, e ela aparece sobretudo em produtos embalados de consumo frequente<sup class="cit"><a href="#f1">1</a></sup><sup class="cit"><a href="#f2">2</a></sup>. Em dez anos de dados de supermercado nos Estados Unidos, consumidores quase não ajustam o quanto compram mesmo pagando mais por onça, o que sustenta a prática<sup class="cit"><a href="#f3">3</a></sup>.</p></div><h3>O que o consumidor sente</h3><p>Pesquisa publicada em 2023 mostrou que consumidores julgam a redução de tamanho mais injusta do que um aumento equivalente de preço<sup class="cit"><a href="#f4">4</a></sup>. Entrevistas com compradores de bens de consumo mostram que muitos só percebem a mudança depois de um tempo e, quando percebem, sentem desconfiança e insatisfação; parte deles troca de marca<sup class="cit"><a href="#f5">5</a></sup>. Em um estudo com 199 pessoas da Coreia do Sul que compraram lanches industrializados, a experiência de pagar o mesmo por menos gerou uma tensão interna que reduziu a satisfação e a intenção de comprar de novo<sup class="cit"><a href="#f6">6</a></sup>.</p><p>A prática não é ilegal por si. O que a lei discute é a falta de aviso. Uma revisão sistemática de 23 estudos entre 2004 e 2025 identificou a transparência e a comunicação como o principal remédio apontado pela área<sup class="cit"><a href="#f7">7</a></sup>. No Brasil, uma regra federal exige indicar na embalagem, por pelo menos seis meses, que o conteúdo líquido mudou, com números relativos e absolutos; na Áustria, a rotulagem obrigatória por 60 dias começou em abril de 2026<sup class="cit"><a href="#f2">2</a></sup>. Em 2023, a rede francesa Carrefour passou a avisar os clientes sobre produtos que encolheram<sup class="cit"><a href="#f2">2</a></sup>.</p>
+` },
+
+aprofundamento: { minutos: 4, html: `
+<p>Medir reduflação é mais difícil do que medir inflação comum. O índice de preços ao consumidor acompanha o preço do item na prateleira. Se o pacote encolhe e o número na etiqueta fica igual, o índice registra estabilidade, embora o preço por grama tenha subido<sup class="cit"><a href="#f2">2</a></sup>. Por isso os estatísticos precisam comparar o preço por unidade de peso ou volume, e não só o preço do pacote.</p><p>O escritório de estatísticas do Reino Unido identificou 206 produtos que encolheram e 79 que cresceram entre setembro de 2015 e junho de 2017. Em 2016, estimou que entre 1% e 2,1% dos alimentos da amostra encolheram, contra 0,3% a 0,7% que aumentaram, e observou que os preços tendiam a não mudar quando o tamanho mudava, o que é consistente com a reduflação<sup class="cit"><a href="#f2">2</a></sup>. Nos Estados Unidos, o Bureau of Labor Statistics escreveu que o efeito da redução de embalagem no conjunto de todos os bens e serviços é pequeno, com efeito médio anual de 0,01% ao ano<sup class="cit"><a href="#f2">2</a></sup>. Essa diferença entre os dois números não é contradição: ela mostra que a reduflação pesa muito no orçamento de quem compra aquele item específico, e pouco no índice geral.</p>
+
+[[FOTO:2]]<h3>Quem é mais afetado</h3><p>Um modelo econômico publicado em 2024 mostrou que a reduflação aumenta bastante o preço por unidade quando os custos sobem, e que a presença de consumidores desatentos agrava o efeito, sobretudo em mercados menos competitivos. Mercados com pouca concorrência também pioram o quadro<sup class="cit"><a href="#f8">8</a></sup>. Em outras palavras, quanto menos o cliente observa e quanto menos opções ele tem, maior o encolhimento.</p><p>Os efeitos macroeconômicos vão além do orçamento doméstico. Uma análise de perspectiva pós-keynesiana trata a redução de tamanho como aumento de preço escondido, com efeitos sobre a distribuição de renda e o bem-estar do consumidor<sup class="cit"><a href="#f9">9</a></sup>. Um estudo que construiu uma variável de reduflação a partir da taxa de inflação e a integrou em um modelo de crescimento concluiu que o impacto da reduflação sobre o crescimento econômico se parece com o da inflação comum, com efeito negativo significativo nos países analisados<sup class="cit"><a href="#f10">10</a></sup>.</p><p>Há um efeito colateral a favor do consumidor em alguns casos: um estudo sobre o Japão, país com histórico de deflação e consumidores muito sensíveis a preço, aponta que a reduflação é preferida ao aumento direto, sobretudo no setor de alimentos, onde pode até ajudar a reduzir desperdício<sup class="cit"><a href="#f11">11</a></sup>.</p><table><thead><tr><th>Forma de aumento</th><th>O que muda</th><th>Como o índice enxerga</th></tr></thead><tbody><tr><td>Inflação comum</td><td>Preço da etiqueta sobe</td><td>Registra na hora<sup class="cit"><a href="#f2">2</a></sup></td></tr><tr><td>Reduflação</td><td>Peso ou volume cai, preço fica igual</td><td>Só aparece se o índice olhar o preço por unidade<sup class="cit"><a href="#f2">2</a></sup></td></tr><tr><td>Skimpflation</td><td>Qualidade ou conteúdo piora</td><td>Quase não é captada de forma padronizada<sup class="cit"><a href="#f2">2</a></sup></td></tr></tbody></table><h3>Como se sabe o que se sabe</h3><p>A área combina três tipos de evidência. A primeira vem de dados de escaneamento de supermercado, que registram preço e tamanho de cada item ao longo de anos. Foi com esse tipo de dado que um estudo de 2025 mostrou a prevalência da reduflação e a baixa reação da demanda<sup class="cit"><a href="#f3">3</a></sup>. A segunda vem de experimentos e estudos de percepção, que comparam como as pessoas julgam uma redução de tamanho contra um aumento de preço de mesmo tamanho<sup class="cit"><a href="#f4">4</a></sup>. A terceira vem de modelos econômicos, que testam como concorrência e atenção do consumidor afetam o encolhimento<sup class="cit"><a href="#f8">8</a></sup>.</p><p>Quando as três linhas apontam para o mesmo lado, a conclusão fica sólida. É o caso da ideia de que a reduflação funciona porque o consumidor não percebe na hora. Pesquisa em mercados de chocolate na Índia usou sensibilidade a preço e mudanças de embalagem para mostrar como porções menores alteram a percepção de valor de quem compra<sup class="cit"><a href="#f12">12</a></sup>. Esse mesmo estudo coreano sobre lanches mediu expectativa antes da compra e mostrou que ela reduz a tensão interna, mas essa tensão ainda derruba satisfação e recompra<sup class="cit"><a href="#f6">6</a></sup>.</p><p>A ética entra como tema recorrente. Um artigo de 2024 descreve a reduflação como um jogo psicológico para compensar os incômodos da inflação, e registra que algumas empresas adotam a prática enquanto outras a consideram uma falha ética séria<sup class="cit"><a href="#f13">13</a></sup>. Um estudo japonês defende que a comunicação transparente sobre mudanças de preço constrói confiança e fidelidade, o que a torna uma estratégia mais sustentável que a reduflação silenciosa<sup class="cit"><a href="#f11">11</a></sup>.</p>
+` },
+
+extensao: { minutos: 3, html: `
+<p>A reduflação conecta economia, direito e psicologia de um jeito raro. No direito do consumidor, a discussão central é a vulnerabilidade informacional: a omissão ou a dissimulação de mudanças essenciais no produto fere a boa-fé e o direito à informação, e pode ser tratada como abusiva porque induz o consumidor ao erro<sup class="cit"><a href="#f14">14</a></sup>. A regra brasileira que obriga a avisar na embalagem por pelo menos seis meses, e a rotulagem obrigatória austríaca que começou em abril de 2026, são tentativas de fechar essa lacuna<sup class="cit"><a href="#f2">2</a></sup>.</p><p>Na gestão de marcas, a lição é que esconder custa caro. A revisão de 2023 sobre Carrefour e outras iniciativas mostra que o varejo já usa a transparência como diferencial competitivo<sup class="cit"><a href="#f2">2</a></sup>. A evidência de que a descoberta tardia gera desconfiança e troca de marca sugere que a comunicação antecipada é mais barata que a perda de cliente<sup class="cit"><a href="#f5">5</a></sup>. No setor de chocolate, fabricantes precisam pesar como mudanças de porção afetam a percepção de valor de um consumidor que compara preço a todo momento<sup class="cit"><a href="#f12">12</a></sup>.</p><p>Na sustentabilidade, a redução de embalagem tem um lado ambíguo. Uma análise do setor de embalagens de alimentos aponta que a prática pode reduzir consumo de recursos, geração de resíduos e emissões na cadeia, e pode ainda ser usada como justificativa conveniente, quando a empresa alega benefício ambiental para desviar a atenção do encolhimento<sup class="cit"><a href="#f2">2</a></sup><sup class="cit"><a href="#f15">15</a></sup>.</p><p>Na política monetária, a reduflação é um sinal de que a inflação real pode ser maior do que a medida oficial enxerga. Pippa Malmgren, a quem se atribui a expressão, argumenta que ela é um sinal nítido da inflação e tem consequências sérias para a política dos bancos centrais<sup class="cit"><a href="#f1">1</a></sup>. O ponto prático é que um índice que só olha o preço da etiqueta pode subestimar a pressão sobre o orçamento de quem compra sempre o mesmo produto.</p><p>Para quem faz compras, o uso prático é simples e não depende de lei nenhuma: comparar o preço por quilo ou por litro, que costuma aparecer em letras pequenas na etiqueta da prateleira, e não o preço do pacote. É a mesma conta que os estatísticos fazem para medir a prática<sup class="cit"><a href="#f2">2</a></sup>.</p>
+` }
+
+},
+
+sintese: {
+ "definicoes": [
+  {
+   "termo": "Reduflação",
+   "def": "Aumento do preço por unidade de peso ou volume causado pela diminuição do tamanho ou da quantidade do item vendido, mantendo-se o preço de etiqueta."
+  },
+  {
+   "termo": "Skimpflation",
+   "def": "Prática de reduzir a qualidade do produto ou do serviço mantendo o preço, como trocar ingredientes ou diminuir a frequência de limpeza de um hotel."
+  },
+  {
+   "termo": "Preço por unidade",
+   "def": "Preço dividido pelo peso ou volume do produto. É a medida que revela a reduflação, enquanto o preço do pacote pode ficar parado."
+  },
+  {
+   "termo": "Diferença mínima perceptível",
+   "def": "Proporção fixa do estímulo original abaixo da qual uma mudança passa despercebida. Reduções discretas de tamanho ficam nessa faixa."
+  },
+  {
+   "termo": "Acordo tácito de confiança e justiça",
+   "def": "Ideia de que consumidores aceitam aumentos de preço ligados a custos, mas não a aumentos de demanda."
+  },
+  {
+   "termo": "Vulnerabilidade informacional",
+   "def": "Situação em que o consumidor não tem informação para perceber mudanças essenciais do produto, como a redução do conteúdo sem aviso."
+  }
+ ],
+ "lembrar": [
+  "A reduflação eleva o preço por quilo ou litro sem mudar o número na etiqueta.",
+  "Ela aparece sobretudo em produtos embalados de consumo frequente, quando subir o preço direto é arriscado.",
+  "Um índice que só olha o preço do pacote registra estabilidade mesmo quando o preço por grama sobe.",
+  "Consumidores julgam a redução de tamanho mais injusta do que um aumento equivalente de preço.",
+  "A prática não é ilegal por si; o debate jurídico está na falta de aviso ao consumidor.",
+  "A área combina dados de escaneamento de supermercado, experimentos de percepção e modelos econômicos."
+ ],
+ "confusoes": [
+  {
+   "erro": "Se o preço na etiqueta não mudou, não houve aumento.",
+   "correcao": "O preço por unidade de peso ou volume pode ter subido com a embalagem menor. A comparação certa é o preço por quilo ou litro."
+  },
+  {
+   "erro": "A reduflação infla muito o índice geral de preços.",
+   "correcao": "Nos Estados Unidos, o efeito médio no conjunto de todos os bens e serviços foi de 0,01% ao ano. O peso é grande no orçamento de quem compra aquele item específico."
+  },
+  {
+   "erro": "Reduflação e skimpflation são a mesma coisa.",
+   "correcao": "A reduflação mexe no tamanho ou na quantidade. A skimpflation mexe na qualidade ou no conteúdo, mantendo o preço."
+  },
+  {
+   "erro": "A lei proíbe a reduflação.",
+   "correcao": "A prática não é ilegal por si. O que a lei discute é a falta de aviso sobre a mudança de conteúdo."
+  },
+  {
+   "erro": "O consumidor sempre percebe na hora da compra.",
+   "correcao": "Entrevistas mostram que muitos só percebem depois de um tempo, e a diferença mínima perceptível ajuda a mudança a passar despercebida."
+  }
+ ],
+ "numeros": [
+  "Em Portugal, um creme passou de 450 gramas por 3,19 euros, em março de 2022, para 400 gramas por 3,49 euros em novembro do mesmo ano, alta de 23,2% no preço por unidade.",
+  "O Reino Unido identificou 206 produtos que encolheram e 79 que cresceram entre setembro de 2015 e junho de 2017.",
+  "Em 2016, entre 1% e 2,1% dos alimentos da amostra britânica encolheram, contra 0,3% a 0,7% que aumentaram.",
+  "O Bureau of Labor Statistics dos Estados Unidos estimou efeito médio anual de 0,01% da redução de embalagem no índice de todos os bens e serviços.",
+  "Uma revisão sistemática reuniu 23 estudos entre 2004 e 2025; um estudo com 199 pessoas mostrou queda de satisfação e de intenção de recompra."
+ ]
+},
+
+flashcards: [
+ {
+  "f": "O que é reduflação?",
+  "v": "É o aumento do preço por unidade de peso ou volume causado pela diminuição do tamanho ou da quantidade do item, mantendo-se o preço de etiqueta."
+ },
+ {
+  "f": "Qual a diferença entre reduflação e skimpflation?",
+  "v": "A reduflação mexe no tamanho ou na quantidade do produto. A skimpflation mexe na qualidade ou no conteúdo, como trocar ingredientes, mantendo o preço."
+ },
+ {
+  "f": "Por que as empresas preferem encolher o produto em vez de subir o preço?",
+  "v": "Em mercados competitivos, subir o preço de etiqueta arrisca perder o cliente para outra marca. O encolhimento repassa o custo de forma menos visível."
+ },
+ {
+  "f": "Por que o consumidor costuma não notar a reduflação?",
+  "v": "Mudanças pequenas ficam abaixo da diferença mínima perceptível, que é uma proporção fixa do estímulo original. A redução discreta passa despercebida na hora da compra."
+ },
+ {
+  "f": "Por que o índice de preços ao consumidor pode não captar a reduflação?",
+  "v": "Ele acompanha o preço do item na prateleira. Se o pacote encolhe e a etiqueta fica igual, o índice registra estabilidade, embora o preço por grama tenha subido."
+ },
+ {
+  "f": "Como os estatísticos medem a reduflação?",
+  "v": "Comparando o preço por unidade de peso ou volume ao longo do tempo, e não só o preço do pacote."
+ },
+ {
+  "f": "O que o Reino Unido observou nos preços quando o tamanho mudava?",
+  "v": "Os preços tendiam a não mudar quando o tamanho mudava, o que é consistente com a reduflação."
+ },
+ {
+  "f": "Qual o efeito médio da reduflação no índice geral dos Estados Unidos?",
+  "v": "O Bureau of Labor Statistics estimou efeito médio anual de 0,01% sobre o conjunto de todos os bens e serviços."
+ },
+ {
+  "f": "Como os consumidores julgam a redução de tamanho em comparação com um aumento de preço?",
+  "v": "Julgam a redução de tamanho mais injusta do que um aumento equivalente de preço."
+ },
+ {
+  "f": "A reduflação é ilegal?",
+  "v": "Não por si. O que a lei discute é a falta de aviso. No Brasil, há exigência de indicar na embalagem por pelo menos seis meses; na Áustria, rotulagem obrigatória por 60 dias desde abril de 2026."
+ },
+ {
+  "f": "O que a presença de consumidores desatentos e a baixa concorrência provocam?",
+  "v": "Agravam o efeito da reduflação, aumentando o encolhimento sobretudo em mercados menos competitivos."
+ },
+ {
+  "f": "Como o consumidor pode se proteger na prática?",
+  "v": "Comparando o preço por quilo ou por litro, que costuma aparecer em letras pequenas na etiqueta da prateleira, e não o preço do pacote."
+ }
+],
+
+prova: [
+ {
+  "camada": "nucleo",
+  "q": "O que caracteriza a reduflação?",
+  "alts": [
+   "Aumentar o preço de etiqueta mantendo o tamanho do produto",
+   "Reduzir a qualidade do produto ou serviço mantendo o preço",
+   "Reduzir o tamanho ou a quantidade do produto, elevando o preço por unidade sem mudar a etiqueta",
+   "Dar desconto no preço por quilo para estimular a compra"
+  ],
+  "correta": 2,
+  "porque": "A reduflação eleva o preço por unidade ao diminuir tamanho ou quantidade, mantendo ou aumentando o preço do pacote. A alternativa 0 descreve inflação comum; a 1 descreve skimpflation."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Por que uma empresa em mercado competitivo pode preferir encolher o produto em vez de subir o preço de etiqueta?",
+  "alts": [
+   "Porque a lei permite encolher, mas proíbe subir preço",
+   "Porque o cliente pode trocar de marca ao ver o preço maior",
+   "Porque o custo de produção cai quando a embalagem diminui",
+   "Porque o índice de preços deixa de registrar o produto"
+  ],
+  "correta": 1,
+  "porque": "Subir o preço direto arrisca perder o cliente fiel para outra marca. A alternativa 0 é falsa: a lei discute o aviso, não proíbe o aumento de preço."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Por que o índice de preços ao consumidor pode registrar estabilidade quando há reduflação?",
+  "alts": [
+   "Porque acompanha o preço do item na prateleira e o pacote encolhe sem mudar a etiqueta",
+   "Porque os estatísticos não medem produtos embalados",
+   "Porque a reduflação só ocorre em serviços",
+   "Porque o índice sempre usa o preço por quilo"
+  ],
+  "correta": 0,
+  "porque": "O índice olha o preço do item na prateleira. Se o pacote encolhe e a etiqueta fica igual, ele registra estabilidade, embora o preço por grama tenha subido. A alternativa 3 é o erro tentador: o índice não usa sempre o preço por quilo."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Como os consumidores julgam a redução de tamanho, segundo a pesquisa de 2023?",
+  "alts": [
+   "Como mais justa que um aumento de preço",
+   "Como equivalente a um aumento de preço",
+   "Como mais injusta que um aumento equivalente de preço",
+   "Como indiferente, desde que o produto seja o mesmo"
+  ],
+  "correta": 2,
+  "porque": "A pesquisa mostrou que a redução de tamanho é julgada mais injusta que um aumento equivalente de preço, o que não impede que muitos só percebam depois."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Qual é a diferença entre reduflação e skimpflation?",
+  "alts": [
+   "A reduflação mexe no tamanho ou quantidade; a skimpflation mexe na qualidade ou conteúdo",
+   "A reduflação é legal; a skimpflation é crime",
+   "A reduflação ocorre só em serviços; a skimpflation só em alimentos",
+   "A reduflação aumenta o preço; a skimpflation mantém o preço"
+  ],
+  "correta": 0,
+  "porque": "A reduflação mexe no tamanho; a skimpflation mexe no conteúdo. As duas mantêm o preço de etiqueta em geral, o que torna a alternativa 3 errada."
+ },
+ {
+  "camada": "nucleo",
+  "q": "Qual atitude prática permite ao consumidor perceber a reduflação?",
+  "alts": [
+   "Memorizar o preço do pacote",
+   "Comparar o preço por quilo ou por litro",
+   "Comprar sempre a marca mais barata",
+   "Verificar a data de validade"
+  ],
+  "correta": 1,
+  "porque": "O preço por quilo ou litro revela o aumento que a etiqueta esconde. Memorizar o preço do pacote não ajuda, porque é justamente ele que costuma ficar igual."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "Como se explica a diferença entre o efeito pequeno da reduflação no índice geral dos Estados Unidos e o efeito grande no orçamento de quem compra um item específico?",
+  "alts": [
+   "Um dos dois números está errado",
+   "A reduflação pesa muito no item específico e pouco no conjunto de todos os bens e serviços",
+   "O índice americano não inclui alimentos",
+   "A reduflação só afeta produtos importados"
+  ],
+  "correta": 1,
+  "porque": "Os dois números medem coisas diferentes. A prática tem efeito forte no orçamento de quem compra aquele item e efeito médio de 0,01% ao ano no índice geral."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "O que o modelo econômico de 2024 mostrou sobre o efeito da reduflação?",
+  "alts": [
+   "Que consumidores atentos aumentam o encolhimento",
+   "Que a concorrência alta agrava o encolhimento",
+   "Que consumidores desatentos e mercados menos competitivos agravam o encolhimento",
+   "Que a reduflação não afeta o preço por unidade"
+  ],
+  "correta": 2,
+  "porque": "O modelo mostrou que a presença de consumidores desatentos agrava o efeito, sobretudo em mercados menos competitivos. Quanto menos o cliente observa e menos opções tem, maior o encolhimento."
+ },
+ {
+  "camada": "aprofundamento",
+  "q": "Por que a área considera sólida a conclusão de que a reduflação funciona porque o consumidor não percebe na hora?",
+  "alts": [
+   "Porque uma única empresa admitiu a prática",
+   "Porque dados de escaneamento, experimentos de percepção e modelos econômicos apontam para o mesmo lado",
+   "Porque os consumidores relatam perceber sempre",
+   "Porque a prática é proibida em vários países"
+  ],
+  "correta": 1,
+  "porque": "A área combina três linhas de evidência: dados de escaneamento de supermercado, experimentos de percepção e modelos econômicos. Quando as três apontam para o mesmo lado, a conclusão fica sólida."
+ },
+ {
+  "camada": "extensao",
+  "q": "No direito do consumidor, onde está o ponto central da discussão sobre a reduflação?",
+  "alts": [
+   "Na proibição de alterar a receita do produto",
+   "Na vulnerabilidade informacional e na falta de aviso sobre a mudança",
+   "No direito de devolver o produto depois de aberto",
+   "Na obrigação de vender sempre o mesmo tamanho"
+  ],
+  "correta": 1,
+  "porque": "A prática não é ilegal por si; o que se discute é a omissão ou dissimulação de mudanças essenciais, que fere o direito à informação e pode induzir o consumidor ao erro."
+ },
+ {
+  "camada": "extensao",
+  "q": "Qual é o lado ambíguo da redução de embalagem no debate de sustentabilidade?",
+  "alts": [
+   "Ela nunca reduz resíduos",
+   "Ela pode reduzir consumo de recursos e resíduos, e também ser usada como justificativa conveniente para desviar a atenção do encolhimento",
+   "Ela é sempre uma estratégia de marketing enganosa",
+   "Ela é obrigatória por lei ambiental em vários países"
+  ],
+  "correta": 1,
+  "porque": "A análise do setor de embalagens aponta que a prática pode reduzir consumo de recursos, resíduos e emissões, e que também pode ser usada como alegação ambiental para desviar a atenção do encolhimento."
+ }
+],
+
+fontes: [
+ {
+  "n": 1,
+  "tipo": "enciclopédia",
+  "ref": "Wikipédia (português), verbete 'Reduflação'. Consultado em 27/09/2026.",
+  "url": "https://pt.wikipedia.org/wiki/Redufla%C3%A7%C3%A3o"
+ },
+ {
+  "n": 2,
+  "tipo": "enciclopédia",
+  "ref": "Wikipédia (inglês), verbete 'Shrinkflation'. Consultado em 27/09/2026.",
+  "url": "https://en.wikipedia.org/wiki/Shrinkflation"
+ },
+ {
+  "n": 3,
+  "tipo": "artigo",
+  "ref": "Aljoscha Janssen, Johannes Kasinger. 'Shrinkflation and Consumer Demand'. <em>Marketing Science</em>, 2025.",
+  "url": "https://doi.org/10.1287/mksc.2024.0948"
+ },
+ {
+  "n": 4,
+  "tipo": "artigo",
+  "ref": "Ioannis Evangelidis. 'Frontiers: Shrinkflation Aversion: When and Why Product Size Decreases Are Seen as More Unfair than Equivalent Price Increases'. <em>Marketing Science</em>, 2023.",
+  "url": "https://doi.org/10.1287/mksc.2023.0269"
+ },
+ {
+  "n": 5,
+  "tipo": "artigo",
+  "ref": "Lemiyana Leman, Rina Maradona. 'The When Prices Stay the Same, but Contents Shrink: Shrinkflation and Consumer Behavior'. <em>JURNAL AKUNTANSI EKONOMI dan MANAJEMEN BISNIS</em>, 2025.",
+  "url": "https://doi.org/10.30871/jaemb.v13i1.9082"
+ },
+ {
+  "n": 6,
+  "tipo": "artigo",
+  "ref": "The Foodservice Management Society Of Korea, Do-Hyun Jeon, Hyeon-Mo Jeon. 'Effects of Consumer Expectation on Cognitive Dissonance, Satisfaction, and Repurchase Intention Afention : Focusing on the Case of Shrinkflation When Purchasing Snack'. <em>외식경영연구</em>, 2024.",
+  "url": "https://doi.org/10.47584/2024.27.4.271"
+ },
+ {
+  "n": 7,
+  "tipo": "revisão",
+  "ref": "Monika Bansal, Nameeta Garg. 'CONSUMER RESPONSES TO SHRINKFLATION IN THE FMCG SECTOR: A SYSTEMATIC LITERATURE REVIEW'. <em>ShodhPrabandhan Journal of Management Studies</em>, 2026.",
+  "url": "https://doi.org/10.29121/shodhprabandhan.v3.i1.2026.93"
+ },
+ {
+  "n": 8,
+  "tipo": "artigo",
+  "ref": "Evangelia Chalioti, Konstantinos Serfes. 'Shrinkflation'. <em>Economics Letters</em>, 2024.",
+  "url": "https://doi.org/10.1016/j.econlet.2024.111959"
+ },
+ {
+  "n": 9,
+  "tipo": "artigo",
+  "ref": "Jordan Melmiès. 'Hidden price increases, product downsizing, and shrinkflation: a post-Keynesian macroeconomic perspective'. <em>Industrial and Corporate Change</em>, 2024.",
+  "url": "https://doi.org/10.1093/icc/dtae035"
+ },
+ {
+  "n": 10,
+  "tipo": "artigo",
+  "ref": "Mudaser Ahad Bhat, Farhana Wani, Tosib Alam, Amir Mohammad Wani. 'From swelling prices to shrinking sizes: evaluating the ripple effects of inflation and shrinkflation on the economic growth of BIPS countries'. <em>Macroeconomics and Finance in Emerging Market Economies</em>, 2024.",
+  "url": "https://doi.org/10.1080/17520843.2024.2385207"
+ },
+ {
+  "n": 11,
+  "tipo": "artigo",
+  "ref": "Justyna Franc‐Dąbrowska, Igor Vaverka, Magdalena Daria Vaverková. 'Shrinkflation across borders: examining Japan’s response and global implications amid rising inflation'. <em>International Review of Economics</em>, 2025.",
+  "url": "https://doi.org/10.1007/s12232-025-00514-w"
+ },
+ {
+  "n": 12,
+  "tipo": "artigo",
+  "ref": "P B Banudevi Arathy Joshy. 'Consumer’s Price Sensitivity and Shrinkflation Strategy as A Trailblazer of Chocolate Market'. <em>Journal of Informatics Education and Research</em>, 2024.",
+  "url": "https://doi.org/10.52783/jier.v4i1.542"
+ },
+ {
+  "n": 13,
+  "tipo": "artigo",
+  "ref": "Satuluri Padma. 'Inflationary Realities, Shrinkflation Strategies: Business Unveiled'. <em>European Economic Letters (EEL)</em>, 2024.",
+  "url": "https://doi.org/10.52783/eel.v14i1.1027"
+ },
+ {
+  "n": 14,
+  "tipo": "artigo",
+  "ref": "Maria Eduarda Câmara Ramalho, Fabrício Germano Alves. 'A vulnerabilidade informacional e o dever de transparência perante as práticas de shrinkflation e skimpflation'. <em>Revista Brasileira de Direito e Gestão Pública</em>, 2026.",
+  "url": "https://doi.org/10.18378/rbdgp.v14i2.12177"
+ },
+ {
+  "n": 15,
+  "tipo": "artigo",
+  "ref": "Ram Milan, Shivangi Singh. 'Analysing Shrinkflation in FMCG Industry with Special Reference to Food Packaging Industry'. <em>RESEARCH REVIEW International Journal of Multidisciplinary</em>, 2024.",
+  "url": "https://doi.org/10.31305/rrijm.2024.v09.n03.029"
+ }
+],
+
+fronteira: [{"tema": "Origem exata do termo", "html": "<p>Há divergência sobre quando a palavra surgiu com o sentido atual. Uma versão atribui o primeiro uso a Pippa Malmgren, mas o mesmo termo teria sido usado antes pelo historiador Brian Domitrovic para descrever uma economia que encolhe enquanto sofre inflação alta<sup class=\"cit\"><a href=\"#f2\">2</a></sup>. A questão é de registro histórico, não afeta o mecanismo econômico descrito aqui.</p>"}, {"tema": "Efeito no índice oficial de inflação", "html": "<p>O tamanho real do impacto da reduflação sobre o índice de inflação segue em pesquisa. O escritório de estatísticas britânico encontrou entre 1% e 2,1% dos alimentos da amostra encolhendo em 2016<sup class=\"cit\"><a href=\"#f2\">2</a></sup>, enquanto o Bureau of Labor Statistics americano estima efeito médio de 0,01% ao ano no conjunto de todos os bens e serviços<sup class=\"cit\"><a href=\"#f2\">2</a></sup>. Os números medem coisas diferentes e o debate sobre como padronizar a medição continua aberto.</p>"}, {"tema": "Ranking entre reduflação e inflação comum no crescimento", "html": "<p>Um estudo de 2024 encontrou que a reduflação afeta o crescimento econômico de forma parecida com a inflação comum nos países analisados, mas a relação de causa e efeito variou entre eles<sup class=\"cit\"><a href=\"#f10\">10</a></sup>. É uma linha de pesquisa recente, e ainda não se sabe se o padrão se repete em outras economias.</p>"}],
+
+fotos: [{"n": 1, "arquivo": "img/c/reduflacao/1.webp", "legenda": "Frascos de vitamina C do mesmo tamanho: o antigo trazia 100 cápsulas, o novo traz 90.", "alt": "Dois frascos de suplemento de vitamina C, um com 90 cápsulas e outro com 100 cápsulas.", "autor": "Infrogmation", "licenca": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Shrinkflation_Vitamin_C,_Louisiana_Feb_2026.jpg", "gif": false, "w": 800, "h": 1067}, {"n": 2, "arquivo": "img/c/reduflacao/2.webp", "legenda": "Latas de creme para café: a da direita tem 500 g, a nova da esquerda tem 450 g, e por fora quase não se nota.", "alt": "Duas embalagens de um produto, uma com 450g e outra com 500g.", "autor": "Electro Mechanic812291", "licenca": "CC0", "pagina": "https://commons.wikimedia.org/wiki/File:Coffeemate.jpg", "gif": false, "w": 800, "h": 598}],
+};

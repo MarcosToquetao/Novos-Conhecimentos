@@ -233,3 +233,11 @@ Conceito: Biofilmes (Biologia). Fontes do documento usadas: 1 Stewart e Costerto
 ## Regras aprendidas
 
 Regras extraídas das revisões do editor. Valem tanto quanto as de cima.
+
+<!-- 27/09/2026, a partir das 4 primeiras revisões (acidificação dos oceanos, agente-principal, Bauhaus, Bayes) -->
+- Toda pergunta tem de poder ser respondida só com o gancho e as telas anteriores a ela. Se a resposta depende de algo que a lição ainda não mostrou, mostre antes ou troque a pergunta.
+- A pergunta não pode ser óbvia: a alternativa certa não pode ser adivinhada pelo senso comum, pelo tamanho ou pelo tom das alternativas. As erradas são erros que alguém que leu com pressa cometeria.
+- O gancho desperta curiosidade e também diz, em uma frase simples, de que fenômeno o conceito trata. Pergunta solta, sem dizer do que se vai falar, não serve.
+- Linguagem de leigo, mesmo em matemática, economia e política: nada de notação, fórmula ou conta de cabeça na lição. Mostre com um caso concreto, com pessoas e números redondos que o documento traz.
+- Conceito abstrato (economia, política, estatística, filosofia) começa por uma situação prática que qualquer pessoa reconhece, com quem faz o quê e o que acontece. A definição vem depois do exemplo, nunca antes.
+- Cada lição tem pelo menos 5 telas visuais. Se o documento traz fotos ou figuras, use-as; quando não traz, prefira comparar, etapas e estimar a telas de texto.

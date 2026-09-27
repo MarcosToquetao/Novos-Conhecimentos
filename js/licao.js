@@ -40,7 +40,19 @@ function Licao(raiz, doc, opts) {
   const seguir = $("[data-seguir]");
   const liberar = (txt) => { seguir.disabled = false; seguir.textContent = txt || (i === telas.length - 1 ? "Terminar" : "Continuar"); };
   const travar = (txt) => { seguir.disabled = true; seguir.textContent = txt; };
-  const limpar = () => { timers.forEach(clearInterval); timers = []; };
+  const limpar = () => { timers.forEach(x => { clearInterval(x); clearTimeout(x); }); timers = []; };
+
+  /* figura ou foto em tela cheia; se for larga e o celular estiver em pé, gira para usar a altura */
+  function ampliar(fig) {
+    const el = fig.querySelector("svg, img"); if (!el) return;
+    const r = el.getBoundingClientRect();
+    const z = document.createElement("div");
+    z.className = "lv-zoom" + (r.width / r.height > 1.2 && innerHeight > innerWidth ? " girar" : "");
+    z.setAttribute("role", "dialog"); z.setAttribute("aria-label", "Imagem ampliada. Toque para fechar.");
+    z.innerHTML = `<div class="lv-zoom-quadro">${el.outerHTML}</div><p class="rotulo lv-zoom-dica">Toque para fechar</p>`;
+    z.addEventListener("click", () => z.remove());
+    document.body.appendChild(z);
+  }
   $("[data-fechar]").addEventListener("click", () => { limpar(); opts.aoFechar && opts.aoFechar(); });
 
   function carimbo(t) {
@@ -193,9 +205,11 @@ function Licao(raiz, doc, opts) {
         corpo.querySelector("[data-etapa]").innerHTML = `<p class="rotulo">Etapa ${k + 1} de ${n}</p><p class="lv-etapa-nome" style="animation:lv-cai .35s both">${e.nome}</p><p class="lv-etapa-texto" style="animation:lv-cai .35s .1s both">${e.texto || ""}</p>`;
         trilha.querySelectorAll("[data-no]").forEach(c => c.classList.toggle("lv-no-ativo", +c.dataset.no <= k));
       };
-      trilha.querySelectorAll("[data-no]").forEach(c => c.addEventListener("click", () => { k = +c.dataset.no; mostra(); }));
-      mostra();
-      timers.push(setInterval(() => { k = (k + 1) % n; mostra(); }, 2600));   /* roda sozinho, como um gif */
+      /* roda sozinho, como um gif, mas no ritmo de leitura: cada etapa fica o tempo de ler o texto dela */
+      const tempo = () => Math.max(4000, palavras(t.etapas[k].nome + " " + (t.etapas[k].texto || "")) * 330);
+      const agenda = () => { limpar(); timers.push(setTimeout(() => { k = (k + 1) % n; mostra(); agenda(); }, tempo())); };
+      trilha.querySelectorAll("[data-no]").forEach(c => c.addEventListener("click", () => { k = +c.dataset.no; mostra(); agenda(); }));
+      mostra(); agenda();
     },
     pontos(t, corpo) {
       const alvo = Math.round(+t.valor); let c = 0;
@@ -232,7 +246,7 @@ function Licao(raiz, doc, opts) {
         corpo.querySelectorAll("[data-no]").forEach(c => c.classList.toggle("lv-no-ativo", +c.dataset.no === k));
         k = (k + 1) % t.etapas.length;
       };
-      mostra(); timers.push(setInterval(mostra, 1800));
+      mostra(); timers.push(setInterval(mostra, 3000));
     }
   };
 
@@ -244,6 +258,10 @@ function Licao(raiz, doc, opts) {
     corpo.innerHTML = (desenha[t.tipo] ? desenha[t.tipo](t) : "") + carimbo(t);
     liberar(i === 0 ? "Começar" : undefined);
     if (anima[t.tipo]) anima[t.tipo](t, corpo);
+    corpo.querySelectorAll(".licao-figura, .licao-foto").forEach(f => {
+      f.insertAdjacentHTML("beforeend", `<p class="rotulo lv-ampliar">Toque na imagem para ampliar</p>`);
+      f.querySelector("svg, img")?.addEventListener("click", () => ampliar(f));
+    });
     const c = corpo.querySelector("[data-carimbo]");
     if (c) c.addEventListener("click", () => {
       const r = corpo.querySelector("[data-ref]"); if (!r) return;
