@@ -18,11 +18,11 @@ A ficha do dia é a mesma para todo mundo. Dá para comparar o resultado com os 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#F4F1E4','primaryTextColor':'#1E2A24','primaryBorderColor':'#1E2A24','lineColor':'#6B7466','fontFamily':'Georgia, serif'}}}%%
 flowchart LR
-    A["Ficha do dia<br/><small>a mesma para todos</small>"] --> B["Lição de 4 minutos<br/><small>telas visuais e perguntas</small>"]
-    B --> C["Resultado<br/><small>para mandar aos amigos</small>"]
-    C --> D["Próxima pelo mapa<br/><small>um conceito vizinho</small>"]
+    A["Ficha do dia<br/>igual para todos"] --> B["Lição de 4 min<br/>visual, com perguntas"]
+    B --> C["Resultado<br/>para compartilhar"]
+    C --> D["Próxima<br/>um vizinho no mapa"]
     D --> B
-    C -.-> E["Aprofundar<br/><small>texto completo, fontes e prova</small>"]
+    C -.-> E["Aprofundar<br/>texto, fontes e prova"]
 ```
 
 ## Lições que mostram antes de explicar
@@ -68,8 +68,8 @@ As lições são produzidas por um pipeline barato, com revisão humana antes de
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#F4F1E4','primaryTextColor':'#1E2A24','primaryBorderColor':'#1E2A24','lineColor':'#6B7466','fontFamily':'Georgia, serif'}}}%%
 flowchart LR
     D["Documento revisado<br/>com fontes"] --> G["DeepSeek escreve<br/>a lição"]
-    G --> K["Checagens automáticas<br/><small>escrita, números, fontes</small>"]
-    K --> J["JEV confere<br/><small>certeza, gabarito, visual</small>"]
+    G --> K["Checagens<br/>escrita, números, fontes"]
+    K --> J["JEV confere<br/>certeza e gabarito"]
     J --> H["Revisão humana"]
     H -->|aprovada| P["Publicada"]
     H -->|rejeitada, com motivo| G
