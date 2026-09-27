@@ -60,6 +60,12 @@ function validar(id, d) {
   if (/#f[^0-9]/.test(texto + JSON.stringify(d.fronteira || []))) e("citação sem número (href=\"#f...\" sem dígito)");
   for (const m of texto.matchAll(/href="#f(\d+)"/g)) if (!fontes.has(+m[1])) e(`citação [${m[1]}] sem fonte correspondente`);
   for (const m of texto.matchAll(/\[\[FIG:([a-z0-9\-]+)\]\]/g)) if (!FIGURAS[m[1]]) e(`figura ${m[1]} não existe em figuras.js`);
+  const fotos = d.fotos || [];
+  for (const m of texto.matchAll(/\[\[FOTO:(\d+)\]\]/g)) if (!fotos.some(f => f.n === +m[1])) e(`foto ${m[1]} não existe no campo fotos`);
+  for (const f of fotos) {
+    if (!fs.existsSync(p(...f.arquivo.split("/")))) e(`foto ${f.n}: arquivo ${f.arquivo} não existe`);
+    if (!f.autor || !f.licenca || !f.pagina || !f.legenda) e(`foto ${f.n}: falta crédito, licença, página ou legenda`);
+  }
 
   (d.prova || []).forEach((q, i) => {
     if (!q.q || !Array.isArray(q.alts) || !(q.correta >= 0 && q.correta < q.alts.length)) e(`prova[${i}] malformada`);
@@ -80,7 +86,7 @@ function validar(id, d) {
     /* checagem estrutural mínima; a de conteúdo (números, escrita, tamanhos) é do pipeline/gerar.py */
     const L = d.licao, telas = L.telas || [];
     const LISTA = { etapas: "etapas", camadas: "camadas", ordenar: "itens", comparar: "linhas", linha_tempo: "eventos", ciclo: "etapas" };
-    const TIPOS = ["texto", "pergunta", "figura", "estimar", "pontos", "curva", ...Object.keys(LISTA)];
+    const TIPOS = ["texto", "pergunta", "figura", "foto", "estimar", "pontos", "curva", ...Object.keys(LISTA)];
     if (!L.gancho) e("licao sem gancho");
     if (telas.length < 5 || telas.length > 10) e(`licao com ${telas.length} telas (esperado 6 a 9)`);
     if (telas.filter(t => ["pergunta", "ordenar"].includes(t.tipo)).length < 2) e("licao com menos de 2 telas que valem ponto");
@@ -92,6 +98,7 @@ function validar(id, d) {
       if (t.tipo === "texto" && !t.html) e(`${onde} sem html`);
       if (t.tipo === "pergunta" && !(Array.isArray(t.alts) && t.correta >= 0 && t.correta < t.alts.length && t.porque)) e(`${onde} pergunta malformada`);
       if (t.tipo === "figura" && !FIGURAS[t.fig]) e(`${onde} figura ${t.fig} inexistente`);
+      if (t.tipo === "foto" && !fotos.some(f => f.n === t.foto)) e(`${onde} foto ${t.foto} inexistente`);
       if (t.tipo === "estimar" && !(+t.min < +t.resposta && +t.resposta < +t.max)) e(`${onde} estimar sem min < resposta < max`);
       if (t.tipo === "pontos" && !(t.valor > 0 && t.valor < 100 && t.frase)) e(`${onde} pontos malformado`);
       if (LISTA[t.tipo] && !(Array.isArray(t[LISTA[t.tipo]]) && t[LISTA[t.tipo]].length >= 2)) e(`${onde} ${t.tipo} sem ${LISTA[t.tipo]}`);
@@ -189,12 +196,17 @@ const pos = layout();
 
 /* ── Escrita ───────────────────────────────────────────────────────── */
 const comFiguras = (html) => html.replace(/\[\[FIG:([a-z0-9\-]+)\]\]/g, (m, k) => FIGURAS[k]);
+/* foto ou GIF livre do Wikimedia Commons, com crédito (a licença exige autor e licença junto da imagem) */
+const escH = (x) => String(x || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+const figuraFoto = (f) => `<figure class="foto"><img src="${f.arquivo}" alt="${escH(f.alt || f.legenda)}" width="${f.w}" height="${f.h}" loading="lazy">` +
+  `<figcaption>${f.legenda}<span class="credito">${f.gif ? "Animação" : "Imagem"}: ${escH(f.autor)} · <a href="${f.pagina}" target="_blank" rel="noopener">${escH(f.licenca)}, Wikimedia Commons</a></span></figcaption></figure>`;
+const comFotos = (html, fotos) => html.replace(/\[\[FOTO:(\d+)\]\]/g, (m, n) => figuraFoto(fotos.find(f => f.n === +n)));
 
 fs.rmSync(p("dados", "c"), { recursive: true, force: true });
 fs.mkdirSync(p("dados", "c"), { recursive: true });
 for (const [id, d] of Object.entries(CONTEUDOS)) {
   const doc = JSON.parse(JSON.stringify(d));
-  for (const c of Object.values(doc.camadas)) c.html = comFiguras(c.html);
+  for (const c of Object.values(doc.camadas)) c.html = comFotos(comFiguras(c.html), doc.fotos || []);
   if (doc.licao) for (const t of doc.licao.telas) if (t.tipo === "figura") t.svg = FIGURAS[t.fig];
   fs.writeFileSync(p("dados", "c", id + ".json"), JSON.stringify(doc));
 }

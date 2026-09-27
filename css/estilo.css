@@ -237,6 +237,14 @@ sup.cit a { color: var(--carimbo); text-decoration: none; padding: 0 .1em; }
 .marca.consenso { color: var(--consenso); } .marca.emergente { color: var(--emergente); }
 .marca.controverso { color: var(--controverso); } .marca.especulacao { color: var(--especulacao); }
 
+/* foto ou GIF do Commons: impressa e colada na ficha, com o crédito em letra miúda */
+.foto { margin: 1.8rem 0; }
+.foto img { display: block; width: 100%; height: auto; max-height: 62vh; object-fit: contain; background: var(--cartao); border: 1px solid var(--regra); padding: 6px; }
+.foto figcaption { font: .76rem/1.55 var(--mono); color: var(--tinta-2); margin-top: .5rem; }
+.foto .credito { display: block; font-size: .68rem; color: var(--tinta-3); margin-top: .2rem; overflow-wrap: anywhere; }
+.foto .credito a { color: inherit; }
+.licao-foto { margin: 0; }
+.licao-foto img { max-height: 52vh; object-fit: contain; }
 .figura { margin: 1.8rem 0; }
 .figura svg { width: 100%; height: auto; display: block; }
 .figura figcaption { font: .76rem/1.55 var(--mono); color: var(--tinta-3); margin-top: .6rem; padding-top: .5rem; border-top: 1px solid var(--regra-2); }

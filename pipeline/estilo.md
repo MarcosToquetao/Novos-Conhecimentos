@@ -27,6 +27,7 @@ A lição é vista no celular, uma tela por vez, como stories. **Texto corrido d
 |---|---|---|
 | `texto` | `html` | uma ideia que nenhum visual mostra melhor |
 | `pergunta` | `q`, `alts` (3), `correta` (0 a 2), `porque` | checar entendimento |
+| `foto` | `foto` (número da foto do documento), `legenda` | o documento traz fotos ou GIFs reais (a lista vem na mensagem): mostrar o próprio organismo, objeto ou fenômeno |
 | `estimar` | `q`, `unidade`, `min`, `max`, `escala` ("linear" ou "log"), `resposta`, `legenda` | um número surpreendente: a pessoa chuta antes de ver |
 | `etapas` | `etapas` [{`nome`, `texto`}] (3 a 6), `legenda` | processo em sequência; o app anima uma etapa por vez |
 | `camadas` | `camadas` [{`nome`, `nota`}] (2 a 5, de cima para baixo), `eixo` {`topo`, `base`}, `legenda` | estrutura em níveis, gradiente, corte |
@@ -41,6 +42,7 @@ Qualquer tela pode levar `marca` e `fonte`.
 
 **Escolher o tipo certo importa mais que variar.** Um visual que não combina com o conteúdo é pior que uma tela de texto.
 
+- `foto`: se o documento traz fotos ou GIFs reais, use de 1 a 3 delas, sobretudo logo depois do gancho, para a pessoa ver do que se está falando. GIF é ótimo para movimento. A `legenda` diz o que se vê e liga ao que a tela ensina.
 - `figura`: se o documento traz figuras prontas (a lista vem na mensagem), prefira-as. São desenhos calculados e revisados; use `fig` com a chave exata e escreva a `legenda`.
 - `etapas`: só para coisas que acontecem uma depois da outra no tempo ou num procedimento.
 - `ciclo`: só se a última etapa leva de volta à primeira. Processo que começa e termina é `etapas`.

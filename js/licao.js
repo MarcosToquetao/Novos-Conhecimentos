@@ -4,9 +4,10 @@
    O modelo que gera a lição só preenche dados (etapas, números, camadas); aqui é que
    cada tipo de tela vira desenho e animação em SVG, sempre no mesmo estilo.
 
-   Licao(raiz, doc, { cor, aoFechar(), aoTerminar({ acertos, total }) })
+   Licao(raiz, doc, { cor, base, aoFechar(), aoTerminar({ acertos, total }) })
    doc: o documento do conceito (dados/c/<id>.json), com doc.licao e doc.fontes
-   cor: cor CSS da região do conceito, ex. "var(--m-vida)" */
+   cor: cor CSS da região do conceito, ex. "var(--m-vida)"
+   base: prefixo do caminho das fotos (a tela de revisão, que fica em /pipeline/, passa "../") */
 (function () {
 "use strict";
 
@@ -57,6 +58,13 @@ function Licao(raiz, doc, opts) {
     texto: (t) => `<div class="leitura">${t.html}</div>`,
 
     figura: (t) => `<figure class="figura licao-figura">${t.svg || ""}<figcaption>${t.legenda || ""}</figcaption></figure>`,
+
+    /* foto ou GIF do Wikimedia Commons, guardada em img/c/<id>/; o crédito é exigência da licença */
+    foto: (t) => {
+      const f = (doc.fotos || []).find(x => x.n === t.foto) || {};
+      return `<figure class="foto licao-foto"><img src="${(opts.base || "") + f.arquivo}" alt="${esc(f.alt || f.legenda)}" width="${f.w}" height="${f.h}">
+        <figcaption>${t.legenda || f.legenda || ""}<span class="credito">${f.gif ? "Animação" : "Imagem"}: ${esc(f.autor)} · <a href="${f.pagina}" target="_blank" rel="noopener">${esc(f.licenca)}, Wikimedia Commons</a></span></figcaption></figure>`;
+    },
 
     pergunta: (t) => `<p class="rotulo">Pergunta</p><p class="licao-pergunta">${t.q}</p>
       <div class="alts">${t.alts.map((a, j) => `<button type="button" class="alt" data-j="${j}"><span class="letra">${"ABC"[j]}</span><span>${a}</span></button>`).join("")}</div>

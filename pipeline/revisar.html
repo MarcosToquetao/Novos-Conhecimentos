@@ -128,7 +128,8 @@ async function abrir(id) {
 }
 
 function tocar(licao) {
-  Licao($("#telefone"), { termo: atual.doc.termo, area: atual.doc.area, fontes: atual.doc.fontes, licao }, {
+  Licao($("#telefone"), { termo: atual.doc.termo, area: atual.doc.area, fontes: atual.doc.fontes, fotos: atual.doc.fotos, licao }, {
+    base: "../",   /* esta página fica em /pipeline/; as fotos, em /img/ */
     cor: AREAS[atual.doc.area] ? `var(--m-${AREAS[atual.doc.area]})` : undefined,
     aoFechar: () => tocar(licao),
     aoTerminar: (res) => {

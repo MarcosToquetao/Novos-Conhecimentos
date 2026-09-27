@@ -9,6 +9,7 @@ Uso
   python pipeline/gerar.py licao --todas          lições para todo documento sem lição nem rascunho
   python pipeline/gerar.py conceito <id> [<id> ...] [--seco] [--retomar]   documento novo a partir de fontes reais (Wikipédia + OpenAlex)
   python pipeline/gerar.py dossie <id> [<id> ...]   só baixa e mostra o dossiê de fontes (pipeline/dossies/)
+  python pipeline/gerar.py imagens <id> [<id> ...] [--seco]   fotos e GIFs livres do Wikimedia Commons, escolhidos por um modelo de visão
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
   python pipeline/gerar.py fronteira <id>... | --todas [--seco]   caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
   python pipeline/gerar.py triagem                JEV marca termos do catálogo sem respaldo suficiente (não apaga)
@@ -18,7 +19,7 @@ Uso
 
 Chaves em .env na raiz: DEEPSEEK_API_KEY=...  OPENROUTER_API_KEY=...
 """
-import concurrent.futures, datetime, json, pathlib, re, subprocess, sys, threading, time, urllib.error, urllib.parse, urllib.request
+import concurrent.futures, datetime, io, json, pathlib, re, subprocess, sys, threading, time, urllib.error, urllib.parse, urllib.request
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 PIPE = RAIZ / "pipeline"
@@ -181,7 +182,7 @@ def checar_texto(onde, s, erros):
             erros.append(f"{onde}: expressão proibida «{e}»")
 
 
-VISUAIS = {"estimar", "etapas", "camadas", "pontos", "ordenar", "comparar", "linha_tempo", "ciclo", "curva", "figura"}
+VISUAIS = {"estimar", "etapas", "camadas", "pontos", "ordenar", "comparar", "linha_tempo", "ciclo", "curva", "figura", "foto"}
 VALE_PONTO = {"pergunta", "ordenar"}
 FORMAS = {"exponencial", "saturacao", "sino", "queda", "u", "logistica", "linear"}
 NUM_EXTENSO = {"dez": 10, "vinte": 20, "trinta": 30, "cem": 100, "cento": 100, "duzentos": 200, "mil": 1000,
@@ -323,6 +324,9 @@ def checar_licao(L, doc):
             if t.get("forma") not in FORMAS:
                 erros.append(f"tela {i}: curva com forma desconhecida ({t.get('forma')})")
             exigir(i, t, ["eixo_x", "eixo_y"])
+        elif tipo == "foto":
+            if t.get("foto") not in {f["n"] for f in doc.get("fotos", [])}:
+                erros.append(f"tela {i}: foto {t.get('foto')} não existe no documento")
         elif tipo != "figura":
             erros.append(f"tela {i}: tipo desconhecido {tipo}")
     return erros, avisos
@@ -427,6 +431,8 @@ def prompts_licao(id_, idx):
     figuras = re.findall(r"\[\[FIG:([a-z0-9\-]+)\]\]\s*<figcaption>(.*?)</figcaption>", fonte_js, re.S)
     usuario = "\n".join([
         f"Conceito: {doc['termo']} ({doc['area']})",
+        "Fotos e GIFs reais deste documento (use com tipo foto e foto igual ao número): " +
+        ("; ".join(f"{f['n']}: {'GIF animado, ' if f.get('gif') else ''}{f['legenda']}" for f in doc.get("fotos", [])) or "nenhuma"),
         "Figuras prontas deste documento (use com tipo figura e fig igual à chave): " +
         ("; ".join(f"{k}: {texto_puro(c)[:140]}" for k, c in figuras) if figuras else "nenhuma"),
         f"Conceitos vizinhos no acervo, para o fecho: {', '.join(vizinhos(id_, idx))}",
@@ -1002,6 +1008,177 @@ def registrar_conceito(id_, resultado, notas, custo, n_fontes=0, saida=None):
     return resultado
 
 
+# ── imagens: fotos e GIFs livres do Wikimedia Commons, escolhidas por um modelo de visão ──
+VISAO = "google/gemini-3.1-flash-lite"   # US$0,25/M de entrada: cerca de US$0,0005 por imagem avaliada
+LICENCA_LIVRE = re.compile(r"^(public domain|cc0( 1\.0)?|cc[ -]by(-sa)?( \d\.\d)?)$", re.I)
+NOTA_MINIMA = 7
+
+
+def baixar(url):
+    req = urllib.request.Request(url, headers=UA)
+    for t in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return r.read()
+        except (urllib.error.URLError, TimeoutError) as e:
+            if t == 2:
+                raise RuntimeError(f"Não baixei {url}: {e}")
+            time.sleep(3)
+
+
+def commons(busca, gif=False, n=6):
+    """Imagens do Commons com licença livre. gif=True procura só GIF animado."""
+    r = get("https://commons.wikimedia.org/w/api.php", {
+        "action": "query", "generator": "search", "gsrnamespace": 6, "gsrlimit": n * 2, "format": "json",
+        "gsrsearch": busca + (" filemime:image/gif" if gif else " filetype:bitmap -filemime:image/gif"),
+        "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata" + ("|metadata" if gif else ""), "iiurlwidth": 800})
+    saida = []
+    for p in sorted((r.get("query") or {}).get("pages", {}).values(), key=lambda p: p.get("index", 0)):
+        ii = p["imageinfo"][0]
+        m = ii.get("extmetadata") or {}
+        campo = lambda k: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.get(k, {}).get("value", ""))).strip()
+        quadros = {x["name"]: x["value"] for x in ii.get("metadata") or []}.get("frameCount", 1)
+        if not LICENCA_LIVRE.match(campo("LicenseShortName")) or min(ii["width"], ii["height"]) < 250 or (gif and quadros < 2):
+            continue
+        saida.append({"titulo": p["title"], "url": ii["url"] if gif else (ii.get("thumburl") or ii["url"]), "pagina": ii["descriptionurl"],
+                      "licenca": campo("LicenseShortName"), "autor": campo("Artist")[:120] or "autor desconhecido",
+                      "descricao": campo("ImageDescription")[:300], "gif": gif, "bytes": ii["size"]})
+    return saida[:n]
+
+
+def preparar(bruto, gif, largura):
+    """Reduz e converte para WebP; GIF vira WebP animado (bem mais leve e com as mesmas cores)."""
+    from PIL import Image, ImageSequence
+    im = Image.open(io.BytesIO(bruto))
+    escala = min(1, largura / im.width)
+    tam = (round(im.width * escala), round(im.height * escala))
+    out = io.BytesIO()
+    if gif:
+        todos = [q.copy() for q in ImageSequence.Iterator(im)]   # o iterador reaproveita o mesmo objeto
+        passo = max(1, round(len(todos) / 45))   # até ~45 quadros: o movimento continua legível e o arquivo cai pela metade
+        quadros = [q.convert("RGBA").resize(tam) for q in todos[::passo]]
+        dur = im.info.get("duration", 80) * passo
+        quadros[0].save(out, "WEBP", save_all=True, append_images=quadros[1:], duration=dur, loop=0, quality=60, method=4)
+    else:
+        im.convert("RGB").resize(tam).save(out, "WEBP", quality=78, method=4)
+    return out.getvalue(), tam
+
+
+def miniatura(bruto):
+    """Primeiro quadro, 512 px, em JPEG base64: é o que o modelo de visão vê."""
+    import base64
+    from PIL import Image
+    im = Image.open(io.BytesIO(bruto)).convert("RGB")
+    im.thumbnail((512, 512))
+    out = io.BytesIO()
+    im.save(out, "JPEG", quality=80)
+    return "data:image/jpeg;base64," + base64.b64encode(out.getvalue()).decode()
+
+
+def visao(conteudo, alvo):
+    r = post("https://openrouter.ai/api/v1/chat/completions",
+             {"model": VISAO, "messages": [{"role": "user", "content": conteudo}], "max_tokens": 1500,
+              "response_format": {"type": "json_object"}, "usage": {"include": True}}, chave("OPENROUTER_API_KEY"))
+    registrar_custo("visao", alvo, VISAO, r.get("usage", {}).get("cost", 0), r.get("usage", {}))
+    texto = r["choices"][0]["message"].get("content") or "{}"
+    return json.loads(re.sub(r"^```(json)?|```$", "", texto.strip()))
+
+
+def paragrafos(html):
+    return re.findall(r"<p[ >].*?</p>", html, re.S)
+
+
+def gerar_imagens(id_, seco=False):
+    """Escolhe de 3 a 5 trechos do documento que ganham com imagem, procura no Commons (foto e GIF),
+    deixa o modelo de visão escolher a melhor de cada trecho e grava em img/c/<id>/.
+    No documento, a imagem entra como [[FOTO:n]] depois do parágrafo; a lição pode usar a tela «foto»."""
+    arq = RAIZ / "js" / "docs" / f"{id_}.js"
+    js = arq.read_text(encoding="utf-8")
+    if re.search(r"^fotos: ", js, re.M):
+        return print(f"{id_}: já tem fotos (apague a linha fotos: e as marcas [[FOTO:n]] para refazer)")
+    doc = documento(id_)
+    ps = {k: paragrafos(doc["camadas"][k]["html"]) for k in ("nucleo", "aprofundamento") if k in doc["camadas"]}
+    lista = "\n".join(f"{k} {i}: {texto_puro(p)[:400]}" for k, l in ps.items() for i, p in enumerate(l))
+    plano, _ = deepseek(FLASH, (
+        "Você escolhe onde uma imagem real (foto, gravura histórica, micrografia, mapa ou GIF animado) ajudaria um leigo "
+        "a materializar o que o texto descreve. Escolha de 3 a 5 parágrafos, de preferência espalhados pelo texto. Só onde existe "
+        "algo concreto para ver: o próprio organismo ou objeto, seus estados, um lugar, um fenômeno acontecendo, um experimento, uma obra. "
+        "Nada de imagem para ideia abstrata, nada de diagrama esquemático (o app já desenha os seus) e retrato de pessoa só se a pessoa for o assunto. "
+        "Para cada um: camada e p (o número do parágrafo), mostrar (em português, o que a imagem ideal mostra), buscas (2 expressões "
+        "curtas em inglês para o Wikimedia Commons, da mais específica para a mais geral) e gif (true se um movimento ou uma sequência "
+        "ajudaria, como um animal andando ou um processo acontecendo). "
+        'Responda somente com json: {"lugares": [{"camada": "nucleo", "p": 0, "mostrar": "", "buscas": ["", ""], "gif": false}]}'),
+        f"Conceito: {doc['termo']}\n\nParágrafos:\n{lista}", "imagens-plano", id_, max_tokens=1500)
+    lugares = [l for l in plano.get("lugares", []) if l.get("camada") in ps and 0 <= int(l.get("p", -1)) < len(ps[l["camada"]])]
+    if seco:
+        return print(json.dumps(lugares, ensure_ascii=False, indent=1))
+    pasta = RAIZ / "img" / "c" / id_
+    fotos, usadas = [], set()
+    for lug in lugares:
+        cands = []
+        for b in lug.get("buscas", [])[:2]:
+            cands += [c for c in commons(b, n=4) if c["titulo"] not in {x["titulo"] for x in cands}]
+        # GIF sempre entra na disputa, na frente, para não ser cortado pelo limite de candidatas
+        gifs = [c for c in commons(lug["buscas"][-1], gif=True, n=3) if c["bytes"] < 12e6]   # a busca mais geral: GIF é raro
+        cands = [c for c in gifs + cands if c["titulo"] not in usadas][:8]
+        if not cands:
+            print(f"  {id_}: nada livre no Commons para «{lug['mostrar']}»")
+            continue
+        brutos, conteudo = [], [{"type": "text", "text": (
+            f"Texto de um app de divulgação científica sobre «{doc['termo']}». Trecho:\n{texto_puro(ps[lug['camada']][lug['p']])}\n\n"
+            f"Imagem ideal: {lug['mostrar']}.\n\nAbaixo vêm imagens candidatas do Wikimedia Commons. Para cada uma, diga em português o que "
+            "ela mostra de fato e dê uma nota de 0 a 10 para quanto ela ajuda um leigo a visualizar esse trecho no celular. Nota baixa para: "
+            "imagem que não mostra o assunto, qualidade ruim, muito texto em outra língua, diagrama confuso, conteúdo chocante sem necessidade. "
+            "Figura de artigo científico com vários painéis, letras e setas vale no máximo 4: o leitor é leigo e está no celular. "
+            "Um GIF que mostra o assunto em movimento ganha 1 ponto a mais que uma foto parada equivalente. "
+            "Escolha a melhor (0 se nenhuma serve) e escreva a legenda dela: até 20 palavras, dizendo só o que se vê, sem inventar nada "
+            "que a imagem e a descrição não sustentem. Sem travessão. "
+            'Responda somente com json: {"imagens": [{"k": 1, "mostra": "", "nota": 0}], "melhor": 0, "legenda": ""}')}]
+        for k, c in enumerate(cands, 1):
+            try:
+                bruto = baixar(c["url"])
+                conteudo += [{"type": "text", "text": f"Imagem {k}{' (GIF animado, primeiro quadro)' if c['gif'] else ''}: {c['titulo']}. Descrição no Commons: {c['descricao']}"},
+                             {"type": "image_url", "image_url": {"url": miniatura(bruto)}}]
+                brutos.append((k, c, bruto))
+            except Exception as e:   # arquivo corrompido ou fora do ar: segue com as outras
+                print(f"  {id_}: pulei {c['titulo']} ({e})")
+        r = visao(conteudo, id_)
+        notas = {int(x.get("k", 0)): x for x in r.get("imagens", [])}
+        k = int(r.get("melhor") or 0)
+        if not k or notas.get(k, {}).get("nota", 0) < NOTA_MINIMA or not r.get("legenda"):
+            print(f"  {id_}: nenhuma boa para «{lug['mostrar']}» (" + ", ".join(f"{x.get('nota')}" for x in notas.values()) + ")")
+            continue
+        _, c, bruto = next(x for x in brutos if x[0] == k)
+        dados, (w, h) = preparar(bruto, c["gif"], 480 if c["gif"] else 800)
+        n = len(fotos) + 1
+        pasta.mkdir(parents=True, exist_ok=True)
+        (pasta / f"{n}.webp").write_bytes(dados)
+        erros = []
+        checar_texto("legenda", r["legenda"], erros)
+        fotos.append({"n": n, "arquivo": f"img/c/{id_}/{n}.webp", "legenda": r["legenda"].strip(), "alt": notas[k].get("mostra", ""),
+                      "autor": c["autor"], "licenca": c["licenca"], "pagina": c["pagina"], "gif": c["gif"], "w": w, "h": h,
+                      "camada": lug["camada"], "p": lug["p"], "nota": notas[k].get("nota")})
+        usadas.add(c["titulo"])
+        print(f"  {id_}: foto {n} ({'GIF' if c['gif'] else 'foto'}, nota {notas[k].get('nota')}, {len(dados) // 1024} KB) {c['titulo']}"
+              + (f"  ATENÇÃO legenda: {erros}" if erros else ""))
+    if not fotos:
+        return
+    # [[FOTO:n]] logo depois do parágrafo escolhido, no próprio js/docs (de trás para frente para não deslocar)
+    for f in sorted(fotos, key=lambda f: -js.find(ps[f["camada"]][f["p"]])):
+        alvo = ps[f["camada"]][f["p"]]
+        i = js.find(alvo)
+        if i < 0:
+            print(f"  {id_}: não achei o parágrafo da foto {f['n']} no js/docs; ela fica só disponível para a lição")
+            continue
+        js = js[:i + len(alvo)] + f"\n\n[[FOTO:{f['n']}]]" + js[i + len(alvo):]
+    linha = "fotos: " + json.dumps([{k: v for k, v in f.items() if k not in ("camada", "p", "nota")} for f in fotos], ensure_ascii=False) + ","
+    fim = js.rindex("\n};")
+    antes = js[:fim].rstrip()
+    js = antes + ("" if antes.endswith(",") else ",") + "\n\n" + linha + js[fim:]
+    arq.write_text(js, encoding="utf-8")
+    print(f"  {id_}: {len(fotos)} imagem(ns) em img/c/{id_}/ · {sum((pasta / f'{f['n']}.webp').stat().st_size for f in fotos) // 1024} KB")
+
+
 # ── aprendizado e status ────────────────────────────────────────────────
 def aprender():
     avs = avaliacoes()
@@ -1093,6 +1270,14 @@ def main():
         with concurrent.futures.ThreadPoolExecutor(6) as ex:
             list(ex.map(um, ids))
         if cmd == "conceito" and "--seco" not in flags:
+            print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-1])
+    elif cmd == "imagens":
+        for i in ids:
+            try:
+                gerar_imagens(i, seco="--seco" in flags)
+            except RuntimeError as e:
+                print(f"  {i}: falhou ({e})")
+        if "--seco" not in flags:
             print(subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True).stdout.strip().splitlines()[-1])
     elif cmd == "grafo":
         gerar_grafo(seco="--seco" in flags)

@@ -50,6 +50,7 @@ Chaves em `.env` na raiz (no `.gitignore`): `DEEPSEEK_API_KEY`, `OPENROUTER_API_
 ```
 python pipeline/gerar.py conceito <id>...          documento novo: dossiê de fontes reais → Flash escreve → checagens + JEV → js/docs
 python pipeline/gerar.py dossie <id>...            só baixa o dossiê (Wikipédia pt/en + OpenAlex, filtrado pelo JEV) em pipeline/dossies/
+python pipeline/gerar.py imagens <id>...           fotos e GIFs livres do Wikimedia Commons, escolhidos por modelo de visão (google/gemini-3.1-flash-lite)
 python pipeline/gerar.py licao <id>... | --todas   Flash gera, checagens barram, JEV fiscaliza, V4 Pro reescreve o que foi sinalizado
 python pipeline/gerar.py grafo                     subáreas e ligações do acervo (JEV corta as fracas)
 python pipeline/gerar.py triagem                   JEV marca termos sem respaldo suficiente
@@ -89,6 +90,7 @@ python pipeline/revisar.py                         http://localhost:8766/pipelin
 - `sintese.{definicoes[{termo,def}], lembrar[], confusoes[{erro,correcao}], numeros[]}`;
 - `flashcards[{f,v}]` (mín. 12), `prova[{camada,q,alts[],correta,porque}]` (mín. 10), `fontes[{n,tipo,ref,url}]` (mín. 15, reais e verificáveis);
 - `fronteira` (uma linha JSON, opcional): `[{tema, html}]`, as linhas de pesquisa em aberto, renderizadas depois das camadas;
+- `fotos` (uma linha JSON, escrita por `gerar.py imagens`): `[{n, arquivo, legenda, alt, autor, licenca, pagina, gif, w, h}]`. Os arquivos WebP ficam em `img/c/<id>/`, e o GIF vira WebP animado. No html, `[[FOTO:n]]` vira figura com crédito no build. Só entram licenças livres (domínio público, CC0, CC BY, CC BY-SA), e o crédito é obrigatório.
 - `licao` (uma linha JSON, escrita pelo pipeline): `{ gancho, telas: [...], fecho }`.
 
 Uma lição é visual antes de ser texto (estilo stories). Pelo menos metade das telas é visual, e as telas de texto têm no máximo 40 palavras. O modelo só **preenche dados**; `js/licao.js` desenha e anima tudo em SVG.
@@ -96,6 +98,7 @@ Uma lição é visual antes de ser texto (estilo stories). Pelo menos metade das
 Tipos de tela e campos (especificação completa, com quando usar cada um, em `pipeline/estilo.md`):
 
 - `texto`, `pergunta`;
+- `foto` (usa uma foto ou GIF do campo `fotos`);
 - `figura` (usa uma figura pronta de `build_figuras.py`);
 - `estimar` (a pessoa chuta um número antes de ver);
 - `etapas` (anima uma por vez), `camadas`, `pontos` (grade 10×10), `ordenar` (vale ponto), `comparar`, `linha_tempo`, `ciclo`;

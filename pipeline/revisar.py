@@ -100,7 +100,7 @@ class Tratador(http.server.SimpleHTTPRequestHandler):
                 if t.get("tipo") == "figura":
                     t["svg"] = figuras.get(t.get("fig"), "")
             return self.responder(200, {"rascunho": rasc,
-                                        "doc": {k: d[k] for k in ("termo", "area", "fontes", "subtitulo")}})
+                                        "doc": {k: d.get(k) for k in ("termo", "area", "fontes", "subtitulo", "fotos")}})
         return super().do_GET()
 
     def do_POST(self):

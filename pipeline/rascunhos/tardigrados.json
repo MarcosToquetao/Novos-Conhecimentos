@@ -1,128 +1,93 @@
 {
  "id": "tardigrados",
  "tipo": "licao",
- "criado": "2026-09-27T16:28:10",
- "modelo": "deepseek-flash+deepseek-v4-pro",
+ "criado": "2026-09-27T16:58:04",
+ "modelo": "deepseek-flash",
  "rodadas": 2,
  "licao": {
-  "gancho": "Um animal microscópico pode ficar anos sem água, sem comida e sem oxigênio. Basta uma gota d'água para ele voltar a andar.",
+  "gancho": "Um animal microscópico pode passar anos sem água, sem comida e sem oxigênio. Quando você pinga uma gota d'água, ele volta a andar como se nada tivesse acontecido.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Esse estado se chama <strong>criptobiose</strong>: o metabolismo despenca, o corpo vira uma bolinha e o bicho espera. Não é morte, é suspensão.</p>"
-   },
-   {
-    "tipo": "estimar",
-    "q": "Na anidrobiose, a que porcentagem do normal cai o metabolismo do tardígrado?",
-    "unidade": "%",
-    "min": 0.0001,
-    "max": 1,
-    "escala": "log",
-    "resposta": 0.01,
-    "legenda": "A água do corpo cai a 1% do normal; o metabolismo fica abaixo de 0,01% do habitual.",
+    "tipo": "foto",
+    "foto": 6,
+    "legenda": "Tardígrado visto ao microscópio. Ele tem oito pernas e mede menos de meio milímetro.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "etapas",
-    "etapas": [
-     {
-      "nome": "Gatilho",
-      "texto": "perda de água, frio, falta de oxigênio, sal ou substâncias"
-     },
-     {
-      "nome": "Suspensão",
-      "texto": "metabolismo quase para, corpo vira tonel"
-     },
-     {
-      "nome": "Reanimação",
-      "texto": "com água, o animal volta a andar e a botar ovos"
-     }
-    ],
-    "legenda": "A criptobiose tem versões conforme o gatilho: anidrobiose, criobiose, anoxibiose, osmobiose, quimobiose.",
+    "tipo": "texto",
+    "html": "<p>Quando a água acaba, o tardígrado recolhe as pernas, encolhe o corpo até virar uma bolinha e desliga quase tudo. Esse estado se chama <strong>criptobiose</strong>.</p>"
+   },
+   {
+    "tipo": "foto",
+    "foto": 2,
+    "legenda": "No estado de tonel, o corpo encolhe e as pernas se retraem. Não é morte, é suspensão.",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 1
+   },
+   {
+    "tipo": "estimar",
+    "q": "Quando entra em anidrobiose, o metabolismo do tardígrado cai para que fração do normal?",
+    "unidade": "%",
+    "min": 0.0001,
+    "max": 100,
+    "escala": "log",
+    "resposta": 0.01,
+    "legenda": "O metabolismo fica abaixo de 0,01% do habitual, e o teor de água cai a 1% do normal.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
     "q": "O que protege as células do tardígrado quando a água sai?",
     "alts": [
-     "Trealose, um açúcar que forma uma película protetora",
+     "Um açúcar chamado trealose, que forma uma camada protetora",
      "Proteínas desordenadas que formam uma matriz vítrea no citoplasma",
-     "Uma casca dura que impede a perda de água"
+     "Uma camada de gordura que impede a perda de água"
     ],
     "correta": 1,
-    "porque": "Os tardígrados produzem trealose, mas não o suficiente. Quem segura as estruturas celulares são proteínas sem forma fixa que se ligam às membranas.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "comparar",
-    "a": "Seca",
-    "b": "Radiação",
-    "linhas": [
-     {
-      "aspecto": "Proteção",
-      "a": "proteínas desordenadas",
-      "b": "proteína Dsup"
-     },
-     {
-      "aspecto": "Alvo",
-      "a": "membranas celulares",
-      "b": "DNA"
-     },
-     {
-      "aspecto": "Efeito",
-      "a": "evita que estruturas se despedacem",
-      "b": "impede que radicais hidroxila atinjam o DNA"
-     }
-    ],
-    "legenda": "Dois mecanismos diferentes para dois tipos de estresse.",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Tardígrados não são extremófilos nem indestrutíveis. Eles toleram condições extremas por períodos curtos, e quanto mais tempo expostos, maior a chance de morrer.</p>"
+    "porque": "Os tardígrados produzem trealose, mas não o suficiente. O que segura as estruturas celulares são proteínas sem forma fixa que se ligam às membranas."
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a fama de indestrutível não se sustenta?",
+    "q": "Um tardígrado resiste a 5.000 Gy de radiação. O que faz esse serviço?",
     "alts": [
-     "Porque eles morrem em qualquer condição extrema",
-     "Porque toleram condições extremas por pouco tempo e com chance crescente de morrer",
-     "Porque só sobrevivem no espaço, não na Terra"
+     "A mesma matriz vítrea que protege contra a seca",
+     "Uma proteína chamada Dsup, que se liga ao DNA e o protege dos radicais hidroxila",
+     "O corpo encolhido, que diminui a área exposta à radiação"
     ],
     "correta": 1,
-    "porque": "Eles não são extremófilos: apenas aguentam o estresse por períodos curtos. Quanto mais tempo expostos, maior a chance de morrer.",
-    "marca": "consenso",
-    "fonte": 2
+    "porque": "A Dsup se prende aos nucleossomos e impede que os radicais hidroxila atinjam o material genético."
    },
    {
-    "tipo": "ordenar",
-    "q": "Qual é a ordem dos passos para saber se um tardígrado sobreviveu a um estresse?",
-    "itens": [
-     "Submeter o animal ao estresse",
-     "Medir se ele volta a se mexer",
-     "Verificar se ele bota ovos viáveis"
-    ],
-    "porque": "É assim que a área avalia sobrevivência: reanimação e reprodução, não aparência.",
+    "tipo": "pontos",
+    "valor": 68,
+    "frase": "de cada 100 tardígrados protegidos da radiação ultravioleta sobreviveram ao vácuo do espaço em 2007.",
+    "legenda": "Na mesma missão, só três indivíduos resistiram à radiação solar completa sem proteção.",
     "marca": "consenso",
     "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A capacidade de virar tonel varia entre espécies. Um estudo de 2014 mostrou que um tardígrado marinho resiste à dessecação completa, enquanto outro da mesma região é vulnerável.</p>"
    }
   ],
-  "fecho": "Essa capacidade de ligar e desligar o metabolismo não é igual para todos. Alguns tardígrados marinhos alternam formas conforme a estação. Isso se chama plasticidade fenotípica."
+  "fecho": "A criptobiose é um estado extremo, mas não é o único jeito de um animal mudar de forma conforme o ambiente. Isso tem nome: plasticidade fenotípica."
  },
  "erros": [],
- "avisos": [],
+ "avisos": [
+  "tela 6: duas perguntas seguidas"
+ ],
  "alertas_jev": [
-  "tela 2: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto",
-  "tela 6: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido"
+  "tela 4: o tipo visual não combina com o conteúdo (0.39); troque de tipo ou use texto",
+  "tela 5: gabarito suspeito (0.53)",
+  "tela 7: marcada consenso, JEV diz emergente (0.66)",
+  "tela 7: o tipo visual não combina com o conteúdo (0.39); troque de tipo ou use texto"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 3.22,
+   "score": 3.33,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -133,105 +98,128 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.01,
-    "3": 0.76,
-    "4": 0.23
+    "2": 0,
+    "3": 0.67,
+    "4": 0.33
    },
-   "confidence": 0.8
+   "confidence": 0.72
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.27
   },
-  "disputa_1": {
-   "type": "noul",
-   "noul": 0.12
-  },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.42
-  },
-  "marca_2": {
+  "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.03,
-    "consenso": 0.75,
-    "emergente": 0.21,
-    "especulacao": 0.01
+    "emergente": 0,
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0
    },
-   "confidence": 0.65
+   "confidence": 1
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.03
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.79
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.31
   },
   "disputa_2": {
    "type": "noul",
-   "noul": 0.08
-  },
-  "encaixe_2": {
-   "type": "noul",
-   "noul": 0.29
+   "noul": 0.06
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.42
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
+    "emergente": 0.01,
+    "controverso": 0.01,
     "consenso": 0.98,
-    "emergente": 0.02,
     "especulacao": 0
    },
-   "confidence": 0.97
+   "confidence": 0.98
   },
   "disputa_3": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.23
   },
   "encaixe_3": {
    "type": "noul",
-   "noul": 0.92
+   "noul": 0.85
   },
-  "ambigua_4": {
+  "ia_4": {
    "type": "noul",
-   "noul": 0.47
+   "noul": 0.4
   },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.37
-  },
-  "marca_5": {
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.01,
-    "consenso": 0.6,
-    "emergente": 0.39,
-    "especulacao": 0
+    "emergente": 0.15,
+    "controverso": 0.02,
+    "consenso": 0.82,
+    "especulacao": 0.01
    },
-   "confidence": 0.45
+   "confidence": 0.76
   },
-  "disputa_5": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.11
+   "noul": 0.06
   },
-  "encaixe_5": {
+  "encaixe_4": {
    "type": "noul",
-   "noul": 0.94
+   "noul": 0.39
   },
-  "ia_6": {
+  "ambigua_5": {
    "type": "noul",
-   "noul": 0.46
+   "noul": 0.53
   },
-  "disputa_6": {
+  "ambigua_6": {
    "type": "noul",
-   "noul": 0.89
+   "noul": 0.17
   },
-  "ambigua_7": {
+  "ia_7": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.29
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.66,
+    "especulacao": 0.01,
+    "consenso": 0.28,
+    "controverso": 0.05
+   },
+   "confidence": 0.56
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.2
   }
  },
- "custo_usd": 0.00682
+ "custo_usd": 0.00917
 }
