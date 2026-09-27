@@ -1,86 +1,141 @@
 {
  "id": "selecao-adversa",
  "tipo": "licao",
- "criado": "2026-09-27T14:40:57",
+ "criado": "2026-09-27T15:39:47",
  "modelo": "deepseek-flash",
  "rodadas": 1,
  "licao": {
-  "gancho": "Um economista escreveu um artigo curto sobre carros usados e três revistas importantes recusaram. Um editor teria dito: se isso estiver certo, a economia seria diferente. Em 2001, a ideia ganhou o Nobel.",
+  "gancho": "Um artigo curto sobre carros usados foi recusado por três revistas de economia. Uma delas teria dito que, se aquilo estivesse certo, a economia seria diferente. Em 2001, a mesma ideia rendeu um terço do Prêmio Nobel a George Akerlof.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>Em inglês americano, <em>lemon</em> é um carro usado que parece bom por fora mas tem defeito escondido. O dono sabe que o carro é ruim. O comprador não sabe. George Akerlof se perguntou o que acontece com um mercado inteiro quando só o vendedor sabe a qualidade de cada carro.</p>"
+    "html": "<p>No mercado de carros usados, o vendedor sabe se aquele carro específico é bom ou é um <strong>lemon</strong>: um usado que parece bom por fora e esconde defeito sério. O comprador não sabe. Ele só conhece a qualidade média esperada dos carros à venda.</p>"
    },
    {
-    "tipo": "texto",
-    "html": "<p>O comprador não consegue distinguir um carro bom de um lemon. Então oferece um preço que reflete a qualidade média do mercado. A esse preço, o dono de um carro genuinamente bom acha o negócio ruim e prefere não vender. Quem aceita são principalmente os donos de carros ruins, para quem aquele preço já é lucro.</p>"
+    "tipo": "figura",
+    "fig": "mercado-limoes",
+    "legenda": "O preço que os compradores oferecem reflete a qualidade média esperada. A cada rodada, os donos de carros acima dessa média se retiram, o que reduz a qualidade média e empurra o preço seguinte para baixo."
    },
    {
-    "tipo": "texto",
-    "html": "<p>Com os carros bons fora, a qualidade média do que resta cai. Os compradores percebem e oferecem menos. Isso afasta mais donos de carros razoáveis, e o processo se repete. No limite, o mercado pode se reduzir quase só a lemons, ou desaparecer. Akerlof chamou esse desmoronamento de <em>unraveling</em>.</p>",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Preço médio",
+      "texto": "Compradores oferecem um valor que reflete a qualidade média de todos os carros do mercado."
+     },
+     {
+      "nome": "Saída dos bons",
+      "texto": "Donos de carros acima da média acham o preço ruim e não vendem. Quem aceita vender são principalmente os donos de carros ruins."
+     },
+     {
+      "nome": "Qualidade cai",
+      "texto": "A qualidade média do que resta à venda diminui."
+     },
+     {
+      "nome": "Preço cai",
+      "texto": "Compradores percebem a piora e oferecem menos ainda, o que empurra mais carros razoáveis para fora."
+     },
+     {
+      "nome": "Colapso",
+      "texto": "O processo pode levar o mercado a quase só lemons, ou a desaparecer."
+     }
+    ],
+    "legenda": "O mecanismo, passo a passo, se repete e se retroalimenta.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que os donos de carros bons se retiram do mercado?",
+    "q": "Por que um dono de carro bom decide não vender pelo preço médio?",
     "alts": [
-     "Porque não querem vender para estranhos",
-     "Porque o preço oferecido, baseado na média, é menor do que o valor do carro deles",
-     "Porque o governo regula a venda de carros usados"
+     "Porque o preço médio é maior do que o valor do carro dele",
+     "Porque o comprador não oferece garantia",
+     "Porque o preço médio é menor do que o valor que o carro tem para ele"
     ],
-    "correta": 1,
-    "porque": "O preço médio não compensa para quem tem um carro acima da média. A retirada deles é o que puxa a qualidade média para baixo."
+    "correta": 2,
+    "porque": "O preço reflete a média, que é puxada para baixo pelos carros ruins. Para o dono do carro bom, vender por esse valor é prejuízo. Ele prefere sair do mercado, e isso piora a média do que resta."
+   },
+   {
+    "tipo": "comparar",
+    "a": "Seleção adversa",
+    "b": "Risco moral",
+    "linhas": [
+     {
+      "aspecto": "Quando",
+      "a": "antes do contrato",
+      "b": "depois do contrato"
+     },
+     {
+      "aspecto": "Pergunta",
+      "a": "quem se apresenta para contratar?",
+      "b": "como o comportamento muda depois de protegido?"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "pessoa doente procura mais seguro-saúde",
+      "b": "segurado dirige com menos cuidado"
+     }
+    ],
+    "legenda": "Os dois problemas coexistem no mesmo mercado, mas pedem respostas diferentes.",
+    "marca": "consenso"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma seguradora cobra o mesmo prêmio para todos. Pessoas saudáveis acham caro e não compram; pessoas doentes acham bom negócio. O que acontece com o prêmio seguinte?",
+    "alts": [
+     "Sobe, porque a composição de quem compra fica mais arriscada",
+     "Cai, porque menos gente compra e o risco se dilui",
+     "Fica igual, porque o número de segurados não muda"
+    ],
+    "correta": 0,
+    "porque": "Quem compra passa a ser, em média, mais doente. O prêmio único precisa subir para cobrir esse risco maior, o que pode afastar ainda mais os saudáveis. As seguradoras respondem com triagem, como questionários e carências."
    },
    {
     "tipo": "texto",
-    "html": "<p>O mesmo roteiro aparece no seguro-saúde. Quem compra um plano individual sabe mais sobre a própria saúde do que a seguradora. Se o preço fosse único, pessoas saudáveis achariam caro e não comprariam. Sobrariam as de risco mais alto, empurrando o preço para cima. Por isso seguradoras fazem perguntas de saúde e exames antes de fechar contrato.</p>",
-    "marca": "consenso",
-    "fonte": 5
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>No crédito, quem pede empréstimo sabe mais sobre a própria capacidade de pagar do que o banco. Subir os juros para compensar o risco afasta os tomadores mais seguros e atrai os mais arriscados. Stiglitz e Weiss mostraram que, a partir de certo ponto, juros mais altos podem reduzir o retorno esperado do banco. A resposta é recusar alguns pedidos em vez de só cobrar mais.</p>",
+    "html": "<p>No crédito, o banco não sabe a capacidade de pagamento do tomador. Subir os juros afasta os projetos seguros e atrai os arriscados. A partir de certo ponto, o retorno esperado do banco cai. Por isso ele prefere recusar crédito a apenas cobrar juros mais altos.</p>",
     "marca": "consenso",
     "fonte": 3
    },
    {
-    "tipo": "pergunta",
-    "q": "Um banco decide aumentar a taxa de juros para todos os empréstimos, esperando lucrar mais. O que a teoria da seleção adversa prevê?",
-    "alts": [
-     "O banco lucra mais, pois cada empréstimo rende juros maiores",
-     "A taxa mais alta pode atrair tomadores mais arriscados e afastar os seguros, reduzindo o lucro esperado",
-     "Os tomadores seguros passam a pedir empréstimos maiores para compensar"
+    "tipo": "comparar",
+    "a": "Sinalização",
+    "b": "Triagem",
+    "linhas": [
+     {
+      "aspecto": "Quem age",
+      "a": "quem tem a informação boa",
+      "b": "quem não tem a informação"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "trabalhador investe em educação para sinalizar produtividade",
+      "b": "seguradora oferece menu de contratos com prêmios e franquias diferentes"
+     },
+     {
+      "aspecto": "Como funciona",
+      "a": "o sinal é mais barato para quem é mais produtivo",
+      "b": "cada tipo escolhe o contrato que lhe convém e se revela"
+     }
     ],
-    "correta": 1,
-    "porque": "Juros altos afastam quem tem projeto seguro e atraem quem só paga se der certo. A composição piora e pode derrubar o retorno esperado do banco."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Seleção adversa não é a mesma coisa que risco moral. Seleção adversa é sobre o tipo de quem aparece para negociar, antes do contrato. Risco moral é sobre a mudança de comportamento depois que o contrato já existe. Os dois podem ocorrer no mesmo mercado, mas em momentos diferentes.</p>",
-    "marca": "consenso"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Quem tem informação boa pode sinalizar. No modelo de Spence, trabalhadores produtivos investem em educação porque para eles esse investimento é mais barato, e o empregador infere a produtividade pelo sinal. Quem não tem informação pode fazer triagem: a seguradora oferece um menu de contratos com prêmios e coberturas diferentes, e cada tipo de cliente escolhe o que revela seu risco.</p>",
+    "legenda": "Respostas complementares ao mesmo problema, partindo de lados opostos.",
     "marca": "consenso",
-    "fonte": 6,
-    "fonte2": 7
+    "fonte": 6
    }
   ],
-  "fecho": "Sinalização e triagem são respostas à informação escondida. Mas o que acontece quando uma parte não pode observar as ações da outra depois de contratada? Isso é o problema agente-principal."
+  "fecho": "Se o mercado de usados não desaba na prática, algo segura o mecanismo. Garantias, reputação e vistorias fazem esse papel. Entender como esses sinais funcionam leva à assimetria de informação e ao problema agente-principal."
  },
  "erros": [],
  "avisos": [
-  "tela 6: 66 palavras (máximo 60)",
-  "tela 8: marca sem fonte",
-  "tela 9: 61 palavras (máximo 60)"
+  "tela 1: 45 palavras (máximo 40)",
+  "tela 2: legenda com mais de 25 palavras",
+  "tela 5: marca sem fonte",
+  "tela 7: 46 palavras (máximo 40)"
  ],
  "alertas_jev": [],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.76,
+   "score": 2.78,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -91,103 +146,124 @@
    "probabilities": {
     "0": 0,
     "1": 0.01,
-    "2": 0.23,
-    "3": 0.74,
+    "2": 0.22,
+    "3": 0.75,
     "4": 0.02
    },
-   "confidence": 0.77
+   "confidence": 0.78
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.19
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.07
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.33
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.07
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.41
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.02,
     "emergente": 0.01,
-    "consenso": 0.91,
-    "especulacao": 0.06
+    "controverso": 0.01,
+    "consenso": 0.96,
+    "especulacao": 0.02
    },
-   "confidence": 0.89
+   "confidence": 0.94
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.9
   },
   "ambigua_4": {
    "type": "noul",
-   "noul": 0.04
+   "noul": 0.1
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.27
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
+    "controverso": 0.01,
     "emergente": 0,
-    "consenso": 1,
-    "especulacao": 0
+    "consenso": 0.98,
+    "especulacao": 0.01
    },
    "confidence": 0.98
   },
-  "ia_6": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.08
   },
-  "marca_6": {
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.02,
-    "controverso": 0.02,
-    "consenso": 0.95,
-    "especulacao": 0.01
+    "emergente": 0.04,
+    "controverso": 0.06,
+    "consenso": 0.88,
+    "especulacao": 0.02
    },
-   "confidence": 0.94
+   "confidence": 0.84
   },
-  "ambigua_7": {
+  "disputa_7": {
    "type": "noul",
-   "noul": 0.07
+   "noul": 0.1
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.27
   },
   "marca_8": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
-    "emergente": 0,
-    "consenso": 1,
-    "especulacao": 0
+    "controverso": 0.01,
+    "emergente": 0.02,
+    "consenso": 0.96,
+    "especulacao": 0.01
    },
-   "confidence": 0.99
+   "confidence": 0.94
   },
-  "ia_9": {
+  "disputa_8": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.07
   },
-  "marca_9": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.05,
-    "emergente": 0.06,
-    "consenso": 0.85,
-    "especulacao": 0.04
-   },
-   "confidence": 0.8
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.92
   }
  },
- "custo_usd": 0.00185
+ "custo_usd": 0.00096
 }

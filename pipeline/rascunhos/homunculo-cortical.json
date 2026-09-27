@@ -1,91 +1,149 @@
 {
  "id": "homunculo-cortical",
  "tipo": "licao",
- "criado": "2026-09-27T14:33:42",
+ "criado": "2026-09-27T15:39:19",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Um desenho feito nos anos 1940 mostra um homenzinho esticado sobre o cérebro, com mãos e lábios enormes. Ele aparece em quase todo livro de neurociência. Pesquisadores com eletrodos modernos descobriram que o mapa real é bem mais bagunçado.",
+  "gancho": "O homenzinho deformado com mãos e lábios gigantes, esticado sobre o cérebro, aparece em quase todo livro de neurociência. Ele foi desenhado com base em cirurgias dos anos 1930. Mas exames recentes mostram que a organização real é bem mais bagunçada.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Nos anos 1930 e 1940, o neurocirurgião Wilder Penfield operava pacientes com epilepsia grave que ficavam acordados durante a cirurgia. Ele estimulava pontos do cérebro exposto e anotava o que o paciente sentia ou qual músculo se contraía.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Com centenas de pacientes, Penfield mapeou quais pontos de uma faixa do córtex (o córtex motor primário) correspondiam a qual parte do corpo. O resultado virou o <strong>homúnculo cortical</strong>: um corpo distorcido, com mãos, lábios e língua enormes, e tronco e pernas minúsculos.</p>",
+    "tipo": "estimar",
+    "q": "Nos anos 1930 e 1940, Wilder Penfield estimulou o cérebro exposto de quantos pacientes para construir o mapa do homúnculo?",
+    "unidade": "pacientes",
+    "min": 10,
+    "max": 1000,
+    "escala": "log",
+    "resposta": 400,
+    "legenda": "Mais de 400 pacientes, cada um contribuindo com poucos pontos, em condições de cirurgia. O desenho é uma síntese estilizada desses pontos, não uma medição contínua de uma única pessoa.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A desproporção não reflete o tamanho físico da parte do corpo, e sim a precisão do controle motor. Mãos e boca precisam de muito mais neurônios para movimentos finos do que as costas. Isso continua bem estabelecido.</p>",
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Mão e lábios",
+      "nota": "área enorme no mapa"
+     },
+     {
+      "nome": "Face e língua",
+      "nota": "área grande"
+     },
+     {
+      "nome": "Tronco e pernas",
+      "nota": "área pequena"
+     }
+    ],
+    "eixo": {
+     "topo": "mais área cortical",
+     "base": "menos área cortical"
+    },
+    "legenda": "O tamanho no mapa reflete a precisão do controle motor, não o tamanho real da parte do corpo.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Mapa clássico",
+    "b": "Mapa atual",
+    "linhas": [
+     {
+      "aspecto": "Organização",
+      "a": "regiões exclusivas e em sequência",
+      "b": "zonas intercaladas e sobrepostas"
+     },
+     {
+      "aspecto": "Informação por zona",
+      "a": "só da parte do corpo designada",
+      "b": "informação sobre o corpo inteiro misturada"
+     },
+     {
+      "aspecto": "Método",
+      "a": "estimulação elétrica em cirurgia",
+      "b": "ressonância de alta precisão e eletrodos implantados"
+     }
+    ],
+    "legenda": "O mapa básico continua, mas a organização fina é mais entrelaçada do que o desenho sugere.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que o homúnculo de Penfield realmente representa?",
+    "alts": [
+     "Uma medição contínua do cérebro de uma única pessoa",
+     "Uma síntese visual estilizada de centenas de pontos coletados em muitos pacientes",
+     "Um mapa que mostra o tamanho físico real de cada parte do corpo"
+    ],
+    "correta": 1,
+    "porque": "O desenho é uma simplificação feita a partir de muitos pontos individuais, não uma imagem contínua de um só cérebro."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Estimulação",
+      "texto": "Eletrodos estimulam um ponto do córtex motor."
+     },
+     {
+      "nome": "Observação",
+      "texto": "O paciente consciente relata sensação ou tem um músculo contraído."
+     },
+     {
+      "nome": "Anotação",
+      "texto": "O ponto é marcado no mapa como correspondente àquela parte do corpo."
+     },
+     {
+      "nome": "Síntese",
+      "texto": "Com centenas de pontos, desenha-se o homúnculo com áreas proporcionais ao controle fino."
+     }
+    ],
+    "legenda": "O método de Penfield dependia de pontos esparsos e da síntese visual posterior, o que limitava a resolução do mapa.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que as mãos aparecem tão grandes no homúnculo?",
+    "q": "Em 2023, um estudo na Nature descreveu a rede de ação somato-cognitiva (SCAN). O que ela faz?",
     "alts": [
-     "Porque são maiores que o tronco no corpo real",
-     "Porque exigem controle motor mais fino e preciso",
-     "Porque têm mais receptores de dor"
+     "Controla movimentos finos da mão e dos lábios",
+     "Coordena ações que envolvem o corpo inteiro e processos como alerta e regulação fisiológica",
+     "Substitui as áreas clássicas de mão, pé e boca"
     ],
     "correta": 1,
-    "porque": "A área cortical acompanha a precisão do controle, não o tamanho da parte do corpo. Mãos e boca fazem movimentos refinados e ocupam mais espaço no mapa."
+    "porque": "A SCAN fica intercalada entre as áreas clássicas e está ligada a coordenação geral, não ao controle de uma parte isolada do corpo."
    },
    {
-    "tipo": "texto",
-    "html": "<p>O desenho clássico sugere um mapa limpo e ordenado, da cabeça aos pés. Em 2023, um estudo na Nature usou ressonância magnética funcional de alta precisão nos mesmos indivíduos, em várias sessões, e encontrou algo diferente.</p>",
-    "marca": "emergente",
-    "fonte": 3
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Entre as áreas de mão, pé e boca existem faixas que não controlam movimentos específicos. Elas se ligam a redes de controle cognitivo, estado de alerta e regulação fisiológica. Os autores chamaram isso de <strong>rede de ação somato-cognitiva</strong> (SCAN).</p>",
-    "marca": "emergente",
-    "fonte": 3
-   },
-   {
-    "tipo": "pergunta",
-    "q": "O que a descoberta da rede de ação somato-cognitiva (SCAN) sugere sobre o mapa clássico?",
-    "alts": [
-     "Que o mapa de Penfield estava completamente errado",
-     "Que existem zonas intercaladas ligadas a coordenação do corpo inteiro, não a uma parte específica",
-     "Que cada neurônio controla uma parte fixa do corpo"
+    "tipo": "ciclo",
+    "etapas": [
+     "Córtex motor registra informação sobre o corpo inteiro",
+     "Cada zona tem uma mistura, com mais informação sobre uma parte específica",
+     "Movimentos finos e coordenação geral se integram",
+     "A rede de ação somato-cognitiva conecta planejamento e execução"
     ],
-    "correta": 1,
-    "porque": "A SCAN ocupa faixas entre as áreas clássicas e se liga a funções gerais, como alerta e regulação. Isso mostra que o mapa é mais entrelaçado do que o desenho sugeria, sem invalidar a desproporção básica."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Em junho de 2026, outro estudo na Nature usou eletrodos implantados em pacientes com paralisia e registrou neurônios individuais. Cada zona do córtex motor continha informação sobre o corpo inteiro, não só sobre a parte designada pelo mapa clássico.</p>",
+    "legenda": "A organização real é um mosaico: informação sobre o corpo inteiro presente em cada zona, não divisões exclusivas e limpas.",
     "marca": "emergente",
     "fonte": 4
-   },
-   {
-    "tipo": "pergunta",
-    "q": "O estudo de 2026 encontrou que a informação no córtex motor é organizada como:",
-    "alts": [
-     "Um mapa único, contínuo e exclusivo de cada parte do corpo",
-     "Um mosaico de zonas, cada uma com representação do corpo inteiro",
-     "Uma sequência ordenada da cabeça aos pés, sem sobreposição"
-    ],
-    "correta": 1,
-    "porque": "Os autores descrevem um mosaico: cada zona tem informação sobre o corpo todo, embora a intensidade relativa ainda siga, em geral, o padrão clássico. Isso refina o mapa, não o joga fora."
    }
   ],
-  "fecho": "Se o córtex motor tem zonas que coordenam o corpo inteiro e se ligam a estado de alerta, como o cérebro decide entre agir e planejar? Isso se conecta ao cérebro preditivo e à codificação preditiva."
+  "fecho": "Essa revisão do mapa não é só curiosidade acadêmica. Interfaces cérebro-computador que ajudam pessoas com paralisia a controlar próteses dependem de mapas precisos do córtex motor. E o cérebro não é estático: ele se reorganiza com o uso."
  },
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 8: soa como IA (0.58)"
+  "tela 1: o tipo visual não combina com o conteúdo (0.32); troque de tipo ou use texto",
+  "tela 3: soa como IA (0.52)",
+  "tela 3: marcada consenso, JEV diz emergente (0.93)",
+  "tela 3: trata de disputa ou evidência contestada (0.80); lição só ensina o núcleo estabelecido",
+  "tela 7: soa como IA (0.61)",
+  "tela 7: trata de disputa ou evidência contestada (0.69); lição só ensina o núcleo estabelecido",
+  "tela 7: o tipo visual não combina com o conteúdo (0.23); troque de tipo ou use texto"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.99,
+   "score": 2.95,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -96,103 +154,135 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.03,
-    "3": 0.95,
-    "4": 0.02
+    "2": 0.06,
+    "3": 0.93,
+    "4": 0.01
    },
-   "confidence": 0.96
+   "confidence": 0.94
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.35
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.02,
+    "consenso": 0.9,
+    "emergente": 0.07,
+    "especulacao": 0.01
+   },
+   "confidence": 0.86
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.6
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.32
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.4
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.02,
-    "consenso": 0.96,
-    "especulacao": 0,
-    "emergente": 0.02
+    "controverso": 0.01,
+    "consenso": 0.91,
+    "emergente": 0.08,
+    "especulacao": 0
    },
-   "confidence": 0.96
+   "confidence": 0.88
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.83
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.52
   },
   "marca_3": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "controverso": 0,
+    "consenso": 0.07,
+    "emergente": 0.93,
+    "especulacao": 0
+   },
+   "confidence": 0.9
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.8
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "controverso": 0,
-    "consenso": 1,
-    "especulacao": 0,
-    "emergente": 0
+    "consenso": 0.93,
+    "emergente": 0.07,
+    "especulacao": 0
    },
-   "confidence": 1
+   "confidence": 0.91
   },
-  "ambigua_4": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.46
   },
-  "ia_5": {
+  "encaixe_5": {
    "type": "noul",
-   "noul": 0.49
+   "noul": 0.95
   },
-  "marca_5": {
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.61
+  },
+  "marca_7": {
    "type": "choice",
    "choice": "emergente",
    "probabilities": {
-    "controverso": 0.02,
+    "emergente": 0.99,
+    "controverso": 0,
     "consenso": 0.01,
-    "especulacao": 0,
-    "emergente": 0.97
-   },
-   "confidence": 0.96
-  },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.45
-  },
-  "marca_6": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "controverso": 0.01,
-    "consenso": 0,
-    "especulacao": 0,
-    "emergente": 0.99
+    "especulacao": 0
    },
    "confidence": 0.99
   },
-  "ambigua_7": {
+  "disputa_7": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.69
   },
-  "ia_8": {
+  "encaixe_7": {
    "type": "noul",
-   "noul": 0.58
-  },
-  "marca_8": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "controverso": 0.01,
-    "consenso": 0,
-    "especulacao": 0.03,
-    "emergente": 0.96
-   },
-   "confidence": 0.95
-  },
-  "ambigua_9": {
-   "type": "noul",
-   "noul": 0.1
+   "noul": 0.23
   }
  },
- "custo_usd": 0.00692
+ "custo_usd": 0.00748
 }

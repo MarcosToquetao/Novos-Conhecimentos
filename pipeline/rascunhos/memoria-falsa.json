@@ -1,78 +1,139 @@
 {
  "id": "memoria-falsa",
  "tipo": "licao",
- "criado": "2026-09-27T14:31:47",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T15:46:28",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Peça a uma pessoa para memorizar uma lista com cama, descanso, acordado, cansado, sonho, cochilo, paz, bocejo, soneca. Depois, pergunte quais palavras estavam lá. É muito comum que ela diga, com confiança, que 'sono' estava na lista. Mas 'sono' nunca foi dita.",
+  "gancho": "Depois de ouvir uma lista de palavras como cama, descanso, sonho, cochilo e soneca, muita gente jura que a palavra sono estava lá. Nunca esteve. A mente preencheu a lacuna sozinha.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>Esse é o paradigma DRM, nome que junta James Deese, que descreveu o efeito em 1959, e Henry Roediger e Kathleen McDermott, que o retomaram em 1995. A memória falsa não é algo raro: pode ser produzida de forma confiável, em minutos, em praticamente qualquer pessoa.</p>"
+    "html": "<p>Esse é o paradigma DRM: listas de palavras que giram em torno de um tema, mas nunca incluem a palavra-chave. A pessoa lembra dela com confiança, mesmo sem tê-la ouvido.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Lista",
+      "texto": "Você ouve palavras como cama, descanso, sonho, cochilo e soneca."
+     },
+     {
+      "nome": "Ativação",
+      "texto": "Cada palavra ativa na memória o conceito de sono, sem que ele seja dito."
+     },
+     {
+      "nome": "Confusão",
+      "texto": "Na hora de recordar, essa ativação forte é confundida com uma lembrança real."
+     }
+    ],
+    "legenda": "A palavra crítica nunca aparece, mas a mente a ativa e depois a confunde com algo que foi visto ou ouvido.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "estimar",
+    "q": "Em experimentos com listas assim, qual a porcentagem de pessoas que 'lembram' da palavra crítica que nunca foi apresentada?",
+    "unidade": "%",
+    "min": 0,
+    "max": 100,
+    "escala": "linear",
+    "resposta": 40,
+    "legenda": "Cerca de 40% a 55% dos participantes relatam lembrar da palavra crítica, taxa comparável à lembrança de palavras que estavam na lista.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "texto",
-    "html": "<p>Nas listas de Roediger e McDermott, cada palavra está ligada a uma palavra crítica que nunca aparece. Ao processar cada item, a mente ativa automaticamente conceitos relacionados na memória semântica. Essa ativação é tão forte que a pessoa confunde a palavra crítica com uma lembrança real de tê-la visto ou ouvido.</p>",
+    "html": "<p>Elizabeth Loftus e Jacqueline Pickrell foram além: tentaram implantar a lembrança de um episódio inteiro da infância que nunca aconteceu, como se perder num shopping aos 5 anos.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "comparar",
+    "a": "Antes do estudo",
+    "b": "Depois de ouvir a história falsa",
+    "linhas": [
+     {
+      "aspecto": "Lembrança do episódio",
+      "a": "nenhuma",
+      "b": "alguns relatam detalhes do evento"
+     },
+     {
+      "aspecto": "Crença de que aconteceu",
+      "a": "não",
+      "b": "sim, para cerca de um quarto dos participantes"
+     },
+     {
+      "aspecto": "Detalhes emocionais",
+      "a": "não",
+      "b": "podem surgir e ser inventados"
+     }
+    ],
+    "legenda": "No estudo de Loftus e Pickrell, cerca de um quarto dos participantes passaram a lembrar do episódio fictício, alguns com detalhes próprios.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que o estudo do shopping demonstrou sobre memórias falsas?",
+    "alts": [
+     "Que memórias de abuso infantil recuperadas em terapia são sempre falsas",
+     "Que é possível implantar uma lembrança inteira de um evento que nunca ocorreu, sob condições específicas",
+     "Que memórias falsas só acontecem com palavras isoladas, nunca com eventos da vida"
+    ],
+    "correta": 1,
+    "porque": "Loftus foi explícita: o estudo mostra que uma memória inteira pode ser implantada sob condições experimentais, não que memórias de eventos traumáticos reais sejam em geral pouco confiáveis.",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1959,
+      "texto": "Deese descreve o efeito pela primeira vez, com intrusões de palavras não apresentadas em listas."
+     },
+     {
+      "ano": 1995,
+      "texto": "Roediger e McDermott retomam e popularizam o paradigma com listas associativas."
+     },
+     {
+      "ano": 1995,
+      "texto": "Loftus e Pickrell implantam a lembrança de um episódio inteiro e fictício da infância."
+     }
+    ],
+    "legenda": "Décadas de pesquisa mostram que o fenômeno se replica, mesmo quando os números exatos são debatidos.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a pessoa 'lembra' da palavra sono se ela nunca foi apresentada?",
+    "q": "Por que a palavra crítica é lembrada mesmo sem ter sido apresentada?",
     "alts": [
-     "Ela ouviu a palavra em outro momento e confundiu as listas",
-     "A ativação automática do conceito de sono, provocada pelas palavras associadas, é confundida com uma lembrança real",
-     "A palavra sono estava na lista, mas ela não prestou atenção"
+     "Porque ela foi dita em voz baixa e passou despercebida",
+     "Porque as palavras da lista ativam automaticamente o conceito associado na memória semântica",
+     "Porque a pessoa inventa de propósito para acertar"
     ],
     "correta": 1,
-    "porque": "A explicação mais aceita é que processar palavras como cama, sonho e cochilo ativa o conceito de sono na memória semântica. Essa ativação é forte o bastante para ser confundida com uma lembrança de ter visto a palavra."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Em experimentos, participantes 'lembram' da palavra crítica em cerca de 40% a 55% dos casos. Essa taxa é comparável à lembrança de palavras que realmente estavam na lista. Ou seja, a memória falsa pode ser tão vívida quanto a verdadeira.</p>",
+    "porque": "Ao processar cada palavra, a mente ativa conceitos relacionados. Essa ativação é forte o bastante para ser confundida, na recordação, com uma lembrança real.",
     "marca": "consenso",
     "fonte": 2
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Loftus e Pickrell foram além das palavras isoladas. Tentaram implantar em adultos a lembrança de um episódio inteiro que nunca aconteceu: ficar perdido num shopping por volta dos 5 anos. Usaram um parente mais velho para 'confirmar' o episódio fictício junto com três lembranças reais.</p>",
-    "marca": "consenso",
-    "fonte": 3
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Cerca de um quarto dos participantes passou a relatar lembrar do episódio fictício, alguns acrescentando detalhes sensoriais e emocionais próprios que não faziam parte da história original. Uma réplica pré-registrada de 2023, com amostra cinco vezes maior, encontrou cerca de 35% desenvolvendo alguma crença ou memória falsa do episódio.</p>",
-    "marca": "consenso",
-    "fonte": 4
-   },
-   {
-    "tipo": "pergunta",
-    "q": "O estudo do shopping prova que a maioria dos relatos de abuso infantil recuperados em terapia é falsa?",
-    "alts": [
-     "Sim, porque mostra que memórias inteiras podem ser implantadas",
-     "Não, o estudo mostra que é possível implantar uma memória inteira sob condições específicas, não que relatos de abuso sejam em geral falsos",
-     "Sim, porque a taxa de falsa memória foi alta"
-    ],
-    "correta": 1,
-    "porque": "Loftus foi explícita: o estudo não prova que toda memória de abuso recuperada em terapia seja falsa. Ele mostra que é possível implantar uma lembrança inteiramente inventada em algumas pessoas, sob condições específicas. Usar o estudo para descartar automaticamente qualquer relato de abuso é uma extrapolação indevida."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Um dos achados centrais é que a confiança com que alguém relata uma lembrança não é uma boa medida de sua precisão. Pessoas relatam memórias falsas com o mesmo grau de confiança subjetiva, e às vezes mais riqueza de detalhes, do que memórias verdadeiras. Isso mudou protocolos de entrevista policial e psicológica, tornando-os mais cautelosos com perguntas sugestivas.</p>",
-    "marca": "consenso",
-    "fonte": 3
    }
   ],
-  "fecho": "Se a memória pode ser alterada tão facilmente, o que acontece quando lembramos de algo e depois recebemos nova informação? Isso tem nome: reconsolidação da memória."
+  "fecho": "Depois de uma lembrança ser formada, ela pode mudar cada vez que é evocada. Isso se chama reconsolidação."
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 3: o tipo visual não combina com o conteúdo (0.44); troque de tipo ou use texto"
+ ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.84,
+   "score": 2.88,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -82,100 +143,151 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.16,
-    "3": 0.81,
-    "4": 0.02
+    "1": 0,
+    "2": 0.13,
+    "3": 0.86,
+    "4": 0.01
    },
-   "confidence": 0.83
+   "confidence": 0.88
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.37
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.01,
+    "consenso": 0.99,
+    "emergente": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.15
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.41
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "consenso": 1,
     "especulacao": 0,
-    "controverso": 0
+    "controverso": 0.01,
+    "consenso": 0.99,
+    "emergente": 0
    },
-   "confidence": 0.99
+   "confidence": 0.98
   },
-  "ambigua_3": {
+  "disputa_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.12
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.04,
+    "consenso": 0.96,
+    "emergente": 0
+   },
+   "confidence": 0.94
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.44
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.24
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 1
+    "controverso": 0.15,
+    "consenso": 0.71,
+    "emergente": 0.14
    },
-   "confidence": 1
+   "confidence": 0.62
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.4
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.39
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.09,
-    "controverso": 0.02,
-    "especulacao": 0,
-    "consenso": 0.89
+    "emergente": 0.12,
+    "controverso": 0.14,
+    "consenso": 0.74,
+    "especulacao": 0
    },
-   "confidence": 0.86
+   "confidence": 0.65
   },
-  "ia_6": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.32
   },
-  "marca_6": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0.42,
-    "consenso": 0.57,
-    "especulacao": 0,
-    "controverso": 0.01
-   },
-   "confidence": 0.43
-  },
-  "ambigua_7": {
+  "encaixe_5": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.91
   },
-  "ia_8": {
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_7": {
    "type": "noul",
    "noul": 0.37
   },
-  "marca_8": {
+  "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "emergente": 0,
-    "consenso": 1,
+    "controverso": 0.01,
     "especulacao": 0,
-    "controverso": 0
+    "consenso": 0.99
    },
-   "confidence": 1
+   "confidence": 0.98
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.07
   }
  },
- "custo_usd": 0.00128
+ "custo_usd": 0.0072
 }

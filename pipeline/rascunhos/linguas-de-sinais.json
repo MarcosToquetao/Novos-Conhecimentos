@@ -1,74 +1,121 @@
 {
  "id": "linguas-de-sinais",
  "tipo": "licao",
- "criado": "2026-09-27T14:39:43",
+ "criado": "2026-09-27T15:40:55",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Um professor de inglês numa universidade para surdos notou que os sinais que seus alunos usavam tinham regras. Trocar uma peça do sinal mudava o significado. Ninguém na linguística levou a sério por décadas. Ele estava certo.",
+  "gancho": "Quem olha uma conversa em língua de sinais sem saber sinalizar tende a achar que são gestos soltos. Um linguista americano, em 1960, mostrou que eram regras.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Em 1960, William Stokoe publicou um estudo sobre a língua de sinais americana, a ASL. Ele mostrou que os sinais não eram gestos soltos: combinavam unidades menores de forma sistemática. Trocar uma dessas unidades mudava o significado, como trocar um som muda uma palavra falada.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Línguas de sinais têm inventário de unidades que se combinam, regras de formação de palavras, regras de combinação de frases e capacidade de expressar qualquer conteúdo, da previsão do tempo à poesia. Elas são línguas naturais completas.</p>",
+    "tipo": "figura",
+    "fig": "sinais-parametros",
+    "legenda": "Um sinal se decompõe em partes que combinam: configuração de mão, ponto de articulação, movimento e orientação da palma, mais a expressão facial.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "O que faz os linguistas considerarem uma língua de sinais uma língua de verdade?",
+    "q": "O que faz um sinal ser considerado uma unidade linguística, e não um gesto solto?",
     "alts": [
-     "Ouvintes conseguem entender bastante só prestando atenção",
-     "Crianças surdas expostas desde cedo a adquirem sozinhas, nos mesmos marcos da fala",
-     "Ela copia a ordem das palavras da língua falada do país"
+     "Ele imita bem o objeto ou a ação que representa",
+     "Ele se decompõe em partes menores que se combinam segundo regras, como os fonemas de uma palavra falada",
+     "Ele é entendido por qualquer pessoa, mesmo sem aprender a língua"
     ],
     "correta": 1,
-    "porque": "A aquisição espontânea por crianças, sem ensino formal, é um dos testes que definem uma língua natural. Entender de fora é impressão subjetiva, e copiar a língua falada descreve sistemas artificiais, não línguas de sinais."
+    "porque": "Um sinal não é um bloco indivisível: trocar um único parâmetro muda o significado, exatamente como trocar um fonema muda uma palavra."
    },
    {
-    "tipo": "texto",
-    "html": "<p>Cada comunidade surda desenvolveu sua própria língua. A ASL e a língua de sinais britânica são diferentes e ininteligíveis entre si, apesar do inglês falado em volta das duas. A Libras tem gramática própria, distinta do português e da língua de sinais de Portugal.</p>",
-    "marca": "consenso",
-    "fonte": 4
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Nas línguas de sinais, o rosto também é gramática. Sobrancelhas levantadas marcam perguntas de sim ou não; sobrancelhas franzidas marcam perguntas com quem, o quê, onde. Tirar essa marcação não deixa a frase neutra: deixa agramatical.</p>",
+    "tipo": "comparar",
+    "a": "Língua de sinais natural",
+    "b": "Português sinalizado",
+    "linhas": [
+     {
+      "aspecto": "Quem criou",
+      "a": "a comunidade surda, ao longo de gerações",
+      "b": "educadores ouvintes, como ferramenta de ensino"
+     },
+     {
+      "aspecto": "Ordem das palavras",
+      "a": "própria da língua de sinais",
+      "b": "a mesma do português falado"
+     },
+     {
+      "aspecto": "Falantes nativos",
+      "a": "sim, crianças que aprendem em casa",
+      "b": "não, ninguém o usa espontaneamente"
+     }
+    ],
+    "legenda": "São dois sistemas diferentes. Confundir um com o outro é como confundir uma língua com um código que representa outra língua.",
     "marca": "consenso",
     "fonte": 2
    },
    {
+    "tipo": "estimar",
+    "q": "Quantas línguas de sinais diferentes existem no mundo, segundo o catálogo Ethnologue?",
+    "unidade": "línguas",
+    "min": 1,
+    "max": 500,
+    "escala": "linear",
+    "resposta": 130,
+    "legenda": "Mais de 130 catalogadas, com estimativa de que o número real passe de 400. Não existe língua de sinais universal.",
+    "marca": "consenso",
+    "fonte": 13
+   },
+   {
     "tipo": "pergunta",
-    "q": "Numa língua de sinais, o movimento do verbo entre dois pontos no espaço pode indicar o quê?",
+    "q": "Em Libras, como o sinalizante indica que \"eu dou a você\" e não \"você dá a mim\"?",
     "alts": [
-     "Apenas a direção física da ação, como num gesto",
-     "Quem faz e quem recebe a ação, como a concordância verbal",
-     "Nada gramatical, é só um jeito de chamar atenção"
+     "Pela ordem dos sinais na frase",
+     "Pela direção do movimento do verbo, do ponto que representa quem dá até o ponto que representa quem recebe",
+     "Pela expressão facial de quem está sinalizando"
     ],
     "correta": 1,
-    "porque": "Em verbos direcionais, o verbo se move do ponto que representa o sujeito para o que representa o objeto. A direção carrega a mesma informação que pronomes e concordância em línguas faladas."
+    "porque": "O verbo direcional se move entre pontos no espaço que representam as pessoas. Isso é concordância gramatical, análoga a afixos em línguas faladas."
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Sobrancelhas levantadas",
+      "nota": "marca pergunta de sim ou não"
+     },
+     {
+      "nome": "Sobrancelhas franzidas",
+      "nota": "marca pergunta com pronome interrogativo"
+     },
+     {
+      "nome": "Configuração facial específica",
+      "nota": "marca orações condicionais (se... então)"
+     }
+    ],
+    "eixo": {
+     "topo": "feito com o rosto",
+     "base": "gramática obrigatória"
+    },
+    "legenda": "Expressões não manuais não são só emoção: tirar a marcação exigida deixa a frase agramatical.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "texto",
-    "html": "<p>O cérebro não trata a língua de sinais como um sistema visual qualquer. Estudos de lesão e de neuroimagem mostram que ela recruta as mesmas áreas clássicas da linguagem falada, como Broca e Wernicke, no hemisfério esquerdo.</p>",
+    "html": "<p>A Libras foi reconhecida como meio legal de comunicação e expressão no Brasil em 2002. A lei deu status oficial a uma língua que já existia havia gerações.</p>",
     "marca": "consenso",
-    "fonte": 10
+    "fonte": 3
    }
   ],
-  "fecho": "Crianças surdas na Nicarágua criaram uma língua nova do zero, geração após geração. Esse caso alimenta o debate sobre até que ponto a linguagem é inata."
+  "fecho": "Se uma língua de sinais nasce sem modelo adulto, o que acontece? Na Nicarágua, as crianças criaram uma língua nova sozinhas."
  },
  "erros": [],
  "avisos": [],
  "alertas_jev": [
-  "tela 2: soa como IA (0.59)"
+  "tela 3: trata de disputa ou evidência contestada (0.66); lição só ensina o núcleo estabelecido",
+  "tela 4: o tipo visual não combina com o conteúdo (0.42); troque de tipo ou use texto"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.95,
+   "score": 2.83,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -79,84 +126,127 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.06,
-    "3": 0.92,
-    "4": 0.02
+    "2": 0.17,
+    "3": 0.83,
+    "4": 0
    },
-   "confidence": 0.93
+   "confidence": 0.85
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.31
+   "noul": 0.36
   },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.59
-  },
-  "marca_2": {
+  "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 1
+    "consenso": 1,
+    "controverso": 0,
+    "emergente": 0
    },
    "confidence": 1
   },
-  "ambigua_3": {
+  "disputa_1": {
    "type": "noul",
-   "noul": 0.15
+   "noul": 0.1
+  },
+  "ambigua_2": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "emergente": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.66
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.89
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.35
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0,
-    "controverso": 0,
-    "especulacao": 0,
-    "consenso": 1
+    "especulacao": 0.07,
+    "consenso": 0.46,
+    "controverso": 0.19,
+    "emergente": 0.28
    },
-   "confidence": 0.99
+   "confidence": 0.28
   },
-  "ia_5": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.53
   },
-  "marca_5": {
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.12
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.01,
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 0.99
+    "consenso": 1,
+    "controverso": 0,
+    "emergente": 0
    },
-   "confidence": 0.98
+   "confidence": 0.99
   },
-  "ambigua_6": {
+  "disputa_6": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.47
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.86
   },
   "ia_7": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.36
   },
   "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.07,
-    "controverso": 0.02,
-    "especulacao": 0,
-    "consenso": 0.91
+    "especulacao": 0.02,
+    "controverso": 0,
+    "emergente": 0,
+    "consenso": 0.98
    },
-   "confidence": 0.88
+   "confidence": 0.96
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.13
   }
  },
- "custo_usd": 0.00825
+ "custo_usd": 0.0091
 }

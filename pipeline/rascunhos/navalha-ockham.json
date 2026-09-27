@@ -1,91 +1,102 @@
 {
  "id": "navalha-ockham",
  "tipo": "licao",
- "criado": "2026-09-27T14:32:18",
+ "criado": "2026-09-27T15:46:53",
  "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "rodadas": 3,
  "licao": {
-  "gancho": "Todo mundo já ouviu a frase: a explicação mais simples costuma ser a verdadeira. Ela é atribuída a um frade do século 14. Só que ele nunca escreveu essa frase.",
+  "gancho": "Todo mundo já ouviu a frase «entidades não devem ser multiplicadas além do necessário», atribuída a Guilherme de Ockham. O problema: ele nunca a escreveu.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>A frase <em>entidades não devem ser multiplicadas além do necessário</em> é citada em livros de lógica como a formulação original da navalha de Ockham. Guilherme de Ockham viveu no século 14. Essas palavras exatas não aparecem em nenhum texto sobrevivente dele.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "comparar",
+    "a": "O que Ockham escreveu",
+    "b": "O que se atribui a ele",
+    "linhas": [
+     {
+      "aspecto": "Formulação",
+      "a": "princípios contextuais, sem fórmula única",
+      "b": "«Entia non sunt multiplicanda...»"
+     },
+     {
+      "aspecto": "Onde aparece",
+      "a": "em argumentos específicos",
+      "b": "em nenhum texto sobrevivente"
+     }
+    ],
+    "legenda": "Ockham usava a ideia, mas não a máxima resumida.",
+    "fonte": 1,
+    "marca": "consenso"
    },
    {
     "tipo": "texto",
-    "html": "<p>Quem escreveu a versão famosa foi John Punch, um franciscano irlandês, num comentário publicado em 1639. Quase trezentos anos depois da morte de Ockham. O próprio nome «navalha de Ockham» também é posterior.</p>",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Ockham usava, sim, princípios de economia explicativa. Mas de forma contextual, específica a cada argumento. Não como uma máxima geral resumida numa frase memorável. A fama veio da eficácia com que ele aplicava a ideia em debates, não de uma citação canônica.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "html": "<p>Mesmo corrigindo a atribuição, o princípio continua valendo: entre explicações que dão conta igualmente bem dos mesmos fatos, prefira a que exige menos suposições. É uma <strong>heurística</strong>, não uma garantia de verdade.</p>"
    },
    {
     "tipo": "pergunta",
-    "q": "O que a pesquisa histórica mostra sobre a frase atribuída a Ockham?",
+    "q": "Um médico tem duas hipóteses para os sintomas de um paciente: gripe ou doença rara. Ele decide investigar primeiro a gripe. Isso é um uso correto da navalha de Ockham?",
     "alts": [
-     "Ockham escreveu a frase, mas ela se perdeu e foi reconstruída depois",
-     "A frase exata foi escrita por John Punch em 1639, e Ockham usava princípios parecidos de forma dispersa",
-     "A frase é uma invenção moderna, sem relação com Ockham nem com Punch"
+     "Não, porque a doença rara pode ser a verdadeira",
+     "Sim, porque ele está ordenando a investigação pela hipótese mais provável, sem descartar a outra",
+     "Não, porque a navalha de Ockham só vale para teorias científicas, não para diagnóstico"
     ],
     "correta": 1,
-    "porque": "Ockham não escreveu a frase exata. Ela aparece em 1639, num comentário de John Punch. Ockham usava ideias de economia explicativa, mas em formulações diferentes e contextuais."
+    "porque": "A navalha é uma regra prática para decidir por onde começar, não um veredito sobre qual hipótese é verdadeira."
    },
    {
     "tipo": "texto",
-    "html": "<p>O erro de atribuição não invalida o princípio. Preferir, entre explicações que dão conta igualmente bem dos mesmos fatos, a que exige menos suposições adicionais continua sendo uma ferramenta útil na filosofia e na ciência.</p>",
+    "html": "<p>O que dá base rigorosa à navalha hoje não é a filosofia medieval, é a teoria da informação. Solomonoff, Kolmogorov e Chaitin formalizaram a ideia de que hipóteses mais compactas merecem mais peso inicial.</p>"
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Dados observados",
+      "texto": "uma sequência de resultados, como preços de ações ou pixels de uma imagem"
+     },
+     {
+      "nome": "Complexidade de Kolmogorov",
+      "texto": "o tamanho da menor descrição capaz de gerar essa sequência"
+     },
+     {
+      "nome": "Princípio MDL",
+      "texto": "um bom modelo comprime os dados, incluindo o custo de descrever o próprio modelo"
+     },
+     {
+      "nome": "Seleção de modelos",
+      "texto": "entre modelos que se ajustam igualmente bem, prefira o que precisa de menos informação para ser especificado"
+     }
+    ],
+    "legenda": "O princípio do comprimento mínimo de descrição (MDL) formaliza matematicamente a preferência por simplicidade.",
     "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>A navalha é uma heurística. Ela orienta por onde começar a investigar, mas não garante que a explicação mais simples é a correta. Um médico que prioriza a gripe antes de uma doença rara não descarta a hipótese complexa. Ele apenas ordena os passos.</p>"
+    "fonte": 3
    },
    {
     "tipo": "pergunta",
-    "q": "Um médico tem duas hipóteses para os mesmos sintomas: uma gripe ou uma doença rara. Ele começa investigando a gripe. Isso é um uso correto da navalha?",
+    "q": "Por que um modelo muito complexo pode se sair mal em dados novos, mesmo acertando todos os dados de treino?",
     "alts": [
-     "Não, porque a navalha exige escolher a hipótese mais elegante, não a mais comum",
-     "Sim, porque ele prioriza a causa mais simples sem descartar a outra hipótese",
-     "Não, porque a navalha só vale quando já há evidência decisiva"
+     "Porque ele captura ruído específico dos dados de treino em vez do padrão real",
+     "Porque modelos complexos são sempre mais lentos de calcular",
+     "Porque a navalha de Ockham proíbe modelos com muitos parâmetros"
     ],
-    "correta": 1,
-    "porque": "Esse é o uso correto: a navalha ordena por onde começar, sem eliminar a hipótese mais complexa. O uso incorreto é descartar uma explicação bem estabelecida só porque outra soa mais simples."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Nos anos 1960, Ray Solomonoff propôs uma indução matemática que dá mais peso às hipóteses descritas de forma compacta. Kolmogorov e Chaitin desenvolveram em paralelo a complexidade de Kolmogorov: o tamanho da menor descrição capaz de gerar uma sequência de dados.</p>",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que a formalização moderna da navalha de Ockham é útil em aprendizado de máquina?",
-    "alts": [
-     "Porque garante que o modelo mais simples sempre acerta em dados novos",
-     "Porque dá uma justificativa matemática para penalizar modelos complexos demais, que tendem a capturar ruído",
-     "Porque substitui a necessidade de testar o modelo em dados novos"
-    ],
-    "correta": 1,
-    "porque": "Modelos complexos demais tendem a se ajustar ao ruído dos dados de treino. A formalização, como o comprimento mínimo de descrição, penaliza essa complexidade com base matemática, não estética. Mas não garante acerto nem dispensa testar em dados novos."
+    "correta": 0,
+    "porque": "É o sobreajuste (overfitting). O MDL penaliza a complexidade excessiva justamente para evitar isso."
    }
   ],
-  "fecho": "Se simplicidade não garante verdade, o que separa uma teoria científica de uma que não é? Essa é a pergunta que Karl Popper tentou responder com a ideia de falseabilidade."
+  "fecho": "A navalha de Ockham é uma ferramenta de desempate entre teorias. Mas o que faz uma teoria ser científica? Isso tem nome: falseabilidade, o critério de Popper."
  },
- "erros": [],
+ "erros": [
+  "só 2 telas visuais de 6 (pelo menos metade)"
+ ],
  "avisos": [],
  "alertas_jev": [
-  "tela 5: soa como IA (0.54)"
+  "tela 1: trata de disputa ou evidência contestada (0.94); lição só ensina o núcleo estabelecido",
+  "tela 2: soa como IA (0.52)",
+  "tela 4: soa como IA (0.54)"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.97,
+   "score": 2.82,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -95,104 +106,83 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0,
-    "2": 0.05,
-    "3": 0.93,
-    "4": 0.02
+    "1": 0.01,
+    "2": 0.18,
+    "3": 0.8,
+    "4": 0.01
    },
-   "confidence": 0.94
+   "confidence": 0.84
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.43
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.02,
-    "consenso": 0.96,
+    "especulacao": 0.03,
     "emergente": 0,
-    "especulacao": 0.02
+    "consenso": 0.95,
+    "controverso": 0.02
    },
    "confidence": 0.94
   },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.94
+  },
   "ia_2": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "disputa_4": {
    "type": "noul",
    "noul": 0.32
   },
-  "marca_2": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.07,
-    "consenso": 0.89,
-    "emergente": 0.01,
-    "especulacao": 0.03
-   },
-   "confidence": 0.86
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.49
-  },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.05,
-    "consenso": 0.85,
-    "emergente": 0.01,
-    "especulacao": 0.09
-   },
-   "confidence": 0.79
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.09
-  },
   "ia_5": {
    "type": "noul",
-   "noul": 0.54
+   "noul": 0.5
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.19,
-    "consenso": 0.7,
-    "emergente": 0.04,
-    "especulacao": 0.07
-   },
-   "confidence": 0.6
-  },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.25
-  },
-  "ambigua_7": {
-   "type": "noul",
-   "noul": 0.14
-  },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.47
-  },
-  "marca_8": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.03,
-    "consenso": 0.88,
+    "especulacao": 0.02,
     "emergente": 0.05,
-    "especulacao": 0.04
+    "consenso": 0.85,
+    "controverso": 0.08
    },
-   "confidence": 0.83
+   "confidence": 0.8
   },
-  "ambigua_9": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.65
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.09
   }
  },
- "custo_usd": 0.00712
+ "custo_usd": 0.00948
 }

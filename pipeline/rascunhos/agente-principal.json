@@ -1,88 +1,135 @@
 {
  "id": "agente-principal",
  "tipo": "licao",
- "criado": "2026-09-27T14:41:58",
+ "criado": "2026-09-27T15:43:30",
  "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "rodadas": 3,
  "licao": {
-  "gancho": "Em 1776, Adam Smith descreveu um problema que hoje tem nome técnico: diretores de empresas de capital aberto administram \"o dinheiro alheio\" e não têm o mesmo cuidado com ele que teriam com o próprio.",
+  "gancho": "Adam Smith, em 1776, escreveu que um diretor cuida do dinheiro alheio sem o mesmo cuidado ansioso com que cuida do próprio dinheiro. Só quase dois séculos depois a economia deu nome a isso.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>O caso mais estudado é o de executivos e acionistas. Os acionistas são donos da empresa, mas não a administram no dia a dia. Quem decide são executivos contratados, que têm informação privilegiada sobre as operações reais.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Essa situação tem nome: <strong>problema agente-principal</strong>. Sempre que uma pessoa (o agente) age em nome de outra (o principal) e tem informação ou controle que o principal não tem, existe o risco de o agente perseguir seus próprios interesses.</p>"
+    "tipo": "comparar",
+    "a": "Principal",
+    "b": "Agente",
+    "linhas": [
+     {
+      "aspecto": "Quem é",
+      "a": "acionista, dono da empresa",
+      "b": "executivo contratado"
+     },
+     {
+      "aspecto": "O que vê",
+      "a": "relatórios e resultados",
+      "b": "as decisões e a informação real do dia a dia"
+     },
+     {
+      "aspecto": "O que quer",
+      "a": "valor da empresa",
+      "b": "bônus, prestígio, segurança do emprego"
+     }
+    ],
+    "legenda": "Assimetria de informação entre quem decide e quem é afetado pela decisão.",
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Por que o problema agente-principal existe mesmo quando todos agem de boa-fé?",
+    "q": "Se o diretor for honesto, o problema agente-principal desaparece?",
     "alts": [
-     "Porque agentes são, em geral, pessoas desonestas",
-     "Porque decorre da própria assimetria de informação entre quem decide e quem é afetado pela decisão",
-     "Porque os contratos são sempre mal redigidos"
+     "Sim, basta ter boa-fé",
+     "Não: ele decorre da estrutura de informação, mesmo com todos agindo de boa-fé",
+     "Só desaparece se o salário for maior"
     ],
     "correta": 1,
-    "porque": "O problema é estrutural: o principal não consegue observar todo esforço, toda decisão e toda informação que o agente tem, então não há como garantir, só por confiança, que os interesses vão coincidir."
+    "porque": "O principal não consegue observar todo esforço e toda informação do agente. Só por confiança não há como garantir que os interesses coincidam."
    },
    {
-    "tipo": "texto",
-    "html": "<p>Michael Jensen e William Meckling formalizaram a teoria em 1976 e deram nome aos custos que surgem daí: custos de agência. São a soma do que o principal gasta para monitorar o agente, do que o agente gasta para se comprometer contratualmente e do desalinhamento que sobra mesmo assim.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Década de 1770",
+      "texto": "Adam Smith nota o descuido de administradores com o dinheiro alheio"
+     },
+     {
+      "nome": "1973",
+      "texto": "Stephen Ross formaliza os termos principal e agente na economia"
+     },
+     {
+      "nome": "1976",
+      "texto": "Jensen e Meckling desenvolvem a teoria e o conceito de custos de agência"
+     }
+    ],
+    "legenda": "Um problema observado em 1776 ganhou teoria formal só no século XX.",
+    "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Exemplo de monitoramento: auditorias externas, conselhos de administração, relatórios financeiros obrigatórios. Exemplo de vinculação: cláusulas contratuais, garantias, remuneração diferida sujeita a metas de longo prazo.</p>",
-    "marca": "consenso",
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Monitoramento",
+      "nota": "auditorias, conselhos, relatórios financeiros"
+     },
+     {
+      "nome": "Vinculação",
+      "nota": "cláusulas contratuais, remuneração sujeita a metas"
+     },
+     {
+      "nome": "Perda residual",
+      "nota": "desalinhamento que sobra mesmo assim"
+     }
+    ],
+    "eixo": {
+     "topo": "o que o principal paga",
+     "base": "o que sempre resta"
+    },
+    "legenda": "Três tipos de custo de agência, do mais visível ao que nenhum contrato elimina.",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Uma empresa gasta com auditoria externa e o executivo aceita receber parte do bônus só depois de cinco anos. O que isso representa na teoria dos custos de agência?",
+    "q": "Qual estratégia a teoria propõe para reduzir o desalinhamento?",
     "alts": [
-     "Custo de monitoramento e custo de vinculação, respectivamente",
-     "Perda residual e custo de monitoramento, respectivamente",
-     "Custo de vinculação e perda residual, respectivamente"
+     "Confiar na ética do executivo",
+     "Vincular parte da remuneração ao desempenho da empresa",
+     "Reduzir o número de executivos"
     ],
-    "correta": 0,
-    "porque": "Auditoria é o principal verificando o agente (monitoramento). Remuneração diferida sujeita a metas é o agente se comprometendo a certos limites (vinculação)."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>A solução clássica é alinhar os incentivos: pagar executivos com parte relevante ligada ao desempenho da empresa, para que ganhar mais dinheiro para os acionistas também signifique ganhar mais para o próprio executivo.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Mas a evidência empírica sobre a eficácia dessa solução é mista. Estudos encontram que a sensibilidade entre remuneração e desempenho varia conforme o risco da empresa, e há pouca evidência direta e consistente de que contratos de incentivo, por si sós, produzam melhor desempenho corporativo de forma confiável em todos os contextos estudados.</p>",
-    "marca": "consenso",
+    "correta": 1,
+    "porque": "Bônus, ações e opções fazem o agente ganhar mais quando o principal ganha mais. A evidência sobre a eficácia dessa solução é mista.",
     "fonte": 5
    },
    {
-    "tipo": "pergunta",
-    "q": "Bebchuk e Fried argumentam que parte da remuneração vinculada a desempenho reflete a influência do executivo sobre o conselho. O que isso significa?",
-    "alts": [
-     "Que toda remuneração executiva é ilegítima ou manipulada",
-     "Que a própria negociação da remuneração pode reproduzir o mesmo problema de agência que ela deveria resolver",
-     "Que executivos nunca deveriam receber bônus"
+    "tipo": "comparar",
+    "a": "Relação",
+    "b": "Exemplo de risco",
+    "linhas": [
+     {
+      "aspecto": "Eleitores e políticos",
+      "a": "o político usa o cargo para benefício próprio",
+      "b": "promessas não cumpridas"
+     },
+     {
+      "aspecto": "Pacientes e médicos",
+      "a": "o médico recomenda procedimentos desnecessários",
+      "b": "custo maior para o paciente"
+     },
+     {
+      "aspecto": "Seguradoras e segurados",
+      "a": "o segurado assume mais riscos porque está coberto",
+      "b": "sinistros mais frequentes"
+     }
     ],
-    "correta": 1,
-    "porque": "A teoria do poder gerencial propõe que parte da remuneração pode refletir captura de poder, não que isso explique toda remuneração em toda empresa. As duas leituras coexistem em graus variados."
+    "legenda": "O problema aparece em qualquer relação de delegação sob informação assimétrica.",
+    "fonte": 14
    }
   ],
-  "fecho": "O problema agente-principal surge sempre que uma parte age em nome de outra sob informação assimétrica. Um caso vizinho é o mercado de carros usados, onde o vendedor sabe mais que o comprador. Isso tem nome: seleção adversa."
+  "fecho": "O mesmo desalinhamento aparece quando alguém vende um carro usado e conhece o defeito que você não conhece. É o que George Akerlof chamou de mercado de limões."
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [
-  "tela 8: soa como IA (0.59)",
-  "tela 8: marcada consenso, JEV diz controverso (0.63)"
- ],
+ "alertas_jev": [],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.66,
+   "score": 2.63,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -93,81 +140,68 @@
    "probabilities": {
     "0": 0,
     "1": 0.01,
-    "2": 0.33,
-    "3": 0.66,
+    "2": 0.35,
+    "3": 0.64,
     "4": 0
    },
-   "confidence": 0.71
+   "confidence": 0.69
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.42
   },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.48
-  },
-  "ambigua_3": {
+  "disputa_1": {
    "type": "noul",
    "noul": 0.07
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ambigua_2": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.97
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.48
   },
-  "marca_4": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.01,
-    "consenso": 0.96,
-    "emergente": 0.01,
-    "controverso": 0.02
-   },
-   "confidence": 0.95
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.28
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.02,
-    "consenso": 0.91,
-    "emergente": 0.02,
-    "controverso": 0.05
-   },
-   "confidence": 0.87
-  },
-  "ambigua_6": {
+  "disputa_4": {
    "type": "noul",
    "noul": 0.07
   },
-  "ia_7": {
+  "encaixe_4": {
    "type": "noul",
-   "noul": 0.44
+   "noul": 0.81
   },
-  "ia_8": {
+  "ambigua_5": {
    "type": "noul",
-   "noul": 0.59
+   "noul": 0.1
   },
-  "marca_8": {
-   "type": "choice",
-   "choice": "controverso",
-   "probabilities": {
-    "consenso": 0.13,
-    "especulacao": 0,
-    "emergente": 0.24,
-    "controverso": 0.63
-   },
-   "confidence": 0.5
-  },
-  "ambigua_9": {
+  "ia_6": {
    "type": "noul",
-   "noul": 0.09
+   "noul": 0.3
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.86
   }
  },
- "custo_usd": 0.00642
+ "custo_usd": 0.0089
 }

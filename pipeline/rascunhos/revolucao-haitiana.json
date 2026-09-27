@@ -1,76 +1,172 @@
 {
  "id": "revolucao-haitiana",
  "tipo": "licao",
- "criado": "2026-09-27T14:40:33",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T15:47:48",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Em 1791, a colônia de Saint-Domingue produzia mais açúcar e café que qualquer outro lugar do mundo. Era também o lugar com o maior regime escravista do planeta: meio milhão de pessoas escravizadas. Treze anos depois, nascia dali o primeiro país fundado por uma revolta de escravizados.",
+  "gancho": "Cerca de meio milhão de pessoas escravizadas em Saint-Domingue se levantou em 1791. Treze anos depois, era o único Estado soberano da história nascido de escravizados que se libertaram pela força.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Saint-Domingue era o pedaço de terra mais lucrativo do planeta em 1791. Sozinha, produzia cerca de 40% de todo o açúcar e 60% de todo o café consumidos na Europa.</p>",
+    "tipo": "pontos",
+    "valor": 40,
+    "frase": "de todo o açúcar consumido na Europa vinha só de Saint-Domingue em 1789.",
+    "legenda": "E também 60% de todo o café. A colônia mais lucrativa do planeta, movida por trabalho escravizado.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A riqueza vinha de meio milhão de pessoas escravizadas, contra pouco mais de 30 mil brancos. A mortalidade superava a natalidade: comprar gente nova era parte do negócio. Cerca de 30 a 40 mil pessoas eram trazidas da África todo ano.</p>",
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Grands blancs",
+      "nota": "grandes proprietários, donos da riqueza"
+     },
+     {
+      "nome": "Petits blancs",
+      "nota": "brancos pobres, comerciantes e capatazes"
+     },
+     {
+      "nome": "Affranchis",
+      "nota": "livres, muitos donos de terra e de escravizados, sem direitos políticos"
+     },
+     {
+      "nome": "Pessoas escravizadas",
+      "nota": "cerca de 465 mil a 500 mil"
+     }
+    ],
+    "eixo": {
+     "topo": "poucos, no poder",
+     "base": "quase toda a população"
+    },
+    "legenda": "Nenhum grupo era unido por dentro. Os affranchis queriam igualdade civil, não o fim da escravidão.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Agosto de 1791",
+      "texto": "Começa a revolta na planície do Norte, com coordenação entre plantações."
+     },
+     {
+      "nome": "Semanas depois",
+      "texto": "Dezenas de milhares de pessoas estão em armas, plantações são incendiadas."
+     },
+     {
+      "nome": "Registros",
+      "texto": "Documentos administrativos e relatos de proprietários confirmam a rápida propagação."
+     }
+    ],
+    "legenda": "A revolta não foi um levante isolado: espalhou-se com uma velocidade que surpreendeu os colonos.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a maioria da população escravizada de Saint-Domingue havia nascido na África?",
+    "q": "Por que o caso haitiano é diferente de todas as outras rebeliões escravas conhecidas?",
     "alts": [
-     "Porque a colônia proibia o nascimento de crianças escravizadas",
-     "Porque o regime de trabalho era tão brutal que morriam mais do que nasciam, e o tráfico era usado para repor a força de trabalho",
-     "Porque os africanos eram trazidos apenas como trabalhadores temporários"
+     "Foi a mais longa, durou mais de uma década",
+     "Foi a única que terminou na fundação de um Estado soberano com abolição permanente da escravidão dentro dele",
+     "Foi a única em que os escravizados venceram batalhas contra um exército europeu"
     ],
     "correta": 1,
-    "porque": "A taxa de mortalidade superava a de natalidade. A colônia dependia da importação constante de pessoas apenas para manter o tamanho da força de trabalho. Isso significou que muitos insurgentes carregavam experiência militar anterior ao cativeiro."
+    "porque": "Houve muitas rebeliões escravas, quase todas esmagadas. Só em Saint-Domingue o resultado foi um país independente e a abolição irreversível."
    },
    {
-    "tipo": "texto",
-    "html": "<p>Em agosto de 1791, a revolta eclodiu na planície do Norte. Em poucas semanas, dezenas de milhares estavam em armas. A notícia de que a França havia abolido a escravidão em 1794 fez Toussaint Louverture trocar a aliança espanhola pela francesa, uma aliança tática que durou até Napoleão enviar uma expedição para restaurar o controle direto.</p>",
+    "tipo": "comparar",
+    "a": "1794",
+    "b": "1804",
+    "linhas": [
+     {
+      "aspecto": "O que aconteceu",
+      "a": "a França revolucionária aboliu a escravidão em suas colônias",
+      "b": "Dessalines declarou a independência do Haiti"
+     },
+     {
+      "aspecto": "Quem decidiu",
+      "a": "a potência colonial, dentro do vínculo colonial",
+      "b": "os insurgentes, rompendo o vínculo por completo"
+     },
+     {
+      "aspecto": "O que veio depois",
+      "a": "Napoleão revogou a abolição em 1802",
+      "b": "a abolição virou permanente"
+     }
+    ],
+    "legenda": "São eventos separados por dez anos e por uma reviravolta completa. Não é a mesma data.",
     "marca": "consenso",
     "fonte": 5
    },
    {
-    "tipo": "texto",
-    "html": "<p>Napoleão enviou mais de trinta mil soldados. Toussaint foi preso numa armadilha em junho de 1802 e morreu no Forte de Joux, na França, em abril de 1803. A febre amarela matou cerca de quinze mil soldados franceses em dois meses. Os insurgentes venceram em Vertières, em novembro de 1803, e declararam independência em 1º de janeiro de 1804.</p>",
-    "marca": "consenso",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "1794",
+      "texto": "Toussaint muda de lado e luta pela França, que acabou de abolir a escravidão."
+     },
+     {
+      "nome": "1801",
+      "texto": "Promulga uma constituição: governador vitalício, ainda dentro do império francês."
+     },
+     {
+      "nome": "1802",
+      "texto": "Napoleão envia Leclerc e revoga a abolição. Toussaint é preso numa armadilha."
+     },
+     {
+      "nome": "1803",
+      "texto": "Toussaint morre no Forte de Joux. A febre amarela devasta as tropas francesas."
+     },
+     {
+      "nome": "1803",
+      "texto": "Dessalines vence em Vertières. Os franceses deixam a ilha."
+     }
+    ],
+    "legenda": "A prisão de Toussaint uniu antigos rivais e acelerou a vitória, em vez de encerrar a resistência.",
     "fonte": 7
    },
    {
     "tipo": "pergunta",
-    "q": "Um estudante diz que Toussaint Louverture liderou o Haiti até a independência em 1804. O que está errado nessa afirmação?",
+    "q": "Depois da independência, por que as potências escravistas demoraram décadas para reconhecer o Haiti?",
     "alts": [
-     "Nada, Toussaint foi o primeiro presidente do Haiti independente",
-     "Toussaint foi preso pelos franceses em 1802 e morreu na prisão em 1803; quem liderou a fase final e declarou a independência foi Dessalines",
-     "Toussaint morreu em combate na batalha de Vertières"
+     "Porque o Haiti se recusou a assinar tratados comerciais",
+     "Porque temiam que o exemplo de uma nação negra livre incentivasse revoltas em suas próprias colônias escravistas",
+     "Porque a França ainda controlava o porto de Porto Príncipe"
     ],
     "correta": 1,
-    "porque": "Toussaint foi preso em junho de 1802 numa armadilha francesa e morreu no Forte de Joux em 7 de abril de 1803, quase um ano antes da independência. Dessalines assumiu o comando militar e proclamou a independência."
+    "porque": "Os Estados Unidos só reconheceram o Haiti em 1862, durante a Guerra Civil, quase sessenta anos depois.",
+    "marca": "consenso",
+    "fonte": 8
    },
    {
-    "tipo": "texto",
-    "html": "<p>O Haiti nasceu como o primeiro país a abolir permanentemente a escravidão dentro de si, mas nenhuma potência escravista o reconheceu por décadas. A França só aceitou reconhecer a independência em 1825, sob ameaça de esquadra, mediante indenização de 150 milhões de francos-ouro. O Haiti terminou de pagar as dívidas decorrentes disso apenas em 1947.</p>",
-    "marca": "consenso",
-    "fonte": 11
+    "tipo": "ordenar",
+    "q": "Coloque os eventos na ordem em que aconteceram.",
+    "itens": [
+     "A França revolucionária abole a escravidão em suas colônias",
+     "Napoleão revoga a abolição por lei e envia a expedição de Leclerc",
+     "Toussaint é preso e deportado para a França",
+     "Dessalines vence em Vertières",
+     "Dessalines proclama a independência em Gonaïves"
+    ],
+    "porque": "São marcos diferentes: a abolição de 1794, a revogação de 1802, a prisão de Toussaint em 1802, Vertières em novembro de 1803 e a independência em 1º de janeiro de 1804.",
+    "marca": "consenso"
    }
   ],
-  "fecho": "Se a independência foi conquistada no campo de batalha, por que o reconhecimento custou uma fortuna? As independências da América Latina enfrentaram o mesmo dilema em relação às potências europeias."
+  "fecho": "As potências escravistas temiam o efeito de exemplo. Como outras colônias europeias do Caribe reagiram à abolição quando ela finalmente veio: por decreto ou por revolta?"
  },
  "erros": [],
  "avisos": [
-  "gancho com mais de 45 palavras"
+  "tela 8: marca sem fonte"
  ],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 1: o tipo visual não combina com o conteúdo (0.25); troque de tipo ou use texto",
+  "tela 5: trata de disputa ou evidência contestada (0.86); lição só ensina o núcleo estabelecido"
+ ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 3.1,
+   "score": 3.15,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -82,10 +178,10 @@
     "0": 0,
     "1": 0,
     "2": 0.01,
-    "3": 0.88,
-    "4": 0.11
+    "3": 0.83,
+    "4": 0.16
    },
-   "confidence": 0.9
+   "confidence": 0.86
   },
   "ia_1": {
    "type": "noul",
@@ -95,81 +191,110 @@
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.1,
-    "consenso": 0.85,
-    "emergente": 0.03,
-    "especulacao": 0.02
+    "controverso": 0.35,
+    "emergente": 0.04,
+    "consenso": 0.55,
+    "especulacao": 0.06
    },
-   "confidence": 0.8
+   "confidence": 0.4
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.25
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.29
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.06,
-    "consenso": 0.93,
-    "emergente": 0.01,
-    "especulacao": 0
+    "controverso": 0.18,
+    "emergente": 0.02,
+    "consenso": 0.76,
+    "especulacao": 0.04
    },
-   "confidence": 0.9
+   "confidence": 0.68
   },
-  "ambigua_3": {
+  "disputa_2": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.25
   },
-  "ia_4": {
+  "encaixe_2": {
    "type": "noul",
-   "noul": 0.26
+   "noul": 0.89
   },
-  "marca_4": {
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.04,
+    "controverso": 0.02,
+    "emergente": 0.03,
     "consenso": 0.95,
-    "emergente": 0,
-    "especulacao": 0.01
+    "especulacao": 0
    },
-   "confidence": 0.93
+   "confidence": 0.92
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.6
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.23
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.28
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0.08,
-    "consenso": 0.9,
-    "emergente": 0.01,
-    "especulacao": 0.01
-   },
-   "confidence": 0.86
-  },
-  "ambigua_6": {
-   "type": "noul",
-   "noul": 0.06
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.23
-  },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0.07,
-    "consenso": 0.93,
+    "controverso": 0.02,
     "emergente": 0,
+    "consenso": 0.98,
     "especulacao": 0
    },
-   "confidence": 0.9
+   "confidence": 0.97
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.86
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.94
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.97
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.13
   }
  },
- "custo_usd": 0.00186
+ "custo_usd": 0.01056
 }

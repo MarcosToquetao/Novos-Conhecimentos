@@ -1,80 +1,118 @@
 {
  "id": "micorrizas",
  "tipo": "licao",
- "criado": "2026-09-27T14:42:47",
+ "criado": "2026-09-27T15:34:13",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Uma raiz fina de planta tem cerca de 0,2 a 2 milímetros de diâmetro. Uma hifa de fungo tem entre 2 e 10 micrômetros, cerca de cem vezes mais fina. Essa diferença de escala é o começo de uma associação antiga e quase universal, e também de uma narrativa que a ciência ainda está tentando separar.",
+  "gancho": "Uma raiz fina tem cerca de um milímetro. Uma hifa de fungo tem cerca de cinco micrômetros, cem vezes menos. O fósforo quase não se move no solo, e a raiz esgota o que está ao redor. A hifa alcança mais longe.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>O fósforo se difunde muito devagar no solo. A raiz esgota rapidamente o fósforo disponível na fina camada de terra ao seu redor, e além dessa zona esgotada ela não alcança. A hifa alcança.</p>"
+    "html": "<p>Quase todas as plantas resolvem isso terceirizando a busca por nutrientes: alojam fungos dentro ou em volta das raízes e pagam com açúcar da fotossíntese. A estrutura formada se chama <strong>micorriza</strong>.</p>"
    },
    {
-    "tipo": "texto",
-    "html": "<p>Praticamente todas as plantas terrestres resolvem esse problema alojando fungos dentro ou em volta das raízes. Elas pagam com carboidrato da fotossíntese. A estrutura formada por raiz e fungo juntos se chama micorriza.</p><p>O fungo entrega fósforo e nitrogênio. A planta entrega carbono. Estimativas de síntese indicam que até 80% do nitrogênio e do fósforo de uma planta podem chegar por essa via.</p>",
+    "tipo": "comparar",
+    "a": "Fungo",
+    "b": "Planta",
+    "linhas": [
+     {
+      "aspecto": "Entrega",
+      "a": "fósforo e nitrogênio",
+      "b": "carbono (açúcares e lipídios)"
+     },
+     {
+      "aspecto": "Como explora",
+      "a": "hifas finas alcançam poros pequenos",
+      "b": "raiz grossa, alcance limitado"
+     },
+     {
+      "aspecto": "Dependência",
+      "a": "não faz fotossíntese",
+      "b": "produz o próprio carbono"
+     }
+    ],
+    "legenda": "Troca justa: nutrientes minerais por carbono fotossintético.",
     "marca": "consenso",
     "fonte": 7
    },
    {
-    "tipo": "pergunta",
-    "q": "Por que a associação com fungos ajuda a planta a obter fósforo?",
-    "alts": [
-     "O fungo produz antibióticos que eliminam competidores por fósforo",
-     "As hifas são muito mais finas que as raízes e alcançam poros e volumes de solo inacessíveis à raiz",
-     "O fungo transforma o fósforo em uma forma que a planta absorve mesmo sem contato"
-    ],
-    "correta": 1,
-    "porque": "A vantagem está na escala: a hifa é cerca de cem vezes mais fina que a raiz e explora um volume de solo muito maior, inclusive poros minúsculos. O fungo também produz enzimas que liberam nutrientes presos, mas o ganho principal vem do alcance físico."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Como um mesmo fungo pode colonizar mais de uma planta ao mesmo tempo, é fisicamente possível que duas árvores estejam ligadas pelo mesmo micélio. A esse arranjo se dá o nome de rede micorrízica comum. Em 1997, um estudo de campo marcou bétulas e pseudotsugas com isótopos diferentes e mediu movimento de carbono nos dois sentidos, com saldo a favor da pseudotsuga.</p>",
+    "tipo": "estimar",
+    "q": "Quanto do nitrogênio e do fósforo de uma planta pode chegar pela via micorrízica?",
+    "unidade": "%",
+    "min": 0,
+    "max": 100,
+    "escala": "linear",
+    "resposta": 80,
+    "legenda": "Até 80%, segundo sínteses de estudos com isótopos e microscopia.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 7
    },
    {
     "tipo": "texto",
-    "html": "<p>Depois disso, a observação virou uma narrativa maior: árvores-mãe reconhecendo mudas, enviando açúcar, transmitindo sinais de alerta. Essa história circulou em livros e documentários. Mas o que os estudos de campo mostram é bem mais limitado.</p>"
+    "html": "<p>O fungo explora um volume de solo muito maior que a raiz, alcança poros pequenos e libera enzimas que soltam nutrientes da matéria orgânica. A planta recebe o que não consegue pegar sozinha.</p>"
+   },
+   {
+    "tipo": "pontos",
+    "valor": 70,
+    "frase": "espécies de plantas se associam a fungos arbusculares.",
+    "legenda": "Levantamento global de 2026 estimou que os fungos arbusculares se associam a cerca de 70% das espécies de plantas.",
+    "marca": "consenso",
+    "fonte": 10
    },
    {
     "tipo": "pergunta",
-    "q": "Uma revisão de 2023 analisou 26 estudos de campo sobre se a rede melhora o desempenho de mudas. O que ela encontrou?",
+    "q": "Um mesmo fungo coloniza duas árvores vizinhas. Isso significa que as árvores trocam nutrientes entre si pela rede?",
     "alts": [
-     "Resultados positivos em todos os estudos, confirmando a narrativa",
-     "Resultados positivos, neutros e negativos, sem sustentação consistente da afirmação",
-     "Nenhum estudo jamais foi feito sobre o tema"
+     "Sim, a rede garante transferência direta",
+     "Não, a conexão física existe, mas a transferência é incerta",
+     "Sim, desde que as árvores sejam da mesma espécie"
     ],
     "correta": 1,
-    "porque": "A revisão encontrou resultados variados, dependentes de espécie, solo, distância e luz. Entre os estudos com controle adequado, apenas cerca de 18% mostraram efeito positivo atribuível à rede e não anulado pelo efeito das raízes."
+    "porque": "Um fungo pode colonizar duas plantas, mas isso não comprova que haja fluxo significativo entre elas. A evidência de transferência é limitada e contestada."
    },
    {
-    "tipo": "texto",
-    "html": "<p>O problema central é de método. O tratamento que deveria isolar a rede, um saco de malha que deixa hifas passarem e barra raízes, também exclui a competição das raízes vizinhas. Se a muda cresce mais, pode ser alívio de competição, e não presente vindo pela rede. Além disso, isótopos marcam o elemento, não o caminho: carbono marcado na muda pode ter chegado por hifa, solução do solo, exsudação, decomposição ou refixação de CO2.</p>",
+    "tipo": "curva",
+    "forma": "exponencial",
+    "eixo_x": "Anos após o estudo original",
+    "eixo_y": "Citações não apoiadas",
+    "marco": {
+     "x": 0.8,
+     "rotulo": "mais da metade das citações não apoiadas"
+    },
+    "legenda": "Com o tempo, uma proporção crescente de citações exagerou o que os estudos originais mostravam.",
+    "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Nada disso põe em dúvida a simbiose. A troca de nutrientes por carbono é consenso. O que está em disputa é se existe uma rede contínua e persistente ligando árvores no campo, e se o fluxo por ela muda o destino de uma muda. A revisão conclui que o conhecimento atual é esparso demais para orientar manejo florestal.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "tipo": "pergunta",
+    "q": "Por que é difícil provar que uma muda cresceu melhor por causa da rede micorrízica?",
+    "alts": [
+     "Porque as malhas usadas nos experimentos bloqueiam qualquer fungo",
+     "Porque o tratamento que permite hifas também exclui raízes, confundindo o efeito",
+     "Porque as mudas não absorvem nutrientes por fungos"
+    ],
+    "correta": 1,
+    "porque": "A malha grossa deixa hifas passar mas barra raízes, então a muda fica livre da competição com raízes adultas. O crescimento pode vir daí, não da rede."
    }
   ],
-  "fecho": "Se a rede entre árvores é incerta, o que mais as micorrizas fazem no solo? Elas ajudam a formar agregados, retêm água e estocam carbono. Isso conecta com serviços ecossistêmicos."
+  "fecho": "Se a troca entre planta e fungo é tão íntima, será que dá para usar isso na agricultura? Inoculantes micorrízicos prometem substituir fertilizante, mas os resultados variam. Isso se conecta ao conceito de Serviços ecossistêmicos."
  },
  "erros": [],
- "avisos": [
-  "gancho com mais de 45 palavras",
-  "tela 2: 63 palavras (máximo 60)",
-  "tela 4: 62 palavras (máximo 60)",
-  "tela 7: 74 palavras (máximo 60)"
+ "avisos": [],
+ "alertas_jev": [
+  "tela 3: soa como IA (0.54)",
+  "tela 3: o tipo visual não combina com o conteúdo (0.46); troque de tipo ou use texto",
+  "tela 5: soa como IA (0.64)",
+  "tela 5: o tipo visual não combina com o conteúdo (0.22); troque de tipo ou use texto",
+  "tela 7: soa como IA (0.65)",
+  "tela 7: marcada consenso, JEV diz emergente (0.66)",
+  "tela 7: trata de disputa ou evidência contestada (0.93); lição só ensina o núcleo estabelecido"
  ],
- "alertas_jev": [],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.72,
+   "score": 2.74,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -85,77 +123,128 @@
    "probabilities": {
     "0": 0,
     "1": 0.01,
-    "2": 0.25,
-    "3": 0.74,
+    "2": 0.24,
+    "3": 0.75,
     "4": 0
    },
-   "confidence": 0.77
+   "confidence": 0.78
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.32
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.08
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.36
+   "noul": 0.5
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "controverso": 0,
-    "consenso": 1,
     "especulacao": 0,
+    "consenso": 1,
     "emergente": 0
    },
    "confidence": 0.99
   },
-  "ambigua_3": {
+  "disputa_2": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.07
   },
-  "ia_4": {
+  "encaixe_2": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.94
   },
-  "marca_4": {
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "marca_3": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "controverso": 0.24,
-    "consenso": 0.2,
-    "especulacao": 0.01,
-    "emergente": 0.55
+    "controverso": 0.19,
+    "especulacao": 0,
+    "consenso": 0.45,
+    "emergente": 0.36
    },
-   "confidence": 0.41
+   "confidence": 0.27
   },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.41
-  },
-  "ambigua_6": {
+  "disputa_3": {
    "type": "noul",
    "noul": 0.14
   },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.64
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "especulacao": 0.01,
+    "consenso": 0.8,
+    "emergente": 0.19
+   },
+   "confidence": 0.73
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.23
+  },
   "ia_7": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.65
   },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.3
-  },
-  "marca_8": {
+  "marca_7": {
    "type": "choice",
    "choice": "emergente",
    "probabilities": {
-    "controverso": 0.43,
-    "consenso": 0.1,
-    "especulacao": 0.03,
-    "emergente": 0.44
+    "controverso": 0.13,
+    "especulacao": 0.16,
+    "consenso": 0.05,
+    "emergente": 0.66
    },
-   "confidence": 0.26
+   "confidence": 0.55
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.83
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.27
   }
  },
- "custo_usd": 0.00941
+ "custo_usd": 0.00803
 }

@@ -1,84 +1,104 @@
 {
  "id": "hegel-fenomenologia",
  "tipo": "licao",
- "criado": "2026-09-27T14:42:32",
+ "criado": "2026-09-27T15:35:12",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Se alguém já lhe disse que Hegel pensa em 'tese, antítese e síntese', essa pessoa repetiu uma fórmula que Hegel nunca escreveu. A ideia real é bem mais estranha e mais interessante.",
+  "gancho": "Você já ouviu que Hegel pensava em «tese, antítese e síntese»? Hegel nunca escreveu essa fórmula. Ela vem de Fichte e foi popularizada por comentadores do século XIX.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>A fórmula 'tese, antítese e síntese' não aparece na obra de Hegel. Ela vem de Fichte, foi popularizada por comentadores do século XIX e sugere um esquema mecânico: pegue uma ideia, invente o oposto, combine. O procedimento real de Hegel é quase o inverso.</p>",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Hegel herdou de Kant um problema: conhecemos apenas os fenômenos, e as coisas em si seriam inacessíveis. A objeção de Hegel é que, para afirmar que existe um limite, você precisa de algum modo já saber o suficiente sobre o outro lado para reconhecê-lo como limite. Traçar uma fronteira é um ato de conhecimento.</p>",
-    "marca": "emergente",
-    "fonte": 4
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>A saída é acompanhar o conhecimento em ação. A <strong>Fenomenologia do Espírito</strong> (1807) narra uma sequência de tentativas fracassadas de conhecer. Cada figura da consciência traz um critério do que conta como verdade e um objeto correspondente. A consciência testa o objeto pelo próprio critério e descobre que não fecha.</p>",
-    "marca": "consenso",
-    "fonte": 3
-   },
-   {
-    "tipo": "pergunta",
-    "q": "O que faz uma figura da consciência passar para a seguinte?",
-    "alts": [
-     "Um oponente externo traz a antítese e força a síntese",
-     "Ela aplica seu próprio critério ao seu objeto e descobre que não satisfaz",
-     "Hegel compara a figura com um padrão externo que só ele possui"
-    ],
-    "correta": 1,
-    "porque": "A crítica é imanente: a contradição surge de dentro, quando a consciência aplica seu próprio critério ao objeto que ela mesma constituiu. Não há opositor externo."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>A negação que produz avanço é <strong>determinada</strong>. Negar de forma abstrata deixa o nada. Negar de forma determinada preserva o resultado específico daquele fracasso. É a diferença entre um experimento que não funcionou e um que revelou por que a hipótese estava errada. O resultado Hegel chama de <strong>Aufhebung</strong>: cancelar, preservar e elevar ao mesmo tempo.</p>",
-    "marca": "consenso",
-    "fonte": 1
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Na relação senhor e escravo, por que o senhor acaba dependente?",
-    "alts": [
-     "Porque o escravo se rebela e toma o poder",
-     "Porque o reconhecimento que ele obtém vem de alguém que ele mesmo não reconhece como humano pleno, e isso não vale nada",
-     "Porque o senhor perde a propriedade dos bens materiais"
-    ],
-    "correta": 1,
-    "porque": "O senhor conquista exatamente o que não queria: reconhecimento de quem ele tratou como não plenamente humano. A posição fracassa por conter desde o início a condição do próprio fracasso."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Hegel mostra o método no caso mais simples: a <strong>certeza sensível</strong>, que acredita apreender diretamente o 'agora'. Escreva 'agora é noite', espere até o meio-dia e leia. A frase está falsa, mas a palavra 'agora' continua funcionando. O que ela preserva é algo universal, que vale para qualquer instante. A figura fracassa pelo seu próprio padrão.</p>",
+    "tipo": "figura",
+    "fig": "hegel-movimento",
+    "legenda": "A contradição surge de dentro: a consciência aplica o próprio critério e descobre que o objeto que ela mesma constituiu não o satisfaz.",
     "marca": "consenso",
     "fonte": 3
    },
    {
     "tipo": "texto",
-    "html": "<p>A 'contradição' hegeliana não é violação da lógica formal. É uma inadequação performativa: uma posição que não consegue sustentar, ao ser articulada, aquilo que pretende ser. Confundir isso com rejeição do princípio de não contradição é o mal-entendido mais comum.</p>",
+    "html": "<p>Cada etapa é uma figura da consciência: uma forma de saber com seu critério do que conta como verdade. Ela testa o objeto pelo próprio critério. E descobre, repetidamente, que não fecha.</p>",
     "marca": "consenso",
-    "fonte": 6
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Segundo Hegel, como a consciência descobre que seu saber é inadequado?",
+    "alts": [
+     "Comparando seu saber com um padrão externo que Hegel possui",
+     "Aplicando seu próprio critério ao objeto que ela mesma constituiu",
+     "Recebendo uma antítese trazida de fora por um opositor"
+    ],
+    "correta": 1,
+    "porque": "A crítica é imanente. Hegel não avalia cada figura por um padrão externo. Ele deixa cada figura falir pelos seus próprios termos."
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Figura da consciência",
+      "texto": "Uma forma de saber com seu critério do que conta como verdade."
+     },
+     {
+      "nome": "Teste imanente",
+      "texto": "A consciência aplica seu próprio critério ao objeto que ela mesma constituiu."
+     },
+     {
+      "nome": "Fracasso",
+      "texto": "O objeto não satisfaz o critério. A figura falha pelos seus próprios termos."
+     },
+     {
+      "nome": "Negação determinada",
+      "texto": "Conserva-se o conteúdo daquele fracasso, e surge uma figura mais abrangente."
+     }
+    ],
+    "legenda": "O resultado é Aufhebung: cancelar, preservar e elevar ao mesmo tempo. A palavra alemã tem os três sentidos.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Negação abstrata",
+    "b": "Negação determinada",
+    "linhas": [
+     {
+      "aspecto": "O que sobra",
+      "a": "o nada",
+      "b": "o resultado daquele fracasso específico"
+     },
+     {
+      "aspecto": "Efeito",
+      "a": "volta ao ponto de partida",
+      "b": "ponto mais informado"
+     },
+     {
+      "aspecto": "Exemplo",
+      "a": "dizer apenas que está errado",
+      "b": "experimento que mostra por que a hipótese falhou"
+     }
+    ],
+    "legenda": "Hegel generaliza a negação determinada e a transforma no motor do pensamento."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O senhor obtém reconhecimento do servo, mas o servo não é reconhecido por ele como plenamente humano. Qual é o resultado?",
+    "alts": [
+     "O senhor conquista o reconhecimento que queria",
+     "O senhor conquista exatamente o que não queria: um reconhecimento que não vale nada",
+     "O servo permanece totalmente dependente, sem desenvolver autoconsciência"
+    ],
+    "correta": 1,
+    "porque": "Reconhecimento vindo de quem você não reconhece não vale nada. O servo, ao trabalhar, imprime sua forma no mundo e desenvolve autoconsciência efetiva. A dependência se inverte."
    }
   ],
-  "fecho": "Hegel descreve o conhecimento corrigindo a si mesmo. Sartre, mais de um século depois, dirá que a existência vem antes da essência. O que muda nessa inversão?"
+  "fecho": "Se a racionalidade é esse espaço de normas que se transformam, o que acontece quando as normas de uma sociedade entram em choque com o que ela efetivamente faz? É o que a Fenomenologia chama de espírito alienado de si mesmo."
  },
  "erros": [],
- "avisos": [
-  "tela 5: mais de um negrito"
- ],
- "alertas_jev": [
-  "tela 2: marcada emergente, JEV diz especulacao (0.65)"
- ],
+ "avisos": [],
+ "alertas_jev": [],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.86,
+   "score": 2.53,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -88,111 +108,94 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0,
-    "2": 0.13,
-    "3": 0.86,
-    "4": 0.01
+    "1": 0.03,
+    "2": 0.41,
+    "3": 0.56,
+    "4": 0
    },
-   "confidence": 0.87
+   "confidence": 0.6
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.38
+   "noul": 0.43
   },
   "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "consenso": 0.96,
-    "especulacao": 0.01,
-    "controverso": 0.03,
-    "emergente": 0
+    "emergente": 0,
+    "especulacao": 0.32,
+    "consenso": 0.56,
+    "controverso": 0.11
    },
-   "confidence": 0.94
+   "confidence": 0.42
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.11
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.47
   },
   "marca_2": {
    "type": "choice",
    "choice": "especulacao",
    "probabilities": {
-    "consenso": 0.16,
-    "especulacao": 0.65,
-    "controverso": 0.19,
-    "emergente": 0
-   },
-   "confidence": 0.53
-  },
-  "ia_3": {
-   "type": "noul",
-   "noul": 0.36
-  },
-  "marca_3": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 0.67,
-    "especulacao": 0.23,
-    "controverso": 0.1,
-    "emergente": 0
-   },
-   "confidence": 0.55
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.06
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.25
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 0.56,
-    "controverso": 0.07,
     "emergente": 0,
-    "especulacao": 0.37
+    "controverso": 0.08,
+    "consenso": 0.43,
+    "especulacao": 0.49
    },
-   "confidence": 0.42
+   "confidence": 0.32
   },
-  "ambigua_6": {
+  "disputa_2": {
    "type": "noul",
    "noul": 0.09
   },
-  "ia_7": {
+  "ambigua_3": {
    "type": "noul",
-   "noul": 0.18
+   "noul": 0.06
   },
-  "marca_7": {
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.48
+  },
+  "marca_4": {
    "type": "choice",
    "choice": "especulacao",
    "probabilities": {
-    "consenso": 0.43,
-    "especulacao": 0.5,
-    "controverso": 0.07,
-    "emergente": 0
+    "emergente": 0,
+    "controverso": 0.05,
+    "consenso": 0.44,
+    "especulacao": 0.51
    },
-   "confidence": 0.33
+   "confidence": 0.34
   },
-  "ia_8": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.08
   },
-  "marca_8": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "consenso": 0.47,
-    "especulacao": 0.28,
-    "controverso": 0.25,
-    "emergente": 0
-   },
-   "confidence": 0.29
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.88
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.12
   }
  },
- "custo_usd": 0.00635
+ "custo_usd": 0.00633
 }

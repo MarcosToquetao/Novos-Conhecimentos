@@ -1,70 +1,119 @@
 {
  "id": "biofilmes",
  "tipo": "licao",
- "criado": "2026-09-27T14:33:08",
+ "criado": "2026-09-27T15:38:47",
  "modelo": "deepseek-flash",
  "rodadas": 1,
  "licao": {
-  "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria crescida numa superfície. Mesma espécie, mesmo remédio, resultado oposto.",
+  "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. Mesma espécie, mesmo remédio, resultado oposto.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>A placa que se acumula nos dentes depois de um dia sem escovar é um <strong>biofilme</strong>: bactérias que, em vez de boiar soltas, grudam numa superfície e constroem em volta de si uma matriz de açúcares, proteínas e material genético.</p>"
+    "html": "<p>A placa que se forma nos dentes depois de um dia sem escovar é um <strong>biofilme</strong>: bactérias que grudam numa superfície e se envolvem numa matriz que elas mesmas produzem.</p>"
    },
    {
-    "tipo": "texto",
-    "html": "<p>Isso não é exceção. Na natureza, viver em biofilme é o jeito mais comum de ser bactéria. Eles aparecem em canos, rochas de rio, próteses médicas, cateteres e feridas que não fecham.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Dentro de um biofilme, a mesma bactéria pode aguentar uma dose de antibiótico centenas ou milhares de vezes maior do que aguentaria solta. Biofilmes de Pseudomonas aeruginosa num cateter urinário são cerca de mil vezes mais resistentes à tobramicina.</p>",
+    "tipo": "estimar",
+    "q": "Num cateter, quantas vezes mais tobramicina é preciso para vencer a Pseudomonas em biofilme, comparada à mesma bactéria solta?",
+    "unidade": "vezes",
+    "min": 1,
+    "max": 10000,
+    "escala": "log",
+    "resposta": 1000,
+    "legenda": "Cerca de mil vezes. E a bactéria não mudou de genes: mudou de jeito de viver.",
     "marca": "consenso",
     "fonte": 1
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Superfície",
+      "nota": "muito oxigênio, células se dividindo"
+     },
+     {
+      "nome": "Meio",
+      "nota": "menos oxigênio, crescimento lento"
+     },
+     {
+      "nome": "Fundo",
+      "nota": "quase sem oxigênio, células quase paradas"
+     }
+    ],
+    "eixo": {
+     "topo": "mais oxigênio",
+     "base": "menos oxigênio"
+    },
+    "legenda": "Muitos antibióticos atacam células em divisão. As do fundo quase não se dividem e passam ilesas.",
+    "marca": "consenso",
+    "fonte": 3
    },
    {
     "tipo": "pergunta",
     "q": "Por que essas bactérias aguentam tanto antibiótico?",
     "alts": [
-     "Sofreram mutações geneticamente herdáveis que as tornaram resistentes",
+     "Sofreram mutações que as tornaram resistentes",
      "O modo de vida em comunidade as protege, e a proteção some se forem separadas",
      "O antibiótico não consegue entrar em nenhuma parte do biofilme"
     ],
     "correta": 1,
-    "porque": "Na maioria dos casos não há mutação. Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção vem do arranjo coletivo, não dos genes."
+    "porque": "Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção é do arranjo, não dos genes."
    },
    {
-    "tipo": "texto",
-    "html": "<p>Parte da explicação está no fundo do biofilme. Ali chega pouco oxigênio e pouco alimento, e as células quase param de crescer. Muitos antibióticos atacam justamente células em divisão, então passam por elas sem efeito.</p>",
+    "tipo": "pontos",
+    "valor": 65,
+    "frase": "infecções microbianas estão associadas a biofilmes.",
+    "legenda": "Estimativa do CDC e do NIH, agências de saúde dos Estados Unidos.",
     "marca": "consenso",
-    "fonte": 3
+    "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Outra parte são as células persistentes: uma pequena subpopulação que entra numa dormência profunda e sobrevive ao tratamento sem ser geneticamente resistente. Se seus descendentes voltarem a crescer, voltam a ser sensíveis ao antibiótico original.</p>",
-    "marca": "consenso",
-    "fonte": 4
+    "tipo": "comparar",
+    "a": "Solta",
+    "b": "Em biofilme",
+    "linhas": [
+     {
+      "aspecto": "Antibiótico",
+      "a": "morre com a dose normal",
+      "b": "aguenta doses muito maiores"
+     },
+     {
+      "aspecto": "Crescimento",
+      "a": "todas se dividem",
+      "b": "o fundo quase para"
+     },
+     {
+      "aspecto": "Proteção",
+      "a": "nenhuma",
+      "b": "matriz de açúcares, proteínas e DNA"
+     }
+    ],
+    "legenda": "Mesma espécie nas duas colunas."
    },
    {
     "tipo": "pergunta",
-    "q": "Um paciente tem infecção numa prótese de quadril que volta sempre que o antibiótico acaba. O que isso sugere?",
+    "q": "Uma infecção numa prótese de quadril volta sempre que o antibiótico acaba. O que isso sugere?",
     "alts": [
-     "A dose foi baixa demais e basta aumentar para resolver",
-     "Um biofilme na prótese abriga células tolerantes que sobrevivem ao tratamento",
-     "A bactéria é de uma espécie nova, ainda desconhecida"
+     "A dose foi baixa e basta aumentar",
+     "Um biofilme na prótese protege células que sobrevivem ao tratamento",
+     "A bactéria é de uma espécie nova"
     ],
     "correta": 1,
-    "porque": "O padrão de melhora e recaída é típico de biofilme: o antibiótico mata as células ativas, mas as dormentes no fundo sobrevivem e repovoam o local quando o remédio para."
+    "porque": "O antibiótico mata as células ativas, mas as do fundo, quase paradas, sobrevivem e repovoam tudo. Muitas vezes é preciso retirar a prótese."
    }
   ],
   "fecho": "Como bactérias soltas sabem que chegou a hora de virar comunidade? Elas contam umas às outras. Isso tem nome: quorum sensing."
  },
  "erros": [],
  "avisos": [],
- "alertas_jev": [],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.35); troque de tipo ou use texto",
+  "tela 5: soa como IA (0.53)",
+  "tela 5: o tipo visual não combina com o conteúdo (0.29); troque de tipo ou use texto"
+ ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 3.05,
+   "score": 3.06,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -76,72 +125,108 @@
     "0": 0,
     "1": 0,
     "2": 0.01,
-    "3": 0.93,
-    "4": 0.06
+    "3": 0.91,
+    "4": 0.08
    },
-   "confidence": 0.94
+   "confidence": 0.93
   },
   "ia_1": {
    "type": "noul",
    "noul": 0.19
   },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
   "ia_2": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.26
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 0.97,
+    "emergente": 0.02,
+    "controverso": 0.01
+   },
+   "confidence": 0.97
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.35
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.22
+   "noul": 0.28
   },
   "marca_3": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 1,
-    "emergente": 0
+    "consenso": 0.99,
+    "emergente": 0.01,
+    "controverso": 0
    },
-   "confidence": 1
+   "confidence": 0.98
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.96
   },
   "ambigua_4": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.16
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.53
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "controverso": 0,
     "especulacao": 0,
-    "consenso": 0.99,
-    "emergente": 0.01
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0
    },
    "confidence": 0.99
   },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.29
+  },
   "ia_6": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.33
   },
-  "marca_6": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "controverso": 0,
-    "especulacao": 0,
-    "consenso": 0.97,
-    "emergente": 0.03
-   },
-   "confidence": 0.96
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.96
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.08
   }
  },
- "custo_usd": 0.001
+ "custo_usd": 0.00592
 }

@@ -1,72 +1,133 @@
 {
  "id": "bayes",
  "tipo": "licao",
- "criado": "2026-09-27T14:42:03",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T15:34:42",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um teste detecta uma doença rara com precisão impressionante. O resultado dá positivo. A intuição responde: a chance de estar doente é altíssima. A resposta correta, num caso clássico, é cerca de 2%.",
+  "gancho": "Em 1978, médicos de Harvard responderam a uma pergunta simples sobre um exame. Quase todos erraram, e erraram na mesma direção, por um fator de quase cinquenta.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>Médicos experientes responderam a esse tipo de pergunta e erraram feio. A maioria achou que a chance de doença passava de 90%, quando era cerca de 2%. O erro era quase cinquenta vezes maior que o valor real.</p>",
+    "html": "<p>Um exame detecta uma doença que atinge 1 em cada 1.000 pessoas. Ele nunca deixa passar quem tem a doença, mas dá positivo em 5% de quem não tem. Uma pessoa testa positivo. Qual a chance de ela estar doente?</p>"
+   },
+   {
+    "tipo": "estimar",
+    "q": "Qual a chance de a pessoa estar doente, se o exame deu positivo?",
+    "unidade": "%",
+    "min": 1,
+    "max": 100,
+    "escala": "linear",
+    "resposta": 2,
+    "legenda": "Cerca de 2%. A resposta mais comum entre médicos foi 95%.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "texto",
-    "html": "<p>O erro não vem de conta difícil. Vem de trocar uma pergunta por outra. Duas perguntas parecidas são na verdade bem diferentes: qual a chance de o exame dar positivo se a pessoa tem a doença? E qual a chance de a pessoa ter a doença se o exame deu positivo?</p>"
+    "html": "<p>São duas perguntas diferentes. A chance de o exame dar positivo em quem está doente é uma propriedade do exame. A chance de a pessoa estar doente depois de um positivo depende de quantos doentes existem na população testada.</p>"
    },
    {
-    "tipo": "texto",
-    "html": "<p>A primeira pergunta mede a qualidade do exame. A segunda depende de algo que o exame ignora: quantas pessoas naquela população têm a doença. Trocar uma pela outra tem nome, inversão condicional, e aparece em erro médico, decisão judicial anulada e manchete sobre teste.</p>"
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que um resultado positivo pode indicar uma chance pequena de doença?",
-    "alts": [
-     "Porque o exame é de má qualidade",
-     "Porque, se a doença é rara, os positivos falsos superam os verdadeiros no total de positivos",
-     "Porque o resultado positivo foi calculado errado"
-    ],
-    "correta": 1,
-    "porque": "É aritmética, não falha do exame. Com doença rara, mesmo um exame bom gera muitos positivos em pessoas saudáveis, e eles dominam o total de positivos."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Em pessoas, fica claro. Imagine mil mulheres: 10 têm câncer, 9 delas testam positivo. Das 990 saudáveis, cerca de 89 também testam positivo. Ao todo, 98 positivos, e apenas 9 correspondem a doença. Nove em 98 dá cerca de 9%.</p>",
+    "tipo": "figura",
+    "fig": "bayes-icones",
+    "legenda": "Mil mulheres. Dez têm câncer; nove testam positivo. Das 990 saudáveis, 89 também testam positivo.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Chances de doença depois do teste = chances de doença antes do teste × força do teste. O exame da mamografia multiplica suas chances por dez. Isso é bastante. Só que a mulher começou com chance de 1 em 99, então o resultado final segue baixo.</p>"
+    "tipo": "comparar",
+    "a": "Pergunta 1",
+    "b": "Pergunta 2",
+    "linhas": [
+     {
+      "aspecto": "O que mede",
+      "a": "a chance de o exame dar positivo em quem tem a doença",
+      "b": "a chance de ter a doença depois de um positivo"
+     },
+     {
+      "aspecto": "De quem depende",
+      "a": "só do exame",
+      "b": "do exame e de quantos doentes há na população"
+     },
+     {
+      "aspecto": "No exemplo",
+      "a": "90%",
+      "b": "9%"
+     }
+    ],
+    "legenda": "Trocar uma pergunta pela outra é o erro de inversão condicional.",
+    "marca": "consenso"
    },
    {
     "tipo": "pergunta",
-    "q": "Um teste multiplica suas chances de doença por dez. Você tinha 1% de chance antes. O que acontece depois?",
+    "q": "Um exame com a mesma sensibilidade é aplicado em dois grupos: rastreamento da população geral e pessoas com sintomas. O que muda?",
     "alts": [
-     "A chance passa a ser de cerca de 10%",
-     "A chance passa a ser de cerca de 90%",
-     "A chance continua perto de 1%, porque multiplicar por dez é pouco"
+     "O resultado é o mesmo, porque o exame é o mesmo",
+     "A chance de doença após um positivo é maior no grupo com sintomas",
+     "A sensibilidade do exame cai no grupo com sintomas"
     ],
-    "correta": 0,
-    "porque": "Sua chance inicial era de 1 para 99. Multiplicada por dez, vira 10 para 99, ou cerca de 10%. O resultado ainda é baixo porque o ponto de partida era muito baixo."
+    "correta": 1,
+    "porque": "Com mais doentes no grupo testado, os positivos verdadeiros passam a dominar. A taxa-base mudou, e a conclusão muda com ela.",
+    "marca": "consenso"
    },
    {
-    "tipo": "texto",
-    "html": "<p>Isso muda como se lê qualquer afirmação do tipo «o teste aponta X». A pergunta produtiva é: quantos X existem na população examinada? Um teste raramente é conclusivo sozinho, e quanto mais rara a condição, mais os falsos positivos pesam.</p>"
+    "tipo": "pontos",
+    "valor": 89,
+    "frase": "dos 98 resultados positivos da mamografia vêm de mulheres saudáveis.",
+    "legenda": "No exemplo, 89 dos 98 positivos são falsos positivos.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Crença anterior",
+      "texto": "o que você já sabia antes da evidência"
+     },
+     {
+      "nome": "Evidência",
+      "texto": "o resultado do exame ou teste"
+     },
+     {
+      "nome": "Atualização",
+      "texto": "Bayes combina os dois e produz uma crença nova"
+     }
+    ],
+    "legenda": "Bayes diz quanto atualizar a crença, não o que acreditar.",
+    "marca": "consenso"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um teste com razão de verossimilhança 1 foi aplicado. O que ele fez com a crença?",
+    "alts": [
+     "Aumentou a chance de doença",
+     "Diminuiu a chance de doença",
+     "Não mudou nada"
+    ],
+    "correta": 2,
+    "porque": "Razão de verossimilhança 1 significa que a evidência é tão provável com ou sem a doença. Ela não carreia informação nenhuma.",
+    "marca": "consenso",
+    "fonte": 5
    }
   ],
-  "fecho": "E quando uma promotoria confunde a chance de um DNA coincidir por acaso com a chance de o réu ser inocente? Isso tem nome: falácia do promotor."
+  "fecho": "O mesmo raciocínio aparece nos tribunais, na forma da falácia do promotor: um perfil de DNA que coincide por acaso em 1 em 10 milhões não implica 1 em 10 milhões de chance de inocência."
  },
  "erros": [],
- "avisos": [],
- "alertas_jev": [],
+ "avisos": [
+  "tela 5: marca sem fonte",
+  "tela 6: marca sem fonte",
+  "tela 8: marca sem fonte"
+ ],
+ "alertas_jev": [
+  "tela 2: o tipo visual não combina com o conteúdo (0.34); troque de tipo ou use texto",
+  "tela 7: o tipo visual não combina com o conteúdo (0.32); troque de tipo ou use texto",
+  "tela 8: soa como IA (0.55)"
+ ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 3.27,
+   "score": 3.14,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -77,66 +138,147 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.01,
-    "3": 0.71,
-    "4": 0.28
+    "2": 0.02,
+    "3": 0.82,
+    "4": 0.16
    },
-   "confidence": 0.76
+   "confidence": 0.85
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.45
+   "noul": 0.18
   },
-  "marca_1": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.95,
-    "controverso": 0.01,
-    "especulacao": 0.03
-   },
-   "confidence": 0.95
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.34
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.27
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.99,
+    "especulacao": 0.01,
+    "controverso": 0
+   },
+   "confidence": 0.98
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.51
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.34
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.32
   },
-  "ambigua_4": {
+  "disputa_3": {
    "type": "noul",
-   "noul": 0.12
+   "noul": 0.34
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.96,
+    "especulacao": 0.04,
+    "controverso": 0
+   },
+   "confidence": 0.94
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.18
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.18
+   "noul": 0.25
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
     "emergente": 0,
-    "consenso": 0.99,
-    "controverso": 0,
-    "especulacao": 0.01
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
    },
-   "confidence": 0.99
+   "confidence": 1
   },
-  "ia_6": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.32
+   "noul": 0.43
   },
-  "ambigua_7": {
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.92
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_7": {
    "type": "noul",
    "noul": 0.2
   },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.95,
+    "especulacao": 0.04,
+    "controverso": 0.01
+   },
+   "confidence": 0.93
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.32
+  },
   "ia_8": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.55
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0,
+    "emergente": 0
+   },
+   "confidence": 1
+  },
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.9
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.1
   }
  },
- "custo_usd": 0.00096
+ "custo_usd": 0.00591
 }

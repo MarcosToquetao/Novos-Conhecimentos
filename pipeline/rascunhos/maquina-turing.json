@@ -1,91 +1,162 @@
 {
  "id": "maquina-turing",
  "tipo": "licao",
- "criado": "2026-09-27T14:39:58",
+ "criado": "2026-09-27T15:46:09",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "O celular no seu bolso não consegue calcular nada que uma máquina imaginária de 1936, com uma fita de papel infinitamente longa, também não consiga calcular. A diferença entre os dois é só velocidade e memória.",
+  "gancho": "Seu celular e a máquina de fita de 1936 conseguem calcular exatamente as mesmas coisas. A diferença está na velocidade, não no que é possível.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Em 1936, o matemático britânico Alan Turing descreveu uma máquina que nunca foi construída e nunca precisou ser: uma fita longa dividida em células, um cabeçote que lê e escreve um símbolo por vez, e uma tabela pequena de regras. Dependendo do símbolo lido e do estado atual, ela escreve, se move uma célula e muda de estado.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Parece simples demais para importar. Mas Turing mostrou que esse mecanismo minúsculo dá conta de qualquer processo que mereça o nome de cálculo passo a passo. Com fita e regras certas, ela simula qualquer procedimento bem definido que uma pessoa consiga seguir com papel e lápis.</p>"
-   },
-   {
-    "tipo": "pergunta",
-    "q": "O que a máquina de Turing é, de fato?",
-    "alts": [
-     "Um computador físico construído por Turing em 1936",
-     "Um modelo matemático abstrato, criado para definir com precisão o que significa computar passo a passo",
-     "Um programa de computador que roda em qualquer laptop moderno"
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Lê",
+      "texto": "o cabeçote olha o símbolo na célula atual"
+     },
+     {
+      "nome": "Escreve",
+      "texto": "troca o símbolo por outro, conforme a regra"
+     },
+     {
+      "nome": "Move",
+      "texto": "anda uma célula para a esquerda ou direita"
+     },
+     {
+      "nome": "Muda de estado",
+      "texto": "passa para o próximo estado interno"
+     }
     ],
-    "correta": 1,
-    "porque": "É uma ferramenta de raciocínio teórico: fita, cabeçote e regras descritas em papel. Nunca precisou existir fisicamente para cumprir seu papel de definir o que é computável."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Turing não inventou isso por curiosidade. Em 1928, David Hilbert perguntou se existe um procedimento mecânico capaz de decidir se qualquer afirmação matemática é verdadeira ou falsa. Para responder com rigor, era preciso primeiro definir o que 'procedimento mecânico' significa. A máquina de Turing foi essa definição.</p>",
+    "legenda": "Cada passo é minúsculo. Repetidos, executam qualquer procedimento bem definido.",
     "marca": "consenso",
-    "fonte": 7
+    "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A afirmação de que esse modelo captura corretamente a ideia intuitiva de algoritmo é a tese de Church-Turing, proposta de forma independente por Alonzo Church e por Turing em 1936. Ela é aceita de forma praticamente unânime há quase noventa anos. Repare: é uma tese sobre a correspondência entre intuição e definição formal, não um teorema provado por dedução.</p>",
+    "tipo": "comparar",
+    "a": "Máquina de Turing",
+    "b": "Computador moderno",
+    "linhas": [
+     {
+      "aspecto": "O que calcula",
+      "a": "qualquer procedimento passo a passo",
+      "b": "os mesmos problemas, em princípio"
+     },
+     {
+      "aspecto": "Velocidade",
+      "a": "uma célula por vez",
+      "b": "bilhões de operações por segundo"
+     },
+     {
+      "aspecto": "Memória",
+      "a": "fita infinita imaginária",
+      "b": "finita, mas enorme"
+     }
+    ],
+    "legenda": "Em capacidade fundamental, os dois são equivalentes.",
     "marca": "consenso",
     "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a tese de Church-Turing não é um teorema?",
+    "q": "O problema da parada não tem solução hoje porque a tecnologia ainda não é boa o suficiente?",
     "alts": [
-     "Porque foi refutada por computadores quânticos",
-     "Porque liga uma noção intuitiva a uma definição formal, e isso não se demonstra por prova dedutiva",
-     "Porque Turing nunca publicou a demonstração completa"
+     "Sim, com computadores quânticos será resolvido",
+     "Não, é uma prova matemática de impossibilidade",
+     "Sim, basta aumentar a memória disponível"
     ],
     "correta": 1,
-    "porque": "Um teorema parte de definições formais e chega a uma conclusão por dedução. A tese compara uma ideia vaga (o que é algoritmizável) com um modelo preciso, então se sustenta por consenso e ausência de contraexemplos."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>No mesmo artigo, Turing usou a máquina para responder a Hilbert: não existe procedimento geral que decida a verdade de qualquer afirmação matemática. Ele provou isso mostrando que ninguém consegue, em geral, prever se um programa qualquer vai parar ou rodar para sempre. É o problema da parada.</p>",
+    "porque": "Turing provou que nenhum procedimento algorítmico geral pode decidir, para todo par de máquina e entrada, se ela para. A limitação é lógica, não de hardware.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A prova usa uma contradição: suponha uma máquina H que sempre acerta se outra máquina para ou não. Construa uma máquina que usa H sobre o próprio código e faz o oposto do que H prevê. H erra sobre essa máquina, sempre. Como a contradição é inevitável, H não pode existir. Isso vale para qualquer tecnologia futura, porque é uma prova matemática de impossibilidade.</p>",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Suposição",
+      "texto": "existe uma máquina H que sempre acerta se outra máquina para"
+     },
+     {
+      "nome": "Construção",
+      "texto": "crie uma máquina que pergunta a H sobre si mesma e faz o oposto"
+     },
+     {
+      "nome": "Contradição",
+      "texto": "H não pode prever o comportamento dessa máquina sem se contradizer"
+     },
+     {
+      "nome": "Conclusão",
+      "texto": "H não existe; o problema da parada é indecidível"
+     }
+    ],
+    "legenda": "A técnica da diagonalização mostra um limite permanente da computação.",
     "marca": "consenso",
-    "fonte": 12
+    "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Por que nenhuma ferramenta de análise de código consegue garantir, de forma totalmente geral, que um programa nunca vai travar num loop infinito?",
+    "q": "Qual foi a consequência direta da prova sobre o problema da parada?",
     "alts": [
-     "Porque os processadores ainda são lentos demais para essa tarefa",
-     "Porque decidir isso para qualquer programa é o problema da parada, que não tem solução algorítmica geral",
-     "Porque os programadores escrevem código com erros de sintaxe"
+     "Mostrou que computadores quânticos resolvem mais problemas",
+     "Respondeu negativamente ao Entscheidungsproblem de Hilbert",
+     "Provou que a tese de Church-Turing é um teorema"
     ],
     "correta": 1,
-    "porque": "Garantir que um programa qualquer sempre termina é exatamente o problema da parada. Ferramentas reais contornam o limite analisando classes restritas de programas ou aceitando incerteza, mas o caso geral continua impossível."
+    "porque": "Se não há procedimento geral para saber se um cálculo termina, também não há um para decidir a verdade de qualquer afirmação matemática.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Problemas decidíveis",
+      "nota": "têm algoritmo que sempre termina com resposta certa"
+     },
+     {
+      "nome": "Problemas indecidíveis",
+      "nota": "nenhum algoritmo pode resolvê-los em geral"
+     },
+     {
+      "nome": "Problema da parada",
+      "nota": "exemplo clássico de indecidível"
+     }
+    ],
+    "eixo": {
+     "topo": "decidível",
+     "base": "indecidível"
+    },
+    "legenda": "O problema da parada delimita o que é computável. Ferramentas de análise de código contornam o limite com regras específicas, não com uma solução geral.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Computadores quânticos conseguem calcular coisas que uma máquina de Turing não consegue?",
+    "alts": [
+     "Sim, eles ultrapassam a tese de Church-Turing",
+     "Não, podem ser mais rápidos em certos problemas, mas não resolvem indecidíveis",
+     "Sim, eles permitem hipercomputação"
+    ],
+    "correta": 1,
+    "porque": "A evidência disponível não sustenta que computadores quânticos resolvam problemas comprovadamente indecidíveis, como o da parada.",
+    "marca": "consenso",
+    "fonte": 2
    }
   ],
-  "fecho": "Se um computador não consegue nem prever se outro programa vai parar, o que dizer de problemas que parecem apenas difíceis, como encontrar a solução mais rápida para milhares de tarefas? Aí entra a pergunta P versus NP."
+  "fecho": "Se a máquina de Turing define o limite do que é computável, o que acontece quando dois computadores precisam concordar sobre a mesma verdade sem confiar um no outro? Isso tem nome: consenso distribuído."
  },
  "erros": [],
- "avisos": [
-  "tela 8: 64 palavras (máximo 60)"
- ],
+ "avisos": [],
  "alertas_jev": [
-  "tela 2: soa como IA (0.52)"
+  "tela 1: soa como IA (0.56)",
+  "tela 2: soa como IA (0.52)",
+  "tela 6: soa como IA (0.52)"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.86,
+   "score": 2.81,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -96,92 +167,116 @@
    "probabilities": {
     "0": 0,
     "1": 0.01,
-    "2": 0.14,
-    "3": 0.83,
+    "2": 0.18,
+    "3": 0.79,
     "4": 0.02
    },
-   "confidence": 0.85
+   "confidence": 0.81
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.56
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.99,
+    "especulacao": 0.01,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "encaixe_1": {
+   "type": "noul",
+   "noul": 0.95
   },
   "ia_2": {
    "type": "noul",
    "noul": 0.52
   },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.98,
+    "especulacao": 0.01,
+    "controverso": 0.01
+   },
+   "confidence": 0.98
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.96
+  },
   "ambigua_3": {
    "type": "noul",
-   "noul": 0.06
+   "noul": 0.05
   },
   "ia_4": {
    "type": "noul",
-   "noul": 0.35
+   "noul": 0.5
   },
   "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.02,
-    "emergente": 0,
-    "consenso": 0.98,
-    "controverso": 0
-   },
-   "confidence": 0.97
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.43
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.04,
-    "emergente": 0,
-    "consenso": 0.96,
-    "controverso": 0
-   },
-   "confidence": 0.95
-  },
-  "ambigua_6": {
-   "type": "noul",
-   "noul": 0.06
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.37
-  },
-  "marca_7": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
     "emergente": 0,
     "consenso": 1,
+    "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
-  "ia_8": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.18
   },
-  "marca_8": {
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "marca_6": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
     "emergente": 0,
     "consenso": 1,
+    "especulacao": 0,
     "controverso": 0
    },
    "confidence": 1
   },
-  "ambigua_9": {
+  "disputa_6": {
    "type": "noul",
-   "noul": 0.05
+   "noul": 0.21
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.79
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.09
   }
  },
- "custo_usd": 0.00677
+ "custo_usd": 0.00629
 }

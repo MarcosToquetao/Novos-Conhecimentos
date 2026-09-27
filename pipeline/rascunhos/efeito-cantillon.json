@@ -1,80 +1,126 @@
 {
  "id": "efeito-cantillon",
  "tipo": "licao",
- "criado": "2026-09-27T14:34:41",
+ "criado": "2026-09-27T15:44:50",
  "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "rodadas": 3,
  "licao": {
-  "gancho": "Um banco central cria dinheiro novo para comprar títulos de bancos e investidores. Meses depois, quem vive de salário fixo sente o preço do pão subir. O dinheiro não chegou igual para todo mundo ao mesmo tempo.",
+  "gancho": "Num experimento hipotético, o governo joga dinheiro de helicóptero. Quem pega primeiro compra pão, aluguel e ações pelo preço antigo. Quem pega por último encontra tudo mais caro. O dinheiro era o mesmo.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>O dinheiro novo entra na economia por um ponto específico, tipicamente o sistema financeiro. Quem o recebe primeiro compra bens e ativos a preços ainda antigos. Quem o recebe por último só o vê depois que boa parte dos preços já subiu.</p>"
+    "html": "<p>Quase trezentos anos atrás, o banqueiro Richard Cantillon notou que dinheiro novo não aparece igual para todo mundo ao mesmo tempo. Ele entra num ponto específico e se espalha de mão em mão.</p>"
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Criação",
+      "texto": "O banco central cria moeda e compra títulos de bancos e grandes investidores."
+     },
+     {
+      "nome": "Primeiros",
+      "texto": "Bancos e grandes investidores gastam a preços ainda antigos."
+     },
+     {
+      "nome": "Preços sobem",
+      "texto": "A demanda extra eleva o preço de ações, imóveis e títulos."
+     },
+     {
+      "nome": "Últimos",
+      "texto": "Salários e benefícios chegam só depois que os preços já subiram."
+     }
+    ],
+    "legenda": "O dinheiro percorre uma fila. Quem está no começo compra barato; quem está no fim, caro.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "comparar",
+    "a": "Moeda neutra",
+    "b": "Efeito Cantillon",
+    "linhas": [
+     {
+      "aspecto": "Ajuste de preços",
+      "a": "Todos os preços mudam ao mesmo tempo",
+      "b": "Preços sobem em ondas, conforme o dinheiro circula"
+     },
+     {
+      "aspecto": "Vencedores",
+      "a": "Nenhum, em termos reais",
+      "b": "Quem recebe primeiro compra barato"
+     },
+     {
+      "aspecto": "Perdedores",
+      "a": "Nenhum",
+      "b": "Quem recebe por último paga caro"
+     }
+    ],
+    "legenda": "A fila do dinheiro destrói a ideia de que moeda nova afeta todos igualmente."
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que quem recebe o dinheiro novo primeiro leva vantagem?",
+    "alts": [
+     "Porque tem mais dinheiro guardado em casa",
+     "Porque compra bens e ativos antes que os preços subam",
+     "Porque paga menos impostos sobre o dinheiro novo"
+    ],
+    "correta": 1,
+    "porque": "O ganho não está no valor da nota, mas no que ela ainda compra. Quem chega depois paga preços já ajustados."
    },
    {
     "tipo": "texto",
-    "html": "<p>Essa é a tese do <strong>efeito Cantillon</strong>, formulada por Richard Cantillon num livro escrito por volta de 1730. Ele nunca o viu publicado: foi assassinado em 1734 e o manuscrito só saiu em 1755.</p>",
+    "html": "<p>Cantillon escreveu isso por volta de 1730, num livro publicado só em 1755. Ele foi assassinado em 1734 por um ex-cozinheiro, que roubou e incendiou a casa. O manuscrito sobreviveu por pouco.</p>",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "texto",
-    "html": "<p>A ideia se choca com a suposição de <strong>moeda neutra</strong>: a de que dobrar a quantidade de dinheiro simplesmente dobra todos os preços ao mesmo tempo, sem mudar nada de real. Cantillon apontou que isso ignora o caminho e o tempo.</p>"
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que o efeito Cantillon prevê transferência de poder de compra?",
-    "alts": [
-     "Porque o governo cobra impostos de quem recebe por último",
-     "Porque quem recebe o dinheiro novo primeiro compra a preços antigos, antes de os preços subirem para os demais",
-     "Porque os bancos centrais imprimem dinheiro sem lastro e isso gera inflação"
-    ],
-    "correta": 1,
-    "porque": "A vantagem não vem de uma regra explícita, mas da sequência: quem está perto da fonte gasta antes da alta generalizada, e quem está longe paga os preços já altos."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Que a moeda não é perfeitamente neutra no curto prazo, ou seja, que mudanças na quantidade de dinheiro podem ter efeitos reais enquanto a economia se ajusta, é aceito por boa parte da macroeconomia atual, inclusive em modelos padrão de bancos centrais.</p>",
+    "html": "<p>Uma parte estreita da ideia tem apoio amplo: dinheiro não é perfeitamente neutro no curto prazo. Mudanças na quantidade de moeda afetam a economia real enquanto ela se ajusta.</p>",
     "marca": "consenso",
     "fonte": 9
    },
    {
-    "tipo": "texto",
-    "html": "<p>A versão ampla, porém, que faz de quem recebe primeiro o motor central da desigualdade, circula sobretudo na escola austríaca (Mises, Hayek) e entre defensores do Bitcoin. É posição de escola, não consenso de currículo.</p>",
-    "marca": "consenso",
-    "fonte": 4
-   },
-   {
     "tipo": "pergunta",
-    "q": "O Banco da Inglaterra mediu ganhos concentrados nos mais ricos após comprar ativos, sem usar o termo efeito Cantillon. O que isso indica?",
+    "q": "Um banco central compra títulos e os preços das ações sobem muito. Segundo a intuição de Cantillon, quem sente primeiro esse efeito?",
     "alts": [
-     "Que o efeito não existe, pois o banco não o citou",
-     "Que o fenômeno distributivo foi medido, mas a instituição prefere outro vocabulário e pondera o contrafactual",
-     "Que a escola austríaca estava certa em todos os pontos"
+     "Todos os assalariados, de forma igual",
+     "Apenas quem tem salário fixo e pouca poupança",
+     "Os grandes detentores de ações e títulos, que já estavam mais perto da fonte"
     ],
-    "correta": 1,
-    "porque": "A ausência do termo não significa ausência do fenômeno. O banco mediu o efeito, mas argumenta que sem a política o desemprego e as falências teriam sido maiores, o que também afetaria os mais pobres.",
+    "correta": 2,
+    "porque": "O canal de compra de ativos beneficia primeiro quem já os possui. O Banco da Inglaterra mediu ganhos muito maiores para os 10% mais ricos, sem usar o nome 'efeito Cantillon'.",
+    "marca": "consenso",
     "fonte": 6
    },
    {
-    "tipo": "texto",
-    "html": "<p>Desde 2018, modelos acadêmicos chamados HANK passaram a modelar como famílias com diferentes rendas e patrimônios respondem de forma desigual à política monetária. É uma versão mainstream e testável da intuição original, quase trezentos anos depois.</p>",
-    "marca": "emergente",
-    "fonte": 8
+    "tipo": "estimar",
+    "q": "Quanto ganharam, por domicílio, os 10% mais ricos do Reino Unido nos primeiros cinco anos do programa de compra de ativos do banco central, a partir de 2009?",
+    "unidade": "libras",
+    "min": 0,
+    "max": 500000,
+    "escala": "linear",
+    "resposta": 350000,
+    "legenda": "Cerca de £350.000 por domicílio, mais de 100 vezes o ganho dos 10% mais pobres, segundo o próprio Banco da Inglaterra."
    }
   ],
-  "fecho": "Se o dinheiro novo não chega igual para todos, o que dá valor a ele? A resposta passa pela confiança e pela escassez."
+  "fecho": "A fila do dinheiro novo tem defensores e críticos. O mesmo problema de distribuição inicial aparece no Bitcoin e na doença holandesa, quando um recurso novo cai de repente numa economia."
  },
- "erros": [],
+ "erros": [
+  "só 3 telas visuais de 8 (pelo menos metade)",
+  "tela 4: estrutura «não é X, mas Y»"
+ ],
  "avisos": [],
  "alertas_jev": [
-  "tela 5: soa como IA (0.52)",
-  "tela 6: marcada consenso, JEV diz controverso (0.88)"
+  "tela 3: soa como IA (0.60)",
+  "tela 3: trata de disputa ou evidência contestada (0.73); lição só ensina o núcleo estabelecido",
+  "tela 6: soa como IA (0.56)"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.9,
+   "score": 2.94,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -85,88 +131,113 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.1,
+    "2": 0.08,
     "3": 0.9,
-    "4": 0
+    "4": 0.02
    },
-   "confidence": 0.91
+   "confidence": 0.92
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.42
+   "noul": 0.36
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.13
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.34
+   "noul": 0.45
   },
   "marca_2": {
    "type": "choice",
-   "choice": "consenso",
+   "choice": "controverso",
    "probabilities": {
-    "emergente": 0.01,
-    "consenso": 0.66,
-    "especulacao": 0.2,
-    "controverso": 0.13
+    "controverso": 0.4,
+    "emergente": 0.22,
+    "especulacao": 0.13,
+    "consenso": 0.25
    },
-   "confidence": 0.54
+   "confidence": 0.19
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.92
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.48
+   "noul": 0.6
+  },
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.73
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.94
   },
   "ambigua_4": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.06
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.52
+   "noul": 0.34
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
+    "controverso": 0.11,
     "emergente": 0.01,
-    "consenso": 0.98,
-    "especulacao": 0,
-    "controverso": 0.01
+    "especulacao": 0.38,
+    "consenso": 0.5
    },
-   "confidence": 0.98
+   "confidence": 0.33
+  },
+  "disputa_5": {
+   "type": "noul",
+   "noul": 0.12
   },
   "ia_6": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.56
   },
   "marca_6": {
    "type": "choice",
-   "choice": "controverso",
+   "choice": "consenso",
    "probabilities": {
-    "emergente": 0.09,
-    "consenso": 0.01,
-    "especulacao": 0.02,
-    "controverso": 0.88
+    "controverso": 0.01,
+    "emergente": 0.01,
+    "especulacao": 0,
+    "consenso": 0.98
    },
-   "confidence": 0.85
+   "confidence": 0.98
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.51
   },
   "ambigua_7": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.17
   },
   "ia_8": {
    "type": "noul",
-   "noul": 0.49
+   "noul": 0.31
   },
-  "marca_8": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "emergente": 0.9,
-    "consenso": 0.09,
-    "especulacao": 0,
-    "controverso": 0.01
-   },
-   "confidence": 0.88
+  "disputa_8": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "encaixe_8": {
+   "type": "noul",
+   "noul": 0.5
   }
  },
- "custo_usd": 0.00703
+ "custo_usd": 0.01092
 }

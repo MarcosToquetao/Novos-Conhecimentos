@@ -1,83 +1,118 @@
 {
  "id": "indice-glicemico",
  "tipo": "licao",
- "criado": "2026-09-27T14:31:09",
+ "criado": "2026-09-27T15:36:31",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "A melancia tem índice glicêmico alto, mas comer uma fatia quase não mexe com o açúcar no sangue. O número que aparece no aplicativo está falando de outra coisa.",
+  "gancho": "A melancia tem índice glicêmico alto, perto de 72. Quem olha a tabela e corta a fruta pode estar fazendo o oposto do que a própria medida sugere.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Em 1981, David Jenkins e colaboradores propuseram medir quanto cada alimento eleva a glicemia, em vez de tratar todos os carboidratos como iguais. Nascia o <strong>índice glicêmico</strong>.</p>"
+    "tipo": "figura",
+    "fig": "gi-curvas",
+    "legenda": "O índice é a razão entre as áreas sob as curvas de duas horas, não entre os picos.",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "estimar",
+    "q": "Quantos gramas de melancia seria preciso comer para ingerir os 50 g de carboidrato do teste?",
+    "unidade": "gramas",
+    "min": 50,
+    "max": 2000,
+    "escala": "log",
+    "resposta": 700,
+    "legenda": "Cerca de 700 gramas de polpa. Uma fatia normal quase não move a glicemia.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
     "tipo": "texto",
-    "html": "<p>O protocolo é rigoroso. Voluntários em jejum comem uma porção com 50 gramas de carboidrato disponível. Mede-se a glicemia por duas horas. Calcula-se a área sob a curva acima do valor de jejum e divide-se pela área obtida com glicose pura na mesma pessoa. Repete-se com dez ou mais pessoas e toma-se a média.</p>"
+    "html": "<p>O teste usa 50 g de carboidrato disponível, não 50 g do alimento. Para corrigir isso criaram a carga glicêmica: índice vezes carboidrato da porção, dividido por 100.</p>",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>O índice é a razão entre áreas, não entre picos. Dois alimentos com picos diferentes podem ter o mesmo índice se acumularem a mesma área em duas horas. Classifica-se em baixo (até 55), médio (56 a 69) e alto (70 ou mais).</p>"
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Por que a melancia tem índice alto mas quase não afeta a glicemia de quem come uma fatia?",
-    "alts": [
-     "O índice foi medido errado para essa fruta",
-     "O índice usa 50 g de carboidrato, e uma fatia tem muito menos carboidrato que isso",
-     "A fruta perde carboidrato durante a digestão"
-    ],
-    "correta": 1,
-    "porque": "Para chegar a 50 g de carboidrato seria preciso comer cerca de 700 gramas de melancia. A carga glicêmica corrige isso multiplicando o índice pelo carboidrato da porção, e a melancia fica com carga baixa."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Em 2016, Nirupa Matthan e colaboradores mediram o índice glicêmico do mesmo pão branco em 63 adultos saudáveis, com repetições. A média foi 62, classificação médio, mas os valores individuais foram de 35 a 103, cobrindo as três categorias inteiras. Cerca de 20 participantes ficariam em cada faixa. A média descreve bem uma minoria das pessoas.</p>",
+    "tipo": "pontos",
+    "valor": 18,
+    "frase": "de 63 adultos saudáveis seriam classificados como 'alto' para o mesmo pão branco.",
+    "legenda": "Outros 23 caíram em 'médio' e 22 em 'baixo'. O mesmo alimento, as três categorias.",
     "marca": "consenso",
     "fonte": 2
    },
    {
-    "tipo": "texto",
-    "html": "<p>Isso não significa que a ideia seja invenção sem base. Alimentos realmente diferem na velocidade com que elevam a glicemia. O problema é que a medida tem ruído da mesma ordem de grandeza que o efeito que se quer detectar. Serve para comparar categorias amplas de alimentos, não para decidir entre dois itens específicos da prateleira.</p>"
+    "tipo": "figura",
+    "fig": "gi-dispersao",
+    "legenda": "Cada ponto é uma pessoa. A média 62 descreve bem só uma minoria dos participantes.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Duas pessoas comem o mesmo pão branco no café da manhã. Uma tem resposta alta de glicemia, a outra baixa. O que a média de 62 da tabela indica?",
+    "q": "Um app diz que o pão branco tem índice 62, classificação 'médio'. O que esse número permite concluir sobre a sua glicemia depois de comer esse pão?",
     "alts": [
-     "As duas deveriam ter a mesma resposta, e uma delas está errada",
-     "A média descreve razoavelmente bem apenas uma minoria, e as duas respostas estão dentro do esperado",
-     "A resposta mais alta indica erro de medição"
+     "Que a sua resposta vai ficar perto da média, com pequena variação",
+     "Quase nada: a variação entre pessoas vai de 35 a 103, cobrindo as três categorias",
+     "Que o pão é seguro para quem tem diabetes tipo 2"
     ],
     "correta": 1,
-    "porque": "A variação entre pessoas é tão grande que o mesmo alimento pode cair em faixas diferentes para cada uma. A média é um resumo estatístico, não uma previsão individual."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Se a resposta varia tanto, a saída seria personalizar. Em 2015, um estudo com cerca de 800 participantes usou sensores contínuos de glicose e aprendizado de máquina para prever respostas individuais. O trabalho fundou a nutrição de precisão e uma indústria de serviços.</p>",
-    "marca": "emergente",
-    "fonte": 3
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Olhando para desfechos clínicos, dietas de baixo índice glicêmico reduzem a hemoglobina glicada em pessoas com diabetes tipo 2 em cerca de 0,3 a 0,5 ponto percentual, comparadas a dietas de alto índice. É um efeito real e modesto, menor que o de vários medicamentos e menor que o de perda de peso relevante. Em prevenção cardiovascular e controle de peso na população geral, a evidência é mais fraca.</p>",
+    "porque": "O valor de tabela é uma média de médias sob condições que ninguém reproduz. A medida tem ruído da mesma ordem que o sinal que se quer detectar.",
     "marca": "consenso",
-    "fonte": null
+    "fonte": 2
+   },
+   {
+    "tipo": "comparar",
+    "a": "Categorias amplas",
+    "b": "Dois itens específicos",
+    "linhas": [
+     {
+      "aspecto": "Comparar leguminosas com pão branco",
+      "a": "funciona razoavelmente",
+      "b": "não se aplica"
+     },
+     {
+      "aspecto": "Escolher entre dois pães parecidos",
+      "a": "não se aplica",
+      "b": "a diferença cai dentro do ruído"
+     },
+     {
+      "aspecto": "Orientação individual",
+      "a": "serve como referência geral",
+      "b": "é impraticável"
+     }
+    ],
+    "legenda": "O conceito de que alimentos diferem na velocidade de digestão é correto. O problema é o uso da medida caso a caso.",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Em diabetes tipo 2, o que ensaios clínicos mostram sobre dietas de baixo índice glicêmico?",
+    "alts": [
+     "Reduzem a hemoglobina glicada em 0,3 a 0,5 ponto, efeito modesto",
+     "Não têm efeito mensurável sobre a glicemia",
+     "São superiores a medicamentos no controle glicêmico"
+    ],
+    "correta": 0,
+    "porque": "O efeito é real e consistente, mas menor que o de vários medicamentos e menor que o obtido com perda de peso relevante.",
+    "marca": "consenso",
+    "fonte": 2
    }
   ],
-  "fecho": "O índice glicêmico tenta prever a resposta a um alimento, mas erra o alvo com frequência. A classificação NOVA faz outra pergunta: quão processado é o alimento que você come?"
+  "fecho": "Por que dois estudos de nutrição sobre o mesmo alimento chegam a conclusões opostas? Tem a ver com o que cada desenho consegue isolar."
  },
  "erros": [],
- "avisos": [
-  "tela 9: 69 palavras (máximo 60)",
-  "tela 9: marca sem fonte"
- ],
+ "avisos": [],
  "alertas_jev": [
-  "tela 8: soa como IA (0.56)"
+  "tela 2: trata de disputa ou evidência contestada (0.74); lição só ensina o núcleo estabelecido",
+  "tela 2: o tipo visual não combina com o conteúdo (0.41); troque de tipo ou use texto",
+  "tela 4: trata de disputa ou evidência contestada (0.64); lição só ensina o núcleo estabelecido",
+  "tela 7: trata de disputa ou evidência contestada (0.76); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.99,
+   "score": 2.91,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -88,81 +123,146 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.04,
-    "3": 0.93,
-    "4": 0.03
+    "2": 0.09,
+    "3": 0.9,
+    "4": 0.01
    },
-   "confidence": 0.94
+   "confidence": 0.91
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.31
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0,
+    "especulacao": 0
+   },
+   "confidence": 0.99
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.32
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.2
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.04,
+    "consenso": 0.91,
+    "controverso": 0.01,
+    "especulacao": 0.04
+   },
+   "confidence": 0.87
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.74
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.41
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.33
+   "noul": 0.29
   },
-  "ambigua_4": {
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.03,
+    "consenso": 0.92,
+    "controverso": 0.05,
+    "especulacao": 0
+   },
+   "confidence": 0.89
+  },
+  "disputa_3": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.39
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.12,
+    "consenso": 0.82,
+    "controverso": 0.04,
+    "especulacao": 0.02
+   },
+   "confidence": 0.77
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.64
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.68
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.29
   },
   "marca_5": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.37,
-    "controverso": 0.01,
-    "consenso": 0.62,
-    "especulacao": 0
-   },
-   "confidence": 0.49
-  },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.33
-  },
-  "ambigua_7": {
-   "type": "noul",
-   "noul": 0.1
-  },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.56
-  },
-  "marca_8": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "emergente": 0.91,
-    "controverso": 0.08,
-    "consenso": 0,
+    "emergente": 0.07,
+    "consenso": 0.9,
+    "controverso": 0.02,
     "especulacao": 0.01
    },
    "confidence": 0.88
   },
-  "ia_9": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.27
+   "noul": 0.55
   },
-  "marca_9": {
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_7": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.35,
-    "controverso": 0.02,
-    "consenso": 0.63,
-    "especulacao": 0
+    "emergente": 0.06,
+    "especulacao": 0,
+    "consenso": 0.88,
+    "controverso": 0.06
    },
-   "confidence": 0.5
+   "confidence": 0.83
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.76
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.87
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.16
   }
  },
- "custo_usd": 0.00653
+ "custo_usd": 0.00592
 }

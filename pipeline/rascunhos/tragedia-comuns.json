@@ -1,84 +1,129 @@
 {
  "id": "tragedia-comuns",
  "tipo": "licao",
- "criado": "2026-09-27T14:29:58",
+ "criado": "2026-09-27T15:48:39",
  "modelo": "deepseek-flash+deepseek-v4-pro",
- "rodadas": 2,
+ "rodadas": 3,
  "licao": {
-  "gancho": "Todo mundo que já dividiu uma cozinha conhece a cena: cada um lava a própria louça, mas o fogão fica sujo para sempre. Ninguém é mau. A conta simplesmente não fecha para quem limpa o fogão.",
+  "gancho": "O pastor que aumenta o próprio rebanho fica com todo o lucro. O custo, o pasto degradado, ele divide com os vizinhos. Por isso a tragédia se repete sem ninguém ser ganancioso: basta a conta ser essa.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Em 1968, Garrett Hardin descreveu um pasto aberto a todos os pastores de uma vila. Cada um decide se acrescenta mais um animal ao rebanho.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>A conta do pastor: a carne e o leite do animal extra são só dele. O pasto gasto a mais é dividido entre todos. Com vinte pastores, ele fica com o lucro inteiro e paga um vigésimo do prejuízo.</p>",
+    "tipo": "figura",
+    "fig": "comuns-matriz",
+    "legenda": "Cada um escolhe explorar, mesmo sem saber o que o outro vai fazer. O resultado conjunto é pior do que se cooperassem.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A decisão racional é acrescentar. E é racional para os vinte ao mesmo tempo. Cada um acrescenta, o pasto se degrada até acabar. Hardin chamou isso de tragédia dos comuns.</p>",
+    "tipo": "comparar",
+    "a": "Acesso livre",
+    "b": "Propriedade comum",
+    "linhas": [
+     {
+      "aspecto": "Quem pode usar",
+      "a": "Qualquer um",
+      "b": "Grupo definido"
+     },
+     {
+      "aspecto": "Regras internas",
+      "a": "Não",
+      "b": "Sim, definidas pelo grupo"
+     },
+     {
+      "aspecto": "Resultado",
+      "a": "Tragédia frequente",
+      "b": "Uso sustentável por séculos"
+     }
+    ],
+    "legenda": "Hardin tratou as duas como a mesma coisa. A diferença decide se o recurso se esgota ou dura.",
     "marca": "consenso",
-    "fonte": 1
+    "fonte": 2
+   },
+   {
+    "tipo": "linha_tempo",
+    "eventos": [
+     {
+      "ano": 1224,
+      "texto": "Regras de pastagem comunal em Törbel, Suíça, são documentadas"
+     },
+     {
+      "ano": 1968,
+      "texto": "Hardin publica A tragédia dos comuns na Science"
+     },
+     {
+      "ano": 2009,
+      "texto": "Ostrom recebe o Nobel de Economia"
+     }
+    ],
+    "legenda": "Séculos antes do artigo de Hardin, comunidades já geriam pastos e água de forma sustentável, sem Estado nem propriedade privada.",
+    "fonte": 2
+   },
+   {
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Fronteiras claras",
+      "texto": "Quem tem direito de uso e o limite físico do recurso são definidos."
+     },
+     {
+      "nome": "Regras locais",
+      "texto": "As regras de uso correspondem à ecologia e à cultura do lugar."
+     },
+     {
+      "nome": "Escolha coletiva",
+      "texto": "Quem é afetado pelas regras participa de modificá-las."
+     },
+     {
+      "nome": "Monitoramento",
+      "texto": "Usuários observam o cumprimento e respondem uns aos outros."
+     },
+     {
+      "nome": "Sanções graduadas",
+      "texto": "A primeira infração recebe punição leve."
+     }
+    ],
+    "legenda": "Princípios recorrentes nos sistemas que duraram. Os dois últimos são os mais associados ao sucesso.",
+    "marca": "consenso",
+    "fonte": 2
    },
    {
     "tipo": "pergunta",
-    "q": "Por que a tragédia acontece mesmo com pastores honestos, sem ganância nenhuma?",
+    "q": "Por que a tragédia dos comuns acontece mesmo quando todos são racionais e bem-intencionados?",
     "alts": [
-     "Porque as pessoas são egoístas por natureza",
-     "Porque o lucro de explorar fica com quem decide, e o custo é repartido com o grupo",
-     "Porque faltam leis do governo para proibir o excesso"
+     "Porque ninguém se importa com o pasto",
+     "Porque o benefício de usar mais é individual e o custo é dividido entre todos",
+     "Porque faltam leis que proíbam o uso excessivo"
     ],
     "correta": 1,
-    "porque": "O argumento não precisa de gente má. Basta que o benefício seja privado e o custo seja socializado. É a estrutura da conta, não o caráter de quem a faz."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Décadas depois, Elinor Ostrom foi verificar isso no campo. Ela e seus colaboradores compararam centenas de sistemas reais: irrigação nas Filipinas e na Espanha, pastagens na Suíça, florestas no Japão e no Nepal, pesqueiras na Turquia.</p>",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Muitos funcionavam de forma sustentável havia séculos, sem privatização e sem controle do Estado. Os pastos de Törbel, nos Alpes suíços, têm regras comunitárias documentadas desde 1224. Em 2009 Ostrom recebeu o Nobel de Economia.</p>",
-    "marca": "consenso",
-    "fonte": 2
+    "porque": "A estrutura de incentivos faz cada um ganhar inteiro e pagar só uma fração do prejuízo. O resultado coletivo é pior, sem precisar de ninguém malvado."
    },
    {
     "tipo": "pergunta",
-    "q": "Ostrom mostrou que o argumento de Hardin estava errado?",
+    "q": "O que os casos estudados por Ostrom mostram com mais precisão?",
     "alts": [
-     "Sim, a tragédia nunca ocorre de verdade",
-     "Não. Ele descreveu um caso particular: recurso sem regras de acesso, o que ela chama de acesso livre",
-     "Sim, porque comunidades sempre resolvem qualquer recurso comum"
+     "Que Hardin estava errado em todos os casos, e a tragédia nunca acontece",
+     "Que as condições supostas por Hardin (sem regras, sem comunicação, sem monitoramento) descrevem um caso particular, não todos",
+     "Que a privatização é sempre a melhor solução para evitar o colapso"
     ],
     "correta": 1,
-    "porque": "O modelo de Hardin vale para acesso livre, onde qualquer um pode usar sem regra interna. Bens comuns reais quase sempre têm fronteiras e regras, e aí o resultado muda."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Ostrom identificou padrões nos sistemas que duraram. Fronteiras claras de quem pode usar. Regras ajustadas ao lugar. Quem é afetado participa de mudá-las. Monitoramento feito pelos próprios usuários. Sanções que começam leves e só endurecem se a infração se repete.</p>",
-    "marca": "consenso",
-    "fonte": 2
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Mas a autogestão também tem limites. Grupos muito grandes, gente que entra e sai o tempo todo, recursos que se movem entre fronteiras, como peixes migratórios, e ausência de reconhecimento externo tornam o acordo comunitário frágil.</p>",
-    "marca": "consenso",
-    "fonte": 4
+    "porque": "Ostrom não negou o modelo de Hardin. Mostrou que ele descreve recursos de acesso livre, enquanto bens comuns reais quase sempre têm regras internas, e essas regras mudam o resultado."
    }
   ],
-  "fecho": "E quando o problema é grande demais para uma comunidade resolver sozinha? A resposta de Ostrom tinha nome: governança em camadas, com instituições aninhadas em vários níveis."
+  "fecho": "Por que a ameaça de punição leve muda o comportamento sem precisar de polícia? Isso tem nome: punição altruísta. É o que Fehr e Gächter mostraram em laboratório."
  },
  "erros": [],
- "avisos": [],
- "alertas_jev": [],
+ "avisos": [
+  "tela 6: duas perguntas seguidas"
+ ],
+ "alertas_jev": [
+  "tela 1: soa como IA (0.60)",
+  "tela 2: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
+  "tela 3: trata de disputa ou evidência contestada (0.88); lição só ensina o núcleo estabelecido"
+ ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.89,
+   "score": 2.93,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -89,114 +134,97 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.11,
-    "3": 0.88,
+    "2": 0.08,
+    "3": 0.91,
     "4": 0.01
    },
-   "confidence": 0.89
+   "confidence": 0.93
   },
   "ia_1": {
+   "type": "noul",
+   "noul": 0.6
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.03,
+    "controverso": 0.23,
+    "emergente": 0.05,
+    "consenso": 0.69
+   },
+   "confidence": 0.59
+  },
+  "disputa_1": {
    "type": "noul",
    "noul": 0.22
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.21
+   "noul": 0.45
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.12,
-    "controverso": 0.03,
-    "emergente": 0.01,
-    "consenso": 0.84
+    "especulacao": 0,
+    "controverso": 0.09,
+    "emergente": 0.16,
+    "consenso": 0.75
    },
-   "confidence": 0.79
+   "confidence": 0.65
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.89
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.96
   },
   "ia_3": {
    "type": "noul",
    "noul": 0.29
   },
-  "marca_3": {
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.88
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_4": {
    "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.09,
-    "consenso": 0.52,
-    "controverso": 0.36,
-    "emergente": 0.03
-   },
-   "confidence": 0.35
-  },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.07
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.21
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "consenso": 0.8,
-    "controverso": 0.04,
-    "emergente": 0.16
-   },
-   "confidence": 0.72
-  },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.22
-  },
-  "marca_6": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "consenso": 0.76,
-    "controverso": 0.03,
-    "emergente": 0.21
-   },
-   "confidence": 0.67
-  },
-  "ambigua_7": {
-   "type": "noul",
-   "noul": 0.1
-  },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.44
-  },
-  "marca_8": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0,
-    "controverso": 0.02,
-    "emergente": 0.44,
-    "consenso": 0.54
-   },
-   "confidence": 0.38
-  },
-  "ia_9": {
-   "type": "noul",
-   "noul": 0.34
-  },
-  "marca_9": {
-   "type": "choice",
-   "choice": "consenso",
+   "choice": "emergente",
    "probabilities": {
     "especulacao": 0.01,
-    "consenso": 0.63,
-    "controverso": 0.01,
-    "emergente": 0.35
+    "controverso": 0.06,
+    "emergente": 0.55,
+    "consenso": 0.38
    },
-   "confidence": 0.51
+   "confidence": 0.4
+  },
+  "disputa_4": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.55
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.08
   }
  },
- "custo_usd": 0.00575
+ "custo_usd": 0.0094
 }

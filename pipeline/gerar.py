@@ -446,21 +446,26 @@ def gerar_licao(id_, idx, seco=False, revisao_pro=True):
     erros, avisos = checar_licao(L, doc)
     alertas, bruto = portao_jev(L, doc["termo"], id_)
     rodada, modelo = 1, FLASH
-    if (erros or alertas) and revisao_pro:
+    # até duas reescritas com o Pro: a primeira para erros e alertas, a segunda só se ainda restarem erros
+    while revisao_pro and rodada < 3 and (erros or (alertas and rodada == 1)):
         print(f"  {len(erros)} erro(s), {len(alertas)} alerta(s) do JEV: reescrevendo trechos com {PRO}")
-        pedido = "Corrija só os problemas listados, mantendo o resto da lição igual. " \
-                 "Se o problema for número de telas, junte ou corte telas secundárias até o array telas ter no máximo 9 itens, perguntas incluídas. " \
-                 "Se faltam telas visuais, troque telas de texto por um tipo visual que combine com o conteúdo (ou por uma figura pronta), ou corte telas de texto. " \
-                 "Se uma tela trata de disputa ou evidência contestada, tire-a e ensine no lugar o núcleo estabelecido do conceito. " \
-                 "Se o tipo visual não combina, troque de tipo ou use texto. " \
-                 "Responda com o objeto json completo da lição corrigida.\n\nProblemas:\n" + \
-                 "\n".join(f"- {x}" for x in erros + alertas) + "\n\nLição:\n" + json.dumps(L, ensure_ascii=False)
+        pedido = ("Corrija só os problemas listados, mantendo o resto da lição igual. "
+                  "Se o problema for número de telas, junte ou corte telas secundárias até o array telas ter no máximo 9 itens, perguntas incluídas. "
+                  "Se faltam telas visuais, troque telas de texto por um tipo visual que combine com o conteúdo "
+                  "(comparar e etapas servem para quase tudo; ou uma figura pronta), ou corte telas de texto. "
+                  "Se um número não aparece no documento, troque por um que aparece ou troque o tipo da tela. "
+                  "Se uma tela trata de disputa ou evidência contestada, tire-a e ensine no lugar o núcleo estabelecido do conceito. "
+                  "Se o tipo visual não combina, troque de tipo ou use texto. "
+                  "Responda com o objeto json completo da lição corrigida.\n\nProblemas:\n"
+                  + "\n".join(f"- {x}" for x in erros + alertas) + "\n\nLição:\n" + json.dumps(L, ensure_ascii=False))
         L2, c2 = deepseek(PRO, sistema, usuario + "\n\n" + pedido, "revisao", id_)
         custo += c2
+        rodada += 1
         e2, a2 = checar_licao(L2, doc)
-        if len(e2) <= len(erros):
-            L, erros, avisos, rodada, modelo = L2, e2, a2, 2, f"{FLASH}+{PRO}"
-            alertas, bruto = portao_jev(L, doc["termo"], id_)
+        if len(e2) > len(erros):
+            break
+        L, erros, avisos, modelo = L2, e2, a2, f"{FLASH}+{PRO}"
+        alertas, bruto = portao_jev(L, doc["termo"], id_)
     RASC.mkdir(exist_ok=True)
     rasc = {"id": id_, "tipo": "licao", "criado": agora(), "modelo": modelo, "rodadas": rodada,
             "licao": L, "erros": erros, "avisos": avisos, "alertas_jev": alertas, "jev": bruto,

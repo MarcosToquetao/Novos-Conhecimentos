@@ -1,88 +1,127 @@
 {
  "id": "gestalt-design",
  "tipo": "licao",
- "criado": "2026-09-27T14:30:37",
+ "criado": "2026-09-27T15:36:12",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Seis elementos idênticos numa tela, e você não consegue ver todos como um grupo só. O que os separa não está em nenhum deles. Está no ar entre eles.",
+  "gancho": "Um rótulo a doze pixels do campo de cima e a quatro do campo de baixo pertence ao campo de baixo. Nenhuma instrução escrita corrige essa leitura. A percepção não negocia.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>Em 1912, Max Wertheimer observou duas luzes piscando em alternância. Na cadência certa, você vê uma luz que se move. Não há movimento nenhum ali. O seu sistema visual inventou o movimento. Não deu para desver.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Para quem projeta interfaces, a conclusão é direta: você não escolhe se o usuário vai agrupar os elementos. Ele vai. A única escolha é se o agrupamento que o sistema visual dele produz corresponde ao agrupamento lógico da informação.</p>"
-   },
-   {
-    "tipo": "pergunta",
-    "q": "Um rótulo está a doze pixels do campo de cima e a quatro pixels do campo de baixo. O que o usuário entende?",
-    "alts": [
-     "O rótulo pertence ao campo de cima, se a instrução escrita disser isso",
-     "O rótulo pertence ao campo de baixo, pela distância",
-     "O usuário consegue escolher conscientemente os dois agrupamentos"
-    ],
-    "correta": 1,
-    "porque": "A proximidade agrupa sem negociação. Instrução escrita não corrige o que a distância já estabeleceu."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Wertheimer e a escola da Gestalt descreveram vários princípios de agrupamento. <strong>Proximidade</strong> junta o que está perto. <strong>Similaridade</strong> junta o que compartilha forma, cor ou tamanho. <strong>Fechamento</strong> completa contornos que não existem. <strong>Continuidade</strong> prefere curvas suaves a quinas.</p>",
+    "html": "<p>Duas luzes piscando na cadência certa não são vistas como duas luzes. São vistas como uma luz que se move. Não há movimento no estímulo: o sistema visual produz o movimento.</p>",
     "marca": "consenso",
     "fonte": 3
    },
    {
-    "tipo": "texto",
-    "html": "<p><strong>Região comum</strong> junta o que está dentro da mesma fronteira fechada, e vence a proximidade. É por isso que existem cards: uma moldura reagrupa contra a distância. <strong>Destino comum</strong> junta o que se move junto. Só passou a importar com interfaces animadas.</p>"
+    "tipo": "figura",
+    "fig": "gestalt-principios",
+    "legenda": "Seis princípios de agrupamento. Os elementos são idênticos em cada painel: muda só a relação entre eles.",
+    "marca": "consenso",
+    "fonte": 3
    },
    {
-    "tipo": "pergunta",
-    "q": "Uma moldura agrupa dois elementos que estão longe um do outro, contra um terceiro elemento que está mais perto de um deles. O que o usuário vê?",
-    "alts": [
-     "Os dois elementos dentro da moldura como um grupo, porque a região comum vence a proximidade",
-     "O elemento mais próximo do primeiro, porque proximidade sempre vence",
-     "Nada agrupado, porque as forças se anulam"
+    "tipo": "comparar",
+    "a": "Princípio",
+    "b": "O que faz",
+    "linhas": [
+     {
+      "aspecto": "Proximidade",
+      "a": "o mais forte",
+      "b": "elementos próximos viram um grupo"
+     },
+     {
+      "aspecto": "Similaridade",
+      "a": "compartilhar forma, cor ou tamanho",
+      "b": "elementos iguais viram a mesma categoria"
+     },
+     {
+      "aspecto": "Região comum",
+      "a": "supera a proximidade",
+      "b": "uma fronteira fechada reagrupa o que está dentro"
+     }
     ],
-    "correta": 0,
-    "porque": "Região comum supera proximidade. Por isso um card mal desenhado é pior que nenhum: impõe um agrupamento errado com força."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>Os princípios não têm a mesma força. Em 2012, uma revisão de um século de pesquisa mostrou que eles competem. Conexão física vence tudo. Proximidade vence similaridade na maioria dos casos. A hierarquia entre eles é o que produz a sensação de layout limpo ou confuso.</p>",
+    "legenda": "É a razão de existirem cards, e o motivo de um card mal desenhado impor um agrupamento errado.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Você quer separar dois blocos de informação numa tela. O que a pesquisa sugere que funciona melhor?",
+    "q": "Numa tela, um card agrupa campos distantes, e uma linha conecta dois botões muito próximos. Que leitura o sistema visual impõe?",
     "alts": [
-     "Aumentar a distância entre os blocos e diminuir a distância dentro de cada um",
-     "Desenhar uma linha divisória entre eles",
-     "Pintar um bloco de azul e o outro de verde"
+     "Os campos do card formam um grupo, e os botões ligados formam outro",
+     "Os campos ficam soltos porque estão distantes, e os botões seguem o card",
+     "A linha perde para a proximidade e os botões não se ligam"
     ],
     "correta": 0,
-    "porque": "Proximidade é o princípio mais forte. Distâncias bem ajustadas criam a estrutura sem bordas. Muitas linhas divisórias em interfaces existem só para consertar espaçamento ruim."
+    "porque": "Conexão física e região comum são fortes: vencem a distância entre os elementos que envolvem ou ligam.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>A teoria original da Gestalt, a dos campos elétricos no córtex, foi refutada nos anos 1950. Mas as descrições de como percebemos sobreviveram. O fenômeno é real; a explicação antiga não. Sobram três explicações concorrentes, e nenhuma venceu.</p>",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Desfocar",
+      "texto": "aperte os olhos: sobra só a estrutura de agrupamento"
+     },
+     {
+      "nome": "Medir distâncias",
+      "texto": "relacionados devem estar claramente mais próximos que os não relacionados"
+     },
+     {
+      "nome": "Tirar as bordas",
+      "texto": "se a estrutura sobrevive sem elas, o espaçamento está certo"
+     }
+    ],
+    "legenda": "Diagnóstico de uma tela em três passos, na ordem em que se aplicam.",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que reformular os princípios como uma lista de itens equivalentes é problemático?",
+    "alts": [
+     "Porque os princípios têm forças diferentes e competem entre si",
+     "Porque a lista é antiga e foi substituída por outra completa",
+     "Porque os princípios só valem para estímulos em movimento"
+    ],
+    "correta": 0,
+    "porque": "A revisão de um século de pesquisa mostra que os princípios interagem, e tratá-los como regras independentes não corresponde aos dados.",
     "marca": "consenso",
-    "fonte": 2
+    "fonte": 1
+   },
+   {
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Fundo",
+      "nota": "área maior, contínua, parece atrás"
+     },
+     {
+      "nome": "Figura",
+      "nota": "área menor, cercada, parece à frente"
+     }
+    ],
+    "eixo": {
+     "topo": "Figura",
+     "base": "Fundo"
+    },
+    "legenda": "Antes de agrupar, o sistema visual decide o que é objeto e o que é vazio. Sombra, elevação e contraste manipulam essa decisão.",
+    "marca": "consenso",
+    "fonte": 5
    }
   ],
-  "fecho": "Por que o mesmo azul parece mais claro sobre preto e mais escuro sobre branco? O contraste entre cores vizinhas muda o que você vê. Isso tem nome: contraste simultâneo."
+  "fecho": "A Gestalt explica como você agrupa. Norman pergunta outra coisa: como o objeto sugere o que fazer com ele. Isso tem nome: affordances."
  },
  "erros": [],
- "avisos": [
-  "tela 4: mais de um negrito",
-  "tela 5: mais de um negrito"
+ "avisos": [],
+ "alertas_jev": [
+  "tela 3: o tipo visual não combina com o conteúdo (0.45); troque de tipo ou use texto"
  ],
- "alertas_jev": [],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.88,
+   "score": 2.72,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -92,82 +131,117 @@
    },
    "probabilities": {
     "0": 0,
-    "1": 0.01,
-    "2": 0.12,
-    "3": 0.85,
-    "4": 0.02
+    "1": 0.05,
+    "2": 0.2,
+    "3": 0.71,
+    "4": 0.04
    },
-   "confidence": 0.87
+   "confidence": 0.71
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.23
+   "noul": 0.26
   },
-  "ia_2": {
-   "type": "noul",
-   "noul": 0.46
-  },
-  "ambigua_3": {
-   "type": "noul",
-   "noul": 0.14
-  },
-  "ia_4": {
-   "type": "noul",
-   "noul": 0.41
-  },
-  "marca_4": {
+  "marca_1": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "emergente": 0.04,
-    "controverso": 0.08,
-    "especulacao": 0,
-    "consenso": 0.88
+    "emergente": 0,
+    "consenso": 0.99,
+    "controverso": 0.01,
+    "especulacao": 0
    },
-   "confidence": 0.83
+   "confidence": 0.99
   },
-  "ia_5": {
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.02,
+    "consenso": 0.87,
+    "controverso": 0.1,
+    "especulacao": 0.01
+   },
+   "confidence": 0.84
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_3": {
    "type": "noul",
    "noul": 0.31
   },
-  "ambigua_6": {
-   "type": "noul",
-   "noul": 0.21
-  },
-  "ia_7": {
-   "type": "noul",
-   "noul": 0.47
-  },
-  "marca_7": {
+  "marca_3": {
    "type": "choice",
-   "choice": "emergente",
+   "choice": "consenso",
    "probabilities": {
-    "emergente": 0.5,
-    "controverso": 0.36,
-    "especulacao": 0.01,
-    "consenso": 0.13
+    "consenso": 0.82,
+    "emergente": 0.05,
+    "controverso": 0.12,
+    "especulacao": 0.01
    },
-   "confidence": 0.34
+   "confidence": 0.76
   },
-  "ambigua_8": {
+  "disputa_3": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "encaixe_3": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "ia_5": {
    "type": "noul",
    "noul": 0.3
   },
-  "ia_9": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.41
+   "noul": 0.07
   },
-  "marca_9": {
+  "encaixe_5": {
+   "type": "noul",
+   "noul": 0.96
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_7": {
    "type": "choice",
-   "choice": "controverso",
+   "choice": "consenso",
    "probabilities": {
-    "emergente": 0.02,
-    "controverso": 0.54,
-    "especulacao": 0.01,
-    "consenso": 0.43
+    "emergente": 0,
+    "consenso": 0.99,
+    "controverso": 0.01,
+    "especulacao": 0
    },
-   "confidence": 0.38
+   "confidence": 0.97
+  },
+  "disputa_7": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "encaixe_7": {
+   "type": "noul",
+   "noul": 0.91
   }
  },
- "custo_usd": 0.00639
+ "custo_usd": 0.00587
 }

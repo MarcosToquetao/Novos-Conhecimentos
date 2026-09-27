@@ -1,84 +1,98 @@
 {
  "id": "vantagem-comparativa",
  "tipo": "licao",
- "criado": "2026-09-27T14:41:32",
- "modelo": "deepseek-flash",
- "rodadas": 1,
+ "criado": "2026-09-27T15:35:25",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
  "licao": {
-  "gancho": "Um país pode ser pior que o outro em tudo, produzir cada produto com mais horas de trabalho, e ainda assim ganhar ao comerciar. A intuição diz que não faz sentido, mas a intuição está comparando a coisa errada.",
+  "gancho": "Dois países, dois produtos. Um deles é melhor nos dois. Mesmo assim, os dois ganham se comerciarem. Essa ideia rendeu a Paul Samuelson um desafio que ele levou anos para responder.",
   "telas": [
    {
-    "tipo": "texto",
-    "html": "<p>Imagine dois países. O primeiro produz vinho e tecido com menos horas de trabalho que o segundo em ambos os casos. Parece que o segundo não tem nada a oferecer. Ainda assim, existe um acordo que deixa os dois com mais dos dois produtos.</p>"
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>O erro está em olhar o custo absoluto. O que decide quem faz o quê é o custo de oportunidade: quanto de um produto você deixa de fazer para produzir o outro. É a razão entre os custos, não o custo em si.</p>",
+    "tipo": "figura",
+    "fig": "ricardo-ppf",
+    "legenda": "Portugal produz mais nos dois bens. Mas a inclinação da reta de cada país é diferente. É a inclinação que decide quem deve fazer o quê.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Portugal faz vinho em 80 horas e tecido em 90. A Inglaterra faz vinho em 120 e tecido em 100. Portugal é melhor nos dois. Mas para fazer vinho, Portugal sacrifica 0,89 tecido; a Inglaterra sacrifica 1,2. Para tecido, é a Inglaterra que sacrifica menos.</p>",
+    "tipo": "comparar",
+    "a": "Portugal",
+    "b": "Inglaterra",
+    "linhas": [
+     {
+      "aspecto": "Custo do vinho",
+      "a": "80 horas",
+      "b": "120 horas"
+     },
+     {
+      "aspecto": "Custo do tecido",
+      "a": "90 horas",
+      "b": "100 horas"
+     },
+     {
+      "aspecto": "Sacrifício para fazer vinho",
+      "a": "0,89 tecido",
+      "b": "1,2 tecido"
+     }
+    ],
+    "legenda": "Portugal é melhor nos dois. Mas sacrifica menos tecido para fazer vinho, e a Inglaterra sacrifica menos vinho para fazer tecido.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "pergunta",
-    "q": "Por que Portugal deve se especializar em vinho se ele é melhor também em tecido?",
+    "q": "Se Portugal produz vinho e tecido com menos horas que a Inglaterra, por que os dois ganham comerciando?",
     "alts": [
-     "Porque produz vinho com menos horas que a Inglaterra, e isso basta",
-     "Porque o que ele sacrifica ao fazer vinho é menor do que o que a Inglaterra sacrifica",
-     "Porque a Inglaterra não consegue produzir vinho"
+     "Porque a Inglaterra tem salários mais baixos",
+     "Porque o que importa é quanto cada um deixa de produzir do outro bem, não o custo absoluto",
+     "Porque Portugal tem tecnologia superior"
     ],
     "correta": 1,
-    "porque": "O critério não é a produtividade absoluta, e sim o custo de oportunidade. Portugal abre mão de menos tecido para fazer vinho, então é ali que sua vantagem comparativa está."
+    "porque": "O custo de oportunidade decide a especialização. Portugal sacrifica menos tecido para fazer vinho; a Inglaterra sacrifica menos vinho para fazer tecido."
    },
    {
-    "tipo": "texto",
-    "html": "<p>Com 200 horas cada e especialização completa, Portugal faz 2,5 vinho e a Inglaterra 2 tecido. Sem comércio, o total seria 2,08 vinho e 2,11 tecido. O mundo ganha 0,42 de vinho e perde 0,11 de tecido, então existe uma troca que melhora os dois.</p>",
+    "tipo": "estimar",
+    "q": "No exemplo de Ricardo, com 200 horas de trabalho e especialização completa, quantas unidades de vinho o mundo ganha em relação à produção sem comércio?",
+    "unidade": "unidades de vinho",
+    "min": 0,
+    "max": 2,
+    "escala": "linear",
+    "resposta": 0.42,
+    "legenda": "O mundo ganha 0,42 unidade de vinho e perde 0,11 de tecido. A qualquer taxa entre 0,89 e 1,2 tecido por vinho, os dois países ficam com mais dos dois bens.",
     "marca": "consenso",
     "fonte": 1
    },
    {
     "tipo": "texto",
-    "html": "<p>Repare que os números absolutos somem. Multiplique todos os custos de Portugal por dez e a razão não muda. O padrão de comércio continua igual. A produtividade absoluta determina o nível de salários, não quem exporta o quê.</p>",
-    "marca": "consenso",
-    "fonte": 1
+    "html": "<p>O teorema garante que o comércio aumenta o produto total e que existe uma divisão desse ganho que deixaria todos melhores. Não garante que essa divisão acontece de fato, nem diz nada sobre quem perde dentro de cada país.</p>"
    },
    {
     "tipo": "pergunta",
-    "q": "Um país é menos produtivo que todos os parceiros em todos os setores. O que a teoria prevê?",
+    "q": "O que o teorema de Stolper-Samuelson prevê sobre a abertura comercial?",
     "alts": [
-     "Ele fica de fora do comércio até ficar mais produtivo",
-     "Ele comercia, mas com salários mais baixos",
-     "Ele só pode exportar se tiver tecnologia própria"
+     "Todos os trabalhadores do país ganham igualmente",
+     "O fator usado intensivamente no setor exportador ganha, e o do setor que compete com importações perde",
+     "O país como um todo perde"
     ],
     "correta": 1,
-    "porque": "A vantagem comparativa não depende de ser melhor em algo, e sim da razão entre seus custos. O país menos produtivo participa do comércio com salários menores."
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>O ganho existe, mas não é de todos. O teorema de Stolper-Samuelson mostra que a abertura aumenta a remuneração do fator usado no setor exportador e reduz a do fator que compete com importações. Há ganhadores e perdedores previsíveis.</p>",
+    "porque": "A abertura aumenta a remuneração real do fator usado intensivamente no setor exportador e reduz a do fator usado no setor que compete com importações. Há ganhadores e perdedores identificáveis.",
     "marca": "consenso",
-    "fonte": 4
-   },
-   {
-    "tipo": "texto",
-    "html": "<p>E o ajuste pode ser lento. Autor, Dorn e Hanson estudaram regiões dos EUA muito expostas à concorrência chinesa: queda persistente de emprego industrial, salários menores e efeitos visíveis uma década depois. A realocação de trabalhadores foi menor do que os modelos supunham.</p>",
-    "marca": "emergente",
-    "fonte": 3
+    "fonte": 2
    }
   ],
-  "fecho": "Se o comércio tem ganhadores e perdedores, como se decide o que é justo? Esse é o terreno do equilíbrio de Nash."
+  "fecho": "A vantagem comparativa mostra quando dois países ganham trocando. Mas quando duas pessoas ou empresas negociam, como decidem o que aceitar? Isso é o Equilíbrio de Nash."
  },
  "erros": [],
- "avisos": [],
- "alertas_jev": [],
+ "avisos": [
+  "tela 4: legenda com mais de 25 palavras"
+ ],
+ "alertas_jev": [
+  "tela 4: o tipo visual não combina com o conteúdo (0.35); troque de tipo ou use texto"
+ ],
  "jev": {
   "interesse": {
    "type": "score",
-   "score": 2.99,
+   "score": 2.88,
    "legend": {
     "0": "Nenhuma",
     "1": "Pouca",
@@ -89,114 +103,93 @@
    "probabilities": {
     "0": 0,
     "1": 0,
-    "2": 0.05,
-    "3": 0.9,
-    "4": 0.05
+    "2": 0.13,
+    "3": 0.86,
+    "4": 0.01
    },
-   "confidence": 0.91
+   "confidence": 0.88
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.37
+   "noul": 0.43
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.02,
+    "consenso": 0.96,
+    "controverso": 0.02,
+    "emergente": 0
+   },
+   "confidence": 0.94
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.14
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.4
+   "noul": 0.23
   },
   "marca_2": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0,
-    "consenso": 0.99,
-    "controverso": 0.01,
+    "especulacao": 0.05,
+    "consenso": 0.92,
+    "controverso": 0.03,
     "emergente": 0
    },
-   "confidence": 0.98
+   "confidence": 0.89
   },
-  "ia_3": {
+  "disputa_2": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.19
   },
-  "marca_3": {
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.91
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_4": {
    "type": "choice",
    "choice": "consenso",
    "probabilities": {
-    "especulacao": 0.02,
-    "consenso": 0.97,
-    "controverso": 0.01,
-    "emergente": 0
+    "especulacao": 0.1,
+    "consenso": 0.85,
+    "controverso": 0.04,
+    "emergente": 0.01
    },
-   "confidence": 0.95
+   "confidence": 0.8
   },
-  "ambigua_4": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.08
+   "noul": 0.15
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.35
   },
   "ia_5": {
    "type": "noul",
-   "noul": 0.24
+   "noul": 0.5
   },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.03,
-    "consenso": 0.89,
-    "controverso": 0.07,
-    "emergente": 0.01
-   },
-   "confidence": 0.85
-  },
-  "ia_6": {
+  "disputa_5": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.54
   },
-  "marca_6": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.04,
-    "consenso": 0.84,
-    "controverso": 0.09,
-    "emergente": 0.03
-   },
-   "confidence": 0.79
-  },
-  "ambigua_7": {
+  "ambigua_6": {
    "type": "noul",
-   "noul": 0.16
-  },
-  "ia_8": {
-   "type": "noul",
-   "noul": 0.49
-  },
-  "marca_8": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "especulacao": 0.01,
-    "consenso": 0.51,
-    "controverso": 0.22,
-    "emergente": 0.26
-   },
-   "confidence": 0.34
-  },
-  "ia_9": {
-   "type": "noul",
-   "noul": 0.26
-  },
-  "marca_9": {
-   "type": "choice",
-   "choice": "emergente",
-   "probabilities": {
-    "especulacao": 0,
-    "consenso": 0.43,
-    "controverso": 0.08,
-    "emergente": 0.49
-   },
-   "confidence": 0.33
+   "noul": 0.08
   }
  },
- "custo_usd": 0.00106
+ "custo_usd": 0.00588
 }

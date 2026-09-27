@@ -1,86 +1,134 @@
 {
  "id": "dunning-kruger",
  "tipo": "licao",
- "criado": "2026-09-27T14:42:18",
+ "criado": "2026-09-27T15:44:20",
  "modelo": "deepseek-flash+deepseek-v4-pro",
  "rodadas": 2,
  "licao": {
-  "gancho": "Você provavelmente já viu o gráfico. A linha sobe até o pico do Monte Estúpido, despenca no Vale do Desespero e sobe de novo até o Platô da Sustentabilidade. Ele não está em nenhum artigo científico. Foi desenhado por um consultor de gestão num blog em 2014.",
+  "gancho": "Você já viu o gráfico: a linha da confiança sobe até um pico chamado 'Monte Estúpido', despenca e sobe devagar. Esse gráfico não está em nenhum artigo científico. Foi desenhado por um consultor em 2014.",
   "telas": [
    {
     "tipo": "texto",
-    "html": "<p>O gráfico popular sugere que quem sabe pouco acha que sabe muito, e só quem entende de verdade reconhece o próprio limite. A suspeita é antiga. Mas o desenho com pico e vale é uma ilustração de senso comum, não um resumo de dados.</p>"
+    "html": "<p>O efeito Dunning-Kruger virou piada de internet, mas o estudo original de 1999 não mediu o que a fama diz. Ele comparou médias de grupos, não pessoas.</p>"
    },
    {
-    "tipo": "texto",
-    "html": "<p>Em 1999, David Dunning e Justin Kruger fizeram quatro estudos com estudantes de Cornell. Em cada um, a pessoa fazia um teste e depois estimava em que percentil achava que tinha ficado. Ao todo, amostras pequenas, entre 45 e 140 alunos por estudo.</p>",
+    "tipo": "estimar",
+    "q": "No estudo original, quem ficou no quartil de pior desempenho estimou estar em qual percentil, em média?",
+    "unidade": "percentil",
+    "min": 0,
+    "max": 100,
+    "escala": "linear",
+    "resposta": 58,
+    "legenda": "O grupo mais fraco se achava na média (percentil 58). Ninguém se achava gênio.",
     "marca": "consenso",
     "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Eles não olharam pessoa por pessoa. Dividiram os participantes em quatro grupos pelo desempenho real, do mais baixo ao mais alto, e compararam as médias de autoavaliação de cada grupo.</p>"
-   },
-   {
-    "tipo": "pergunta",
-    "q": "No estudo de humor, quem ficou no grupo de desempenho mais baixo se estimou em qual percentil?",
-    "alts": [
-     "Perto do topo, acima do percentil 90",
-     "Por volta da média, entre 55 e 68",
-     "No fundo da escala, abaixo do percentil 20"
+    "tipo": "comparar",
+    "a": "Quartil inferior",
+    "b": "Quartil superior",
+    "linhas": [
+     {
+      "aspecto": "Desempenho real (estudo de humor)",
+      "a": "percentil 12",
+      "b": "percentil 88"
+     },
+     {
+      "aspecto": "Autoavaliação média",
+      "a": "percentil 58",
+      "b": "percentil 62"
+     },
+     {
+      "aspecto": "Erro",
+      "a": "superestimou muito",
+      "b": "subestimou pouco"
+     }
     ],
-    "correta": 1,
-    "porque": "O grupo mais fraco se achava mediano, não genial. Nenhum grupo, em nenhum estudo, estimou estar acima do percentil 74 em média."
+    "legenda": "Nenhum grupo, em média, se estimou acima do percentil 74.",
+    "marca": "consenso",
+    "fonte": 1
    },
    {
-    "tipo": "texto",
-    "html": "<p>Aqui entra a estatística. Dividir por quartis de desempenho real e olhar a autoavaliação dentro de cada grupo selecionado produz regressão à média. Quem foi selecionado por estar no extremo baixo tende a parecer mais perto da média na outra medida, e vice-versa.</p>",
+    "tipo": "etapas",
+    "etapas": [
+     {
+      "nome": "Medir duas coisas",
+      "texto": "desempenho real e autoavaliação de cada pessoa"
+     },
+     {
+      "nome": "Dividir em quartis",
+      "texto": "grupos do pior ao melhor desempenho"
+     },
+     {
+      "nome": "Comparar médias",
+      "texto": "autoavaliação média dentro de cada grupo"
+     }
+    ],
+    "legenda": "Esse desenho pode criar o padrão mesmo sem nenhuma psicologia envolvida.",
     "marca": "consenso",
     "fonte": 5
    },
    {
-    "tipo": "texto",
-    "html": "<p>Em 2020, Gignac e Zajenkowski usaram métodos que evitam esse problema, com 929 adultos. Não acharam a curvatura prevista pela versão forte da hipótese e chamaram o efeito de majoritariamente um artefato estatístico.</p>",
-    "marca": "consenso",
-    "fonte": 8
-   },
-   {
     "tipo": "pergunta",
-    "q": "Por que dados puramente aleatórios podem reproduzir o padrão clássico?",
+    "q": "Por que dados totalmente aleatórios produzem o mesmo padrão de 'os piores se superestimam'?",
     "alts": [
-     "Porque as pessoas julgam mal a própria competência mesmo em tarefas inventadas",
-     "Porque selecionar grupos por uma medida e comparar outra que regride à média cria o padrão sem nenhuma psicologia",
-     "Porque o computador simula vieses humanos automaticamente"
+     "Porque o computador simula personalidades humanas",
+     "Porque erro de medição e regressão à média criam esse padrão sozinhos",
+     "Porque as pessoas nos dados aleatórios são incompetentes de verdade"
     ],
     "correta": 1,
-    "porque": "É o efeito combinado de autocorrelação e regressão à média. Nenhuma mente precisa ter julgado mal nada para o gráfico aparecer."
+    "porque": "Quando você seleciona os extremos de uma medida imperfeita e compara com outra medida correlacionada, os extremos regridem à média. É pura estatística.",
+    "marca": "consenso",
+    "fonte": 5
    },
    {
-    "tipo": "texto",
-    "html": "<p>Mas não é a palavra final. Em 2023, Dunkel e colegas replicaram com amostra e métodos ajustados e encontraram um efeito real, na direção prevista, pequeno o bastante para questionar sua relevância prática.</p>",
-    "marca": "emergente",
-    "fonte": 9
+    "tipo": "camadas",
+    "camadas": [
+     {
+      "nome": "Superfície",
+      "nota": "muito oxigênio, células se dividindo"
+     },
+     {
+      "nome": "Meio",
+      "nota": "menos oxigênio, crescimento lento"
+     },
+     {
+      "nome": "Fundo",
+      "nota": "quase sem oxigênio, células quase paradas"
+     }
+    ],
+    "eixo": {
+     "topo": "mais oxigênio",
+     "base": "menos oxigênio"
+    },
+    "legenda": "Muitos antibióticos atacam células em divisão. As do fundo quase não se dividem e passam ilesas.",
+    "marca": "consenso",
+    "fonte": 3
    },
    {
     "tipo": "pergunta",
     "q": "Qual é a leitura mais defensável hoje sobre o efeito Dunning-Kruger?",
     "alts": [
-     "É totalmente real e confirma o gráfico do Monte Estúpido",
-     "Não existe, foi refutado pelas críticas estatísticas",
-     "Existe um viés metacognitivo genuíno, mas pequeno, somado a um artefato estatístico relevante"
+     "O efeito não existe, é só erro estatístico",
+     "Existe um viés metacognitivo real, mas bem menor do que a fama sugere",
+     "O efeito é forte e explica por que os incompetentes se acham gênios"
     ],
-    "correta": 2,
-    "porque": "As duas críticas e a réplica convergem: parte do padrão é artefato de método, parte é um núcleo real, e o núcleo real é menor do que a fama sugere."
+    "correta": 1,
+    "porque": "Sobram um artefato estatístico relevante e um núcleo real pequeno. O erro do senso comum é achar que o grupo mais fraco se via no topo.",
+    "marca": "consenso",
+    "fonte": 10
    }
   ],
-  "fecho": "Se o efeito Dunning-Kruger encolheu quando testado com cuidado, quantos outros achados da psicologia sobrevivem à mesma pergunta? Isso tem nome: crise de replicação."
+  "fecho": "Se o efeito é tão frágil, por que ele parece tão óbvio? A resposta pode estar em outro lugar: como nossa atenção seleciona o que confirma o que já achamos. Isso tem nome: viés de confirmação."
  },
  "erros": [],
- "avisos": [
-  "gancho com mais de 45 palavras"
- ],
+ "avisos": [],
  "alertas_jev": [
-  "tela 6: marcada consenso, JEV diz controverso (0.82)"
+  "tela 1: trata de disputa ou evidência contestada (0.96); lição só ensina o núcleo estabelecido",
+  "tela 2: trata de disputa ou evidência contestada (0.84); lição só ensina o núcleo estabelecido",
+  "tela 2: o tipo visual não combina com o conteúdo (0.43); troque de tipo ou use texto",
+  "tela 3: trata de disputa ou evidência contestada (0.89); lição só ensina o núcleo estabelecido",
+  "tela 4: trata de disputa ou evidência contestada (0.91); lição só ensina o núcleo estabelecido"
  ],
  "jev": {
   "interesse": {
@@ -104,84 +152,112 @@
   },
   "ia_1": {
    "type": "noul",
-   "noul": 0.3
+   "noul": 0.26
+  },
+  "disputa_1": {
+   "type": "noul",
+   "noul": 0.96
   },
   "ia_2": {
    "type": "noul",
-   "noul": 0.25
+   "noul": 0.27
   },
   "marca_2": {
    "type": "choice",
    "choice": "controverso",
    "probabilities": {
-    "emergente": 0.11,
-    "controverso": 0.49,
-    "especulacao": 0.01,
-    "consenso": 0.39
+    "emergente": 0.18,
+    "especulacao": 0.02,
+    "consenso": 0.36,
+    "controverso": 0.44
    },
-   "confidence": 0.32
+   "confidence": 0.25
+  },
+  "disputa_2": {
+   "type": "noul",
+   "noul": 0.84
+  },
+  "encaixe_2": {
+   "type": "noul",
+   "noul": 0.43
   },
   "ia_3": {
    "type": "noul",
-   "noul": 0.28
+   "noul": 0.29
   },
-  "ambigua_4": {
-   "type": "noul",
-   "noul": 0.22
-  },
-  "ia_5": {
-   "type": "noul",
-   "noul": 0.38
-  },
-  "marca_5": {
-   "type": "choice",
-   "choice": "consenso",
-   "probabilities": {
-    "emergente": 0.16,
-    "controverso": 0.27,
-    "especulacao": 0.01,
-    "consenso": 0.56
-   },
-   "confidence": 0.41
-  },
-  "ia_6": {
-   "type": "noul",
-   "noul": 0.37
-  },
-  "marca_6": {
+  "marca_3": {
    "type": "choice",
    "choice": "controverso",
    "probabilities": {
-    "emergente": 0.18,
-    "controverso": 0.82,
-    "especulacao": 0,
-    "consenso": 0
+    "emergente": 0.21,
+    "especulacao": 0.05,
+    "consenso": 0.27,
+    "controverso": 0.47
    },
-   "confidence": 0.76
+   "confidence": 0.29
   },
-  "ambigua_7": {
+  "disputa_3": {
    "type": "noul",
-   "noul": 0.1
+   "noul": 0.89
   },
-  "ia_8": {
+  "encaixe_3": {
    "type": "noul",
-   "noul": 0.39
+   "noul": 0.9
   },
-  "marca_8": {
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_4": {
    "type": "choice",
    "choice": "emergente",
    "probabilities": {
-    "emergente": 0.76,
-    "controverso": 0.24,
-    "especulacao": 0,
-    "consenso": 0
+    "emergente": 0.31,
+    "especulacao": 0.18,
+    "consenso": 0.22,
+    "controverso": 0.29
    },
-   "confidence": 0.67
+   "confidence": 0.07
   },
-  "ambigua_9": {
+  "disputa_4": {
    "type": "noul",
-   "noul": 0.2
+   "noul": 0.91
+  },
+  "encaixe_4": {
+   "type": "noul",
+   "noul": 0.93
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.03,
+    "especulacao": 0.06,
+    "consenso": 0.89,
+    "controverso": 0.02
+   },
+   "confidence": 0.85
+  },
+  "disputa_6": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "encaixe_6": {
+   "type": "noul",
+   "noul": 0.95
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.3
   }
  },
- "custo_usd": 0.00883
+ "custo_usd": 0.00822
 }
