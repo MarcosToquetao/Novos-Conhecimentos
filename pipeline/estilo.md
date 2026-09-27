@@ -10,14 +10,46 @@ O objetivo de uma lição não é resumir o conceito. É deixar a pessoa com uma
 
 ## Formato da lição
 
-Uma lição tem de 6 a 9 telas, lidas uma de cada vez, em 3 a 5 minutos. Conte antes de responder: o array `telas` tem **no máximo 9 itens no total, perguntas incluídas**. Se o assunto pede mais, corte o que é secundário; a lição não precisa cobrir o documento inteiro.
+A lição é vista no celular, uma tela por vez, como stories. **Texto corrido desmotiva: a lição mostra antes de explicar.** São de 6 a 9 telas no total (perguntas incluídas), lidas em 3 a 5 minutos. Conte antes de responder: o array `telas` tem **no máximo 9 itens**. Se o assunto pede mais, corte o secundário; a lição não precisa cobrir o documento inteiro.
 
-- A primeira tela é o gancho: um fato concreto, uma situação cotidiana ou uma pergunta que a intuição responde errado. Nada de definição na primeira tela.
-- Cada tela de texto carrega **uma** ideia, em no máximo 60 palavras. Se precisa de "além disso", são duas telas.
-- De 2 a 3 perguntas intercaladas, nunca a última tela antes do fecho sem pergunta anterior. A pergunta testa entendimento do mecanismo, não memória de nome, data ou número solto.
-- Cada pergunta tem 3 alternativas plausíveis. A errada mais tentadora é a que a intuição de um leigo escolheria. O campo `porque` explica em uma ou duas frases por que a certa é certa, e quando útil por que a tentadora engana.
-- Uma tela com afirmação empírica relevante leva `marca` (o grau de certeza) e `fonte` (o número da fonte no documento).
-- O `fecho` é uma frase que aponta para um conceito vizinho do acervo, despertando a próxima curiosidade. Não é resumo.
+- O `gancho` é um fato concreto, uma situação cotidiana ou uma pergunta que a intuição responde errado. Nada de definição.
+- **Pelo menos metade das telas é visual** (tipos abaixo, exceto texto e pergunta). Escolha o tipo que mostra o mecanismo do conceito; texto só quando nenhum visual serve.
+- Tela de `texto`: uma ideia, no máximo 40 palavras.
+- `legenda` de tela visual: no máximo 25 palavras, dizendo o que o desenho mostra.
+- De 2 a 3 telas que valem ponto (`pergunta` ou `ordenar`). A pergunta testa entendimento do mecanismo, não memória de nome ou data. Três alternativas plausíveis; a errada mais tentadora é a da intuição leiga. O `porque` explica em uma ou duas frases.
+- Tela com afirmação empírica relevante leva `marca` e `fonte` (o número n da fonte do documento).
+- **Todo número numa tela visual (resposta de estimar, valor de pontos, ano de linha do tempo) tem de estar escrito no documento.** Nada de número aproximado de cabeça.
+- O `fecho` aponta para um conceito vizinho do acervo, despertando a próxima curiosidade. Não é resumo.
+
+### Tipos de tela
+
+| tipo | campos | quando usar |
+|---|---|---|
+| `texto` | `html` | uma ideia que nenhum visual mostra melhor |
+| `pergunta` | `q`, `alts` (3), `correta` (0 a 2), `porque` | checar entendimento |
+| `estimar` | `q`, `unidade`, `min`, `max`, `escala` ("linear" ou "log"), `resposta`, `legenda` | um número surpreendente: a pessoa chuta antes de ver |
+| `etapas` | `etapas` [{`nome`, `texto`}] (3 a 6), `legenda` | processo em sequência; o app anima uma etapa por vez |
+| `camadas` | `camadas` [{`nome`, `nota`}] (2 a 5, de cima para baixo), `eixo` {`topo`, `base`}, `legenda` | estrutura em níveis, gradiente, corte |
+| `pontos` | `valor` (0 a 100), `frase` (completa "N de cada 100 ..."), `legenda` | proporção |
+| `ordenar` | `q`, `itens` (3 a 6, já na ordem certa), `porque` | sequência que vale a pena reconstruir; vale ponto |
+| `comparar` | `a`, `b` (títulos das colunas), `linhas` [{`aspecto`, `a`, `b`}] (2 a 4), `legenda` | contraste entre duas situações |
+| `linha_tempo` | `eventos` [{`ano` (número; negativo é a.C.), `texto`}] (3 a 6), `legenda` | história de uma descoberta |
+| `ciclo` | `etapas` [texto curto] (3 a 6), `legenda` | processo que volta ao começo |
+| `curva` | `forma` ("exponencial", "saturacao", "sino", "queda", "u", "logistica", "linear"), `eixo_x`, `eixo_y`, `marco` {`x` de 0 a 1, `rotulo`}, `legenda` | tendência qualitativa, sem números |
+
+Qualquer tela pode levar `marca` e `fonte`.
+
+**Escolher o tipo certo importa mais que variar.** Um visual que não combina com o conteúdo é pior que uma tela de texto.
+
+- `figura`: se o documento traz figuras prontas (a lista vem na mensagem), prefira-as. São desenhos calculados e revisados; use `fig` com a chave exata e escreva a `legenda`.
+- `etapas`: só para coisas que acontecem uma depois da outra no tempo ou num procedimento.
+- `ciclo`: só se a última etapa leva de volta à primeira. Processo que começa e termina é `etapas`.
+- `camadas`: só para níveis físicos ou espaciais (de cima para baixo, de fora para dentro) ou um gradiente. Nunca para uma lista de ideias ou uma sequência.
+- `curva`: só se o documento descreve essa forma de relação entre duas grandezas. Não force uma curva onde o texto não fala de tendência.
+- `comparar`: duas coisas do mesmo tipo, contrastadas nos mesmos aspectos.
+- `estimar` e `pontos`: só com número que está no documento.
+
+A lição ensina o núcleo estabelecido do conceito. Não construa a lição em torno de um mito a desmentir nem de uma disputa entre especialistas: isso fica no documento completo, na seção «Onde a ciência ainda pesquisa».
 
 ## Critério de tema: só conhecimento com respaldo
 
@@ -92,21 +124,107 @@ Qualquer texto que contenha uma destas expressões é barrado automaticamente (c
 
 ## Exemplo de lição aprovada
 
-Conceito: Biofilmes (Biologia). Fontes do documento: 1 Stewart e Costerton 2001, 2 estimativas CDC/NIH, 4 revisão sobre tolerância e persistência.
+Conceito: Biofilmes (Biologia). Fontes do documento usadas: 1 Stewart e Costerton, 2 estimativas CDC/NIH, 3 mecanismos de tolerância.
 
 ```json
 {
-  "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. Mesma espécie, mesmo remédio, resultado oposto.",
-  "telas": [
-    { "tipo": "texto", "html": "<p>A placa que se forma nos dentes depois de um dia sem escovar é um <strong>biofilme</strong>: bactérias que, em vez de boiar soltas, grudam numa superfície e constroem em volta de si uma gosma de açúcares, proteínas e DNA.</p>" },
-    { "tipo": "texto", "html": "<p>Isso não é exceção. Na natureza, viver em biofilme é o jeito mais comum de ser bactéria. Eles aparecem em canos, pedras de rio, próteses e feridas que não fecham.</p>" },
-    { "tipo": "texto", "html": "<p>Dentro de um biofilme, a mesma bactéria pode aguentar uma dose de antibiótico centenas ou milhares de vezes maior do que aguentaria solta. Contra Pseudomonas num cateter, a tobramicina precisa de cerca de mil vezes mais.</p>", "marca": "consenso", "fonte": 1 },
-    { "tipo": "pergunta", "q": "Por que essas bactérias aguentam tanto antibiótico?", "alts": ["Sofreram mutações que as tornaram resistentes", "O modo de vida em comunidade as protege, e a proteção some se forem separadas", "O antibiótico não consegue entrar em nenhuma parte do biofilme"], "correta": 1, "porque": "Na maioria dos casos não há mutação. Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção é do arranjo, não dos genes." },
-    { "tipo": "texto", "html": "<p>Parte da explicação está no fundo. Ali chega pouco oxigênio e pouco alimento, e as células quase param de crescer. Muitos antibióticos atacam justamente células em divisão, então passam por elas sem efeito.</p>", "marca": "consenso", "fonte": 4 },
-    { "tipo": "texto", "html": "<p>Por isso infecções em cateteres, válvulas cardíacas e próteses de quadril são tão teimosas. Muitas vezes a saída é tirar o dispositivo do corpo, porque o remédio sozinho não resolve.</p>" },
-    { "tipo": "pergunta", "q": "Um paciente tem infecção numa prótese de quadril que volta sempre que o antibiótico acaba. O que isso sugere?", "alts": ["A dose foi baixa demais e basta aumentar", "Um biofilme na prótese protege células que sobrevivem ao tratamento", "A bactéria é de uma espécie nova"], "correta": 1, "porque": "O padrão de melhora e recaída é típico de biofilme: o antibiótico mata as células soltas, mas as do fundo, quase paradas, sobrevivem e repovoam tudo." }
-  ],
-  "fecho": "Como bactérias soltas sabem que chegou a hora de virar comunidade? Elas contam umas às outras. Isso tem nome: quorum sensing."
+ "gancho": "Um antibiótico que mata uma bactéria no laboratório em minutos pode falhar contra a mesma bactéria dentro de um cateter. Mesma espécie, mesmo remédio, resultado oposto.",
+ "telas": [
+  {
+   "tipo": "texto",
+   "html": "<p>A placa que se forma nos dentes depois de um dia sem escovar é um <strong>biofilme</strong>: bactérias que grudam numa superfície e se envolvem numa gosma que elas mesmas produzem.</p>"
+  },
+  {
+   "tipo": "estimar",
+   "q": "Num cateter, quantas vezes mais tobramicina é preciso para vencer a Pseudomonas em biofilme, comparada à mesma bactéria solta?",
+   "unidade": "vezes",
+   "min": 1,
+   "max": 10000,
+   "escala": "log",
+   "resposta": 1000,
+   "legenda": "Cerca de mil vezes. E a bactéria não mudou de genes: mudou de jeito de viver.",
+   "marca": "consenso",
+   "fonte": 1
+  },
+  {
+   "tipo": "camadas",
+   "camadas": [
+    {
+     "nome": "Superfície",
+     "nota": "muito oxigênio, células se dividindo"
+    },
+    {
+     "nome": "Meio",
+     "nota": "menos oxigênio, crescimento lento"
+    },
+    {
+     "nome": "Fundo",
+     "nota": "quase sem oxigênio, células quase paradas"
+    }
+   ],
+   "eixo": {
+    "topo": "mais oxigênio",
+    "base": "menos oxigênio"
+   },
+   "legenda": "Muitos antibióticos atacam células em divisão. As do fundo quase não se dividem e passam ilesas.",
+   "marca": "consenso",
+   "fonte": 3
+  },
+  {
+   "tipo": "pergunta",
+   "q": "Por que essas bactérias aguentam tanto antibiótico?",
+   "alts": [
+    "Sofreram mutações que as tornaram resistentes",
+    "O modo de vida em comunidade as protege, e a proteção some se forem separadas",
+    "O antibiótico não consegue entrar em nenhuma parte do biofilme"
+   ],
+   "correta": 1,
+   "porque": "Separe as bactérias do biofilme e elas voltam a morrer com a dose normal. A proteção é do arranjo, não dos genes."
+  },
+  {
+   "tipo": "pontos",
+   "valor": 65,
+   "frase": "infecções microbianas estão associadas a biofilmes.",
+   "legenda": "Estimativa do CDC e do NIH, agências de saúde dos Estados Unidos.",
+   "marca": "consenso",
+   "fonte": 2
+  },
+  {
+   "tipo": "comparar",
+   "a": "Solta",
+   "b": "Em biofilme",
+   "linhas": [
+    {
+     "aspecto": "Antibiótico",
+     "a": "morre com a dose normal",
+     "b": "aguenta doses muito maiores"
+    },
+    {
+     "aspecto": "Crescimento",
+     "a": "todas se dividem",
+     "b": "o fundo quase para"
+    },
+    {
+     "aspecto": "Proteção",
+     "a": "nenhuma",
+     "b": "matriz de açúcares, proteínas e DNA"
+    }
+   ],
+   "legenda": "Mesma espécie nas duas colunas."
+  },
+  {
+   "tipo": "pergunta",
+   "q": "Uma infecção numa prótese de quadril volta sempre que o antibiótico acaba. O que isso sugere?",
+   "alts": [
+    "A dose foi baixa e basta aumentar",
+    "Um biofilme na prótese protege células que sobrevivem ao tratamento",
+    "A bactéria é de uma espécie nova"
+   ],
+   "correta": 1,
+   "porque": "O antibiótico mata as células ativas, mas as do fundo, quase paradas, sobrevivem e repovoam tudo. Muitas vezes é preciso retirar a prótese."
+  }
+ ],
+ "fecho": "Como bactérias soltas sabem que chegou a hora de virar comunidade? Elas contam umas às outras. Isso tem nome: quorum sensing."
 }
 ```
 

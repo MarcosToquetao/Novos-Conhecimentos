@@ -76,18 +76,24 @@ function validar(id, d) {
   });
 
   if (d.licao) {
+    /* checagem estrutural mínima; a de conteúdo (números, escrita, tamanhos) é do pipeline/gerar.py */
     const L = d.licao, telas = L.telas || [];
+    const LISTA = { etapas: "etapas", camadas: "camadas", ordenar: "itens", comparar: "linhas", linha_tempo: "eventos", ciclo: "etapas" };
+    const TIPOS = ["texto", "pergunta", "figura", "estimar", "pontos", "curva", ...Object.keys(LISTA)];
     if (!L.gancho) e("licao sem gancho");
     if (telas.length < 5 || telas.length > 10) e(`licao com ${telas.length} telas (esperado 6 a 9)`);
-    const perguntas = telas.filter(t => t.tipo === "pergunta");
-    if (perguntas.length < 2) e(`licao com ${perguntas.length} perguntas (mínimo 2)`);
+    if (telas.filter(t => ["pergunta", "ordenar"].includes(t.tipo)).length < 2) e("licao com menos de 2 telas que valem ponto");
     telas.forEach((t, i) => {
-      if (t.tipo === "texto" && !t.html) e(`licao.telas[${i}] sem html`);
-      if (t.tipo === "texto" && t.marca && !MARCAS.includes(t.marca)) e(`licao.telas[${i}] marca inválida: ${t.marca}`);
-      if (t.tipo === "texto" && t.fonte != null && !fontes.has(t.fonte)) e(`licao.telas[${i}] fonte ${t.fonte} inexistente`);
-      if (t.tipo === "pergunta" && !(Array.isArray(t.alts) && t.correta >= 0 && t.correta < t.alts.length && t.porque)) e(`licao.telas[${i}] pergunta malformada`);
-      if (t.tipo === "figura" && !FIGURAS[t.fig]) e(`licao.telas[${i}] figura ${t.fig} inexistente`);
-      if (!["texto", "pergunta", "figura"].includes(t.tipo)) e(`licao.telas[${i}] tipo desconhecido: ${t.tipo}`);
+      const onde = `licao.telas[${i}]`;
+      if (!TIPOS.includes(t.tipo)) return e(`${onde} tipo desconhecido: ${t.tipo}`);
+      if (t.marca && !MARCAS.includes(t.marca)) e(`${onde} marca inválida: ${t.marca}`);
+      if (t.fonte != null && !fontes.has(t.fonte)) e(`${onde} fonte ${t.fonte} inexistente`);
+      if (t.tipo === "texto" && !t.html) e(`${onde} sem html`);
+      if (t.tipo === "pergunta" && !(Array.isArray(t.alts) && t.correta >= 0 && t.correta < t.alts.length && t.porque)) e(`${onde} pergunta malformada`);
+      if (t.tipo === "figura" && !FIGURAS[t.fig]) e(`${onde} figura ${t.fig} inexistente`);
+      if (t.tipo === "estimar" && !(+t.min < +t.resposta && +t.resposta < +t.max)) e(`${onde} estimar sem min < resposta < max`);
+      if (t.tipo === "pontos" && !(t.valor > 0 && t.valor < 100 && t.frase)) e(`${onde} pontos malformado`);
+      if (LISTA[t.tipo] && !(Array.isArray(t[LISTA[t.tipo]]) && t[LISTA[t.tipo]].length >= 2)) e(`${onde} ${t.tipo} sem ${LISTA[t.tipo]}`);
     });
   }
 }

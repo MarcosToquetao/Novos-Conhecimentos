@@ -4,9 +4,9 @@ Ponto de entrada para qualquer sessão do Codex nesta pasta (espelho do CLAUDE.m
 
 ## O que é o app
 
-PWA em português, sem backend, para quem tem curiosidade e poucos minutos no celular. A cada dia existe uma **ficha do dia**, a mesma para todo mundo. A ficha abre uma **lição curta** (6 a 9 telas, 3 a 5 min, com perguntas no meio). Quem quiser mais abre **Aprofundar**, o documento longo com prova. Cada conceito lido acende um nó no **Acervo**, um mapa de todo o catálogo agrupado em regiões, áreas e subáreas. O progresso fica em `localStorage`.
+PWA em português, sem backend, para quem tem curiosidade e poucos minutos no celular. A cada dia existe uma **ficha do dia**, a mesma para todo mundo. A ficha abre uma **lição curta** (6 a 9 telas, 3 a 5 min, com perguntas no meio). Quem quiser mais abre **Aprofundar**, o documento longo com prova. No fim da lição, **«Próxima: X»** abre um vizinho no grafo (de preferência o que o fecho anunciou), e a pessoa segue uma trilha de curiosidade além da ficha do dia. Cada conceito lido acende um nó no **Acervo**, um mapa de todo o catálogo agrupado em regiões, áreas e subáreas. O progresso fica em `localStorage`.
 
-Estado atual: protótipo para validar com amigos se as pessoas voltam. A fase social (ligas, amigos, Supabase) vem depois. Streak, XP e nível foram **recusados** pelo usuário para o protótipo: não reintroduza sem pedido.
+Estado atual: protótipo para validar com amigos se as pessoas voltam. A fase social (ligas, amigos, Supabase) vem depois. Streak, XP e nível foram **recusados** pelo usuário para o protótipo: não reintroduza sem pedido. Imagem e vídeo gerados por IA (há um conector Higgsfield) ficam para depois da validação, por custo.
 
 Site publicado: https://marcostoquetao.github.io/Novos-Conhecimentos/ (GitHub Pages, branch `main`). Commit e push sem perguntar estão combinados neste repositório.
 
@@ -81,11 +81,19 @@ python pipeline/revisar.py                         http://localhost:8766/pipelin
 - `sintese.{definicoes[{termo,def}], lembrar[], confusoes[{erro,correcao}], numeros[]}`;
 - `flashcards[{f,v}]` (mín. 12), `prova[{camada,q,alts[],correta,porque}]` (mín. 10), `fontes[{n,tipo,ref,url}]` (mín. 15, reais e verificáveis);
 - `fronteira` (uma linha JSON, opcional): `[{tema, html}]`, as linhas de pesquisa em aberto, renderizadas depois das camadas;
-- `licao` (uma linha JSON, escrita pelo pipeline):
+- `licao` (uma linha JSON, escrita pelo pipeline): `{ gancho, telas: [...], fecho }`.
 
-```
-{ gancho, telas: [ {tipo:"texto", html, marca?, fonte?} | {tipo:"pergunta", q, alts[3], correta, porque} | {tipo:"figura", fig, legenda} ], fecho }
-```
+Uma lição é visual antes de ser texto (estilo stories). Pelo menos metade das telas é visual, e as telas de texto têm no máximo 40 palavras. O modelo só **preenche dados**; `js/licao.js` desenha e anima tudo em SVG.
+
+Tipos de tela e campos (especificação completa, com quando usar cada um, em `pipeline/estilo.md`):
+
+- `texto`, `pergunta`;
+- `figura` (usa uma figura pronta de `build_figuras.py`);
+- `estimar` (a pessoa chuta um número antes de ver);
+- `etapas` (anima uma por vez), `camadas`, `pontos` (grade 10×10), `ordenar` (vale ponto), `comparar`, `linha_tempo`, `ciclo`;
+- `curva` (só forma qualitativa, sem números).
+
+**Todo número de uma tela visual** (resposta de estimar, valor de pontos, ano) precisa aparecer no documento: `checar_licao` confere. O JEV confere, a cada tela, se o tipo visual combina com o conteúdo e se a tela gira em torno de disputa. A lição só ensina o núcleo estabelecido.
 
 Figuras: `[[FIG:chave]]` no html. Toda chave precisa de uma função em `build_figuras.py`, registrada em `FIG`. Diagramas quantitativos são calculados, nunca desenhados à mão.
 

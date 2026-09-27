@@ -92,7 +92,14 @@ class Tratador(http.server.SimpleHTTPRequestHandler):
             if not arq.exists():
                 return self.responder(404, {"erro": "rascunho não encontrado"})
             d = g.documento(id_)
-            return self.responder(200, {"rascunho": json.loads(arq.read_text(encoding="utf-8")),
+            rasc = json.loads(arq.read_text(encoding="utf-8"))
+            # rascunho não passou pelo build: embute aqui o SVG das telas de figura
+            js = (g.RAIZ / "js" / "figuras.js").read_text(encoding="utf-8")
+            figuras = json.loads(js[js.index("{"):js.index("\n};") + 2])
+            for t in rasc["licao"].get("telas", []):
+                if t.get("tipo") == "figura":
+                    t["svg"] = figuras.get(t.get("fig"), "")
+            return self.responder(200, {"rascunho": rasc,
                                         "doc": {k: d[k] for k in ("termo", "area", "fontes", "subtitulo")}})
         return super().do_GET()
 

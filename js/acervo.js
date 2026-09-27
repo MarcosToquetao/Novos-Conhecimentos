@@ -68,7 +68,7 @@ function montarAcervo(svg, idx, lidos, opts = {}) {
   function aplicar() {
     svg.setAttribute("viewBox", `${cam.x} ${cam.y} ${cam.w} ${cam.w * razao}`);
     const z = 1000 / cam.w;
-    rotulos.forEach(r => { r.e.style.display = (r.nivel === 0 ? z < 2.2 : z >= 1.6 && z < 5) ? "" : "none"; if (r.nivel === 0) r.e.style.opacity = z < 1.4 ? 1 : .35; });
+    rotulos.forEach(r => { r.e.style.display = !opts.fixo && (r.nivel === 0 ? z < 2.2 : z >= 1.6 && z < 5) ? "" : "none"; if (r.nivel === 0) r.e.style.opacity = z < 1.4 ? 1 : .35; });
     nos.forEach(o => o.t.style.display = opts.fixo ? (o.c.id === opts.destaque ? "" : "none")   /* miniatura: só o nome do conceito */
       : (z >= 5 || (o.lido && z >= 2.2) || o.perto) ? "" : "none");
   }

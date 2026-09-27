@@ -175,10 +175,34 @@ def checar_texto(onde, s, erros):
             erros.append(f"{onde}: expressão proibida «{e}»")
 
 
+VISUAIS = {"estimar", "etapas", "camadas", "pontos", "ordenar", "comparar", "linha_tempo", "ciclo", "curva", "figura"}
+VALE_PONTO = {"pergunta", "ordenar"}
+FORMAS = {"exponencial", "saturacao", "sino", "queda", "u", "logistica", "linear"}
+NUM_EXTENSO = {"dez": 10, "vinte": 20, "trinta": 30, "cem": 100, "cento": 100, "duzentos": 200, "mil": 1000,
+               "milhão": 1e6, "milhões": 1e6, "bilhão": 1e9, "bilhões": 1e9}
+
+
+def numeros_do_documento(doc):
+    """Todos os números escritos no documento, em algarismo ou por extenso, para conferir os das telas visuais."""
+    txt = " ".join(texto_puro(c.get("html", "")) for c in doc.get("camadas", {}).values())
+    txt += " " + json.dumps(doc.get("sintese", {}), ensure_ascii=False)
+    nums = set()
+    for m in re.finditer(r"\d+(?:[.\s]\d{3})*(?:,\d+)?", txt):
+        try:
+            nums.add(float(m.group(0).replace(".", "").replace(" ", "").replace(",", ".")))
+        except ValueError:
+            pass
+    for m in re.finditer(r"\b(\d+(?:,\d+)?)?\s*(" + "|".join(NUM_EXTENSO) + r")\b", txt.lower()):
+        base = float(m.group(1).replace(",", ".")) if m.group(1) else 1
+        nums.add(base * NUM_EXTENSO[m.group(2)])
+    return nums
+
+
 def checar_licao(L, doc):
     erros, avisos = [], []
     fontes = {f["n"] for f in doc.get("fontes", [])}
     telas = L.get("telas") or []
+    nums = numeros_do_documento(doc)
     if not L.get("gancho"):
         erros.append("sem gancho")
     elif len(L["gancho"].split()) > 45:
@@ -187,48 +211,113 @@ def checar_licao(L, doc):
         erros.append("sem fecho")
     if not 6 <= len(telas) <= 9:
         erros.append(f"{len(telas)} telas (esperado 6 a 9)")
-    perguntas = [t for t in telas if t.get("tipo") == "pergunta"]
-    if not 2 <= len(perguntas) <= 3:
-        erros.append(f"{len(perguntas)} perguntas (esperado 2 ou 3)")
-    if telas and telas[0].get("tipo") != "texto":
-        erros.append("a primeira tela deve ser texto")
+    pontuam = [t for t in telas if t.get("tipo") in VALE_PONTO]
+    if not 2 <= len(pontuam) <= 3:
+        erros.append(f"{len(pontuam)} telas que valem ponto (esperado 2 ou 3 entre pergunta e ordenar)")
+    visuais = [t for t in telas if t.get("tipo") in VISUAIS]
+    if telas and len(visuais) * 2 < len(telas):
+        erros.append(f"só {len(visuais)} telas visuais de {len(telas)} (pelo menos metade)")
     checar_texto("gancho", L.get("gancho", ""), erros)
     checar_texto("fecho", L.get("fecho", ""), erros)
+
+    def conferir_numero(i, rotulo, v):
+        try:
+            v = float(v)
+        except (TypeError, ValueError):
+            return erros.append(f"tela {i}: {rotulo} não é número")
+        if not any(abs(v - n) <= max(0.5, abs(n) * 0.001) for n in nums):
+            erros.append(f"tela {i}: {rotulo} {v:g} não aparece no documento (número inventado?)")
+
+    def exigir(i, t, campos):
+        for c in campos:
+            if t.get(c) in (None, "", []):
+                erros.append(f"tela {i}: {t.get('tipo')} sem {c}")
+
     anterior = None
     for i, t in enumerate(telas, 1):
         tipo = t.get("tipo")
+        if t.get("marca") and t["marca"] not in MARCAS:
+            erros.append(f"tela {i}: marca {t['marca']} não é permitida (só consenso ou emergente)")
+        if t.get("fonte") is not None and t["fonte"] not in fontes:
+            erros.append(f"tela {i}: fonte {t['fonte']} não existe no documento")
+        if t.get("marca") and t.get("fonte") is None:
+            avisos.append(f"tela {i}: marca sem fonte")
+        # todo texto visível da tela passa pelas mesmas checagens de escrita
+        textos = [v for k, v in t.items() if isinstance(v, str) and k not in ("tipo", "marca", "escala", "forma", "fig")]
+        for k in ("alts", "itens", "etapas", "camadas", "linhas", "eventos"):
+            for x in t.get(k) or []:
+                textos += [x] if isinstance(x, str) else [v for v in x.values() if isinstance(v, str)]
+        for s_ in textos:
+            checar_texto(f"tela {i}", s_, erros)
+        if t.get("legenda") and len(t["legenda"].split()) > 30:
+            avisos.append(f"tela {i}: legenda com mais de 25 palavras")
+
         if tipo == "texto":
             html = t.get("html", "")
             palavras = len(re.sub(r"<[^>]+>", " ", html).split())
-            if palavras > 90:
-                erros.append(f"tela {i}: {palavras} palavras (máximo 60)")
-            elif palavras > 60:
-                avisos.append(f"tela {i}: {palavras} palavras (máximo 60)")
+            if palavras > 55:
+                erros.append(f"tela {i}: {palavras} palavras (máximo 40)")
+            elif palavras > 40:
+                avisos.append(f"tela {i}: {palavras} palavras (máximo 40)")
             if html.count("<strong>") > 1:
                 avisos.append(f"tela {i}: mais de um negrito")
-            if t.get("marca") and t["marca"] not in MARCAS:
-                erros.append(f"tela {i}: marca {t['marca']} não é permitida (só consenso ou emergente)")
-            if t.get("fonte") is not None and t["fonte"] not in fontes:
-                erros.append(f"tela {i}: fonte {t['fonte']} não existe no documento")
-            if t.get("marca") and t.get("fonte") is None:
-                avisos.append(f"tela {i}: marca sem fonte")
-            checar_texto(f"tela {i}", html, erros)
             inicio = re.sub(r"<[^>]+>", "", html).split()[:2]
             if anterior and inicio == anterior:
                 avisos.append(f"tela {i}: começa igual à tela anterior")
             anterior = inicio
-        elif tipo == "pergunta":
+            continue
+        anterior = None
+        if tipo == "pergunta":
             alts = t.get("alts") or []
             if len(alts) != 3 or not isinstance(t.get("correta"), int) or not 0 <= t["correta"] < len(alts):
                 erros.append(f"tela {i}: pergunta malformada (3 alternativas e correta 0 a 2)")
-            if not t.get("porque"):
-                erros.append(f"tela {i}: pergunta sem porque")
-            for k, s in [("q", t.get("q", "")), ("porque", t.get("porque", ""))] + [(f"alt {j}", a) for j, a in enumerate(alts)]:
-                checar_texto(f"tela {i} {k}", s, erros)
-            if i > 1 and telas[i - 2].get("tipo") == "pergunta":
+            exigir(i, t, ["q", "porque"])
+            if i > 1 and telas[i - 2].get("tipo") in VALE_PONTO:
                 avisos.append(f"tela {i}: duas perguntas seguidas")
-            anterior = None
-        else:
+        elif tipo == "estimar":
+            exigir(i, t, ["q", "resposta", "min", "max"])
+            try:
+                lo, hi, r = float(t["min"]), float(t["max"]), float(t["resposta"])
+                if not lo < r < hi or (t.get("escala") == "log" and lo <= 0):
+                    erros.append(f"tela {i}: estimar precisa de min < resposta < max (e min > 0 em escala log)")
+            except (KeyError, TypeError, ValueError):
+                erros.append(f"tela {i}: estimar com min, max ou resposta inválidos")
+            conferir_numero(i, "resposta", t.get("resposta"))
+        elif tipo == "etapas":
+            et = t.get("etapas") or []
+            if not 3 <= len(et) <= 6 or not all(isinstance(e, dict) and e.get("nome") for e in et):
+                erros.append(f"tela {i}: etapas precisa de 3 a 6 itens com nome")
+        elif tipo == "camadas":
+            cs = t.get("camadas") or []
+            if not 2 <= len(cs) <= 5 or not all(isinstance(c, dict) and c.get("nome") for c in cs):
+                erros.append(f"tela {i}: camadas precisa de 2 a 5 itens com nome")
+        elif tipo == "pontos":
+            exigir(i, t, ["valor", "frase"])
+            if isinstance(t.get("valor"), (int, float)) and not 0 < t["valor"] < 100:
+                erros.append(f"tela {i}: pontos precisa de valor entre 0 e 100")
+            conferir_numero(i, "valor", t.get("valor"))
+        elif tipo == "ordenar":
+            exigir(i, t, ["q"])
+            if not 3 <= len(t.get("itens") or []) <= 6:
+                erros.append(f"tela {i}: ordenar precisa de 3 a 6 itens")
+        elif tipo == "comparar":
+            exigir(i, t, ["a", "b"])
+            if not 2 <= len(t.get("linhas") or []) <= 4:
+                erros.append(f"tela {i}: comparar precisa de 2 a 4 linhas")
+        elif tipo == "linha_tempo":
+            ev = t.get("eventos") or []
+            if not 3 <= len(ev) <= 6:
+                erros.append(f"tela {i}: linha_tempo precisa de 3 a 6 eventos")
+            for e in ev:
+                conferir_numero(i, "ano", e.get("ano") if isinstance(e, dict) else None)
+        elif tipo == "ciclo":
+            if not 3 <= len(t.get("etapas") or []) <= 6:
+                erros.append(f"tela {i}: ciclo precisa de 3 a 6 etapas")
+        elif tipo == "curva":
+            if t.get("forma") not in FORMAS:
+                erros.append(f"tela {i}: curva com forma desconhecida ({t.get('forma')})")
+            exigir(i, t, ["eixo_x", "eixo_y"])
+        elif tipo != "figura":
             erros.append(f"tela {i}: tipo desconhecido {tipo}")
     return erros, avisos
 
@@ -241,8 +330,10 @@ def portao_jev(L, termo, alvo):
                           "instructions": "Para uma pessoa leiga no celular, quanto o gancho desperta vontade de continuar lendo?",
                           "criteria": ["Nenhuma", "Pouca", "Alguma", "Quer ver a próxima tela", "Irresistível"]}}
     for i, t in enumerate(telas, 1):
-        if t.get("tipo") == "texto":
-            estado["telas"][f"t{i}"] = texto_puro(t.get("html", ""))
+        if t.get("tipo") not in VALE_PONTO:
+            # texto e telas visuais: o JEV lê o conteúdo e a legenda, sem os campos técnicos
+            conteudo = t.get("html") or json.dumps({k: v for k, v in t.items() if k not in ("tipo", "marca", "fonte", "escala", "forma", "svg", "fig")}, ensure_ascii=False)
+            estado["telas"][f"t{i}"] = texto_puro(conteudo)
             perg[f"ia_{i}"] = {"type": "noul",
                                "instructions": f"O trecho telas.t{i} soa como texto gerado por IA?",
                                "criteria": {"true": "fórmulas vazias, ênfase inflada, abstração sem exemplo concreto, estrutura previsível",
@@ -254,6 +345,15 @@ def portao_jev(L, termo, alvo):
                                                    "emergente": "evidência séria mas recente ou não consolidada",
                                                    "controverso": "especialistas competentes discordam",
                                                    "especulacao": "hipótese sem teste empírico decisivo"}}
+            perg[f"disputa_{i}"] = {"type": "noul",
+                                    "instructions": f"O trecho telas.t{i} gira em torno de um debate, controvérsia, mito a desmentir ou evidência contestada?",
+                                    "criteria": {"true": "o foco é a disputa, a dúvida ou a desmistificação",
+                                                 "false": "o foco é conhecimento estabelecido sobre o conceito"}}
+            if t.get("tipo") in VISUAIS - {"figura"}:
+                perg[f"encaixe_{i}"] = {"type": "noul",
+                                        "instructions": f"A forma visual '{t['tipo']}' combina com o conteúdo de telas.t{i}?",
+                                        "criteria": {"true": "combina: etapas é sequência no tempo, ciclo volta ao início, camadas são níveis físicos ou gradiente, curva é tendência descrita, comparar contrasta duas coisas do mesmo tipo",
+                                                     "false": "forma forçada: lista de ideias desenhada como camadas, processo linear como ciclo, curva inventada, e parecidos"}}
         elif t.get("tipo") == "pergunta":
             estado["telas"][f"t{i}"] = {"pergunta": t.get("q"), "alternativas": t.get("alts"),
                                         "marcada_como_correta": (t.get("alts") or ["?"])[t.get("correta", 0) or 0]}
@@ -267,6 +367,10 @@ def portao_jev(L, termo, alvo):
         tipo, _, n = k.partition("_")
         if tipo == "ia" and v.get("noul", 0) > LIMIAR["ia"]:
             alertas.append(f"tela {n}: soa como IA ({v['noul']:.2f})")
+        elif tipo == "disputa" and v.get("noul", 0) > 0.6:
+            alertas.append(f"tela {n}: trata de disputa ou evidência contestada ({v['noul']:.2f}); lição só ensina o núcleo estabelecido")
+        elif tipo == "encaixe" and v.get("noul", 1) < 0.5:
+            alertas.append(f"tela {n}: o tipo visual não combina com o conteúdo ({v['noul']:.2f}); troque de tipo ou use texto")
         elif tipo == "ambigua" and v.get("noul", 0) > LIMIAR["ambigua"]:
             alertas.append(f"tela {n}: gabarito suspeito ({v['noul']:.2f})")
         elif tipo == "marca":
@@ -313,8 +417,12 @@ def prompts_licao(id_, idx):
     if ex:
         sistema += "\n\n## Outras lições aprovadas pelo editor\n\n" + "\n\n".join(ex)
     s = doc.get("sintese") or {}
+    fonte_js = (RAIZ / "js" / "docs" / f"{id_}.js").read_text(encoding="utf-8")
+    figuras = re.findall(r"\[\[FIG:([a-z0-9\-]+)\]\]\s*<figcaption>(.*?)</figcaption>", fonte_js, re.S)
     usuario = "\n".join([
         f"Conceito: {doc['termo']} ({doc['area']})",
+        "Figuras prontas deste documento (use com tipo figura e fig igual à chave): " +
+        ("; ".join(f"{k}: {texto_puro(c)[:140]}" for k, c in figuras) if figuras else "nenhuma"),
         f"Conceitos vizinhos no acervo, para o fecho: {', '.join(vizinhos(id_, idx))}",
         "", "Fontes do documento:",
         *[f"{f['n']}. {texto_puro(f['ref'])[:160]}" for f in doc.get("fontes", [])],
@@ -342,6 +450,9 @@ def gerar_licao(id_, idx, seco=False, revisao_pro=True):
         print(f"  {len(erros)} erro(s), {len(alertas)} alerta(s) do JEV: reescrevendo trechos com {PRO}")
         pedido = "Corrija só os problemas listados, mantendo o resto da lição igual. " \
                  "Se o problema for número de telas, junte ou corte telas secundárias até o array telas ter no máximo 9 itens, perguntas incluídas. " \
+                 "Se faltam telas visuais, troque telas de texto por um tipo visual que combine com o conteúdo (ou por uma figura pronta), ou corte telas de texto. " \
+                 "Se uma tela trata de disputa ou evidência contestada, tire-a e ensine no lugar o núcleo estabelecido do conceito. " \
+                 "Se o tipo visual não combina, troque de tipo ou use texto. " \
                  "Responda com o objeto json completo da lição corrigida.\n\nProblemas:\n" + \
                  "\n".join(f"- {x}" for x in erros + alertas) + "\n\nLição:\n" + json.dumps(L, ensure_ascii=False)
         L2, c2 = deepseek(PRO, sistema, usuario + "\n\n" + pedido, "revisao", id_)
@@ -558,8 +669,9 @@ def autoteste():
     ruim["telas"][0]["html"] = "<p>Vale ressaltar que biofilmes são fascinantes — e “perigosos”.</p>"
     ruim["telas"][2]["fonte"] = 99
     ruim["telas"][3]["correta"] = 5
+    ruim["telas"][1]["resposta"] = 777
     erros, _ = checar_licao(ruim, doc)
-    for esperado in ["travessão", "aspas curvas", "vale ressaltar", "fascinante", "fonte 99", "pergunta malformada"]:
+    for esperado in ["travessão", "aspas curvas", "vale ressaltar", "fascinante", "fonte 99", "pergunta malformada", "777 não aparece"]:
         assert any(esperado in e for e in erros), (esperado, erros)
     print("autoteste ok:", len(erros), "erros detectados na lição estragada")
 

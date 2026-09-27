@@ -88,7 +88,8 @@ const CRITERIOS = [
   ["escrita", "Escrita", "frases claras, sem vício de IA, exemplos concretos"],
   ["interesse", "Desperta interesse", "o gancho puxa e o fecho dá vontade de continuar"]
 ];
-let atual = null;
+let atual = null, AREAS = {};
+fetch("/dados/indice.json").then(r => r.json()).then(i => AREAS = i.areas);
 
 $("#rubrica").innerHTML = CRITERIOS.map(([k, nome, dica]) => `
   <fieldset><legend>${nome}</legend>
@@ -128,6 +129,7 @@ async function abrir(id) {
 
 function tocar(licao) {
   Licao($("#telefone"), { termo: atual.doc.termo, area: atual.doc.area, fontes: atual.doc.fontes, licao }, {
+    cor: AREAS[atual.doc.area] ? `var(--m-${AREAS[atual.doc.area]})` : undefined,
     aoFechar: () => tocar(licao),
     aoTerminar: (res) => {
       $("#telefone").innerHTML = `<div class="licao"><p class="rotulo" style="margin-top:1rem">${res.acertos} de ${res.total} perguntas</p>

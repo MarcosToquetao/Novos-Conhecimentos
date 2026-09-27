@@ -178,6 +178,7 @@ async function abrirFicha(c) {
   ir("tela-licao");
   evento("licao-iniciada");
   Licao($("#tela-licao"), d, {
+    cor: `var(--m-${IDX.areas[c.area]})`,
     aoFechar: () => history.back(),
     aoTerminar: (r) => concluirLicao(c, d, r)
   });
@@ -198,10 +199,30 @@ function concluirLicao(c, d, r) {
   $("#r-compart").textContent = textoCompartilhar(c, r, ls.size);
   $("#btn-compartilhar").textContent = "Mandar para um amigo";
   montarAcervo($("#r-mapa"), IDX, ls, { destaque: c.id, razao: .5, fixo: true });
+  proximaFicha = proxima(c, d, ls);
+  $("#btn-proxima").hidden = !proximaFicha;
+  if (proximaFicha) $("#btn-proxima").textContent = `Próxima: ${proximaFicha.termo}`;
   const carimbo = $("#r-carimbo"); carimbo.classList.remove("anima"); void carimbo.offsetWidth; carimbo.classList.add("anima");
   history.replaceState({ tela: "tela-resultado" }, "", "#resultado");
   ir("tela-resultado", true);
 }
+
+/* A próxima ficha segue o mapa: um vizinho do conceito, de preferência o que o fecho
+   da lição acabou de anunciar, com lição pronta e ainda não lido. */
+let proximaFicha = null;
+function proxima(c, d, ls) {
+  const fecho = ((d.licao && d.licao.fecho) || "").toLowerCase();
+  const viz = IDX.arestas.filter(([a, b]) => a === c.id || b === c.id).map(([a, b]) => doCatalogo(a === c.id ? b : a)).filter(v => v && v.doc);
+  const nota = (v) => (fecho.includes(v.termo.toLowerCase().split(/[:(]/)[0].trim()) ? 4 : 0) + (v.licao ? 2 : 0) + (ls.has(v.id) ? 0 : 1);
+  if (viz.length) return viz.sort((a, b) => nota(b) - nota(a))[0];
+  /* vizinho direto sem ficha ainda: tenta o vizinho do vizinho, depois a mesma área, depois o sorteio */
+  const perto = new Set(IDX.arestas.filter(([a, b]) => a === c.id || b === c.id).flat());
+  const dois = IDX.arestas.filter(([a, b]) => perto.has(a) || perto.has(b)).flat().map(doCatalogo)
+    .filter(v => v && v.doc && v.id !== c.id && !ls.has(v.id));
+  const area = CATALOGO.filter(v => v.area === c.area && v.doc && v.id !== c.id && !ls.has(v.id));
+  return dois[0] || area[0] || sortear(c.id) || prontos().find(v => v.id !== c.id) || null;
+}
+$("#btn-proxima").addEventListener("click", () => { if (proximaFicha) { evento("proxima-pelo-mapa"); abrirFicha(proximaFicha); } });
 
 function textoCompartilhar(c, r, n) {
   const barras = "▮".repeat(r.acertos) + "▯".repeat(r.total - r.acertos);
