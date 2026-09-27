@@ -1,0 +1,162 @@
+{
+ "id": "linguas-de-sinais",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:39:43",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Um professor de inglês numa universidade para surdos notou que os sinais que seus alunos usavam tinham regras. Trocar uma peça do sinal mudava o significado. Ninguém na linguística levou a sério por décadas. Ele estava certo.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Em 1960, William Stokoe publicou um estudo sobre a língua de sinais americana, a ASL. Ele mostrou que os sinais não eram gestos soltos: combinavam unidades menores de forma sistemática. Trocar uma dessas unidades mudava o significado, como trocar um som muda uma palavra falada.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Línguas de sinais têm inventário de unidades que se combinam, regras de formação de palavras, regras de combinação de frases e capacidade de expressar qualquer conteúdo, da previsão do tempo à poesia. Elas são línguas naturais completas.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que faz os linguistas considerarem uma língua de sinais uma língua de verdade?",
+    "alts": [
+     "Ouvintes conseguem entender bastante só prestando atenção",
+     "Crianças surdas expostas desde cedo a adquirem sozinhas, nos mesmos marcos da fala",
+     "Ela copia a ordem das palavras da língua falada do país"
+    ],
+    "correta": 1,
+    "porque": "A aquisição espontânea por crianças, sem ensino formal, é um dos testes que definem uma língua natural. Entender de fora é impressão subjetiva, e copiar a língua falada descreve sistemas artificiais, não línguas de sinais."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Cada comunidade surda desenvolveu sua própria língua. A ASL e a língua de sinais britânica são diferentes e ininteligíveis entre si, apesar do inglês falado em volta das duas. A Libras tem gramática própria, distinta do português e da língua de sinais de Portugal.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Nas línguas de sinais, o rosto também é gramática. Sobrancelhas levantadas marcam perguntas de sim ou não; sobrancelhas franzidas marcam perguntas com quem, o quê, onde. Tirar essa marcação não deixa a frase neutra: deixa agramatical.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Numa língua de sinais, o movimento do verbo entre dois pontos no espaço pode indicar o quê?",
+    "alts": [
+     "Apenas a direção física da ação, como num gesto",
+     "Quem faz e quem recebe a ação, como a concordância verbal",
+     "Nada gramatical, é só um jeito de chamar atenção"
+    ],
+    "correta": 1,
+    "porque": "Em verbos direcionais, o verbo se move do ponto que representa o sujeito para o que representa o objeto. A direção carrega a mesma informação que pronomes e concordância em línguas faladas."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O cérebro não trata a língua de sinais como um sistema visual qualquer. Estudos de lesão e de neuroimagem mostram que ela recruta as mesmas áreas clássicas da linguagem falada, como Broca e Wernicke, no hemisfério esquerdo.</p>",
+    "marca": "consenso",
+    "fonte": 10
+   }
+  ],
+  "fecho": "Crianças surdas na Nicarágua criaram uma língua nova do zero, geração após geração. Esse caso alimenta o debate sobre até que ponto a linguagem é inata."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: soa como IA (0.59)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.95,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.06,
+    "3": 0.92,
+    "4": 0.02
+   },
+   "confidence": 0.93
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.59
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 0.99
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.01,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 0.99
+   },
+   "confidence": 0.98
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.07,
+    "controverso": 0.02,
+    "especulacao": 0,
+    "consenso": 0.91
+   },
+   "confidence": 0.88
+  }
+ },
+ "custo_usd": 0.00825
+}

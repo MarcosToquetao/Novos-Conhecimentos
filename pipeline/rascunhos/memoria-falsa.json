@@ -1,0 +1,181 @@
+{
+ "id": "memoria-falsa",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:31:47",
+ "modelo": "deepseek-flash",
+ "rodadas": 1,
+ "licao": {
+  "gancho": "Peça a uma pessoa para memorizar uma lista com cama, descanso, acordado, cansado, sonho, cochilo, paz, bocejo, soneca. Depois, pergunte quais palavras estavam lá. É muito comum que ela diga, com confiança, que 'sono' estava na lista. Mas 'sono' nunca foi dita.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Esse é o paradigma DRM, nome que junta James Deese, que descreveu o efeito em 1959, e Henry Roediger e Kathleen McDermott, que o retomaram em 1995. A memória falsa não é algo raro: pode ser produzida de forma confiável, em minutos, em praticamente qualquer pessoa.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Nas listas de Roediger e McDermott, cada palavra está ligada a uma palavra crítica que nunca aparece. Ao processar cada item, a mente ativa automaticamente conceitos relacionados na memória semântica. Essa ativação é tão forte que a pessoa confunde a palavra crítica com uma lembrança real de tê-la visto ou ouvido.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a pessoa 'lembra' da palavra sono se ela nunca foi apresentada?",
+    "alts": [
+     "Ela ouviu a palavra em outro momento e confundiu as listas",
+     "A ativação automática do conceito de sono, provocada pelas palavras associadas, é confundida com uma lembrança real",
+     "A palavra sono estava na lista, mas ela não prestou atenção"
+    ],
+    "correta": 1,
+    "porque": "A explicação mais aceita é que processar palavras como cama, sonho e cochilo ativa o conceito de sono na memória semântica. Essa ativação é forte o bastante para ser confundida com uma lembrança de ter visto a palavra."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em experimentos, participantes 'lembram' da palavra crítica em cerca de 40% a 55% dos casos. Essa taxa é comparável à lembrança de palavras que realmente estavam na lista. Ou seja, a memória falsa pode ser tão vívida quanto a verdadeira.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Loftus e Pickrell foram além das palavras isoladas. Tentaram implantar em adultos a lembrança de um episódio inteiro que nunca aconteceu: ficar perdido num shopping por volta dos 5 anos. Usaram um parente mais velho para 'confirmar' o episódio fictício junto com três lembranças reais.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Cerca de um quarto dos participantes passou a relatar lembrar do episódio fictício, alguns acrescentando detalhes sensoriais e emocionais próprios que não faziam parte da história original. Uma réplica pré-registrada de 2023, com amostra cinco vezes maior, encontrou cerca de 35% desenvolvendo alguma crença ou memória falsa do episódio.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O estudo do shopping prova que a maioria dos relatos de abuso infantil recuperados em terapia é falsa?",
+    "alts": [
+     "Sim, porque mostra que memórias inteiras podem ser implantadas",
+     "Não, o estudo mostra que é possível implantar uma memória inteira sob condições específicas, não que relatos de abuso sejam em geral falsos",
+     "Sim, porque a taxa de falsa memória foi alta"
+    ],
+    "correta": 1,
+    "porque": "Loftus foi explícita: o estudo não prova que toda memória de abuso recuperada em terapia seja falsa. Ele mostra que é possível implantar uma lembrança inteiramente inventada em algumas pessoas, sob condições específicas. Usar o estudo para descartar automaticamente qualquer relato de abuso é uma extrapolação indevida."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Um dos achados centrais é que a confiança com que alguém relata uma lembrança não é uma boa medida de sua precisão. Pessoas relatam memórias falsas com o mesmo grau de confiança subjetiva, e às vezes mais riqueza de detalhes, do que memórias verdadeiras. Isso mudou protocolos de entrevista policial e psicológica, tornando-os mais cautelosos com perguntas sugestivas.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   }
+  ],
+  "fecho": "Se a memória pode ser alterada tão facilmente, o que acontece quando lembramos de algo e depois recebemos nova informação? Isso tem nome: reconsolidação da memória."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.84,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.16,
+    "3": 0.81,
+    "4": 0.02
+   },
+   "confidence": 0.83
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 0.99
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.09,
+    "controverso": 0.02,
+    "especulacao": 0,
+    "consenso": 0.89
+   },
+   "confidence": 0.86
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.42,
+    "consenso": 0.57,
+    "especulacao": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.43
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  }
+ },
+ "custo_usd": 0.00128
+}

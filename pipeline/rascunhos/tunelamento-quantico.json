@@ -1,0 +1,172 @@
+{
+ "id": "tunelamento-quantico",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:32:35",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Uma bola dentro de um vale só sai se tiver energia para subir a colina. Um elétron com energia menor que a barreira aparece do outro lado. Ele não ganha energia e não pula por cima.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Na física clássica, a bola precisa de energia cinética suficiente para subir até o topo da colina. Se for menor, ela sobe, para e volta. A região dentro da colina é proibida para a bola, porque ali a energia cinética seria negativa.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que significa dizer que uma região é 'classicamente proibida'?",
+    "alts": [
+     "Que nenhuma partícula pode estar ali, em nenhuma circunstância",
+     "Que aquele modelo físico não permite a partícula ali com aquela energia",
+     "Que a partícula perde energia ao entrar nessa região"
+    ],
+    "correta": 1,
+    "porque": "Proibido classicamente é uma propriedade do modelo de Newton. Não é o mesmo que impossível na natureza. A mecânica quântica é um modelo melhor e autoriza algo que o anterior não autorizava."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Na mecânica quântica, a partícula é descrita por uma função de onda. O quadrado dessa função dá a probabilidade de encontrá-la em cada ponto, se alguém medir. A incerteza é da própria partícula, não falha de quem observa.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A equação de Schrödinger diz como a função de onda muda no espaço. Fora da barreira, ela oscila como onda comum. Dentro da barreira, onde a energia é menor que a altura, ela não oscila: decai suavemente, como um sinal de rádio que enfraquece.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Se a função de onda não cai a zero imediatamente ao entrar na barreira, o que acontece quando a barreira é fina?",
+    "alts": [
+     "A partícula ganha energia emprestada e salta por cima",
+     "Sobra uma amplitude pequena, mas não nula, do outro lado",
+     "A função de onda desaparece por completo dentro da barreira"
+    ],
+    "correta": 1,
+    "porque": "A queda é exponencial, não instantânea. Numa barreira fina, sobra amplitude do outro lado, e onde há amplitude não nula existe chance real de encontrar a partícula. É essa sobra que constitui o tunelamento."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A probabilidade de tunelar cai exponencialmente com a largura da barreira, com a raiz quadrada da diferença entre altura e energia, e com a raiz quadrada da massa. Dobrar a largura pode reduzir a chance por milhares ou milhões de vezes.</p>",
+    "marca": "consenso",
+    "fonte": 17
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em 1928, Gamow, de um lado, e Gurney com Condon, do outro, explicaram assim o decaimento alfa. A partícula alfa tinha energia menor que a barreira elétrica do núcleo, mas escapava. A teoria derivou uma relação que Geiger e Nuttall já tinham medido em 1911.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a meia-vida de isótopos radioativos varia de frações de segundo a bilhões de anos?",
+    "alts": [
+     "Porque alguns núcleos são mais quentes que outros",
+     "Porque a probabilidade de tunelamento despenca exponencialmente com pequenas quedas na energia da partícula alfa",
+     "Porque a força nuclear forte muda de intensidade entre isótopos"
+    ],
+    "correta": 1,
+    "porque": "A sensibilidade exponencial do tunelamento à energia faz a meia-vida disparar. O polônio-212, com alfa de 8,78 MeV, tem meia-vida de 0,3 microssegundo; o urânio-238, com alfa perto de 4,2 MeV, tem 4,46 bilhões de anos."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O mesmo princípio gerou o microscópio de tunelamento de varredura, que mede uma corrente de elétrons através de uma lacuna de vácuo. A corrente muda por um fator de dez quando a distância varia menos de um angström, o que permite distinguir átomos individuais. O tunelamento também é necessário para a fusão no Sol, combinado com a conversão rara de próton em nêutron pela força fraca.</p>",
+    "marca": "consenso",
+    "fonte": 6
+   }
+  ],
+  "fecho": "Se o tunelamento permite atravessar barreiras, o que acontece com o vácuo entre duas placas metálicas? Isso tem nome: efeito Casimir."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 9: 66 palavras (máximo 60)"
+ ],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.93,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.1,
+    "3": 0.87,
+    "4": 0.03
+   },
+   "confidence": 0.88
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ambigua_2": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "ambigua_5": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "controverso": 0,
+    "especulacao": 0,
+    "consenso": 1
+   },
+   "confidence": 1
+  }
+ },
+ "custo_usd": 0.01023
+}

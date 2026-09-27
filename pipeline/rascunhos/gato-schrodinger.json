@@ -1,0 +1,165 @@
+{
+ "id": "gato-schrodinger",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:39:31",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Em 1935, Erwin Schrödinger publicou um experimento mental famoso: um gato numa caixa com um átomo radioativo que, se decair, quebra um frasco de veneno. A versão popular diz que o gato fica vivo e morto ao mesmo tempo até alguém olhar. Mas essa não era a intenção dele. Ele queria mostrar que a interpretação da época levava a um absurdo.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>O experimento do gato foi proposto como uma <strong>reductio ad absurdum</strong>: levar uma ideia às últimas consequências para mostrar que ela não pode estar certa. Schrödinger não acreditava que o gato estivesse realmente vivo e morto. Ele usou o absurdo para criticar a ideia de que a superposição quântica se aplica a objetos grandes.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Partículas isoladas podem estar em superposição, uma combinação de estados. Isso é experimentalmente comprovado. O que não se sabe é por que objetos grandes, como gatos, nunca aparecem em superposição. Isso é o problema da medição.</p>",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A resposta mais aceita é a <strong>decoerência</strong>: a interação com o ambiente (ar, luz, calor) destrói a superposição rapidamente. O colapso surge do contato com o mundo exterior, não da consciência do observador.</p>",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que a decoerência explica?",
+    "alts": [
+     "Por que o gato está vivo e morto ao mesmo tempo",
+     "Por que objetos grandes não mostram superposição observável",
+     "Por que a mecânica quântica está errada"
+    ],
+    "correta": 1,
+    "porque": "A decoerência mostra que a interação com o ambiente destrói a superposição de sistemas grandes. Ela não resolve o problema filosófico de por que um resultado definido é escolhido."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Físicos já criaram versões reais de 'estados de gato' em laboratório, com átomos ou fótons em superposição de dois estados distintos. Serge Haroche e David Wineland ganharam o Nobel de Física de 2012 por técnicas para criar e observar esses estados.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que foi realmente feito em laboratório?",
+    "alts": [
+     "Um gato de verdade em superposição",
+     "Átomos e fótons em superposição de estados",
+     "A comprovação de que a decoerência não existe"
+    ],
+    "correta": 1,
+    "porque": "Os experimentos usam partículas isoladas, não objetos macroscópicos. A decoerência impede que gatos reais fiquem em superposição observável."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O problema da medição continua em aberto. Diferentes interpretações, como Copenhague, muitos-mundos e colapso objetivo, fazem as mesmas previsões numéricas, mas discordam sobre o que acontece no momento da medição. Um levantamento de 2013 mostrou opiniões divididas entre especialistas.</p>",
+    "marca": "emergente",
+    "fonte": 9
+   }
+  ],
+  "fecho": "E se a superposição puder ser mantida em sistemas cada vez maiores? Isso se conecta ao emaranhamento quântico e às desigualdades de Bell, que testam os limites da mecânica quântica."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
+ "alertas_jev": [
+  "tela 7: soa como IA (0.55)",
+  "tela 7: marcada emergente, JEV diz controverso (0.95)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.93,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.09,
+    "3": 0.89,
+    "4": 0.02
+   },
+   "confidence": 0.91
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "consenso": 0.75,
+    "controverso": 0.23,
+    "emergente": 0.01
+   },
+   "confidence": 0.66
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 0.97,
+    "controverso": 0.02,
+    "emergente": 0.01
+   },
+   "confidence": 0.96
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 0.99,
+    "controverso": 0,
+    "emergente": 0.01
+   },
+   "confidence": 0.99
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.55
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 0.05,
+    "controverso": 0.95,
+    "emergente": 0
+   },
+   "confidence": 0.92
+  }
+ },
+ "custo_usd": 0.00642
+}

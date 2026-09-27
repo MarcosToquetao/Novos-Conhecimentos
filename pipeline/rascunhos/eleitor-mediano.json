@@ -1,0 +1,168 @@
+{
+ "id": "eleitor-mediano",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:39:19",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Numa rua reta, duas lojas de doces concorrentes tendem a se instalar lado a lado, bem no meio, em vez de se espalharem para atender melhor as pontas. A política partidária segue a mesma lógica?",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Imagine uma eleição com um único tema em disputa, representado como uma linha do mais à esquerda ao mais à direita. Cada eleitor tem uma posição preferida, e vota no candidato mais próximo. Com exatamente dois candidatos disputando votos, onde eles devem se posicionar?</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O economista Duncan Black formalizou a resposta em 1948: os dois candidatos convergem para a posição do <strong>eleitor mediano</strong>, aquele que tem metade dos eleitores à sua esquerda e metade à sua direita.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O raciocínio é simples. Se um candidato está à esquerda do centro, o outro pode se posicionar um pouco mais perto do meio e conquistar todos os eleitores entre os dois, mais a metade que já estava do seu lado. Isso empurra ambos para o centro exato.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que os dois candidatos não se posicionam em extremos opostos para agradar eleitores de cada lado?",
+    "alts": [
+     "Porque os eleitores preferem candidatos com posições mais extremas",
+     "Porque qualquer deslocamento em direção ao centro rouba eleitores do adversário sem perder os próprios",
+     "Porque as regras eleitorais proíbem posições extremas"
+    ],
+    "correta": 1,
+    "porque": "O candidato que se move para o centro atrai eleitores que estavam mais próximos do oponente, sem abrir mão dos que já estavam mais próximos dele. Isso o torna imbatível naquela eleição."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A ideia não nasceu na política. Em 1929, Harold Hotelling usou a mesma lógica para explicar por que duas lojas numa rua reta acabam lado a lado no meio: cada uma rouba clientes da outra ao se mover para o centro.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Anthony Downs aplicou o teorema à competição partidária em 1957, prevendo que partidos racionais convergiriam para posições centristas semelhantes. Mas isso só vale sob condições específicas: uma única dimensão de disputa, dois candidatos, informação completa e voto baseado apenas na proximidade ideológica.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Na política real, essas condições raramente se aplicam. As eleições envolvem múltiplas dimensões, como economia, costumes e política externa. Quando há mais de um eixo em jogo, Richard McKelvey mostrou em 1976 que geralmente não existe posição de equilíbrio estável, e a política pode se mover de qualquer ponto para qualquer outro por sequências de votações.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que o teorema do caos de McKelvey implica para a política real?",
+    "alts": [
+     "Que o teorema do eleitor mediano está matematicamente errado",
+     "Que em espaços multidimensionais não há um resultado estável de convergência, o que explica a falta de centrismo",
+     "Que toda eleição real converge para o centro, independentemente do número de dimensões"
+    ],
+    "correta": 1,
+    "porque": "O teorema do caos mostra que a estabilidade do eleitor mediano depende da unidimensionalidade. Com múltiplas dimensões, não há equilíbrio garantido, e a política pode vagar."
+   }
+  ],
+  "fecho": "Como decidir quando há mais de dois candidatos ou múltiplas dimensões? Arrow mostrou que nenhum sistema de votação atende a todos os critérios razoáveis de justiça ao mesmo tempo."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.89,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.11,
+    "3": 0.89,
+    "4": 0
+   },
+   "confidence": 0.9
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.03,
+    "emergente": 0.01,
+    "consenso": 0.89,
+    "controverso": 0.07
+   },
+   "confidence": 0.86
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.09,
+    "emergente": 0.01,
+    "consenso": 0.76,
+    "especulacao": 0.14
+   },
+   "confidence": 0.67
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.24,
+    "emergente": 0.03,
+    "consenso": 0.61,
+    "especulacao": 0.12
+   },
+   "confidence": 0.49
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.05,
+    "emergente": 0.01,
+    "consenso": 0.92,
+    "especulacao": 0.02
+   },
+   "confidence": 0.89
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.1
+  }
+ },
+ "custo_usd": 0.0065
+}

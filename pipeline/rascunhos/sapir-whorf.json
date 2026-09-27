@@ -1,0 +1,213 @@
+{
+ "id": "sapir-whorf",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:43:04",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "A ideia de que os inuítes têm centenas de palavras para neve é repetida há décadas. O número cresceu a cada recontagem, sem que ninguém fosse conferir. A história é falsa, e o erro revela como pensamos sobre língua e pensamento.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Você já ouviu que os inuítes têm dezenas ou centenas de palavras para neve? A história foi rastreada por Laura Martin e popularizada por Geoffrey Pullum. Boas mencionou quatro raízes em 1911, e a cada recontagem o número aumentou, chegando a \"quatrocentas\" nos anos 1980, sem nenhuma fonte nova.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Há dois problemas adicionais. Línguas inuítes são polissintéticas: formam palavras longas por aglutinação, então contar palavras não faz sentido claro. Em português também dizemos neve fresca, neve compactada, neve granulada. E mesmo que o número fosse alto, isso só mostraria que as pessoas desenvolvem vocabulário para o que é relevante.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a contagem de palavras para neve não prova que a língua molda o pensamento?",
+    "alts": [
+     "Porque os inuítes não têm realmente muitas palavras para neve",
+     "Porque ter mais palavras para um assunto só mostra que ele é importante na cultura, não que a língua limite o pensamento",
+     "Porque o número exato é difícil de determinar"
+    ],
+    "correta": 1,
+    "porque": "Mesmo que o número fosse alto, isso apenas indica que o vocabulário se adapta ao que importa. Não diz nada sobre a língua determinar o que se pode pensar. A intuição tentadora é achar que a contagem em si já é evidência."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O russo não tem uma palavra genérica para \"azul\": distingue obrigatoriamente sinij (azul-escuro) de goluboj (azul-claro), como o português distingue vermelho de rosa. Em 2007, Winawer e colaboradores publicaram um experimento no PNAS. Falantes de russo foram mais rápidos quando dois tons caiam em categorias linguísticas diferentes, e a vantagem sumia sob interferência verbal.</p>",
+    "marca": "emergente",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Mas a replicação de 2020 contou outra história. Um estudo na Cognition não encontrou a vantagem de tempo de reação na fronteira sinij/goluboj. Os autores concluíram que os efeitos da língua sobre a percepção são mais fortes em tarefas que promovem categorização explícita e mais fracos ou inexistentes em tarefas que não a exigem.</p>",
+    "marca": "emergente",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que a replicação de 2020 sugere sobre o efeito da língua na percepção de cores?",
+    "alts": [
+     "Que o efeito é forte e independente do tipo de tarefa",
+     "Que o efeito depende do tipo de tarefa: aparece quando a categorização é exigida, mas não em discriminação perceptiva pura",
+     "Que a língua não tem nenhum efeito sobre a percepção"
+    ],
+    "correta": 1,
+    "porque": "Os autores argumentam que os efeitos são mais fortes em tarefas que promovem categorização e mais fracos ou inexistentes quando a tarefa não exige categorização explícita. A alternativa A superestima o efeito, e a C o descarta por completo."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O caso mais robusto em favor de efeitos linguísticos reais não é cor: é referência espacial. Algumas línguas usam referenciais absolutos, como pontos cardeais. Em Guugu Yimithirr, falado no norte da Austrália, não existem palavras para esquerda e direita: uma xícara está a nordeste da colher, e o falante diz isso naturalmente.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Stephen Levinson e colaboradores documentaram que falantes dessas línguas mantêm orientação absoluta permanente e precisa, mesmo em ambientes fechados, em veículos e após deslocamentos complexos. Em tarefas não verbais de rotação e reconstrução de arranjos, esses falantes resolvem o problema em coordenadas absolutas, enquanto falantes de línguas relativas usam coordenadas centradas no corpo. Mesmo aqui, resta uma dúvida séria: a língua causa o hábito cognitivo, ou ambos derivam do ambiente e da prática cultural? Comunidades com referencial absoluto vivem tipicamente em terreno aberto com marcos geográficos estáveis, e a navegação é parte da vida diária. A língua pode ser consequência da prática, não causa do modo de pensar.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o caso do espaço é considerado mais convincente que o da cor?",
+    "alts": [
+     "Porque envolve diferenças de tempo de reação muito pequenas",
+     "Porque o efeito aparece em tarefas não linguísticas, é grande e foi replicado em populações independentes",
+     "Porque os falantes de línguas absolutas têm melhor memória espacial em geral"
+    ],
+    "correta": 1,
+    "porque": "Três razões metodológicas: o efeito aparece em tarefas não linguísticas, os tamanhos de efeito são grandes e comportamentalmente visíveis, e foi replicado em vários continentes. A alternativa A descreve o caso da cor, e a C não é sustentada pelo documento."
+   }
+  ],
+  "fecho": "Se a língua não determina o pensamento, o que ela realmente faz? A resposta pode estar na gramática universal e no debate inatista."
+ },
+ "erros": [
+  "tela 8: 108 palavras (máximo 60)"
+ ],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 4: marcada emergente, JEV diz controverso (0.66)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.95,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.07,
+    "3": 0.91,
+    "4": 0.02
+   },
+   "confidence": 0.92
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.02,
+    "emergente": 0.01,
+    "controverso": 0.01,
+    "consenso": 0.96
+   },
+   "confidence": 0.93
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.14,
+    "consenso": 0.79,
+    "emergente": 0.03,
+    "controverso": 0.04
+   },
+   "confidence": 0.73
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.19
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.66,
+    "consenso": 0.01,
+    "emergente": 0.33
+   },
+   "confidence": 0.55
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.07,
+    "consenso": 0.01,
+    "emergente": 0.92
+   },
+   "confidence": 0.9
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.25,
+    "consenso": 0.19,
+    "emergente": 0.56
+   },
+   "confidence": 0.41
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "especulacao": 0,
+    "controverso": 0.52,
+    "consenso": 0.06,
+    "emergente": 0.42
+   },
+   "confidence": 0.36
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.19
+  }
+ },
+ "custo_usd": 0.00745
+}

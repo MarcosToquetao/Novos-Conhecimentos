@@ -1,0 +1,150 @@
+{
+ "id": "efeito-hidrofobico",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:33:04",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Coloque azeite na água e espere. As fases se separam, e a explicação escolar é que as moléculas apolares e a água se repelem. Só que metano e água se atraem, e dissolver metano em água a 25 graus libera calor.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>A imagem de que óleo e água se repelem está errada num ponto que dá para medir. Não existe repulsão entre uma molécula apolar e a água. Metano e água se atraem fracamente, e dissolver metano em água a 25 graus <strong>libera calor</strong>.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Se energia decidisse, o metano se dissolveria com prazer. Ele quase não se dissolve. Processos espontâneos não são só os que liberam energia. Gelo derrete a 20 graus absorvendo calor, e sal esfria o copo ao se dissolver.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Uma molécula de água no meio do líquido tem muitas orientações compatíveis com manter suas ligações de hidrogênio. Muitos arranjos, entropia alta. Perto de um metano, que não faz ligação de hidrogênio, a água se ajeita para manter a rede contornando o intruso, e o leque de arranjos encolhe.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que dissolver uma molécula apolar em água é desfavorável, se libera calor?",
+    "alts": [
+     "Porque a água e a molécula apolar se repelem",
+     "Porque a água ao redor perde arranjos possíveis, e esse custo entrópico supera o ganho de energia",
+     "Porque as ligações de hidrogênio da água se quebram e somem"
+    ],
+    "correta": 1,
+    "porque": "A entalpia é favorável, a energia livre não. A diferença está no termo entrópico: a água precisa se acomodar em orientações mais restritas para preservar a rede de ligações. As ligações não se quebram, elas se reorientam."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Para o metano em água, a entalpia é −11,5 kJ/mol e a energia livre é +8,3 kJ/mol. A diferença de +19,8 kJ/mol é toda entrópica. É uma perda de entropia comparável à de congelar alguns mols de água.</p>",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Junte duas moléculas de azeite separadas na água. Cada uma tinha sua camada de água restrita. Juntas, elas compartilham uma única camada e a superfície exposta diminui. As moléculas de água liberadas voltam ao volume e recuperam a liberdade de orientação. A entropia total sobe.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que faz as gotas de óleo se juntarem na água?",
+    "alts": [
+     "Uma força hidrofóbica que puxa as gotas uma para a outra",
+     "O sistema procurando o arranjo com mais possibilidades, que é aquele em que menos água fica presa contornando o óleo",
+     "As moléculas de óleo se atraindo por dispersão de London, que é forte na água"
+    ],
+    "correta": 1,
+    "porque": "O ganho de entropia está na água, não no óleo. A atração direta entre moléculas apolares é dispersão de London, existe em qualquer solvente e é várias vezes menor que o efeito hidrofóbico."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Isso aparece em quatro lugares com a mesma contabilidade. Cadeias laterais apolares de proteínas se escondem no interior ao dobrar. Lipídios formam a bicamada da membrana sozinhos. Detergentes formam micelas. Fármacos encaixam superfície apolar contra superfície apolar no alvo, expulsando a água entre as duas.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O domínio entrópico vale na temperatura da vida, não em qualquer uma. Perto de 113 °C a entropia de transferência se anula e o efeito passa a ser entálpico, com magnitude parecida em energia livre. O efeito enfraquece tanto ao aquecer acima desse ponto quanto ao resfriar abaixo dele.</p>",
+    "marca": "consenso",
+    "fonte": 6
+   }
+  ],
+  "fecho": "A água é a mesma que congela, e ainda assim derrete a 20 graus absorvendo calor. Por que o gelo flutua e a água líquida tem densidade máxima a 4 graus? As ligações de hidrogênio explicam."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.93,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.11,
+    "3": 0.84,
+    "4": 0.04
+   },
+   "confidence": 0.87
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.98,
+    "emergente": 0.01,
+    "especulacao": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.97
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "consenso": 0.83,
+    "emergente": 0.11,
+    "especulacao": 0.01,
+    "controverso": 0.05
+   },
+   "confidence": 0.77
+  }
+ },
+ "custo_usd": 0.00923
+}

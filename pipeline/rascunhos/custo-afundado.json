@@ -1,0 +1,189 @@
+{
+ "id": "custo-afundado",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:38:54",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Você comprou um ingresso não reembolsável para um filme. Na metade, percebe que o filme é ruim. Sair agora devolveria o tempo restante da sua noite, mas o dinheiro não volta de jeito nenhum. Ainda assim, boa parte das pessoas fica até o fim, citando o dinheiro já gasto.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Esse é o exemplo mais simples do <strong>custo afundado</strong>: deixar uma decisão futura ser influenciada por um custo passado que não pode ser recuperado, não importa o que se escolha daqui para frente.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A regra normativa da economia é direta: só custos e benefícios futuros deveriam entrar na decisão. O que já foi gasto é igual em qualquer cenário a partir de agora, então não deveria pesar.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o dinheiro do ingresso já gasto não deveria influenciar a decisão de sair ou ficar?",
+    "alts": [
+     "Porque ele é pequeno demais para importar",
+     "Porque ele é igual em qualquer escolha futura: sair ou ficar não o traz de volta",
+     "Porque a decisão deve se basear apenas no prazer do filme"
+    ],
+    "correta": 1,
+    "porque": "O custo já incorrido é idêntico nos dois cenários possíveis (sair ou ficar). Por isso não pode servir de critério para escolher entre eles. A tentadora é a segunda alternativa porque parece razoável, mas o princípio vale para qualquer valor, não só para valores pequenos."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Hal Arkes e Catherine Blumer testaram isso em 1985 com um cenário de viagem de esqui. Metade dos participantes imaginava ter comprado uma viagem de $100 não reembolsável, e depois descobria uma viagem melhor por $50 no mesmo fim de semana. Cerca de metade escolheu a viagem pior, citando o dinheiro já investido.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Arkes e Blumer propuseram uma explicação psicológica: o desejo de não parecer ter desperdiçado o investimento, ligado à aversão à perda e ao medo de ser visto como alguém que jogou dinheiro fora.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma pessoa insiste em terminar um projeto que já está claro que vai dar prejuízo, dizendo que já investiu muito tempo nele. O que esse padrão ilustra?",
+    "alts": [
+     "Um erro de cálculo aritmético sobre os números do projeto",
+     "A influência de um custo passado irrecuperável sobre uma decisão futura, ligada à aversão a parecer desperdício",
+     "Uma estratégia racional de maximizar o lucro futuro"
+    ],
+    "correta": 1,
+    "porque": "A pessoa muitas vezes sabe que o tempo já foi gasto e ainda assim deixa isso pesar, por razões emocionais e sociais. A tentadora é a primeira alternativa porque parece um erro de raciocínio, mas o mecanismo proposto não é confusão aritmética, é proteção da própria imagem."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em organizações existe uma versão relacionada, a <strong>escalada de comprometimento</strong>, descrita por Barry Staw a partir de 1976: gestores continuam investindo em projetos com desempenho ruim, às vezes aumentando o investimento após sinais claros de fracasso, para justificar a decisão original. O problema piora quando quem decide continuar não é quem arca com o custo de reconhecer o fracasso.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Estudos com ratos e camundongos mostraram um padrão parecido: quanto mais tempo esperavam por uma recompensa, mais tempo adicional ficavam dispostos a esperar. Por décadas isso foi lido como prova de que o efeito do custo afundado tem raízes evolutivas profundas.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um estudo de 2022 revisitou o comportamento dos animais e propôs uma explicação alternativa. Qual foi a conclusão?",
+    "alts": [
+     "Os animais não mostram persistência após investimento; os dados anteriores estavam errados",
+     "O padrão de persistência pode surgir de um processo racional, porque o tempo já investido carrega informação estatística real sobre a chance de sucesso futuro",
+     "O experimento humano de Arkes e Blumer foi refutado e o efeito não existe em pessoas"
+    ],
+    "correta": 1,
+    "porque": "O modelo racional, sem nenhum viés embutido, reproduziu o mesmo padrão animal. A tentadora é a terceira alternativa porque confunde as duas coisas: o experimento humano continua válido para escolhas explícitas e únicas; o que se questiona é a generalização automática para tarefas de espera repetida."
+   }
+  ],
+  "fecho": "Por que é tão difícil admitir que jogamos dinheiro fora? A resposta pode estar na dissonância cognitiva: o desconforto de manter duas ideias que não combinam."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
+ "alertas_jev": [
+  "tela 1: soa como IA (0.52)",
+  "tela 2: soa como IA (0.56)",
+  "tela 8: marcada consenso, JEV diz controverso (0.63)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.9,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.11,
+    "3": 0.88,
+    "4": 0.01
+   },
+   "confidence": 0.9
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.56
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0.03,
+    "controverso": 0.31,
+    "consenso": 0.65
+   },
+   "confidence": 0.53
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "consenso": 0.78,
+    "emergente": 0.09,
+    "controverso": 0.12
+   },
+   "confidence": 0.71
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.4
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.07
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.03,
+    "consenso": 0.73,
+    "emergente": 0.14,
+    "controverso": 0.1
+   },
+   "confidence": 0.63
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "especulacao": 0.05,
+    "consenso": 0.16,
+    "emergente": 0.16,
+    "controverso": 0.63
+   },
+   "confidence": 0.5
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.24
+  }
+ },
+ "custo_usd": 0.00905
+}

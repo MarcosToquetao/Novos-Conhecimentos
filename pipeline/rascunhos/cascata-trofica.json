@@ -1,0 +1,162 @@
+{
+ "id": "cascata-trofica",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:35:45",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Um vídeo sobre lobos em Yellowstone passou de 43 milhões de visualizações. Ele conta que o medo dos cervos teria mudado rios de lugar. Boa parte da história é contestada por ecólogos.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Numa cadeia alimentar, plantas, herbívoros e predadores formam <strong>níveis tróficos</strong>. Uma cascata trófica acontece quando uma mudança num nível se propaga por pelo menos dois níveis abaixo, mexendo também na quantidade de plantas.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O exemplo mais bem documentado não tem lobo. Na costa do Alasca, lontras-marinhas comem ouriços-do-mar, que comem florestas de kelp, uma alga gigante. Onde havia lontra, havia poucos ouriços e kelp denso. Onde a lontra sumiu, o ouriço tomou conta e destruiu a alga.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Cascatas tróficas existem e foram demonstradas em vários sistemas, de lagos a recifes. A ideia de que predadores de topo mantêm o mundo verde é uma hipótese central da ecologia desde 1960.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que é uma cascata trófica?",
+    "alts": [
+     "Um predador que começa a comer plantas quando falta presa",
+     "Uma mudança num nível da cadeia que se propaga por pelo menos dois níveis abaixo",
+     "A extinção de um predador que faz a população de herbívoros sumir para sempre"
+    ],
+    "correta": 1,
+    "porque": "A cascata liga a mudança no topo a uma mudança lá embaixo, nas plantas. O predador pode comer ou apenas assustar o herbívoro, mas o efeito precisa chegar até a base da cadeia para contar como cascata."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em Yellowstone, lobos foram reintroduzidos em 1995. O vídeo conta que o <strong>medo</strong> dos cervos-canadenses bastou para salvar as árvores e mudar o curso dos rios. Só que o medo muda onde o cervo anda, sem matar ninguém. É um mecanismo diferente de simplesmente haver menos cervos comendo.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual é a diferença entre o efeito de densidade e o efeito de medo?",
+    "alts": [
+     "No efeito de densidade, o predador mata herbívoros e sobram menos bocas comendo plantas; no efeito de medo, o predador só assusta e o herbívoro que continua vivo come menos",
+     "No efeito de densidade, o predador come plantas; no efeito de medo, o predador come herbívoros",
+     "Os dois são a mesma coisa, só com nomes diferentes"
+    ],
+    "correta": 0,
+    "porque": "No efeito de densidade, a conta é simples: menos herbívoros vivos, menos folhas comidas. No efeito de medo, a quantidade de herbívoros pode ser a mesma, mas eles comem menos ou evitam certas áreas. São caminhos distintos para o mesmo resultado final."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Estudos que foram medir o medo diretamente não acharam o efeito esperado. Um de 2010 testou se choupos-tremedores cresciam mais onde o risco de predação era maior. Não cresciam. Um cervo encontrava um lobo a uma distância de risco, em média, uma vez a cada nove dias, e isso não mexia na gordura corporal nem na gravidez.</p>",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
+    "tipo": "pergunta",
+    "q": "A vegetação ribeirinha de Yellowstone se recuperou depois que os lobos voltaram. O que isso permite concluir?",
+    "alts": [
+     "Que o medo dos cervos foi o motor principal da recuperação",
+     "Que houve uma mudança na direção esperada, mas o mecanismo ainda precisa ser testado separadamente",
+     "Que os lobos sozinhos foram os únicos responsáveis por tudo"
+    ],
+    "correta": 1,
+    "porque": "A recuperação de salgueiros e choupos e a queda no número de cervos são bem medidas. O que não está resolvido é se o motor foi o medo mudando comportamento ou simplesmente menos cervos comendo. Ver os dois eventos juntos no tempo não separa esses mecanismos."
+   }
+  ],
+  "fecho": "Se tirar um predador pode desmontar um ecossistema, o que acontece quando uma espécie de fora chega e não tem predador nenhum? Esse é o problema das espécies invasoras."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.98,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.05,
+    "3": 0.92,
+    "4": 0.03
+   },
+   "confidence": 0.93
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.16
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0.01,
+    "consenso": 0.97,
+    "controverso": 0.02
+   },
+   "confidence": 0.96
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.02,
+    "emergente": 0.05,
+    "consenso": 0.86,
+    "controverso": 0.07
+   },
+   "confidence": 0.81
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.13
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "especulacao": 0.01,
+    "emergente": 0.44,
+    "consenso": 0.05,
+    "controverso": 0.5
+   },
+   "confidence": 0.33
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.2
+  }
+ },
+ "custo_usd": 0.00834
+}

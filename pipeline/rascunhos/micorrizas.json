@@ -1,0 +1,161 @@
+{
+ "id": "micorrizas",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:42:47",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Uma raiz fina de planta tem cerca de 0,2 a 2 milímetros de diâmetro. Uma hifa de fungo tem entre 2 e 10 micrômetros, cerca de cem vezes mais fina. Essa diferença de escala é o começo de uma associação antiga e quase universal, e também de uma narrativa que a ciência ainda está tentando separar.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>O fósforo se difunde muito devagar no solo. A raiz esgota rapidamente o fósforo disponível na fina camada de terra ao seu redor, e além dessa zona esgotada ela não alcança. A hifa alcança.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Praticamente todas as plantas terrestres resolvem esse problema alojando fungos dentro ou em volta das raízes. Elas pagam com carboidrato da fotossíntese. A estrutura formada por raiz e fungo juntos se chama micorriza.</p><p>O fungo entrega fósforo e nitrogênio. A planta entrega carbono. Estimativas de síntese indicam que até 80% do nitrogênio e do fósforo de uma planta podem chegar por essa via.</p>",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a associação com fungos ajuda a planta a obter fósforo?",
+    "alts": [
+     "O fungo produz antibióticos que eliminam competidores por fósforo",
+     "As hifas são muito mais finas que as raízes e alcançam poros e volumes de solo inacessíveis à raiz",
+     "O fungo transforma o fósforo em uma forma que a planta absorve mesmo sem contato"
+    ],
+    "correta": 1,
+    "porque": "A vantagem está na escala: a hifa é cerca de cem vezes mais fina que a raiz e explora um volume de solo muito maior, inclusive poros minúsculos. O fungo também produz enzimas que liberam nutrientes presos, mas o ganho principal vem do alcance físico."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Como um mesmo fungo pode colonizar mais de uma planta ao mesmo tempo, é fisicamente possível que duas árvores estejam ligadas pelo mesmo micélio. A esse arranjo se dá o nome de rede micorrízica comum. Em 1997, um estudo de campo marcou bétulas e pseudotsugas com isótopos diferentes e mediu movimento de carbono nos dois sentidos, com saldo a favor da pseudotsuga.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Depois disso, a observação virou uma narrativa maior: árvores-mãe reconhecendo mudas, enviando açúcar, transmitindo sinais de alerta. Essa história circulou em livros e documentários. Mas o que os estudos de campo mostram é bem mais limitado.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma revisão de 2023 analisou 26 estudos de campo sobre se a rede melhora o desempenho de mudas. O que ela encontrou?",
+    "alts": [
+     "Resultados positivos em todos os estudos, confirmando a narrativa",
+     "Resultados positivos, neutros e negativos, sem sustentação consistente da afirmação",
+     "Nenhum estudo jamais foi feito sobre o tema"
+    ],
+    "correta": 1,
+    "porque": "A revisão encontrou resultados variados, dependentes de espécie, solo, distância e luz. Entre os estudos com controle adequado, apenas cerca de 18% mostraram efeito positivo atribuível à rede e não anulado pelo efeito das raízes."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O problema central é de método. O tratamento que deveria isolar a rede, um saco de malha que deixa hifas passarem e barra raízes, também exclui a competição das raízes vizinhas. Se a muda cresce mais, pode ser alívio de competição, e não presente vindo pela rede. Além disso, isótopos marcam o elemento, não o caminho: carbono marcado na muda pode ter chegado por hifa, solução do solo, exsudação, decomposição ou refixação de CO2.</p>",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Nada disso põe em dúvida a simbiose. A troca de nutrientes por carbono é consenso. O que está em disputa é se existe uma rede contínua e persistente ligando árvores no campo, e se o fluxo por ela muda o destino de uma muda. A revisão conclui que o conhecimento atual é esparso demais para orientar manejo florestal.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   }
+  ],
+  "fecho": "Se a rede entre árvores é incerta, o que mais as micorrizas fazem no solo? Elas ajudam a formar agregados, retêm água e estocam carbono. Isso conecta com serviços ecossistêmicos."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras",
+  "tela 2: 63 palavras (máximo 60)",
+  "tela 4: 62 palavras (máximo 60)",
+  "tela 7: 74 palavras (máximo 60)"
+ ],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.72,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.25,
+    "3": 0.74,
+    "4": 0
+   },
+   "confidence": 0.77
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.36
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "emergente": 0
+   },
+   "confidence": 0.99
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "controverso": 0.24,
+    "consenso": 0.2,
+    "especulacao": 0.01,
+    "emergente": 0.55
+   },
+   "confidence": 0.41
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "controverso": 0.43,
+    "consenso": 0.1,
+    "especulacao": 0.03,
+    "emergente": 0.44
+   },
+   "confidence": 0.26
+  }
+ },
+ "custo_usd": 0.00941
+}

@@ -1,0 +1,181 @@
+{
+ "id": "reconsolidacao",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:33:55",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Uma lembrança que parecia arquivada para sempre pode voltar a ser instável no momento em que você a recorda. E nessa janela, ela pode ser alterada.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Durante décadas, o modelo clássico dizia que uma memória nova passa por um processo de <strong>consolidação</strong>: fica estável em algumas horas e depois permanece fixa, como um arquivo salvo. Lembrar seria só ler o arquivo, sem alterá-lo.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em 2000, Karim Nader, Glenn Schafe e Joseph LeDoux desafiaram essa ideia. Treinaram ratos para associar um som a um choque leve. Depois que a memória de medo estava consolidada, tocaram o som de novo e, logo em seguida, injetaram na amígdala uma substância que bloqueia a síntese de proteínas. A memória praticamente desapareceu.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Se o mesmo bloqueio fosse feito sem reativar a memória antes, nada acontecia. Só a combinação de lembrar e bloquear proteínas enfraquecia a memória. Lembrar torna a memória instável de novo, e ela precisa ser <strong>reconsolidada</strong> para continuar estável.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a memória de medo dos ratos sumiu no experimento de Nader?",
+    "alts": [
+     "Porque o bloqueio de proteínas apagou a memória sem precisar de reativação",
+     "Porque a reativação abriu uma janela em que a memória ficou vulnerável ao bloqueio",
+     "Porque o som tocou alto demais e danificou a amígdala"
+    ],
+    "correta": 1,
+    "porque": "O bloqueio sozinho não fazia nada. A reativação foi o que tornou a memória instável e permitiu que o bloqueio a enfraquecesse."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em humanos, não se pode bloquear a síntese de proteínas. A adaptação clínica usa o propranolol, um beta-bloqueador seguro, administrado antes de a pessoa reativar uma memória traumática em sessões terapêuticas. A ideia é interferir na reconsolidação da carga emocional, sem apagar o fato lembrado.</p>",
+    "marca": "emergente",
+    "fonte": 4
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Alain Brunet e colegas conduziram um ensaio clínico randomizado, duplo-cego e controlado por placebo com 60 adultos com TEPT de longa duração. Eles tomaram propranolol ou placebo cerca de 90 minutos antes de seis sessões semanais de reativação da memória traumática. O grupo do propranolol teve redução significativa dos sintomas, comparado ao placebo.</p>",
+    "marca": "emergente",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que o propranolol faz nesse protocolo?",
+    "alts": [
+     "Apaga o conteúdo factual da memória traumática",
+     "Reduz a resposta emocional e fisiológica ligada à lembrança, sem eliminar o fato lembrado",
+     "Impede que a pessoa sinta medo em qualquer situação nova"
+    ],
+    "correta": 1,
+    "porque": "Pacientes tratados continuam lembrando o que aconteceu, mas relatam menos sofrimento ao recordar. O efeito é específico à memória reativada no tratamento, não uma supressão geral."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Meta-análises confirmam que o efeito é real, mas de magnitude variável entre estudos, dependendo do protocolo e do momento exato da administração. Em humanos, o bloqueio de reconsolidação não é tão forte quanto nos ratos.</p>",
+    "marca": "emergente",
+    "fonte": 3
+   }
+  ],
+  "fecho": "Se lembrar reabre a memória para ser reescrita, o que acontece quando a lembrança é repetida em um teste? Isso conecta com o efeito de teste e a prática de recuperação."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.06,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.02,
+    "3": 0.9,
+    "4": 0.08
+   },
+   "confidence": 0.92
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.08,
+    "consenso": 0.89,
+    "especulacao": 0,
+    "controverso": 0.03
+   },
+   "confidence": 0.85
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.08,
+    "consenso": 0.89,
+    "especulacao": 0,
+    "controverso": 0.03
+   },
+   "confidence": 0.85
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.88,
+    "consenso": 0.04,
+    "especulacao": 0,
+    "controverso": 0.08
+   },
+   "confidence": 0.84
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.84,
+    "consenso": 0.02,
+    "especulacao": 0,
+    "controverso": 0.14
+   },
+   "confidence": 0.79
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.05
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.79,
+    "consenso": 0.16,
+    "especulacao": 0,
+    "controverso": 0.05
+   },
+   "confidence": 0.72
+  }
+ },
+ "custo_usd": 0.0064
+}

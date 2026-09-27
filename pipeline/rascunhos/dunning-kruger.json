@@ -1,0 +1,187 @@
+{
+ "id": "dunning-kruger",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:42:18",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Você provavelmente já viu o gráfico. A linha sobe até o pico do Monte Estúpido, despenca no Vale do Desespero e sobe de novo até o Platô da Sustentabilidade. Ele não está em nenhum artigo científico. Foi desenhado por um consultor de gestão num blog em 2014.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>O gráfico popular sugere que quem sabe pouco acha que sabe muito, e só quem entende de verdade reconhece o próprio limite. A suspeita é antiga. Mas o desenho com pico e vale é uma ilustração de senso comum, não um resumo de dados.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em 1999, David Dunning e Justin Kruger fizeram quatro estudos com estudantes de Cornell. Em cada um, a pessoa fazia um teste e depois estimava em que percentil achava que tinha ficado. Ao todo, amostras pequenas, entre 45 e 140 alunos por estudo.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Eles não olharam pessoa por pessoa. Dividiram os participantes em quatro grupos pelo desempenho real, do mais baixo ao mais alto, e compararam as médias de autoavaliação de cada grupo.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "No estudo de humor, quem ficou no grupo de desempenho mais baixo se estimou em qual percentil?",
+    "alts": [
+     "Perto do topo, acima do percentil 90",
+     "Por volta da média, entre 55 e 68",
+     "No fundo da escala, abaixo do percentil 20"
+    ],
+    "correta": 1,
+    "porque": "O grupo mais fraco se achava mediano, não genial. Nenhum grupo, em nenhum estudo, estimou estar acima do percentil 74 em média."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Aqui entra a estatística. Dividir por quartis de desempenho real e olhar a autoavaliação dentro de cada grupo selecionado produz regressão à média. Quem foi selecionado por estar no extremo baixo tende a parecer mais perto da média na outra medida, e vice-versa.</p>",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em 2020, Gignac e Zajenkowski usaram métodos que evitam esse problema, com 929 adultos. Não acharam a curvatura prevista pela versão forte da hipótese e chamaram o efeito de majoritariamente um artefato estatístico.</p>",
+    "marca": "consenso",
+    "fonte": 8
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que dados puramente aleatórios podem reproduzir o padrão clássico?",
+    "alts": [
+     "Porque as pessoas julgam mal a própria competência mesmo em tarefas inventadas",
+     "Porque selecionar grupos por uma medida e comparar outra que regride à média cria o padrão sem nenhuma psicologia",
+     "Porque o computador simula vieses humanos automaticamente"
+    ],
+    "correta": 1,
+    "porque": "É o efeito combinado de autocorrelação e regressão à média. Nenhuma mente precisa ter julgado mal nada para o gráfico aparecer."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Mas não é a palavra final. Em 2023, Dunkel e colegas replicaram com amostra e métodos ajustados e encontraram um efeito real, na direção prevista, pequeno o bastante para questionar sua relevância prática.</p>",
+    "marca": "emergente",
+    "fonte": 9
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual é a leitura mais defensável hoje sobre o efeito Dunning-Kruger?",
+    "alts": [
+     "É totalmente real e confirma o gráfico do Monte Estúpido",
+     "Não existe, foi refutado pelas críticas estatísticas",
+     "Existe um viés metacognitivo genuíno, mas pequeno, somado a um artefato estatístico relevante"
+    ],
+    "correta": 2,
+    "porque": "As duas críticas e a réplica convergem: parte do padrão é artefato de método, parte é um núcleo real, e o núcleo real é menor do que a fama sugere."
+   }
+  ],
+  "fecho": "Se o efeito Dunning-Kruger encolheu quando testado com cuidado, quantos outros achados da psicologia sobrevivem à mesma pergunta? Isso tem nome: crise de replicação."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
+ "alertas_jev": [
+  "tela 6: marcada consenso, JEV diz controverso (0.82)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.97,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.06,
+    "3": 0.91,
+    "4": 0.03
+   },
+   "confidence": 0.92
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "emergente": 0.11,
+    "controverso": 0.49,
+    "especulacao": 0.01,
+    "consenso": 0.39
+   },
+   "confidence": 0.32
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.28
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.38
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.16,
+    "controverso": 0.27,
+    "especulacao": 0.01,
+    "consenso": 0.56
+   },
+   "confidence": 0.41
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "emergente": 0.18,
+    "controverso": 0.82,
+    "especulacao": 0,
+    "consenso": 0
+   },
+   "confidence": 0.76
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.1
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.76,
+    "controverso": 0.24,
+    "especulacao": 0,
+    "consenso": 0
+   },
+   "confidence": 0.67
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.2
+  }
+ },
+ "custo_usd": 0.00883
+}

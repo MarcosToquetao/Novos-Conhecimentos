@@ -1,0 +1,197 @@
+{
+ "id": "ikigai",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:36:18",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Quatro círculos que se cruzam. No centro, está escrito \"ikigai\", a palavra japonesa para a razão de viver. O desenho não é japonês, não é antigo e não significa o que a legenda diz.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Em 2011, o astrólogo Andrés Zuzunaga desenhou em Barcelona um gráfico de quatro círculos para explicar propósito de vida. No centro, a palavra \"propósito\". O desenho foi publicado em um livro espanhol em 2012, sem nenhuma menção ao Japão.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em 2014, o consultor britânico Marc Winn viu uma palestra sobre longevidade em Okinawa, pegou o gráfico de Zuzunaga e trocou a palavra do centro: \"propósito\" virou \"ikigai\". Dois anos depois, o diagrama entrou num livro que vendeu milhões de exemplares.</p>",
+    "marca": "emergente",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em japonês, ikigai é uma palavra corriqueira. Junta iki (viver) e kai (proveito), e significa \"aquilo que faz a vida valer a pena\". Uma pessoa diz que o neto é seu ikigai, ou a horta, ou o coral da igreja. Vários ao mesmo tempo, e mudam ao longo da vida.</p>",
+    "marca": "consenso",
+    "fonte": 5
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Qual é a diferença central entre o diagrama de quatro círculos e o uso japonês da palavra ikigai?",
+    "alts": [
+     "O diagrama exige quatro condições ao mesmo tempo, incluindo remuneração; em japonês, qualquer fonte de sentido conta, sem exigir pagamento",
+     "O diagrama é mais antigo e por isso mais tradicional; o uso japonês é uma adaptação moderna",
+     "O diagrama fala de carreira e o uso japonês fala de aposentadoria"
+    ],
+    "correta": 0,
+    "porque": "O diagrama define ikigai por interseção: sem as quatro condições simultâneas, não há centro. No Japão, ikigai é uma lista aberta de fontes de sentido, sem componente de remuneração."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A formulação que os pesquisadores japoneses citam vem de Mieko Kamiya, psiquiatra, no livro de 1966. Ela entrevistou pacientes num sanatório onde pessoas com hanseníase viviam segregadas. A pergunta dela não era como escolher uma profissão, e sim como alguém que perdeu tudo reconstrói uma razão para continuar.</p>",
+    "marca": "consenso",
+    "fonte": 6
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O diagrama responde a uma pergunta ocidental: como encontrar um trabalho que eu ame, que eu faça bem, que sirva a alguém e que pague as contas. A etiqueta japonesa foi colada nessa pergunta depois. O conteúdo é do leitor ocidental; o selo de autenticidade veio de fora.</p>",
+    "marca": "emergente",
+    "fonte": 8
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma pessoa aposentada diz que não tem ikigai porque não trabalha mais. O que essa afirmação revela?",
+    "alts": [
+     "Ela entendeu o conceito japonês corretamente, pois ikigai exige atividade produtiva",
+     "Ela está usando a definição do diagrama, que torna o ikigai condicional à remuneração, e não o sentido japonês da palavra",
+     "Ela precisa encontrar um novo emprego para recuperar o ikigai"
+    ],
+    "correta": 1,
+    "porque": "No uso japonês, ikigai não depende de trabalho nem de pagamento. A definição por interseção exclui aposentados, desempregados, doentes e cuidadores, que é justamente a população de onde Kamiya partiu."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Existem coortes japonesas que associam ter ikigai a menor mortalidade. Mas todas mediram uma pergunta única de autorrelato, do tipo \"você tem ikigai na sua vida?\". Nenhuma testou a interseção dos quatro círculos. A evidência epidemiológica não valida o diagrama, porque a estrutura do diagrama nunca foi a variável medida.</p>",
+    "marca": "consenso",
+    "fonte": 14
+   }
+  ],
+  "fecho": "Se um conceito muda de sentido quando atravessa uma língua, o que mais se perde na tradução? A antropologia tem uma resposta para isso, e ela começa com um piscar de olhos."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 2: marcada emergente, JEV diz especulacao (0.84)",
+  "tela 6: marcada emergente, JEV diz especulacao (0.76)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.13,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.01,
+    "3": 0.84,
+    "4": 0.15
+   },
+   "confidence": 0.87
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.24
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "especulacao",
+   "probabilities": {
+    "controverso": 0.03,
+    "emergente": 0.1,
+    "especulacao": 0.48,
+    "consenso": 0.39
+   },
+   "confidence": 0.31
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "especulacao",
+   "probabilities": {
+    "controverso": 0.03,
+    "emergente": 0.04,
+    "especulacao": 0.84,
+    "consenso": 0.09
+   },
+   "confidence": 0.78
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.01,
+    "emergente": 0.03,
+    "especulacao": 0.19,
+    "consenso": 0.77
+   },
+   "confidence": 0.69
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.2
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.03,
+    "emergente": 0.13,
+    "especulacao": 0.25,
+    "consenso": 0.59
+   },
+   "confidence": 0.46
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "especulacao",
+   "probabilities": {
+    "controverso": 0.02,
+    "emergente": 0.07,
+    "especulacao": 0.76,
+    "consenso": 0.15
+   },
+   "confidence": 0.68
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.17
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "especulacao",
+   "probabilities": {
+    "controverso": 0.04,
+    "emergente": 0.31,
+    "especulacao": 0.35,
+    "consenso": 0.3
+   },
+   "confidence": 0.14
+  }
+ },
+ "custo_usd": 0.00929
+}

@@ -1,0 +1,173 @@
+{
+ "id": "gestalt-design",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:30:37",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Seis elementos idênticos numa tela, e você não consegue ver todos como um grupo só. O que os separa não está em nenhum deles. Está no ar entre eles.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Em 1912, Max Wertheimer observou duas luzes piscando em alternância. Na cadência certa, você vê uma luz que se move. Não há movimento nenhum ali. O seu sistema visual inventou o movimento. Não deu para desver.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Para quem projeta interfaces, a conclusão é direta: você não escolhe se o usuário vai agrupar os elementos. Ele vai. A única escolha é se o agrupamento que o sistema visual dele produz corresponde ao agrupamento lógico da informação.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um rótulo está a doze pixels do campo de cima e a quatro pixels do campo de baixo. O que o usuário entende?",
+    "alts": [
+     "O rótulo pertence ao campo de cima, se a instrução escrita disser isso",
+     "O rótulo pertence ao campo de baixo, pela distância",
+     "O usuário consegue escolher conscientemente os dois agrupamentos"
+    ],
+    "correta": 1,
+    "porque": "A proximidade agrupa sem negociação. Instrução escrita não corrige o que a distância já estabeleceu."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Wertheimer e a escola da Gestalt descreveram vários princípios de agrupamento. <strong>Proximidade</strong> junta o que está perto. <strong>Similaridade</strong> junta o que compartilha forma, cor ou tamanho. <strong>Fechamento</strong> completa contornos que não existem. <strong>Continuidade</strong> prefere curvas suaves a quinas.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "texto",
+    "html": "<p><strong>Região comum</strong> junta o que está dentro da mesma fronteira fechada, e vence a proximidade. É por isso que existem cards: uma moldura reagrupa contra a distância. <strong>Destino comum</strong> junta o que se move junto. Só passou a importar com interfaces animadas.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Uma moldura agrupa dois elementos que estão longe um do outro, contra um terceiro elemento que está mais perto de um deles. O que o usuário vê?",
+    "alts": [
+     "Os dois elementos dentro da moldura como um grupo, porque a região comum vence a proximidade",
+     "O elemento mais próximo do primeiro, porque proximidade sempre vence",
+     "Nada agrupado, porque as forças se anulam"
+    ],
+    "correta": 0,
+    "porque": "Região comum supera proximidade. Por isso um card mal desenhado é pior que nenhum: impõe um agrupamento errado com força."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Os princípios não têm a mesma força. Em 2012, uma revisão de um século de pesquisa mostrou que eles competem. Conexão física vence tudo. Proximidade vence similaridade na maioria dos casos. A hierarquia entre eles é o que produz a sensação de layout limpo ou confuso.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Você quer separar dois blocos de informação numa tela. O que a pesquisa sugere que funciona melhor?",
+    "alts": [
+     "Aumentar a distância entre os blocos e diminuir a distância dentro de cada um",
+     "Desenhar uma linha divisória entre eles",
+     "Pintar um bloco de azul e o outro de verde"
+    ],
+    "correta": 0,
+    "porque": "Proximidade é o princípio mais forte. Distâncias bem ajustadas criam a estrutura sem bordas. Muitas linhas divisórias em interfaces existem só para consertar espaçamento ruim."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A teoria original da Gestalt, a dos campos elétricos no córtex, foi refutada nos anos 1950. Mas as descrições de como percebemos sobreviveram. O fenômeno é real; a explicação antiga não. Sobram três explicações concorrentes, e nenhuma venceu.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   }
+  ],
+  "fecho": "Por que o mesmo azul parece mais claro sobre preto e mais escuro sobre branco? O contraste entre cores vizinhas muda o que você vê. Isso tem nome: contraste simultâneo."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 4: mais de um negrito",
+  "tela 5: mais de um negrito"
+ ],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.88,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.12,
+    "3": 0.85,
+    "4": 0.02
+   },
+   "confidence": 0.87
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.23
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.04,
+    "controverso": 0.08,
+    "especulacao": 0,
+    "consenso": 0.88
+   },
+   "confidence": 0.83
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.31
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.21
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "emergente": 0.5,
+    "controverso": 0.36,
+    "especulacao": 0.01,
+    "consenso": 0.13
+   },
+   "confidence": 0.34
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.3
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "emergente": 0.02,
+    "controverso": 0.54,
+    "especulacao": 0.01,
+    "consenso": 0.43
+   },
+   "confidence": 0.38
+  }
+ },
+ "custo_usd": 0.00639
+}

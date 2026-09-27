@@ -1,0 +1,198 @@
+{
+ "id": "navalha-ockham",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:32:18",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "Todo mundo já ouviu a frase: a explicação mais simples costuma ser a verdadeira. Ela é atribuída a um frade do século 14. Só que ele nunca escreveu essa frase.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>A frase <em>entidades não devem ser multiplicadas além do necessário</em> é citada em livros de lógica como a formulação original da navalha de Ockham. Guilherme de Ockham viveu no século 14. Essas palavras exatas não aparecem em nenhum texto sobrevivente dele.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Quem escreveu a versão famosa foi John Punch, um franciscano irlandês, num comentário publicado em 1639. Quase trezentos anos depois da morte de Ockham. O próprio nome «navalha de Ockham» também é posterior.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Ockham usava, sim, princípios de economia explicativa. Mas de forma contextual, específica a cada argumento. Não como uma máxima geral resumida numa frase memorável. A fama veio da eficácia com que ele aplicava a ideia em debates, não de uma citação canônica.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que a pesquisa histórica mostra sobre a frase atribuída a Ockham?",
+    "alts": [
+     "Ockham escreveu a frase, mas ela se perdeu e foi reconstruída depois",
+     "A frase exata foi escrita por John Punch em 1639, e Ockham usava princípios parecidos de forma dispersa",
+     "A frase é uma invenção moderna, sem relação com Ockham nem com Punch"
+    ],
+    "correta": 1,
+    "porque": "Ockham não escreveu a frase exata. Ela aparece em 1639, num comentário de John Punch. Ockham usava ideias de economia explicativa, mas em formulações diferentes e contextuais."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>O erro de atribuição não invalida o princípio. Preferir, entre explicações que dão conta igualmente bem dos mesmos fatos, a que exige menos suposições adicionais continua sendo uma ferramenta útil na filosofia e na ciência.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A navalha é uma heurística. Ela orienta por onde começar a investigar, mas não garante que a explicação mais simples é a correta. Um médico que prioriza a gripe antes de uma doença rara não descarta a hipótese complexa. Ele apenas ordena os passos.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Um médico tem duas hipóteses para os mesmos sintomas: uma gripe ou uma doença rara. Ele começa investigando a gripe. Isso é um uso correto da navalha?",
+    "alts": [
+     "Não, porque a navalha exige escolher a hipótese mais elegante, não a mais comum",
+     "Sim, porque ele prioriza a causa mais simples sem descartar a outra hipótese",
+     "Não, porque a navalha só vale quando já há evidência decisiva"
+    ],
+    "correta": 1,
+    "porque": "Esse é o uso correto: a navalha ordena por onde começar, sem eliminar a hipótese mais complexa. O uso incorreto é descartar uma explicação bem estabelecida só porque outra soa mais simples."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Nos anos 1960, Ray Solomonoff propôs uma indução matemática que dá mais peso às hipóteses descritas de forma compacta. Kolmogorov e Chaitin desenvolveram em paralelo a complexidade de Kolmogorov: o tamanho da menor descrição capaz de gerar uma sequência de dados.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a formalização moderna da navalha de Ockham é útil em aprendizado de máquina?",
+    "alts": [
+     "Porque garante que o modelo mais simples sempre acerta em dados novos",
+     "Porque dá uma justificativa matemática para penalizar modelos complexos demais, que tendem a capturar ruído",
+     "Porque substitui a necessidade de testar o modelo em dados novos"
+    ],
+    "correta": 1,
+    "porque": "Modelos complexos demais tendem a se ajustar ao ruído dos dados de treino. A formalização, como o comprimento mínimo de descrição, penaliza essa complexidade com base matemática, não estética. Mas não garante acerto nem dispensa testar em dados novos."
+   }
+  ],
+  "fecho": "Se simplicidade não garante verdade, o que separa uma teoria científica de uma que não é? Essa é a pergunta que Karl Popper tentou responder com a ideia de falseabilidade."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [
+  "tela 5: soa como IA (0.54)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.97,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.05,
+    "3": 0.93,
+    "4": 0.02
+   },
+   "confidence": 0.94
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.02,
+    "consenso": 0.96,
+    "emergente": 0,
+    "especulacao": 0.02
+   },
+   "confidence": 0.94
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.07,
+    "consenso": 0.89,
+    "emergente": 0.01,
+    "especulacao": 0.03
+   },
+   "confidence": 0.86
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.49
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.05,
+    "consenso": 0.85,
+    "emergente": 0.01,
+    "especulacao": 0.09
+   },
+   "confidence": 0.79
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.09
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.54
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.19,
+    "consenso": 0.7,
+    "emergente": 0.04,
+    "especulacao": 0.07
+   },
+   "confidence": 0.6
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "ambigua_7": {
+   "type": "noul",
+   "noul": 0.14
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.47
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "controverso": 0.03,
+    "consenso": 0.88,
+    "emergente": 0.05,
+    "especulacao": 0.04
+   },
+   "confidence": 0.83
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.08
+  }
+ },
+ "custo_usd": 0.00712
+}

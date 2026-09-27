@@ -1,0 +1,187 @@
+{
+ "id": "maquina-turing",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:39:58",
+ "modelo": "deepseek-flash+deepseek-v4-pro",
+ "rodadas": 2,
+ "licao": {
+  "gancho": "O celular no seu bolso não consegue calcular nada que uma máquina imaginária de 1936, com uma fita de papel infinitamente longa, também não consiga calcular. A diferença entre os dois é só velocidade e memória.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Em 1936, o matemático britânico Alan Turing descreveu uma máquina que nunca foi construída e nunca precisou ser: uma fita longa dividida em células, um cabeçote que lê e escreve um símbolo por vez, e uma tabela pequena de regras. Dependendo do símbolo lido e do estado atual, ela escreve, se move uma célula e muda de estado.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Parece simples demais para importar. Mas Turing mostrou que esse mecanismo minúsculo dá conta de qualquer processo que mereça o nome de cálculo passo a passo. Com fita e regras certas, ela simula qualquer procedimento bem definido que uma pessoa consiga seguir com papel e lápis.</p>"
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que a máquina de Turing é, de fato?",
+    "alts": [
+     "Um computador físico construído por Turing em 1936",
+     "Um modelo matemático abstrato, criado para definir com precisão o que significa computar passo a passo",
+     "Um programa de computador que roda em qualquer laptop moderno"
+    ],
+    "correta": 1,
+    "porque": "É uma ferramenta de raciocínio teórico: fita, cabeçote e regras descritas em papel. Nunca precisou existir fisicamente para cumprir seu papel de definir o que é computável."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Turing não inventou isso por curiosidade. Em 1928, David Hilbert perguntou se existe um procedimento mecânico capaz de decidir se qualquer afirmação matemática é verdadeira ou falsa. Para responder com rigor, era preciso primeiro definir o que 'procedimento mecânico' significa. A máquina de Turing foi essa definição.</p>",
+    "marca": "consenso",
+    "fonte": 7
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A afirmação de que esse modelo captura corretamente a ideia intuitiva de algoritmo é a tese de Church-Turing, proposta de forma independente por Alonzo Church e por Turing em 1936. Ela é aceita de forma praticamente unânime há quase noventa anos. Repare: é uma tese sobre a correspondência entre intuição e definição formal, não um teorema provado por dedução.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que a tese de Church-Turing não é um teorema?",
+    "alts": [
+     "Porque foi refutada por computadores quânticos",
+     "Porque liga uma noção intuitiva a uma definição formal, e isso não se demonstra por prova dedutiva",
+     "Porque Turing nunca publicou a demonstração completa"
+    ],
+    "correta": 1,
+    "porque": "Um teorema parte de definições formais e chega a uma conclusão por dedução. A tese compara uma ideia vaga (o que é algoritmizável) com um modelo preciso, então se sustenta por consenso e ausência de contraexemplos."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>No mesmo artigo, Turing usou a máquina para responder a Hilbert: não existe procedimento geral que decida a verdade de qualquer afirmação matemática. Ele provou isso mostrando que ninguém consegue, em geral, prever se um programa qualquer vai parar ou rodar para sempre. É o problema da parada.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A prova usa uma contradição: suponha uma máquina H que sempre acerta se outra máquina para ou não. Construa uma máquina que usa H sobre o próprio código e faz o oposto do que H prevê. H erra sobre essa máquina, sempre. Como a contradição é inevitável, H não pode existir. Isso vale para qualquer tecnologia futura, porque é uma prova matemática de impossibilidade.</p>",
+    "marca": "consenso",
+    "fonte": 12
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que nenhuma ferramenta de análise de código consegue garantir, de forma totalmente geral, que um programa nunca vai travar num loop infinito?",
+    "alts": [
+     "Porque os processadores ainda são lentos demais para essa tarefa",
+     "Porque decidir isso para qualquer programa é o problema da parada, que não tem solução algorítmica geral",
+     "Porque os programadores escrevem código com erros de sintaxe"
+    ],
+    "correta": 1,
+    "porque": "Garantir que um programa qualquer sempre termina é exatamente o problema da parada. Ferramentas reais contornam o limite analisando classes restritas de programas ou aceitando incerteza, mas o caso geral continua impossível."
+   }
+  ],
+  "fecho": "Se um computador não consegue nem prever se outro programa vai parar, o que dizer de problemas que parecem apenas difíceis, como encontrar a solução mais rápida para milhares de tarefas? Aí entra a pergunta P versus NP."
+ },
+ "erros": [],
+ "avisos": [
+  "tela 8: 64 palavras (máximo 60)"
+ ],
+ "alertas_jev": [
+  "tela 2: soa como IA (0.52)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.86,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.01,
+    "2": 0.14,
+    "3": 0.83,
+    "4": 0.02
+   },
+   "confidence": 0.85
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.52
+  },
+  "ambigua_3": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_4": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "marca_4": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.02,
+    "emergente": 0,
+    "consenso": 0.98,
+    "controverso": 0
+   },
+   "confidence": 0.97
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.43
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0.04,
+    "emergente": 0,
+    "consenso": 0.96,
+    "controverso": 0
+   },
+   "confidence": 0.95
+  },
+  "ambigua_6": {
+   "type": "noul",
+   "noul": 0.06
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "ia_8": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "marca_8": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "emergente": 0,
+    "consenso": 1,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "ambigua_9": {
+   "type": "noul",
+   "noul": 0.05
+  }
+ },
+ "custo_usd": 0.00677
+}

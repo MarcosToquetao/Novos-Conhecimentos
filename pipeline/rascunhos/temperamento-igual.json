@@ -1,0 +1,202 @@
+{
+ "id": "temperamento-igual",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:43:22",
+ "modelo": "deepseek-flash",
+ "rodadas": 1,
+ "licao": {
+  "gancho": "A música ocidental carrega um erro de afinação que não tem conserto. Não é falta de tecnologia: é impossível, pelo mesmo motivo que impede uma potência de 3 ser igual a uma potência de 2.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>Quando uma corda vibra, ela produz uma nota fundamental e uma série de harmônicos em múltiplos inteiros dessa frequência: 2x, 3x, 4x, 5x. Dois sons soam consonantes quando seus harmônicos coincidem em boa medida, o que ocorre quando a razão entre as frequências é de números inteiros pequenos.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A oitava é 2:1, a quinta justa 3:2, a quarta 4:3, a terça maior 5:4, a terça menor 6:5. A explicação é acústica: em razão 3:2, muitos harmônicos coincidem e não há batimentos. Fora dessa razão, surgem pulsações lentas que denunciam a desafinação.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Os pitagóricos construíram a escala empilhando quintas puras. Suba doze quintas e você deveria voltar à nota inicial, sete oitavas acima. Só que doze quintas dão (3/2)¹², e sete oitavas dão 2⁷. A diferença é de cerca de 23,46 cents, um quarto de semitom, bem audível. É a coma pitagórica.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o círculo das quintas não fecha?",
+    "alts": [
+     "Porque os instrumentos estão desafinados",
+     "Porque 3 e 2 são primos entre si, então nenhuma potência de 3 iguala uma potência de 2",
+     "Porque a oitava foi dividida em doze partes desiguais"
+    ],
+    "correta": 1,
+    "porque": "A impossibilidade é matemática: 3 e 2 são primos entre si, então (3/2) elevado a qualquer inteiro nunca é igual a 2 elevado a outro inteiro. Nenhum ajuste esperto resolve isso."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Como o erro não pode ser eliminado, cada sistema de afinação decide onde escondê-lo. A entonação justa deixa alguns intervalos puros e outros horríveis, com um intervalo inutilizável chamado lobo. Os temperamentos desiguais distribuem o erro de forma desigual. O temperamento igual divide a oitava em doze partes iguais.</p>",
+    "marca": "consenso",
+    "fonte": 6
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>No temperamento igual, cada semitom é a raiz duodécima de 2, um número irracional. Nenhum intervalo, exceto a oitava, é uma razão de inteiros. O erro fica espalhado por todos os intervalos: nenhum puro, nenhum intolerável. Todas as tonalidades soam idênticas, o que permite modular livremente.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Para medir o erro usa-se o cent: 1/1200 de oitava. A quinta justa erra por menos de 2 cents, quase inaudível. A terça maior erra por quase 14 cents, claramente audível em acordes sustentados. O temperamento igual sacrifica a terça, que define se o acorde é maior ou menor, para preservar a quinta.</p>",
+    "marca": "consenso",
+    "fonte": 4
+   },
+   {
+    "tipo": "pergunta",
+    "q": "O que se perdeu com o temperamento igual?",
+    "alts": [
+     "A possibilidade de tocar em qualquer tonalidade",
+     "O caráter próprio de cada tonalidade, que vinha da distribuição desigual do erro",
+     "A afinação pura da oitava"
+    ],
+    "correta": 1,
+    "porque": "Nos temperamentos desiguais, cada tonalidade tinha uma sonoridade própria porque o erro era distribuído de forma diferente. No temperamento igual, todas as tonalidades são transposições exatas, e a diferença de caráter que ainda se relata tem outras causas."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Ross Duffin argumentou que a adoção universal do temperamento igual empobreceu a harmonia ocidental. A parte histórica do argumento, de que o temperamento igual não era padrão antes do século XIX, é bem documentada. A parte estética, de que a harmonia foi arruinada, é uma avaliação de valor.</p>",
+    "marca": "emergente",
+    "fonte": 2
+   }
+  ],
+  "fecho": "Por que ouvimos a terça temperada como tensa, mas a mesma terça cantada por um coro como doce? A resposta está nos batimentos acústicos e na afinação por ouvido."
+ },
+ "erros": [],
+ "avisos": [],
+ "alertas_jev": [],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 2.98,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0.07,
+    "3": 0.87,
+    "4": 0.06
+   },
+   "confidence": 0.89
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.32
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.29
+  },
+  "marca_2": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.99,
+    "especulacao": 0,
+    "controverso": 0.01
+   },
+   "confidence": 0.97
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.26
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 1,
+    "especulacao": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.37
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.87,
+    "especulacao": 0.06,
+    "controverso": 0.07
+   },
+   "confidence": 0.82
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.46
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.89,
+    "especulacao": 0.04,
+    "controverso": 0.07
+   },
+   "confidence": 0.84
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.27
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "emergente": 0.02,
+    "consenso": 0.83,
+    "especulacao": 0.04,
+    "controverso": 0.11
+   },
+   "confidence": 0.78
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.15
+  },
+  "ia_9": {
+   "type": "noul",
+   "noul": 0.5
+  },
+  "marca_9": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "emergente": 0,
+    "consenso": 0.01,
+    "especulacao": 0.47,
+    "controverso": 0.52
+   },
+   "confidence": 0.36
+  }
+ },
+ "custo_usd": 0.00118
+}

@@ -1,0 +1,185 @@
+{
+ "id": "split-brain",
+ "tipo": "licao",
+ "criado": "2026-09-27T14:43:16",
+ "modelo": "deepseek-flash",
+ "rodadas": 1,
+ "licao": {
+  "gancho": "Em 1962, um homem com epilepsia grave teve cortada a ponte de fibras entre os dois hemisférios do cérebro. As crises melhoraram. No exame comum, ele parecia a mesma pessoa. Aí veio um teste simples e estranho: a mão esquerda dele escolhia um objeto que a boca dele dizia nunca ter visto.",
+  "telas": [
+   {
+    "tipo": "texto",
+    "html": "<p>O corpo caloso é um feixe de cerca de duzentos milhões de fibras que liga os dois hemisférios. A cirurgia que o corta se chama calosotomia. O objetivo é impedir que a descarga epiléptica passe de um lado para o outro.</p>",
+    "marca": "consenso",
+    "fonte": 2
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>A divisão não é entre olho esquerdo e olho direito. Fixe o olhar num ponto. Tudo o que aparece à esquerda desse ponto, visto por qualquer olho, chega ao hemisfério direito. Tudo o que aparece à direita chega ao esquerdo. Cada hemisfério recebe a metade oposta do mundo visual.</p>"
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Na maioria das pessoas, a fala fica no hemisfério esquerdo. Entre destros, 95 a 99% têm linguagem à esquerda. O hemisfério direito entende bastante, mas não consegue falar.</p>",
+    "marca": "consenso",
+    "fonte": 3
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Num paciente com o corpo caloso cortado, uma palavra pisca no campo visual esquerdo. O que se observa?",
+    "alts": [
+     "Ele lê a palavra em voz alta sem dificuldade",
+     "Ele diz que não viu nada, mas a mão esquerda pode escolher o objeto certo",
+     "Ele não vê nada e nenhuma mão acerta"
+    ],
+    "correta": 1,
+    "porque": "O estímulo chega ao hemisfério direito, que não fala. Por isso a boca diz que não viu. Mas a mão esquerda, controlada por esse hemisfério, demonstra que a informação chegou."
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Esse padrão é um dos achados mais replicados da neuropsicologia. O que se discute é o que ele significa para a experiência consciente do paciente. As duas consciências separadas são uma interpretação, não uma observação direta.</p>",
+    "marca": "consenso",
+    "fonte": 1
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>Em 2017, Pinto e colegas testaram dois pacientes com calosotomia completa. Cruzaram o campo visual do estímulo com o modo de resposta: fala, mão esquerda, mão direita. O modelo clássico prevê uma interação entre esses fatores. Eles não encontraram essa interação em nenhum dos cinco experimentos.</p>",
+    "marca": "emergente",
+    "fonte": 6
+   },
+   {
+    "tipo": "texto",
+    "html": "<p>As objeções são boas. Uma é a sinalização cruzada: ao longo de anos, os hemisférios aprenderiam a trocar informação por fora do cérebro, com pequenos movimentos dos olhos ou do rosto. Outra são as vias subcorticais, como o colículo superior, que continuam intactas e poderiam unificar a resposta.</p>",
+    "marca": "emergente",
+    "fonte": 8
+   },
+   {
+    "tipo": "pergunta",
+    "q": "Por que o estudo de 2017 não encerrou o debate?",
+    "alts": [
+     "Porque os pacientes não tinham o corpo caloso realmente cortado",
+     "Porque a percepção dividida não foi confirmada",
+     "Porque existem explicações alternativas em pé e a evidência ainda é considerada insuficiente para decidir"
+    ],
+    "correta": 2,
+    "porque": "O estudo mostrou que uma previsão central do modelo clássico não se confirmou, mas as objeções (sinalização cruzada e vias subcorticais) não foram descartadas. Uma revisão de 2020 assinada pelos dois lados registra que a evidência é insuficiente."
+   }
+  ],
+  "fecho": "Se um lado do cérebro produz explicações confiantes para ações que não conhece, isso talvez aconteça também em cérebros intactos. O nome disso é intérprete do hemisfério esquerdo."
+ },
+ "erros": [],
+ "avisos": [
+  "gancho com mais de 45 palavras"
+ ],
+ "alertas_jev": [
+  "tela 5: marcada consenso, JEV diz controverso (0.88)"
+ ],
+ "jev": {
+  "interesse": {
+   "type": "score",
+   "score": 3.25,
+   "legend": {
+    "0": "Nenhuma",
+    "1": "Pouca",
+    "2": "Alguma",
+    "3": "Quer ver a próxima tela",
+    "4": "Irresistível"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0.75,
+    "4": 0.25
+   },
+   "confidence": 0.79
+  },
+  "ia_1": {
+   "type": "noul",
+   "noul": 0.25
+  },
+  "marca_1": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "ia_2": {
+   "type": "noul",
+   "noul": 0.22
+  },
+  "ia_3": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_3": {
+   "type": "choice",
+   "choice": "consenso",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 1,
+    "emergente": 0,
+    "controverso": 0
+   },
+   "confidence": 1
+  },
+  "ambigua_4": {
+   "type": "noul",
+   "noul": 0.11
+  },
+  "ia_5": {
+   "type": "noul",
+   "noul": 0.41
+  },
+  "marca_5": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "consenso": 0.07,
+    "especulacao": 0.04,
+    "emergente": 0.01,
+    "controverso": 0.88
+   },
+   "confidence": 0.85
+  },
+  "ia_6": {
+   "type": "noul",
+   "noul": 0.39
+  },
+  "marca_6": {
+   "type": "choice",
+   "choice": "emergente",
+   "probabilities": {
+    "especulacao": 0,
+    "consenso": 0.02,
+    "emergente": 0.54,
+    "controverso": 0.44
+   },
+   "confidence": 0.39
+  },
+  "ia_7": {
+   "type": "noul",
+   "noul": 0.33
+  },
+  "marca_7": {
+   "type": "choice",
+   "choice": "controverso",
+   "probabilities": {
+    "consenso": 0.01,
+    "especulacao": 0.32,
+    "emergente": 0.1,
+    "controverso": 0.57
+   },
+   "confidence": 0.43
+  },
+  "ambigua_8": {
+   "type": "noul",
+   "noul": 0.19
+  }
+ },
+ "custo_usd": 0.00891
+}
