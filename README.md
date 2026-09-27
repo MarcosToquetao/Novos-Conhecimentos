@@ -1,107 +1,90 @@
-# Novos Conhecimentos
+<p align="center">
+  <a href="https://marcostoquetao.github.io/Novos-Conhecimentos/"><img src="docs/img/capa.svg" alt="Novos Conhecimentos: um conceito novo por dia, curioso e com respaldo da ciência, em quatro minutos no celular" width="100%"></a>
+</p>
 
-Protótipo de aplicativo de estudo por sorteio. Você escolhe quanto tempo tem, sorteia um conceito que não escolheu, estuda pelo tempo definido e faz uma prova de múltipla escolha com o documento fechado.
-
-**Site:** [marcostoquetao.github.io/Novos-Conhecimentos](https://marcostoquetao.github.io/Novos-Conhecimentos/)
-
-**Estado atual:** 202 conceitos publicados no catálogo (mais 75 em revisão em `termos-novos-para-revisar.md`, ainda não aprovados), 10 com documento completo escrito. O sorteio só cai nos que já têm documento.
+<p align="center">
+  <a href="https://marcostoquetao.github.io/Novos-Conhecimentos/"><b>Abrir o app</b></a>
+  &nbsp;·&nbsp; funciona no navegador do celular, sem cadastro e sem instalar nada
+</p>
 
 ---
 
-## Publicar no GitHub Pages
+Todo dia o app abre uma ficha nova: um conceito de uma área que você provavelmente não escolheria sozinho. Biofilmes, transformada de Fourier, seleção adversa, línguas de sinais. Você entende o essencial em quatro minutos, testa se ficou e, se quiser, segue para o próximo.
 
-Isso é o que faz o app abrir no seu celular. São cinco passos, uma vez só.
+A ficha do dia é a mesma para todo mundo. Dá para comparar o resultado com os amigos.
 
-**1. Crie o repositório.** No GitHub, botão `New`. Nome sugerido: `novos-conhecimentos`. Marque **Public** (o GitHub Pages gratuito exige repositório público). Não marque "Add a README" — o projeto já tem um.
+## Como funciona
 
-**2. Suba os arquivos.** Pela interface web, sem terminal: na página do repositório vazio, clique em `uploading an existing file` e arraste **o conteúdo da pasta** — `index.html`, e as pastas `css/`, `js/`, `icons/`, mais `manifest.json`, `sw.js` e `.nojekyll`. Não arraste a pasta inteira por cima: o `index.html` precisa ficar na raiz do repositório.
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#F4F1E4','primaryTextColor':'#1E2A24','primaryBorderColor':'#1E2A24','lineColor':'#6B7466','fontFamily':'Georgia, serif'}}}%%
+flowchart LR
+    A["Ficha do dia<br/><small>a mesma para todos</small>"] --> B["Lição de 4 minutos<br/><small>telas visuais e perguntas</small>"]
+    B --> C["Resultado<br/><small>para mandar aos amigos</small>"]
+    C --> D["Próxima pelo mapa<br/><small>um conceito vizinho</small>"]
+    D --> B
+    C -.-> E["Aprofundar<br/><small>texto completo, fontes e prova</small>"]
+```
 
-Se preferir terminal, dentro da pasta do projeto:
+## Lições que mostram antes de explicar
+
+<p align="center"><img src="docs/img/telas.svg" alt="Tipos de tela das lições: estimar, etapas animadas, camadas, pontos, ordenar, comparar, linha do tempo, ciclo e curva" width="100%"></p>
+
+Em vez de parágrafos, a lição é feita de telas curtas. Antes de ver um número, você chuta. Os processos aparecem animados, etapa por etapa. Perguntas no meio do caminho mostram na hora se a ideia ficou. Tudo é desenhado pelo próprio app, então funciona offline e continua leve.
+
+## Só o que tem respaldo
+
+Quem lê sobre um assunto fora da própria área não tem como saber se o texto é sério. Por isso o app declara o grau de certeza de cada afirmação:
+
+- as lições só ensinam o que é **consenso** na área, ou evidência séria e recente marcada como **emergente**;
+- cada afirmação importante leva um carimbo com o número da fonte, e tocar nele mostra a referência;
+- hipóteses, debates e dados sem confirmação ficam separados no fim do texto completo, numa seção chamada **«Onde a ciência ainda pesquisa»**.
+
+## O acervo
+
+<p align="center"><img src="docs/img/acervo.svg" alt="Mapa do acervo: 347 conceitos agrupados em oito regiões do conhecimento" width="80%"></p>
+
+São 347 conceitos em oito regiões, de Vida a Ideias, ligados pelo que um ajuda a entender do outro. No app, o mapa começa apagado e acende conforme você lê. Hoje 32 conceitos têm ficha completa, e as lições curtas entram aos poucos, depois de passar por revisão.
+
+## No celular
+
+Abra o link e adicione à tela inicial. No Android (Chrome), use o menu de três pontos e **Adicionar à tela inicial**. No iPhone (Safari), use o botão de compartilhar e **Adicionar à Tela de Início**. Depois do primeiro acesso, o app funciona até sem internet.
+
+Seu progresso fica só no seu aparelho. Não há conta, anúncio nem rastreamento pessoal; a contagem de visitas é anônima e sem cookies ([GoatCounter](https://www.goatcounter.com)).
+
+Achou algo errado ou tem uma ideia? Use o botão **Dar uma opinião** no fim de cada lição.
+
+---
+
+<details>
+<summary><b>Por dentro do projeto</b></summary>
+
+<br>
+
+O app é HTML, CSS e JavaScript puros, sem framework e sem servidor, publicado pelo GitHub Pages. O conteúdo de cada conceito está em `js/docs/<id>.js`; o `build.js` valida tudo e gera os arquivos que o app baixa sob demanda.
+
+As lições são produzidas por um pipeline barato, com revisão humana antes de publicar:
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#F4F1E4','primaryTextColor':'#1E2A24','primaryBorderColor':'#1E2A24','lineColor':'#6B7466','fontFamily':'Georgia, serif'}}}%%
+flowchart LR
+    D["Documento revisado<br/>com fontes"] --> G["DeepSeek escreve<br/>a lição"]
+    G --> K["Checagens automáticas<br/><small>escrita, números, fontes</small>"]
+    K --> J["JEV confere<br/><small>certeza, gabarito, visual</small>"]
+    J --> H["Revisão humana"]
+    H -->|aprovada| P["Publicada"]
+    H -->|rejeitada, com motivo| G
+```
+
+Cada lição custa em torno de um centavo de dólar para gerar. As notas da revisão viram regras novas no guia de estilo (`pipeline/estilo.md`), e o gerador melhora a cada rodada.
+
+Para rodar localmente:
 
 ```bash
-git init
-git add .
-git commit -m "Protótipo Novos Conhecimentos"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/novos-conhecimentos.git
-git push -u origin main
+python -m http.server 8765        # o app em http://localhost:8765
+node build.js                     # depois de editar conteúdo
+python pipeline/revisar.py        # fila de revisão das lições
 ```
 
-**3. Ligue o Pages.** No repositório: `Settings` → `Pages` → em *Source*, escolha `Deploy from a branch` → branch `main`, pasta `/ (root)` → `Save`.
+Detalhes de arquitetura, convenções de conteúdo e regras de escrita estão em [`CLAUDE.md`](CLAUDE.md).
 
-**4. Espere e abra.** Em um ou dois minutos a URL aparece na mesma página: `https://SEU_USUARIO.github.io/novos-conhecimentos/`.
-
-**5. Instale no celular.** Abra a URL no celular e adicione à tela inicial:
-
-- **Android/Chrome:** menu de três pontos → *Adicionar à tela inicial*
-- **iPhone/Safari:** botão de compartilhar → *Adicionar à Tela de Início*
-
-Instalado, ele abre em tela cheia, sem barra de navegador, e o service worker mantém tudo em cache — funciona sem sinal depois do primeiro carregamento.
-
----
-
-## Acrescentar conceitos novos
-
-O conteúdo é dado, não código. Dois arquivos importam:
-
-**`js/catalogo.js`** — a lista de termos. Para acrescentar um conceito ao reservatório, basta uma linha:
-
-```js
-{ id:"entropia", termo:"Entropia e a segunda lei", area:"Física", dificuldade:3,
-  gancho:"A única lei da física que sabe distinguir passado de futuro." },
-```
-
-**`js/docs/<id>.js`** — o documento de estudo. Crie o arquivo copiando a estrutura de qualquer um dos dez existentes. Depois rode:
-
-```bash
-python3 build_conteudos.py   # junta js/docs/*.js em js/conteudos.js
-```
-
-Se o documento novo tiver diagramas, acrescente a função em `build_figuras.py` e rode `python3 build_figuras.py`.
-
-Antes de publicar, suba o número da versão em `sw.js` (`const VERSAO = "nc-v2"`), senão o celular continuará servindo a versão antiga do cache.
-
----
-
-## Estrutura do projeto
-
-```
-index.html            estrutura das telas
-css/estilo.css        toda a aparência (temas claro e escuro)
-fonts/*.woff2         Noticia Text e Inter, embutidas para funcionar offline
-js/catalogo.js        202 conceitos — só os termos
-js/docs/*.js          um arquivo por documento de estudo (fonte)
-js/conteudos.js       GERADO — não editar à mão
-js/figuras.js         GERADO — não editar à mão
-js/app.js             sorteio, cronômetro, leitor, prova, histórico
-build_conteudos.py    js/docs/*.js  →  js/conteudos.js
-build_figuras.py      diagramas SVG →  js/figuras.js
-teste.js              percorre o fluxo inteiro em Chromium e salva capturas
-qa_figuras.js         renderiza todas as figuras nos dois temas
-manifest.json, sw.js  instalação e cache offline (PWA)
-```
-
-Os diagramas quantitativos são **calculados**, não desenhados: as curvas de Fourier são somas parciais reais da série, o gráfico do índice glicêmico usa os valores publicados por Matthan et al. (2016), e a coma pitagórica sai de `12·log₂(3/2)·1200 − 8400`. Um diagrama errado é pior que diagrama nenhum, e a única forma de garantir que ele não está errado é derivá-lo da mesma matemática que o texto descreve.
-
----
-
-## Decisões de desenho
-
-**Camadas em vez de tamanho único.** Cada documento tem núcleo (sem formalismo), aprofundamento (com formalismo traduzido termo a termo) e extensão. O tempo escolhido determina quantas camadas aparecem. Os minutos indicados são calculados do próprio texto a ~110 palavras por minuto — o ritmo de leitura atenta de material conceitual denso, bem abaixo da leitura corrida.
-
-**Prova com o documento fechado.** É a única parte do fluxo que produz aprendizado mensurável. Releitura gera fluência subjetiva e pouca retenção; recuperação ativa gera o contrário. Por isso a prova é obrigatória para encerrar a sessão e o documento fica indisponível durante ela.
-
-**Marcação epistêmica.** Cada afirmação relevante vem rotulada como consenso, abordagem emergente, ponto controverso ou especulação, com citação numerada no ponto onde aparece. Num assunto fora da sua área, você não tem base para desconfiar do texto — a única defesa é o texto declarar seu próprio grau de certeza e apontar para onde verificar.
-
-**Anti-repetição e revisão espaçada.** O sorteio evita o que você acabou de ver e prioriza o que está vencido para revisão. Depois de cada prova, o conceito é reagendado em 1, 3, 7, 21 ou 60 dias conforme o desempenho. Nota abaixo de 70% zera o nível.
-
-**Estado só no aparelho.** Nada é enviado a lugar nenhum: histórico, notas e agenda de revisão ficam no `localStorage` do navegador. Some se você limpar os dados do site — por isso existe o botão de exportar progresso em JSON.
-
----
-
-## Limitações conhecidas
-
-- **Múltipla escolha superestima o aprendizado.** Reconhecer a resposta certa é mais fácil que produzi-la. As alternativas erradas foram escritas para serem plausíveis, mas a prova ainda mede menos do que uma resposta escrita mediria. O bloco antes da prova sugere explicar o conceito em voz alta primeiro — é aí que está o ganho real.
-- **Dez documentos esgotam em poucas semanas** de uso diário. O catálogo de 202 termos existe para ser convertido em documentos ao longo do tempo.
-- **Sem sincronização entre aparelhos.** Estudar no celular e no computador cria dois históricos separados.
-- **As fontes não são verificadas automaticamente.** Links podem quebrar; DOIs são mais estáveis que URLs.
+</details>

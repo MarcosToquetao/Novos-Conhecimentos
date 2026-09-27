@@ -32,7 +32,11 @@ function montarAcervo(svg, idx, lidos, opts = {}) {
   const rotulos = [];
   for (const [k, m] of Object.entries(idx.macros)) {
     const cs = idx.conceitos.filter(c => idx.areas[c.area] === k); if (!cs.length) continue;
-    const [x, y] = centro(cs);
+    /* rótulo empurrado para fora do mapa, além da borda da região: no centróide, regiões vizinhas se sobrepunham */
+    const [mx, my] = centro(cs), d = Math.hypot(mx - 500, my - 500) || 1;
+    const r = Math.max(...cs.map(c => Math.hypot(c.xy[0] - mx, c.xy[1] - my))) * .8 + 25;
+    const meia = m.nome.length * 13;   /* meia largura aproximada do rótulo em 44px */
+    const x = Math.min(1000 - meia, Math.max(meia, mx + (mx - 500) / d * r)), y = my + (my - 500) / d * r + 14;
     const t = el("text", { x, y, "text-anchor": "middle", fill: `var(--m-${k})`, style: "font:650 44px var(--display);paint-order:stroke;stroke:var(--ficha);stroke-width:6px;pointer-events:none" }, gA);
     t.textContent = m.nome; rotulos.push({ nivel: 0, e: t });
   }
