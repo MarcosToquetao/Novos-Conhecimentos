@@ -35,11 +35,14 @@
         <div class="ficha-cab"><span id="h-codigo">&nbsp;</span><span id="h-dif"></span></div>
         <p class="ficha-termo" id="h-termo">&nbsp;</p>
         <p class="ficha-gancho" id="h-gancho">&nbsp;</p>
+        <div class="papeleta" id="h-papeleta" aria-hidden="true"></div>
+        <p class="rotulo" id="h-ofensiva" style="margin-top:.5rem">&nbsp;</p>
       </article>
       <div class="acoes" style="margin-top:.6rem">
         <button class="btn" id="btn-abrir">Abrir ficha</button>
         <button class="btn fio" id="btn-outra">Mais uma ficha</button>
       </div>
+      <div id="h-lembra" hidden></div>
       <div id="h-revisar" hidden>
         <p class="rotulo" style="margin-top:1rem">Para rever antes que esqueça</p>
         <div class="lista" id="lista-revisao"></div>
@@ -55,6 +58,8 @@
     <div class="envelope">
       <div class="res-cab"><p class="res-termo" id="r-termo">&nbsp;</p><span class="carimbo anima" id="r-carimbo"></span></div>
       <p class="rotulo" id="r-placar">&nbsp;</p>
+      <p class="rotulo" id="r-ganho">&nbsp;</p>
+      <div class="carimbos" id="r-carimbos"></div>
       <svg class="mini-mapa" id="r-mapa" viewBox="0 0 1000 500" role="img" aria-label="O conceito no mapa do acervo, com os vizinhos"></svg>
       <p class="ficha-gancho" id="r-fecho"></p>
       <p class="compart" id="r-compart"></p>
@@ -122,6 +127,12 @@
     <div class="envelope-largo">
       <p class="rotulo" style="margin-top:.4rem">Histórico</p>
       <p class="ficha-gancho">Seu progresso fica só neste aparelho. Exporte de vez em quando para não perder.</p>
+      <div class="ficha" style="margin:.8rem 0 1rem">
+        <p class="rotulo">Ficha de leitor</p>
+        <p class="ficha-gancho" id="l-nivel" style="margin-top:.4rem">&nbsp;</p>
+        <progress id="l-barra" max="1" value="0" aria-label="Progresso até o próximo nível"></progress>
+        <div class="carimbos" id="l-carimbos" style="margin-top:.9rem"></div>
+      </div>
       <div class="lista" id="hist-lista"></div>
       <div class="acoes" style="margin-top:1rem">
         <button class="btn fio" id="btn-exportar-prog">Exportar progresso</button>

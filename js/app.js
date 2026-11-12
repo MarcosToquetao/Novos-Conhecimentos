@@ -13,7 +13,8 @@ const INICIO = Date.UTC(2026, 8, 1);   /* dia da ficha nº 1 */
 
 /* ── Estado persistente ────────────────────────────────────────────── */
 const CHAVE = "nc_estado_v3";
-const PADRAO = { tema: null, licoes: [], sessoes: [], provas: [], revisao: {}, primeiraVisita: null, ultimoDia: null };
+/* revisoes: respostas à pergunta «lembra desta?» ({conceito, quando, ok}); enviadas: quantas vezes mandou algo a alguém */
+const PADRAO = { tema: null, licoes: [], sessoes: [], provas: [], revisao: {}, revisoes: [], enviadas: 0, primeiraVisita: null, ultimoDia: null };
 
 function carregar() {
   try {
@@ -137,6 +138,57 @@ function agendarRevisao(id, pct, jaHoje) {
   E.revisao[id] = r;
 }
 
+/* ── Ofensiva, XP, nível e carimbos ────────────────────────────────────
+   Tudo é calculado a partir do histórico (lições, provas, revisões): não há contador guardado, então vale
+   para quem já usava o app e sobrevive a exportar e importar.
+   ponytail: o dia é o do relógio do aparelho; viagem ou troca de data mexem na contagem. */
+const diaDe = (q) => hojeStr(new Date(q));
+const vizinhoDia = (dia, n) => { const [a, m, d] = dia.split("-").map(Number); return hojeStr(new Date(a, m - 1, d + n)); };
+
+/* Ofensiva tolerante: a cada 7 dias seguidos a pessoa ganha uma folga (guarda até 2), e a folga cobre
+   sozinha um dia perdido. Sem folga, a contagem recomeça, sem cobrança. */
+function ofensiva() {
+  const feitos = new Set(E.licoes.map(l => diaDe(l.quando))), cobertos = new Set(), hoje = hojeStr();
+  let dias = 0, melhor = 0, folgas = 0;
+  if (feitos.size) for (let d = [...feitos].sort()[0]; d <= hoje; d = vizinhoDia(d, 1)) {
+    if (feitos.has(d)) { dias++; melhor = Math.max(melhor, dias); if (dias % 7 === 0) folgas = Math.min(2, folgas + 1); }
+    else if (d === hoje) break;                         /* hoje ainda não acabou */
+    else if (dias && folgas) { folgas--; cobertos.add(d); }
+    else dias = 0;
+  }
+  return { dias, melhor, folgas, feitos, cobertos };
+}
+
+const NIVEIS = [[0, "Visitante"], [50, "Leitor"], [150, "Pesquisador"], [350, "Arquivista"], [700, "Bibliotecário"]];
+const xp = () => E.licoes.reduce((s, l) => s + 10 + 2 * (l.acertos || 0), 0) + E.provas.length * 20 + E.revisoes.filter(r => r.ok).length * 5;
+function nivel(x = xp()) {
+  const n = NIVEIS.filter(([min]) => x >= min).length;
+  return { n, nome: NIVEIS[n - 1][1], base: NIVEIS[n - 1][0], prox: n < NIVEIS.length ? NIVEIS[n][0] : null };
+}
+
+const CARIMBOS = [
+  ["primeira", "Primeira ficha", (c) => c.fichas >= 1],
+  ["dez", "Dez fichas", (c) => c.fichas >= 10],
+  ["semana", "Sete dias seguidos", (c) => c.melhor >= 7],
+  ["mes", "Trinta dias seguidos", (c) => c.melhor >= 30],
+  ["regioes", "Três regiões do mapa", (c) => c.regioes >= 3],
+  ["ponte", "Atravessou uma ponte", (c) => c.pontes >= 1],
+  ["memoria", "Boa memória", (c) => c.lembradas >= 5],
+  ["contou", "Contou para alguém", (c) => c.enviadas >= 1]
+];
+function carimbos() {
+  const ls = lidos();
+  const ctx = {
+    fichas: new Set(E.licoes.map(l => l.conceito)).size, melhor: ofensiva().melhor,
+    regioes: new Set([...ls].map(id => IDX.areas[(doCatalogo(id) || {}).area]).filter(Boolean)).size,
+    pontes: Object.keys(IDX.pontes || {}).filter(k => k.split("|").every(id => ls.has(id))).length,   /* as duas pontas lidas */
+    lembradas: E.revisoes.filter(r => r.ok).length, enviadas: E.enviadas
+  };
+  return CARIMBOS.map(([id, nome, tem]) => ({ id, nome, tem: tem(ctx) }));
+}
+const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+const resumoLeitor = (o = ofensiva()) => `Ofensiva ${plural(o.dias, "dia", "dias")}` + (o.folgas ? ` · ${plural(o.folgas, "folga guardada", "folgas guardadas")}` : "") + ` · ${nivel().nome}`;
+
 /* ── Hoje ──────────────────────────────────────────────────────────── */
 let fichaAtual = null, extra = false, porLink = false;
 
@@ -152,6 +204,7 @@ async function pintarHoje() {
   $("#h-termo").textContent = c.termo;
   $("#h-gancho").textContent = c.gancho;
   $("#btn-abrir").textContent = c.licao ? "Abrir ficha" : "Ler a ficha";
+  pintarPapeleta(); pintarLembra();
   try {
     const dd = await doc(c.id);
     if (fichaAtual === c) $("#btn-abrir").textContent = dd.licao ? `Abrir ficha · ${minutosLicao(dd.licao)} min` : "Ler a ficha";
@@ -165,6 +218,40 @@ async function pintarHoje() {
     return `<button class="item-lista" data-id="${id}"><span class="termo">${x.termo}</span><span class="meta"><span>${x.area}</span><span>visto há ${dias} dia(s)</span></span></button>`;
   }).join("");
   $$("#lista-revisao .item-lista").forEach(b => b.addEventListener("click", () => abrirFicha(doCatalogo(b.dataset.id))));
+}
+/* papeleta de devolução: os últimos 7 dias, com carimbo no dia feito e contorno tracejado no dia que a folga cobriu */
+function pintarPapeleta() {
+  const o = ofensiva(), hoje = hojeStr();
+  $("#h-papeleta").innerHTML = Array.from({ length: 7 }, (_, k) => {
+    const dia = vizinhoDia(hoje, k - 6), [a, m, n] = dia.split("-").map(Number);
+    return `<span class="${o.feitos.has(dia) ? "feito" : o.cobertos.has(dia) ? "folga" : ""}${k === 6 ? " hoje" : ""}"><i>${"DSTQQSS"[new Date(a, m - 1, n).getDay()]}</i></span>`;
+  }).join("");
+  $("#h-ofensiva").textContent = E.licoes.length ? resumoLeitor(o) : "Uma ficha por dia mantém a ofensiva";
+}
+
+/* «Lembra desta?»: uma pergunta da última lição de um dia anterior, uma vez por dia. Puxar da memória
+   no dia seguinte é o que fixa; por isso vale XP e mexe na revisão espaçada. */
+async function pintarLembra() {
+  const el = $("#h-lembra"), hoje = hojeStr();
+  const ultima = E.licoes.filter(l => diaDe(l.quando) < hoje).pop();
+  el.hidden = true;
+  if (!ultima || E.revisoes.some(r => diaDe(r.quando) === hoje)) return;
+  let dd; try { dd = await doc(ultima.conceito); } catch (e) { return; }
+  const qs = ((dd.licao || {}).telas || []).filter(t => t.tipo === "pergunta");
+  if (!qs.length) return;
+  const q = qs[hash(hoje) % qs.length];
+  el.innerHTML = `<p class="rotulo" style="margin-top:1rem">Lembra desta? · ${dd.termo}</p><p class="licao-pergunta" style="margin:.4rem 0 .6rem">${q.q}</p>
+    <div class="alts">${q.alts.map((a, j) => `<button type="button" class="alt" data-j="${j}"><span class="letra">${"ABC"[j]}</span><span>${a}</span></button>`).join("")}</div>
+    <p class="porque" hidden style="margin-top:.6rem">${q.porque}</p>`;
+  el.hidden = false;
+  el.querySelectorAll(".alt").forEach(b => b.addEventListener("click", () => {
+    const ok = +b.dataset.j === q.correta;
+    el.querySelectorAll(".alt").forEach(x => { x.disabled = true; if (+x.dataset.j === q.correta) x.classList.add("certa"); else if (x === b) x.classList.add("errada"); });
+    el.querySelector(".porque").hidden = false;
+    E.revisoes.push({ conceito: ultima.conceito, quando: new Date().toISOString(), ok });
+    agendarRevisao(ultima.conceito, ok ? 100 : 0, false);
+    salvar(); evento(ok ? "lembrou" : "nao-lembrou", ultima.conceito); pintarPapeleta();
+  }));
 }
 $("#btn-abrir").addEventListener("click", () => fichaAtual && abrirFicha(fichaAtual));
 $("#btn-outra").addEventListener("click", () => {
@@ -192,6 +279,7 @@ async function abrirFicha(c) {
 
 function concluirLicao(c, d, r) {
   const jaHoje = feitoHoje(c.id);
+  const tinha = new Set(carimbos().filter(x => x.tem).map(x => x.id)), nivelAntes = nivel().n, primeiraDoDia = !ofensiva().feitos.has(hojeStr());
   E.licoes.push({ conceito: c.id, termo: c.termo, quando: new Date().toISOString(), acertos: r.acertos, total: r.total });
   agendarRevisao(c.id, r.total ? 100 * r.acertos / r.total : 100, jaHoje);
   salvar();
@@ -201,6 +289,12 @@ function concluirLicao(c, d, r) {
   $("#r-termo").textContent = c.termo;
   $("#r-carimbo").textContent = "Lida " + new Date().toLocaleDateString("pt-BR", { day: "numeric", month: "short" }).replace(".", "");
   $("#r-placar").textContent = `${r.acertos} de ${r.total} perguntas · acervo ${ls.size}/${CATALOGO.length}`;
+  const o = ofensiva(), nv = nivel();
+  $("#r-ganho").textContent = `+${10 + 2 * r.acertos} XP · ofensiva ${plural(o.dias, "dia", "dias")}`
+    + (primeiraDoDia && o.cobertos.has(vizinhoDia(hojeStr(), -1)) ? " · uma folga cobriu ontem" : "")
+    + (nv.n > nivelAntes ? ` · agora você é ${nv.nome}` : "");
+  $("#r-carimbos").innerHTML = carimbos().filter(x => x.tem && !tinha.has(x.id))
+    .map((x, k) => `<span class="carimbo anima" style="animation-delay:${.35 + k * .25}s">${x.nome}</span>`).join("");
   $("#r-fecho").textContent = d.licao.fecho || "";
   $("#r-compart").textContent = textoCompartilhar(c, r, ls.size);
   $("#btn-compartilhar").textContent = "Mandar para um amigo";
@@ -233,12 +327,13 @@ $("#btn-proxima").addEventListener("click", () => { if (proximaFicha) { evento("
 function textoCompartilhar(c, r, n) {
   const barras = "▮".repeat(r.acertos) + "▯".repeat(r.total - r.acertos);
   const n1 = extra ? "" : ` · ficha ${String(numeroFicha()).padStart(3, "0")}`;
-  return `Novos Conhecimentos${n1}\n${c.termo} ${barras} ${r.acertos}/${r.total}\nacervo ${n}/${CATALOGO.length}\n${location.origin}${location.pathname}`;
+  return `Novos Conhecimentos${n1}\n${c.termo} ${barras} ${r.acertos}/${r.total}\nacervo ${n}/${CATALOGO.length}\n${location.origin}${location.pathname}?c=${c.id}`;
 }
 async function compartilhar(texto, b) {
   try {
     if (navigator.share) await navigator.share({ text: texto });
     else { await navigator.clipboard.writeText(texto); b.textContent = "Copiado"; }
+    E.enviadas++; salvar();
     evento("compartilhou", conceitoAtual && conceitoAtual.id);
   } catch (e) { /* a pessoa cancelou o compartilhamento */ }
 }
@@ -386,6 +481,10 @@ function pintarHistorico() {
     ...E.provas.map(p => ({ quando: typeof p.quando === "number" ? p.quando : Date.parse(p.quando), termo: p.termo || doCatalogo(p.conceito)?.termo, o: `prova ${p.pct}%` })),
     ...E.sessoes.map(s => ({ quando: s.iniciadoEm || Date.parse(s.quando), termo: s.termo, o: "leu o documento" }))
   ].sort((a, b) => b.quando - a.quando);
+  const x = xp(), nv = nivel(x);
+  $("#l-nivel").textContent = `${nv.nome} · ${x} XP` + (nv.prox ? ` · faltam ${nv.prox - x} para ${NIVEIS[nv.n][1]}` : "") + ` · ofensiva ${plural(ofensiva().dias, "dia", "dias")}`;
+  $("#l-barra").value = nv.prox ? (x - nv.base) / (nv.prox - nv.base) : 1;
+  $("#l-carimbos").innerHTML = carimbos().map(c => `<span class="carimbo${c.tem ? "" : " pendente"}">${c.nome}</span>`).join("");
   $("#hist-lista").innerHTML = itens.length ? itens.map(x => `<div class="item-lista"><span class="termo">${x.termo || "?"}</span>
     <span class="meta"><span>${new Date(x.quando).toLocaleDateString("pt-BR")}</span><span>${x.o}</span></span></div>`).join("")
     : `<p class="vazio">Nada ainda. A primeira ficha está na aba Hoje.</p>`;
@@ -412,7 +511,8 @@ $("#arquivo-import").addEventListener("change", (ev) => {
       const x = JSON.parse(fr.result);
       if (!x || !Array.isArray(x.sessoes) || !Array.isArray(x.provas) || typeof x.revisao !== "object") throw new Error("formato");
       E = Object.assign(structuredClone(PADRAO), { tema: ["claro", "escuro"].includes(x.tema) ? x.tema : null, licoes: Array.isArray(x.licoes) ? x.licoes : [],
-        sessoes: x.sessoes, provas: x.provas, revisao: x.revisao, primeiraVisita: x.primeiraVisita || null });
+        sessoes: x.sessoes, provas: x.provas, revisao: x.revisao, revisoes: Array.isArray(x.revisoes) ? x.revisoes : [], enviadas: +x.enviadas || 0,
+        primeiraVisita: x.primeiraVisita || null });
       salvar(); aplicarTema(); pintarHistorico();
       alert("Progresso importado.");
     } catch (e) { alert("Este arquivo não é uma exportação do Novos Conhecimentos."); }
