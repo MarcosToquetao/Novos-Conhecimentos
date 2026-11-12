@@ -19,7 +19,11 @@ Trabalhe em lotes de até 3 conceitos ao mesmo tempo.
 
 Regra de modelos (três níveis, do RuFlo): o que é determinístico roda em código, o simples em Haiku, escrita em Sonnet, julgamento em Opus. O modelo de cada agente já está no cabeçalho dele.
 
-1. **Escrita.** Dois agentes `roteirista` em paralelo, um com «`<id>`, versão a» e outro com «`<id>`, versão b». Cada um responde `<id>.<v>: ok` ou `falhou`.
+1. **Escrita.** Rode `python pipeline/gerar.py escolhas` uma vez por lote e veja quantas escolhas do editor existem.
+   - **Menos de 10 (calibração):** dois agentes `roteirista` em paralelo, um com «`<id>`, versão a» e outro com «`<id>`, versão b».
+   - **10 ou mais:** um agente só, na versão cujo ângulo o editor escolheu mais vezes (decisão do usuário em 12/11/2026, para gastar uns 40% menos). O juiz julga a versão única.
+
+   Cada roteirista responde `<id>.<v>: ok` ou `falhou`.
 2. **Conferência.** Para cada versão `ok`, um agente `conferente` com «`<id>`, versão `<v>`», em paralelo. Se a resposta trouxer N maior que zero, um `roteirista` em correção: «`<id>`, versão `<v>`, corrija pelas notas em `pipeline/candidatas/<id>.<v>.fatos.json`». Uma rodada só.
 3. **Julgamento.** Um agente `juiz` com «`<id>`». Ele responde `<id>: a`, `<id>: b` ou `<id>: nenhuma`.
 4. **Se nenhuma:** um `roteirista` em correção com as notas de `pipeline/candidatas/<id>.juiz.json`, só na versão que o juiz apontar como base (se ele não apontar, a de maior nota em `slop`), depois o `juiz` de novo. Se der nenhuma outra vez, pare neste conceito: ele fica para o editor.

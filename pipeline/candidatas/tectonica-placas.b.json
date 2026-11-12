@@ -1,0 +1,122 @@
+{
+  "gancho": "Muita gente imagina o fundo do mar sendo empurrado como uma esteira. A casca rígida da Terra está mesmo quebrada em pedaços que se movem, mas a maior força vem de outro lugar. Essa é a tectônica de placas.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "Duas placas se afastam e o magma sobe no meio. A cena sugere um empurrão, e é esse palpite que vamos testar."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Quantos milímetros por ano a placa de Nazca anda?",
+      "unidade": "mm por ano",
+      "min": 1,
+      "max": 1000,
+      "escala": "log",
+      "resposta": 160,
+      "legenda": "Cerca de 160 milímetros por ano, quase a velocidade com que o cabelo cresce.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>O palpite comum: a crosta nova que nasce na dorsal empurra a placa para os lados. A dorsal é mais alta e a gravidade faz a placa deslizar dali para longe. Essa força existe, mas é secundária.</p>",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Nasce",
+          "texto": "Na dorsal, a crosta nova é menos densa que a astenosfera abaixo dela."
+        },
+        {
+          "nome": "Esfria",
+          "texto": "Com o tempo ela esfria e engrossa."
+        },
+        {
+          "nome": "Pesa",
+          "texto": "Fica mais densa que a astenosfera."
+        },
+        {
+          "nome": "Afunda",
+          "texto": "Na subducção, a borda antiga desce e puxa o resto da placa."
+        }
+      ],
+      "legenda": "O slab pull, o puxão da placa que afunda, é considerado a maior força motriz do movimento das placas.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Na subducção, o que faz a borda antiga de uma placa oceânica descer e levar o resto junto?",
+      "alts": [
+        "A crosta nova da dorsal empurrando por trás",
+        "Ser mais quente e leve que a astenosfera",
+        "Ter esfriado com o tempo e ficado mais densa que o manto abaixo"
+      ],
+      "correta": 2,
+      "porque": "A litosfera oceânica nasce leve, esfria e engrossa até pesar mais que a astenosfera. Aí afunda e arrasta a placa atrás de si."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Crosta oceânica",
+      "b": "Crosta continental",
+      "linhas": [
+        {
+          "aspecto": "Densidade",
+          "a": "maior",
+          "b": "menor"
+        },
+        {
+          "aspecto": "Silício",
+          "a": "menos, e mais elementos pesados",
+          "b": "mais"
+        },
+        {
+          "aspecto": "Posição",
+          "a": "geralmente abaixo do nível do mar",
+          "b": "se projeta acima dele"
+        }
+      ],
+      "legenda": "A diferença de densidade decide quem desce quando duas placas se encontram.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "foto",
+      "foto": 4,
+      "legenda": "Vulcões Parinacota e Pomerape, nos Andes. A placa que desce libera água, o manto ao redor derrete com mais facilidade e o magma sobe."
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Quando as duas placas são continentais e têm densidade parecida, nenhuma é pesada o bastante para descer. Elas ficam frente a frente, e a pressão continua.</p>",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Duas placas continentais de densidade parecida se encontram de frente. O que se espera na borda delas?",
+      "alts": [
+        "Uma desce sob a outra e forma vulcões, como nos Andes",
+        "As bordas se comprimem, se dobram e se elevam",
+        "As duas se afastam e abre-se um oceano novo"
+      ],
+      "correta": 1,
+      "porque": "Sem diferença de densidade, nenhuma afunda. As bordas se dobram para cima e formam cadeias de montanhas, como o Himalaia e os Alpes."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Na Dorsal Mesoatlântica as placas se afastam de 10 a 40 milímetros por ano, mais ou menos a velocidade com que as suas unhas crescem. Nesse ritmo o Atlântico se alarga.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "O que mais move as placas da Terra é considerado ser a borda antiga e fria que afunda e puxa o resto delas.",
+      "quando": "Quando alguém disser que o magma que sai do fundo do mar empurra os continentes.",
+      "marca": "consenso",
+      "fonte": 3
+    }
+  ],
+  "fecho": "Onde as placas se encontram, surgem montanhas e vulcões. E a superfície da Terra tem outra divisão, a dos climas e da vida. Quer ver como os biomas terrestres se dividem?"
+}

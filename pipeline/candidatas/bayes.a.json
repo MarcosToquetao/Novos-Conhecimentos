@@ -1,0 +1,102 @@
+{
+  "gancho": "Um exame deu positivo. Qual a chance de a pessoa estar doente? Quase todos os médicos e estudantes que responderam numa pesquisa de Harvard erraram, e na mesma direção. A gente chama de teorema de Bayes a conta que corrige esse erro.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "Em 1978, pesquisadores de Harvard fizeram uma pergunta a 60 médicos e estudantes de medicina do hospital deles."
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Um exame detecta uma doença que atinge 1 em cada 1.000 pessoas. Ele nunca deixa de detectar quem tem a doença, mas dá positivo em 5% de quem não tem. Uma pessoa escolhida ao acaso testa positivo.</p>"
+    },
+    {
+      "tipo": "estimar",
+      "q": "Qual a chance de essa pessoa ter a doença?",
+      "unidade": "%",
+      "min": 0,
+      "max": 100,
+      "escala": "linear",
+      "resposta": 2,
+      "legenda": "Cerca de 2%. A resposta mais comum entre os médicos foi 95%.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pontos",
+      "valor": 1,
+      "frase": "mulheres, numa faixa etária de rastreamento de mamografia, têm câncer de mama.",
+      "legenda": "O exame detecta 90% dos casos reais e dá positivo em 9% das mulheres saudáveis."
+    },
+    {
+      "tipo": "figura",
+      "fig": "bayes-icones",
+      "legenda": "Mil mulheres, 98 resultados positivos. Só 9 deles são de quem tem câncer.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "O exame detecta 90% dos casos reais. Por que um positivo deixa só cerca de 9% de chance de doença?",
+      "alts": [
+        "O exame é ruim e erra mais do que acerta",
+        "Há tantas mulheres saudáveis que os positivos falsos passam dos verdadeiros",
+        "Nove por cento é a margem de erro do exame, e o resultado vale mesmo assim"
+      ],
+      "correta": 1,
+      "porque": "Em mil mulheres, 990 são saudáveis e 10 têm câncer. Mesmo com poucos erros em cada uma, os falsos positivos somam muito mais que os 9 verdadeiros."
+    },
+    {
+      "tipo": "comparar",
+      "a": "O exame dá positivo, se a pessoa está doente",
+      "b": "A pessoa está doente, se o exame deu positivo",
+      "linhas": [
+        {
+          "aspecto": "Nome",
+          "a": "sensibilidade",
+          "b": "valor preditivo positivo"
+        },
+        {
+          "aspecto": "É propriedade de",
+          "a": "o exame",
+          "b": "a pessoa dentro de uma população"
+        },
+        {
+          "aspecto": "Depende de quantos têm a doença",
+          "a": "não",
+          "b": "sim"
+        }
+      ],
+      "legenda": "Trocar uma pergunta pela outra é o erro, e tem nome: inversão condicional.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Quanto mais rara a condição procurada, mais os falsos positivos dominam os positivos totais. A mesma tecnologia pode levar a conclusões muito diferentes conforme quem é testado.</p>"
+    },
+    {
+      "tipo": "pergunta",
+      "q": "O mesmo exame é aplicado a dois grupos em que a doença é mais comum num do que no outro. Um positivo tem o mesmo valor nos dois?",
+      "alts": [
+        "Tem, porque o exame é o mesmo nos dois grupos",
+        "Não, porque o valor de um positivo depende de quantos têm a doença no grupo testado",
+        "Não, porque a sensibilidade do exame muda de um grupo para o outro"
+      ],
+      "correta": 1,
+      "porque": "A sensibilidade é propriedade do exame. O valor de um positivo é propriedade da pessoa dentro de um grupo, e muda com a proporção de doentes nele."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Aparece em manchetes sobre testes de covid e em tribunais. Um perfil de DNA que coincide por acaso em 1 em 10 milhões não dá ao réu essa chance de ser inocente. Importa quantas pessoas poderiam ser o autor.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Um exame que acerta 90% dos doentes pode dar positivo e deixar você com mais de 90% de chance de estar saudável.",
+      "quando": "Quando alguém se assustar com um positivo num exame de rastreio, ou comentar manchete sobre um teste.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "Esse erro, trocar uma pergunta pela outra, já anulou decisões judiciais. Como ele aparece num tribunal? Veja Falácia do promotor e probabilidade condicional."
+}

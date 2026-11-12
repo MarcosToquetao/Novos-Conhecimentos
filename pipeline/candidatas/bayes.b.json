@@ -1,0 +1,95 @@
+{
+  "gancho": "Um exame para uma doença rara nunca deixa de detectar quem está doente. Você faz, e dá positivo. Parece quase certo que você tem a doença, mas a conta diz outra coisa. A gente chama essa conta de teorema de Bayes.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "Em 1978, pesquisadores de Harvard fizeram uma pergunta de probabilidade a 60 médicos e estudantes de medicina do próprio hospital."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Uma doença atinge 1 em cada 1.000 pessoas. O exame nunca deixa de detectar quem tem, mas dá positivo em 5% de quem não tem. Alguém testa positivo. Qual a chance de ter a doença?",
+      "unidade": "%",
+      "min": 0,
+      "max": 100,
+      "escala": "linear",
+      "resposta": 2,
+      "legenda": "Cerca de 2%. A resposta mais comum foi 95%. Quase todos erraram, na mesma direção.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "comparar",
+      "a": "Se está doente",
+      "b": "Se deu positivo",
+      "linhas": [
+        {
+          "aspecto": "Pergunta",
+          "a": "chance de dar positivo",
+          "b": "chance de estar doente"
+        },
+        {
+          "aspecto": "De quem é a resposta",
+          "a": "do exame",
+          "b": "da pessoa, dentro de uma população"
+        },
+        {
+          "aspecto": "Depende de quantos doentes há",
+          "a": "não",
+          "b": "sim"
+        }
+      ],
+      "legenda": "Parecem a mesma pergunta. Trocar uma pela outra gera o erro dos médicos."
+    },
+    {
+      "tipo": "figura",
+      "fig": "bayes-icones",
+      "legenda": "Mil mulheres no rastreamento: 1% tem câncer, o exame acerta 90% delas e erra em 9% das saudáveis. Dos 98 positivos, 9 têm a doença.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Os 98 positivos misturam dois grupos: as doentes que o exame pegou e as saudáveis que ele confundiu. A chance de um positivo ser verdadeiro depende do tamanho de cada grupo.</p>"
+    },
+    {
+      "tipo": "pergunta",
+      "q": "O mesmo exame, com as mesmas taxas, passa a ser feito só em pessoas com sintomas, onde a proporção de doentes é outra. O que muda para quem testa positivo?",
+      "alts": [
+        "Nada: o exame é o mesmo, então o positivo vale o mesmo",
+        "A conclusão muda: a chance de estar doente depende da proporção de doentes no grupo testado",
+        "Só muda se o exame for trocado por uma tecnologia melhor"
+      ],
+      "correta": 1,
+      "porque": "As taxas do exame ficam iguais, mas a chance de um positivo ser verdadeiro depende do tamanho de cada grupo. Mesma tecnologia, taxa-base diferente, conclusão diferente."
+    },
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "No tribunal, o perito diz que a chance de o perfil de DNA coincidir por acaso é de 1 em 10 milhões."
+    },
+    {
+      "tipo": "pergunta",
+      "q": "O promotor conclui que a chance de o réu ser inocente também é de 1 em 10 milhões. O que essa conclusão ignora?",
+      "alts": [
+        "Que o perito pode ter errado a conta do DNA",
+        "Quantas pessoas poderiam plausivelmente ser o autor do crime",
+        "Que DNA só vale com testemunhas"
+      ],
+      "correta": 1,
+      "porque": "É a mesma troca de perguntas. A chance de coincidir é do exame. A de o réu ser inocente depende de quantas pessoas poderiam ser o autor. Em bases grandes, coincidências raras tornam-se esperadas."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Alarme de fraude, rastreamento de doença, manchete sobre teste de covid: a pergunta útil é quantos casos existem na população examinada. Sistemas que buscam eventos raros em muita gente produzem mais falsos positivos que verdadeiros.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Com 1% de doentes na população, um positivo num exame que acerta 90% deles dá só cerca de 9% de chance de doença.",
+      "quando": "Quando alguém entrar em pânico com um positivo num exame de rastreamento.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "Esse erro do tribunal tem nome e aparece em decisões judiciais anuladas: a falácia do promotor e a probabilidade condicional."
+}

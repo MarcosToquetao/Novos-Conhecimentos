@@ -1,0 +1,21 @@
+{
+  "vencedora": "b",
+  "motivo": "A b mostra a ideia antes do jargão (onda quadrada feita de senos, prisma, ida e volta sem perda) e termina com uma frase que dá para repetir no jantar: Lagrange estranhou, hoje está no MP3. A a abre pela cristalografia, com «densidade de elétrons» antes de explicar o que é a transformada, e a frase de contar é técnica demais para alguém repetir de cabeça.",
+  "slop": {"a": 36, "b": 40},
+  "notas": {
+    "a": [
+      "Tela 2 (texto): fala em «transformada de Fourier da densidade de elétrons do cristal» antes de a lição mostrar o que é uma transformada. Leve a cristalografia para o fim e abra pela onda quadrada ou pelo prisma (foto 2).",
+      "Gancho: «decomposição em ondas» não diz ao leigo do que se trata. Diga em palavras simples que a ideia separa um som ou uma imagem nas oscilações que o formam.",
+      "Tela 11 (contar): a frase «transformada de Fourier da densidade de elétrons do cristal» ninguém repete de cabeça. Troque por uma frase curta e concreta, por exemplo ligando a objeção de Lagrange ao MP3.",
+      "Tela 5 (pergunta): a figura anterior já mostra a resposta, e «Não sai» contradiz o que a pessoa acabou de ver. A pergunta fica óbvia. Troque por uma sobre ida e volta sem perda.",
+      "Tela 10 (no_dia): junta duas ideias, e a segunda (aliasing, «duas vezes por ciclo») é jargão sem explicação. Fique só no MP3 e no JPEG.",
+      "Telas 7 e 8: «8 kHz» e «44,1 kHz» aparecem sem dizer o que é kHz. Escreva «um chiado agudo» e «um segundo de música de CD»."
+    ],
+    "b": [
+      "Tela 6 (comparar): «equação diferencial» e «multiplicação ponto a ponto» são jargão sem explicação. Troque a linha da equação do calor por uma do MP3 (detalhe misturado / detalhe descartado) e escreva «conta pesada» e «conta simples» na linha do eco.",
+      "Tela 4 (figura fourier-dominios): acrescente à legenda «dá para ir e voltar sem perder nada», para que a pergunta da tela 5 se responda com o que já foi mostrado e não só por dedução.",
+      "Gancho: tem cerca de 50 palavras em duas frases longas. Corte «com três dos maiores matemáticos da época» ou divida em frases curtas.",
+      "Telas 6 e 8: «8 kHz» e «44,1 kHz» aparecem sem explicação. Escreva «um zumbido agudo» e «um segundo de música com qualidade de CD»."
+    ]
+  }
+}

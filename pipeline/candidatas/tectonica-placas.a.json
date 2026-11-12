@@ -1,0 +1,147 @@
+{
+  "gancho": "Sob o chão que você pisa, pedaços gigantes da Terra se movem, devagar, uns em relação aos outros. A gente chama isso de tectônica de placas, e ela explica de onde vêm vulcões, terremotos e cadeias de montanhas.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 4,
+      "legenda": "Parinacota e Pomerape, vulcões dos Andes. Os dois nasceram da subducção: uma placa descendo sob outra.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "estimar",
+      "q": "Por ano, a placa de Nazca chega a quantos milímetros de movimento?",
+      "unidade": "mm por ano",
+      "min": 1,
+      "max": 1000,
+      "escala": "log",
+      "resposta": 160,
+      "legenda": "Cerca de 160, quase o ritmo do cabelo. Na Dorsal Mesoatlântica as placas se afastam de 10 a 40, mais ou menos o ritmo das unhas.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "camadas",
+      "camadas": [
+        {
+          "nome": "Litosfera",
+          "nota": "crosta e parte superior do manto, rígida"
+        },
+        {
+          "nome": "Astenosfera",
+          "nota": "mais quente, flui com mais facilidade"
+        }
+      ],
+      "eixo": {
+        "topo": "rígida",
+        "base": "mais quente"
+      },
+      "legenda": "A litosfera está quebrada em placas, e elas se movem sobre a astenosfera.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Uma placa desce",
+          "texto": "Numa subducção, uma placa mergulha sob a vizinha."
+        },
+        {
+          "nome": "Ela libera água",
+          "texto": "Minerais hidratados da placa soltam água."
+        },
+        {
+          "nome": "O manto derrete mais fácil",
+          "texto": "A água diminui o ponto de fusão da rocha ao redor."
+        },
+        {
+          "nome": "Nasce magma",
+          "texto": "O magma sobe e forma vulcões."
+        }
+      ],
+      "legenda": "Assim se formam vulcões como os da foto de abertura.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma placa desce sob outra e há vulcões acima. De onde vem o magma?",
+      "alts": [
+        "Do atrito entre as placas, que esquenta a rocha até derreter",
+        "Da água solta pela placa que desce, que faz a rocha ao redor derreter com mais facilidade",
+        "Do núcleo da Terra, que sobe pela fenda aberta entre as placas"
+      ],
+      "correta": 1,
+      "porque": "A placa que desce leva minerais com água. Ao soltá-la, ela baixa o ponto de fusão do manto vizinho, e a rocha vira magma."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Crosta oceânica",
+      "b": "Crosta continental",
+      "linhas": [
+        {
+          "aspecto": "Composição",
+          "a": "menos silício, mais elementos pesados",
+          "b": "mais silício"
+        },
+        {
+          "aspecto": "Densidade",
+          "a": "mais densa",
+          "b": "menos densa"
+        },
+        {
+          "aspecto": "Altura",
+          "a": "geralmente abaixo do nível do mar",
+          "b": "se projeta acima dele"
+        }
+      ],
+      "legenda": "As placas são feitas de litosfera oceânica e continental.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Nasce na dorsal",
+          "texto": "A crosta oceânica sai mais leve que a astenosfera abaixo."
+        },
+        {
+          "nome": "Envelhece",
+          "texto": "Com o tempo esfria, engrossa e fica mais densa."
+        },
+        {
+          "nome": "Afunda",
+          "texto": "Na subducção, a parte pesada desce e puxa o resto da placa."
+        }
+      ],
+      "legenda": "Esse puxão tem nome em inglês: slab pull. É considerado a maior força motriz do movimento das placas.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma placa oceânica acabou de nascer numa dorsal. Quando ela fica pronta para afundar numa subducção?",
+      "alts": [
+        "Logo ao nascer, porque sai do manto cheia de calor",
+        "Depois que esfria e fica mais densa que a astenosfera",
+        "Nunca, porque a crosta oceânica é leve demais para afundar"
+      ],
+      "correta": 1,
+      "porque": "Recém-nascida, ela é menos densa que a astenosfera e boia. Só depois de esfriar e engrossar ela fica pesada o bastante para descer."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Quando o noticiário mostrar um terremoto ou um vulcão, procure no mapa o limite entre placas mais próximo: ali acontece a maior parte deles. Na Califórnia, a Falha de San Andreas é um limite onde duas placas deslizam de lado.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "As placas são puxadas pelo peso da parte velha que afunda, e na Dorsal Mesoatlântica se afastam no ritmo em que as unhas crescem.",
+      "quando": "Quando alguém disser que a terra firme está parada, ou ao ver notícia de terremoto.",
+      "marca": "consenso",
+      "fonte": 3
+    }
+  ],
+  "fecho": "Das placas, passamos ao que está sobre elas. O que define cada um dos biomas terrestres?"
+}

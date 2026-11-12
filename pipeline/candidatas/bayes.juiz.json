@@ -1,0 +1,22 @@
+{
+  "vencedora": "b",
+  "motivo": "A b conta uma história só: o erro dos médicos, as duas perguntas que parecem iguais, as mil mulheres e, por fim, o tribunal, onde a pessoa aplica a mesma ideia a um caso novo. A a pula do caso de Harvard para a mamografia sem ponte, explica a ideia central numa tela de texto abstrata e só cita o DNA de passagem no no_dia.",
+  "slop": {"a": 37, "b": 40},
+  "notas": {
+    "a": [
+      "Os pontos de sem_respaldo do .fatos.json foram corrigidos: a pergunta da tela 9 não afirma mais em que direção a proporção muda.",
+      "Tela 4 (pontos): a lição pula do exame de Harvard para a mamografia sem aviso. Ponha uma frase de transição ou junte com a figura da tela 5.",
+      "Tela 7 (comparar): os títulos das colunas são frases inteiras e ficam longos demais no celular. Use algo como «Se está doente» e «Se deu positivo».",
+      "Tela 8 (texto): é abstrata («falsos positivos dominam os positivos totais») e entrega a resposta da pergunta seguinte. Troque por um caso concreto ou corte.",
+      "Tela 9 (pergunta): logo depois da tela 8 a resposta fica óbvia, e a alternativa certa é a mais longa.",
+      "Tela 10 (no_dia): tribunal e manchete de covid não fazem parte do dia da pessoa, e o caso do DNA aparece ali pela primeira vez, sem preparo. Use rastreio, alarme de fraude ou outra cena do documento."
+    ],
+    "b": [
+      "O ponto de sem_respaldo do .fatos.json foi corrigido: a tela 6 diz «onde a proporção de doentes é outra», sem dizer «muito mais».",
+      "Tela 4 (figura): a legenda tem cerca de 26 palavras e cinco números. Corte para «Mil mulheres no rastreamento. Dos 98 positivos, só 9 têm câncer.» e deixe as taxas para a figura.",
+      "Tela 6 (pergunta): a alternativa certa é a mais longa e já traz a explicação, e a terceira é fraca. Encurte a certa e escreva uma errada mais tentadora, por exemplo «A chance sobe para perto de 100%, porque quem tem sintomas está doente».",
+      "Tela 8 (pergunta): «Que DNA só vale com testemunhas» é uma alternativa errada que ninguém escolheria. Troque por um erro plausível, como «Que o DNA pode ter sido contaminado no laboratório».",
+      "Tela 10 (contar): três números na frase dificultam repetir de cabeça. A frase da versão a é melhor: «Um exame que acerta 90% dos doentes pode dar positivo e deixar você com mais de 90% de chance de estar saudável.»"
+    ]
+  }
+}

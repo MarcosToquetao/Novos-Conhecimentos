@@ -1,0 +1,99 @@
+{
+  "gancho": "A foto de raios X que revelou a hélice do DNA parece só um punhado de manchas. Ela é uma decomposição em ondas, a ideia que Lagrange achou absurda em 1807 e que a gente chama de transformada de Fourier.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 4,
+      "legenda": "Padrão de raios X do DNA, ao lado da dupla hélice. A famosa imagem 51, de Rosalind Franklin, é desse tipo.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Quando raios X atravessam um cristal, as manchas no detector são, com boa aproximação, a transformada de Fourier da densidade de elétrons do cristal. O cristalógrafo faz a conta inversa e recupera a molécula.</p>",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "figura",
+      "fig": "fourier-dominios",
+      "legenda": "Em cima, o sinal como o tempo entrega. Embaixo, o mesmo sinal em frequências. Dá para ir e voltar sem perder nada."
+    },
+    {
+      "tipo": "figura",
+      "fig": "fourier-decomp",
+      "legenda": "Com 1 termo, só uma ondulação. Com 9, o degrau está quase lá. Lagrange achou absurdo que quinas saíssem de senos.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Como uma onda quadrada, cheia de quinas, sai de curvas tão suaves?",
+      "alts": [
+        "Esticando um único seno até ele endurecer",
+        "Somando senos de frequências diferentes, cada vez mais deles",
+        "Não sai: só curvas com quinas formam quinas"
+      ],
+      "correta": 1,
+      "porque": "Somando senos de frequências diferentes, a curva chega cada vez mais perto do degrau: na figura, com 9 termos ele já está quase lá. A objeção de Lagrange parecia razoável, e o «qualquer» de Fourier precisou depois de condições."
+    },
+    {
+      "tipo": "comparar",
+      "a": "No tempo",
+      "b": "Em frequências",
+      "linhas": [
+        {
+          "aspecto": "Chiado agudo",
+          "a": "difícil de separar da voz",
+          "b": "faixa estreita, fácil de zerar"
+        },
+        {
+          "aspecto": "MP3 e JPEG",
+          "a": "o detalhe que o ouvido e o olho ignoram está misturado",
+          "b": "esse detalhe é descartado, o resto fica"
+        },
+        {
+          "aspecto": "Derivar",
+          "a": "conta de cálculo",
+          "b": "multiplicar por um número"
+        }
+      ],
+      "legenda": "O mesmo sinal, duas formas de escrever. Cada operação fica fácil numa delas."
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma gravação de voz tem um chiado constante de 8 kHz. O que a transformada permite?",
+      "alts": [
+        "Cortar os trechos do tempo em que o chiado aparece",
+        "Zerar a faixa do chiado e reconstruir o som a partir do resto",
+        "Subir o volume da voz até cobrir o chiado"
+      ],
+      "correta": 1,
+      "porque": "O chiado vira uma faixa estreita no gráfico de frequências. Zerada a faixa, a inversa devolve o som sem ele. No tempo, separar o chiado da voz é um problema espinhoso."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Para um segundo de áudio a 44,1 kHz, quantas operações a transformada exige se calculada do jeito ingênuo?",
+      "unidade": "operações",
+      "min": 1000,
+      "max": 1000000000000,
+      "escala": "log",
+      "resposta": 2000000000,
+      "legenda": "Cerca de 2 bilhões. A FFT, de Cooley e Tukey em 1965, faz o mesmo com cerca de 700 mil.",
+      "marca": "consenso",
+      "fonte": 5
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Num MP3 ou JPEG, o arquivo foi transformado, o que ouvido e olho não usam foi descartado e o resto guardado. Rodas de carroça girando para trás no cinema são aliasing: medir menos de duas vezes por ciclo engana.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "O padrão de raios X que revelou a hélice do DNA é, com boa aproximação, a transformada de Fourier da densidade de elétrons do cristal.",
+      "quando": "Numa conversa sobre DNA, ou quando alguém perguntar como um MP3 pesa tão pouco.",
+      "marca": "consenso",
+      "fonte": 3
+    }
+  ],
+  "fecho": "Por que um piano e uma flauta tocando a mesma nota soam diferentes? Veja em Timbre e série harmônica."
+}

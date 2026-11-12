@@ -66,6 +66,7 @@ Desde 12/11/2026 quem escreve as lições são subagentes Claude, não o DeepSee
 | Juiz | Opus | `<id>.juiz.json`: vencedora, motivo e notas |
 | Tecelão | Sonnet | `pipeline/pontes.json`, que `gerar.py tecer` junta ao grafo |
 
+- **Duas versões só até calibrar.** Enquanto houver menos de 10 escolhas do editor, cada conceito ganha as versões a e b. Depois, uma versão só, no ângulo que o editor escolheu mais vezes (decisão do usuário em 12/11/2026).
 - **Como rodar:** `/produzir <n>` ou `/produzir <id>...`, com a sessão em Sonnet. A sessão que despacha nunca lê uma lição: passa ids e lê respostas de uma linha.
 - **Revisão por pares.** `python pipeline/revisar.py` mostra as duas versões lado a lado. O editor escolhe uma ou nenhuma nas 10 primeiras (calibração); depois, 1 conceito em cada 5 (`gerar.py destino <id>`). Pode vetar qualquer lição no ar. As escolhas vão para `pipeline/avaliacoes.jsonl` (tipo `par`) e o juiz as lê com `gerar.py escolhas`. A regra antiga das 9 aprovações seguidas acabou.
 - **Skills adotadas** (cópias sem alteração, com licença, em `.claude/skills/`): `stop-slop` (rubrica do juiz), `humanizer` (rodada de correção), `hinge-question-designer` e `retrieval-practice-generator` (perguntas). A camada em português é o `pipeline/estilo.md`.

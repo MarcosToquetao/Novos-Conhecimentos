@@ -1,0 +1,105 @@
+{
+  "gancho": "Em 1807, uma banca com três dos maiores matemáticos da época rejeitou um trabalho sobre calor, e Lagrange estranhou nele a ideia de que uma curva cheia de quinas pode ser montada somando curvas suaves. Dessa ideia nasceu a transformada de Fourier, que separa um som nas frequências que o formam.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "Joseph Fourier. A banca rejeitou o trabalho dele em 1807. Ele errou no «qualquer», que precisava de condições, e acertou no que importava.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "figura",
+      "fig": "fourier-decomp",
+      "legenda": "Uma onda quadrada, toda quina, montada só com senos. Com 1 termo é uma ondulação, com 3 lembra um degrau, com 9 está quase lá."
+    },
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "O prisma não acrescenta as cores: elas já estavam misturadas na luz branca. A transformada separa um sinal por frequência do mesmo jeito."
+    },
+    {
+      "tipo": "figura",
+      "fig": "fourier-dominios",
+      "legenda": "Em cima, o sinal como o tempo o entrega. Embaixo, o mesmo sinal escrito como frequências."
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Você transforma um acorde de piano em frequências e depois faz o caminho de volta. O que chega?",
+      "alts": [
+        "Uma versão resumida, sem os detalhes mais finos",
+        "O acorde original, exatamente como era",
+        "Só as notas mais fortes, sem o resto"
+      ],
+      "correta": 1,
+      "porque": "Transformar é mudar de coordenadas, e dá para ir e voltar quantas vezes quiser. Quem resume é outra etapa, não a transformada."
+    },
+    {
+      "tipo": "comparar",
+      "a": "No tempo",
+      "b": "Nas frequências",
+      "linhas": [
+        {
+          "aspecto": "Chiado de 8 kHz na voz",
+          "a": "problema espinhoso",
+          "b": "uma coluna a apagar"
+        },
+        {
+          "aspecto": "Equação do calor",
+          "a": "equação diferencial",
+          "b": "conta de multiplicação"
+        },
+        {
+          "aspecto": "Eco de uma sala",
+          "a": "operação pesada",
+          "b": "multiplicação ponto a ponto"
+        }
+      ],
+      "legenda": "A mesma tarefa muda de dificuldade conforme o retrato escolhido.",
+      "marca": "consenso",
+      "fonte": 7
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma gravação de voz tem um zumbido constante numa frequência só. Como tirá-lo sem mexer no resto?",
+      "alts": [
+        "Cortar da curva do som os pedaços em que o zumbido aparece",
+        "Passar para frequências e guardar só as colunas mais fortes",
+        "Passar para frequências, tirar o zumbido de lá e voltar ao som"
+      ],
+      "correta": 2,
+      "porque": "O zumbido ocupa uma coluna só no retrato das frequências. Como a volta devolve o resto intacto, basta tirar essa coluna. No tempo, ele está misturado à voz o tempo todo."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Feita do jeito ingênuo, quantas operações exige a transformada de um segundo de áudio a 44,1 kHz?",
+      "unidade": "operações",
+      "min": 1000,
+      "max": 1000000000000,
+      "escala": "log",
+      "resposta": 2000000000,
+      "legenda": "Cerca de 2 bilhões. O algoritmo de Cooley e Tukey, de 1965, reduz isso a cerca de 700 mil.",
+      "marca": "consenso",
+      "fonte": 5
+    },
+    {
+      "tipo": "foto",
+      "foto": 4,
+      "legenda": "Padrão de raios X do DNA. Com boa aproximação, a natureza faz a transformada da distribuição de elétrons do cristal, e o cristalógrafo faz a inversa.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>O MP3 do seu celular e a foto em JPEG passam por esse caminho: transformam o sinal, descartam o que a percepção não usa e guardam o resto.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Em 1807, Lagrange estranhou a ideia de montar quinas com curvas suaves, e hoje ela está por trás do MP3.",
+      "quando": "Quando alguém comentar que um áudio ou uma foto no celular ocupa pouco espaço.",
+      "marca": "consenso",
+      "fonte": 1
+    }
+  ],
+  "fecho": "A fórmula da transformada esconde uma onda de teste que gira num círculo. Para ver como ela gira, siga para Números complexos e a identidade de Euler."
+}

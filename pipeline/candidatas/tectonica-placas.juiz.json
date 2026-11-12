@@ -1,0 +1,21 @@
+{
+  "vencedora": "a",
+  "motivo": "A ensina o mecanismo direto: da foto dos vulcões andinos à água que derrete o manto e ao puxão da placa que afunda, com seis telas visuais. A B se organiza para desmentir um palpite (o empurrão da dorsal): o gancho, a foto 1, a tela 3 e o contar giram em torno do mito, e isso a reprova.",
+  "slop": {"a": 38, "b": 35},
+  "notas": {
+    "a": [
+      "Gancho: hoje é quase uma definição («pedaços gigantes se movem uns em relação aos outros»). Abra por um fato curioso do documento, por exemplo o Atlântico se alargando no ritmo das unhas ou a placa de Nazca andando quase como o cabelo cresce, e só depois diga «a gente chama isso de tectônica de placas».",
+      "Tela 3 (camadas): o eixo mistura critérios, «rígida» no topo e «mais quente» na base. Use um gradiente só, por exemplo topo «rígida» e base «flui com mais facilidade».",
+      "Tela 5 (pergunta): a alternativa certa é a mais longa e repete quase palavra por palavra a tela 4. Equilibre o tamanho das três alternativas.",
+      "Tela 8 (pergunta): a alternativa «Nunca, porque a crosta oceânica é leve demais» contradiz a tela anterior e ninguém a escolhe. Troque por um erro plausível, por exemplo «quando outra placa a empurra de lado».",
+      "Tela 10 (contar): junta duas ideias numa frase só e fica difícil de repetir de cabeça. Fique com uma: o puxão da parte velha que afunda, ou o Atlântico abrindo no ritmo das unhas."
+    ],
+    "b": [
+      "Reprovada: a lição é construída para desmentir um palpite (gancho «Muita gente imagina...», legenda da tela 1 «é esse palpite que vamos testar», tela 3 «O palpite comum», contar «Quando alguém disser que o magma empurra os continentes»). Reescreva ensinando o slab pull direto, sem o mito como fio condutor.",
+      "Gancho: abre por um equívoco em vez de um fato curioso, e só no fim diz do que se trata.",
+      "Tela 11 (contar): «é considerado ser» soa mal em português e enfraquece a frase. Diga «o que mais move as placas é a borda antiga e fria que afunda e puxa o resto».",
+      "Tela 8 (texto): só prepara a pergunta seguinte; poderia ser visual ou fundida com ela.",
+      "Tela 5 (pergunta): a alternativa «A crosta nova da dorsal empurrando por trás» depende do mito montado antes; ao tirar o mito, refaça as erradas."
+    ]
+  }
+}
