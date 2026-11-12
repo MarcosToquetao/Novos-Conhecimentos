@@ -132,6 +132,18 @@ for (const [id, g] of Object.entries(GRAFO)) for (const v of g.liga || []) {
   if (!vistos.has(k) && CATALOGO.some(c => c.id === v) && CATALOGO.some(c => c.id === id)) { vistos.add(k); arestas.push([id, v]); }
 }
 
+/* Pontes entre áreas, cada uma com a razão que aparece no mapa, e fios transversais. Quem escreve é o agente
+   tecelão; `python pipeline/gerar.py tecer` valida e grava em js/grafo.json (pontes no nó, fios em _fios). */
+const areaDe = Object.fromEntries(CATALOGO.map(c => [c.id, c.area]));
+const pontes = {};
+for (const [id, g] of Object.entries(GRAFO)) for (const [v, razao] of Object.entries(g.pontes || {})) {
+  if (!areaDe[id] || !areaDe[v] || areaDe[id] === areaDe[v]) { console.log(`  aviso grafo: ponte ${id} ~ ${v} ignorada (id fora do catálogo ou mesma área)`); continue; }
+  const k = [id, v].sort().join("|");
+  pontes[k] = razao;
+  if (!vistos.has(k)) { vistos.add(k); arestas.push([id, v]); }
+}
+const fios = (GRAFO._fios || []).map(f => ({ ...f, nos: f.nos.filter(n => areaDe[n]) }));
+
 function layoutArea(nos, ars, rnd) {
   const subs = [...new Set(nos.map(n => n.sub))].sort();
   nos.forEach(n => {   /* começa com cada subárea num setor do círculo: vira braço */
@@ -182,8 +194,28 @@ function layout() {
   const regioes = Object.entries(MACROS).map(([k, m]) => {
     const itens = m.areas.filter(a => ilhas[a]).map(a => ({ area: a, r: ilhas[a].r }));
     const { R, pos } = anel(itens, 26);
-    return { itens, pos, r: R };
+    return { k, itens, pos, r: R };
   });
+  /* As pontes puxam o layout pela ordem das regiões no anel: fica a ordem que deixa as pontes mais curtas.
+     São 8 regiões, então dá para testar todos os arranjos (a primeira fica fixa: girar o anel não muda nada).
+     ponytail: só a ordem das regiões; as áreas dentro de cada região seguem a ordem de MACROS. */
+  const pesos = {};
+  for (const par of Object.keys(pontes)) {
+    const [a, b] = par.split("|").map(id => MACRO_DE[areaDe[id]]).sort();
+    if (a !== b) pesos[a + "|" + b] = (pesos[a + "|" + b] || 0) + 1;
+  }
+  const custo = (ordem) => Object.entries(pesos).reduce((s, [par, n]) => {
+    const [a, b] = par.split("|"), d = Math.abs(ordem.indexOf(a) - ordem.indexOf(b));
+    return s + n * Math.min(d, ordem.length - d);
+  }, 0);
+  const chaves = regioes.map(r => r.k);
+  let melhor = chaves, menor = custo(chaves);
+  const permuta = (resto, feito) => {
+    if (!resto.length) { const c = custo(feito); if (c < menor) { menor = c; melhor = feito; } return; }
+    resto.forEach((x, i) => permuta(resto.filter((_, j) => j !== i), [...feito, x]));
+  };
+  if (Object.keys(pesos).length) permuta(chaves.slice(1), [chaves[0]]);
+  regioes.sort((a, b) => melhor.indexOf(a.k) - melhor.indexOf(b.k));
   const mundo = anel(regioes, 36);
   regioes.forEach((reg, i) => reg.itens.forEach((it, j) => {
     const cx = mundo.pos[i][0] + reg.pos[j][0], cy = mundo.pos[i][1] + reg.pos[j][1];
@@ -240,7 +272,7 @@ const indice = {
     id: c.id, termo: c.termo, area: c.area, sub: (GRAFO[c.id] || {}).sub || "", dificuldade: c.dificuldade, gancho: c.gancho,
     xy: pos[c.id], doc: !!CONTEUDOS[c.id], licao: !!(CONTEUDOS[c.id] && CONTEUDOS[c.id].licao)
   })),
-  arestas
+  arestas, pontes, fios
 };
 fs.writeFileSync(p("dados", "indice.json"), JSON.stringify(indice));
 

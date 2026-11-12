@@ -62,11 +62,14 @@
       <div class="carimbos" id="r-carimbos"></div>
       <svg class="mini-mapa" id="r-mapa" viewBox="0 0 1000 500" role="img" aria-label="O conceito no mapa do acervo, com os vizinhos"></svg>
       <p class="ficha-gancho" id="r-fecho"></p>
+      <p class="ficha-gancho" id="r-ponte" hidden></p>
       <p class="compart" id="r-compart"></p>
       <div class="acoes">
         <button class="btn" id="btn-proxima" hidden>Próxima</button>
         <button class="btn fio" id="btn-compartilhar">Mandar para um amigo</button>
         <button class="btn fio" id="btn-aprofundar">Aprofundar</button>
+        <button class="btn discreto js-lembrete">Pôr um lembrete diário no calendário</button>
+        <button class="btn discreto js-instalar" hidden>Instalar na tela inicial</button>
         <button class="btn discreto" id="btn-feedback" hidden>Dar uma opinião sobre o app</button>
       </div>
     </div>
@@ -115,6 +118,7 @@
       <div class="hoje-cab"><p class="rotulo">Acervo</p><p class="rotulo" id="a-resumo">&nbsp;</p></div>
       <input class="busca" id="a-busca" type="search" placeholder="Procurar um conceito" autocomplete="off" aria-label="Procurar um conceito no mapa">
       <div class="lista" id="a-achados"></div>
+      <select class="busca" id="a-fio" aria-label="Ver o mapa por áreas ou seguir um fio que atravessa as áreas" hidden style="margin-top:.5rem"></select>
       <div class="acervo">
         <svg id="a-mapa" viewBox="0 0 1000 1000" role="img" aria-label="Mapa interativo do acervo"></svg>
         <div class="acervo-ctrl"><button id="z-mais" aria-label="Aproximar">+</button><button id="z-menos" aria-label="Afastar">−</button><button id="z-tudo" aria-label="Ver o mapa inteiro">○</button></div>
@@ -133,6 +137,12 @@
         <progress id="l-barra" max="1" value="0" aria-label="Progresso até o próximo nível"></progress>
         <div class="carimbos" id="l-carimbos" style="margin-top:.9rem"></div>
       </div>
+      <label class="rotulo" for="hora-lembrete">Lembrete diário no seu calendário</label>
+      <div style="display:flex;gap:.5rem;margin:.4rem 0 1rem">
+        <input type="time" id="hora-lembrete" value="08:00" style="font:500 .95rem var(--mono);border:1px solid var(--regra);background:var(--ficha);color:var(--tinta);padding:.6rem;border-radius:0">
+        <button class="btn fio js-lembrete">Pôr no calendário</button>
+      </div>
+      <button class="btn fio js-instalar" hidden style="margin-bottom:1rem">Instalar na tela inicial</button>
       <div class="lista" id="hist-lista"></div>
       <div class="acoes" style="margin-top:1rem">
         <button class="btn fio" id="btn-exportar-prog">Exportar progresso</button>

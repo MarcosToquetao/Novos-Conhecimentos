@@ -227,6 +227,7 @@ function pintarPapeleta() {
     return `<span class="${o.feitos.has(dia) ? "feito" : o.cobertos.has(dia) ? "folga" : ""}${k === 6 ? " hoje" : ""}"><i>${"DSTQQSS"[new Date(a, m - 1, n).getDay()]}</i></span>`;
   }).join("");
   $("#h-ofensiva").textContent = E.licoes.length ? resumoLeitor(o) : "Uma ficha por dia mantém a ofensiva";
+  selo();
 }
 
 /* «Lembra desta?»: uma pergunta da última lição de um dia anterior, uma vez por dia. Puxar da memória
@@ -302,6 +303,9 @@ function concluirLicao(c, d, r) {
   proximaFicha = proxima(c, d, ls);
   $("#btn-proxima").hidden = !proximaFicha;
   if (proximaFicha) $("#btn-proxima").textContent = `Próxima: ${proximaFicha.termo}`;
+  const ponte = proximaFicha && pontesDe(c.id).find(p => p.outro.id === proximaFicha.id);
+  $("#r-ponte").hidden = !ponte;
+  if (ponte) $("#r-ponte").innerHTML = `<b>Ponte para ${proximaFicha.area}.</b> ${ponte.razao}`;
   const carimbo = $("#r-carimbo"); carimbo.classList.remove("anima"); void carimbo.offsetWidth; carimbo.classList.add("anima");
   history.replaceState({ tela: "tela-resultado" }, "", "#resultado");
   ir("tela-resultado", true);
@@ -313,7 +317,10 @@ let proximaFicha = null;
 function proxima(c, d, ls) {
   const fecho = ((d.licao && d.licao.fecho) || "").toLowerCase();
   const viz = IDX.arestas.filter(([a, b]) => a === c.id || b === c.id).map(([a, b]) => doCatalogo(a === c.id ? b : a)).filter(v => v && v.doc);
-  const nota = (v) => (fecho.includes(v.termo.toLowerCase().split(/[:(]/)[0].trim()) ? 4 : 0) + (v.licao ? 2 : 0) + (ls.has(v.id) ? 0 : 1);
+  /* a trilha alterna: uma vez aprofunda na área, na outra atravessa uma ponte para outra área */
+  const atravessar = E.licoes.length % 2 === 0, ehPonte = (v) => pontesDe(c.id).some(p => p.outro.id === v.id);
+  const nota = (v) => (fecho.includes(v.termo.toLowerCase().split(/[:(]/)[0].trim()) ? 4 : 0) + (v.licao ? 2 : 0) + (ls.has(v.id) ? 0 : 1)
+    + (ehPonte(v) === atravessar ? 3 : 0);
   if (viz.length) return viz.sort((a, b) => nota(b) - nota(a))[0];
   /* vizinho direto sem ficha ainda: tenta o vizinho do vizinho, depois a mesma área, depois o sorteio */
   const perto = new Set(IDX.arestas.filter(([a, b]) => a === c.id || b === c.id).flat());
@@ -447,7 +454,22 @@ function pintarAcervo() {
   if (!CATALOGO.length) return;
   const ls = lidos();
   $("#a-resumo").textContent = `${ls.size} de ${CATALOGO.length} lidos · ${prontos().length} com ficha`;
-  mapa = montarAcervo($("#a-mapa"), IDX, ls, { aoTocar: mostrarNo });
+  /* o mapa tem duas leituras: por áreas (com as pontes entre elas) ou seguindo um fio que atravessa as áreas */
+  const sel = $("#a-fio"), fios = IDX.fios || [];
+  sel.hidden = !fios.length;
+  if (sel.options.length !== fios.length + 1) sel.innerHTML = `<option value="">Mapa por áreas</option>` + fios.map(f => `<option value="${f.id}">Fio: ${f.nome}</option>`).join("");
+  const fio = fios.find(f => f.id === sel.value);
+  mapa = montarAcervo($("#a-mapa"), IDX, ls, { aoTocar: mostrarNo, aoPonte: mostrarPonte, fio });
+  if (fio) $("#a-info").innerHTML = `<p class="rotulo">Fio · ${fio.nos.length} conceitos em ${new Set(fio.nos.map(id => (doCatalogo(id) || {}).area)).size} áreas</p>
+    <p class="ficha-termo" style="font-size:1.4rem;margin:.2rem 0">${fio.nome}</p><p class="ficha-gancho">${fio.frase}</p>
+    <p class="ficha-gancho" style="color:var(--tinta-3)">${fio.nos.map(id => (doCatalogo(id) || {}).termo).filter(Boolean).join(" → ")}</p>`;
+}
+$("#a-fio").addEventListener("change", pintarAcervo);
+const pontesDe = (id) => Object.entries(IDX.pontes || {}).filter(([k]) => k.split("|").includes(id))
+  .map(([k, razao]) => ({ outro: doCatalogo(k.split("|").find(x => x !== id)), razao })).filter(p => p.outro);
+function mostrarPonte(a, b, razao) {
+  $("#a-info").innerHTML = `<p class="rotulo">Ponte · ${a.area} e ${b.area}</p>
+    <p class="ficha-termo" style="font-size:1.25rem;margin:.2rem 0">${a.termo} e ${b.termo}</p><p class="ficha-gancho">${razao}</p>`;
 }
 function mostrarNo(c) {
   const ls = lidos(), macro = IDX.areas[c.area];
@@ -457,6 +479,7 @@ function mostrarNo(c) {
     <p class="rotulo" style="color:var(--m-${macro})">${IDX.macros[macro].nome} › ${c.area}${c.sub ? " › " + c.sub : ""}</p>
     <p class="ficha-termo" style="font-size:1.4rem;margin:.2rem 0">${c.termo}</p>
     <p class="ficha-gancho">${c.gancho}</p>
+    ${pontesDe(c.id).map(p => `<p class="ficha-gancho"><b>Ponte para ${p.outro.termo}</b> (${p.outro.area}). ${p.razao}</p>`).join("")}
     ${conhecidos.length ? `<p class="ficha-gancho">Liga ao que você já sabe: <b>${conhecidos.join(", ")}</b></p>` : ""}
     ${novos.length ? `<p class="ficha-gancho" style="color:var(--tinta-3)">Ainda por descobrir: ${novos.join(", ")}</p>` : ""}
     ${c.doc ? `<button class="btn" id="a-abrir" style="margin-top:.4rem">${ls.has(c.id) ? "Ler de novo" : "Abrir esta ficha"}</button>` : `<p class="rotulo">Ainda sem ficha escrita</p>`}`;
@@ -523,6 +546,32 @@ $("#btn-limpar").addEventListener("click", () => {
   if (!confirm("Apagar todo o histórico deste aparelho? Não há como desfazer.")) return;
   E = Object.assign(structuredClone(PADRAO), { tema: E.tema }); salvar(); pintarHistorico();
 });
+
+/* ── Voltar amanhã, sem servidor ───────────────────────────────────────
+   Push exige servidor, e esta versão não tem. O que chama a pessoa de volta é o lembrete que ela põe no
+   próprio calendário (um evento diário com o link) e o app instalado na tela inicial.
+   ponytail: o selo no ícone só muda com o app aberto; com push no futuro, o servidor passa a marcar. */
+$$(".js-lembrete").forEach(b => b.addEventListener("click", () => {
+  const [h, m] = ($("#hora-lembrete").value || "08:00").split(":"), url = location.origin + location.pathname;
+  const dia = hojeStr().replace(/-/g, ""), carimboUtc = new Date().toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z";
+  baixar("novos-conhecimentos.ics", ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Novos Conhecimentos//PT", "BEGIN:VEVENT",
+    "UID:ficha-do-dia@novos-conhecimentos", `DTSTAMP:${carimboUtc}`, `DTSTART:${dia}T${h}${m}00`, "DURATION:PT5M", "RRULE:FREQ=DAILY",
+    "SUMMARY:Ficha do dia · Novos Conhecimentos", `DESCRIPTION:${url}`, `URL:${url}`,
+    "BEGIN:VALARM", "ACTION:DISPLAY", "DESCRIPTION:Ficha do dia", "TRIGGER:PT0M", "END:VALARM", "END:VEVENT", "END:VCALENDAR"].join("\r\n"), "text/calendar");
+  evento("lembrete-calendario");
+}));
+let convite = null;   /* o navegador avisa quando o app pode ser instalado (Android e desktop; o iPhone não avisa) */
+window.addEventListener("beforeinstallprompt", (ev) => { ev.preventDefault(); convite = ev; $$(".js-instalar").forEach(b => b.hidden = false); });
+$$(".js-instalar").forEach(b => b.addEventListener("click", async () => {
+  if (!convite) return;
+  convite.prompt();
+  const r = await convite.userChoice;
+  evento("instalar-" + r.outcome); convite = null; $$(".js-instalar").forEach(x => x.hidden = true);
+}));
+function selo() {
+  if (!navigator.setAppBadge) return;
+  (ofensiva().feitos.has(hojeStr()) ? navigator.clearAppBadge() : navigator.setAppBadge(1)).catch(() => {});
+}
 
 /* ── Início ────────────────────────────────────────────────────────── */
 aplicarTema();

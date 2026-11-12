@@ -1,0 +1,670 @@
+{
+ "pontes": [
+  {
+   "a": "bayes",
+   "b": "predicao-cerebral",
+   "razao": "Nos dois, uma expectativa prévia é revisada pelo tamanho do erro entre o que se esperava e o que chegou."
+  },
+  {
+   "a": "bayes",
+   "b": "triagem-sobrediagnostico",
+   "razao": "Um teste positivo vale pouco quando a condição é rara: a chance real depende de quantos já tinham o problema antes."
+  },
+  {
+   "a": "bayes",
+   "b": "paradoxo-fermi",
+   "razao": "Ausência de sinal só pesa tanto quanto a chance prévia de haver sinal, e essa chance é desconhecida."
+  },
+  {
+   "a": "prob-condicional",
+   "b": "presuncao-inocencia",
+   "razao": "Confundir a chance de a prova surgir sendo inocente com a chance de ser inocente dada a prova já condenou gente."
+  },
+  {
+   "a": "fourier",
+   "b": "timbre",
+   "razao": "Um som complexo é uma soma de ondas simples, e o timbre é a receita dessa soma."
+  },
+  {
+   "a": "fourier",
+   "b": "compressao-informacao",
+   "razao": "MP3 e JPEG guardam só as ondas que importam e descartam as que ninguém percebe."
+  },
+  {
+   "a": "entropia",
+   "b": "compressao-informacao",
+   "razao": "A fórmula de Shannon para informação tem a mesma forma da entropia da física: as duas contam configurações possíveis."
+  },
+  {
+   "a": "demonio-maxwell",
+   "b": "compressao-informacao",
+   "razao": "Apagar um bit de memória tem custo mínimo de energia, e isso salvou a segunda lei do demônio."
+  },
+  {
+   "a": "entropia",
+   "b": "efeito-hidrofobico",
+   "razao": "Óleo e água se separam porque a água ganha desordem ao expulsar o óleo, o mesmo balanço de entropia da termodinâmica."
+  },
+  {
+   "a": "entropia",
+   "b": "termodinamica-reciclagem",
+   "razao": "Misturar sai de graça e separar custa energia: por isso cada ciclo de reciclagem perde qualidade."
+  },
+  {
+   "a": "entropia",
+   "b": "criptografia-assimetrica",
+   "razao": "Uma direção é fácil e a volta é quase impossível: misturar ou multiplicar, contra desfazer."
+  },
+  {
+   "a": "ressonancia",
+   "b": "relogio-circadiano",
+   "razao": "Um oscilador com ritmo próprio se acerta quando recebe empurrões periódicos perto desse ritmo."
+  },
+  {
+   "a": "ressonancia",
+   "b": "consonancia-dissonancia-fisica",
+   "razao": "Frequências em razões simples reforçam uma à outra, e o ouvido sente isso como intervalo estável."
+  },
+  {
+   "a": "escalas-alometria",
+   "b": "conforto-termico",
+   "razao": "A razão entre superfície e volume decide a perda de calor, de um animal ou de uma casa."
+  },
+  {
+   "a": "lei-zipf",
+   "b": "cauda-longa",
+   "razao": "Poucos itens concentram quase todo o uso e uma fila enorme de raros divide o resto."
+  },
+  {
+   "a": "fractais",
+   "b": "escalas-mapa-modificavel",
+   "razao": "A medida muda conforme a escala: a régua na costa, o tamanho do recorte no mapa."
+  },
+  {
+   "a": "caos-deterministico",
+   "b": "demonio-laplace",
+   "razao": "Regras exatas não garantem previsão: um erro minúsculo na partida cresce até desfazer o futuro calculado."
+  },
+  {
+   "a": "caos-deterministico",
+   "b": "el-nino",
+   "razao": "Oceano e atmosfera seguem leis conhecidas, mas o erro de medida cresce e limita a previsão a poucos meses."
+  },
+  {
+   "a": "teoria-jogos",
+   "b": "tragedia-comuns",
+   "razao": "Cada um age certo para si e o resultado é ruim para todos, sem ninguém querer."
+  },
+  {
+   "a": "teoria-jogos",
+   "b": "guerra-fria-dissuasao",
+   "razao": "A ameaça só dissuade se for crível, e o equilíbrio vem de ninguém ganhar mudando sozinho."
+  },
+  {
+   "a": "grafos",
+   "b": "lacos-fracos",
+   "razao": "Em uma rede, a ponte entre grupos distantes leva informação nova, e o laço fraco costuma ser essa ponte."
+  },
+  {
+   "a": "godel",
+   "b": "halting",
+   "razao": "Nos dois, um enunciado que fala de si mesmo prova que há perguntas sem resposta dentro do sistema."
+  },
+  {
+   "a": "cantor-infinitos",
+   "b": "halting",
+   "razao": "O argumento diagonal de Cantor é o molde da prova de que nenhum programa decide se outro termina."
+  },
+  {
+   "a": "maquina-turing",
+   "b": "quarto-chines",
+   "razao": "Se manipular símbolos por regra basta para computar, resta saber se basta para compreender."
+  },
+  {
+   "a": "maquina-turing",
+   "b": "gramatica-universal",
+   "razao": "Cada classe de máquina corresponde a uma classe de gramática, e a hierarquia de Chomsky nasceu daí."
+  },
+  {
+   "a": "maquina-turing",
+   "b": "godel",
+   "razao": "Turing refez a prova de Gödel em termos de máquinas e mostrou o mesmo limite do cálculo."
+  },
+  {
+   "a": "otimizacao-convexa",
+   "b": "utilitarismo",
+   "razao": "Maximizar bem-estar total sob restrições é o mesmo problema de maximizar uma função num conjunto permitido."
+  },
+  {
+   "a": "vies-confirmacao",
+   "b": "falseabilidade",
+   "razao": "A mente busca o que confirma, por isso a ciência exige procurar o que refutaria a hipótese."
+  },
+  {
+   "a": "vies-confirmacao",
+   "b": "pre-registro",
+   "razao": "Decidir a análise antes de ver os dados bloqueia a tendência de enxergar o que se queria achar."
+  },
+  {
+   "a": "crise-replicacao",
+   "b": "reprodutibilidade-computacional",
+   "razao": "Um resultado só vale se outra pessoa refizer o caminho e chegar ao mesmo lugar."
+  },
+  {
+   "a": "overfitting",
+   "b": "navalha-ockham",
+   "razao": "Um modelo com parâmetros demais decora o ruído, e por isso a explicação mais simples é a melhor aposta."
+  },
+  {
+   "a": "regressao-media",
+   "b": "efeito-placebo",
+   "razao": "Quem procura tratamento no pior momento melhora de qualquer jeito, e isso parece efeito do remédio."
+  },
+  {
+   "a": "regressao-media",
+   "b": "dunning-kruger",
+   "razao": "O padrão aparece até com dados aleatórios, porque medida ruidosa empurra os extremos para o meio."
+  },
+  {
+   "a": "simpson-paradoxo",
+   "b": "gerrymandering",
+   "razao": "Mudar o modo de agrupar os mesmos números muda o vencedor."
+  },
+  {
+   "a": "simpson-paradoxo",
+   "b": "problema-monty-hall",
+   "razao": "A resposta muda com o processo que gerou a informação, e a intuição costuma ignorá-lo."
+  },
+  {
+   "a": "agente-principal",
+   "b": "separacao-poderes",
+   "razao": "Quem delega precisa de meios para controlar quem decide, e freios e contrapesos são esses meios."
+  },
+  {
+   "a": "agente-principal",
+   "b": "metricas-vaidade",
+   "razao": "Quem é medido otimiza a medida, e o número sobe enquanto o objetivo fica para trás."
+  },
+  {
+   "a": "vantagem-comparativa",
+   "b": "seda-rotas",
+   "razao": "Cada região vende o que produz com menos sacrifício, e as duas ganham com a troca."
+  },
+  {
+   "a": "vantagem-comparativa",
+   "b": "imperio-mali",
+   "razao": "Ouro de um lado e sal do outro: cada região trocou o que lhe era barato pelo que lhe era caro."
+  },
+  {
+   "a": "tragedia-comuns",
+   "b": "capacidade-suporte",
+   "razao": "Quando o uso passa do que o recurso repõe, ele encolhe, e a conta chega depois."
+  },
+  {
+   "a": "tragedia-comuns",
+   "b": "acao-coletiva",
+   "razao": "Todos ganhariam cooperando, mas cada um tem motivo para esperar que outro pague o custo."
+  },
+  {
+   "a": "tragedia-comuns",
+   "b": "imperativo-categorico",
+   "razao": "Perguntar «e se todos fizessem o mesmo?» é o teste de Kant e a pergunta que o modelo dos comuns responde."
+  },
+  {
+   "a": "haber-bosch",
+   "b": "demografia-transicao",
+   "razao": "Adubo sintético alimentou a explosão da população que a transição demográfica depois desacelerou."
+  },
+  {
+   "a": "haber-bosch",
+   "b": "trocas-colombianas",
+   "razao": "Nas duas, uma mudança na oferta de comida redesenhou a população de continentes inteiros."
+  },
+  {
+   "a": "trocas-colombianas",
+   "b": "especies-invasoras",
+   "razao": "Espécies levadas a lugares sem seus inimigos naturais se espalham depressa e reorganizam o que encontram."
+  },
+  {
+   "a": "maillard",
+   "b": "indice-glicemico",
+   "razao": "Açúcares reagem com proteínas na panela e no corpo, e o mesmo tipo de reação aparece na glicação."
+  },
+  {
+   "a": "nnt-risco",
+   "b": "precificacao-psicologica",
+   "razao": "O mesmo fato soa grande ou pequeno conforme o número escolhido para apresentá-lo."
+  },
+  {
+   "a": "mera-exposicao",
+   "b": "musica-emocao",
+   "razao": "O ouvido gosta do que já aprendeu a esperar, e isso se constrói ouvindo de novo."
+  },
+  {
+   "a": "efeito-teste",
+   "b": "reconsolidacao",
+   "razao": "Recuperar uma memória a reabre e a reforça, por isso testar fixa mais que reler."
+  },
+  {
+   "a": "memoria-falsa",
+   "b": "reconsolidacao",
+   "razao": "Cada vez que se lembra, a memória é remontada, e o remonte pode incluir o que nunca houve."
+  },
+  {
+   "a": "memoria-falsa",
+   "b": "memoria-historica",
+   "razao": "Lembranças individuais e coletivas são reconstruídas no presente com o que o grupo precisa lembrar."
+  },
+  {
+   "a": "memoria-trabalho",
+   "b": "gestalt-design",
+   "razao": "Interfaces que agrupam elementos respeitam o limite de poucos itens que a pessoa segura de cada vez."
+  },
+  {
+   "a": "gestalt-design",
+   "b": "predicao-cerebral",
+   "razao": "O cérebro completa e agrupa o que vê com base no que espera, e as leis da Gestalt descrevem esse hábito."
+  },
+  {
+   "a": "perspectiva-renascimento",
+   "b": "cartografia-projecoes",
+   "razao": "As duas projetam um espaço em três dimensões numa superfície plana e escolhem o que distorcer."
+  },
+  {
+   "a": "temperamento-igual",
+   "b": "cartografia-projecoes",
+   "razao": "Não existe afinação nem mapa perfeito: as duas escolhem onde espalhar o erro."
+  },
+  {
+   "a": "bauhaus",
+   "b": "design-sistemas",
+   "razao": "Peças padronizadas e regras claras mantêm coerência mesmo quando muita gente trabalha no mesmo objeto."
+  },
+  {
+   "a": "imprensa-gutenberg",
+   "b": "propriedade-intelectual",
+   "razao": "Quando copiar ficou barato, surgiu a ideia de dar ao autor um monopólio temporário."
+  },
+  {
+   "a": "efeito-rede",
+   "b": "lacos-fracos",
+   "razao": "O valor vem das conexões, e as conexões menos óbvias levam a pessoas novas."
+  },
+  {
+   "a": "efeito-rede",
+   "b": "bolhas-financeiras",
+   "razao": "Quanto mais gente entra, mais atraente fica entrar, até a conta fechar de outro jeito."
+  },
+  {
+   "a": "peste-negra",
+   "b": "salario-minimo-debate",
+   "razao": "Quando falta gente para trabalhar, o salário sobe, no século XIV ou numa fronteira estadual."
+  },
+  {
+   "a": "profecia-autorrealizavel",
+   "b": "bolhas-financeiras",
+   "razao": "Quando todos acreditam que o preço vai subir, comprar o faz subir."
+  },
+  {
+   "a": "profecia-autorrealizavel",
+   "b": "moeda-fiduciaria",
+   "razao": "Uma crença compartilhada sustenta o valor, e o valor sustenta a crença."
+  },
+  {
+   "a": "efeito-placebo",
+   "b": "predicao-cerebral",
+   "razao": "A expectativa muda o que o cérebro sente, e o corpo responde ao que foi previsto."
+  },
+  {
+   "a": "efeito-placebo",
+   "b": "dor-cronica",
+   "razao": "A dor depende da previsão do cérebro sobre ameaça, e por isso responde a crença e contexto."
+  },
+  {
+   "a": "queda-muro-berlim",
+   "b": "profecia-autorrealizavel",
+   "razao": "Quando muita gente age achando que os outros também vão agir, a mudança vem toda de uma vez."
+  },
+  {
+   "a": "movimento-direitos-civis-eua",
+   "b": "acao-coletiva",
+   "razao": "Organização e custo dividido venceram o problema de quem espera que outro arrisque primeiro."
+  },
+  {
+   "a": "hegel-fenomenologia",
+   "b": "revolucao-russa",
+   "razao": "Marx herdou de Hegel a ideia de que a história avança por contradições, e isso guiou 1917."
+  },
+  {
+   "a": "sapir-whorf",
+   "b": "teoria-cor",
+   "razao": "Falantes de línguas com mais nomes para azul distinguem tons de azul mais depressa."
+  },
+  {
+   "a": "tectonica-placas",
+   "b": "paradigmas-kuhn",
+   "razao": "Rejeitada por décadas e depois aceita de uma vez, a deriva dos continentes é um caso de troca de paradigma."
+  },
+  {
+   "a": "ilhas-calor-urbanas",
+   "b": "conforto-termico",
+   "razao": "Materiais guardam calor de dia e o devolvem à noite, na cidade e dentro do prédio."
+  },
+  {
+   "a": "acidificacao-oceanos",
+   "b": "ph-tampao",
+   "razao": "O mar resiste à queda de pH com um tampão de carbonato, até esgotá-lo."
+  },
+  {
+   "a": "lentes-gravitacionais",
+   "b": "efeito-doppler",
+   "razao": "Dá para medir o que não se vê pela alteração da luz que chega: velocidade num caso, massa no outro."
+  },
+  {
+   "a": "lentes-gravitacionais",
+   "b": "materia-escura",
+   "razao": "A luz entortada por mais massa do que se vê é uma das provas de que algo invisível pesa."
+  },
+  {
+   "a": "tunelamento-quantico",
+   "b": "catalise",
+   "razao": "Em certas reações, partículas atravessam a barreira de energia em vez de subir por cima."
+  },
+  {
+   "a": "gato-schrodinger",
+   "b": "demonio-laplace",
+   "razao": "O determinismo supõe estados definidos antes de medir, e a mecânica quântica pergunta se eles existem."
+  },
+  {
+   "a": "gato-schrodinger",
+   "b": "quantum-computing",
+   "razao": "Combinar estados ao mesmo tempo é o que o experimento ilustra e o que o computador quântico explora."
+  },
+  {
+   "a": "biofilmes",
+   "b": "acao-coletiva",
+   "razao": "A matriz é um bem comum que todas as células pagam, e as que não pagam crescem sem custo."
+  },
+  {
+   "a": "endossimbiose",
+   "b": "micorrizas",
+   "razao": "Duas espécies que viviam separadas passaram a depender uma da outra e a trocar nutrientes."
+  },
+  {
+   "a": "convergencia-evolutiva",
+   "b": "escalas-pentatonicas",
+   "razao": "Tradições sem contato chegaram às mesmas cinco notas, porque o problema acústico dá poucas saídas boas."
+  },
+  {
+   "a": "convergencia-evolutiva",
+   "b": "gramaticalizacao",
+   "razao": "Línguas sem contato percorrem o mesmo caminho, de palavras plenas a partículas gramaticais."
+  },
+  {
+   "a": "convergencia-evolutiva",
+   "b": "arquitetura-vernacular",
+   "razao": "Sem projeto central, clima e material empurram povos distantes para casas parecidas."
+  },
+  {
+   "a": "relogio-circadiano",
+   "b": "consolidacao-sono",
+   "razao": "O ciclo de 24 horas decide quando o cérebro arruma o que aprendeu, e o sono é a hora dessa tarefa."
+  },
+  {
+   "a": "deriva-genetica",
+   "b": "poder-estatistico",
+   "razao": "Em grupos pequenos o acaso sozinho gera grandes desvios, nas populações e nos estudos."
+  },
+  {
+   "a": "vies-algoritmico",
+   "b": "teorema-arrow",
+   "razao": "Critérios razoáveis de justiça não cabem todos juntos, e isso é provado matematicamente."
+  },
+  {
+   "a": "teorema-cap",
+   "b": "bretton-woods",
+   "razao": "Três metas desejáveis não cabem juntas: só duas por vez, em redes de computadores e em política cambial."
+  },
+  {
+   "a": "doenca-holandesa",
+   "b": "geografia-recursos-minerais",
+   "razao": "Exportar muito de um recurso valoriza a moeda e deixa outros setores sem espaço para crescer."
+  },
+  {
+   "a": "crise-seculo-iii",
+   "b": "inflacao-mecanismos",
+   "razao": "Moeda com menos metal e mais emissão leva os preços a disparar, em Roma e hoje."
+  },
+  {
+   "a": "custo-afundado",
+   "b": "custo-oportunidade",
+   "razao": "O que já foi gasto não deveria pesar, e o que se deixa de ganhar deveria pesar."
+  },
+  {
+   "a": "reduflacao",
+   "b": "precificacao-psicologica",
+   "razao": "O preço parece o mesmo e o pacote encolhe, porque a atenção fica no número."
+  },
+  {
+   "a": "ikigai",
+   "b": "secao-aurea",
+   "razao": "Um desenho bonito e fácil de repetir se espalha como fato, embora a fonte original diga outra coisa."
+  },
+  {
+   "a": "neuronios-espelho",
+   "b": "micorrizas",
+   "razao": "Um resultado real foi inflado pela divulgação até revisões posteriores o corrigirem."
+  },
+  {
+   "a": "split-brain",
+   "b": "cascata-trofica",
+   "razao": "Uma história marcante repetida por anos recebeu estudos novos que a deixaram bem mais modesta."
+  },
+  {
+   "a": "homunculo-cortical",
+   "b": "cartografia-projecoes",
+   "razao": "O mapa distorce de propósito: o corpo no córtex e o mundo no papel ganham tamanho pelo que importa."
+  },
+  {
+   "a": "in-dubio-pro-reo",
+   "b": "valor-p",
+   "razao": "Os dois fixam de propósito que errar para um lado é pior e só aceitam a acusação com muita prova."
+  },
+  {
+   "a": "habeas-corpus",
+   "b": "separacao-poderes",
+   "razao": "Quem prende precisa justificar a um juiz fora da sua influência, e o poder fica limitado por outro."
+  },
+  {
+   "a": "veu-ignorancia",
+   "b": "gini-desigualdade",
+   "razao": "Julgar uma distribuição sem saber onde se ficará muda o que parece justo, e o Gini mede o que se escolhe."
+  },
+  {
+   "a": "patrimonio-restauro",
+   "b": "experimento-mental-navio",
+   "razao": "Trocar as peças uma a uma deixa a mesma pergunta: ainda é o mesmo objeto?"
+  },
+  {
+   "a": "revolucao-industrial-porque",
+   "b": "paradoxo-produtividade",
+   "razao": "Uma tecnologia só aparece nas estatísticas décadas depois, quando a organização do trabalho se refaz."
+  },
+  {
+   "a": "eleitor-mediano",
+   "b": "posicionamento",
+   "razao": "Dois concorrentes que disputam o meio acabam parecidos, seja candidato, seja loja numa rua."
+  },
+  {
+   "a": "quatro-forcas",
+   "b": "ligacao-hidrogenio",
+   "razao": "A química inteira é a força eletromagnética agindo entre átomos, e a ligação de hidrogênio é um caso dela."
+  }
+ ],
+ "fios": [
+  {
+   "id": "retroalimentacao",
+   "nome": "Retroalimentação",
+   "frase": "Um efeito alimenta a própria causa até bater num limite, do clima ao preço de um ativo.",
+   "nos": [
+    "efeito-estufa-mecanismo",
+    "el-nino",
+    "relogio-circadiano",
+    "quorum-sensing",
+    "laser",
+    "efeito-rede",
+    "bolhas-financeiras",
+    "profecia-autorrealizavel"
+   ]
+  },
+  {
+   "id": "escala",
+   "nome": "Escala",
+   "frase": "A mesma coisa muda de regra quando muda de tamanho, e a régua escolhida decide o que se mede.",
+   "nos": [
+    "escalas-alometria",
+    "conforto-termico",
+    "fractais",
+    "escalas-mapa-modificavel",
+    "escada-distancias",
+    "lei-zipf",
+    "cauda-longa"
+   ]
+  },
+  {
+   "id": "informacao",
+   "nome": "Informação",
+   "frase": "Saber algo tem custo físico, e quem sabe mais manda mais, do átomo ao mercado.",
+   "nos": [
+    "entropia",
+    "demonio-maxwell",
+    "buracos-negros-termo",
+    "compressao-informacao",
+    "lei-zipf",
+    "criptografia-assimetrica",
+    "zero-knowledge",
+    "assimetria-informacao",
+    "selecao-adversa"
+   ]
+  },
+  {
+   "id": "equilibrio",
+   "nome": "Equilíbrio",
+   "frase": "Sistemas voltam a um ponto de repouso quando perturbados, e às vezes o ponto é ruim para todos.",
+   "nos": [
+    "le-chatelier",
+    "ph-tampao",
+    "capacidade-suporte",
+    "tragedia-comuns",
+    "teoria-jogos",
+    "eleitor-mediano",
+    "guerra-fria-dissuasao"
+   ]
+  },
+  {
+   "id": "selecao",
+   "nome": "Seleção",
+   "frase": "Algo varia, um filtro corta e o que sobra parece projetado: vale para genes, línguas, casas e escalas musicais.",
+   "nos": [
+    "deriva-genetica",
+    "altruismo-hamilton",
+    "convergencia-evolutiva",
+    "escalas-pentatonicas",
+    "arquitetura-vernacular",
+    "mudanca-fonetica",
+    "gramaticalizacao"
+   ]
+  },
+  {
+   "id": "redes",
+   "nome": "Redes",
+   "frase": "O que importa são as ligações: quem se conecta a quem decide por onde passa a informação.",
+   "nos": [
+    "micorrizas",
+    "transferencia-horizontal",
+    "grafos",
+    "lacos-fracos",
+    "difusao-inovacao",
+    "seda-rotas",
+    "liga-hanseatica",
+    "blockchain"
+   ]
+  },
+  {
+   "id": "incerteza",
+   "nome": "Incerteza",
+   "frase": "Conhecer é revisar crenças com dados ruidosos, e algumas coisas têm limite de previsão.",
+   "nos": [
+    "regressao-media",
+    "poder-estatistico",
+    "valor-p",
+    "bootstrap",
+    "bayes",
+    "predicao-cerebral",
+    "caos-deterministico",
+    "demonio-laplace"
+   ]
+  },
+  {
+   "id": "medida",
+   "nome": "Medida",
+   "frase": "O número depende de onde se traça a fronteira, da escala e do que se resolveu contar.",
+   "nos": [
+    "escada-distancias",
+    "cartografia-projecoes",
+    "escalas-mapa-modificavel",
+    "simpson-paradoxo",
+    "gerrymandering",
+    "pegada-carbono",
+    "gini-desigualdade",
+    "metricas-vaidade"
+   ]
+  },
+  {
+   "id": "impossibilidade",
+   "nome": "Impossibilidade",
+   "frase": "Algumas coisas desejáveis não cabem juntas, e há prova de que não cabem.",
+   "nos": [
+    "temperamento-igual",
+    "bretton-woods",
+    "teorema-cap",
+    "vies-algoritmico",
+    "teorema-arrow",
+    "cantor-infinitos",
+    "halting",
+    "godel"
+   ]
+  },
+  {
+   "id": "reconstrucao",
+   "nome": "Reconstrução",
+   "frase": "Ver e lembrar são atos de montagem: o cérebro completa o que falta com expectativas.",
+   "nos": [
+    "atencao-seletiva",
+    "gestalt-design",
+    "trompe-loeil",
+    "predicao-cerebral",
+    "memoria-falsa",
+    "reconsolidacao",
+    "memoria-historica",
+    "efeito-placebo"
+   ]
+  },
+  {
+   "id": "incentivos",
+   "nome": "Incentivos",
+   "frase": "Quem decide raramente paga a conta, e o desenho das regras define o que as pessoas fazem.",
+   "nos": [
+    "agente-principal",
+    "selecao-adversa",
+    "tragedia-comuns",
+    "externalidades",
+    "responsabilidade-civil-objetiva",
+    "acao-coletiva",
+    "economia-comportamental",
+    "separacao-poderes",
+    "metricas-vaidade"
+   ]
+  }
+ ]
+}

@@ -14,6 +14,8 @@ Uso
   python pipeline/gerar.py contexto <id>          imprime o material de uma lição (documento, fotos, figuras, fontes) para um agente escrever
   python pipeline/gerar.py validar <arquivo>      checa uma lição escrita por agente (pipeline/candidatas/<id>.a.json); sai com 1 se houver erro
   python pipeline/gerar.py publicar <id> <arquivo>   valida, grava em js/docs/<id>.js e roda o build
+  python pipeline/gerar.py catalogo               lista o catálogo em linhas (id | termo | área | com ficha | gancho)
+  python pipeline/gerar.py tecer                  valida pipeline/pontes.json e junta pontes e fios em js/grafo.json
   python pipeline/gerar.py fila                   ordena o catálogo por sinais de curiosidade (Wikipédia, Hacker News), sem LLM
   python pipeline/gerar.py proximos <n>         os próximos n conceitos com documento e sem lição no formato novo
   python pipeline/gerar.py destino <id>           humano (o editor escolhe entre as versões) ou publicar (vale o juiz)
@@ -919,6 +921,68 @@ def filtrar_dossie(d):
     return d
 
 
+def tecer():
+    """Junta em js/grafo.json as pontes entre áreas e os fios transversais que o agente tecelão escreveu em
+    pipeline/pontes.json. Ponte: {a, b, razao}, gravada no nó `a`. Fio: {id, nome, frase, nos}, em `_fios`.
+    Valida antes de gravar; com erro, nada muda. Rodar de novo substitui todas as pontes e fios pelos do arquivo."""
+    area = {c["id"]: c["area"] for c in indice()["conceitos"]}
+    d = json.loads((PIPE / "pontes.json").read_text(encoding="utf-8"))
+    erros, vistos = [], set()
+    for p in d.get("pontes", []):
+        a, b, r = p.get("a"), p.get("b"), (p.get("razao") or "").strip()
+        onde, par = f"ponte {a} ~ {b}", tuple(sorted((str(a), str(b))))
+        if a not in area or b not in area:
+            erros.append(f"{onde}: id fora do catálogo")
+        elif area[a] == area[b]:
+            erros.append(f"{onde}: os dois são de {area[a]}; ponte liga áreas diferentes")
+        if par in vistos:
+            erros.append(f"{onde}: repetida")
+        vistos.add(par)
+        if not r or len(r.split()) > 24:
+            erros.append(f"{onde}: razão vazia ou com mais de 24 palavras")
+        checar_texto(onde, r, erros)
+    for f in d.get("fios", []):
+        nos, onde = f.get("nos") or [], f"fio {f.get('id')}"
+        if not (f.get("id") and f.get("nome") and f.get("frase")):
+            erros.append(f"{onde}: precisa de id, nome e frase")
+        if any(n not in area for n in nos):
+            erros.append(f"{onde}: ids fora do catálogo: {', '.join(n for n in nos if n not in area)}")
+        elif not 5 <= len(nos) <= 16 or len({area[n] for n in nos}) < 4:
+            erros.append(f"{onde}: de 5 a 16 conceitos, de pelo menos 4 áreas diferentes")
+        checar_texto(onde, f"{f.get('nome', '')}. {f.get('frase', '')}", erros)
+    if erros:
+        sys.exit("\n".join(["  ERRO  " + e for e in erros] + [f"{len(erros)} erro(s). Nada foi gravado."]))
+    # Regra editorial: termo que a triagem ou o editor tirou da produção não ganha ponte nem vira estação de fio.
+    fila = PIPE / "fila.json"
+    fora = {x["id"] for x in json.loads(fila.read_text(encoding="utf-8")) if x.get("fora")} if fila.exists() else set()
+    cortadas = [p for p in d.get("pontes", []) if p["a"] in fora or p["b"] in fora]
+    d["pontes"] = [p for p in d.get("pontes", []) if p not in cortadas]
+    fios = []
+    for f in d.get("fios", []):
+        nos = [n for n in f["nos"] if n not in fora]
+        if len(nos) >= 5 and len({area[n] for n in nos}) >= 4:
+            fios.append({**f, "nos": nos})
+        else:
+            print(f"  fio {f['id']} ficou curto sem os termos fora da produção e saiu")
+    d["fios"] = fios
+    if cortadas:
+        print(f"  {len(cortadas)} ponte(s) com termo fora da produção ficaram de fora do mapa")
+    arq = RAIZ / "js" / "grafo.json"
+    g = json.loads(arq.read_text(encoding="utf-8"))
+    for v in g.values():
+        if isinstance(v, dict):
+            v.pop("pontes", None)
+    for p in d.get("pontes", []):
+        g.setdefault(p["a"], {"sub": "", "liga": []}).setdefault("pontes", {})[p["b"]] = p["razao"].strip()
+    g["_fios"] = [{k: f[k] for k in ("id", "nome", "frase", "nos")} for f in d.get("fios", [])]
+    arq.write_text(json.dumps(g, ensure_ascii=False, indent=0), encoding="utf-8")
+    r = subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True)
+    print(f"{len(d.get('pontes', []))} pontes e {len(g['_fios'])} fios em js/grafo.json")
+    print(r.stdout.strip()[-600:])
+    if r.returncode:
+        sys.exit(1)
+
+
 def gerar_fila():
     """Ordena o catálogo por sinais de curiosidade medidos, sem LLM, e grava pipeline/fila.json.
     Sinais: visitas aos verbetes da Wikipédia (pt e en) nos últimos 12 meses, presença na lista «Unusual articles»
@@ -950,26 +1014,38 @@ def gerar_fila():
             incomuns |= {l["title"] for l in pg.get("links", [])}
         cont = r.get("continue")
 
-    def um(c):
-        x = antes.get(c["id"], {})
-        pt, en = x.get("pt"), x.get("en")
+    # Título do verbete de cada termo: o do dossiê, quando existe; senão o Flash sugere, em lotes, como no dossiê.
+    # (A busca da Wikipédia pelo termo do catálogo, que é descritivo, devolvia verbetes sem relação.)
+    titulos = {}
+    for c in idx["conceitos"]:
         dos = DOSSIES / f"{c['id']}.json"
-        if not pt and dos.exists():
+        if dos.exists():
             d = json.loads(dos.read_text(encoding="utf-8"))
-            pt, en = d.get("wiki_pt"), d.get("wiki_en")
-        if not pt:
-            try:
-                w = wiki("pt", busca=re.split(r"[:(]", c["termo"])[0].strip())
-                pt, en = (w["titulo"], w["en"]) if w else (None, None)
-            except RuntimeError:
-                pass
+            titulos[c["id"]] = (d.get("wiki_pt"), d.get("wiki_en"))
+        elif antes.get(c["id"], {}).get("origem") == "flash":
+            titulos[c["id"]] = (antes[c["id"]]["pt"], antes[c["id"]]["en"])
+    falta = [c for c in idx["conceitos"] if c["id"] not in titulos]
+    sugeridos = set()
+    for i in range(0, len(falta), 40):
+        r, _ = deepseek(FLASH, 'Para cada linha "id | conceito", responda somente com json no formato {"<id>": {"pt": "título exato do verbete da '
+                        'Wikipédia em português que trata desse conceito", "en": "título exato do verbete da Wikipédia em inglês"}}. '
+                        "Escolha o verbete do conceito em si, não o de um tema vizinho mais amplo. Se não existe verbete em português, use null em pt.",
+                        "\n".join(f"{c['id']} | {c['termo']} ({c['area']}): {c['gancho']}" for c in falta[i:i + 40]), "fila", "-", max_tokens=6000)
+        for k, v in r.items():
+            if isinstance(v, dict):
+                titulos[k] = (v.get("pt"), v.get("en"))
+                sugeridos.add(k)
+
+    def um(c):
+        pt, en = titulos.get(c["id"], (None, None))
         try:
             hn = get("https://hn.algolia.com/api/v1/search", {"query": f'"{en}"', "tags": "story", "numericFilters": "points>100",
                                                               "hitsPerPage": 0})["nbHits"] if en else 0
         except RuntimeError:
             hn = 0
         return {"id": c["id"], "pt": pt, "en": en, "vis_pt": visitas("pt", pt), "vis_en": visitas("en", en),
-                "hn": hn, "listas": ["unusual"] if en in incomuns else []}
+                "hn": hn, "listas": ["unusual"] if en in incomuns else [],
+                "origem": "flash" if c["id"] in sugeridos or antes.get(c["id"], {}).get("origem") == "flash" else "dossie"}
 
     with concurrent.futures.ThreadPoolExecutor(8) as ex:
         itens = list(ex.map(um, idx["conceitos"]))
@@ -1564,6 +1640,11 @@ def main():
                 print(f"  {i}: falhou ({e}); rode de novo depois")
         with concurrent.futures.ThreadPoolExecutor(4) as ex:
             list(ex.map(um, alvos))
+    elif cmd == "tecer":
+        tecer()
+    elif cmd == "catalogo":
+        for c in indice()["conceitos"]:
+            print(f"{c['id']} | {c['termo']} | {c['area']} | {'com ficha' if c['doc'] else '-'} | {c['gancho']}")
     elif cmd == "fila":
         gerar_fila()
     elif cmd == "proximos":

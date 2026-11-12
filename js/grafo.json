@@ -5,7 +5,11 @@
 "numeros-complexos",
 "compressao-informacao",
 "laser"
-]
+],
+"pontes": {
+"timbre": "Um som complexo é uma soma de ondas simples, e o timbre é a receita dessa soma.",
+"compressao-informacao": "MP3 e JPEG guardam só as ondas que importam e descartam as que ninguém percebe."
+}
 },
 "bayes": {
 "sub": "probabilidade",
@@ -14,7 +18,10 @@
 "problema-monty-hall",
 "valor-p",
 "heuristicas-kahneman"
-]
+],
+"pontes": {
+"triagem-sobrediagnostico": "Um teste positivo vale pouco quando a condição é rara: a chance real depende de quantos já tinham o problema antes."
+}
 },
 "cantor-infinitos": {
 "sub": "fundamentos",
@@ -23,7 +30,10 @@
 "topologia-basica",
 "halting",
 "banach-tarski"
-]
+],
+"pontes": {
+"halting": "O argumento diagonal de Cantor é o molde da prova de que nenhum programa decide se outro termina."
+}
 },
 "godel": {
 "sub": "fundamentos",
@@ -32,7 +42,10 @@
 "halting",
 "p-np",
 "paradoxo-mentiroso"
-]
+],
+"pontes": {
+"halting": "Nos dois, um enunciado que fala de si mesmo prova que há perguntas sem resposta dentro do sistema."
+}
 },
 "topologia-basica": {
 "sub": "geometria",
@@ -48,7 +61,10 @@
 "fractais",
 "topologia-basica",
 "demonio-laplace"
-]
+],
+"pontes": {
+"el-nino": "Oceano e atmosfera seguem leis conhecidas, mas o erro de medida cresce e limita a previsão a poucos meses."
+}
 },
 "fractais": {
 "sub": "geometria",
@@ -56,7 +72,10 @@
 "caos-deterministico",
 "topologia-basica",
 "escalas-alometria"
-]
+],
+"pontes": {
+"escalas-mapa-modificavel": "A medida muda conforme a escala: a régua na costa, o tamanho do recorte no mapa."
+}
 },
 "teoria-jogos": {
 "sub": "aplicada",
@@ -65,14 +84,20 @@
 "vantagem-comparativa",
 "acao-coletiva",
 "tragedia-comuns"
-]
+],
+"pontes": {
+"guerra-fria-dissuasao": "A ameaça só dissuade se for crível, e o equilíbrio vem de ninguém ganhar mudando sozinho."
+}
 },
 "grafos": {
 "sub": "combinatória",
 "liga": [
 "topologia-basica",
 "p-np"
-]
+],
+"pontes": {
+"lacos-fracos": "Em uma rede, a ponte entre grupos distantes leva informação nova, e o laço fraco costuma ser essa ponte."
+}
 },
 "numeros-complexos": {
 "sub": "álgebra",
@@ -87,7 +112,10 @@
 "problema-monty-hall",
 "simpson-paradoxo",
 "valor-p"
-]
+],
+"pontes": {
+"presuncao-inocencia": "Confundir a chance de a prova surgir sendo inocente com a chance de ser inocente dada a prova já condenou gente."
+}
 },
 "otimizacao-convexa": {
 "sub": "otimização",
@@ -135,7 +163,10 @@
 "emaranhamento",
 "materia-escura",
 "plasma"
-]
+],
+"pontes": {
+"ligacao-hidrogenio": "A química inteira é a força eletromagnética agindo entre átomos, e a ligação de hidrogênio é um caso dela."
+}
 },
 "entropia": {
 "sub": "termodinâmica",
@@ -143,7 +174,13 @@
 "tempo-seta",
 "compressao-informacao",
 "buracos-negros-termo"
-]
+],
+"pontes": {
+"compressao-informacao": "A fórmula de Shannon para informação tem a mesma forma da entropia da física: as duas contam configurações possíveis.",
+"efeito-hidrofobico": "Óleo e água se separam porque a água ganha desordem ao expulsar o óleo, o mesmo balanço de entropia da termodinâmica.",
+"termodinamica-reciclagem": "Misturar sai de graça e separar custa energia: por isso cada ciclo de reciclagem perde qualidade.",
+"criptografia-assimetrica": "Uma direção é fácil e a volta é quase impossível: misturar ou multiplicar, contra desfazer."
+}
 },
 "relatividade-restrita": {
 "sub": "relatividade",
@@ -192,7 +229,10 @@
 "liga": [
 "fractais",
 "capacidade-suporte"
-]
+],
+"pontes": {
+"conforto-termico": "A razão entre superfície e volume decide a perda de calor, de um animal ou de uma casa."
+}
 },
 "ressonancia": {
 "sub": "oscilações",
@@ -200,7 +240,11 @@
 "batimentos-acusticos",
 "caos-deterministico",
 "laser"
-]
+],
+"pontes": {
+"relogio-circadiano": "Um oscilador com ritmo próprio se acerta quando recebe empurrões periódicos perto desse ritmo.",
+"consonancia-dissonancia-fisica": "Frequências em razões simples reforçam uma à outra, e o ouvido sente isso como intervalo estável."
+}
 },
 "materia-escura": {
 "sub": "cosmologia",
@@ -251,7 +295,10 @@
 "emaranhamento",
 "gato-schrodinger",
 "supercondutividade"
-]
+],
+"pontes": {
+"catalise": "Em certas reações, partículas atravessam a barreira de energia em vez de subir por cima."
+}
 },
 "paradoxo-gemeos": {
 "sub": "relatividade",
@@ -274,7 +321,10 @@
 "entropia",
 "tempo-seta",
 "compressao-informacao"
-]
+],
+"pontes": {
+"compressao-informacao": "Apagar um bit de memória tem custo mínimo de energia, e isso salvou a segunda lei do demônio."
+}
 },
 "catalise": {
 "sub": "cinética",
@@ -304,7 +354,11 @@
 "le-chatelier",
 "quimica-verde",
 "catalise"
-]
+],
+"pontes": {
+"demografia-transicao": "Adubo sintético alimentou a explosão da população que a transição demográfica depois desacelerou.",
+"trocas-colombianas": "Nas duas, uma mudança na oferta de comida redesenhou a população de continentes inteiros."
+}
 },
 "tabela-periodica": {
 "sub": "estrutura atômica",
@@ -330,7 +384,10 @@
 "sub": "reações",
 "liga": [
 "catalise"
-]
+],
+"pontes": {
+"indice-glicemico": "Açúcares reagem com proteínas na panela e no corpo, e o mesmo tipo de reação aparece na glicação."
+}
 },
 "ph-tampao": {
 "sub": "ácido-base",
@@ -378,14 +435,20 @@
 "liga": [
 "convergencia-evolutiva",
 "quimica-prebiotica"
-]
+],
+"pontes": {
+"micorrizas": "Duas espécies que viviam separadas passaram a depender uma da outra e a trocar nutrientes."
+}
 },
 "deriva-genetica": {
 "sub": "evolução",
 "liga": [
 "altruismo-hamilton",
 "convergencia-evolutiva"
-]
+],
+"pontes": {
+"poder-estatistico": "Em grupos pequenos o acaso sozinho gera grandes desvios, nas populações e nos estudos."
+}
 },
 "altruismo-hamilton": {
 "sub": "evolução",
@@ -401,7 +464,10 @@
 "neuroplasticidade",
 "microbioma",
 "telomeros"
-]
+],
+"pontes": {
+"consolidacao-sono": "O ciclo de 24 horas decide quando o cérebro arruma o que aprendeu, e o sono é a hora dessa tarefa."
+}
 },
 "microbioma": {
 "sub": "ecologia microbiana",
@@ -433,7 +499,12 @@
 "deriva-genetica",
 "evo-devo",
 "endossimbiose"
-]
+],
+"pontes": {
+"escalas-pentatonicas": "Tradições sem contato chegaram às mesmas cinco notas, porque o problema acústico dá poucas saídas boas.",
+"gramaticalizacao": "Línguas sem contato percorrem o mesmo caminho, de palavras plenas a partículas gramaticais.",
+"arquitetura-vernacular": "Sem projeto central, clima e material empurram povos distantes para casas parecidas."
+}
 },
 "neuroplasticidade": {
 "sub": "neurociência",
@@ -517,7 +588,10 @@
 "microbioma",
 "transferencia-horizontal",
 "bacteriofagos"
-]
+],
+"pontes": {
+"acao-coletiva": "A matriz é um bem comum que todas as células pagam, e as que não pagam crescem sem custo."
+}
 },
 "tardigrados": {
 "sub": "zoologia",
@@ -556,7 +630,10 @@
 "memoria-trabalho",
 "consolidacao-sono",
 "reconsolidacao"
-]
+],
+"pontes": {
+"reconsolidacao": "Recuperar uma memória a reabre e a reforça, por isso testar fixa mais que reler."
+}
 },
 "memoria-trabalho": {
 "sub": "cognição",
@@ -564,7 +641,10 @@
 "efeito-teste",
 "atencao-seletiva",
 "neuroplasticidade"
-]
+],
+"pontes": {
+"gestalt-design": "Interfaces que agrupam elementos respeitam o limite de poucos itens que a pessoa segura de cada vez."
+}
 },
 "dissonancia-cognitiva": {
 "sub": "cognição social",
@@ -582,7 +662,10 @@
 "heuristicas-kahneman",
 "amostragem-vies",
 "crise-replicacao"
-]
+],
+"pontes": {
+"pre-registro": "Decidir a análise antes de ver os dados bloqueia a tendência de enxergar o que se queria achar."
+}
 },
 "crise-replicacao": {
 "sub": "metodologia",
@@ -591,7 +674,10 @@
 "efeito-placebo",
 "pre-registro",
 "poder-estatistico"
-]
+],
+"pontes": {
+"reprodutibilidade-computacional": "Um resultado só vale se outra pessoa refizer o caminho e chegar ao mesmo lugar."
+}
 },
 "heuristicas-kahneman": {
 "sub": "cognição social",
@@ -609,7 +695,10 @@
 "dor-cronica",
 "nnt-risco",
 "heuristicas-kahneman"
-]
+],
+"pontes": {
+"dor-cronica": "A dor depende da previsão do cérebro sobre ameaça, e por isso responde a crença e contexto."
+}
 },
 "atencao-seletiva": {
 "sub": "cognição",
@@ -636,7 +725,11 @@
 "efeito-teste",
 "consolidacao-sono",
 "crise-replicacao"
-]
+],
+"pontes": {
+"reconsolidacao": "Cada vez que se lembra, a memória é remontada, e o remonte pode incluir o que nunca houve.",
+"memoria-historica": "Lembranças individuais e coletivas são reconstruídas no presente com o que o grupo precisa lembrar."
+}
 },
 "custo-afundado": {
 "sub": "decisão",
@@ -645,7 +738,10 @@
 "heuristicas-kahneman",
 "custo-oportunidade",
 "economia-comportamental"
-]
+],
+"pontes": {
+"custo-oportunidade": "O que já foi gasto não deveria pesar, e o que se deixa de ganhar deveria pesar."
+}
 },
 "teoria-da-mente": {
 "sub": "cognição social",
@@ -708,7 +804,10 @@
 "dor-cronica",
 "predicao-cerebral",
 "neuroplasticidade"
-]
+],
+"pontes": {
+"cartografia-projecoes": "O mapa distorce de propósito: o corpo no córtex e o mundo no papel ganham tamanho pelo que importa."
+}
 },
 "reconsolidacao": {
 "sub": "memória",
@@ -803,7 +902,10 @@
 "utilitarismo",
 "imperativo-categorico",
 "teoria-jogos"
-]
+],
+"pontes": {
+"gini-desigualdade": "Julgar uma distribuição sem saber onde se ficará muda o que parece justo, e o Gini mede o que se escolhe."
+}
 },
 "eterno-retorno": {
 "sub": "filosofia continental",
@@ -927,7 +1029,11 @@
 "teoria-jogos",
 "moeda-fiduciaria",
 "bretton-woods"
-]
+],
+"pontes": {
+"seda-rotas": "Cada região vende o que produz com menos sacrifício, e as duas ganham com a troca.",
+"imperio-mali": "Ouro de um lado e sal do outro: cada região trocou o que lhe era barato pelo que lhe era caro."
+}
 },
 "externalidades": {
 "sub": "falhas de mercado",
@@ -1064,7 +1170,11 @@
 "assimetria-informacao",
 "teoria-firma",
 "acao-coletiva"
-]
+],
+"pontes": {
+"separacao-poderes": "Quem delega precisa de meios para controlar quem decide, e freios e contrapesos são esses meios.",
+"metricas-vaidade": "Quem é medido otimiza a medida, e o número sobe enquanto o objetivo fica para trás."
+}
 },
 "doenca-holandesa": {
 "sub": "macroeconomia",
@@ -1169,7 +1279,10 @@
 "sistemas-eleitorais",
 "populismo",
 "gerrymandering"
-]
+],
+"pontes": {
+"posicionamento": "Dois concorrentes que disputam o meio acabam parecidos, seja candidato, seja loja numa rua."
+}
 },
 "soft-power": {
 "sub": "relações internacionais",
@@ -1224,7 +1337,10 @@
 "devido-processo-legal",
 "principio-legalidade-penal",
 "coisa-julgada"
-]
+],
+"pontes": {
+"separacao-poderes": "Quem prende precisa justificar a um juiz fora da sua influência, e o poder fica limitado por outro."
+}
 },
 "principio-legalidade-penal": {
 "sub": "direito penal",
@@ -1242,7 +1358,10 @@
 "onus-prova-civil",
 "principio-legalidade-penal",
 "devido-processo-legal"
-]
+],
+"pontes": {
+"valor-p": "Os dois fixam de propósito que errar para um lado é pior e só aceitam a acusação com muita prova."
+}
 },
 "coisa-julgada": {
 "sub": "processo civil",
@@ -1381,7 +1500,11 @@
 "anomia",
 "dissonancia-cognitiva",
 "lacos-fracos"
-]
+],
+"pontes": {
+"bolhas-financeiras": "Quando todos acreditam que o preço vai subir, comprar o faz subir.",
+"moeda-fiduciaria": "Uma crença compartilhada sustenta o valor, e o valor sustenta a crença."
+}
 },
 "panoptico": {
 "sub": "sociologia",
@@ -1429,7 +1552,10 @@
 "wabi-sabi",
 "ubuntu",
 "wu-wei"
-]
+],
+"pontes": {
+"secao-aurea": "Um desenho bonito e fácil de repetir se espalha como fato, embora a fonte original diga outra coisa."
+}
 },
 "wabi-sabi": {
 "sub": "antropologia",
@@ -1477,7 +1603,10 @@
 "revolucao-cientifica",
 "renascimento-italiano",
 "revolucao-industrial-porque"
-]
+],
+"pontes": {
+"propriedade-intelectual": "Quando copiar ficou barato, surgiu a ideia de dar ao autor um monopólio temporário."
+}
 },
 "revolucao-industrial-porque": {
 "sub": "história econômica",
@@ -1494,7 +1623,10 @@
 "imperios-pre-colombianos",
 "seda-rotas",
 "peste-negra"
-]
+],
+"pontes": {
+"especies-invasoras": "Espécies levadas a lugares sem seus inimigos naturais se espalham depressa e reorganizam o que encontram."
+}
 },
 "iluminismo": {
 "sub": "história moderna",
@@ -1665,14 +1797,20 @@
 "liga": [
 "tirania-maioria",
 "soft-power"
-]
+],
+"pontes": {
+"acao-coletiva": "Organização e custo dividido venceram o problema de quem espera que outro arrisque primeiro."
+}
 },
 "queda-muro-berlim": {
 "sub": "história contemporânea",
 "liga": [
 "guerra-fria-dissuasao",
 "revolucao-russa"
-]
+],
+"pontes": {
+"profecia-autorrealizavel": "Quando muita gente age achando que os outros também vão agir, a mudança vem toda de uma vez."
+}
 },
 "imperio-mongol": {
 "sub": "história medieval",
@@ -1898,7 +2036,10 @@
 "grid-editorial",
 "brutalismo",
 "metabolismo-japones"
-]
+],
+"pontes": {
+"design-sistemas": "Peças padronizadas e regras claras mantêm coerência mesmo quando muita gente trabalha no mesmo objeto."
+}
 },
 "cidade-jacobs": {
 "sub": "urbanismo",
@@ -1970,7 +2111,10 @@
 "harmonia-funcional",
 "batimentos-acusticos",
 "consonancia-dissonancia-fisica"
-]
+],
+"pontes": {
+"cartografia-projecoes": "Não existe afinação nem mapa perfeito: as duas escolhem onde espalhar o erro."
+}
 },
 "harmonia-funcional": {
 "sub": "teoria musical",
@@ -2147,7 +2291,10 @@
 "trompe-loeil",
 "secao-aurea",
 "renascimento-italiano"
-]
+],
+"pontes": {
+"cartografia-projecoes": "As duas projetam um espaço em três dimensões numa superfície plana e escolhem o que distorcer."
+}
 },
 "ready-made": {
 "sub": "arte moderna",
@@ -2252,7 +2399,11 @@
 "cauda-longa",
 "inovacao-disruptiva",
 "metricas-vaidade"
-]
+],
+"pontes": {
+"lacos-fracos": "O valor vem das conexões, e as conexões menos óbvias levam a pessoas novas.",
+"bolhas-financeiras": "Quanto mais gente entra, mais atraente fica entrar, até a conta fechar de outro jeito."
+}
 },
 "inovacao-disruptiva": {
 "sub": "negócios",
@@ -2355,7 +2506,10 @@
 "poder-estatistico",
 "triagem-sobrediagnostico",
 "pre-registro"
-]
+],
+"pontes": {
+"precificacao-psicologica": "O mesmo fato soa grande ou pequeno conforme o número escolhido para apresentá-lo."
+}
 },
 "triagem-sobrediagnostico": {
 "sub": "medicina baseada em evidências",
@@ -2455,7 +2609,10 @@
 "p-np",
 "godel",
 "quantum-computing"
-]
+],
+"pontes": {
+"godel": "Turing refez a prova de Gödel em termos de máquinas e mostrou o mesmo limite do cálculo."
+}
 },
 "zero-knowledge": {
 "sub": "criptografia",
@@ -2469,7 +2626,10 @@
 "sub": "sistemas distribuídos",
 "liga": [
 "blockchain"
-]
+],
+"pontes": {
+"bretton-woods": "Três metas desejáveis não cabem juntas: só duas por vez, em redes de computadores e em política cambial."
+}
 },
 "valor-p": {
 "sub": "inferência",
@@ -2487,7 +2647,10 @@
 "amostragem-vies",
 "simpson-paradoxo",
 "causalidade-pearl"
-]
+],
+"pontes": {
+"efeito-placebo": "Quem procura tratamento no pior momento melhora de qualquer jeito, e isso parece efeito do remédio."
+}
 },
 "simpson-paradoxo": {
 "sub": "paradoxos",
@@ -2496,7 +2659,11 @@
 "causalidade-pearl",
 "valor-p",
 "prob-condicional"
-]
+],
+"pontes": {
+"gerrymandering": "Mudar o modo de agrupar os mesmos números muda o vencedor.",
+"problema-monty-hall": "A resposta muda com o processo que gerou a informação, e a intuição costuma ignorá-lo."
+}
 },
 "causalidade-pearl": {
 "sub": "causalidade",
@@ -2631,7 +2798,10 @@
 "efeito-estufa-mecanismo",
 "correntes-oceanicas",
 "antropoceno"
-]
+],
+"pontes": {
+"ph-tampao": "O mar resiste à queda de pH com um tampão de carbonato, até esgotá-lo."
+}
 },
 "capacidade-suporte": {
 "sub": "ecologia",
@@ -2783,7 +2953,10 @@
 "liga": [
 "conforto-termico",
 "climas-koppen"
-]
+],
+"pontes": {
+"conforto-termico": "Materiais guardam calor de dia e o devolvem à noite, na cidade e dentro do prédio."
+}
 },
 "monções": {
 "sub": "climatologia",
@@ -2838,7 +3011,10 @@
 "energia-escura",
 "relatividade-restrita",
 "escada-distancias"
-]
+],
+"pontes": {
+"efeito-doppler": "Dá para medir o que não se vê pela alteração da luz que chega: velocidade num caso, massa no outro."
+}
 },
 "estrelas-neutrons": {
 "sub": "astrofísica",
@@ -2877,6 +3053,155 @@
 "economia-comportamental",
 "assimetria-informacao",
 "precificacao-psicologica"
+],
+"pontes": {
+"precificacao-psicologica": "O preço parece o mesmo e o pacote encolhe, porque a atenção fica no número."
+}
+},
+"_fios": [
+{
+"id": "retroalimentacao",
+"nome": "Retroalimentação",
+"frase": "Um efeito alimenta a própria causa até bater num limite, do clima ao preço de um ativo.",
+"nos": [
+"efeito-estufa-mecanismo",
+"el-nino",
+"relogio-circadiano",
+"quorum-sensing",
+"laser",
+"efeito-rede",
+"bolhas-financeiras",
+"profecia-autorrealizavel"
+]
+},
+{
+"id": "escala",
+"nome": "Escala",
+"frase": "A mesma coisa muda de regra quando muda de tamanho, e a régua escolhida decide o que se mede.",
+"nos": [
+"escalas-alometria",
+"conforto-termico",
+"fractais",
+"escalas-mapa-modificavel",
+"escada-distancias",
+"lei-zipf"
+]
+},
+{
+"id": "informacao",
+"nome": "Informação",
+"frase": "Saber algo tem custo físico, e quem sabe mais manda mais, do átomo ao mercado.",
+"nos": [
+"entropia",
+"demonio-maxwell",
+"buracos-negros-termo",
+"compressao-informacao",
+"lei-zipf",
+"criptografia-assimetrica",
+"zero-knowledge",
+"assimetria-informacao",
+"selecao-adversa"
+]
+},
+{
+"id": "equilibrio",
+"nome": "Equilíbrio",
+"frase": "Sistemas voltam a um ponto de repouso quando perturbados, e às vezes o ponto é ruim para todos.",
+"nos": [
+"le-chatelier",
+"ph-tampao",
+"capacidade-suporte",
+"teoria-jogos",
+"eleitor-mediano",
+"guerra-fria-dissuasao"
+]
+},
+{
+"id": "selecao",
+"nome": "Seleção",
+"frase": "Algo varia, um filtro corta e o que sobra parece projetado: vale para genes, línguas, casas e escalas musicais.",
+"nos": [
+"deriva-genetica",
+"altruismo-hamilton",
+"convergencia-evolutiva",
+"escalas-pentatonicas",
+"arquitetura-vernacular",
+"mudanca-fonetica",
+"gramaticalizacao"
+]
+},
+{
+"id": "redes",
+"nome": "Redes",
+"frase": "O que importa são as ligações: quem se conecta a quem decide por onde passa a informação.",
+"nos": [
+"micorrizas",
+"transferencia-horizontal",
+"grafos",
+"lacos-fracos",
+"difusao-inovacao",
+"seda-rotas",
+"liga-hanseatica",
+"blockchain"
+]
+},
+{
+"id": "medida",
+"nome": "Medida",
+"frase": "O número depende de onde se traça a fronteira, da escala e do que se resolveu contar.",
+"nos": [
+"escada-distancias",
+"cartografia-projecoes",
+"escalas-mapa-modificavel",
+"simpson-paradoxo",
+"gerrymandering",
+"pegada-carbono",
+"gini-desigualdade",
+"metricas-vaidade"
+]
+},
+{
+"id": "impossibilidade",
+"nome": "Impossibilidade",
+"frase": "Algumas coisas desejáveis não cabem juntas, e há prova de que não cabem.",
+"nos": [
+"temperamento-igual",
+"bretton-woods",
+"teorema-cap",
+"teorema-arrow",
+"cantor-infinitos",
+"halting",
+"godel"
+]
+},
+{
+"id": "reconstrucao",
+"nome": "Reconstrução",
+"frase": "Ver e lembrar são atos de montagem: o cérebro completa o que falta com expectativas.",
+"nos": [
+"atencao-seletiva",
+"gestalt-design",
+"trompe-loeil",
+"memoria-falsa",
+"reconsolidacao",
+"memoria-historica",
+"efeito-placebo"
+]
+},
+{
+"id": "incentivos",
+"nome": "Incentivos",
+"frase": "Quem decide raramente paga a conta, e o desenho das regras define o que as pessoas fazem.",
+"nos": [
+"agente-principal",
+"selecao-adversa",
+"externalidades",
+"responsabilidade-civil-objetiva",
+"acao-coletiva",
+"economia-comportamental",
+"separacao-poderes",
+"metricas-vaidade"
 ]
 }
+]
 }

@@ -2,7 +2,7 @@
    As posições vêm prontas do build.js; aqui só há câmera (arrastar, beliscar, roda)
    e zoom semântico: de longe regiões, depois áreas, depois nomes.
 
-   montarAcervo(svg, idx, lidos, { aoTocar(c), destaque: id, razao: altura/largura }) */
+   montarAcervo(svg, idx, lidos, { aoTocar(c), aoPonte(a, b, razao), fio: {nos}, destaque: id, razao: altura/largura }) */
 (function () {
 "use strict";
 const NS = "http://www.w3.org/2000/svg";
@@ -21,7 +21,20 @@ function montarAcervo(svg, idx, lidos, opts = {}) {
     const p = porId[a].xy, q = porId[b].xy;
     const doDestaque = opts.destaque && (a === opts.destaque || b === opts.destaque);
     const acesa = lidos.has(a) && lidos.has(b);
-    /* pontes entre áreas só aparecem quando você já conhece as duas pontas: senão cruzam o mapa todo */
+    const razao = (idx.pontes || {})[[a, b].sort().join("|")];
+    if (razao) {
+      /* ponte entre áreas: sempre à vista, em curva puxada para o centro, para não se confundir com as ligações
+         de dentro da área. Tocar nela mostra o que os dois conceitos têm em comum. Na miniatura, só as do destaque. */
+      if (opts.fixo && !doDestaque) continue;
+      const mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2;
+      const d = `M${p[0]} ${p[1]} Q${mx + (500 - mx) * .35} ${my + (500 - my) * .35} ${q[0]} ${q[1]}`;
+      el("path", { d, fill: "none", "vector-effect": "non-scaling-stroke", stroke: doDestaque || acesa ? "var(--tinta)" : "var(--tinta-3)",
+        "stroke-width": doDestaque ? 1.8 : acesa ? 1.4 : .9, opacity: doDestaque || acesa ? 1 : .55 }, gL);
+      if (opts.aoPonte) el("path", { d, fill: "none", stroke: "transparent", "stroke-width": 14, "vector-effect": "non-scaling-stroke", style: "cursor:pointer" }, gL)
+        .addEventListener("click", (ev) => { ev.stopPropagation(); opts.aoPonte(porId[a], porId[b], razao); });
+      continue;
+    }
+    /* ligação entre áreas que não é ponte só aparece quando você já conhece as duas pontas */
     if (porId[a].area !== porId[b].area && !acesa && !doDestaque) continue;
     el("line", { x1: p[0], y1: p[1], x2: q[0], y2: q[1], "vector-effect": "non-scaling-stroke",
       stroke: doDestaque ? "var(--tinta)" : acesa ? "var(--tinta-3)" : "var(--regra-2)",
@@ -57,6 +70,20 @@ function montarAcervo(svg, idx, lidos, opts = {}) {
     if (opts.aoTocar) n.addEventListener("click", (ev) => { ev.stopPropagation(); realcar(c.id); opts.aoTocar(c); });
     return { c, n, t, lido, perto: dest || vizinhos.has(c.id) };
   });
+
+  if (opts.fio) {
+    /* um fio transversal por vez, como linha de metrô: o resto do mapa esmaece e a linha passa pelas estações na ordem do fio */
+    gL.setAttribute("opacity", .2); gN.setAttribute("opacity", .3);
+    const est = opts.fio.nos.map(id => porId[id]).filter(Boolean), gF = el("g", {});
+    el("polyline", { points: est.map(c => c.xy.join(",")).join(" "), fill: "none", stroke: "var(--carimbo)", "stroke-width": 2.5,
+      "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }, gF);
+    est.forEach(c => {
+      const n = el("circle", { cx: c.xy[0], cy: c.xy[1], r: 7, class: "no", fill: lidos.has(c.id) ? cor(c) : "var(--ficha)", stroke: "var(--carimbo)",
+        "stroke-width": 2.5, "vector-effect": "non-scaling-stroke" }, gF);
+      if (opts.aoTocar) n.addEventListener("click", (ev) => { ev.stopPropagation(); opts.aoTocar(c); });
+    });
+    nos.forEach(o => { if (opts.fio.nos.includes(o.c.id)) o.perto = true; });   /* o nome das estações fica à vista */
+  }
 
   function realcar(id) {   /* ao tocar num nó, todas as ligações dele aparecem em tinta cheia */
     gH.innerHTML = "";
