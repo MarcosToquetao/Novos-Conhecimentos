@@ -1,0 +1,25 @@
+{
+  "vencedora": "b",
+  "motivo": "A B abre com um fato que surpreende e qualquer um entende: americanos e britânicos falam o mesmo inglês, mas cada país tem a sua língua de sinais e uma não entende a outra. A A abre por uma historinha de 1960, repete Stokoe no gancho, na foto e na tela 2, e fecha com uma frase do tipo «não é X: Y».",
+  "slop": {"a": 37, "b": 40},
+  "notas": {
+    "a": [
+      "Gancho: troque o enquadramento histórico («Em 1960, um professor...») por um fato curioso concreto, como o de ASL e BSL, e só depois diga o que é o conceito.",
+      "Telas 1 e 2 repetem o gancho (Stokoe viu regras nos sinais). Corte a tela 2 ou use o espaço para outra ideia.",
+      "Tela 3: «fonema» aparece sem explicação. Diga «como um som da fala» ou explique o termo na primeira vez.",
+      "Tela 4: a legenda da tela 3 já diz «trocar uma muda o sinal», então a pergunta vira memória. Peça uma inferência, ou tire a resposta da legenda.",
+      "Tela 11 (contar): «A Libras não é o português soletrado com as mãos: tem gramática própria» é a estrutura proibida «não é X, é Y». O «quando» fala de surdos do mundo inteiro, e a frase fala de Portugal, então os dois não combinam.",
+      "Tela 10 (no_dia): uma lei de 2002 não é algo que a pessoa encontra no dia a dia. Só use um lugar onde a pessoa vê Libras se o documento sustentar."
+    ],
+    "b": [
+      "Tela 3 (figura): troque a fonte 1 pela 2. Stokoe descreveu três parâmetros, e a orientação da palma e o rosto vieram depois.",
+      "Tela 4: a legenda da tela 3 já entrega a resposta («Trocar uma peça muda o sinal»). Tire isso da legenda ou faça a pergunta exigir uma inferência.",
+      "Tela 5 (comparar): ponha marca consenso e fonte 4, porque a tela afirma fatos sobre a origem e o uso.",
+      "Tela 6 (etapas): a etapa «Sentido inverso» já dá a resposta. Uma pergunta sobre o verbo «dar» feito do «você» para o «eu» testaria o mecanismo melhor que a tela 8. Se fizer a troca, mantenha 2 ou 3 perguntas.",
+      "Tela 8: «agramatical» não foi explicado e, por ser a alternativa com cara mais técnica, entrega a resposta pelo tom. Escreva algo como «fica errada, como uma frase sem verbo».",
+      "Tela 10 (contar): a frase junta duas ideias e é difícil repetir de cabeça. Fique com uma só, por exemplo a das sobrancelhas como gramática ou a do inglês com duas línguas de sinais.",
+      "Tela 9 (no_dia): uma lei de 2002 não é algo que a pessoa encontra no dia a dia. Só use um lugar onde a pessoa vê Libras se o documento sustentar.",
+      "Fecho: tire o «usa-se» e a cauda «A linguística chama isso de pidgin: Pidgins e crioulos.». Diga direto que esse sistema improvisado tem nome e aponte o vizinho."
+    ]
+  }
+}

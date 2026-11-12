@@ -1,0 +1,104 @@
+{
+  "gancho": "Um livro coreano de 1377 já foi impresso com letras de metal soltas, bem antes de Gutenberg. Esta lição é sobre a prensa de tipos móveis: o que Gutenberg juntou para fazê-la e o que ela mudou.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "O Jikji, de 1377, é o livro mais antigo impresso com tipos metálicos que sobreviveu. Os caracteres aparecem organizados em colunas.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Muita gente acha que Gutenberg inventou a impressão. Chineses e coreanos já imprimiam com blocos de madeira e, depois, com tipos móveis de cerâmica e metal. A diferença europeia foi a combinação.</p>",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "comparar",
+      "a": "Já existia",
+      "b": "Veio de Gutenberg",
+      "linhas": [
+        {
+          "aspecto": "Prensa",
+          "a": "prensa de parafuso romana, usada para espremer uvas e azeitonas",
+          "b": "molde de mão para fundir cada letra a partir de uma matriz"
+        },
+        {
+          "aspecto": "Letras",
+          "a": "tipo móvel, de cerâmica ou metal",
+          "b": "liga de chumbo, estanho e antimônio: tipos duráveis e precisos"
+        }
+      ],
+      "legenda": "Já existiam também o livro em cadernos costurados e o papel de moinhos movidos a água, desde 1282.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>O alfabeto latino tem poucas dezenas de caracteres. Na China, um conjunto completo de tipos exigia milhares de peças diferentes.</p>",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Um impressor europeu e um chinês querem montar um jogo completo de tipos. Quem gasta menos para começar, e por quê?",
+      "alts": [
+        "O europeu, porque precisa fundir bem menos peças diferentes",
+        "O chinês, porque a cerâmica custa menos que a liga de chumbo",
+        "O europeu, porque só ele conhecia o tipo móvel"
+      ],
+      "correta": 0,
+      "porque": "Poucas dezenas de sinais significam poucas peças para fabricar. E o tipo móvel já era conhecido na Ásia, então a vantagem era a do alfabeto."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Quantas impressões, no máximo, uma prensa por volta de 1600 fazia num dia útil?",
+      "unidade": "impressões",
+      "min": 10,
+      "max": 10000,
+      "escala": "log",
+      "resposta": 3600,
+      "legenda": "Até 3.600 por dia útil, contra cerca de quarenta com blocos de madeira.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "Panfleto da Reforma, século XVI. Entre 1518 e 1520, circularam 300 mil cópias de textos de Lutero, o que surpreendeu o papa e os príncipes.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pontos",
+      "valor": 36,
+      "frase": "das cidades com contato documentado com a rede pessoal de Lutero adotaram a Reforma até 1530.",
+      "legenda": "Entre as sem contato, 6 de cada 100. Segundo os autores, laços pessoais e rotas comerciais explicam o padrão melhor que a imprensa isolada.",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Duas cidades alemãs tinham prensa, mas só uma adotou a Reforma até 1530. O que o estudo mandaria investigar primeiro?",
+      "alts": [
+        "Quantas oficinas de impressão cada cidade tinha",
+        "Se a cidade tinha ligação pessoal com a rede de Lutero",
+        "Quão perto a cidade ficava de Mainz"
+      ],
+      "correta": 1,
+      "porque": "Com contato documentado, 36% adotaram a Reforma; sem contato, 6%. Hoje a prensa é tratada como um canal entre vários, e não como a causa única."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Quando você cita a página 42 de um livro ou procura um assunto no índice, usa algo que a prensa criou: exemplares idênticos. Com cópias feitas à mão, cada uma era diferente da outra.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "O livro mais antigo impresso com letras de metal que sobreviveu é coreano, de 1377, e Gutenberg só aparece por volta de 1450.",
+      "quando": "Quando alguém disser que Gutenberg inventou a impressão.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "O Almagesto de Ptolomeu mandou na astronomia por cerca de 1.400 anos. O livro de Copérnico, de 1543, foi superado em menos de cem. Que mudou? Vale olhar a Revolução científica do século XVII."
+}

@@ -1,0 +1,120 @@
+{
+  "gancho": "Em 1960, um professor de inglês numa universidade para surdos reparou que os sinais dos alunos se combinavam por regras, como as palavras faladas. Hoje os linguistas tratam as línguas de sinais como línguas completas, com gramática própria.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "William Stokoe, o professor que deu início ao estudo científico das línguas de sinais."
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Stokoe dava aula na Gallaudet, universidade para surdos. Os colegas ouvintes achavam que os alunos trocavam gestos soltos. Ele viu que os sinais se combinavam por regras e descreveu a estrutura interna da língua de sinais americana.</p>",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "figura",
+      "fig": "sinais-parametros",
+      "legenda": "Cada sinal junta forma da mão, lugar, movimento e orientação da palma, tudo ao mesmo tempo. Cada parte funciona como um fonema: trocar uma muda o sinal.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Dois sinais têm o mesmo lugar, o mesmo movimento e a mesma palma. Só a forma dos dedos é outra. O que costuma acontecer?",
+      "alts": [
+        "Os sinalizantes entendem o mesmo sinal, dito com sotaque",
+        "Os sinalizantes entendem outro sinal, ou algo sem sentido",
+        "Os sinalizantes entendem o mesmo sinal, dito com mais emoção"
+      ],
+      "correta": 1,
+      "porque": "Cada parte funciona como um fonema. Trocar uma delas costuma dar outro sinal ou nada com sentido, do mesmo jeito que trocar uma letra muda «pato» para «gato»."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Quantas línguas de sinais diferentes o Ethnologue tinha catalogado?",
+      "unidade": "línguas",
+      "min": 10,
+      "max": 1000,
+      "escala": "log",
+      "resposta": 130,
+      "legenda": "Mais de 130 catalogadas. A estimativa é que o total real passe de 400, em geral sem se entenderem entre si.",
+      "marca": "consenso",
+      "fonte": 13
+    },
+    {
+      "tipo": "comparar",
+      "a": "Libras",
+      "b": "Português sinalizado",
+      "linhas": [
+        {
+          "aspecto": "Origem",
+          "a": "comunidade surda brasileira",
+          "b": "criado por educadores ouvintes"
+        },
+        {
+          "aspecto": "Ordem das palavras",
+          "a": "própria",
+          "b": "a mesma do português"
+        },
+        {
+          "aspecto": "Uso em casa",
+          "a": "língua natural da comunidade surda",
+          "b": "ferramenta pedagógica artificial"
+        }
+      ],
+      "legenda": "A Libras tem gramática própria, diferente da do português e da língua de sinais de Portugal.",
+      "marca": "consenso",
+      "fonte": 4
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Marcar os pontos",
+          "texto": "A pessoa fixa no espaço à frente um ponto para «eu» e outro para «você»."
+        },
+        {
+          "nome": "Mover o verbo",
+          "texto": "O verbo «dar» sai do ponto «eu» e chega ao ponto «você»."
+        },
+        {
+          "nome": "Ler a frase",
+          "texto": "O caminho da mão diz «eu dou a você». Ninguém precisou sinalizar um pronome."
+        }
+      ],
+      "legenda": "Em Libras e ASL, verbos direcionais mostram quem age e quem recebe pela direção do movimento.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma pessoa sinaliza «dar» movendo a mão do ponto «você» até o ponto «eu». O que a frase diz?",
+      "alts": [
+        "Eu dou a você",
+        "Você dá a mim",
+        "Só imita o gesto de entregar algo, sem dizer quem entrega"
+      ],
+      "correta": 1,
+      "porque": "O sentido do movimento marca sujeito e objeto, uma concordância gramatical. Invertido o caminho, inverte-se o significado."
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>O rosto também tem gramática. Sobrancelhas levantadas marcam pergunta de sim ou não. Sobrancelhas franzidas marcam pergunta com «quem» ou «onde». Tirar essa marca deixa a frase agramatical.</p>",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>A Lei 10.436, de 2002, reconheceu a Libras como meio legal de comunicação e expressão da comunidade surda brasileira. A lei deu status oficial a uma língua que já existia havia gerações.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "A Libras não é o português soletrado com as mãos: tem gramática própria e é diferente até da língua de sinais de Portugal.",
+      "quando": "Quando alguém disser que surdos do mundo inteiro se entendem pelos mesmos sinais.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "Na Nicarágua, a partir de 1986, crianças surdas sem língua de sinais adulta estabelecida fizeram uma gramática surgir entre elas. O que isso diz sobre o que a mente humana já traz para aprender uma língua? A gramática universal e o debate inatista tratam disso."
+}

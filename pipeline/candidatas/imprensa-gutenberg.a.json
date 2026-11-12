@@ -1,0 +1,120 @@
+{
+  "gancho": "Em 1450, copiar um livro na Europa levava meses de trabalho de um escriba. Então chegou a prensa de tipos móveis, e quem controlava as cópias perdeu o controle do que circulava.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "Um operador puxa a alavanca e o prato aperta a folha contra as letras entintadas. Era assim que se imprimia."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Décadas depois de 1450, quantas páginas uma prensa podia imprimir, no máximo, num dia de trabalho?",
+      "unidade": "páginas",
+      "min": 10,
+      "max": 10000,
+      "escala": "log",
+      "resposta": 3600,
+      "legenda": "Até 3.600 páginas num dia. Um escriba levava meses para copiar um livro.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Compor",
+          "texto": "O compositor monta as letras numa galé e encaixa as páginas numa forma."
+        },
+        {
+          "nome": "Entintar",
+          "texto": "Duas bolas de couro passam a tinta sobre as letras."
+        },
+        {
+          "nome": "Posicionar",
+          "texto": "Uma folha úmida fica presa entre dois quadros e desce sobre o tipo."
+        },
+        {
+          "nome": "Pressionar",
+          "texto": "Uma alavanca empurra o prato contra o papel."
+        }
+      ],
+      "legenda": "Tudo à mão, do começo ao fim. Foi assim por três séculos.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "O Jikji, livro coreano de 1377, é o mais antigo impresso com tipos metálicos móveis que sobreviveu. Gutenberg veio depois.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "comparar",
+      "a": "Já existia",
+      "b": "Gutenberg acrescentou",
+      "linhas": [
+        {
+          "aspecto": "Letras",
+          "a": "tipo móvel",
+          "b": "liga de chumbo, estanho e antimônio, e molde de mão para fundir cada letra em série"
+        },
+        {
+          "aspecto": "Máquina e papel",
+          "a": "prensa de parafuso romana, livro em cadernos, papel de moinho",
+          "b": "a reunião de tudo isso numa só oficina"
+        }
+      ],
+      "legenda": "O alfabeto latino tem poucas dezenas de caracteres. Na China, um conjunto de tipos logográficos exigia milhares de peças.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Por que o tipo móvel deu lucro na Europa e custava caro na China?",
+      "alts": [
+        "Os livros europeus eram mais curtos, então gastavam menos papel",
+        "O alfabeto latino pede poucas peças de metal, e a escrita chinesa pede milhares",
+        "Os impressores europeus não pagavam o metal das letras"
+      ],
+      "correta": 1,
+      "porque": "Com poucas dezenas de sinais, um jogo de tipos era barato. Com milhares de caracteres, o custo subia."
+    },
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "Panfleto do tempo da Reforma. Entre 1518 e 1520, circularam 300 mil cópias de textos de Lutero, e isso surpreendeu papa e príncipes.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>A Igreja reagiu. Em 1485, o arcebispo de Mainz criou um sistema de licenciamento. Em 1559, o Índice dos Livros Proibidos listou o que católicos leigos não podiam ler.</p>",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Um impressor é perseguido na sua cidade por imprimir livros proibidos. O que tende a acontecer?",
+      "alts": [
+        "A censura do Índice fecha as prensas em toda a Europa católica",
+        "Ele muda de cidade com a prensa e continua imprimindo",
+        "Ele passa a imprimir só livros autorizados"
+      ],
+      "correta": 1,
+      "porque": "O equipamento era portátil, e por isso a censura funcionou só em parte."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Quando você abre um livro pelo índice, procura um trecho pelo número da página ou cita um autor com precisão, usa o que a prensa trouxe: exemplares idênticos permitiram numerar páginas e montar índices.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Um livro coreano de 1377 já era impresso com tipos de metal móveis, bem antes de Gutenberg.",
+      "quando": "Quando você folhear um livro antigo, ou ouvir falar de impressão 3D.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "Cópias idênticas permitiram comparar textos e apontar erros. O que isso fez com a ciência? A resposta está na Revolução científica do século XVII."
+}

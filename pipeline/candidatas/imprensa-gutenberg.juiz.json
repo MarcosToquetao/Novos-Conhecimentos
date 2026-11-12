@@ -1,0 +1,21 @@
+{
+  "vencedora": "a",
+  "motivo": "A reescrita da A resolveu as notas: a tela 8 não entrega mais a resposta, a tela 9 tem erros plausíveis e a tela 6 agora testa o mecanismo do alfabeto. A lição mostra a prensa funcionando, conta as 3.600 páginas e o Jikji e fica no núcleo estabelecido. A B continua montada sobre o mito «Gutenberg inventou a impressão» e sobre a disputa entre a rede de Lutero e a prensa.",
+  "slop": {"a": 41, "b": 35},
+  "notas": {
+    "a": [
+      "Tela 5: a legenda fala do alfabeto e não do que a tabela mostra. Use a legenda para dizer o que se vê, por exemplo «Quase tudo já existia. Gutenberg fez as letras em série e juntou o resto», e passe a frase do alfabeto para a tela 6 ou para uma tela de texto curta antes dela.",
+      "Tela 6: a alternativa c («não pagavam o metal das letras») ninguém escolhe, e a certa é a mais longa. Troque c por um erro de leitor apressado, por exemplo «Na China não existia papel suficiente para imprimir em série», e deixe as três com tamanho parecido.",
+      "Tela 9: a resposta depende de deduzir pelo gancho que a censura não segurou a circulação. Funciona, mas uma linha a mais na tela 8 sem entregar a resposta (por exemplo «A censura funcionou só em parte») deixaria a pergunta mais justa.",
+      "Contar: «ouvir falar de impressão 3D» é uma cena forçada. Fique só com «Quando você folhear um livro antigo ou passar por um sebo»."
+    ],
+    "b": [
+      "Não foi reescrita, e os defeitos da primeira rodada continuam.",
+      "A lição gira em torno de desmentir o mito «Gutenberg inventou a impressão»: gancho, tela 2 («Muita gente acha...») e o «quando» do contar.",
+      "Telas 8 e 9: o estudo da rede de Lutero (36% contra 6%) faz parte de evidência contestada sobre o peso da prensa na Reforma. Tire as duas telas. A tela 8 também está sem marca.",
+      "Gancho: «Esta lição é sobre...» anuncia em vez de contar.",
+      "Tela 3: o molde de mão aparece na linha «Prensa», onde não tem relação com a prensa.",
+      "Tela 5: a alternativa c é negada pela tela 2, então a certa se adivinha."
+    ]
+  }
+}

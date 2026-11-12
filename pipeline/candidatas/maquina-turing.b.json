@@ -1,0 +1,95 @@
+{
+  "gancho": "Em 1936, Alan Turing imaginou uma máquina de fita que nunca foi construída e, com ela, provou que existe uma pergunta sobre programas que nenhum programa consegue responder. A gente chama essa invenção de máquina de Turing.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "Uma fita dividida em células, um cabeçote que lê e escreve uma célula por vez e uma tabela de regras. Essas são as peças da máquina."
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        { "nome": "Ler", "texto": "O cabeçote lê o símbolo da célula onde está." },
+        { "nome": "Consultar", "texto": "Uma tabela pequena de regras diz o que fazer, conforme o símbolo e o estado atual." },
+        { "nome": "Escrever", "texto": "Ele escreve um novo símbolo na célula." },
+        { "nome": "Andar", "texto": "Ele se move uma célula para a esquerda ou para a direita." },
+        { "nome": "Mudar de estado", "texto": "A máquina passa para outro estado e começa de novo." }
+      ],
+      "legenda": "Em princípio, com tempo suficiente, ela simula qualquer procedimento passo a passo bem definido.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "comparar",
+      "a": "Máquina de fita, 1936",
+      "b": "Laptop de hoje",
+      "linhas": [
+        { "aspecto": "Existe de verdade", "a": "só no papel", "b": "está na sua mesa" },
+        { "aspecto": "Velocidade", "a": "bem menor", "b": "muito maior" },
+        { "aspecto": "Memória", "a": "a fita disponível", "b": "a quantidade que ele tem" },
+        { "aspecto": "O que consegue calcular", "a": "o mesmo", "b": "o mesmo" }
+      ],
+      "legenda": "Em termos do que é, em princípio, computável, as duas colunas são equivalentes. A diferença é de velocidade e de memória.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma empresa lança um chip muito mais rápido que todos os anteriores. O que muda sobre o que um computador consegue calcular?",
+      "alts": [
+        "Passam a existir cálculos que nenhuma máquina de fita faria",
+        "Os mesmos cálculos de antes saem em menos tempo",
+        "A velocidade não muda em nada o que dá para calcular nem o tempo"
+      ],
+      "correta": 1,
+      "porque": "O que se pode calcular em princípio já estava definido pela máquina de fita. Mais velocidade e mais memória entregam a mesma lista de cálculos, só que mais depressa."
+    },
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "David Hilbert perguntou em 1928 se existe um procedimento mecânico que diga se qualquer afirmação matemática é verdadeira ou falsa.",
+      "marca": "consenso",
+      "fonte": 7
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>O palpite comum: com computadores mais rápidos, um dia alguém faz um programa que avisa se <strong>qualquer outro programa</strong> vai travar num loop infinito. Turing mostrou que esse programa não pode existir.</p>"
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        { "nome": "Suponha", "texto": "Existe uma máquina H que diz, para qualquer máquina e entrada, se ela vai parar." },
+        { "nome": "Construa", "texto": "Faça uma nova máquina que aplica H ao próprio código dela." },
+        { "nome": "Contrarie", "texto": "A nova máquina faz o oposto do que H prevê sobre ela." },
+        { "nome": "Contradição", "texto": "Seja qual for a previsão de H, ela erra." },
+        { "nome": "Conclua", "texto": "A suposição inicial era falsa: H não existe." }
+      ],
+      "legenda": "A prova mostra que a contradição é inevitável. Nenhum hardware novo muda isso.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma empresa promete um detector que acusa loops infinitos em qualquer programa, bastando ter hardware forte o bastante. Por que a promessa não se sustenta?",
+      "alts": [
+        "A tecnologia ainda é fraca, mas deve chegar a esse ponto",
+        "Supor que um detector assim exista leva a uma contradição, com qualquer hardware",
+        "Os programas ficam grandes demais para o detector analisar"
+      ],
+      "correta": 1,
+      "porque": "A prova parte da existência do detector e chega a uma contradição. Por isso o limite é lógico e não depende de quão forte é a máquina."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>O celular em que você lê isto calcula, em princípio, o mesmo que a máquina de fita. E nenhuma ferramenta de análise de código garante, para qualquer programa, que ele nunca trava num loop infinito.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Em princípio, com fita e tempo suficientes, uma máquina de fita de 1936 calcula tudo o que seu celular calcula.",
+      "quando": "Quando alguém disser que o computador novo vai resolver qualquer coisa, ou na hora de trocar de celular.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "A diagonalização de Turing é muito parecida com a que Kurt Gödel usou poucos anos antes para outro resultado de impossibilidade. Qual? Veja os teoremas da incompletude de Gödel."
+}

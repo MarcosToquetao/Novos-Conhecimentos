@@ -1,0 +1,88 @@
+{
+  "gancho": "Uma máquina que nunca foi construída, imaginada em 1936, calcula tudo o que o seu celular calcula. Ela só tem uma fita sem fim e uma tabela de regras. A gente chama essa de máquina de Turing.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "A fita é dividida em células. O cabeçote lê e escreve um símbolo de cada vez, sem nunca olhar para o resto."
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        { "nome": "Ler", "texto": "O cabeçote vê o símbolo da célula onde está." },
+        { "nome": "Consultar", "texto": "Com o símbolo e o estado atual, acha a regra na tabela." },
+        { "nome": "Escrever", "texto": "Grava um símbolo novo naquela célula." },
+        { "nome": "Andar", "texto": "Vai uma célula para a esquerda ou direita e troca de estado." }
+      ],
+      "legenda": "É assim cada passo, sempre com a mesma tabela pequena e finita.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "comparar",
+      "a": "Máquina de 1936",
+      "b": "Celular",
+      "linhas": [
+        { "aspecto": "Fita ou memória", "a": "fita infinita, só imaginada", "b": "a memória que o aparelho tem" },
+        { "aspecto": "O que muda entre as duas", "a": "um símbolo por passo", "b": "velocidade e memória do aparelho" },
+        { "aspecto": "O que consegue calcular, em princípio", "a": "o que é computável", "b": "o mesmo" }
+      ],
+      "legenda": "Com fita e tempo suficientes, a máquina de fita faz o que o celular faz.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Um amigo diz que os celulares do futuro, com muito mais memória, vão calcular coisas que a máquina de fita nunca calcularia. O que a comparação sugere?",
+      "alts": [
+        "Ele tem razão: memória suficiente acaba abrindo cálculos novos",
+        "Ele tem razão: o que um celular calcula já supera o da máquina de fita",
+        "Ele erra: memória e velocidade mudam o tempo gasto, não o que se calcula"
+      ],
+      "correta": 2,
+      "porque": "A diferença entre a máquina de 1936 e um aparelho moderno está em velocidade e memória disponível. O conjunto do que é computável é o mesmo."
+    },
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "Em 1928, David Hilbert perguntou se existe um procedimento mecânico que diga, para qualquer afirmação matemática, se ela é verdadeira ou falsa.",
+      "marca": "consenso",
+      "fonte": 7
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        { "nome": "Suponha", "texto": "Existe uma máquina H que diz, para qualquer máquina e entrada, se ela vai parar ou rodar para sempre." },
+        { "nome": "Construa", "texto": "Uma nova máquina aplica H a si mesma e faz o oposto do que H prevê." },
+        { "nome": "Teste", "texto": "H tenta prever essa nova máquina e acerta ou erra, e as duas saídas dão contradição." },
+        { "nome": "Conclua", "texto": "H não pode existir. Não há procedimento geral que responda a pergunta de Hilbert." }
+      ],
+      "legenda": "Turing provou isso no artigo de 1936. É o problema da parada.",
+      "marca": "consenso",
+      "fonte": 12
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Uma empresa promete um programa que avisa, para qualquer outro programa, se ele vai travar num loop infinito. O que a prova de Turing diz?",
+      "alts": [
+        "Só é possível com computadores bem mais rápidos que os de hoje",
+        "Só é possível com a memória de um computador quântico",
+        "Para todos os programas possíveis, nenhum computador consegue acertar sempre"
+      ],
+      "correta": 2,
+      "porque": "A prova mostra que qualquer H seria contraditório com uma máquina construída para contrariá-lo. Mais velocidade ou mais memória não muda isso."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Um programa em loop infinito roda para sempre. Nenhuma ferramenta garante, para qualquer programa, que ele nunca trava assim. As atuais contornam o limite: analisam classes restritas de programas, aceitam margens de incerteza ou exigem anotações do programador.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Seu celular não calcula nada que uma máquina de fita imaginada em 1936 não calcularia: só tem muito mais velocidade e memória.",
+      "quando": "Quando alguém elogiar um celular novo e potente, ou perguntar se um computador pode tudo.",
+      "marca": "consenso",
+      "fonte": 2
+    }
+  ],
+  "fecho": "A técnica da prova de Turing parece com a que Kurt Gödel usou poucos anos antes para provar que a própria matemática tem limites. O que ele provou? Teoremas da incompletude de Gödel."
+}

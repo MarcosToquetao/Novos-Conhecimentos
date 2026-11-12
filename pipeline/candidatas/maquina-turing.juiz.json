@@ -1,0 +1,21 @@
+{
+  "vencedora": "b",
+  "motivo": "A B abre por um fato que dá vontade de saber mais (existe uma pergunta sobre programas que nenhum programa responde), e a comparação dela é clara. As perguntas da B testam o mecanismo. A comparação da A tem uma linha confusa, e as duas perguntas dela se adivinham pela forma: a certa é sempre a que destoa das outras duas.",
+  "slop": {"a": 38, "b": 40},
+  "notas": {
+    "a": [
+      "Tela 3 (comparar): a linha «O que muda entre as duas» põe «um símbolo por passo» contra «velocidade e memória do aparelho», que não são a mesma coisa. Troque por duas linhas, uma de velocidade e outra de memória, com o mesmo aspecto nas duas colunas.",
+      "Tela 4 (pergunta): duas alternativas começam com «Ele tem razão» e só uma com «Ele erra», então a certa se adivinha pela forma. Escreva três alternativas com estrutura parecida.",
+      "Tela 7 (pergunta): as duas erradas começam com «Só é possível com...» e a certa destoa, então dá para adivinhar. Além disso, a tela 6 acabou de dar a resposta. Faça uma erra que pareça razoável a quem leu com pressa, por exemplo «os programas são grandes demais para analisar».",
+      "Gancho: «A gente chama essa de máquina de Turing» soa truncado. Use «A gente chama essa máquina de máquina de Turing» ou «Essa é a máquina de Turing».",
+      "As correções pedidas no .fatos.json foram feitas: saiu «bem devagar» e a tela 8 cita as três formas de contornar o limite."
+    ],
+    "b": [
+      "Tela 3 (comparar): «Velocidade: bem menor» para a máquina de 1936 é o mesmo ponto sem respaldo que foi cortado da A. O documento só diz que a diferença está na velocidade e na memória, e não fala da velocidade de uma máquina imaginária. Troque por «um passo de cada vez, no papel» ou corte a linha.",
+      "Tela 4 (pergunta): a terceira alternativa («não muda nem o tempo») não convence ninguém, então a escolha fica entre duas. Troque por um erro de leigo, por exemplo «Passa a dar para prever se qualquer programa trava».",
+      "Tela 8 (pergunta): a tela 6 rejeita literalmente a primeira alternativa, e por isso a pergunta fica fácil. Use outra errada que pareça razoável, como a de que os programas são grandes demais para analisar, só que formulada de um jeito mais tentador.",
+      "Tela 6 (texto): abrir por «O palpite comum» puxa a tela para um mito a desmentir. Diga direto a pergunta que Turing respondeu.",
+      "As correções pedidas no .fatos.json foram feitas: a tela 1 inclui a tabela de regras, as telas 2, 3 e 10 trazem «em princípio» e «fita e tempo suficientes», e o fecho diz «muito parecida»."
+    ]
+  }
+}
