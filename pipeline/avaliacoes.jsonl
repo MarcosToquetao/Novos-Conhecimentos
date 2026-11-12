@@ -5,3 +5,13 @@
 {"tipo": "aprendizado", "id": "-", "veredicto": "-", "quando": "2026-09-27T18:09:33", "regras": "escritas à mão a partir das 4 primeiras revisões"}
 {"tipo": "par", "id": "tardigrados", "juiz": "b", "escolha": "b", "comentario": "", "quando": "2026-11-12T12:35:34"}
 {"tipo": "par", "id": "tardigrados", "juiz": "b", "escolha": "b", "comentario": "Na B voce trabalha melhor o hook, com um fato curioso e que chama atenção. Mas voce deve usar mais linguagem pessoal. A ultima frase\"Esse estado se chama criptobiose\" é muito frase de livro didático. Prefira 'Essa é a criptobiose\" ou \"A gente chama esse efeito de criptobiose\"", "quando": "2026-11-12T12:37:16"}
+{"tipo": "par", "id": "bauhaus", "juiz": "a", "escolha": "a", "comentario": "", "quando": "2026-11-12T15:21:48"}
+{"tipo": "par", "id": "bayes", "juiz": "b", "escolha": "a", "comentario": "", "quando": "2026-11-12T15:22:05"}
+{"tipo": "par", "id": "fourier", "juiz": "b", "escolha": "nenhuma", "comentario": "As duas chamadas sao muito tecnicas e perdem po leitor por não ter um hook acessivel.", "quando": "2026-11-12T15:22:42"}
+{"tipo": "par", "id": "imprensa-gutenberg", "juiz": "a", "escolha": "a", "comentario": "", "quando": "2026-11-12T15:22:59"}
+{"tipo": "par", "id": "linguas-de-sinais", "juiz": "b", "escolha": "b", "comentario": "", "quando": "2026-11-12T15:23:14"}
+{"tipo": "par", "id": "maquina-turing", "juiz": "b", "escolha": "a", "comentario": "", "quando": "2026-11-12T15:23:24"}
+{"tipo": "par", "id": "peste-negra", "juiz": "b", "escolha": "a", "comentario": "", "quando": "2026-11-12T15:23:44"}
+{"tipo": "par", "id": "problema-monty-hall", "juiz": "b", "escolha": "nenhuma", "comentario": "As duas são complicadas de entender numa primeira lida. Nao da pra saber ao certo do que se trata.", "quando": "2026-11-12T15:24:36"}
+{"tipo": "par", "id": "tectonica-placas", "juiz": "a", "escolha": "a", "comentario": "", "quando": "2026-11-12T15:24:58"}
+{"tipo": "par", "id": "tectonica-placas", "juiz": "a", "escolha": "a", "comentario": "Tente algo como: Agora mesmo você está pisando em cima de pedras gigantes que se movem. E é um baita problema quando elas resolvem se bater", "quando": "2026-11-12T15:26:08"}
