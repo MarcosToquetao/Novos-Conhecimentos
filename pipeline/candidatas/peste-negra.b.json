@@ -1,0 +1,101 @@
+{
+  "gancho": "Uma epidemia matou de 30% a 60% dos europeus em poucos anos. A gente chama esse choque de Peste Negra, e ele mexeu na economia por séculos, inclusive na vida de quem não pegou a doença.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "Miniatura medieval com o enterro de vítimas da peste. Entre 1347 e 1351 a doença chegou a Gênova, Veneza, Marselha e à Inglaterra.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "estimar",
+      "q": "Florença tinha entre 110 mil e 120 mil habitantes em 1348. Quantos tinha três anos depois?",
+      "unidade": "mil habitantes",
+      "min": 0,
+      "max": 120,
+      "escala": "linear",
+      "resposta": 50,
+      "legenda": "Cerca de 50 mil. Mais da metade da cidade sumiu em três anos.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Com tanta gente morta, a terra continuou do mesmo tamanho. Os senhores precisavam de camponeses para cultivá-la, e havia menos camponeses. A explicação cabe numa conta de quem tinha terra e quem tinha braços.</p>"
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Metade dos camponeses de uma aldeia morreu, e o senhor da terra ainda precisa da colheita. O que é mais provável?",
+      "alts": [
+        "Os que sobraram aceitam menos, por medo e pobreza",
+        "O senhor paga mais ou cede mais para manter quem sobrou",
+        "Nada muda, porque a terra continua sendo dele"
+      ],
+      "correta": 1,
+      "porque": "Com menos braços, o trabalho ficou escasso e passou a valer mais. Os salários reais subiram em grande parte da Europa."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Antes da peste",
+      "b": "Depois da peste",
+      "linhas": [
+        {
+          "aspecto": "Camponeses",
+          "a": "muitos para a terra",
+          "b": "poucos para a terra"
+        },
+        {
+          "aspecto": "Salário",
+          "a": "menor",
+          "b": "sobe"
+        },
+        {
+          "aspecto": "Valor da terra",
+          "a": "maior",
+          "b": "desce"
+        }
+      ],
+      "legenda": "Com a terra abundante e o trabalho escasso, o trabalho passou a valer mais.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "Registros de tribunais do século XIV. Os de Essex, entre 1350 e 1500, mostram mudanças na migração, no casamento e no emprego.",
+      "marca": "consenso",
+      "fonte": 4
+    },
+    {
+      "tipo": "foto",
+      "foto": 3,
+      "legenda": "A peste avançou de 1347 a 1351. Em algumas regiões a agricultura seguiu crescendo, em outras o número de povoados caiu muito.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pergunta",
+      "q": "A servidão prendia o camponês à terra do senhor. Por que ela perdeu força depois da peste?",
+      "alts": [
+        "Os senhores abriram mão dela por decisão própria, para ficar bem vistos",
+        "Com poucos braços, o senhor tinha mais dificuldade de segurar quem sobrou",
+        "A peste matou quase só os servos, e a servidão acabou por falta de servos"
+      ],
+      "correta": 1,
+      "porque": "Com a mão de obra escassa, os senhores não conseguiam manter a servidão com tanta facilidade. A perda de força foi por razões econômicas."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Quando falta gente para um serviço, quem contrata precisa oferecer mais para conseguir alguém. É o raciocínio que a Peste Negra mostrou em escala de continente: o trabalho escasso passou a valer mais.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Depois que a Peste Negra matou até 60% dos europeus, os salários subiram, porque sobrou terra demais e gente de menos.",
+      "quando": "Quando alguém disser que toda catástrofe empobrece todo mundo, ou numa conversa sobre falta de gente para trabalhar.",
+      "marca": "consenso",
+      "fonte": 3
+    }
+  ],
+  "fecho": "A servidão prendia o camponês à terra e perdeu força depois da peste. Como ela funcionava na prática? Veja Feudalismo: estrutura e revisão historiográfica."
+}

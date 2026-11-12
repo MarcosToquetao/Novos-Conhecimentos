@@ -1,0 +1,101 @@
+{
+  "gancho": "Você deve imaginar a Bauhaus como a escola que enchia a Alemanha de prédios modernos. Aberta em 1919, ela só teve curso de arquitetura em 1927, e construiu bem menos do que a fama sugere.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "O prédio da escola em Dessau, projetado por Walter Gropius. É a imagem que quase todo mundo associa à Bauhaus."
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>O palpite comum é que a Bauhaus era uma escola de construir. Mas a arquitetura só ganhou curso próprio em <strong>1927</strong>, oito anos depois da fundação. Antes, as oficinas eram de cerâmica e tecelagem, entre outras.</p>",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "linha_tempo",
+      "eventos": [
+        {"ano": 1919, "texto": "Gropius funda a escola em Weimar"},
+        {"ano": 1925, "texto": "Mudança para Dessau, por pressão política"},
+        {"ano": 1927, "texto": "Arquitetura ganha curso próprio"},
+        {"ano": 1932, "texto": "Mudança para Berlim"},
+        {"ano": 1933, "texto": "A Gestapo fecha a escola e ela se encerra"}
+      ],
+      "legenda": "Catorze anos de vida e três cidades. As duas mudanças vieram de pressão política.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "foto",
+      "foto": 4,
+      "legenda": "A fábrica de turbinas da AEG, de Peter Behrens. Gropius trabalhou no escritório dele, antes de a Bauhaus existir.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "comparar",
+      "a": "Werkbund e Behrens",
+      "b": "Bauhaus",
+      "linhas": [
+        {"aspecto": "Ano", "a": "1907", "b": "1919"},
+        {"aspecto": "Ideia", "a": "unir design e indústria", "b": "unir arte, artesanato e tecnologia"},
+        {"aspecto": "Padronizar", "a": "Behrens já fazia na AEG", "b": "herdou esse repertório"}
+      ],
+      "legenda": "A Bauhaus não nasceu do zero. O debate sobre produção em massa já tinha mais de uma década.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Gropius abriu a Bauhaus em 1919. De onde vinha a ideia de padronizar objetos para a fábrica?",
+      "alts": [
+        "Ela surgiu na Bauhaus e dali se espalhou pela Alemanha",
+        "Já circulava na Alemanha, no Werkbund e no trabalho de Behrens, em cujo escritório Gropius trabalhou",
+        "Veio da escola de Moscou, que copiou a Bauhaus"
+      ],
+      "correta": 1,
+      "porque": "O Werkbund existia desde 1907 e Behrens já padronizava produtos na AEG. Gropius trabalhou no escritório dele e levou o repertório para a escola."
+    },
+    {
+      "tipo": "foto",
+      "foto": 5,
+      "legenda": "Prédios de apartamentos em Dessau, da época de Hannes Meyer. Foi ele quem deu à escola seus maiores encargos de obra."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Com Meyer",
+      "b": "Com Mies",
+      "linhas": [
+        {"aspecto": "Obras", "a": "cinco prédios em Dessau e a escola de Bernau", "b": "nenhum projeto construído"},
+        {"aspecto": "Produtos", "a": "1929: primeiro lucro", "b": "fabricação suspensa"},
+        {"aspecto": "Foco", "a": "necessidades de quem mora", "b": "só o ensino"}
+      ],
+      "legenda": "Só dois projetos da escola eram de habitação operária. Os milhares de unidades vieram de Ernst May, em Frankfurt, e Bruno Taut, em Berlim.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Alguém diz que a Bauhaus resolveu a moradia operária da Alemanha. O que dá para responder?",
+      "alts": [
+        "Resolveu, porque construiu milhares de unidades sociais",
+        "Pouco: só dois projetos dela eram de habitação operária, e os milhares vieram de outros arquitetos",
+        "Nada: a escola nunca trabalhou com moradia"
+      ],
+      "correta": 1,
+      "porque": "Sob Meyer vieram os prédios de Dessau e a escola de Bernau. Quem construiu em escala foram May e Taut."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Prédio liso, sem enfeite, com a função à vista: esse jeito de olhar vem em parte da Bauhaus. O primeiro ano de lá, o Vorkurs, lembra o desenho básico que as faculdades de arquitetura ainda dão hoje.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "A Bauhaus, famosa pela arquitetura, só abriu curso de arquitetura em 1927, oito anos depois de fundada.",
+      "quando": "Quando alguém apontar um prédio liso e disser que é «coisa da Bauhaus».",
+      "marca": "consenso",
+      "fonte": 3
+    }
+  ],
+  "fecho": "A Bauhaus buscava harmonia entre função e forma. De onde veio a frase «forma segue função», e o que ela quer dizer de verdade?"
+}

@@ -31,6 +31,16 @@ As duas versões ensinam o mesmo núcleo estabelecido. O que muda é o caminho.
 6. **`contar`.** Uma sentença que se repete de cabeça e faz o outro perguntar «como assim?», com `marca` e `fonte`. O `quando` é uma cena reconhecível.
 7. **Fecho.** Aponta para um conceito vizinho da lista, sem resumir.
 
+## Antes de gravar, confira você mesmo
+
+No primeiro lote, todas as versões voltaram do conferente com afirmações mais fortes que o documento. Releia cada tela contra a saída de `contexto`:
+
+- Cada número, nome, data e lugar está no documento, com esse valor?
+- Onde o documento diz «pode», «cerca de» ou «em alguns casos», a lição diz o mesmo, sem arredondar para cima?
+- A `fonte` de cada tela é a que o documento liga àquela afirmação?
+- A resposta de cada pergunta aparece só como consequência do que veio antes, e não escrita com as mesmas palavras na tela anterior ou no gancho?
+- O gancho não entrega o número que uma tela `estimar` vai pedir?
+
 ## Entrega
 
 1. Grave em `pipeline/candidatas/<id>.<versao>.json` um objeto com as chaves `gancho`, `telas` e `fecho`, e nada mais.

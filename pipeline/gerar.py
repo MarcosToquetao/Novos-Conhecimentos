@@ -168,7 +168,8 @@ def avaliacoes():
 
 def pares():
     """Escolhas do editor entre duas versões: {tipo: par, id, juiz, escolha (a, b ou nenhuma), comentario}."""
-    return [a for a in avaliacoes() if a.get("tipo") == "par"]
+    ultimo = {a["id"]: a for a in avaliacoes() if a.get("tipo") == "par"}   # uma escolha por conceito: vale a mais recente
+    return list(ultimo.values())
 
 
 def destino(id_):

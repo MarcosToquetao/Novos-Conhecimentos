@@ -264,3 +264,7 @@ Regras extraídas das revisões do editor. Valem tanto quanto as de cima.
 - Linguagem de leigo, mesmo em matemática, economia e política: nada de notação, fórmula ou conta de cabeça na lição. Mostre com um caso concreto, com pessoas e números redondos que o documento traz.
 - Conceito abstrato (economia, política, estatística, filosofia) começa por uma situação prática que qualquer pessoa reconhece, com quem faz o quê e o que acontece. A definição vem depois do exemplo, nunca antes.
 - Cada lição tem pelo menos 5 telas visuais. Se o documento traz fotos ou figuras, use-as; quando não traz, prefira comparar, etapas e estimar a telas de texto.
+
+<!-- 12/11/2026, nota do editor na escolha entre as duas versões de tardígrados -->
+- Fale com a pessoa, em tom de conversa. Ao apresentar um termo, escreva «essa é a criptobiose» ou «a gente chama esse efeito de criptobiose», nunca «esse estado se chama criptobiose», que soa a livro didático. Vale para o gancho e para qualquer tela.
+- O gancho que funciona abre por um fato curioso que chama atenção, e só depois diz o nome do conceito.

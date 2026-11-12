@@ -1,0 +1,20 @@
+{
+  "vencedora": "b",
+  "motivo": "A b resolveu as notas da primeira rodada. O gancho não entrega mais a resposta, a primeira pergunta vem antes do comparar e pede para aplicar o mecanismo numa aldeia concreta, e o no_dia agora fala de uma situação que a pessoa reconhece. A a continua como estava: o gancho entrega o número do estimar, a tela 5 tem a resposta escrita na tela 4 e o no_dia não liga à vida de ninguém.",
+  "slop": {"a": 37, "b": 42},
+  "notas": {
+    "a": [
+      "Não foi reescrita, então todas as notas da rodada anterior continuam valendo. Gancho: entrega os cerca de 50 mil de Florença que a tela 2 pede para estimar, e não diz o nome Peste Negra.",
+      "Tela 5 (pergunta): a resposta está escrita na tela 4 e no gancho.",
+      "Tela 4 (texto): «relativamente abundante» e «relativamente escasso» soam a livro didático.",
+      "Tela 9 (no_dia): não liga à vida da pessoa, e o documento não diz que a Peste Negra é «o exemplo» nos livros.",
+      "Tela 10 (contar): «salários reais» é jargão sem explicação."
+    ],
+    "b": [
+      "Defeito pequeno na tela 8 (pergunta): a alternativa «para ficar bem vistos» não convence ninguém, e a certa repete o «poucos braços» da tela 3. Sobra uma escolha entre duas. Melhor uma cena concreta, como a tela 8 da versão a: o senhor tenta segurar o camponês, e outro senhor sem mão de obra aceita o camponês e paga mais.",
+      "Tela 6 (foto 2): a legenda está correta, mas só descreve o documento. Ligue a foto ao que a tela ensina, por exemplo: são registros como esses que mostram camponeses mudando de aldeia e de patrão depois da peste (o documento sustenta mudanças na migração e no emprego, fonte 4).",
+      "Tela 10 (contar): os 60% vêm das fontes 1 e 2, e a fonte 3 sustenta só os salários. Pode ficar assim, porque o centro da frase é o salário.",
+      "O arquivo peste-negra.b.fatos.json é da versão antiga: os trechos que ele lista não existem mais. Gere de novo para a versão atual. Conferi as afirmações da b atual contra o documento e todas têm respaldo."
+    ]
+  }
+}

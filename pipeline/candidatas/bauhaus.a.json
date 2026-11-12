@@ -1,0 +1,132 @@
+{
+  "gancho": "Uma escola que funcionou por 14 anos, teve menos de 1.300 alunos e quase não construiu prédios mudou a aparência de muita coisa que usamos até hoje. Essa é a Bauhaus, alemã, de 1919.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "O edifício da escola em Dessau, projetado por Walter Gropius. Linhas retas e nenhum enfeite: a cara que a Bauhaus deixou."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Quantos anos a Bauhaus funcionou, da fundação até o fechamento?",
+      "unidade": "anos",
+      "min": 1,
+      "max": 100,
+      "escala": "linear",
+      "resposta": 14,
+      "legenda": "Catorze anos, com menos de 1.300 alunos no total. Pouco tempo para marcar tanta coisa.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>Gropius queria juntar arte, artesanato e tecnologia moderna, que viviam separadas. A máquina era aliada dele: ele pedia uma arquitetura para um mundo de <strong>máquinas, rádios e carros velozes</strong>.</p>",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "linha_tempo",
+      "eventos": [
+        {
+          "ano": 1919,
+          "texto": "Gropius funda a escola em Weimar"
+        },
+        {
+          "ano": 1925,
+          "texto": "Mudança para Dessau, depois que a direita ganha força na Turíngia"
+        },
+        {
+          "ano": 1932,
+          "texto": "Mudança para Berlim, com os nazistas vitoriosos no conselho local"
+        },
+        {
+          "ano": 1933,
+          "texto": "A Gestapo fecha a escola, e os professores decidem encerrá-la de vez"
+        }
+      ],
+      "legenda": "Duas mudanças de cidade por pressão política, e um fim em 1933.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Vorkurs",
+          "texto": "Todo aluno começa pelo curso preparatório: materiais, teoria da cor e elementos do design."
+        },
+        {
+          "nome": "Oficinas",
+          "texto": "Cerâmica, tecelagem, teatro, mobiliário, tipografia e pintura."
+        },
+        {
+          "nome": "Arquitetura",
+          "texto": "Só ganha curso próprio em 1927, embora o edifício fosse o objetivo final."
+        }
+      ],
+      "legenda": "O caminho de um aluno nos primeiros anos.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>História da arte só entrava depois de três ou quatro anos. Quem conhece os padrões do passado antes de criar tende a copiar em vez de inventar. O Vorkurs lembra o desenho básico de hoje.</p>",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Por que a escola deixava a história da arte para depois de três ou quatro anos?",
+      "alts": [
+        "Para o aluno criar sem os padrões do passado na cabeça e não copiar",
+        "Porque a escola achava que o passado não tinha nada a ensinar",
+        "Porque a escola não tinha professores para essa matéria"
+      ],
+      "correta": 0,
+      "porque": "A lógica era direta: conhecendo o passado cedo demais, o aluno copiaria em vez de inventar. O primeiro ano era de experiência com material e cor."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Sob Gropius, 1919 a 1927",
+      "b": "Sob Hannes Meyer, 1928 a 1930",
+      "linhas": [
+        {
+          "aspecto": "Obras",
+          "a": "casas em Berlim e Jena",
+          "b": "cinco prédios de apartamentos em Dessau e a escola sindical de Bernau"
+        },
+        {
+          "aspecto": "Como projetava",
+          "a": "a partir do escritório pessoal do diretor",
+          "b": "pesquisando o que os usuários precisavam e usando peças de catálogo"
+        }
+      ],
+      "legenda": "Milhares de unidades sociais saíram de Ernst May, em Frankfurt, e Bruno Taut, em Berlim. Não da escola.",
+      "marca": "consenso",
+      "fonte": 3
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Alguém diz que a Bauhaus resolveu a falta de moradia operária na Alemanha de Weimar. O que você responde?",
+      "alts": [
+        "Resolveu, porque a escola construiu milhares de unidades sociais",
+        "Resolveu em Dessau, porque os cinco prédios de Meyer bastaram",
+        "Pouco: os milhares de unidades vieram de outros arquitetos, como May e Taut"
+      ],
+      "correta": 2,
+      "porque": "A Bauhaus construiu quase nada, e só dois projetos dela entram nessa categoria. As milhares de unidades vieram de contemporâneos."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Um prédio de linhas retas e sem enfeite segue a marca que a Bauhaus deixou: ausência de ornamento e busca de harmonia entre função e forma. O desenho básico dos calouros de arquitetura lembra o Vorkurs.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "A Bauhaus, escola de construção que definiu o visual moderno, quase não construiu: com Mies van der Rohe, nenhum projeto da escola saiu do papel.",
+      "quando": "Quando alguém apontar uma cadeira ou um prédio sem enfeite e chamar de «estilo Bauhaus».",
+      "marca": "consenso",
+      "fonte": 3
+    }
+  ],
+  "fecho": "A Bauhaus ficou ligada à busca de harmonia entre função e forma. Veja de onde veio a ideia em «Forma segue função: origem e mal-entendidos»."
+}

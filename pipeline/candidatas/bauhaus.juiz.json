@@ -1,0 +1,21 @@
+{
+  "vencedora": "a",
+  "motivo": "A ensina o núcleo do conceito: a ideia de juntar arte, artesanato e máquina, o Vorkurs e a história da arte deixada para depois. O gancho abre por um fato curioso e só então diz o nome. A versão B gira inteira em torno de desmentir o que o leitor supostamente pensa (\"você deve imaginar\", \"o palpite comum\", \"não nasceu do zero\", \"não resolveu a moradia\") e quase não diz o que a escola queria.",
+  "slop": {"a": 40, "b": 35},
+  "notas": {
+    "a": [
+      "Tela 2 (estimar): o gancho já diz \"funcionou por 14 anos\", então a resposta vem entregue. Tire os 14 anos do gancho (deixe \"menos de 1.300 alunos\" e \"quase não construiu\") ou troque o estimar por outro número do documento, como os 1.300 alunos.",
+      "Tela 7 (pergunta): a tela 6 diz a resposta com as mesmas palavras, então a pergunta só testa memória. A alternativa \"não tinha professores\" também é absurda. Pergunte por uma situação nova, por exemplo um aluno que estuda as catedrais góticas no primeiro mês: o que a escola temia que ele fizesse?",
+      "Tela 9 (pergunta): a alternativa \"os cinco prédios de Meyer bastaram\" não convence ninguém. Troque por um erro plausível, como \"Resolveu, porque a Constituição de Weimar prometia moradia e a escola foi criada para isso\".",
+      "Tela 5 (etapas): o curso de arquitetura de 1927 é um fato da história da escola e não uma etapa do caminho de um aluno. Diga na legenda que a terceira etapa só passou a existir em 1927, ou use só as duas primeiras etapas.",
+      "Tela 11 (contar): \"definiu o visual moderno\" vai além do documento, que fala em \"a aparência de muita coisa que usamos até hoje\". Diga algo mais perto disso, como \"que marcou o visual de muita coisa moderna\". O documento também não liga a Bauhaus a cadeiras como legado, então deixe só \"um prédio sem enfeite\" no campo quando."
+    ],
+    "b": [
+      "Gancho e tela 2: a lição se organiza em torno de corrigir o que o leitor \"deve imaginar\", que é o enquadramento de mito a desmentir. Abra por um fato curioso e diga em uma frase o que a escola queria, juntar arte, artesanato e tecnologia moderna.",
+      "A lição não mostra o programa da escola. Faltam o Vorkurs como experiência, a história da arte deixada para depois e a máquina vista como aliada. A tela de no_dia cita o Vorkurs sem que ele tenha sido apresentado.",
+      "Telas 5 e 6: a comparação Werkbund contra Bauhaus e a pergunta seguinte repetem a mesma ideia, \"não nasceu do zero\". A alternativa \"veio da escola de Moscou, que copiou a Bauhaus\" fala de algo que a lição nunca mostrou.",
+      "Tela 2 (texto): \"O palpite comum é... Mas...\" é a estrutura \"não é X, mas Y\" disfarçada. Diga direto o que era a escola.",
+      "Tela 9 (pergunta): a alternativa \"Nada: a escola nunca trabalhou com moradia\" é desmentida pela foto da tela 7, então a resposta certa se adivinha por eliminação."
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "gancho": "Em 1990, uma colunista disse que, num jogo de TV com três portas, trocar de porta dobra a chance de ganhar o carro. Quase dez mil cartas, muitas de doutores, disseram que ela errou. Ela estava certa.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "Três portas, um carro, duas cabras. Você escolhe a 1. O apresentador, que sabe onde está o carro, abre a 3 e mostra uma cabra. Quer trocar para a 2?"
+    },
+    {
+      "tipo": "texto",
+      "html": "<p>O palpite da maioria: sobraram duas portas e um carro, então cada uma tem <strong>50%</strong>. Trocar ou ficar dá no mesmo.</p>",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pontos",
+      "valor": 13,
+      "frase": "em cada 100 escolheram trocar de porta, num estudo com 228 participantes.",
+      "legenda": "A maioria, 87%, ficou com a porta inicial.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Você escolhe",
+          "texto": "A porta 1 tem 1 chance em 3 de esconder o carro."
+        },
+        {
+          "nome": "O resto",
+          "texto": "O carro está em uma das outras duas portas com 2 chances em 3."
+        },
+        {
+          "nome": "Ele abre",
+          "texto": "O apresentador sabe onde está o carro e abre uma porta com cabra, sempre entre as que você não escolheu."
+        },
+        {
+          "nome": "Sobra a 2",
+          "texto": "As 2 chances em 3 das outras portas ficam todas na porta 2. A sua continua com 1 em 3."
+        }
+      ],
+      "legenda": "Abrir a porta 3 não mexeu na chance da sua porta. Só concentrou o resto na porta 2.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Você escolheu a porta 1 e o apresentador, que sabe onde está o carro, abriu a porta 3 com uma cabra. Qual é a chance de o carro estar na sua porta?",
+      "alts": [
+        "1 em 2, porque sobraram duas portas fechadas",
+        "1 em 3, a mesma de antes de ele abrir a porta 3",
+        "Maior que 1 em 3, porque uma cabra saiu do jogo"
+      ],
+      "correta": 1,
+      "porque": "Quando você escolheu, a porta 1 tinha 1 chance em 3. O apresentador sempre revela uma cabra entre as outras duas, então a abertura não diz nada novo sobre a sua porta."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Sempre ficar",
+      "b": "Sempre trocar",
+      "linhas": [
+        {
+          "aspecto": "Ganha o carro quando",
+          "a": "você acertou de primeira",
+          "b": "você errou de primeira"
+        },
+        {
+          "aspecto": "Se você pegou uma cabra",
+          "a": "fica com a cabra",
+          "b": "ele abre a outra cabra e o carro sobra"
+        },
+        {
+          "aspecto": "Chance de ganhar",
+          "a": "1 em 3",
+          "b": "2 em 3"
+        }
+      ],
+      "legenda": "Errar de primeira acontece em 2 de cada 3 vezes. Quem troca ganha justamente nessas.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "Imagine um milhão de portas. Você escolhe uma e ele abre 999.998 com cabras. Sobram a sua e a 777.777. Parece claro que a 777.777 vale bem mais que 50%.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Por que as duas portas que sobram não têm 50% cada?",
+      "alts": [
+        "A porta aberta tira chance da porta que você escolheu",
+        "O apresentador escolhe a porta com cabra sabendo onde está o carro, e isso carrega informação",
+        "A porta com o número maior costuma esconder o carro"
+      ],
+      "correta": 1,
+      "porque": "Se ele abrisse uma porta ao acaso, a conta seria outra. Como ele evita o carro de propósito, a porta aberta depende da sua escolha, e a chance se acumula na porta que ficou fechada."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>O problema é aula de probabilidade em universidades como Harvard e Princeton. A lição vale fora da sala: quando alguém que sabe a resposta lhe mostra algo, essa pista carrega informação e não é sorteio.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Num jogo de três portas, trocar ganha o dobro de vezes que ficar, porque o apresentador sabe onde está o carro.",
+      "quando": "Quando alguém disser que, sobrando duas opções, a chance é sempre meio a meio.",
+      "marca": "consenso",
+      "fonte": 1
+    }
+  ],
+  "fecho": "Como atualizar uma chance quando chega uma pista nova, como a porta aberta? Existe uma regra para isso: o teorema de Bayes."
+}
