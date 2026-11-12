@@ -1,0 +1,120 @@
+{
+  "gancho": "Deixe um bicho de meio milímetro secar e ele vira uma bolinha parada, quase sem metabolismo. Anos depois, uma gota d'água o faz andar de novo. É o tardígrado, e esse estado se chama criptobiose.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 6,
+      "legenda": "Um tardígrado ativo, com oito pernas, andando devagar. Mede entre 0,3 e 0,5 mm e vive em musgo, solo e no fundo do mar."
+    },
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "O mesmo animal depois que o ambiente secou: pernas recolhidas, corpo encolhido em bolinha. Os pesquisadores o chamam de tonel.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "comparar",
+      "a": "Ativo",
+      "b": "Em tonel",
+      "linhas": [
+        {
+          "aspecto": "Água no corpo",
+          "a": "teor normal",
+          "b": "cerca de 1% do normal"
+        },
+        {
+          "aspecto": "Metabolismo",
+          "a": "habitual",
+          "b": "abaixo de 0,01% do habitual"
+        },
+        {
+          "aspecto": "Corpo",
+          "a": "anda e come",
+          "b": "bolinha com as pernas retraídas"
+        }
+      ],
+      "legenda": "Não é morte, é suspensão: com água, o animal volta.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "etapas",
+      "etapas": [
+        {
+          "nome": "Seca",
+          "texto": "A água do ambiente acaba e o animal murcha."
+        },
+        {
+          "nome": "Proteínas",
+          "texto": "Surgem proteínas sem forma fixa, que se ligam às membranas. O açúcar trealose existe, mas em pouca quantidade."
+        },
+        {
+          "nome": "Vidro",
+          "texto": "Elas formam uma matriz vítrea dentro das células e seguram as estruturas no lugar."
+        },
+        {
+          "nome": "Água",
+          "texto": "Uma gota basta para o animal sair do tonel e andar."
+        }
+      ],
+      "legenda": "O que protege as células na seca, segundo a pesquisa.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Muitos seres usam o açúcar trealose para proteger as membranas na seca. No tardígrado, o que segura as células?",
+      "alts": [
+        "Muita trealose, bem mais do que nos outros seres",
+        "Proteínas sem forma fixa que formam uma matriz vítrea",
+        "Uma casca impermeável que impede a água de sair"
+      ],
+      "correta": 1,
+      "porque": "Tardígrados produzem trealose, mas pouca. Quem faz o serviço são proteínas específicas do grupo, que vitrificam o interior da célula."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Quantos grays (Gy) de radiação um tardígrado aguenta? Para uma pessoa, 5 a 10 Gy já são letais.",
+      "unidade": "Gy",
+      "min": 1,
+      "max": 10000,
+      "escala": "log",
+      "resposta": 5000,
+      "legenda": "De 5.000 a 6.200 Gy. Uma proteína, a Dsup, se liga ao DNA e o protege dos radicais químicos que a radiação produz.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pontos",
+      "valor": 68,
+      "frase": "dos tardígrados protegidos do ultravioleta sobreviveram ao vácuo do espaço, em 2007.",
+      "legenda": "Missão FOTON-M3. Sob a radiação ultravioleta solar completa, só três indivíduos sobreviveram.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Em 2007, tardígrados foram ao espaço. O que aconteceu com os que ficaram sob a radiação ultravioleta solar completa?",
+      "alts": [
+        "A maioria sobreviveu, como no grupo protegido",
+        "Só três indivíduos sobreviveram",
+        "Todos morreram em poucos minutos"
+      ],
+      "correta": 1,
+      "porque": "Resistir ao vácuo não significa resistir a tudo. Sob o ultravioleta solar completo, só três indivíduos sobreviveram."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Um punhado de musgo já pode ter tardígrados. Num metro quadrado de musgo pode haver mais de 2 milhões, e basta olhar no microscópio para encontrar alguns.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Um tardígrado seco fica com 1% da água e quase sem metabolismo, e uma gota d'água o faz andar de novo.",
+      "quando": "Quando alguém disser que tardígrados são indestrutíveis, ou na hora de olhar um musgo de muro.",
+      "marca": "consenso",
+      "fonte": 1
+    }
+  ],
+  "fecho": "Se o tardígrado consegue pausar o corpo e voltar anos depois, o tempo parado em tonel conta como envelhecimento? Segundo a pesquisa, não conta, e é por aí que o tardígrado se liga à senescência negligenciável."
+}

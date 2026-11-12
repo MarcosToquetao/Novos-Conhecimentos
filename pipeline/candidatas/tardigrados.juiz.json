@@ -1,0 +1,20 @@
+{
+  "vencedora": "b",
+  "motivo": "A b faz a pessoa chutar o 1% de água antes de ver e separa os dois mecanismos (matriz vítrea na seca, Dsup na radiação) numa comparação que a segunda pergunta testa de verdade. A a gasta uma pergunta em decorar o «só três sobreviveram» da tela anterior, puxa para o mito do bicho indestrutível e usa «não é morte, é suspensão».",
+  "slop": {"a": 37, "b": 41},
+  "notas": {
+    "a": [
+      "Pontos anteriores do .fatos.json corrigidos: tela 8 não diz mais «secos» nem «quase todos morreram», tela 9 usa «pode haver», e o fecho agora se apoia na conexão do documento («o tempo em criptobiose não conta como envelhecimento»).",
+      "Tela 3 (comparar): a legenda «Não é morte, é suspensão» é a estrutura proibida «não é X, é Y». Diga direto: «Com água, o animal volta a andar.»",
+      "Tela 5 (pergunta): a tela 4 acabou de dizer que a trealose existe em pouca quantidade e que proteínas formam a matriz vítrea; a resposta sai da frase anterior. Tire a trealose da etapa ou pergunte outra coisa.",
+      "Tela 8 (pergunta): testa memória de um número dado na legenda da tela 7, não o mecanismo, e gira em torno de desmentir a fama de indestrutível. Troque por uma pergunta que contraste seca e radiação.",
+      "Tela 10 (contar): o «quando» começa por «quando alguém disser que tardígrados são indestrutíveis», que é framing de mito. Use só a cena do musgo."
+    ],
+    "b": [
+      "Ponto anterior do .fatos.json corrigido: o fecho não nomeia mais senescência negligenciável e só faz a pergunta, sem afirmar nada que o documento não traga.",
+      "Tela 5 (comparar): «radicais hidroxila» aparece sem explicação. Troque por «fragmentos químicos que a radiação produz e que quebram o DNA».",
+      "Tela 4 (pergunta): o «porque» termina em «Isso é suspensão, não morte nem sono comum», perto do contraste proibido. Reescreva: «O metabolismo fica abaixo de 0,01% do normal e, com água, o animal volta a andar.»",
+      "Tela 7 (pontos): a frase não diz o ano; acrescente «em 2007» na legenda, junto de FOTON-M3."
+    ]
+  }
+}

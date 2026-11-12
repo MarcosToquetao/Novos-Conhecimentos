@@ -18,11 +18,11 @@ const PADRAO = { tema: null, licoes: [], sessoes: [], provas: [], revisao: {}, p
 function carregar() {
   try {
     const v3 = localStorage.getItem(CHAVE);
-    if (v3) return Object.assign({}, PADRAO, JSON.parse(v3));
+    if (v3) return Object.assign(structuredClone(PADRAO), JSON.parse(v3));
     const v2 = JSON.parse(localStorage.getItem("nc_estado_v2") || "null");   /* migração da versão com cronômetro */
-    if (v2) return Object.assign({}, PADRAO, { tema: v2.tema || null, sessoes: v2.sessoes || [], provas: v2.provas || [], revisao: v2.revisao || {} });
+    if (v2) return Object.assign(structuredClone(PADRAO), { tema: v2.tema || null, sessoes: v2.sessoes || [], provas: v2.provas || [], revisao: v2.revisao || {} });
   } catch (e) { /* modo privado ou dado corrompido: começa do zero */ }
-  return Object.assign({}, PADRAO);
+  return structuredClone(PADRAO);
 }
 function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(E)); } catch (e) {} }
 let E = carregar();
@@ -49,8 +49,10 @@ const comLicao = () => CATALOGO.filter(c => c.licao);
 function lidos() {
   return new Set([...E.licoes, ...E.sessoes, ...E.provas].map(x => x.conceito));
 }
-function evento(nome) {
-  try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: nome, title: nome, event: true }); } catch (e) {}
+/* com id, o evento sai como nome/id: é assim que o painel mostra quais conceitos foram lidos, terminados e enviados */
+function evento(nome, id) {
+  const caminho = id ? `${nome}/${id}` : nome;
+  try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: caminho, title: caminho, event: true }); } catch (e) {}
 }
 
 /* ── Datas e ficha do dia ──────────────────────────────────────────── */
@@ -60,8 +62,11 @@ function hojeStr(d = new Date()) {
 const numeroFicha = () => Math.floor((Date.parse(hojeStr() + "T00:00:00Z") - INICIO) / DIA) + 1;
 function hash(s) { let h = 2166136261; for (const ch of s) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
 
-/* Mesma data, mesma ficha, em qualquer aparelho com a mesma versão do app. */
+/* Mesma data, mesma ficha, em qualquer aparelho. O calendário (js/calendario.json, gravado pelo build) fixa
+   o conceito de cada dia; dia sem entrada cai no sorteio fixo pela data. */
 function fichaDoDia() {
+  const marcada = doCatalogo((IDX.calendario || {})[hojeStr()]);
+  if (marcada && marcada.licao) return marcada;
   const lista = (comLicao().length ? comLicao() : prontos()).slice().sort((a, b) => a.id.localeCompare(b.id));
   return lista.length ? lista[hash(hojeStr()) % lista.length] : null;
 }
@@ -133,15 +138,15 @@ function agendarRevisao(id, pct, jaHoje) {
 }
 
 /* ── Hoje ──────────────────────────────────────────────────────────── */
-let fichaAtual = null, extra = false;
+let fichaAtual = null, extra = false, porLink = false;
 
 async function pintarHoje() {
   if (!CATALOGO.length) return;
-  if (!fichaAtual) { fichaAtual = fichaDoDia(); extra = false; }
+  if (!fichaAtual) { fichaAtual = fichaDoDia(); extra = false; porLink = false; }
   const c = fichaAtual; if (!c) return;
   const d = new Date();
   $("#h-data").textContent = d.toLocaleDateString("pt-BR", { weekday: "short", day: "numeric", month: "short" }).replace(/\./g, "").toUpperCase();
-  $("#h-rotulo").textContent = extra ? "Ficha extra" : `Ficha do dia · nº ${String(numeroFicha()).padStart(3, "0")}`;
+  $("#h-rotulo").textContent = porLink ? "Ficha que te mandaram" : extra ? "Ficha extra" : `Ficha do dia · nº ${String(numeroFicha()).padStart(3, "0")}`;
   $("#h-codigo").textContent = codigo(c);
   $("#h-dif").textContent = "DIFIC. " + pontos(c.dificuldade);
   $("#h-termo").textContent = c.termo;
@@ -164,7 +169,7 @@ async function pintarHoje() {
 $("#btn-abrir").addEventListener("click", () => fichaAtual && abrirFicha(fichaAtual));
 $("#btn-outra").addEventListener("click", () => {
   const c = sortear(fichaAtual && fichaAtual.id); if (!c) return;
-  fichaAtual = c; extra = true; pintarHoje(); evento("mais-uma-ficha");
+  fichaAtual = c; extra = true; porLink = false; pintarHoje(); evento("mais-uma-ficha", c.id);
 });
 
 /* ── Lição ─────────────────────────────────────────────────────────── */
@@ -176,7 +181,7 @@ async function abrirFicha(c) {
   conceitoAtual = c;
   if (!d.licao) { abrirDoc(c); return; }
   ir("tela-licao");
-  evento("licao-iniciada");
+  evento("licao-iniciada", c.id);
   Licao($("#tela-licao"), d, {
     cor: `var(--m-${IDX.areas[c.area]})`,
     aoFechar: () => history.back(),
@@ -190,7 +195,7 @@ function concluirLicao(c, d, r) {
   E.licoes.push({ conceito: c.id, termo: c.termo, quando: new Date().toISOString(), acertos: r.acertos, total: r.total });
   agendarRevisao(c.id, r.total ? 100 * r.acertos / r.total : 100, jaHoje);
   salvar();
-  evento("licao-concluida");
+  evento("licao-concluida", c.id);
 
   const ls = lidos();
   $("#r-termo").textContent = c.termo;
@@ -223,7 +228,7 @@ function proxima(c, d, ls) {
   const area = CATALOGO.filter(v => v.area === c.area && v.doc && v.id !== c.id && !ls.has(v.id));
   return dois[0] || area[0] || sortear(c.id) || prontos().find(v => v.id !== c.id) || null;
 }
-$("#btn-proxima").addEventListener("click", () => { if (proximaFicha) { evento("proxima-pelo-mapa"); abrirFicha(proximaFicha); } });
+$("#btn-proxima").addEventListener("click", () => { if (proximaFicha) { evento("proxima-pelo-mapa", proximaFicha.id); abrirFicha(proximaFicha); } });
 
 function textoCompartilhar(c, r, n) {
   const barras = "▮".repeat(r.acertos) + "▯".repeat(r.total - r.acertos);
@@ -234,7 +239,7 @@ async function compartilhar(texto, b) {
   try {
     if (navigator.share) await navigator.share({ text: texto });
     else { await navigator.clipboard.writeText(texto); b.textContent = "Copiado"; }
-    evento("compartilhou");
+    evento("compartilhou", conceitoAtual && conceitoAtual.id);
   } catch (e) { /* a pessoa cancelou o compartilhamento */ }
 }
 $("#btn-compartilhar").addEventListener("click", () => compartilhar($("#r-compart").textContent, $("#btn-compartilhar")));
@@ -288,7 +293,7 @@ async function abrirDoc(c) {
   conceitoAtual = c;
   E.sessoes.push({ conceito: c.id, termo: c.termo, quando: new Date().toISOString() });
   salvar();
-  evento("aprofundou");
+  evento("aprofundou", c.id);
   $("#doc-envelope").innerHTML = htmlDocumento(c);
   ir("tela-leitura");
 }
@@ -406,7 +411,7 @@ $("#arquivo-import").addEventListener("change", (ev) => {
     try {
       const x = JSON.parse(fr.result);
       if (!x || !Array.isArray(x.sessoes) || !Array.isArray(x.provas) || typeof x.revisao !== "object") throw new Error("formato");
-      E = Object.assign({}, PADRAO, { tema: ["claro", "escuro"].includes(x.tema) ? x.tema : null, licoes: Array.isArray(x.licoes) ? x.licoes : [],
+      E = Object.assign(structuredClone(PADRAO), { tema: ["claro", "escuro"].includes(x.tema) ? x.tema : null, licoes: Array.isArray(x.licoes) ? x.licoes : [],
         sessoes: x.sessoes, provas: x.provas, revisao: x.revisao, primeiraVisita: x.primeiraVisita || null });
       salvar(); aplicarTema(); pintarHistorico();
       alert("Progresso importado.");
@@ -416,7 +421,7 @@ $("#arquivo-import").addEventListener("change", (ev) => {
 });
 $("#btn-limpar").addEventListener("click", () => {
   if (!confirm("Apagar todo o histórico deste aparelho? Não há como desfazer.")) return;
-  E = Object.assign({}, PADRAO, { tema: E.tema }); salvar(); pintarHistorico();
+  E = Object.assign(structuredClone(PADRAO), { tema: E.tema }); salvar(); pintarHistorico();
 });
 
 /* ── Início ────────────────────────────────────────────────────────── */
@@ -439,6 +444,10 @@ if (GOATCOUNTER) {
 
 fetch("dados/indice.json").then(r => r.json()).then(idx => {
   IDX = idx; CATALOGO = idx.conceitos;
+  /* link direto de um conceito (?c=id), que é o que o botão de «Para contar» envia */
+  const alvo = doCatalogo(new URLSearchParams(location.search).get("c"));
+  if (alvo && alvo.doc) { fichaAtual = alvo; extra = true; porLink = true; evento("chegou-por-link", alvo.id); }
+  history.replaceState({ tela: "tela-hoje" }, "", location.pathname);
   $("#barra-acervo").textContent = `acervo ${lidos().size}/${CATALOGO.length}`;
   pintarHoje();
 });

@@ -213,7 +213,27 @@ for (const [id, d] of Object.entries(CONTEUDOS)) {
   fs.writeFileSync(p("dados", "c", id + ".json"), JSON.stringify(doc));
 }
 
+/* Calendário da ficha do dia: data → conceito, igual para todo mundo (js/calendario.json, versionado).
+   Só cresce: o passado e o que já está marcado não mudam, e lição nova ocupa o primeiro dia livre a partir de
+   hoje, na ordem da fila de curiosidade (pipeline/fila.json). Só entram lições no formato novo, que terminam
+   em «contar». Dia sem entrada cai na regra antiga do app (sorteio fixo pela data): mantenha dias à frente. */
+const arqCal = p("js", "calendario.json");
+const calendario = fs.existsSync(arqCal) ? JSON.parse(fs.readFileSync(arqCal, "utf8")) : {};
+const noFormatoNovo = Object.keys(CONTEUDOS).filter(id => { const t = (CONTEUDOS[id].licao || {}).telas || []; return t.length && t[t.length - 1].tipo === "contar"; });
+const ordemFila = fs.existsSync(p("pipeline", "fila.json")) ? JSON.parse(fs.readFileSync(p("pipeline", "fila.json"), "utf8")).map(x => x.id) : [];
+const naFila = (id) => { const i = ordemFila.indexOf(id); return i < 0 ? 1e9 : i; };
+const diaStr = (d) => d.toISOString().slice(0, 10);
+const hojeCal = diaStr(new Date());
+/* lição vetada depois de marcada sai dos dias que ainda não chegaram; o passado fica como registro */
+for (const [dia, id] of Object.entries(calendario)) if (dia > hojeCal && !noFormatoNovo.includes(id)) delete calendario[dia];
+const marcadas = new Set(Object.values(calendario));
+const aMarcar = noFormatoNovo.filter(id => !marcadas.has(id)).sort((a, b) => naFila(a) - naFila(b) || a.localeCompare(b));
+for (let d = new Date(hojeCal + "T00:00:00Z"); aMarcar.length; d = new Date(+d + 864e5)) if (!calendario[diaStr(d)]) calendario[diaStr(d)] = aMarcar.shift();
+const calOrdenado = Object.fromEntries(Object.entries(calendario).sort());
+fs.writeFileSync(arqCal, JSON.stringify(calOrdenado, null, 1) + "\n");
+
 const indice = {
+  calendario: calOrdenado,
   macros: Object.fromEntries(Object.entries(MACROS).map(([k, m]) => [k, { nome: m.nome, cor: m.cor }])),
   areas: MACRO_DE,
   conceitos: CATALOGO.map(c => ({

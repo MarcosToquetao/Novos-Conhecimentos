@@ -1,7 +1,7 @@
 /* sw.js: cache offline do Novos Conhecimentos.
    Estratégia: cache-first para os arquivos do app (são estáticos e versionados),
    com atualização em segundo plano. VERSAO é atualizada sozinha pelo build.js. */
-const VERSAO = "nc-9e63ccf3";
+const VERSAO = "nc-a27a5c94";
 const ARQUIVOS = [
   "./", "./index.html", "./manifest.json",
   "./css/estilo.css",
@@ -27,7 +27,7 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET" || new URL(e.request.url).origin !== location.origin) return;  /* métricas e links externos passam direto */
   e.respondWith(
-    caches.match(e.request).then(hit => {
+    caches.match(e.request, { ignoreSearch: true }).then(hit => {   /* o link de um conceito (?c=id) abre o mesmo app */
       const rede = fetch(e.request).then(res => {
         if (res && res.status === 200 && res.type === "basic") {
           const copia = res.clone();

@@ -1,0 +1,94 @@
+{
+  "gancho": "Um bicho que seca até virar uma bolinha imóvel parece morto. O tardígrado fica assim por anos e volta a andar com uma gota d'água. Esse estado se chama criptobiose.",
+  "telas": [
+    {
+      "tipo": "foto",
+      "foto": 1,
+      "legenda": "Um tardígrado ativo no microscópio eletrônico. Tem oito pernas, mede entre 0,3 e 0,5 mm e vive em musgo, solo e no fundo do mar."
+    },
+    {
+      "tipo": "estimar",
+      "q": "Quando o ambiente seca, quanto da água normal do corpo ainda sobra no tardígrado?",
+      "unidade": "% da água normal",
+      "min": 0.1,
+      "max": 100,
+      "escala": "log",
+      "resposta": 1,
+      "legenda": "Cerca de 1%. O metabolismo cai abaixo de 0,01% do habitual.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "foto",
+      "foto": 2,
+      "legenda": "O mesmo animal depois de secar: pernas recolhidas, corpo em bola. Os pesquisadores chamam esse estado de tonel."
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Um tardígrado em tonel, seco e sem se mexer, está em que estado?",
+      "alts": [
+        "Morto, e a água só o amolece de novo",
+        "Em suspensão, com tudo desligado e pronto para religar",
+        "Dormindo, gastando energia mais devagar"
+      ],
+      "correta": 1,
+      "porque": "O metabolismo fica abaixo de 0,01% do normal, quase parado. Com água, o animal volta a andar. Isso é suspensão, não morte nem sono comum."
+    },
+    {
+      "tipo": "comparar",
+      "a": "Seca",
+      "b": "Radiação",
+      "linhas": [
+        {
+          "aspecto": "O perigo",
+          "a": "as estruturas da célula se despedaçam sem água",
+          "b": "radicais hidroxila quebram o DNA"
+        },
+        {
+          "aspecto": "A proteção",
+          "a": "proteínas desordenadas formam uma matriz vítrea",
+          "b": "a proteína Dsup se gruda ao DNA"
+        },
+        {
+          "aspecto": "Onde age",
+          "a": "no citoplasma e nas membranas",
+          "b": "nos nucleossomos, os carretéis do DNA"
+        }
+      ],
+      "legenda": "A trealose, o açúcar que protege outros organismos, existe no tardígrado, mas em quantidade pequena demais.",
+      "marca": "consenso",
+      "fonte": 2
+    },
+    {
+      "tipo": "pergunta",
+      "q": "Um tardígrado leva uma dose de radiação que mataria uma pessoa. Quem protege o DNA dele?",
+      "alts": [
+        "A trealose, que forra as membranas",
+        "A proteína Dsup, grudada nos nucleossomos",
+        "A matriz vítrea de proteínas desordenadas"
+      ],
+      "correta": 1,
+      "porque": "A matriz vítrea cuida da seca, no citoplasma. Contra os radicais que quebram o DNA, quem age é a Dsup, dentro do núcleo."
+    },
+    {
+      "tipo": "pontos",
+      "valor": 68,
+      "frase": "tardígrados sobreviveram ao vácuo do espaço, protegidos da radiação ultravioleta.",
+      "legenda": "Missão FOTON-M3. Com a luz ultravioleta solar completa, só três sobreviveram.",
+      "marca": "consenso",
+      "fonte": 1
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>Num metro quadrado de musgo pode haver mais de 2 milhões de tardígrados. Qualquer pessoa pode coletar um punhado de musgo, olhar no microscópio e encontrar alguns.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Seco, o tardígrado vira uma bolinha com o metabolismo abaixo de 0,01% do normal e volta a andar com uma gota d'água.",
+      "quando": "Quando alguém vir musgo seco no muro e disser que ali não pode haver vida.",
+      "marca": "consenso",
+      "fonte": 1
+    }
+  ],
+  "fecho": "Um animal que para o relógio por anos levanta outra pergunta: existe bicho que quase não envelhece?"
+}

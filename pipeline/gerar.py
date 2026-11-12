@@ -14,21 +14,27 @@ Uso
   python pipeline/gerar.py contexto <id>          imprime o material de uma lição (documento, fotos, figuras, fontes) para um agente escrever
   python pipeline/gerar.py validar <arquivo>      checa uma lição escrita por agente (pipeline/candidatas/<id>.a.json); sai com 1 se houver erro
   python pipeline/gerar.py publicar <id> <arquivo>   valida, grava em js/docs/<id>.js e roda o build
+  python pipeline/gerar.py fila                   ordena o catálogo por sinais de curiosidade (Wikipédia, Hacker News), sem LLM
+  python pipeline/gerar.py proximos <n>         os próximos n conceitos com documento e sem lição no formato novo
+  python pipeline/gerar.py destino <id>           humano (o editor escolhe entre as versões) ou publicar (vale o juiz)
+  python pipeline/gerar.py escolhas               últimas escolhas do editor entre duas versões, para calibrar o juiz
   (qualquer comando aceita --openrouter: DeepSeek pelo OpenRouter em vez da API direta)
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
   python pipeline/gerar.py fronteira <id>... | --todas [--seco]   caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
   python pipeline/gerar.py triagem                JEV marca termos do catálogo sem respaldo suficiente (não apaga)
   python pipeline/gerar.py aprender               resume suas notas em regras novas no estilo.md
-  python pipeline/gerar.py status                 fila, sequência de aprovações e custo gasto
+  python pipeline/gerar.py status                 candidatas julgadas, escolhas do editor e custo gasto
   python pipeline/gerar.py teste                  autoteste das checagens, sem chamar API
 
 Chaves em .env na raiz: DEEPSEEK_API_KEY=...  OPENROUTER_API_KEY=...
 """
-import concurrent.futures, datetime, io, json, pathlib, re, subprocess, sys, threading, time, urllib.error, urllib.parse, urllib.request
+import concurrent.futures, datetime, io, json, pathlib, re, subprocess, sys, threading, time, urllib.error, urllib.parse, urllib.request, zlib
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 PIPE = RAIZ / "pipeline"
 RASC = PIPE / "rascunhos"
+CAND = PIPE / "candidatas"   # lições escritas por agentes: <id>.a.json, <id>.b.json, <id>.juiz.json
+CALIBRACAO, AMOSTRA = 10, 5  # o editor escolhe os 10 primeiros pares; depois, 1 conceito em cada 5
 AVAL = PIPE / "avaliacoes.jsonl"
 CUSTOS = PIPE / "custos.jsonl"
 ESTILO = PIPE / "estilo.md"
@@ -36,7 +42,6 @@ ESTILO = PIPE / "estilo.md"
 FLASH, PRO, JEV = "deepseek-flash", "deepseek-v4-pro", "typesafe/jev-1.13"
 # US$ por milhão de tokens (cache hit, cache miss, saída), preços de pico; fora do pico é metade.
 PRECOS = {FLASH: (0.006, 0.30, 1.20), PRO: (0.044, 1.32, 3.96)}
-GRADUACAO = 9          # aprovações seguidas de primeira para liberar publicação automática
 MARCAS = ["consenso", "emergente"]  # lições só afirmam o que tem respaldo; controverso e especulação ficam de fora
 # Limiares do portão JEV. Ajuste com o que `aprender` mostrar sobre os seus veredictos.
 LIMIAR = {"ia": 0.5, "marca": 0.6, "ambigua": 0.5, "interesse": 1.5}
@@ -159,13 +164,35 @@ def avaliacoes():
     return [json.loads(l) for l in AVAL.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 
-def sequencia_aprovadas():
-    n = 0
-    for a in reversed(avaliacoes()):
-        if a.get("veredicto") != "aprovado":
+def pares():
+    """Escolhas do editor entre duas versões: {tipo: par, id, juiz, escolha (a, b ou nenhuma), comentario}."""
+    return [a for a in avaliacoes() if a.get("tipo") == "par"]
+
+
+def destino(id_):
+    """humano: o editor escolhe entre as versões. publicar: vale a escolha do juiz.
+    ponytail: amostra fixa por crc32 do id; trocar por sorteio estratificado se a concordância cair."""
+    return "humano" if len(pares()) < CALIBRACAO or zlib.crc32(id_.encode()) % AMOSTRA == 0 else "publicar"
+
+
+def proximos(n):
+    """Conceitos com documento cuja lição ainda não está no formato novo, na ordem da fila (ou do catálogo)."""
+    idx = indice()
+    ordem = [c["id"] for c in idx["conceitos"]]
+    fila = PIPE / "fila.json"
+    if fila.exists():
+        ordem = [x["id"] for x in json.loads(fila.read_text(encoding="utf-8")) if not x.get("fora")]
+    com_doc = {c["id"] for c in idx["conceitos"] if c["doc"]}
+    saida = []
+    for i in ordem:
+        if len(saida) == n:
             break
-        n += 1
-    return n
+        if i not in com_doc or (CAND / f"{i}.juiz.json").exists():
+            continue
+        telas = (documento(i).get("licao") or {}).get("telas") or []
+        if not (telas and telas[-1].get("tipo") == "contar"):
+            saida.append(i)
+    return saida
 
 
 def estilo():
@@ -615,6 +642,15 @@ def publicar_licao(id_, L):
     return r.stdout.strip().splitlines()[-2:]
 
 
+def despublicar_licao(id_):
+    """Veto do editor: tira a lição do js/docs/<id>.js e roda o build. O conceito volta para a produção."""
+    arq = RAIZ / "js" / "docs" / f"{id_}.js"
+    arq.write_text(re.sub(r"^licao: .*\n", "", arq.read_text(encoding="utf-8"), count=1, flags=re.M), encoding="utf-8")
+    r = subprocess.run(["node", "build.js"], cwd=RAIZ, capture_output=True, text=True)
+    if r.returncode:
+        raise RuntimeError("build.js falhou:\n" + r.stdout[-2000:])
+
+
 def refazer_licao(id_, idx):
     """Parte do rascunho (ou da lição publicada) e só corrige o que as checagens atuais, as fotos novas
     e a nota do editor apontam. Lição limpa não gasta nada além do JEV."""
@@ -881,6 +917,85 @@ def filtrar_dossie(d):
             it["n"] = n
     d["filtrado"] = True
     return d
+
+
+def gerar_fila():
+    """Ordena o catálogo por sinais de curiosidade medidos, sem LLM, e grava pipeline/fila.json.
+    Sinais: visitas aos verbetes da Wikipédia (pt e en) nos últimos 12 meses, presença na lista «Unusual articles»
+    e histórias do Hacker News com mais de 100 pontos. Termo que a triagem marcou como controverso ou especulativo,
+    ou que o editor cortou, continua no arquivo com o campo `fora` e não entra na produção.
+    ponytail: popularidade aproxima curiosidade, não a mede; o veto do editor sobre o topo da lista corrige o resto.
+    O título do verbete vem do dossiê ou da primeira busca, que erra em termo ambíguo: confira pt e en no arquivo."""
+    idx = indice()
+    arq = PIPE / "fila.json"
+    antes = {x["id"]: x for x in json.loads(arq.read_text(encoding="utf-8"))} if arq.exists() else {}
+    hoje = datetime.date.today().replace(day=1)
+    ini, fim = hoje.replace(year=hoje.year - 1).strftime("%Y%m%d00"), hoje.strftime("%Y%m%d00")
+
+    def visitas(lang, titulo):
+        if not titulo:
+            return 0
+        url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{lang}.wikipedia/all-access/user/"
+               f"{urllib.parse.quote(titulo.replace(' ', '_'), safe='')}/monthly/{ini}/{fim}")
+        try:
+            return sum(m["views"] for m in get(url, {}).get("items", []))
+        except RuntimeError:
+            return 0
+
+    incomuns, cont = set(), {}
+    while cont is not None:   # a lista mantida à mão pelos editores da Wikipédia em inglês
+        r = get("https://en.wikipedia.org/w/api.php", {"action": "query", "prop": "links", "titles": "Wikipedia:Unusual articles",
+                                                       "plnamespace": 0, "pllimit": "max", "format": "json", **cont})
+        for pg in r["query"]["pages"].values():
+            incomuns |= {l["title"] for l in pg.get("links", [])}
+        cont = r.get("continue")
+
+    def um(c):
+        x = antes.get(c["id"], {})
+        pt, en = x.get("pt"), x.get("en")
+        dos = DOSSIES / f"{c['id']}.json"
+        if not pt and dos.exists():
+            d = json.loads(dos.read_text(encoding="utf-8"))
+            pt, en = d.get("wiki_pt"), d.get("wiki_en")
+        if not pt:
+            try:
+                w = wiki("pt", busca=re.split(r"[:(]", c["termo"])[0].strip())
+                pt, en = (w["titulo"], w["en"]) if w else (None, None)
+            except RuntimeError:
+                pass
+        try:
+            hn = get("https://hn.algolia.com/api/v1/search", {"query": f'"{en}"', "tags": "story", "numericFilters": "points>100",
+                                                              "hitsPerPage": 0})["nbHits"] if en else 0
+        except RuntimeError:
+            hn = 0
+        return {"id": c["id"], "pt": pt, "en": en, "vis_pt": visitas("pt", pt), "vis_en": visitas("en", en),
+                "hn": hn, "listas": ["unusual"] if en in incomuns else []}
+
+    with concurrent.futures.ThreadPoolExecutor(8) as ex:
+        itens = list(ex.map(um, idx["conceitos"]))
+
+    def posto(chave):   # posição relativa de 0 a 1: junta sinais de escalas muito diferentes
+        ordem = sorted(x[chave] for x in itens)
+        return lambda x: ordem.index(x[chave]) / max(1, len(ordem) - 1)
+    p_pt, p_en, p_hn = posto("vis_pt"), posto("vis_en"), posto("hn")
+    tri = json.loads((PIPE / "triagem.json").read_text(encoding="utf-8")) if (PIPE / "triagem.json").exists() else {}
+    cur = {}
+    if (PIPE / "curadoria.jsonl").exists():
+        for l in (PIPE / "curadoria.jsonl").read_text(encoding="utf-8").splitlines():
+            if l.strip():
+                cur[json.loads(l)["id"]] = json.loads(l)["decisao"]
+    for x in itens:
+        x["nota"] = round(.45 * p_pt(x) + .3 * p_en(x) + .15 * p_hn(x) + .1 * bool(x["listas"]), 3)
+        suspeito = tri.get(x["id"], {}).get("status") in ("controverso", "especulativo")
+        x["fora"] = "curadoria" if cur.get(x["id"]) == "remover" else "triagem" if suspeito and cur.get(x["id"]) != "manter" else None
+    itens.sort(key=lambda x: -x["nota"])
+    arq.write_text(json.dumps(itens, ensure_ascii=False, indent=1), encoding="utf-8")
+    termo = {c["id"]: c for c in idx["conceitos"]}
+    dentro = [x for x in itens if not x["fora"]]
+    print(f"{len(itens)} termos em pipeline/fila.json · {len(itens) - len(dentro)} fora da produção · {sum(not x['pt'] for x in itens)} sem verbete em português")
+    for n, x in enumerate(dentro[:40], 1):
+        c = termo[x["id"]]
+        print(f"{n:>2}. {x['nota']:.2f} {'doc' if c['doc'] else '   '} {c['termo']} ({c['area']}) · {x['pt']} {x['vis_pt']:,} · {x['en']} {x['vis_en']:,} · HN {x['hn']}")
 
 
 def nums_pt(txt):
@@ -1358,9 +1473,11 @@ def aprender():
 def status():
     rasc = sorted(p.stem for p in RASC.glob("*.json")) if RASC.exists() else []
     gasto = sum(json.loads(l)["usd"] for l in CUSTOS.read_text(encoding="utf-8").splitlines()) if CUSTOS.exists() else 0
-    seq = sequencia_aprovadas()
-    print(f"fila de revisão: {len(rasc)} {rasc[:12]}")
-    print(f"aprovadas de primeira em sequência: {seq}/{GRADUACAO}" + ("  → publicação automática liberada" if seq >= GRADUACAO else ""))
+    ps = pares()
+    julgados = sorted(p.name.split(".")[0] for p in CAND.glob("*.juiz.json")) if CAND.exists() else []
+    print(f"rascunhos antigos (material para reescrita): {len(rasc)}")
+    print(f"conceitos julgados em pipeline/candidatas: {len(julgados)} {julgados[:12]}")
+    print(f"escolhas do editor: {len(ps)} (calibração até {CALIBRACAO}; depois, 1 em cada {AMOSTRA}) · o juiz acertou {sum(p.get('juiz') == p['escolha'] for p in ps)}")
     print(f"custo acumulado: US$ {gasto:.4f} · agora é {'pico' if pico() else 'fora do pico'} na DeepSeek")
 
 
@@ -1447,6 +1564,19 @@ def main():
                 print(f"  {i}: falhou ({e}); rode de novo depois")
         with concurrent.futures.ThreadPoolExecutor(4) as ex:
             list(ex.map(um, alvos))
+    elif cmd == "fila":
+        gerar_fila()
+    elif cmd == "proximos":
+        print(" ".join(proximos(int(ids[0]) if ids else 3)))
+    elif cmd == "destino":
+        for i in ids:
+            print(destino(i))
+    elif cmd == "escolhas":
+        ps = pares()
+        for p in ps[-10:]:
+            nota = " ".join((p.get("comentario") or "").split())
+            print(f"{p['id']}: juiz {p.get('juiz') or 'nenhuma'}, editor {p['escolha']}" + (f" · {nota}" if nota else ""))
+        print(f"concordância: {sum(p.get('juiz') == p['escolha'] for p in ps)} de {len(ps)}" if ps else "nenhuma escolha do editor ainda")
     elif cmd == "contexto":
         idx = indice()
         for i in ids:
