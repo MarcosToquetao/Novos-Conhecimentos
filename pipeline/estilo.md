@@ -268,3 +268,8 @@ Regras extraídas das revisões do editor. Valem tanto quanto as de cima.
 <!-- 12/11/2026, nota do editor na escolha entre as duas versões de tardígrados -->
 - Fale com a pessoa, em tom de conversa. Ao apresentar um termo, escreva «essa é a criptobiose» ou «a gente chama esse efeito de criptobiose», nunca «esse estado se chama criptobiose», que soa a livro didático. Vale para o gancho e para qualquer tela.
 - O gancho que funciona abre por um fato curioso que chama atenção, e só depois diz o nome do conceito.
+
+<!-- 12/11/2026, notas do editor nas 10 escolhas de calibração (ficou 6 vezes com a versão «caso concreto» e reprovou as duas versões de Fourier e de Monty Hall) -->
+- O gancho tem de ser entendido na primeira lida por quem nunca ouviu falar do assunto. Sem termo técnico, sem nome próprio que o leitor não conhece, sem montar um quebra-cabeça. Se a pessoa termina o gancho sem saber do que se trata, ele não serve.
+- Ponha a pessoa dentro da cena, no presente e com palavras de conversa. O modelo do editor para tectônica de placas: «Agora mesmo você está pisando em cima de pedras gigantes que se movem. E é um baita problema quando elas resolvem se bater.»
+- Em tema abstrato ou matemático (Fourier, Monty Hall, Bayes), o gancho parte de algo que a pessoa usa ou vive (a música no fone, um exame de sangue, um jogo de TV contado em duas frases simples), nunca do enunciado do problema nem da história de quem o resolveu.

@@ -17,7 +17,13 @@ Você é o editor que decide o que vai ao ar. O leitor é uma pessoa curiosa, no
 
 Se só uma versão existe, julgue-a sozinha pelos mesmos critérios.
 
+## O que a calibração mostrou
+
+Nas 10 primeiras escolhas (12/11/2026) o juiz acertou só 5. O editor ficou 6 vezes com a versão do caso concreto, em três delas contra o juiz, e reprovou as duas versões de Fourier e de Monty Hall porque o gancho era técnico e não dava para saber do que se tratava. Corrija o seu peso: um gancho que qualquer pessoa entende na primeira lida e uma lição que entra por uma cena valem mais que perguntas bem construídas. Na dúvida entre a versão mais engenhosa e a mais fácil de acompanhar, fique com a mais fácil.
+
 ## Critérios que reprovam uma versão
+
+- O gancho não é entendido na primeira lida por quem nunca ouviu falar do assunto.
 
 Qualquer um basta.
 
