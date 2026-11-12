@@ -10,10 +10,19 @@ O objetivo de uma lição não é resumir o conceito. É deixar a pessoa com uma
 
 ## Formato da lição
 
-A lição é vista no celular, uma tela por vez, como stories. **Texto corrido desmotiva: a lição mostra antes de explicar.** São de 6 a 9 telas no total (perguntas incluídas), lidas em 3 a 5 minutos. Conte antes de responder: o array `telas` tem **no máximo 9 itens**. Se o assunto pede mais, corte o secundário; a lição não precisa cobrir o documento inteiro.
+A lição é vista no celular, uma tela por vez, como stories. **Texto corrido desmotiva: a lição mostra antes de explicar.** Ela tem três partes, nesta ordem:
+
+1. **Abertura:** a primeira tela é uma `foto` real do documento, para a pessoa ver do que se está falando.
+2. **Miolo:** de 6 a 9 telas contando a foto de abertura e as perguntas, lidas em 3 a 5 minutos. Se o assunto pede mais, corte o secundário; a lição não precisa cobrir o documento inteiro.
+3. **Fim, sempre igual:** a penúltima tela é `no_dia` e a última é `contar`. Uma de cada, só ali.
+
+Conte antes de responder: o array `telas` tem **de 8 a 11 itens**.
 
 - O `gancho` é um fato concreto, uma situação cotidiana ou uma pergunta que a intuição responde errado. Nada de definição.
-- **Pelo menos metade das telas é visual** (tipos abaixo, exceto texto e pergunta). Escolha o tipo que mostra o mecanismo do conceito; texto só quando nenhum visual serve.
+- A lição traz pelo menos um número ou nome concreto que surpreende, tirado do documento.
+- **Pelo menos metade das telas do miolo é visual** (tipos abaixo, exceto texto e pergunta). Escolha o tipo que mostra o mecanismo do conceito; texto só quando nenhum visual serve.
+- `no_dia` mostra onde a pessoa já viu ou vai ver isso na vida dela: um objeto da casa, uma cena da rua, uma decisão comum. Só vale o que o documento sustenta. Se o conceito não tem uso cotidiano honesto, diga onde ele aparece no mundo que a pessoa conhece. Aplicação forçada é pior que nenhuma.
+- `contar` é o que a pessoa leva para a conversa. A `frase` é uma sentença só, de até 25 palavras, que alguém repete de cabeça e que faz o outro perguntar «como assim?». Ela leva `marca` e `fonte`. O `quando` diz em que situação a frase cabe, com até 20 palavras e uma cena reconhecível.
 - Tela de `texto`: uma ideia, no máximo 40 palavras.
 - `legenda` de tela visual: no máximo 25 palavras, dizendo o que o desenho mostra.
 - De 2 a 3 telas que valem ponto (`pergunta` ou `ordenar`). A pergunta testa entendimento do mecanismo, não memória de nome ou data. Três alternativas plausíveis; a errada mais tentadora é a da intuição leiga. O `porque` explica em uma ou duas frases.
@@ -37,12 +46,14 @@ A lição é vista no celular, uma tela por vez, como stories. **Texto corrido d
 | `linha_tempo` | `eventos` [{`ano` (número; negativo é a.C.), `texto`}] (3 a 6), `legenda` | história de uma descoberta |
 | `ciclo` | `etapas` [texto curto] (3 a 6), `legenda` | processo que volta ao começo |
 | `curva` | `forma` ("exponencial", "saturacao", "sino", "queda", "u", "logistica", "linear"), `eixo_x`, `eixo_y`, `marco` {`x` de 0 a 1, `rotulo`}, `legenda` | tendência qualitativa, sem números |
+| `no_dia` | `html` (até 40 palavras) | penúltima tela, obrigatória: onde isso aparece na vida da pessoa |
+| `contar` | `frase` (uma sentença, até 25 palavras), `quando` (até 20 palavras), `marca`, `fonte` | última tela, obrigatória: a frase para contar a alguém e a situação em que ela cabe |
 
-Qualquer tela pode levar `marca` e `fonte`.
+Qualquer tela pode levar `marca` e `fonte`. Use só os campos da tabela, com esses nomes: campo desconhecido é barrado.
 
 **Escolher o tipo certo importa mais que variar.** Um visual que não combina com o conteúdo é pior que uma tela de texto.
 
-- `foto`: se o documento traz fotos ou GIFs reais, use de 1 a 3 delas, sobretudo logo depois do gancho, para a pessoa ver do que se está falando. GIF é ótimo para movimento. A `legenda` diz o que se vê e liga ao que a tela ensina.
+- `foto`: a primeira tela é sempre uma foto ou GIF real do documento. Pode usar mais uma ou duas no miolo. GIF é ótimo para movimento. A `legenda` diz o que se vê e liga ao que a tela ensina.
 - `figura`: se o documento traz figuras prontas (a lista vem na mensagem), prefira-as. São desenhos calculados e revisados; use `fig` com a chave exata e escreva a `legenda`.
 - `etapas`: só para coisas que acontecem uma depois da outra no tempo ou num procedimento.
 - `ciclo`: só se a última etapa leva de volta à primeira. Processo que começa e termina é `etapas`.
@@ -225,6 +236,17 @@ Conceito: Biofilmes (Biologia). Fontes do documento usadas: 1 Stewart e Costerto
       ],
       "correta": 1,
       "porque": "O antibiótico mata as células ativas, mas as do fundo, quase paradas, sobrevivem e repovoam tudo. Muitas vezes é preciso retirar a prótese."
+    },
+    {
+      "tipo": "no_dia",
+      "html": "<p>A placa que se forma nos seus dentes de um dia para o outro é um biofilme. O mesmo arranjo entope filtros de água e gruda no casco dos navios, que gastam mais combustível até alguém raspar tudo.</p>"
+    },
+    {
+      "tipo": "contar",
+      "frase": "Dentro de um biofilme, uma bactéria aguenta cerca de mil vezes mais antibiótico do que solta, sem mudar um gene.",
+      "quando": "Quando alguém reclamar de uma infecção que volta depois do antibiótico, ou de ir ao dentista limpar a placa.",
+      "marca": "consenso",
+      "fonte": 1
     }
   ],
   "fecho": "Como bactérias soltas sabem que chegou a hora de virar comunidade? Elas contam umas às outras. Isso tem nome: quorum sensing."

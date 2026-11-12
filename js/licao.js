@@ -4,8 +4,9 @@
    O modelo que gera a lição só preenche dados (etapas, números, camadas); aqui é que
    cada tipo de tela vira desenho e animação em SVG, sempre no mesmo estilo.
 
-   Licao(raiz, doc, { cor, base, aoFechar(), aoTerminar({ acertos, total }) })
+   Licao(raiz, doc, { cor, base, aoFechar(), aoTerminar({ acertos, total }), aoCompartilhar(frase, botao) })
    doc: o documento do conceito (dados/c/<id>.json), com doc.licao e doc.fontes
+   aoCompartilhar: sem ele, a tela «Para contar» não mostra o botão de enviar (caso da tela de revisão)
    cor: cor CSS da região do conceito, ex. "var(--m-vida)"
    base: prefixo do caminho das fotos (a tela de revisão, que fica em /pipeline/, passa "../") */
 (function () {
@@ -68,6 +69,12 @@ function Licao(raiz, doc, opts) {
     gancho: () => `<p class="rotulo">${doc.area}</p><p class="licao-gancho">${L.gancho}</p>`,
 
     texto: (t) => `<div class="leitura">${t.html}</div>`,
+
+    /* as duas telas que fecham toda lição: onde isso aparece na vida da pessoa, e o que ela leva para a conversa */
+    no_dia: (t) => `<p class="rotulo">No seu dia</p><div class="leitura">${t.html}</div>`,
+
+    contar: (t) => `<p class="rotulo">Para contar</p><p class="licao-gancho">«${t.frase}»</p><p class="lv-legenda">${t.quando}</p>
+      ${opts.aoCompartilhar ? `<button type="button" class="btn fio" data-contar>Mandar para alguém</button>` : ""}`,
 
     figura: (t) => `<figure class="figura licao-figura">${t.svg || ""}<figcaption>${t.legenda || ""}</figcaption></figure>`,
 
@@ -161,6 +168,10 @@ function Licao(raiz, doc, opts) {
 
   /* ── comportamento de cada tela depois de desenhada ─────────────── */
   const anima = {
+    contar(t, corpo) {
+      const b = corpo.querySelector("[data-contar]");
+      if (b) b.addEventListener("click", () => opts.aoCompartilhar(t.frase, b));
+    },
     pergunta(t, corpo) {
       travar("Responda para continuar");
       corpo.querySelectorAll(".alt").forEach(b => b.addEventListener("click", () => {

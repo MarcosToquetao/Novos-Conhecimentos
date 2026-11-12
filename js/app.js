@@ -180,7 +180,8 @@ async function abrirFicha(c) {
   Licao($("#tela-licao"), d, {
     cor: `var(--m-${IDX.areas[c.area]})`,
     aoFechar: () => history.back(),
-    aoTerminar: (r) => concluirLicao(c, d, r)
+    aoTerminar: (r) => concluirLicao(c, d, r),
+    aoCompartilhar: (frase, b) => compartilhar(`${frase}\n${location.origin}${location.pathname}?c=${c.id}`, b)
   });
 }
 
@@ -229,14 +230,14 @@ function textoCompartilhar(c, r, n) {
   const n1 = extra ? "" : ` · ficha ${String(numeroFicha()).padStart(3, "0")}`;
   return `Novos Conhecimentos${n1}\n${c.termo} ${barras} ${r.acertos}/${r.total}\nacervo ${n}/${CATALOGO.length}\n${location.origin}${location.pathname}`;
 }
-$("#btn-compartilhar").addEventListener("click", async () => {
-  const texto = $("#r-compart").textContent, b = $("#btn-compartilhar");
+async function compartilhar(texto, b) {
   try {
     if (navigator.share) await navigator.share({ text: texto });
     else { await navigator.clipboard.writeText(texto); b.textContent = "Copiado"; }
     evento("compartilhou");
   } catch (e) { /* a pessoa cancelou o compartilhamento */ }
-});
+}
+$("#btn-compartilhar").addEventListener("click", () => compartilhar($("#r-compart").textContent, $("#btn-compartilhar")));
 $("#btn-aprofundar").addEventListener("click", () => conceitoAtual && abrirDoc(conceitoAtual));
 if (FORMULARIO) { $("#btn-feedback").hidden = false; $("#btn-feedback").addEventListener("click", () => window.open(FORMULARIO, "_blank", "noopener")); }
 

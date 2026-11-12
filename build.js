@@ -86,16 +86,18 @@ function validar(id, d) {
     /* checagem estrutural mínima; a de conteúdo (números, escrita, tamanhos) é do pipeline/gerar.py */
     const L = d.licao, telas = L.telas || [];
     const LISTA = { etapas: "etapas", camadas: "camadas", ordenar: "itens", comparar: "linhas", linha_tempo: "eventos", ciclo: "etapas" };
-    const TIPOS = ["texto", "pergunta", "figura", "foto", "estimar", "pontos", "curva", ...Object.keys(LISTA)];
+    /* no_dia e contar fecham as lições do formato novo; aqui são aceitas, não exigidas, para as antigas continuarem válidas */
+    const TIPOS = ["texto", "pergunta", "figura", "foto", "estimar", "pontos", "curva", "no_dia", "contar", ...Object.keys(LISTA)];
     if (!L.gancho) e("licao sem gancho");
-    if (telas.length < 5 || telas.length > 10) e(`licao com ${telas.length} telas (esperado 6 a 9)`);
+    if (telas.length < 5 || telas.length > 11) e(`licao com ${telas.length} telas (esperado 6 a 11)`);
     if (telas.filter(t => ["pergunta", "ordenar"].includes(t.tipo)).length < 2) e("licao com menos de 2 telas que valem ponto");
     telas.forEach((t, i) => {
       const onde = `licao.telas[${i}]`;
       if (!TIPOS.includes(t.tipo)) return e(`${onde} tipo desconhecido: ${t.tipo}`);
       if (t.marca && !MARCAS.includes(t.marca)) e(`${onde} marca inválida: ${t.marca}`);
       if (t.fonte != null && !fontes.has(t.fonte)) e(`${onde} fonte ${t.fonte} inexistente`);
-      if (t.tipo === "texto" && !t.html) e(`${onde} sem html`);
+      if ((t.tipo === "texto" || t.tipo === "no_dia") && !t.html) e(`${onde} sem html`);
+      if (t.tipo === "contar" && !(t.frase && t.quando)) e(`${onde} contar sem frase ou quando`);
       if (t.tipo === "pergunta" && !(Array.isArray(t.alts) && t.correta >= 0 && t.correta < t.alts.length && t.porque)) e(`${onde} pergunta malformada`);
       if (t.tipo === "figura" && !FIGURAS[t.fig]) e(`${onde} figura ${t.fig} inexistente`);
       if (t.tipo === "foto" && !fotos.some(f => f.n === t.foto)) e(`${onde} foto ${t.foto} inexistente`);

@@ -11,6 +11,9 @@ Uso
   python pipeline/gerar.py dossie <id> [<id> ...]   só baixa e mostra o dossiê de fontes (pipeline/dossies/)
   python pipeline/gerar.py imagens <id> [<id> ...] [--seco]   fotos e GIFs livres do Wikimedia Commons, escolhidos por um modelo de visão
   python pipeline/gerar.py refazer [<id> ...]      corrige as lições existentes com as regras atuais, as fotos e a nota do editor
+  python pipeline/gerar.py contexto <id>          imprime o material de uma lição (documento, fotos, figuras, fontes) para um agente escrever
+  python pipeline/gerar.py validar <arquivo>      checa uma lição escrita por agente (pipeline/candidatas/<id>.a.json); sai com 1 se houver erro
+  python pipeline/gerar.py publicar <id> <arquivo>   valida, grava em js/docs/<id>.js e roda o build
   (qualquer comando aceita --openrouter: DeepSeek pelo OpenRouter em vez da API direta)
   python pipeline/gerar.py grafo [--seco]         subáreas e ligações do mapa do acervo
   python pipeline/gerar.py fronteira <id>... | --todas [--seco]   caixas controverso/especulação → seção «Onde a ciência ainda pesquisa»
@@ -159,7 +162,7 @@ def avaliacoes():
 def sequencia_aprovadas():
     n = 0
     for a in reversed(avaliacoes()):
-        if a["veredicto"] != "aprovado":
+        if a.get("veredicto") != "aprovado":
             break
         n += 1
     return n
@@ -208,7 +211,21 @@ def checar_texto(onde, s, erros):
 
 VISUAIS = {"estimar", "etapas", "camadas", "pontos", "ordenar", "comparar", "linha_tempo", "ciclo", "curva", "figura", "foto"}
 VALE_PONTO = {"pergunta", "ordenar"}
-FORMAS = {"exponencial", "saturacao", "sino", "queda", "u", "logistica", "linear"}
+FECHO_FIXO = ["no_dia", "contar"]   # as duas últimas telas de toda lição, nessa ordem
+# campos aceitos por tipo (além de tipo, marca e fonte): chave fora daqui é erro de digitação e some na tela
+CAMPOS = {
+    "texto": {"html"}, "no_dia": {"html"}, "contar": {"frase", "quando"},
+    "pergunta": {"q", "alts", "correta", "porque"}, "ordenar": {"q", "itens", "porque"},
+    "foto": {"foto", "legenda"}, "figura": {"fig", "legenda"},
+    "estimar": {"q", "unidade", "min", "max", "escala", "resposta", "legenda"},
+    "etapas": {"etapas", "legenda"}, "ciclo": {"etapas", "legenda"},
+    "camadas": {"camadas", "eixo", "legenda"}, "pontos": {"valor", "frase", "legenda"},
+    "comparar": {"a", "b", "linhas", "legenda"}, "linha_tempo": {"eventos", "legenda"},
+    "curva": {"forma", "eixo_x", "eixo_y", "marco", "legenda"},
+}
+ANINHADOS = {"etapas": {"nome", "texto"}, "camadas": {"nome", "nota"}, "linhas": {"aspecto", "a", "b"},
+             "eventos": {"ano", "texto"}, "eixo": {"topo", "base"}, "marco": {"x", "rotulo"}}
+FORMAS ={"exponencial", "saturacao", "sino", "queda", "u", "logistica", "linear"}
 NUM_EXTENSO = {"dez": 10, "vinte": 20, "trinta": 30, "cem": 100, "cento": 100, "duzentos": 200, "mil": 1000,
                "milhão": 1e6, "milhões": 1e6, "bilhão": 1e9, "bilhões": 1e9}
 
@@ -240,18 +257,26 @@ def checar_licao(L, doc):
         avisos.append("gancho com mais de 45 palavras")
     if not L.get("fecho"):
         erros.append("sem fecho")
-    if not 6 <= len(telas) <= 9:
-        erros.append(f"{len(telas)} telas (esperado 6 a 9)")
+    # o miolo é tudo antes das duas telas fixas do fim; as contagens de tamanho e de visuais valem para ele
+    miolo = telas
+    if [t.get("tipo") for t in telas[-2:]] == FECHO_FIXO:
+        miolo = telas[:-2]
+    else:
+        erros.append("as duas últimas telas têm de ser no_dia e contar, nessa ordem")
+    if any(t.get("tipo") in FECHO_FIXO for t in miolo):
+        erros.append("no_dia e contar aparecem uma vez só, no fim da lição")
+    if not 6 <= len(miolo) <= 9:
+        erros.append(f"{len(miolo)} telas antes de no_dia e contar (esperado 6 a 9)")
     pontuam = [t for t in telas if t.get("tipo") in VALE_PONTO]
     if not 2 <= len(pontuam) <= 3:
         erros.append(f"{len(pontuam)} telas que valem ponto (esperado 2 ou 3 entre pergunta e ordenar)")
-    visuais = [t for t in telas if t.get("tipo") in VISUAIS]
-    if telas and len(visuais) * 2 < len(telas):
-        erros.append(f"só {len(visuais)} telas visuais de {len(telas)} (pelo menos metade)")
-    elif len(telas) >= 7 and len(visuais) < 5:
+    visuais = [t for t in miolo if t.get("tipo") in VISUAIS]
+    if miolo and len(visuais) * 2 < len(miolo):
+        erros.append(f"só {len(visuais)} telas visuais de {len(miolo)} (pelo menos metade)")
+    elif len(miolo) >= 7 and len(visuais) < 5:
         erros.append(f"só {len(visuais)} telas visuais (pelo menos 5)")
-    if doc.get("fotos") and not any(t.get("tipo") == "foto" for t in telas):
-        erros.append("o documento tem fotos reais e a lição não usa nenhuma: ponha de 1 a 3 telas foto, a primeira logo depois do gancho")
+    if doc.get("fotos") and (not telas or telas[0].get("tipo") != "foto"):
+        erros.append("a lição abre com uma tela foto (o documento tem fotos reais): ponha a mais forte como primeira tela")
     checar_texto("gancho", L.get("gancho", ""), erros)
     checar_texto("fecho", L.get("fecho", ""), erros)
 
@@ -277,6 +302,14 @@ def checar_licao(L, doc):
             erros.append(f"tela {i}: fonte {t['fonte']} não existe no documento")
         if t.get("marca") and t.get("fonte") is None:
             avisos.append(f"tela {i}: marca sem fonte")
+        sobra = set(t) - CAMPOS.get(tipo, set(t)) - {"tipo", "marca", "fonte"}
+        for k, aceitos in ANINHADOS.items():
+            v = t.get(k)
+            for x in v if isinstance(v, list) else [v]:
+                if isinstance(x, dict):
+                    sobra |= {f"{k}.{c}" for c in set(x) - aceitos}
+        if sobra:
+            erros.append(f"tela {i}: campo desconhecido {', '.join(sorted(sobra))}")
         # todo texto visível da tela passa pelas mesmas checagens de escrita
         textos = [v for k, v in t.items() if isinstance(v, str) and k not in ("tipo", "marca", "escala", "forma", "fig")]
         for k in ("alts", "itens", "etapas", "camadas", "linhas", "eventos"):
@@ -287,7 +320,8 @@ def checar_licao(L, doc):
         if t.get("legenda") and len(t["legenda"].split()) > 30:
             avisos.append(f"tela {i}: legenda com mais de 25 palavras")
 
-        if tipo == "texto":
+        if tipo in ("texto", "no_dia"):
+            exigir(i, t, ["html"])
             html = t.get("html", "")
             palavras = len(re.sub(r"<[^>]+>", " ", html).split())
             if palavras > 55:
@@ -355,6 +389,18 @@ def checar_licao(L, doc):
         elif tipo == "foto":
             if t.get("foto") not in {f["n"] for f in doc.get("fotos", [])}:
                 erros.append(f"tela {i}: foto {t.get('foto')} não existe no documento")
+        elif tipo == "contar":
+            # é a frase que vai circular fora do app: uma sentença, com fonte, sem número inventado
+            exigir(i, t, ["frase", "quando", "fonte"])
+            frase = (t.get("frase") or "").strip()
+            if len(frase.split()) > 25:
+                erros.append(f"tela {i}: frase com {len(frase.split())} palavras (máximo 25)")
+            if len(re.findall(r"[.!?](?=\s|$)", frase)) > 1:
+                erros.append(f"tela {i}: a frase de contar é uma sentença só")
+            if len((t.get("quando") or "").split()) > 20:
+                erros.append(f"tela {i}: quando com mais de 20 palavras")
+            for v in numeros_sem_respaldo(frase, nums):
+                erros.append(f"tela {i}: número {v:g} da frase não aparece no documento (número inventado?)")
         elif tipo != "figura":
             erros.append(f"tela {i}: tipo desconhecido {tipo}")
     return erros, avisos
@@ -444,7 +490,7 @@ def portao_jev(L, termo, alvo):
 # ── lições ──────────────────────────────────────────────────────────────
 def exemplos(excluir, n=2):
     """Lições aprovadas de primeira com melhor nota viram exemplo no prompt."""
-    boas = [a for a in avaliacoes() if a["tipo"] == "licao" and a["veredicto"] == "aprovado" and a["id"] != excluir]
+    boas = [a for a in avaliacoes() if a.get("tipo") == "licao" and a.get("veredicto") == "aprovado" and a.get("id") != excluir]
     boas.sort(key=lambda a: -sum((a.get("notas") or {}).values()))
     saida = []
     for a in boas[:n]:
@@ -1333,6 +1379,15 @@ def autoteste():
     erros, _ = checar_licao(ruim, doc)
     for esperado in ["travessão", "aspas curvas", "vale ressaltar", "fascinante", "fonte 99", "pergunta malformada", "777 não aparece"]:
         assert any(esperado in e for e in erros), (esperado, erros)
+    # formato: campo com erro de digitação, lição sem as telas do fim, lição que não abre com foto
+    for estrago, esperado in [(lambda L: L["telas"][0].update(legneda="x"), "campo desconhecido legneda"),
+                              (lambda L: L["telas"].pop(), "no_dia e contar"),
+                              (lambda L: L["telas"].insert(0, L["telas"].pop(3)), "abre com uma tela foto"),
+                              (lambda L: L["telas"][-1].update(frase="São 4321 vezes."), "4321 da frase")]:
+        torta = copy.deepcopy(ex)
+        estrago(torta)
+        e2, _ = checar_licao(torta, doc)
+        assert any(esperado in e for e in e2), (esperado, e2)
     print("autoteste ok:", len(erros), "erros detectados na lição estragada")
 
 
@@ -1392,6 +1447,30 @@ def main():
                 print(f"  {i}: falhou ({e}); rode de novo depois")
         with concurrent.futures.ThreadPoolExecutor(4) as ex:
             list(ex.map(um, alvos))
+    elif cmd == "contexto":
+        idx = indice()
+        for i in ids:
+            print(prompts_licao(i, idx)[1])
+    elif cmd in ("validar", "publicar"):
+        if len(ids) != (2 if cmd == "publicar" else 1):
+            sys.exit(__doc__)
+        arq = pathlib.Path(ids[-1])
+        id_ = ids[0] if cmd == "publicar" else arq.name.split(".")[0]
+        L = json.loads(arq.read_text(encoding="utf-8"))
+        L = L.get("licao", L)
+        for t in L.get("telas") or []:
+            t.pop("svg", None)   # a tela de revisão embute o desenho da figura; ele não faz parte da lição
+        erros, avisos = checar_licao(L, documento(id_))
+        for x in avisos:
+            print("  aviso", x)
+        for x in erros:
+            print("  ERRO ", x)
+        if erros:
+            sys.exit(1)
+        if cmd == "publicar":
+            print("\n".join(publicar_licao(id_, L)))
+        else:
+            print(f"ok: {id_} válida, {len(avisos)} aviso(s)")
     elif cmd == "grafo":
         gerar_grafo(seco="--seco" in flags)
     elif cmd == "triagem":
